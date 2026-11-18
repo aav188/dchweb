@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Curso IPO | Universitat de Lleida · GRIHO</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-container": "#fcfbff", "primary-fixed": "#d7e2ff", "primary-fixed-dim": "#abc7ff", "on-surface-variant": "#414753", "surface-container-low": "#f4f3f8", "on-error": "#ffffff", "tertiary-fixed": "#d7e3ff", "on-background": "#1a1b1f", "surface-container": "#eeedf3", "inverse-primary": "#abc7ff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#1b1b1d", "on-error-container": "#93000a", "on-surface": "#1a1b1f", "primary": "#0059b5", "on-tertiary-container": "#fcfaff", "outline-variant": "#c1c6d6", "on-tertiary-fixed-variant": "#00458e", "outline": "#717785", "secondary": "#5f5e60", "inverse-on-surface": "#f1f0f5", "surface-bright": "#faf8fe", "surface-dim": "#dad9df", "secondary-fixed": "#e4e2e4", "on-tertiary-fixed": "#001b3f", "on-secondary-fixed-variant": "#474649", "tertiary-fixed-dim": "#abc7ff", "surface-tint": "#005cbb", "error": "#ba1a1a", "tertiary": "#0059b4", "surface-container-highest": "#e3e2e7", "primary-container": "#0071e3", "on-secondary-container": "#636264", "surface-container-high": "#e9e7ed", "on-primary-fixed": "#001b3f", "secondary-fixed-dim": "#c8c6c8", "on-secondary": "#ffffff", "surface": "#faf8fe", "background": "#faf8fe", "tertiary-container": "#0071e2", "secondary-container": "#e2dfe1", "surface-variant": "#e3e2e7", "on-primary-fixed-variant": "#00458f", "inverse-surface": "#2f3034" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-md": "2rem", "margin": "3rem", "gutter-sm": "1rem", "gutter": "1.5rem", "margin-sm": "1.25rem", "space-xl": "2.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "code-inline": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "display-hero-mobile": ["Inter"], "headline-md": ["Inter"], "display-hero": ["Inter"], "label-md": ["Inter"] }, fontSize: { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["19px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 rounded-lg p-space-xs" data-path="inicio" href="#"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold shadow-sm">IPO</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Curso IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant">UdL · GRIHO</span></div></a><div class="hidden md:block w-px h-5 bg-outline-variant/40"></div><nav class="hidden xl:flex items-center gap-gutter" data-active-classes="text-primary font-label-md font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="inicio" href="#">Inicio</a><a class="font-label-md text-label-md text-primary font-semibold py-1" data-path="curso-ipo" href="#">Curso IPO</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="mpiu-a" href="#">MPIu+a</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="recursos" href="#">Recursos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-body-sm text-body-sm">Buscar conceptos...</span><kbd class="hidden sm:inline-flex items-center gap-space-xs font-code-inline text-code-inline bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-sm text-outline">⌘K</kbd></button><div class="hidden lg:flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end gap-1"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Progreso global</span><span class="font-code-inline text-code-inline font-medium text-primary">42%</span></div><div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="w-5/12 h-full bg-primary-container rounded-full"></div></div></div></div><div class="flex items-center gap-space-xs pl-space-xs"><button aria-label="Cambiar tema visual" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full bg-surface-container-low/70 border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-gutter flex items-center overflow-x-auto no-scrollbar py-1"><nav class="flex items-center gap-space-xs py-0.5" data-active-classes="bg-surface-container-lowest text-primary shadow-[0_1px_4px_rgba(0,0,0,0.06)] font-semibold"><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="#">M1 Fundamentos</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="#">M2 Factor Humano</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-[0_1px_4px_rgba(0,0,0,0.06)] font-semibold whitespace-nowrap transition-all" data-path="modulo-3-dcu" href="#">M3 DCU</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-7-accesibilidad" href="#">M7 Accesibilidad</a></nav></div></div></header><main class="w-full flex-1 pt-24 bg-background"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient glow canvas -->
+<div class="relative w-full overflow-hidden bg-background">
+<div class="absolute -top-32 right-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-96 left-10 w-72 h-72 bg-tertiary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-gutter py-space-lg flex flex-col gap-space-xl">
+<!-- Breadcrumb & Topic Context Navigation -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm"><div class="flex flex-wrap items-center gap-space-sm w-full justify-between pb-space-xs border-b border-outline-variant/20"><nav aria-label="Migas de pan" class="flex flex-wrap items-center gap-1.5 font-label-md text-label-md text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Inicio</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Curso IPO</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Módulo 3: DCU</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Fases MPIu+a</a><span class="text-outline-variant">›</span><span class="text-on-surface font-semibold">Fase de Lanzamiento</span></nav><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-primary hover:bg-primary-fixed/30 border border-outline-variant/30 font-label-md text-label-md font-semibold transition-all shadow-sm group" href="#"><span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span><span>Volver a 03 Modelo MPIu+a</span></a></div></div>
+<!-- Badges & Identity row -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1"><div class="flex flex-wrap items-center gap-space-sm w-full justify-between pb-space-xs border-b border-outline-variant/20"><nav aria-label="Migas de pan" class="flex flex-wrap items-center gap-1.5 font-label-md text-label-md text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Inicio</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Curso IPO</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Módulo 3: DCU</a><span class="text-outline-variant">›</span><a class="hover:text-primary transition-colors" href="#">Fases MPIu+a</a><span class="text-outline-variant">›</span><span class="text-on-surface font-semibold">Fase de Lanzamiento</span></nav><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-primary hover:bg-primary-fixed/30 border border-outline-variant/30 font-label-md text-label-md font-semibold transition-all shadow-sm group" href="#"><span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span><span>Volver a 03 Modelo MPIu+a</span></a></div></div>
+<!-- Unit & Title Header -->
+<div class="flex flex-col gap-space-xs mt-2">
+<span class="font-code-inline text-code-inline text-primary tracking-wider uppercase font-semibold">
+            UNIDAD DIDÁCTICA • M3.4 / INGENIERÍA DE LA USABILIDAD Y ACCESIBILIDAD
+          </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+            Fase de Lanzamiento en el Modelo MPIu+a
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl leading-relaxed">
+            Cuarta fase del ciclo de vida de MPIu+a donde se constatan las expectativas del producto frente a usuarios y organizaciones, evaluando la aceptabilidad global del sistema y articulando el canal continuo de realimentación (<em class="text-on-surface font-medium">User Feedback</em>).
+          </p>
+</div>
+</section>
+<!-- Ficha Técnica Canónica (4 Bento-Style Metric Cards) -->
+<section aria-label="Ficha técnica de la fase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Posición en MPIu+a</span>
+<span class="w-8 h-8 rounded-lg bg-primary-fixed/60 text-primary flex items-center justify-center material-symbols-outlined text-[18px]">flag</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">Fase 4 de 4</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cierre formal de iteración, implantación y explotación operativa.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-inline text-code-inline text-outline font-medium">Fin del ciclo básico</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Factor Crítico</span>
+<span class="w-8 h-8 rounded-lg bg-primary-fixed/60 text-primary flex items-center justify-center material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">Aceptabilidad</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Convergencia de aceptabilidad social y aceptabilidad práctica.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold">J. Nielsen [NIE93]</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Eje de Aprendizaje</span>
+<span class="w-8 h-8 rounded-lg bg-tertiary-fixed/60 text-tertiary flex items-center justify-center material-symbols-outlined text-[18px]">forum</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">User Feedback</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Recolección de impresiones, defectos y virtudes en explotación.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Mayhew [MAY99]</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Garantía Metodológica</span>
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center material-symbols-outlined text-[18px]">all_inclusive</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">Convergencia DCU</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sintonía exacta entre usuario empoderado y retorno corporativo.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-code-inline text-code-inline text-outline font-medium">Calidad de Uso Total</span>
+</div>
+</div>
+</section>
+<!-- Bloque 1: La Naturaleza Crítica del Lanzamiento y las Dos Expectativas -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left descriptive block -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-code-inline text-code-inline uppercase">Fundamentación Teórica</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            La Naturaleza Crítica del Lanzamiento y la Dualidad de Expectativas
+          </h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
+<p>
+              La fase de lanzamiento de todo proyecto interactivo suele ser <strong>una de las más críticas de cualquier proceso de desarrollo</strong>. Es el instante exacto en el que se ven concretadas en mayor o menor grado las expectativas depositadas en el producto software.
+            </p>
+<p>
+              Cuando el cliente es una organización estructurada, el grado de satisfacción dependerá de las diferentes capas jerárquicas que evalúan el retorno. No obstante, en la disciplina de Interacción Persona-Ordenador (IPO) se constata que <strong>la percepción directa del usuario final ostenta un peso específico determinante</strong> para dictaminar el éxito o rechazo definitivo del sistema.
+            </p>
+</div>
+<!-- Dual expectations interactive comparative split -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mt-space-sm">
+<!-- Usuario Final Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed/50 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">sentiment_satisfied</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-2">
+                  1. Satisfacción del Usuario Final
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Que el usuario <strong>se sienta cómodo</strong> con el sistema. Entendiendo como comodidad ausencia de frustración por fallos, interacción fluida, facilidad para recordar rutas funcionales y nula sobrecarga cognitiva.
+                </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span> Relación: Usabilidad + Accesibilidad
+                </span>
+</div>
+</div>
+<!-- Responsables Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">domain_verification</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-2">
+                  2. Responsables de la Organización
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Que la dirección y mandos operativos <strong>obtengan los resultados esperados</strong>: incremento en productividad, optimización en tiempos de transacción, cumplimiento riguroso de procesos de negocio y retorno de inversión.
+                </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">account_tree</span> Relación: Funcionalidad Integral
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: How MPIu+a solves the dual expectations -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+              Garantía del Enfoque MPIu+a
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            La aplicación disciplinada del Modelo MPIu+a asegura que ambas vertientes se vean satisfechas sin compromisos de calidad:
+          </p>
+<div class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0">A</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Diseño con y para el Usuario</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    Al involucrar a los usuarios finales desde la fase inicial de requisitos y diseño iterativo, se sienten corresponsables del producto. Por tanto, no encuentran motivos de rechazo frontal y su aprendizaje es inmediato.
+                  </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0">B</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Verificación Funcional Rigurosa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    Siguiendo las mejores prácticas de la ingeniería del software clásica, se exige el cumplimiento total de los requisitos de sistema. No se valida ningún despliegue si los flujos de negocio no alcanzan el 100% de fiabilidad.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Academic citation badge -->
+<div class="bg-surface-container-high/60 p-space-sm rounded-lg flex items-center gap-space-sm mt-1">
+<span class="material-symbols-outlined text-outline text-[18px]">menu_book</span>
+<span class="font-code-inline text-code-inline text-outline">
+              Ref. Canónica: Granollers, T. «MPIu+a: Un modelo de proceso para IPO». GRIHO, UdL.
+            </span>
+</div>
+</div>
+</section>
+<!-- Bloque 2: Integración Central del Árbol de Aceptabilidad de Jakob Nielsen [NIE93] -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase font-semibold">
+              Taxonomía Clásica de HCI
+            </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            Modelo de Aceptabilidad del Sistema [NIE93] + Accesibilidad MPIu+a
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            En el lanzamiento debe constatarse que el artefacto ha alcanzado la aceptabilidad del sistema. Según Jakob Nielsen (1993), esta aceptabilidad se descompone en dimensiones sociales y prácticas, siendo ampliada en el modelo MPIu+a para consagrar la Accesibilidad con estatus fundamental junto a la Usabilidad.
+          </p>
+</div>
+<!-- Container visual of the image diagram -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="font-code-inline text-code-inline text-primary font-semibold tracking-wide uppercase">Figura Oficial del Curso</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Estructura Jerárquica de la Aceptabilidad del Sistema (Nielsen, 1993)
+              </h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md font-label-sm text-label-sm">
+                Cátedra GRIHO UdL
+              </span>
+<span class="px-2.5 py-1 bg-primary-fixed/60 text-primary rounded-md font-label-sm text-label-sm font-semibold">
+                Esquema Original
+              </span>
+</div>
+</div>
+<!-- Central Image wrapper -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md md:p-space-lg flex flex-col items-center justify-center overflow-hidden">
+<img alt="Árbol conceptual de aceptabilidad del sistema según Jakob Nielsen ampliado en el modelo MPIu+a con accesibilidad" class="max-w-full h-auto object-contain max-h-[380px] drop-shadow-sm select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjqL22tlI3VP2ECgerSpjGwfsjC5yn89bnSw8p45okAGehpEMXifEgB5N_x7TN-u_edoQ5NKHfqilzvbN022anahFgqeJg4X8lKPDEf6jv-TFlS0DfaBOEG4jFCkncIHtpF8Jzl4b0vVhxuvnDA-GyCF9n8GgnXqoC8xXi1n58PCaG6Oz85KOZQ8kptN_V8IqLk1EUAZmOyoR-l80Tz2zCT6PC9z3TDixUx9s-9QEYZal_2wm7BOe8">
+<div class="mt-space-md text-center max-w-2xl">
+<p class="font-body-sm text-body-sm text-outline">
+<strong class="text-on-surface">Diagrama didáctico:</strong> Descomposición de la Aceptabilidad del Sistema en Aceptabilidad Social y Práctica. Subárbol de Utilidad integrado por Utilidad Funcional, Usabilidad (con sus cinco atributos) y Accesibilidad como aportación troncal de MPIu+a.
+              </p>
+</div>
+</div>
+<!-- Interactive Taxonomy Breakdown Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-space-xs">
+<!-- Social Acceptance -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Aceptabilidad Social</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Evalúa si el sistema es moralmente adecuado, respeta los marcos legales, protege la privacidad de datos de los usuarios y genera confianza social sin sesgos perjudiciales ni manipulaciones (dark patterns).
+                </p>
+</div>
+<div class="mt-space-md flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Ética</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Legalidad</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Confianza</span>
+</div>
+</div>
+<!-- Practical Acceptance: Cost, Compatibility, etc. -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Aceptabilidad Práctica</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Abarca variables de soporte contextual: <strong>Coste</strong> de adquisición y mantenimiento, <strong>Compatibilidad</strong> con arquitecturas previas, fiabilidad técnica, rendimiento del hardware y la condición sine qua non: la <strong>Utilidad</strong>.
+                </p>
+</div>
+<div class="mt-space-md flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Coste</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Compatibilidad</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-outline font-code-inline text-code-inline rounded">Fiabilidad</span>
+</div>
+</div>
+<!-- Practical Acceptance: Usability & Accessibility -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Usabilidad + Accesibilidad</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  El núcleo de la Utilidad en MPIu+a. Usabilidad comprende sus cinco pilares (facilidad de aprendizaje, eficiencia, facilidad de recuerdo, tolerancia a errores y satisfacción), complementada de forma obligada con <strong>Accesibilidad Universal</strong>.
+                </p>
+</div>
+<div class="mt-space-md flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest text-primary font-code-inline text-code-inline rounded font-medium">5 Pilares Nielsen</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-primary font-code-inline text-code-inline rounded font-medium">WCAG 2.2 AA</span>
+</div>
+</div>
+</div>
+<!-- Granular Nielsen's 5 attributes chips -->
+<div class="bg-surface-container-low/70 p-space-md rounded-xl">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold block mb-space-sm">
+              Desglose Operativo de los 5 Atributos de Usabilidad en el Despliegue:
+            </span>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">1. Learnability</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Fácil de aprender para usuarios nóveles.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">2. Efficiency</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Alta productividad para usuarios expertos.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">3. Memorability</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Fácil de recordar tras períodos de inactividad.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">4. Error Recovery</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Mínimos errores y sencilla recuperación.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<span class="font-code-inline text-code-inline text-primary font-bold">5. Satisfaction</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Experiencia subjetivamente agradable.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bloque 3: Realimentación (Feedback) del Usuario en Explotación [MAY99] -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left illustration & quote card -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/60 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">rate_review</span>
+</div>
+<span class="font-code-inline text-code-inline text-primary uppercase font-semibold">Post-Implantación [MAY99]</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+              «User Feedback» como Motor Evolutivo del Producto
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Una vez que el producto está instalado y puesto en explotación durante un cierto periodo —denominado formalmente <strong>fase de pruebas en entorno real</strong>—, se recogen sistemáticamente las impresiones, observaciones, quejas, virtudes y mejoras detectadas por los usuarios durante su familiarización cotidiana con el sistema.
+            </p>
+</div>
+<!-- Academic Callout -->
+<div class="mt-space-md bg-surface-container-low p-space-md rounded-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              «¿Por qué requerimos feedback si ya hemos aplicado un diseño centrado en el usuario? Porque ningún laboratorio emula las presiones, interrupciones y contextos emergentes del trabajo real.»
+            </p>
+<span class="font-label-sm text-label-sm text-primary font-semibold block mt-1">
+              — Deborah Mayhew (The Usability Engineering Lifecycle, 1999)
+            </span>
+</div>
+</div>
+<!-- Right 4 Core Rationales for User Feedback -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Las 4 Razones Fundamentales para Gestionar el User Feedback
+          </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Reason 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+                1
+              </div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Mantenimiento y Corrección Inmediata</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Proporciona una entrada tangible para implementar mejoras inmediatas, retoques de accesibilidad y parches correctivos consistentes con los requisitos preestablecidos.
+              </p>
+</div>
+<!-- Reason 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+                2
+              </div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Versiones Evolutivas del Software</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Constituye la base empírica para planificar el roadmap de futuras revisiones mayores, priorizando las funcionalidades más demandadas o frustrantes.
+              </p>
+</div>
+<!-- Reason 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+                3
+              </div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Diseño de Futuros Productos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Genera conocimiento acumulado para concebir y desarrollar productos paralelos dirigidos a las mismas tipologías de usuarios y perfiles organizacionales.
+              </p>
+</div>
+<!-- Reason 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold">
+                4
+              </div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Incremento del Autoaprendizaje Institucional</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Fortalece la madurez en usabilidad de toda la organización. Toda experiencia de campo aporta lecciones aprendidas transferibles al equipo de ingeniería y diseño.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bloque 4: Matriz Operativa de Cierre de Fase (Auditorías y Métricas en Lanzamiento) -->
+<section class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="font-code-inline text-code-inline text-primary font-semibold tracking-wider uppercase">Protocolo de Control</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+              Matriz Operativa de Cierre de Fase: 4 Instrumentos de Validación
+            </h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Fase de Pruebas &gt; Certificación Final</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mt-space-xs">
+<!-- Column 1: Telemetry -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center material-symbols-outlined text-[20px]">monitoring</span>
+<span class="font-code-inline text-code-inline text-outline font-semibold">01</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-1">Telemetría de Uso Real</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Medición automatizada de tasas de error, rutas de navegación imprevistas, tiempos por tarea y tasa de abandono en flujos transaccionales.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Indicador: Logs de eventos y embudos</span>
+</div>
+</div>
+<!-- Column 2: Support channels -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center material-symbols-outlined text-[20px]">support_agent</span>
+<span class="font-code-inline text-code-inline text-outline font-semibold">02</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-1">Registro de Incidencias UX</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Categorización sistemática de tickets en mesa de ayuda: fallos técnicos vs. confusiones de affordance y problemas de compresión de modelos mentales.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Indicador: Taxonomía de tickets UX</span>
+</div>
+</div>
+<!-- Column 3: WCAG Audit -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center material-symbols-outlined text-[20px]">accessibility_new</span>
+<span class="font-code-inline text-code-inline text-outline font-semibold">03</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-1">Auditoría WCAG 2.2 AA</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Verificación con lectores de pantalla (NVDA, VoiceOver), navegación exclusivamente por teclado y contraste en condiciones lumínicas reales.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Indicador: Conformidad Nivel AA</span>
+</div>
+</div>
+<!-- Column 4: Surveys -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center material-symbols-outlined text-[20px]">grading</span>
+<span class="font-code-inline text-code-inline text-outline font-semibold">04</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-1">Escalas de Satisfacción</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Administración de encuestas estandarizadas tras 30 días de explotación: SUS (System Usability Scale), UMUX-Lite o cuestionarios CSUQ.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-medium block">Indicador: SUS Score &gt; 80 pts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Persistent Curricular Navigation Footer -->
+<section class="mt-space-lg pt-space-md">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Previous Phase Link -->
+<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" href="#">
+<div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>Fase Anterior</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block">
+                03. Fase de Implementación
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Codificación del software, directrices de diseño y accesibilidad WCAG.
+              </p>
+</div>
+<div class="mt-space-sm">
+<span class="font-code-inline text-code-inline text-outline">Módulo MPIu+a • Unidad 3.3</span>
+</div>
+</a>
+<!-- Central Model Overview Button -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-sm flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Estructura Global</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">
+              Mapa de Fases MPIu+a
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">
+              Consulta la panorámica del ciclo de vida y los flujos entre fases y prototipos.
+            </p>
+<a class="mt-space-md inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Índice General MPIu+a</span>
+</a>
+</div>
+<!-- Next Phase / Master Module -->
+<a class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between" href="#">
+<div>
+<div class="flex items-center justify-end gap-1 font-label-sm text-label-sm text-primary font-semibold mb-1 text-right">
+<span>Siguiente Módulo</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface text-right block">
+                M4: Análisis de Requisitos
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-right mt-1">
+                Técnicas de captura, escenarios de uso, personas y requerimientos contextuales.
+              </p>
+</div>
+<div class="mt-space-sm text-right">
+<span class="font-code-inline text-code-inline text-outline">Plan Curricular • Módulo 04</span>
+</div>
+</a>
+</div>
+</section>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-gutter flex flex-col gap-space-lg"><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/20"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Curso de Interacción Persona-Ordenador (IPO)</span><p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">Iniciativa docente e investigadora liderada por el <strong class="text-on-surface font-medium">Dr. Toni Granollers</strong> dentro del grupo <strong class="text-on-surface font-medium">GRIHO</strong> (Grup de Recerca en Interacció Persona-Ordinador) en la Universitat de Lleida.</p></div><div class="flex flex-wrap items-center gap-space-md text-on-surface-variant"><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">Universitat de Lleida</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">GRIHO</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">AIPO</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">ACM SIGCHI</span></div></div><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px] text-primary">verified</span><span>Garantía de accesibilidad conforme a <strong class="text-on-surface-variant font-medium">WCAG 2.2 Nivel AA</strong></span></div><div class="flex flex-wrap items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">apps</span><span>Contenidos bajo licencia <a class="text-primary hover:underline font-medium" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" rel="noopener noreferrer" target="_blank">Creative Commons CC BY-NC 4.0 Internacional</a></span></div></div></div></footer>
+
+</body></html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary":"#ffffff","primary-container":"#0071e3","inverse-surface":"#2f3034","primary":"#0059b5","surface-variant":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-highest":"#e3e2e7","on-secondary-fixed-variant":"#474649","on-secondary-fixed":"#1b1b1d","secondary-fixed":"#e4e2e4","tertiary-fixed-dim":"#abc7ff","outline-variant":"#c1c6d6","tertiary-fixed":"#d7e3ff","surface-container":"#eeedf3","secondary-fixed-dim":"#c8c6c8","secondary":"#5f5e60","error-container":"#ffdad6","on-tertiary-fixed":"#001b3f","secondary-container":"#e2dfe1","background":"#faf8fe","on-secondary":"#ffffff","primary-fixed":"#d7e2ff","on-error":"#ffffff","on-surface-variant":"#414753","on-primary-fixed-variant":"#00458f","on-tertiary-fixed-variant":"#00458e","surface":"#faf8fe","error":"#ba1a1a","on-secondary-container":"#636264","surface-container-high":"#e9e7ed","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","outline":"#717785","surface-dim":"#dad9df","on-primary-container":"#fcfbff","on-surface":"#1a1b1f","on-primary":"#ffffff","on-background":"#1a1b1f","primary-fixed-dim":"#abc7ff","surface-container-low":"#f4f3f8","on-tertiary-container":"#fcfaff","inverse-primary":"#abc7ff","tertiary-container":"#0071e2","surface-bright":"#faf8fe","surface-tint":"#005cbb","on-error-container":"#93000a","tertiary":"#0059b4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"3rem","margin-sm":"1.25rem","margin-md":"2rem","space-sm":"0.5rem","space-xl":"2.5rem"},"fontFamily":{"label-md":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"headline-lg":["Inter"],"code-inline":["JetBrains Mono"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"display-hero-mobile":["Inter"]},"fontSize":{"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-8"><a class="flex items-center gap-2 group" data-path="inicio" href="#"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-sm font-bold tracking-tight shadow-sm">IPO</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Cátedra IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal leading-tight">UdL · GRIHO</span></div></a><nav class="hidden xl:flex items-center gap-6 font-label-md text-label-md" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="inicio" href="#">Inicio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="curso-ipo" href="#">Curso IPO</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="mpiu-a" href="#">MPIu+a</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="recursos" href="#">Recursos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center bg-surface-container-low px-3 py-1.5 rounded-full text-on-surface-variant gap-2 transition-colors focus-within:bg-surface-container"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent border-0 outline-none text-body-sm font-body-sm w-48 lg:w-64 placeholder:text-outline" placeholder="Buscar módulo, modelo o heurística..." type="text"/><kbd class="font-code-inline text-code-inline px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-medium text-[11px]">⌘K</kbd></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="bg-surface-container-low/90 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between font-label-sm text-label-sm overflow-x-auto"><div class="flex items-center gap-1.5 text-on-surface-variant shrink-0"><a class="hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-on-surface transition-colors" data-path="curso-ipo" href="#">Curso IPO</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-on-surface-variant">Módulo 3: DCU</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-primary font-semibold">Fase de Diseño (Modelo MPIu+a)</span></div><div class="hidden sm:flex items-center gap-2 text-on-surface-variant shrink-0 pl-4"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-code-inline text-code-inline text-[11px]">ESTADO: EN CURSO</span></div></div></div><div class="bg-surface-container-lowest/95 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-12 flex items-center overflow-x-auto"><nav class="flex items-center gap-2" data-active-classes="bg-surface-container-high text-primary font-semibold"><a aria-current="page" class="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all shrink-0 bg-surface-container-high text-primary font-semibold" data-path="leccion-01-objetivos-del-diseno" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">01</span><span>Objetivos del Diseño</span></a><span class="text-outline-variant font-light select-none">/</span><a class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-label-md font-label-md shrink-0" data-path="leccion-02-relacion-con-los-factores-humanos" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">02</span><span>Relación con los Factores Humanos</span></a><span class="text-outline-variant font-light select-none">/</span><a class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-label-md font-label-md shrink-0" data-path="leccion-03-modelo-mental-y-modelo-conceptual" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">03</span><span>Modelo Mental y Modelo Conceptual</span></a></nav></div></div></header><main class="w-full pt-36 bg-surface flex-1"><div class="max-w-7xl mx-auto px-6 py-6"><div class="flex flex-col w-full">
+<!-- Píldoras Temáticas Superiores (Inspirado en la botonera de módulos Usabilidad 03) -->
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+<!-- Píldora 01: Activa -->
+<div class="relative bg-primary-container text-on-primary-container p-4 rounded-xl shadow-md transition-all flex flex-col justify-between overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-inline text-code-inline text-[12px] font-semibold tracking-wider opacity-90">01</span>
+<span class="bg-surface-container-lowest/20 backdrop-blur-sm px-2 py-0.5 rounded-full font-label-sm text-[10px] tracking-wide font-bold uppercase">Activo</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm leading-tight mb-0.5">Objetivos del Diseño</h2>
+<p class="font-body-sm text-body-sm opacity-85 text-xs">Puente, dicotomía metodológica y 7 ejes MPIu+a</p>
+</div>
+<div class="absolute -right-4 -bottom-4 w-16 h-16 rounded-full bg-white/10 pointer-events-none"></div>
+</div>
+<!-- Píldora 02: Inactiva -->
+<a class="group bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 p-4 rounded-xl shadow-sm flex flex-col justify-between" data-path="leccion-02-relacion-con-los-factores-humanos" href="#">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-inline text-code-inline text-[12px] text-outline font-semibold">02</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px] transition-colors">psychology</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-tight mb-0.5">Relación con Factores Humanos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Percepción, carga cognitiva y affordances</p>
+</div>
+</a>
+<!-- Píldora 03: Inactiva -->
+<a class="group bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 p-4 rounded-xl shadow-sm flex flex-col justify-between" data-path="leccion-03-modelo-mental-y-modelo-conceptual" href="#">
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-inline text-code-inline text-[12px] text-outline font-semibold">03</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px] transition-colors">schema</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-tight mb-0.5">Modelo Mental y Conceptual</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Brechas de Norman y metáforas de interacción</p>
+</div>
+</a>
+</section>
+<!-- Tarjeta Hero de Usabilidad 03 -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-6 sm:p-8 mb-8 relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+<div class="flex items-start gap-4 sm:gap-5">
+<div class="w-14 h-14 rounded-2xl bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[32px]">sports_esports</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-code-inline text-[11px] font-bold uppercase tracking-wider mb-2">
+            JUEGO 1 · TODO EN UNO · FASE DE DISEÑO: OBJETIVOS
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight mb-2">
+            Test, flashcards y huecos
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+            Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre el rol de la fase de diseño como puente entre requisitos e implementación, la dicotomía empírica vs metodológica de Granollers y los 7 ejes clave de MPIu+a.
+          </p>
+</div>
+</div>
+<div class="lg:text-right shrink-0 bg-surface-container-low px-5 py-4 rounded-xl flex lg:flex-col justify-between items-center lg:items-end gap-3">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">22 preguntas • 11 tarjetas • 6 textos</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Contenido temático completo (Dr. Toni Granollers)</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Autoevaluación continua
+        </div>
+</div>
+</div>
+</section>
+<!-- Contenedor Principal de la Suite Interactiva -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-6 sm:p-8 mb-10">
+<!-- Barra de Selección de Modos y Atajos -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 bg-surface-container-low/40 p-4 rounded-xl">
+<div class="flex flex-wrap items-center gap-2" id="mode-tabs">
+<button class="suite-tab-btn flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium shadow-sm transition-all duration-200" id="tab-btn-quiz" onclick="switchSuiteTab('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (22)</span>
+</button>
+<button class="suite-tab-btn flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-all duration-200" id="tab-btn-flashcards" onclick="switchSuiteTab('flashcards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (11)</span>
+</button>
+<button class="suite-tab-btn flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-all duration-200" id="tab-btn-fill" onclick="switchSuiteTab('fill')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (6)</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-outline font-code-inline text-[11px] self-start md:self-auto bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-xs">
+<span class="material-symbols-outlined text-[14px]">keyboard</span>
+<span class="hidden sm:inline">Atajos:</span>
+<span class="text-on-surface-variant font-medium">[1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</div>
+<!-- MODO 1: TEST INTERACTIVO -->
+<div class="suite-pane flex flex-col" id="quiz-container">
+<!-- Metadatos de Progreso -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="quiz-progress-text">Pregunta 1 de 22</span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-code-inline text-[11px] font-medium" id="quiz-topic-tag">MPIu+a · Puente</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="font-code-inline text-code-inline text-on-surface-variant text-xs">
+            Aciertos: <span class="font-bold text-primary" id="quiz-score-num">0</span> / <span id="quiz-total-seen">0</span>
+</div>
+<button class="text-outline hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" onclick="restartQuiz()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reiniciar
+          </button>
+</div>
+</div>
+<!-- Barra de progreso -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-8">
+<div class="h-full bg-primary-container transition-all duration-300" id="quiz-progress-bar" style="width: 4.54%;"></div>
+</div>
+<!-- Enunciado de Pregunta -->
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md text-on-surface leading-snug font-semibold" id="quiz-question-title">
+          Cargando pregunta...
+        </h3>
+</div>
+<!-- Opciones de Respuesta (1 a 4) -->
+<div class="grid grid-cols-1 gap-3.5 mb-8" id="quiz-options-grid">
+<!-- Generadas dinámicamente con JS -->
+</div>
+<!-- Feedback Inmediato -->
+<div class="hidden rounded-xl p-5 mb-8 transition-all duration-300" id="quiz-feedback-box">
+<div class="flex items-start gap-3.5">
+<span class="material-symbols-outlined text-[24px] mt-0.5 shrink-0" id="quiz-feedback-icon">info</span>
+<div class="flex-1">
+<h4 class="font-headline-sm text-headline-sm font-semibold mb-1" id="quiz-feedback-heading">Resultado</h4>
+<p class="font-body-md text-body-md leading-relaxed" id="quiz-feedback-text"></p>
+</div>
+</div>
+</div>
+<!-- Control de Avance del Quiz -->
+<div class="flex items-center justify-between pt-4 bg-surface-container-low/20 px-4 py-3 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selecciona una opción o pulsa una tecla [1-4]</span>
+<button class="hidden px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium hover:bg-primary transition-all duration-200 shadow-sm flex items-center gap-2" id="quiz-next-btn" onclick="nextQuizQuestion()">
+<span>Siguiente pregunta</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Pantalla Final del Quiz (Oculta por defecto) -->
+<div class="hidden flex-col items-center justify-center text-center py-10 px-4" id="quiz-results-screen">
+<div class="w-20 h-20 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-[42px]" id="quiz-result-trophy">emoji_events</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold mb-1">Módulo Completado</span>
+<h3 class="font-headline-xl text-headline-xl text-on-surface font-bold mb-2">Evaluación Finalizada</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-6" id="quiz-results-summary">
+          Has respondido a las 22 preguntas fundamentales sobre la Fase de Diseño en MPIu+a.
+        </p>
+<div class="flex items-center justify-center gap-8 mb-8 bg-surface-container-low px-8 py-4 rounded-xl">
+<div>
+<div class="font-display-hero text-[36px] font-bold text-primary leading-none" id="quiz-final-score">0.0</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Calificación / 10</div>
+</div>
+<div class="w-px h-10 bg-outline-variant"></div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface leading-none" id="quiz-final-correct">0/22</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Aciertos Netos</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium hover:bg-primary transition-colors shadow-sm flex items-center gap-2" onclick="restartQuiz()">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Repetir Test Completo</span>
+</button>
+<button class="px-5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors flex items-center gap-2" onclick="switchSuiteTab('flashcards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Reforzar con Flashcards</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODO 2: FLASHCARDS 3D -->
+<div class="suite-pane hidden flex-col items-center" id="flashcards-container">
+<!-- Barra superior flashcards -->
+<div class="w-full flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="fc-counter">Tarjeta 1 de 11</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-code-inline text-[11px]" id="fc-category">Definición General</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-code-inline text-code-inline text-xs text-on-surface-variant">
+            Dominadas: <span class="font-bold text-primary" id="fc-known-count">0</span>/11
+          </span>
+<button class="text-outline hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" onclick="resetFlashcards()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reiniciar
+          </button>
+</div>
+</div>
+<!-- Contenedor del Naipe 3D -->
+<div class="w-full max-w-2xl h-80 sm:h-88 [perspective:1200px] mb-6 cursor-pointer select-none" onclick="flipCurrentCard()">
+<div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] rounded-2xl shadow-md" id="flashcard-3d">
+<!-- Cara A: Pregunta / Concepto -->
+<div class="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-surface-container-low rounded-2xl p-8 flex flex-col justify-between overflow-hidden">
+<div class="flex items-center justify-between text-outline">
+<span class="font-code-inline text-[12px] font-semibold">CONCEPTO / PREGUNTA</span>
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+<div class="my-auto text-center px-4">
+<div class="font-headline-md text-headline-md text-on-surface font-semibold mb-3 leading-snug" id="fc-front-title">
+                ¿Qué rol cumple la fase de diseño en el modelo MPIu+a?
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="fc-front-sub">
+                Haz clic o pulsa [Espacio] para ver la respuesta detallada
+              </p>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant/70 font-label-sm text-[12px]">
+<span>MPIu+a · Cátedra IPO UdL</span>
+<span class="flex items-center gap-1">Girar tarjeta <span class="material-symbols-outlined text-[14px]">sync</span></span>
+</div>
+</div>
+<!-- Cara B: Respuesta / Solución -->
+<div class="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-surface-container-lowest rounded-2xl p-8 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex items-center justify-between text-primary">
+<span class="font-code-inline text-[12px] font-semibold uppercase tracking-wider">Fundamento y Clave Teórica</span>
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="my-auto px-2 overflow-y-auto max-h-48 text-left">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2" id="fc-back-title">
+                Respuesta Clave:
+              </h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="fc-back-desc">
+                Actúa como el puente crítico de traducción entre las necesidades/requisitos de los usuarios y la arquitectura de software ejecutable, garantizando usabilidad antes del código final.
+              </p>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-[12px] pt-3">
+<span>Dr. Toni Granollers</span>
+<span class="font-code-inline text-[11px]">[S] Marcar como aprendida</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Controles Flashcard -->
+<div class="flex flex-wrap items-center justify-center gap-4 w-full max-w-2xl">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-xs" onclick="prevFlashcard()">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Anterior [←]</span>
+</button>
+<button class="px-5 py-2.5 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium hover:bg-outline-variant/40 transition-colors flex items-center gap-1.5 shadow-xs" onclick="flipCurrentCard()">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Voltear [Espacio]</span>
+</button>
+<button class="px-5 py-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-primary/10 hover:text-primary transition-colors flex items-center gap-1.5 shadow-xs" id="fc-mark-btn" onclick="toggleKnownCurrentCard()">
+<span class="material-symbols-outlined text-[18px]" id="fc-mark-icon">check_circle</span>
+<span id="fc-mark-text">Marcar Dominada [S]</span>
+</button>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-xs" onclick="nextFlashcard()">
+<span>Siguiente [→]</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- MODO 3: RELLENAR HUECOS -->
+<div class="suite-pane hidden flex-col" id="fill-container">
+<!-- Selector de Texto y Progreso -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div>
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="fill-title-indicator">Texto 1 de 6</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-[11px] font-medium" id="fill-theme-badge">El puente del diseño</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Completa los espacios en blanco escribiendo o haciendo clic en las palabras del banco inferior.
+          </p>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface disabled:opacity-30 disabled:pointer-events-none" id="fill-prev-btn" onclick="prevFillText()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<span class="font-code-inline text-code-inline text-xs font-semibold px-2" id="fill-page-num">1/6</span>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface disabled:opacity-30 disabled:pointer-events-none" id="fill-next-btn" onclick="nextFillText()">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta del Texto Interactivo -->
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl mb-6 shadow-inner">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-4" id="fill-card-title">
+          1. El Diseño como Puente Metodológico
+        </h4>
+<div class="font-body-lg text-body-lg text-on-surface leading-loose tracking-wide" id="fill-text-workspace">
+<!-- Generado con inputs inline y estado accesible -->
+</div>
+</div>
+<!-- Banco de Palabras Disponibles -->
+<div class="mb-8">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">Banco de Palabras (Haz clic para insertar en el hueco libre):</span>
+<button class="text-xs text-outline hover:text-primary font-code-inline underline" onclick="clearFillInputs()">Limpiar campos</button>
+</div>
+<div class="flex flex-wrap gap-2 p-3 bg-surface-container rounded-xl" id="fill-word-bank">
+<!-- Chips de palabras -->
+</div>
+</div>
+<!-- Feedback de Validación de Huecos -->
+<div class="hidden rounded-xl p-4 mb-6 transition-all" id="fill-validation-box">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[22px]" id="fill-val-icon">verified</span>
+<span class="font-headline-sm text-headline-sm font-semibold" id="fill-val-msg">Mensaje de validación</span>
+</div>
+</div>
+<!-- Botones de Acción -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<button class="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium hover:bg-primary transition-all shadow-sm flex items-center gap-2" onclick="checkFillAnswers()">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+<span>Comprobar Respuestas [Enter]</span>
+</button>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="revealFillAnswers()">
+            Mostrar Solución
+          </button>
+</div>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-outline-variant/40 transition-colors flex items-center gap-1.5" onclick="nextFillText()">
+<span>Siguiente Texto</span>
+<span class="material-symbols-outlined text-[18px]">navigate_next</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Barra de Navegación Inferior de Usabilidad 03 -->
+<footer class="pt-6 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant">
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all font-label-md text-label-md" data-path="mpiu-a" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver al Índice de la Fase de Diseño</span>
+</a>
+<div class="font-code-inline text-code-inline text-[12px] text-outline">
+      Capítulo 01 de 03 · Fase de Diseño (MPIu+a)
+    </div>
+<a class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary transition-all font-label-md text-label-md font-medium shadow-sm" data-path="leccion-02-relacion-con-los-factores-humanos" href="#">
+<span>Siguiente: 02 Relación con los Factores Humanos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer>
+</div>
+<!-- Lógica Interactiva Completa de la Suite -->
+<script>
+  // ==========================================
+  // 1. BANCO DE DATOS: 22 PREGUNTAS (QUIZ)
+  // ==========================================
+  const QUIZ_DATA = [
+    {
+      q: "¿Cuál es el objetivo primordial de la fase de diseño en el modelo MPIu+a según Toni Granollers?",
+      cat: "MPIu+a · Puente",
+      options: [
+        "Codificar rápidamente la interfaz en el framework frontend más reciente.",
+        "Servir de puente metodológico transformando requisitos de usuario en soluciones interactivas usables antes del código.",
+        "Definir el plan de marketing y el presupuesto publicitario del sistema.",
+        "Reemplazar la necesidad de hacer pruebas con usuarios reales en fases posteriores."
+      ],
+      correct: 1,
+      feedback: "Exacto. En MPIu+a la fase de diseño es el puente formal que materializa los requisitos abstractos en representaciones tangibles y verificables antes de invertir en implementación."
+    },
+    {
+      q: "En la dicotomía empírica vs metodológica de Granollers, ¿qué caracteriza al enfoque puramente empírico?",
+      cat: "Dicotomía de Diseño",
+      options: [
+        "Seguir rigurosamente modelos formales de especificación desde el día uno.",
+        "Basarse en el ensayo y error subjetivo sin un marco estructurado de ingeniería de usabilidad.",
+        "Aplicar métricas ISO 9241-11 desde la concepción del producto.",
+        "Utilizar exclusivamente herramientas de prototipado computacional de alta fidelidad."
+      ],
+      correct: 1,
+      feedback: "Correcto. El diseño empírico sin método confía en la intuición o la suerte del diseñador, lo que suele derivar en interfaces inconsistentes y altos costes de retrabajo."
+    },
+    {
+      q: "¿Por qué el modelo MPIu+a insiste en que el diseño NO debe comenzar directamente por el código?",
+      cat: "Ciclo de Vida",
+      options: [
+        "Porque programar antes de diseñar eleva drásticamente el coste de corregir fallos conceptuales y de navegación.",
+        "Porque los programadores no conocen las pautas de accesibilidad WCAG.",
+        "Porque el software carece de soporte para diseño responsivo sin bocetos previos.",
+        "Porque la normativa ISO 25010 prohíbe escribir código sin un storyboard firmado."
+      ],
+      correct: 0,
+      feedback: "Efectivamente. Modificar una arquitectura de software ya programada cuesta hasta 100 veces más que refinar un prototipo conceptual o un wireframe durante la fase de diseño."
+    },
+    {
+      q: "¿Cuáles son los dos grandes niveles en los que se divide el diseño en MPIu+a?",
+      cat: "Niveles de Diseño",
+      options: [
+        "Diseño Gráfico y Diseño Tipográfico.",
+        "Diseño Conceptual (arquitectura y metáforas) y Diseño Visual/Detalle (interacción y apariencia).",
+        "Diseño Frontend y Diseño Backend.",
+        "Diseño Analógico y Diseño Vectorial."
+      ],
+      correct: 1,
+      feedback: "Correcto. Primero se aborda el Diseño Conceptual (modelo mental, tareas y metáforas) y luego el Diseño Visual y Detallado (elementos gráficos, feedback y layout)."
+    },
+    {
+      q: "¿Qué representa el 'Eje de Requisitos' al entrar en la fase de diseño?",
+      cat: "Ejes Clave",
+      options: [
+        "La lista estricta de librerías JavaScript permitidas.",
+        "La traslación de los perfiles de usuario (personas, escenarios) a decisiones de navegación e interacción.",
+        "El número de líneas de especificación aprobadas por el cliente.",
+        "El cálculo financiero del coste por clic en la web."
+      ],
+      correct: 1,
+      feedback: "Así es. Los modelos de tareas y perfiles de usuario son el punto de partida directo que guía la estructuración de la interfaz."
+    },
+    {
+      q: "¿Qué función cumple el 'Modelo Conceptual' dentro de los objetivos de diseño?",
+      cat: "Modelos",
+      options: [
+        "Describir la base de datos relacional y las entidades SQL.",
+        "Explicar al usuario cómo está programado el servidor internamente.",
+        "Establecer el esquema mental articulado que el diseñador proyecta para que el usuario comprenda el sistema.",
+        "Definir el manual de marca corporativa y la paleta cromática."
+      ],
+      correct: 2,
+      feedback: "Correcto. El modelo conceptual es la representación que el diseñador plasma en la interfaz para comunicar con precisión el funcionamiento del sistema al usuario."
+    },
+    {
+      q: "Según la cátedra de Granollers, ¿qué ocurre si el modelo del diseñador no coincide con el modelo mental del usuario?",
+      cat: "Brecha Cognitiva",
+      options: [
+        "El sistema incrementa su velocidad de procesamiento.",
+        "Se generan las brechas de ejecución y evaluación (Norman), causando confusión, errores y rechazo.",
+        "El usuario automáticamente actualiza sus capacidades cognitivas.",
+        "Se solventa añadiendo una sección más amplia de Preguntas Frecuentes (FAQ)."
+      ],
+      correct: 1,
+      feedback: "Muy bien. La disparidad entre el modelo conceptual y el mental genera frustración y fricción operativa según la teoría clásica de Don Norman."
+    },
+    {
+      q: "¿Cómo se relaciona la accesibilidad (a) con la fase de diseño en MPIu+a?",
+      cat: "Accesibilidad Integrada",
+      options: [
+        "Es un parche que se delega a los desarrolladores tras la entrega final.",
+        "Debe considerarse de forma nativa e inseparable desde la primera concepción estructural del diseño.",
+        "Aplica exclusivamente a proyectos gubernamentales y no al software privado.",
+        "Consiste simplemente en verificar el contraste con una extensión de navegador al terminar."
+      ],
+      correct: 1,
+      feedback: "Exacto. El '+a' de MPIu+a destaca que la accesibilidad universal debe imbricarse desde el diseño conceptual, no como un añadido tardío."
+    },
+    {
+      q: "¿Qué significa que el diseño sea una actividad 'iterativa' en MPIu+a?",
+      cat: "Metodología",
+      options: [
+        "Que se debe realizar una única entrega perfecta sin revisiones.",
+        "Que requiere prototipar, evaluar con usuarios o expertos, y rediseñar cíclicamente antes de implementar.",
+        "Que cada diseñador trabaja en una pantalla distinta de manera aislada.",
+        "Que el diseño se automatiza mediante scripts generativos."
+      ],
+      correct: 1,
+      feedback: "Correcto. La iteración diseño-evaluación es el núcleo vital de la ingeniería de la usabilidad para converger hacia la mejor solución."
+    },
+    {
+      q: "Dentro de los 7 ejes de diseño en MPIu+a, ¿cuál asegura que las tareas críticas tengan la mínima fricción operativa?",
+      cat: "Ejes Clave",
+      options: [
+        "Eje de eficiencia y correspondencia de tareas.",
+        "Eje de redundancia cromática.",
+        "Eje de compresión de assets gráficos.",
+        "Eje de sincronismo asíncrono."
+      ],
+      correct: 0,
+      feedback: "Efectivo. Asegurar que las tareas clave del usuario se completen con el menor número de pasos y carga cognitiva es un objetivo cardinal."
+    },
+    {
+      q: "¿Qué ventaja clave aporta el prototipado de baja fidelidad en etapas tempranas de diseño?",
+      cat: "Prototipado",
+      options: [
+        "Permite probar el rendimiento de la CPU en el servidor.",
+        "Fomenta explorar múltiples alternativas conceptuales a coste prácticamente nulo sin apego emocional.",
+        "Proporciona el código CSS definitivo listo para producción.",
+        "Elimina la necesidad de definir requisitos de usuario."
+      ],
+      correct: 1,
+      feedback: "Preciso. Los prototipos de baja fidelidad facilitan el cambio radical de enfoque sin el coste de haber escrito código o gráficos pulidos."
+    },
+    {
+      q: "¿Qué papel juegan las metáforas en el diseño de interfaces según Granollers?",
+      cat: "Metáforas",
+      options: [
+        "Son adornos literarios prescindibles en sistemas profesionales.",
+        "Facilitan la comprensión rápida transfiriendo conocimientos que el usuario ya posee del mundo físico al entorno digital.",
+        "Obligan al usuario a aprender una jerga técnica informática nueva.",
+        "Sirven para justificar animaciones 3D complejas en el menú de inicio."
+      ],
+      correct: 1,
+      feedback: "Muy bien. Metáforas como la carpeta, el carrito o el escritorio anclan conceptos abstractos en esquemas previos conocidos por la persona."
+    },
+    {
+      q: "En el contexto de la ISO 9241-210, ¿en qué fase entra formalmente el diseño de MPIu+a?",
+      cat: "Estándares ISO",
+      options: [
+        "Planificación del proyecto únicamente.",
+        "Producción de soluciones de diseño que respondan a los requisitos de usuario.",
+        "Cierre y facturación contable.",
+        "Auditoría externa de base de datos."
+      ],
+      correct: 1,
+      feedback: "Correcto. La ISO 9241-210 estipula 'Produce design solutions to meet user requirements' como la actividad central posterior al análisis."
+    },
+    {
+      q: "¿A qué se refiere el principio de consistencia interna y externa durante la fase de diseño?",
+      cat: "Heurísticas",
+      options: [
+        "A que los botones tengan siempre el mismo ancho en píxeles.",
+        "A mantener coherencia en patrones dentro de la aplicación (interna) y con las convenciones universales del ecosistema (externa).",
+        "A emplear servidores idénticos en desarrollo y en producción.",
+        "A traducir el texto de forma literal a varios idiomas."
+      ],
+      correct: 1,
+      feedback: "Exacto. La consistencia reduce la curva de aprendizaje al permitir transferir hábitos aprendidos tanto dentro del sistema como en el resto de la web."
+    },
+    {
+      q: "¿Por qué el diseño conceptual debe preceder al diseño de detalle visual?",
+      cat: "Jerarquía de Diseño",
+      options: [
+        "Porque una estética atractiva sobre una estructura defectuosa crea sistemas visualmente bellos pero inutilizables.",
+        "Porque los colores solo pueden seleccionarse tras renderizar el DOM.",
+        "Porque la normativa europea no permite diseñar tipografías antes de diagramas de flujo.",
+        "Para retrasar intencionadamente la entrega del proyecto al cliente."
+      ],
+      correct: 0,
+      feedback: "Gran respuesta. 'Pintar una mala arquitectura no la hace usable'. La base conceptual y funcional debe ser sólida antes del estilo."
+    },
+    {
+      q: "¿Qué herramienta es paradigmática para verificar el flujo de tareas en la fase de diseño preliminar?",
+      cat: "Artefactos",
+      options: [
+        "Compilador de C++.",
+        "Storyboards y diagramas de navegación (Wireflows).",
+        "Profiler de memoria RAM.",
+        "Hoja de cálculo de balance económico."
+      ],
+      correct: 1,
+      feedback: "Correcto. Los wireflows y storyboards plasman la secuencia de interacciones que vivirá el usuario para cumplir sus objetivos."
+    },
+    {
+      q: "¿Qué implica el eje de 'Visibilidad del estado del sistema' durante el diseño de la interacción?",
+      cat: "Heurísticas",
+      options: [
+        "Mostrar los registros internos del servidor al usuario final en tiempo real.",
+        "Mantener siempre informado al usuario sobre lo que ocurre mediante retroalimentación adecuada en un tiempo razonable.",
+        "Hacer transparentes todas las tarjetas de la interfaz con efecto cristal.",
+        "Ocultar los mensajes de error para no alarmar a quien usa la aplicación."
+      ],
+      correct: 1,
+      feedback: "Así es. El feedback continuo previene la incertidumbre y confirma que las acciones del usuario han tenido efecto en el sistema."
+    },
+    {
+      q: "En el marco de MPIu+a, ¿quiénes deben participar de manera colaborativa durante las sesiones de codiseño?",
+      cat: "Codiseño",
+      options: [
+        "Únicamente el director de tecnología y el CEO.",
+        "Equipo multidisciplinar: ingenieros, diseñadores de interacción, expertos en accesibilidad y usuarios representativos.",
+        "Exclusivamente programadores senior certificados.",
+        "Un algoritmo de inteligencia artificial sin intervención humana."
+      ],
+      correct: 1,
+      feedback: "Perfecto. La multidisciplinariedad es el corazón de la Ingeniería de la Usabilidad; previene sesgos puramente técnicos o puramente estéticos."
+    },
+    {
+      q: "¿Cómo ayuda la fase de diseño a mitigar los riesgos de desarrollo en ingeniería del software?",
+      cat: "Ingeniería Software",
+      options: [
+        "Validando requisitos ambiguos antes de escribir código y evitando reescrituras estructurales costosas.",
+        "Eliminando por completo la necesidad de pruebas unitarias en backend.",
+        "Permitiendo prescindir de gestores de versiones como Git.",
+        "Asegurando que el software nunca tenga caídas de servidor."
+      ],
+      correct: 0,
+      feedback: "Efectivo. Detectar un fallo de flujo en un boceto cuesta minutos; solucionarlo en código desplegado puede requerir semanas de reingeniería."
+    },
+    {
+      q: "¿Qué relación existe entre la fase de diseño y la fase de evaluación en el modelo MPIu+a?",
+      cat: "Vínculo de Fases",
+      options: [
+        "Son fases completamente independientes que nunca intercambian información.",
+        "El diseño genera artefactos prototipados expresamente para que la evaluación valide si se cumplen los objetivos de usabilidad.",
+        "La evaluación solo se ejecuta una vez concluido el despliegue comercial del producto.",
+        "El diseño se detiene si la evaluación aprueba un único wireframe."
+      ],
+      correct: 1,
+      feedback: "Totalmente. El diseño produce las propuestas que la evaluación somete a juicio empírico o heurístico para retroalimentar el rediseño."
+    },
+    {
+      q: "¿Qué atributo de usabilidad (ISO 9241) busca primariamente la correcta estructuración del diseño?",
+      cat: "Métricas",
+      options: [
+        "Eficacia (completar tareas), Eficiencia (con el menor esfuerzo) y Satisfacción (confort subjetivo).",
+        "Potencia de cálculo por núcleo de procesamiento.",
+        "Tasa de compresión sin pérdidas de ficheros PNG.",
+        "Porcentaje de ventas en el primer trimestre fiscal."
+      ],
+      correct: 0,
+      feedback: "Correcto. La tríada clásica de usabilidad: eficacia, eficiencia y satisfacción del usuario en un contexto de uso especificado."
+    },
+    {
+      q: "En conclusión, el diseño en MPIu+a se concibe como:",
+      cat: "Conclusión",
+      options: [
+        "Una disciplina artística centrada en el gusto personal del diseñador.",
+        "Un proceso de ingeniería sistemático, centrado en las personas, iterativo y validable empíricamente.",
+        "Una etapa burocrática obligatoria antes de comenzar el desarrollo ágil.",
+        "Un conjunto de reglas fijas que no admiten adaptación al contexto del proyecto."
+      ],
+      correct: 1,
+      feedback: "Excelente. Para Toni Granollers y la Cátedra de Usabilidad, el diseño es ingeniería disciplinada con foco inquebrantable en el ser humano."
+    }
+  ];
+
+  // ==========================================
+  // 2. BANCO DE DATOS: 11 FLASHCARDS 3D
+  // ==========================================
+  const FLASHCARDS_DATA = [
+    {
+      cat: "Definición Clave",
+      front: "¿Qué es la Fase de Diseño en el modelo MPIu+a?",
+      back: "Es el proceso metodológico de ingeniería donde se conceptualiza y especifica formalmente la solución interactiva antes de programarla, sirviendo de puente entre requisitos y código."
+    },
+    {
+      cat: "Dicotomía de Diseño",
+      front: "¿En qué se diferencia el diseño empírico del diseño metodológico?",
+      back: "El diseño empírico depende de la intuición y el ensayo/error no sistemático. El metodológico aplica modelos de interacción, guías de estilo, heurísticas y ciclos de evaluación formal."
+    },
+    {
+      cat: "Nivel 1: Conceptual",
+      front: "¿Qué abarca el Diseño Conceptual?",
+      back: "Estructura la arquitectura de la información, el modelo mental proyectado, la definición de metáforas del sistema y el flujo global de tareas, sin entrar en detalles cosméticos."
+    },
+    {
+      cat: "Nivel 2: Detalle",
+      front: "¿Qué abarca el Diseño Visual y de Detalle?",
+      back: "Define la distribución concreta de widgets, jerarquía tipográfica, cromática, affordances visuales, estados de interacción y microcopia accesible para cada pantalla."
+    },
+    {
+      cat: "El Puente",
+      front: "¿Por qué se denomina 'Puente' a esta fase?",
+      back: "Porque traduce el lenguaje de las personas (necesidades, problemas, contextos) al lenguaje estructurado que los ingenieros de software pueden implementar de forma inequívoca."
+    },
+    {
+      cat: "Accesibilidad Integrada",
+      front: "¿Cómo encaja la 'a' de accesibilidad en el diseño?",
+      back: "No es un parche correctivo a posteriori: se integra diseñando desde el inicio contraste suficiente, orden de foco lógico, navegación por teclado y redundancia sensorial."
+    },
+    {
+      cat: "Economía del Software",
+      front: "¿Cuál es el beneficio de corregir en diseño frente a desarrollo?",
+      back: "La regla 1-10-100: cambiar una decisión en un prototipo de diseño cuesta una fracción mínima comparado con rehacer arquitectura y código ya desplegado."
+    },
+    {
+      cat: "Modelos Cognitivos",
+      front: "¿Qué relación debe buscar el diseño con el Modelo Mental del usuario?",
+      back: "El modelo conceptual de la interfaz debe coincidir fielmente con el modelo mental que el usuario ha construido en su experiencia previa para erradicar las brechas de Norman."
+    },
+    {
+      cat: "Prototipado Ágil",
+      front: "¿Qué rol tienen los bocetos de baja fidelidad (Lo-Fi)?",
+      back: "Permiten explorar con rapidez múltiples alternativas de diseño divergente y descartar hipótesis erróneas sin apego ni desperdicio de horas de desarrollo."
+    },
+    {
+      cat: "Simplicidad y Eficiencia",
+      front: "¿Cómo optimiza el buen diseño la Ley de Hick y la Ley de Fitts?",
+      back: "Reduciendo el número de elecciones en menús críticos (Hick) y ubicando los objetivos interactivos en áreas accesibles con tamaño óptimo de clic o toque (Fitts)."
+    },
+    {
+      cat: "Iteración Continua",
+      front: "¿Cuándo se considera terminada la Fase de Diseño?",
+      back: "Cuando las propuestas han superado las evaluaciones heurísticas y pruebas con usuarios alcanzando los umbrales de eficacia, eficiencia y satisfacción prefijados."
+    }
+  ];
+
+  // ==========================================
+  // 3. BANCO DE DATOS: 6 TEXTOS RELLENAR HUECOS
+  // ==========================================
+  const FILL_DATA = [
+    {
+      title: "1. El Diseño como Puente Metodológico",
+      theme: "MPIu+a · Puente",
+      text: "En el marco de la metodología MPIu+a, la fase de diseño actúa como un auténtico [puente] conceptual entre la especificación de [requisitos] y la posterior [implementación] técnica del software.",
+      blanks: ["puente", "requisitos", "implementación"],
+      optionsPool: ["puente", "requisitos", "implementación", "marketing", "servidor", "estética"]
+    },
+    {
+      title: "2. La Dicotomía según Granollers",
+      theme: "Fundamentos Epistemológicos",
+      text: "Frente al diseño puramente [empírico] basado en el ensayo y la suerte individual, Granollers defiende un enfoque [metodológico] e ingenieril que garantiza la [usabilidad] y consistencia del sistema.",
+      blanks: ["empírico", "metodológico", "usabilidad"],
+      optionsPool: ["empírico", "metodológico", "usabilidad", "aleatorio", "presupuestario", "visual"]
+    },
+    {
+      title: "3. Diseño Conceptual y Metáforas",
+      theme: "Arquitectura Cognitiva",
+      text: "El diseño [conceptual] define la estructura del sistema y recurre a [metáforas] cotidianas para alinear el modelo del diseñador con el modelo [mental] del usuario final.",
+      blanks: ["conceptual", "metáforas", "mental"],
+      optionsPool: ["conceptual", "metáforas", "mental", "gráfico", "algorítmico", "físico"]
+    },
+    {
+      title: "4. Accesibilidad Universal Integrada (+a)",
+      theme: "Diseño Inclusivo",
+      text: "En MPIu+a la [accesibilidad] no se añade como un remiendo al final del desarrollo; debe concebirse de forma [nativa] en la arquitectura de interacción asegurando [inclusión] plena.",
+      blanks: ["accesibilidad", "nativa", "inclusión"],
+      optionsPool: ["accesibilidad", "nativa", "inclusión", "secundaria", "exclusiva", "opcional"]
+    },
+    {
+      title: "5. Reducción de Costes y Riesgos",
+      theme: "Economía de la Usabilidad",
+      text: "Validar prototipos mediante evaluación [heurística] o test de usuarios durante el diseño evita el costoso [retrabajo] y reduce sustancialmente el [riesgo] del proyecto software.",
+      blanks: ["heurística", "retrabajo", "riesgo"],
+      optionsPool: ["heurística", "retrabajo", "riesgo", "gasto", "retraso", "compilado"]
+    },
+    {
+      title: "6. Evaluación de Usabilidad según ISO",
+      theme: "Estándares ISO 9241",
+      text: "El diseño centrado en el usuario persigue optimizar la [eficacia] en la resolución de tareas, la [eficiencia] temporal y la [satisfacción] percibida por la persona.",
+      blanks: ["eficacia", "eficiencia", "satisfacción"],
+      optionsPool: ["eficacia", "eficiencia", "satisfacción", "velocidad", "estética", "economía"]
+    }
+  ];
+
+  // ==========================================
+  // ESTADOS GLOBALES DE LA SUITE
+  // ==========================================
+  let currentTab = 'quiz';
+
+  // Estado Quiz
+  let quizIndex = 0;
+  let quizScore = 0;
+  let quizAnswered = false;
+  let quizAnswersHistory = [];
+
+  // Estado Flashcards
+  let fcIndex = 0;
+  let fcFlipped = false;
+  let fcKnownSet = new Set();
+
+  // Estado Rellenar Huecos
+  let fillIndex = 0;
+  let fillUserAnswers = {};
+
+  // ==========================================
+  // GESTIÓN DE PESTAÑAS (MODOS)
+  // ==========================================
+  function switchSuiteTab(targetTab) {
+    currentTab = targetTab;
+
+    // Actualizar botones
+    const tabs = ['quiz', 'flashcards', 'fill'];
+    tabs.forEach(t => {
+      const btn = document.getElementById(`tab-btn-${t}`);
+      const pane = document.getElementById(`${t}-container`);
+      if (t === targetTab) {
+        btn.className = "suite-tab-btn flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-medium shadow-sm transition-all duration-200";
+        pane.classList.remove('hidden');
+        pane.classList.add('flex');
+      } else {
+        btn.className = "suite-tab-btn flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-medium transition-all duration-200";
+        pane.classList.add('hidden');
+        pane.classList.remove('flex');
+      }
+    });
+
+    if (targetTab === 'flashcards') {
+      renderFlashcard();
+    } else if (targetTab === 'fill') {
+      renderFillText();
+    }
+  }
+
+  // ==========================================
+  // LÓGICA DEL TEST INTERACTIVO (22 PREGUNTAS)
+  // ==========================================
+  function initQuiz() {
+    quizIndex = 0;
+    quizScore = 0;
+    quizAnswered = false;
+    quizAnswersHistory = [];
+    document.getElementById('quiz-results-screen').classList.add('hidden');
+    document.getElementById('quiz-results-screen').classList.remove('flex');
+    renderQuizQuestion();
+  }
+
+  function restartQuiz() {
+    initQuiz();
+  }
+
+  function renderQuizQuestion() {
+    quizAnswered = false;
+    const qData = QUIZ_DATA[quizIndex];
+    const total = QUIZ_DATA.length;
+
+    // Actualizar progreso
+    document.getElementById('quiz-progress-text').innerText = `Pregunta ${quizIndex + 1} de ${total}`;
+    document.getElementById('quiz-topic-tag').innerText = qData.cat;
+    document.getElementById('quiz-score-num').innerText = quizScore;
+    document.getElementById('quiz-total-seen').innerText = quizIndex;
+
+    const pct = ((quizIndex + 1) / total) * 100;
+    document.getElementById('quiz-progress-bar').style.width = `${pct}%`;
+
+    // Pregunta
+    document.getElementById('quiz-question-title').innerText = qData.q;
+
+    // Ocultar feedback y botón siguiente
+    const fbBox = document.getElementById('quiz-feedback-box');
+    fbBox.className = 'hidden rounded-xl p-5 mb-8 transition-all duration-300';
+    document.getElementById('quiz-next-btn').classList.add('hidden');
+
+    // Renderizar 4 Opciones
+    const optionsGrid = document.getElementById('quiz-options-grid');
+    optionsGrid.innerHTML = '';
+
+    qData.options.forEach((optText, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = `quiz-opt-${i}`;
+      btn.onclick = () => selectQuizOption(i);
+      btn.className = "w-full text-left p-4 sm:p-4.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex items-start gap-3.5 group shadow-xs";
+      btn.innerHTML = `
+        <span class="w-7 h-7 rounded-lg bg-surface-container-highest text-on-surface-variant font-code-inline text-code-inline text-[13px] flex items-center justify-center shrink-0 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+          ${i + 1}
+        </span>
+        <span class="font-body-md text-body-md text-on-surface flex-1 pt-0.5">
+          ${optText}
+        </span>
+      `;
+      optionsGrid.appendChild(btn);
+    });
+  }
+
+  function selectQuizOption(index) {
+    if (quizAnswered) return;
+    quizAnswered = true;
+
+    const qData = QUIZ_DATA[quizIndex];
+    const isCorrect = (index === qData.correct);
+
+    if (isCorrect) {
+      quizScore++;
+    }
+
+    quizAnswersHistory.push({
+      qIdx: quizIndex,
+      selected: index,
+      correct: qData.correct,
+      isCorrect: isCorrect
+    });
+
+    // Actualizar estilos de las opciones
+    for (let i = 0; i < qData.options.length; i++) {
+      const btn = document.getElementById(`quiz-opt-${i}`);
+      btn.classList.remove('hover:bg-surface-container');
+
+      if (i === qData.correct) {
+        btn.className = "w-full text-left p-4 rounded-xl bg-primary/10 text-on-surface flex items-start gap-3.5 shadow-sm transition-all";
+        btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-primary text-on-primary font-code-inline text-code-inline text-[13px] flex items-center justify-center shrink-0";
+      } else if (i === index && !isCorrect) {
+        btn.className = "w-full text-left p-4 rounded-xl bg-error-container/30 text-on-surface flex items-start gap-3.5 shadow-sm transition-all";
+        btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-error text-on-error font-code-inline text-code-inline text-[13px] flex items-center justify-center shrink-0";
+      } else {
+        btn.classList.add('opacity-40');
+      }
+    }
+
+    // Feedback inmediato
+    const fbBox = document.getElementById('quiz-feedback-box');
+    const fbIcon = document.getElementById('quiz-feedback-icon');
+    const fbHeading = document.getElementById('quiz-feedback-heading');
+    const fbText = document.getElementById('quiz-feedback-text');
+
+    fbBox.classList.remove('hidden');
+    if (isCorrect) {
+      fbBox.className = "rounded-xl p-5 mb-8 transition-all bg-primary/10 text-on-surface flex items-start gap-3.5";
+      fbIcon.innerText = "check_circle";
+      fbIcon.className = "material-symbols-outlined text-[24px] text-primary mt-0.5 shrink-0";
+      fbHeading.innerText = "¡Respuesta Correcta!";
+      fbHeading.className = "font-headline-sm text-headline-sm text-primary font-semibold mb-1";
+    } else {
+      fbBox.className = "rounded-xl p-5 mb-8 transition-all bg-error-container/40 text-on-surface flex items-start gap-3.5";
+      fbIcon.innerText = "cancel";
+      fbIcon.className = "material-symbols-outlined text-[24px] text-error mt-0.5 shrink-0";
+      fbHeading.innerText = "Respuesta Incorrecta";
+      fbHeading.className = "font-headline-sm text-headline-sm text-error font-semibold mb-1";
+    }
+    fbText.innerText = qData.feedback;
+
+    // Actualizar marcadores
+    document.getElementById('quiz-score-num').innerText = quizScore;
+    document.getElementById('quiz-total-seen').innerText = quizIndex + 1;
+
+    // Mostrar botón siguiente
+    const nextBtn = document.getElementById('quiz-next-btn');
+    nextBtn.classList.remove('hidden');
+    if (quizIndex === QUIZ_DATA.length - 1) {
+      nextBtn.innerHTML = `<span>Ver Resultados Finales</span><span class="material-symbols-outlined text-[18px]">workspace_premium</span>`;
+    } else {
+      nextBtn.innerHTML = `<span>Siguiente pregunta</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    }
+  }
+
+  function nextQuizQuestion() {
+    if (quizIndex < QUIZ_DATA.length - 1) {
+      quizIndex++;
+      renderQuizQuestion();
+    } else {
+      showQuizResults();
+    }
+  }
+
+  function showQuizResults() {
+    const total = QUIZ_DATA.length;
+    const finalGrade = ((quizScore / total) * 10).toFixed(1);
+
+    // Ocultar preguntas activas y mostrar pantalla final
+    document.getElementById('quiz-options-grid').innerHTML = '';
+    document.getElementById('quiz-feedback-box').classList.add('hidden');
+    document.getElementById('quiz-next-btn').classList.add('hidden');
+    document.getElementById('quiz-question-title').innerText = "Resumen de Rendimiento de la Suite";
+
+    const resultsScreen = document.getElementById('quiz-results-screen');
+    resultsScreen.classList.remove('hidden');
+    resultsScreen.classList.add('flex');
+
+    document.getElementById('quiz-final-score').innerText = finalGrade;
+    document.getElementById('quiz-final-correct').innerText = `${quizScore}/${total}`;
+
+    const summary = document.getElementById('quiz-results-summary');
+    const trophy = document.getElementById('quiz-result-trophy');
+
+    if (finalGrade >= 9) {
+      trophy.innerText = "military_tech";
+      summary.innerText = "¡Excelente dominio! Comprendes con precisión el valor del diseño como puente metodológico y los 7 ejes de MPIu+a.";
+    } else if (finalGrade >= 5) {
+      trophy.innerText = "thumb_up";
+      summary.innerText = "¡Buen trabajo! Has superado el módulo. Te recomendamos repasar las flashcards para afianzar conceptos clave de Granollers.";
+    } else {
+      trophy.innerText = "school";
+      summary.innerText = "Has completado la autoevaluación. Te sugerimos revisar las tarjetas 3D y rellenar los huecos antes de pasar a Factores Humanos.";
+    }
+  }
+
+  // ==========================================
+  // LÓGICA DE LAS FLASHCARDS 3D (11 TARJETAS)
+  // ==========================================
+  function renderFlashcard() {
+    const card = FLASHCARDS_DATA[fcIndex];
+    const total = FLASHCARDS_DATA.length;
+
+    // Reset de giro
+    fcFlipped = false;
+    const cardEl = document.getElementById('flashcard-3d');
+    cardEl.style.transform = 'rotateY(0deg)';
+
+    // Metadatos
+    document.getElementById('fc-counter').innerText = `Tarjeta ${fcIndex + 1} de ${total}`;
+    document.getElementById('fc-category').innerText = card.cat;
+    document.getElementById('fc-front-title').innerText = card.front;
+    document.getElementById('fc-back-desc').innerText = card.back;
+    document.getElementById('fc-known-count').innerText = fcKnownSet.size;
+
+    // Estado del botón "Sabida"
+    const markBtn = document.getElementById('fc-mark-btn');
+    const markIcon = document.getElementById('fc-mark-icon');
+    const markText = document.getElementById('fc-mark-text');
+
+    if (fcKnownSet.has(fcIndex)) {
+      markBtn.className = "px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5 shadow-sm";
+      markIcon.innerText = "check_circle";
+      markText.innerText = "Dominada (Aprendida)";
+    } else {
+      markBtn.className = "px-5 py-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-primary/10 hover:text-primary transition-colors flex items-center gap-1.5 shadow-xs";
+      markIcon.innerText = "radio_button_unchecked";
+      markText.innerText = "Marcar Dominada [S]";
+    }
+  }
+
+  function flipCurrentCard() {
+    fcFlipped = !fcFlipped;
+    const cardEl = document.getElementById('flashcard-3d');
+    cardEl.style.transform = fcFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+  }
+
+  function nextFlashcard() {
+    if (fcIndex < FLASHCARDS_DATA.length - 1) {
+      fcIndex++;
+    } else {
+      fcIndex = 0; // Loop cíclico suave
+    }
+    renderFlashcard();
+  }
+
+  function prevFlashcard() {
+    if (fcIndex > 0) {
+      fcIndex--;
+    } else {
+      fcIndex = FLASHCARDS_DATA.length - 1;
+    }
+    renderFlashcard();
+  }
+
+  function toggleKnownCurrentCard() {
+    if (fcKnownSet.has(fcIndex)) {
+      fcKnownSet.delete(fcIndex);
+    } else {
+      fcKnownSet.add(fcIndex);
+    }
+    renderFlashcard();
+  }
+
+  function resetFlashcards() {
+    fcIndex = 0;
+    fcKnownSet.clear();
+    renderFlashcard();
+  }
+
+  // ==========================================
+  // LÓGICA DE RELLENAR HUECOS (6 TEXTOS)
+  // ==========================================
+  function renderFillText() {
+    const data = FILL_DATA[fillIndex];
+    const total = FILL_DATA.length;
+
+    document.getElementById('fill-title-indicator').innerText = `Texto ${fillIndex + 1} de ${total}`;
+    document.getElementById('fill-theme-badge').innerText = data.theme;
+    document.getElementById('fill-card-title').innerText = data.title;
+    document.getElementById('fill-page-num').innerText = `${fillIndex + 1}/${total}`;
+
+    // Desactivar botones de paginación si procede
+    document.getElementById('fill-prev-btn').disabled = (fillIndex === 0);
+    document.getElementById('fill-next-btn').disabled = (fillIndex === total - 1);
+
+    // Ocultar feedback
+    document.getElementById('fill-validation-box').classList.add('hidden');
+
+    // Construir texto con inputs
+    const workspace = document.getElementById('fill-text-workspace');
+    workspace.innerHTML = '';
+
+    // Reemplazar patrones [palabra] por inputs
+    let rawText = data.text;
+    let parts = rawText.split(/(\[[^\]]+\])/g);
+
+    let blankCounter = 0;
+    parts.forEach(part => {
+      if (part.startsWith('[') && part.endsWith(']')) {
+        const expectedWord = part.slice(1, -1);
+        const inputId = `fill-input-${fillIndex}-${blankCounter}`;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = inputId;
+        input.dataset.expected = expectedWord.toLowerCase().trim();
+        input.dataset.blankIdx = blankCounter;
+        input.placeholder = `Hueco ${blankCounter + 1}`;
+        input.className = "fill-blank-input inline-block mx-1.5 px-3 py-1 bg-surface-container-lowest text-on-surface font-semibold text-center rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary text-body-md transition-all";
+        input.style.width = `${Math.max(expectedWord.length * 13 + 30, 110)}px`;
+        input.autocomplete = "off";
+
+        // Recuperar si ya se había escrito
+        const savedVal = (fillUserAnswers[fillIndex] && fillUserAnswers[fillIndex][blankCounter]) || '';
+        input.value = savedVal;
+
+        input.oninput = (e) => {
+          if (!fillUserAnswers[fillIndex]) fillUserAnswers[fillIndex] = {};
+          fillUserAnswers[fillIndex][blankCounter] = e.target.value;
+        };
+
+        input.onkeydown = (e) => {
+          if (e.key === 'Enter') {
+            checkFillAnswers();
+          }
+        };
+
+        workspace.appendChild(input);
+        blankCounter++;
+      } else {
+        const span = document.createElement('span');
+        span.innerText = part;
+        workspace.appendChild(span);
+      }
+    });
+
+    // Renderizar banco de palabras (chips)
+    const wordBank = document.getElementById('fill-word-bank');
+    wordBank.innerHTML = '';
+    // Mezclar palabras para no dar pistas triviales
+    const shuffled = [...data.optionsPool].sort(() => Math.random() - 0.5);
+
+    shuffled.forEach(w => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.onclick = () => insertWordIntoFirstEmpty(w);
+      chip.className = "px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary-container text-on-surface font-code-inline text-code-inline text-[13px] font-medium transition-all shadow-xs";
+      chip.innerText = w;
+      wordBank.appendChild(chip);
+    });
+  }
+
+  function insertWordIntoFirstEmpty(word) {
+    const inputs = document.querySelectorAll('#fill-text-workspace input');
+    for (let input of inputs) {
+      if (!input.value.trim()) {
+        input.value = word;
+        const bIdx = input.dataset.blankIdx;
+        if (!fillUserAnswers[fillIndex]) fillUserAnswers[fillIndex] = {};
+        fillUserAnswers[fillIndex][bIdx] = word;
+        input.focus();
+        break;
+      }
+    }
+  }
+
+  function clearFillInputs() {
+    const inputs = document.querySelectorAll('#fill-text-workspace input');
+    inputs.forEach(input => {
+      input.value = '';
+      input.classList.remove('bg-primary/20', 'bg-error-container/40', 'text-primary', 'text-error');
+    });
+    if (fillUserAnswers[fillIndex]) {
+      fillUserAnswers[fillIndex] = {};
+    }
+    document.getElementById('fill-validation-box').classList.add('hidden');
+  }
+
+  function checkFillAnswers() {
+    const inputs = document.querySelectorAll('#fill-text-workspace input');
+    let allCorrect = true;
+    let emptyCount = 0;
+
+    inputs.forEach(inp => {
+      const val = inp.value.trim().toLowerCase();
+      const expected = inp.dataset.expected.toLowerCase();
+
+      if (!val) {
+        emptyCount++;
+        allCorrect = false;
+        inp.className = "fill-blank-input inline-block mx-1.5 px-3 py-1 bg-surface-container-highest text-on-surface font-semibold text-center rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary text-body-md transition-all";
+      } else if (val === expected) {
+        inp.className = "fill-blank-input inline-block mx-1.5 px-3 py-1 bg-primary/20 text-primary font-bold text-center rounded-lg shadow-sm text-body-md transition-all";
+      } else {
+        allCorrect = false;
+        inp.className = "fill-blank-input inline-block mx-1.5 px-3 py-1 bg-error-container/40 text-error font-bold text-center rounded-lg shadow-sm text-body-md transition-all";
+      }
+    });
+
+    const valBox = document.getElementById('fill-validation-box');
+    const valIcon = document.getElementById('fill-val-icon');
+    const valMsg = document.getElementById('fill-val-msg');
+    valBox.classList.remove('hidden');
+
+    if (emptyCount > 0) {
+      valBox.className = "rounded-xl p-4 mb-6 transition-all bg-surface-container text-on-surface flex items-center gap-3";
+      valIcon.innerText = "info";
+      valIcon.className = "material-symbols-outlined text-[22px] text-outline";
+      valMsg.innerText = "Por favor, completa todos los huecos antes de validar.";
+    } else if (allCorrect) {
+      valBox.className = "rounded-xl p-4 mb-6 transition-all bg-primary/10 text-on-surface flex items-center gap-3";
+      valIcon.innerText = "verified";
+      valIcon.className = "material-symbols-outlined text-[22px] text-primary";
+      valMsg.innerText = "¡Excelente! Todos los conceptos han sido identificados correctamente.";
+    } else {
+      valBox.className = "rounded-xl p-4 mb-6 transition-all bg-error-container/40 text-on-surface flex items-center gap-3";
+      valIcon.innerText = "error";
+      valIcon.className = "material-symbols-outlined text-[22px] text-error";
+      valMsg.innerText = "Algunas respuestas no son correctas. Revisa las palabras marcadas en rojo.";
+    }
+  }
+
+  function revealFillAnswers() {
+    const inputs = document.querySelectorAll('#fill-text-workspace input');
+    inputs.forEach(inp => {
+      inp.value = inp.dataset.expected;
+      inp.className = "fill-blank-input inline-block mx-1.5 px-3 py-1 bg-primary/20 text-primary font-bold text-center rounded-lg shadow-sm text-body-md transition-all";
+    });
+    const valBox = document.getElementById('fill-validation-box');
+    const valIcon = document.getElementById('fill-val-icon');
+    const valMsg = document.getElementById('fill-val-msg');
+    valBox.classList.remove('hidden');
+    valBox.className = "rounded-xl p-4 mb-6 transition-all bg-surface-container-high text-on-surface flex items-center gap-3";
+    valIcon.innerText = "visibility";
+    valIcon.className = "material-symbols-outlined text-[22px] text-primary";
+    valMsg.innerText = "Solución revelada para afianzar el contenido curricular.";
+  }
+
+  function nextFillText() {
+    if (fillIndex < FILL_DATA.length - 1) {
+      fillIndex++;
+      renderFillText();
+    }
+  }
+
+  function prevFillText() {
+    if (fillIndex > 0) {
+      fillIndex--;
+      renderFillText();
+    }
+  }
+
+  // ==========================================
+  // ATAJOS DE TECLADO GLOBALES
+  // ==========================================
+  window.addEventListener('keydown', (e) => {
+    // Si el usuario escribe en un input, solo atender Enter
+    if (e.target.tagName === 'INPUT') {
+      if (e.key === 'Enter' && currentTab === 'fill') {
+        checkFillAnswers();
+      }
+      return;
+    }
+
+    if (currentTab === 'quiz') {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const optNum = parseInt(e.key, 10) - 1;
+        selectQuizOption(optNum);
+      } else if ((e.key === 'Enter' || e.key === 'ArrowRight') && quizAnswered) {
+        nextQuizQuestion();
+      }
+    } else if (currentTab === 'flashcards') {
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        flipCurrentCard();
+      } else if (e.key === 'ArrowRight') {
+        nextFlashcard();
+      } else if (e.key === 'ArrowLeft') {
+        prevFlashcard();
+      } else if (e.key.toLowerCase() === 's') {
+        toggleKnownCurrentCard();
+      }
+    } else if (currentTab === 'fill') {
+      if (e.key === 'Enter') {
+        checkFillAnswers();
+      }
+    }
+  });
+
+  // Inicialización de la pantalla al cargar
+  document.addEventListener('DOMContentLoaded', () => {
+    initQuiz();
+  });
+  // Ejecución directa por si el DOM ya estuviese listo
+  initQuiz();
+</script></div></main><footer class="w-full bg-surface-container-low text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 py-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10"><div class="md:col-span-2 space-y-3"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">Universitat de Lleida</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Plataforma docente interactiva de Interacción Persona-Ordenador (IPO) y Diseño Centrado en el Usuario desarrollada por el Grupo de Investigación en Interacción Persona-Ordenador e Integración de Datos (GRIHO).</p><p class="font-body-sm text-body-sm text-on-surface-variant">Dirección académica y contenidos: <strong class="text-on-surface font-semibold">Dr. Toni Granollers</strong> · Cátedra de Usabilidad y Accesibilidad.</p></div><div><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold block mb-3">Marco Conceptual</span><ul class="space-y-2 font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="mpiu-a" href="#">Ingeniería de la Usabilidad (MPIu+a)</a></li><li><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="#">Ciclo de Vida DCU</a></li><li><a class="hover:text-primary transition-colors" data-path="explorar-conceptos" href="#">Heurísticas y Accesibilidad</a></li><li><a class="hover:text-primary transition-colors" data-path="recursos" href="#">Normativa ISO 9241-210</a></li></ul></div><div><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold block mb-3">Afiliaciones Académicas</span><div class="flex flex-wrap gap-2"><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">UdL</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">GRIHO</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">AIPO</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">ACM SIGCHI</span></div><div class="mt-4 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span>WCAG 2.2 Nivel AA</span></div></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline"><p>© Universitat de Lleida · GRIHO Research Group. Licencia <a class="underline hover:text-on-surface" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0)</a>.</p><p class="font-code-inline text-code-inline text-[12px]">v3.4.0 · Laboratorio de Usabilidad UdL</p></div></div></footer></body></html>

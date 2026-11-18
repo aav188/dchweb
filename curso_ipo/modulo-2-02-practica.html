@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO · UdL / GRIHO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#d7e2ff", "surface-variant": "#e3e2e7", "tertiary-fixed-dim": "#abc7ff", "on-secondary-fixed": "#1b1b1d", "on-secondary-container": "#636264", "outline-variant": "#c1c6d6", "outline": "#717785", "tertiary-fixed": "#d7e3ff", "inverse-on-surface": "#f1f0f5", "secondary-fixed": "#e4e2e4", "secondary-container": "#e2dfe1", "on-tertiary-fixed": "#001b3f", "tertiary-container": "#0071e2", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-error": "#ffffff", "primary": "#0059b5", "inverse-surface": "#2f3034", "surface-container": "#eeedf3", "on-primary": "#ffffff", "secondary": "#5f5e60", "surface-container-high": "#e9e7ed", "surface-bright": "#faf8fe", "on-error-container": "#93000a", "on-surface-variant": "#414753", "inverse-primary": "#abc7ff", "on-primary-fixed-variant": "#00458f", "on-surface": "#1a1b1f", "error": "#ba1a1a", "primary-fixed-dim": "#abc7ff", "surface": "#faf8fe", "secondary-fixed-dim": "#c8c6c8", "tertiary": "#0059b4", "on-primary-fixed": "#001b3f", "surface-container-low": "#f4f3f8", "surface-container-highest": "#e3e2e7", "primary-container": "#0071e3", "on-primary-container": "#fcfbff", "surface-dim": "#dad9df", "background": "#faf8fe", "on-tertiary-container": "#fcfaff", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#00458e", "on-secondary-fixed-variant": "#474649", "on-background": "#1a1b1f", "surface-tint": "#005cbb" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-md": "2rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-sm": "1.25rem", "gutter": "1.5rem" }, "fontFamily": { "display-hero-mobile": ["Inter"], "display-hero": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "code-inline": ["JetBrains Mono"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-lg": ["19px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-24 max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-col justify-between pt-3 pb-2"><div class="flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="flex items-center overflow-x-auto py-1 text-on-surface-variant font-label-sm text-label-sm"><nav aria-label="Breadcrumb" class="flex items-center space-x-1.5 min-w-max"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="index.html">Curso IPO</a><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><span class="text-on-surface font-medium">Módulo 2: El Factor Humano</span><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><span class="text-primary font-semibold">Aspectos Perceptivos y Cognitivos</span></nav></div></div></header><main class="w-full pt-24 bg-surface min-h-[calc(100vh-14rem)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-5xl mx-auto px-margin-sm md:px-margin-md lg:px-margin py-6 flex flex-col gap-6">
+<!-- 1. Subbarra de navegación superior de temas del Módulo 2 -->
+<nav aria-label="Temas del Módulo 2" class="flex items-center gap-2 overflow-x-auto pb-1 select-none">
+<a class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-label-md font-label-md transition-colors flex items-center gap-2 whitespace-nowrap" href="modulo-2.html">
+<span class="text-outline text-label-sm font-label-sm">01</span>
+<span>El Factor Humano: Introducción</span>
+</a>
+<a class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-label-md font-label-md shadow-sm flex items-center gap-2 whitespace-nowrap cursor-default" href="modulo-2-02-percepcion.html">
+<span class="bg-surface-container-lowest/25 px-1.5 py-0.5 rounded text-label-sm font-label-sm text-white">02</span>
+<span class="font-semibold">Percepción</span>
+</a>
+<a class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-label-md font-label-md transition-colors flex items-center gap-2 whitespace-nowrap" href="modulo-2-03-memoria.html">
+<span class="text-outline text-label-sm font-label-sm">03</span>
+<span>La Memoria Humana</span>
+</a>
+</nav>
+<!-- 2. Hero Card interactiva -->
+<section class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+<div class="flex items-start gap-4 max-w-2xl">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1.5 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm tracking-wide">
+              JUEGO 2 · TODO EN UNO · MÓDULO 2 · 02 PERCEPCIÓN
+            </span>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface tracking-tight leading-tight">
+            Test, flashcards y huecos
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 leading-relaxed">
+            Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre percepción como filtro selectivo, umbral JND, ley de Weber-Fechner, procesamiento preatentivo, las 7 leyes de la Gestalt y patrones de lectura en F y Z.
+          </p>
+</div>
+</div>
+<div class="flex-shrink-0 w-full lg:w-auto bg-surface-container-low p-4 rounded-xl flex flex-col gap-1 items-start lg:items-end">
+<div class="flex items-center gap-2 text-on-surface font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">dataset</span>
+<span>23 preguntas • 16 tarjetas • 7 textos</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Contenido temático completo</span>
+</div>
+</section>
+<!-- 3. Selector de modo interactivo & Atajos -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low" id="mode-tabs">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm" id="tab-quiz" onclick="switchMode('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (23)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="tab-cards" onclick="switchMode('cards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (16)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="tab-gaps" onclick="switchMode('gaps')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (7)</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">keyboard</span>
+<span class="font-code-inline text-code-inline" id="keyboard-hint">[1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</div>
+<!-- 4. Contenedor de la Suite Interactiva -->
+<div class="w-full" id="interactive-app">
+<!-- Se inyecta dinámicamente -->
+</div>
+<!-- 5. Barra de navegación inferior -->
+<footer class="mt-4 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 select-none">
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" href="modulo-2.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Anterior: 01 El Factor Humano: Introducción</span>
+</a>
+<span class="text-label-sm font-label-sm text-on-surface-variant">
+        Capítulo 02 de 03 · Módulo 2
+      </span>
+<a class="flex items-center gap-2 px-5 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors" href="modulo-2-03-memoria.html">
+<span>Siguiente: 03 La Memoria Humana</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer>
+</div>
+</div>
+<script>
+  const QUESTIONS = [
+    { q: "¿Cómo describe la página la percepción?", options: ["Un proceso constructivo, activo y selectivo", "Un registro fotográfico pasivo", "Un proceso puramente motor", "Un reflejo automático sin interpretación"], a: 0, exp: "El cerebro traduce estímulos físicos en modelos de sentido coherentes." },
+    { q: "¿Qué significa que la percepción actúa como filtro selectivo?", options: ["El usuario solo procesa conscientemente una fracción de los estímulos simultáneos", "El usuario lo ve todo a la vez", "Solo se percibe el color", "Se filtran los sonidos"], a: 0, exp: "Por eso no hay que sobrecargar las interfaces." },
+    { q: "¿Qué es el umbral diferencial (JND)?", options: ["La mínima diferencia necesaria para percibir que dos estímulos son distintos", "El máximo de elementos en pantalla", "El tiempo de respuesta del sistema", "La distancia entre botones"], a: 0, exp: "Just Noticeable Difference." },
+    { q: "¿Qué dice la ley de Weber-Fechner?", options: ["El cambio percibido en un estímulo es relativo a su magnitud inicial", "Recordamos 7±2 elementos", "El tiempo de apuntado depende del tamaño del objetivo", "Leemos en forma de F"], a: 0, exp: "Un cambio pequeño se nota más en un estímulo débil que en uno intenso." },
+    { q: "¿Qué es la «economía visual»?", options: ["Eliminar elementos superfluos para preservar la atención y guiar la mirada", "Usar pocos colores para ahorrar", "Reducir el tamaño de las imágenes", "No usar tipografías"], a: 0, exp: "Es una implicación de la percepción en el diseño." },
+    { q: "¿Qué es el procesamiento preatentivo?", options: ["Captar color, forma y tamaño antes del análisis consciente (<200 ms)", "Leer un texto con atención", "Memorizar un menú", "Hacer clic sin mirar"], a: 0, exp: "Permite transmitir significado de forma inmediata." },
+    { q: "¿Qué es el diseño anticipativo?", options: ["Colocar los controles donde el usuario espera según su experiencia y modelos mentales", "Predecir el futuro del mercado", "Diseñar antes de investigar", "Cargar contenido por adelantado"], a: 0, exp: "Aprovecha lo que el usuario ya conoce." },
+    { q: "¿Qué explican las leyes de la Gestalt?", options: ["Cómo la mente agrupa y organiza estímulos visuales en patrones", "Cómo funciona la memoria", "Cómo se mide la usabilidad", "Cómo se programa una interfaz"], a: 0, exp: "Son la base de formularios, barras de navegación y tarjetas." },
+    { q: "¿Cuántas leyes de la Gestalt presenta la página?", options: ["5", "6", "7", "10"], a: 2, exp: "Proximidad, semejanza, continuidad, cierre, simetría, figura-fondo y destino común." },
+    { q: "Elementos cercanos se perciben como un grupo. ¿Qué ley es?", options: ["Proximidad", "Semejanza", "Cierre", "Continuidad"], a: 0, exp: "Se aplica en formularios, tarjetas y listados." },
+    { q: "Elementos con el mismo color, forma o tamaño se perciben de la misma categoría. ¿Qué ley es?", options: ["Semejanza", "Proximidad", "Simetría", "Destino común"], a: 0, exp: "Ej.: todos los botones CTA con el mismo estilo." },
+    { q: "La vista sigue caminos suaves y continuos. ¿Qué ley es?", options: ["Continuidad", "Cierre", "Figura-fondo", "Simetría"], a: 0, exp: "Se aplica en wizards, steppers y carruseles." },
+    { q: "El cerebro completa figuras incompletas. ¿Qué ley es?", options: ["Cierre", "Continuidad", "Proximidad", "Semejanza"], a: 0, exp: "Ej.: iconografía o un scroll horizontal con un elemento cortado." },
+    { q: "Los objetos simétricos transmiten calma y orden. ¿Qué ley es?", options: ["Simetría", "Cierre", "Destino común", "Proximidad"], a: 0, exp: "Grids, tablas, cabeceras." },
+    { q: "Distinguir el objeto principal del contexto secundario es la ley de…", options: ["Figura-fondo", "Semejanza", "Continuidad", "Cierre"], a: 0, exp: "Se aplica en modales, overlays y drawers." },
+    { q: "Elementos que se mueven con la misma dirección y velocidad se perciben como una unidad. ¿Qué ley es?", options: ["Destino común", "Proximidad", "Simetría", "Figura-fondo"], a: 0, exp: "Micro-interacciones, acordeones y menús desplegables." },
+    { q: "Un modal sobre un fondo oscurecido aplica sobre todo la ley de…", options: ["Figura-fondo", "Cierre", "Continuidad", "Semejanza"], a: 0, exp: "El modal es la figura; el resto, el fondo." },
+    { q: "¿Cómo leen los usuarios en pantalla según la página?", options: ["Escanean rápidamente buscando información relevante", "Leen palabra por palabra", "Leen de abajo arriba", "Igual que en papel"], a: 0, exp: "La lectura digital difiere mucho de la de papel." },
+    { q: "¿Qué son los movimientos sacádicos?", options: ["Saltos rápidos del ojo entre fijaciones donde se extrae el significado", "Parpadeos", "Movimientos de la cabeza", "Desplazamientos del ratón"], a: 0, exp: "Saltos de 20-40 ms entre fijaciones de 200-300 ms." },
+    { q: "¿Para qué tipo de páginas es típico el patrón de lectura en F?", options: ["Páginas ricas en texto (artículos, blogs)", "Landing pages", "Juegos", "Formularios"], a: 0, exp: "El patrón en Z es típico de landing pages y sitios visuales." },
+    { q: "¿Para qué tipo de páginas es típico el patrón en Z?", options: ["Landing pages y sitios visuales promocionales", "Artículos largos", "Documentación técnica", "Hojas de cálculo"], a: 0, exp: "Recorrido en zigzag por los elementos clave." },
+    { q: "¿Cuál es la longitud de línea óptima según la página?", options: ["50-75 caracteres", "20-30 caracteres", "100-120 caracteres", "Ilimitada"], a: 0, exp: "Junto con un contraste mínimo de 4.5:1 (WCAG 2.2 AA)." },
+    { q: "¿Qué ratio de contraste mínimo exige WCAG 2.2 AA para texto, según la página?", options: ["4.5:1", "2:1", "7:1", "10:1"], a: 0, exp: "Para texto normal." }
+  ];
+
+  const FLASHCARDS = [
+    { f: "Percepción", b: "Proceso constructivo, activo y selectivo: el cerebro traduce estímulos en modelos con sentido." },
+    { f: "Filtro selectivo", b: "Solo procesamos conscientemente una fracción de los estímulos simultáneos." },
+    { f: "Umbral diferencial (JND)", b: "La mínima diferencia necesaria para notar que dos estímulos son distintos." },
+    { f: "Ley de Weber-Fechner", b: "El cambio percibido en un estímulo es relativo a su magnitud inicial." },
+    { f: "Implicaciones en el diseño", b: "Economía visual, procesamiento preatentivo (<200 ms), reducción de carga cognitiva y diseño anticipativo." },
+    { f: "Las 7 leyes de la Gestalt", b: "Proximidad, semejanza, continuidad, cierre, simetría, figura-fondo y destino común." },
+    { f: "Proximidad", b: "Lo cercano se percibe como grupo. Formularios, tarjetas, listados." },
+    { f: "Semejanza", b: "Igual color, forma o tamaño = misma categoría. Botones CTA, enlaces, badges." },
+    { f: "Continuidad", b: "La vista sigue caminos suaves. Wizards, steppers, carruseles." },
+    { f: "Cierre", b: "El cerebro completa figuras incompletas. Iconos, scroll horizontal." },
+    { f: "Simetría", b: "Transmite orden y estabilidad. Grids, tablas, cabeceras." },
+    { f: "Figura-fondo", b: "Distinguir el objeto principal del contexto. Modales, overlays, drawers." },
+    { f: "Destino común", b: "Lo que se mueve igual se percibe como unidad. Micro-interacciones, acordeones." },
+    { f: "Movimientos sacádicos", b: "Saltos rápidos del ojo (20-40 ms) entre fijaciones (200-300 ms) donde se extrae el significado." },
+    { f: "Patrones F y Z", b: "F: páginas con mucho texto. Z: landing pages y sitios visuales." },
+    { f: "Legibilidad en pantalla", b: "50-75 caracteres por línea y contraste mínimo 4.5:1 (WCAG 2.2 AA)." }
+  ];
+
+  const GAPS = [
+    { title: "Percepción", text: "La percepción no es un registro fotográfico pasivo, sino un proceso [constructivo], activo y [selectivo]." },
+    { title: "Umbrales", text: "El umbral diferencial o [JND] es la mínima diferencia perceptible. Según la ley de [Weber]-Fechner, el cambio percibido es relativo a la magnitud [inicial]." },
+    { title: "Diseño", text: "La economía [visual] elimina lo superfluo. El procesamiento [preatentivo] usa color, forma y tamaño antes del análisis consciente. El diseño [anticipativo] coloca los controles donde el usuario los espera." },
+    { title: "Gestalt I", text: "Por la ley de [proximidad], lo cercano se agrupa. Por la de [semejanza], lo parecido se percibe como de la misma categoría. Por la de [cierre], completamos figuras incompletas." },
+    { title: "Gestalt II", text: "La ley de [continuidad] dice que seguimos caminos suaves. La de [figura]-fondo explica los modales. La de destino [común] agrupa lo que se mueve igual. La [simetría] transmite orden." },
+    { title: "Lectura", text: "En pantalla los usuarios [escanean]. El ojo hace movimientos [sacádicos] entre fijaciones. Las páginas de texto se leen en patrón [F] y las landing pages en patrón [Z]." },
+    { title: "Legibilidad", text: "La longitud de línea óptima es de 50 a [75] caracteres, con un contraste mínimo de [4.5:1|4,5:1]." }
+  ];
+
+  const appEl = document.getElementById('interactive-app');
+  let currentMode = 'quiz';
+  let globalKeyHandler = null;
+
+  document.addEventListener('keydown', (e) => {
+    if (globalKeyHandler && e.target.tagName !== 'INPUT') {
+      globalKeyHandler(e);
+    }
+  });
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function norm(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
+  }
+
+  function switchMode(mode) {
+    currentMode = mode;
+    ['quiz', 'cards', 'gaps'].forEach(m => {
+      const btn = document.getElementById(`tab-${m}`);
+      if (m === mode) {
+        btn.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-sm";
+      } else {
+        btn.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container";
+      }
+    });
+
+    const hint = document.getElementById('keyboard-hint');
+    if (mode === 'quiz') hint.textContent = '[1-4] Elegir opción · [Enter] Siguiente';
+    else if (mode === 'cards') hint.textContent = '[Espacio] Girar · [← / →] Navegar · [S] Sabida';
+    else hint.textContent = '[Enter] Siguiente hueco · Clic para validar';
+
+    renderCurrentMode();
+  }
+
+  function renderCurrentMode() {
+    appEl.innerHTML = '';
+    globalKeyHandler = null;
+    if (currentMode === 'quiz') renderQuiz();
+    else if (currentMode === 'cards') renderCards();
+    else if (currentMode === 'gaps') renderGaps();
+  }
+
+  /* ---------------- MODO QUIZ ---------------- */
+  function renderQuiz() {
+    const deck = shuffle(QUESTIONS).map(q => {
+      const order = shuffle(q.options.map((_, i) => i));
+      return {
+        ...q,
+        opts: order.map(i => q.options[i]),
+        correct: order.indexOf(q.a)
+      };
+    });
+
+    let index = 0;
+    let hits = 0;
+    let answered = false;
+    const wrong = [];
+
+    function showStep() {
+      appEl.innerHTML = '';
+      answered = false;
+
+      if (index >= deck.length) {
+        return showEnd();
+      }
+
+      const q = deck[index];
+      const progressPct = ((index) / deck.length) * 100;
+
+      const card = document.createElement('div');
+      card.className = "bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm flex flex-col";
+
+      // Meta bar & Progress
+      card.innerHTML = `
+        <div class="flex items-center justify-between text-label-sm font-label-sm font-code-inline text-on-surface-variant mb-2">
+          <span>Pregunta ${index + 1} de ${deck.length}</span>
+          <span class="text-primary font-semibold">Aciertos: ${hits}</span>
+        </div>
+        <div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden mb-6">
+          <div class="h-full bg-primary-container transition-all duration-300" style="width: ${progressPct}%"></div>
+        </div>
+        <h2 class="text-headline-md font-headline-md text-on-surface mb-6">${q.q}</h2>
+        <div id="quiz-options" class="grid gap-3"></div>
+        <div id="quiz-feedback" class="mt-4"></div>
+        <div id="quiz-actions" class="mt-6 flex justify-end"></div>
+      `;
+
+      appEl.appendChild(card);
+
+      const optsContainer = card.querySelector('#quiz-options');
+      const fbBox = card.querySelector('#quiz-feedback');
+      const actBox = card.querySelector('#quiz-actions');
+
+      q.opts.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.className = "flex items-start gap-3.5 p-4 rounded-xl text-left bg-surface-container-low hover:bg-surface-container transition-colors text-body-md font-body-md text-on-surface group";
+        btn.innerHTML = `
+          <span class="flex-shrink-0 w-6 h-6 rounded-md bg-surface-container-lowest group-hover:bg-primary-container group-hover:text-on-primary-container text-on-surface-variant font-code-inline text-label-sm flex items-center justify-center transition-colors shadow-sm">
+            ${optIdx + 1}
+          </span>
+          <span class="flex-grow pt-0.5">${optText}</span>
+        `;
+        btn.onclick = () => selectOption(optIdx);
+        optsContainer.appendChild(btn);
+      });
+
+      function selectOption(optIdx) {
+        if (answered) return;
+        answered = true;
+
+        const btns = optsContainer.querySelectorAll('button');
+        btns.forEach(b => b.disabled = true);
+
+        const isCorrect = (optIdx === q.correct);
+        if (isCorrect) {
+          hits++;
+          btns[optIdx].className = "flex items-start gap-3.5 p-4 rounded-xl text-left bg-green-50 text-green-950 shadow-sm";
+          btns[optIdx].querySelector('span').className = "flex-shrink-0 w-6 h-6 rounded-md bg-green-600 text-white font-code-inline text-label-sm flex items-center justify-center";
+          fbBox.innerHTML = `
+            <div class="p-4 rounded-xl bg-green-50 text-green-900 text-body-sm font-body-sm flex flex-col gap-0.5">
+              <span class="font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">check_circle</span> ¡Correcto!</span>
+              <span>${q.exp}</span>
+            </div>
+          `;
+        } else {
+          wrong.push(q);
+          btns[optIdx].className = "flex items-start gap-3.5 p-4 rounded-xl text-left bg-error-container text-on-error-container";
+          btns[optIdx].querySelector('span').className = "flex-shrink-0 w-6 h-6 rounded-md bg-error text-on-error font-code-inline text-label-sm flex items-center justify-center";
+          btns[q.correct].className = "flex items-start gap-3.5 p-4 rounded-xl text-left bg-green-50 text-green-950";
+          btns[q.correct].querySelector('span').className = "flex-shrink-0 w-6 h-6 rounded-md bg-green-600 text-white font-code-inline text-label-sm flex items-center justify-center";
+          fbBox.innerHTML = `
+            <div class="p-4 rounded-xl bg-error-container text-on-error-container text-body-sm font-body-sm flex flex-col gap-0.5">
+              <span class="font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px]">cancel</span> No es esa.</span>
+              <span>${q.exp}</span>
+            </div>
+          `;
+        }
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = "px-6 py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors";
+        nextBtn.textContent = index + 1 < deck.length ? "Siguiente pregunta →" : "Ver resultados";
+        nextBtn.onclick = () => { index++; showStep(); };
+        actBox.appendChild(nextBtn);
+        nextBtn.focus();
+      }
+
+      globalKeyHandler = (e) => {
+        const num = parseInt(e.key, 10);
+        if (!answered && num >= 1 && num <= q.opts.length) {
+          selectOption(num - 1);
+        } else if (answered && e.key === 'Enter') {
+          e.preventDefault();
+          index++;
+          showStep();
+        }
+      };
+    }
+
+    function showEnd() {
+      const nota = ((hits / deck.length) * 10).toFixed(1).replace('.0', '');
+      let msg = "Toca repasar los conceptos fundamentales de la percepción.";
+      if (hits === deck.length) msg = "¡Extraordinario! Dominas todos los conceptos perceptivos a la perfección.";
+      else if (hits / deck.length >= 0.7) msg = "¡Muy buen trabajo! Tienes claros los principios de la Gestalt y lectura.";
+      else if (hits / deck.length >= 0.5) msg = "Aprobado, pero te recomendamos repasar antes de pasar a la Memoria.";
+
+      const card = document.createElement('div');
+      card.className = "bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col items-center text-center";
+      card.innerHTML = `
+        <span class="material-symbols-outlined text-primary text-[48px] mb-2">award_star</span>
+        <div class="text-display-hero font-display-hero text-primary leading-none mb-1">${nota}</div>
+        <div class="text-body-md font-body-md text-on-surface-variant font-medium">Nota final sobre 10 · ${hits} de ${deck.length} aciertos</div>
+        <p class="text-headline-sm font-headline-sm text-on-surface mt-3 max-w-md">${msg}</p>
+        
+        <div id="wrong-container" class="w-full text-left mt-8 flex flex-col gap-3"></div>
+
+        <button id="retry-btn" class="mt-8 px-6 py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors">
+          Volver a realizar el test
+        </button>
+      `;
+
+      appEl.appendChild(card);
+
+      const wrongBox = card.querySelector('#wrong-container');
+      if (wrong.length > 0) {
+        wrongBox.innerHTML = `<span class="text-label-md font-label-md font-semibold text-on-surface">Preguntas para repasar (${wrong.length}):</span>`;
+        wrong.forEach(w => {
+          const item = document.createElement('div');
+          item.className = "p-3.5 rounded-xl bg-surface-container-low text-body-sm font-body-sm text-on-surface";
+          item.innerHTML = `
+            <div class="font-medium text-on-surface mb-1">${w.q}</div>
+            <div class="text-primary font-semibold">✓ Respuesta correcta: ${w.options[w.a]}</div>
+          `;
+          wrongBox.appendChild(item);
+        });
+      }
+
+      card.querySelector('#retry-btn').onclick = () => renderQuiz();
+      globalKeyHandler = (e) => {
+        if (e.key === 'Enter') renderQuiz();
+      };
+    }
+
+    showStep();
+  }
+
+  /* ---------------- MODO FLASHCARDS ---------------- */
+  function renderCards() {
+    let deck = FLASHCARDS.map((c, idx) => ({ ...c, idx }));
+    let currentIndex = 0;
+    const known = new Set();
+
+    function showCard() {
+      appEl.innerHTML = '';
+
+      if (deck.length === 0) {
+        globalKeyHandler = null;
+        const comp = document.createElement('div');
+        comp.className = "bg-surface-container-lowest rounded-xl p-12 shadow-sm flex flex-col items-center text-center";
+        comp.innerHTML = `
+          <div class="w-16 h-16 rounded-full bg-green-50 text-green-700 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[36px]">verified</span>
+          </div>
+          <h2 class="text-headline-lg font-headline-lg text-on-surface mb-2">¡Mazo completado!</h2>
+          <p class="text-body-md font-body-md text-on-surface-variant max-w-md mb-6">
+            Has dominado las 16 flashcards sobre percepción, Weber-Fechner y leyes de Gestalt.
+          </p>
+          <button id="reset-cards" class="px-6 py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors">
+            Reiniciar flashcards
+          </button>
+        `;
+        appEl.appendChild(comp);
+        comp.querySelector('#reset-cards').onclick = () => renderCards();
+        return;
+      }
+
+      currentIndex = (currentIndex + deck.length) % deck.length;
+      const cardData = deck[currentIndex];
+
+      const wrap = document.createElement('div');
+      wrap.className = "flex flex-col gap-4";
+
+      // Meta info
+      wrap.innerHTML = `
+        <div class="flex items-center justify-between text-label-sm font-label-sm font-code-inline text-on-surface-variant">
+          <span>Tarjeta ${currentIndex + 1} de ${deck.length}</span>
+          <span class="text-primary font-semibold">Sabidas: ${known.size} / ${FLASHCARDS.length}</span>
+        </div>
+      `;
+
+      // 3D Card Scene
+      const scene = document.createElement('div');
+      scene.className = "w-full h-72 [perspective:1200px] cursor-pointer select-none";
+      scene.innerHTML = `
+        <div id="fc-inner" class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] rounded-xl shadow-sm">
+          <!-- Cara frontal -->
+          <div class="absolute inset-0 [backface-visibility:hidden] bg-surface-container-lowest rounded-xl p-8 flex flex-col items-center justify-center text-center">
+            <span class="text-label-sm font-label-sm font-semibold uppercase tracking-wider text-primary mb-3">Concepto Perceptivo</span>
+            <h3 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">${cardData.f}</h3>
+            <span class="text-label-sm font-label-sm text-outline mt-6 flex items-center gap-1.5 font-code-inline">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Pulsa o espacio para girar
+            </span>
+          </div>
+          <!-- Cara trasera -->
+          <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-primary-container text-on-primary-container rounded-xl p-8 flex flex-col items-center justify-center text-center">
+            <span class="text-label-sm font-label-sm uppercase tracking-wider opacity-80 mb-2 font-medium">Definición & Aplicación</span>
+            <p class="text-headline-sm font-headline-sm font-normal leading-relaxed max-w-lg">${cardData.b}</p>
+            <span class="text-label-sm font-label-sm opacity-70 mt-6 flex items-center gap-1.5 font-code-inline">
+              <span class="material-symbols-outlined text-[16px]">sync</span> Pulsa para voltear
+            </span>
+          </div>
+        </div>
+      `;
+      wrap.appendChild(scene);
+
+      // Controls Bar
+      const controls = document.createElement('div');
+      controls.className = "flex items-center justify-between gap-3 pt-2";
+      controls.innerHTML = `
+        <button id="fc-prev" class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span> Anterior
+        </button>
+        <div class="flex items-center gap-2">
+          <button id="fc-shuffle" class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[18px]">shuffle</span> Barajar
+          </button>
+          <button id="fc-mark" class="px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[18px]">check</span> Me la sé
+          </button>
+        </div>
+        <button id="fc-next" class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
+          Siguiente <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      `;
+      wrap.appendChild(controls);
+      appEl.appendChild(wrap);
+
+      const inner = scene.querySelector('#fc-inner');
+      let isFlipped = false;
+
+      function toggleFlip() {
+        isFlipped = !isFlipped;
+        inner.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+      }
+
+      scene.onclick = toggleFlip;
+      controls.querySelector('#fc-prev').onclick = () => { currentIndex--; showCard(); };
+      controls.querySelector('#fc-next').onclick = () => { currentIndex++; showCard(); };
+      controls.querySelector('#fc-shuffle').onclick = () => { deck = shuffle(deck); currentIndex = 0; showCard(); };
+      controls.querySelector('#fc-mark').onclick = markAsKnown;
+
+      function markAsKnown() {
+        known.add(cardData.idx);
+        deck.splice(currentIndex, 1);
+        showCard();
+      }
+
+      globalKeyHandler = (e) => {
+        if (e.key === ' ' || e.code === 'Space') {
+          e.preventDefault();
+          toggleFlip();
+        } else if (e.key === 'ArrowRight') {
+          currentIndex++;
+          showCard();
+        } else if (e.key === 'ArrowLeft') {
+          currentIndex--;
+          showCard();
+        } else if (e.key.toLowerCase() === 's') {
+          markAsKnown();
+        }
+      };
+    }
+
+    showCard();
+  }
+
+  /* ---------------- MODO HUECOS ---------------- */
+  function renderGaps() {
+    globalKeyHandler = null;
+    appEl.innerHTML = '';
+
+    const inputs = [];
+    const allWords = [];
+
+    const container = document.createElement('div');
+    container.className = "flex flex-col gap-4";
+
+    // Banco de palabras Card
+    const bankCard = document.createElement('div');
+    bankCard.className = "bg-surface-container-lowest rounded-xl p-6 shadow-sm";
+    bankCard.innerHTML = `
+      <div class="flex items-center justify-between mb-1">
+        <h3 class="text-headline-sm font-headline-sm text-on-surface">Banco de palabras</h3>
+        <span class="text-label-sm font-label-sm text-outline font-code-inline">Insensible a tildes/mayúsculas</span>
+      </div>
+      <p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+        Escribe la palabra o valor correspondiente en cada hueco. Pulsa Enter para pasar al siguiente input.
+      </p>
+      <div id="chips-cloud" class="flex flex-wrap gap-2"></div>
+    `;
+    container.appendChild(bankCard);
+
+    // Textos con huecos
+    const textsContainer = document.createElement('div');
+    textsContainer.className = "flex flex-col gap-4";
+
+    GAPS.forEach((g) => {
+      const card = document.createElement('div');
+      card.className = "bg-surface-container-lowest rounded-xl p-6 shadow-sm";
+
+      const title = document.createElement('div');
+      title.className = "text-label-md font-label-md font-semibold text-primary mb-2";
+      title.textContent = g.title;
+
+      const p = document.createElement('p');
+      p.className = "text-body-md font-body-md text-on-surface leading-loose";
+
+      const parts = g.text.split(/\[([^\]]+)\]/);
+      parts.forEach((part, k) => {
+        if (k % 2 === 0) {
+          p.appendChild(document.createTextNode(part));
+        } else {
+          const answers = part.split('|');
+          allWords.push(answers[0]);
+
+          const inp = document.createElement('input');
+          inp.type = "text";
+          inp.autocomplete = "off";
+          inp.spellcheck = false;
+          inp.className = "mx-1.5 px-2.5 py-0.5 rounded-lg bg-surface-container-low text-on-surface font-semibold text-body-md text-center outline-none transition-all focus:bg-surface-container focus:ring-2 focus:ring-primary/20";
+          inp.style.width = Math.max(5, answers[0].length + 2.5) + 'ch';
+          inp.dataset.answers = JSON.stringify(answers);
+
+          inp.addEventListener('input', () => {
+            inp.classList.remove('bg-green-100', 'text-green-950', 'bg-error-container', 'text-on-error-container');
+          });
+
+          inp.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              const nextInp = inputs[inputs.indexOf(inp) + 1];
+              if (nextInp) nextInp.focus();
+              else checkAnswers();
+            }
+          });
+
+          inputs.push(inp);
+          p.appendChild(inp);
+        }
+      });
+
+      card.appendChild(title);
+      card.appendChild(p);
+      textsContainer.appendChild(card);
+    });
+
+    container.appendChild(textsContainer);
+
+    // Chips Cloud
+    const chipsBox = bankCard.querySelector('#chips-cloud');
+    const shuffledWords = shuffle(allWords);
+    const chipElements = shuffledWords.map(w => {
+      const chip = document.createElement('span');
+      chip.className = "px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium transition-all select-none";
+      chip.textContent = w;
+      chipsBox.appendChild(chip);
+      return chip;
+    });
+
+    // Bottom Action Bar
+    const actionRow = document.createElement('div');
+    actionRow.className = "bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4";
+    actionRow.innerHTML = `
+      <div id="gap-score" class="font-headline-sm text-headline-sm text-primary"></div>
+      <div class="flex items-center gap-2">
+        <button id="reset-gaps" class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">
+          Reiniciar
+        </button>
+        <button id="reveal-gaps" class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">
+          Ver soluciones
+        </button>
+        <button id="check-gaps" class="px-5 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md shadow-sm transition-colors">
+          Comprobar respuestas
+        </button>
+      </div>
+    `;
+    container.appendChild(actionRow);
+    appEl.appendChild(container);
+
+    const scoreEl = actionRow.querySelector('#gap-score');
+
+    function isInputCorrect(inp) {
+      const val = norm(inp.value);
+      if (!val) return false;
+      const validAnswers = JSON.parse(inp.dataset.answers);
+      return validAnswers.some(a => norm(a) === val);
+    }
+
+    function checkAnswers() {
+      let hits = 0;
+      inputs.forEach(inp => {
+        const ok = isInputCorrect(inp);
+        inp.classList.remove('bg-green-100', 'text-green-950', 'bg-error-container', 'text-on-error-container');
+        if (ok) {
+          hits++;
+          inp.classList.add('bg-green-100', 'text-green-950');
+        } else {
+          inp.classList.add('bg-error-container', 'text-on-error-container');
+        }
+      });
+      updateChips();
+      scoreEl.textContent = `${hits} de ${inputs.length} aciertos` + (hits === inputs.length ? ' 🎉 ¡Perfecto!' : '');
+    }
+
+    function revealSolutions() {
+      inputs.forEach(inp => {
+        const valid = isInputCorrect(inp);
+        inp.classList.remove('bg-green-100', 'text-green-950', 'bg-error-container', 'text-on-error-container');
+        if (!valid) {
+          inp.value = JSON.parse(inp.dataset.answers)[0];
+          inp.classList.add('bg-error-container', 'text-on-error-container');
+        } else {
+          inp.classList.add('bg-green-100', 'text-green-950');
+        }
+      });
+      updateChips();
+      scoreEl.textContent = "Soluciones mostradas (resaltadas en rojo las que no tenías).";
+    }
+
+    function updateChips() {
+      const correctWords = inputs.filter(isInputCorrect).map(inp => norm(JSON.parse(inp.dataset.answers)[0]));
+      chipElements.forEach(chip => {
+        const text = norm(chip.textContent);
+        const idx = correctWords.indexOf(text);
+        if (idx >= 0) {
+          chip.classList.add('opacity-30', 'line-through');
+          correctWords.splice(idx, 1);
+        } else {
+          chip.classList.remove('opacity-30', 'line-through');
+        }
+      });
+    }
+
+    actionRow.querySelector('#reset-gaps').onclick = () => renderGaps();
+    actionRow.querySelector('#reveal-gaps').onclick = revealSolutions;
+    actionRow.querySelector('#check-gaps').onclick = checkAnswers;
+  }
+
+  // Inicializar al cargar
+  renderCurrentMode();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin py-space-xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start pb-space-lg"><div class="lg:col-span-7 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container"></div><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad<br/>Dirección docente e investigadora: <span class="text-on-surface font-medium">Dr. Toni Granollers</span> · Departament d'Informàtica i Enginyeria Industrial.</p></div><div class="lg:col-span-5 flex flex-wrap lg:justify-end items-center gap-2"><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">UdL</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">GRIHO</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">AIPO</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">ACM SIGCHI</div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left font-label-sm text-label-sm text-outline"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">apps</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer><a href="modulo-2-02-percepcion.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>

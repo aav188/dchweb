@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1b1f","surface-container":"#eeedf3","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#636264","surface-variant":"#e3e2e7","outline-variant":"#c1c6d6","on-secondary-fixed":"#1b1b1d","surface-container-high":"#e9e7ed","on-tertiary-fixed-variant":"#00458e","on-tertiary":"#ffffff","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed-variant":"#474649","on-primary-fixed-variant":"#00458f","tertiary-fixed":"#d7e3ff","error-container":"#ffdad6","on-tertiary-container":"#fcfaff","background":"#faf8fe","secondary-fixed-dim":"#c8c6c8","error":"#ba1a1a","primary":"#0059b5","surface":"#faf8fe","surface-tint":"#005cbb","tertiary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","surface-bright":"#faf8fe","surface-dim":"#dad9df","tertiary":"#0059b4","secondary-container":"#e2dfe1","outline":"#717785","tertiary-container":"#0071e2","on-primary":"#ffffff","secondary-fixed":"#e4e2e4","on-tertiary-fixed":"#001b3f","on-surface-variant":"#414753","on-primary-container":"#fcfbff","secondary":"#5f5e60","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","primary-container":"#0071e3","inverse-primary":"#abc7ff","on-secondary":"#ffffff","surface-container-highest":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-low":"#f4f3f8","on-surface":"#1a1b1f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","margin-sm":"1.25rem","margin":"3rem","gutter-sm":"1rem","space-sm":"0.5rem","gutter":"1.5rem","margin-md":"2rem"},fontFamily:{"label-sm":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"code-inline":["JetBrains Mono"],"body-lg":["Inter"],"headline-md":["Inter"],"display-hero-mobile":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"]},fontSize:{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><span class="text-on-surface-variant">Módulo 1: Fundamentos</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">Usabilidad</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="01-definicion-de-usabilidad" href="usabilidad-01-definicion.html">01 Definición</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="02-importancia-de-la-usabilidad" href="usabilidad-02-importancia.html">02 Importancia</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html">03 Beneficios</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="04-atributos-de-usabilidad" href="usabilidad-04-atributos.html">04 Atributos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html">05 Calidad de Software</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]" data-path="06-usabilidad-web" href="usabilidad-06-usabilidad-web.html">06 Usabilidad Web</a></nav></div></header><main class="w-full pt-36 bg-background"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- Sub-navigation: Usability Module 6-Card Selector -->
+<section class="w-full mb-space-xl"><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-gutter-sm"><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="01-definicion-de-usabilidad" href="usabilidad-01-definicion.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">01</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">menu_book</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Definición</span><span class="font-body-sm text-body-sm text-on-surface-variant">Conceptos e ISO 9241</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="02-importancia-de-la-usabilidad" href="usabilidad-02-importancia.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">02</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">priority_high</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Importancia</span><span class="font-body-sm text-body-sm text-on-surface-variant">El factor humano frente al chip</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">03</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">trending_up</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Beneficios</span><span class="font-body-sm text-body-sm text-on-surface-variant">Retorno de inversión ROI</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="04-atributos-de-usabilidad" href="usabilidad-04-atributos.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">04</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">tune</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Atributos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Eficacia, eficiencia y agrado</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">05</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">verified</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Calidad Soft.</span><span class="font-body-sm text-body-sm text-on-surface-variant">ISO 25010 &amp; Ingeniería</span></div></a><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">06</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">language</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Usabilidad Web</span><span class="font-body-sm text-body-sm text-on-primary-container/85">Hipertexto y navegación</span></div></div></div></section>
+<!-- Editorial Masthead / Context Intro -->
+<header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 06</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fundamento Crítico</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">La Usabilidad en la Web: el paradigma de la inmediatez sin manual de instrucciones</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl">A diferencia de las aplicaciones de escritorio tradicionales, el entorno web impone una condición interactiva radical: los usuarios carecen de capacitación previa, no leen manuales y la competencia se sitúa exactamente a un clic de distancia. Diseñar para la Web exige un rigor centrado en el usuario desde la génesis metodológica del proyecto interactivo.</p>
+</div>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="usabilidad-06-practica.html"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">MPIu+a · Ecosistema Digital</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Section 1: Desktop vs Web Paradigm Grid -->
+<section class="w-full mb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">1. Dinámica Comparativa</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Particularidades del Entorno Web frente al Escritorio Clásico</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Naturaleza efímera vs. Entornos cautivos</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card A -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">travel_explore</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Navegación Hipertextual</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            No existe un camino lineal obligatorio. El usuario salta impredeciblemente entre nodos conceptuales y enlaces externos, exigiendo puntos de anclaje contextuales permanentes.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Riesgo: desorientación cognitiva</span>
+</div>
+</div>
+<!-- Card B -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Cultura de la Inmediatez</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Los tiempos de tolerancia son mínimos. Si una tarea no se completa en segundos o la página dilata su respuesta, el usuario experimenta frustración irreversible.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Regla: umbral de los 3 segundos</span>
+</div>
+</div>
+<!-- Card C -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Ausencia de Manuales</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Nadie se inscribe a un curso formativo para explorar un sitio web. La interfaz debe poseer autoexplicabilidad total y affordance intuitivo desde el milisegundo cero.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Postulado: usabilidad autosuficiente</span>
+</div>
+</div>
+<!-- Card D -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">exit_to_app</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Abandono a un Solo Clic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            En una aplicación corporativa local el usuario está condicionado; en la web, el coste de abandono y búsqueda de una alternativa competente es instantáneo y nulo.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Impacto: fuga directa a la competencia</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Centered on Web User Context & Visual Asset -->
+<section class="w-full mb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold mb-space-xs">2. Contextualización Ecológica</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+          Centrado en el Usuario Web: diversidad radical de entornos interactivos
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+          Un mismo equipo técnico, ubicado físicamente en un mismo laboratorio y disponiendo de idénticas herramientas de compilación, es capaz de codificar interfaces visualmente homogéneas. No obstante, si no se realiza un esfuerzo epistemológico exhaustivo por conocer el contexto real donde el usuario habita, la interfaz no podrá transmitir la seguridad, familiaridad ni fluidez requeridas.
+        </p>
+<!-- Metric Callouts -->
+<div class="grid grid-cols-3 gap-space-sm mb-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary block">Multi-viewport</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Móviles, tablets, ultra-wide</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary block">Motores Web</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chromium, Gecko, WebKit</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary block">Latencia Red</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4G/5G inestable, fibra, offline</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-high flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">La falacia de la homogeneidad de máquinas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              El desarrollador opera con monitores calibrados a 4K y redes de gigabit; el usuario web accede con luz diurna reflejada, procesadores limitados y atención intermitente.
+            </span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<img class="w-full h-80 lg:h-96 object-cover" data-alt="Editorial close-up photograph of an ergonomic human-computer interaction laboratory at Universitat de Lleida. Diverse devices including tablets, laptops, and mobile screens are systematically arranged on a clean birch table. Soft natural daylight, subtle deep blue accents matching primary UI tones, academic HCI research setting with testing papers and user journey schemas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjn0KxK5itzivYRG1qz7VlDzy702AQeyO2o0_zhIePgH3KIRhkQki238L3NI-5nxJaw2fpyXjbgOLy1UawwEsKc82UQeHgq9LLEhQYZ7aq597Je5d41WYlFc3O0VxZgymMfBD3ZfJU2dADUwm_APC9_Br_vZ_z-UntUVtjhz3X_Gp4e69i7s4pHr2WrNKttR5zFMiQR3xDeUT2bjcrxd7ecaaZeo_1C5TaigsTvVo"/>
+<div class="p-space-md bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Laboratorio de Interacción GRIHO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">UdL · Test multi-dispositivo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Registro continuo de telemetría de ejecución y análisis del esfuerzo cognitivo según la velocidad de conexión.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Gaffney 1999 Epistemological Contrast -->
+<section class="w-full mb-space-xl p-space-lg lg:p-space-xl rounded-2xl bg-surface-container-low shadow-sm">
+<div class="max-w-[980px] mx-auto">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-primary">3. Marco Teórico Fundamental</span>
+<span class="text-outline-variant">•</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Gaffney (1999)</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-sm">
+        Implicar al Usuario desde el Inicio: Diseño Participativo vs. Ilusión Intelectual
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+        La investigación en IPO subraya una distinción lingüística y metodológica definitiva: de poco sirve teorizar en abstracto si no se valida de primera mano con la persona que opera la interfaz.
+      </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- False Paradigm -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">«Diseñar pensando en el usuario»</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0">close</span>
+<span>Los usuarios no intervienen hasta el momento de la entrega o implantación definitiva.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0">close</span>
+<span>El equipo asume supuestos cognitivos basados en su propia pericia técnica.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0">close</span>
+<span>Cuando se detectan fricciones en fase final, el coste económico de rectificación es prohibitivo.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-sm rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface-variant text-center">
+            Modelo Cascada Inerte · Riesgo de rechazo máximo
+          </div>
+</div>
+<!-- Canonical True Paradigm -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between ring-2 ring-primary/20">
+<div>
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">«Implicar al usuario en el diseño»</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span><strong>Diseño Participativo (Gaffney 1999):</strong> co-creación activa y sesiones conjuntas desde la especificación.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>Pruebas iterativas con usuarios reales sobre prototipos de baja y media fidelidad.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check_circle</span>
+<span>La interfaz se calibra empíricamente con las limitaciones y hábitos del usuario antes de tirar código final.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-lg p-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm text-center font-semibold">
+            Metodología MPIu+a · Validación empírica temprana
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Universal Inclusion & Stephanidis 1995 -->
+<section class="w-full mb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<img class="w-full h-80 lg:h-96 object-cover" data-alt="Modern photo representing universal accessibility in web design. A visually impaired researcher wearing discreet headphones navigates an accessible web interface with a digital screen reader and refreshable braille display next to the keyboard. Clean minimalist home office aesthetic, warm lighting, blue tones, empathetic human interaction with technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-oZY_JgVytMC0Pwog_eOTcCBbsOfbsrjpAQ3vdDzlbWolgi8ug1q4FBouD9PATSBHfuT3-cmTjJcNqZCqtJdaCEokgm7hvPWRhUt-5sgRwnKBh-O0SDkL_RShB5igANVNnmKNfxlGKXU_NvLpTcFWCOlLcz4Xb_RwgxipX_lz0znqIf4NAQg9jEkN2jW4xoHszrFNXAUvCIxNfpEsljtM4XJSgt0Qlo5qL2q0Bqs"/>
+<div class="p-space-md bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Diseño Para Todos (Design for All)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              La discapacidad no reside en el sujeto, sino en la barrera impuesta por una arquitectura web deficiente.
+            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold mb-space-xs">4. Accesibilidad e Inclusión</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+          Diseñar para Todos los Usuarios sin Excepciones ni Barreras
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+          Centrarse en el usuario significa <strong class="text-on-surface">centrarse en todos los usuarios</strong>. Como enunció Constantine Stephanidis (1995), esto no implica obligar a que todo el censo poblacional participe materialmente en el test, sino garantizar que la arquitectura digital incorpore la totalidad de rasgos diferenciales, prestando atención prioritaria a personas con discapacidad permanente, temporal o circunstancial.
+        </p>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">visibility</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Discapacidad Sensorial y Cognitiva</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Baja visión, daltonismo, sorderas selectivas, dificultades de procesamiento o déficit de atención resueltos mediante contraste estricto WCAG y navegación predecible.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5">wb_sunny</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Limitaciones Circunstanciales y Contextuales</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Usuarios con el móvil bajo deslumbramiento solar, una mano ocupada sosteniendo equipaje o conexiones degradadas en áreas rurales. Un diseño accesible optimiza la experiencia global.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Web Usability Best Practices Bento Grid -->
+<section class="w-full mb-space-xl">
+<div class="flex flex-col gap-space-xs mb-space-md">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">5. Catálogo Operativo</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Buenas Prácticas de Usabilidad en Entornos Web</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[800px]">
+        Principios de ingeniería de interfaces que previenen el abandono del usuario y optimizan la navegabilidad empírica según los cánones de HCI.
+      </p>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1: Information Architecture -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">account_tree</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Arquitectura de Información</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Organización taxonómica lógica basada en técnicas de <em>Card Sorting</em> con usuarios. Evita estructuras profundas que superen los 3 niveles de anidación.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-inline text-code-inline text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">schema</span>
+<span>Navegación no ambigua · Breadcrumbs</span>
+</div>
+</div>
+<!-- Item 2: Visual Hierarchy & F-Reading Pattern with Inline SVG -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between lg:col-span-2">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">view_quilt</span>
+</div>
+<span class="px-space-sm py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Eye-Tracking Clásico</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Patrón de Lectura en F y Jerarquía Visual</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Los estudios de oculometría demuestran que los internautas escanean la pantalla horizontalmente en los primeros párrafos y luego barren en vertical. La información sustantiva y las acciones críticas deben poblar la zona superior izquierda.
+          </p>
+</div>
+<!-- Inline SVG Visualization: F-Pattern Eye Heatmap Schema -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<svg class="w-full sm:w-48 h-28 shrink-0" fill="none" viewbox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Webpage wireframe -->
+<rect fill="#FFFFFF" height="110" rx="6" width="190" x="5" y="5"></rect>
+<!-- Top horizontal gaze fixation (High heat) -->
+<rect fill="#0071E3" height="12" opacity="0.85" rx="4" width="140" x="15" y="15"></rect>
+<!-- Second horizontal gaze (Medium heat) -->
+<rect fill="#0071E3" height="10" opacity="0.6" rx="4" width="90" x="15" y="38"></rect>
+<!-- Vertical scan sweep (Gradient intensity) -->
+<rect fill="#0071E3" height="90" opacity="0.3" rx="4" width="22" x="15" y="15"></rect>
+<!-- Low gaze residual markers -->
+<rect fill="#0071E3" height="6" opacity="0.2" rx="3" width="40" x="42" y="60"></rect>
+<rect fill="#0071E3" height="6" opacity="0.15" rx="3" width="30" x="42" y="74"></rect>
+<circle cx="26" cy="21" fill="#001B3F" r="5"></circle>
+<circle cx="85" cy="21" fill="#0059B5" r="4"></circle>
+<circle cx="26" cy="43" fill="#0059B5" r="4"></circle>
+</svg>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Escaneo selectivo de contenidos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Titulares inequívocos, micro-copys directos y listas con viñetas multiplican la retención y reducen la carga de interpretación.
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Perceived Load Time -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Tiempo de Carga Percibido</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            No sólo importan las métricas de red frías. El uso de pantallas esqueléticas (<em>skeletons</em>) e indicadores progresivos mitiga la ansiedad subjetiva del tiempo de espera.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-inline text-code-inline text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span>Core Web Vitals · FCP &lt; 1.2s</span>
+</div>
+</div>
+<!-- Item 4: Navigation Clarity -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Claridad en la Navegación</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            El internauta debe responder tres interrogantes en todo momento: <em>¿Dónde estoy?</em>, <em>¿De dónde vengo?</em> y <em>¿A dónde puedo ir desde aquí?</em>
+</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-inline text-code-inline text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">navigation</span>
+<span>Ubicación contextual asegurada</span>
+</div>
+</div>
+<!-- Item 5: Interactive Feedback -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">feedback</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Retroalimentación Interactiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Toda acción (un clic, el envío de un formulario, una carga en background) requiere una confirmación visual visible para mantener el control y reducir el error.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-code-inline text-code-inline text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">touch_app</span>
+<span>Estados Hover, Active y Visited</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Usability Check Sandbox / Interactive Component -->
+<section class="w-full mb-space-xl p-space-lg rounded-2xl bg-surface-container-lowest shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-md border-b-0">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Taller Interactivo MPIu+a</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Verificador de Heurísticas para Diseño Web</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Evaluación en tiempo real</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md" id="heuristics-checker">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ausencia de manuales</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" onclick="toggleStatus(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">¿La interfaz ofrece autoexplicación sin ayuda externa?</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Diseño universal (Stephanidis)</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" onclick="toggleStatus(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">¿Garantiza contraste AA, lectores de pantalla y foco visible?</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Diseño participativo (Gaffney)</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" onclick="toggleStatus(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">¿Se han realizado tests con usuarios finales en prototipos?</p>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Buttons (Mandated) -->
+<section class="w-full pt-space-lg pb-space-md">
+<footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" data-path="usabilidad" href="usabilidad.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a Usabilidad General</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Capítulo 06 de 06</span></div><span class="hidden sm:inline text-outline-variant">•</span><a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="usabilidad-06-practica.html"><span class="material-symbols-outlined text-[18px]">sports_esports</span><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="ux.html">
+<span>Siguiente: Pilar User Experience (UX)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer>
+</section>
+<!-- Micro-interaction script -->
+<script>
+    function toggleStatus(btn) {
+      if (btn.classList.contains('bg-primary')) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-primary');
+      } else {
+        btn.classList.remove('bg-surface-container', 'text-primary');
+        btn.classList.add('bg-primary', 'text-on-primary');
+      }
+    }
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter pb-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span><span class="font-body-sm text-body-sm text-on-surface-variant">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dirección docente e investigadora: Dr. Toni Granollers</span></div><div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">UdL</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">GRIHO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">AIPO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">ACM SIGCHI</span></div></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">lock_open</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer>
+<script src="persist.js" defer></script></body></html>

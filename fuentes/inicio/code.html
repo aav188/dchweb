@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Interacción Persona-Ordenador</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary":"#ffffff","tertiary":"#0059b4","error":"#ba1a1a","on-tertiary-container":"#fcfaff","background":"#faf8fe","inverse-surface":"#2f3034","secondary-fixed-dim":"#c8c6c8","on-secondary-container":"#636264","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#00458e","on-primary-container":"#fcfbff","surface-dim":"#dad9df","outline-variant":"#c1c6d6","tertiary-fixed-dim":"#abc7ff","on-primary":"#ffffff","surface-container":"#eeedf3","on-surface-variant":"#414753","surface-bright":"#faf8fe","surface-container-high":"#e9e7ed","secondary":"#5f5e60","surface-container-low":"#f4f3f8","on-secondary-fixed-variant":"#474649","on-error":"#ffffff","on-primary-fixed-variant":"#00458f","inverse-primary":"#abc7ff","primary":"#0059b5","tertiary-container":"#0071e2","on-surface":"#1a1b1f","surface-container-lowest":"#ffffff","on-background":"#1a1b1f","surface-tint":"#005cbb","error-container":"#ffdad6","primary-fixed":"#d7e2ff","secondary-fixed":"#e4e2e4","primary-container":"#0071e3","tertiary-fixed":"#d7e3ff","surface-variant":"#e3e2e7","on-primary-fixed":"#001b3f","on-error-container":"#93000a","inverse-on-surface":"#f1f0f5","secondary-container":"#e2dfe1","surface-container-highest":"#e3e2e7","outline":"#717785","on-secondary-fixed":"#1b1b1d","primary-fixed-dim":"#abc7ff","surface":"#faf8fe","on-tertiary-fixed":"#001b3f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-lg":"1.5rem","margin":"3rem","space-md":"1rem","margin-sm":"1.25rem","gutter":"1.5rem","space-xs":"0.25rem","margin-md":"2rem","space-sm":"0.5rem","gutter-sm":"1rem"},fontFamily:{"body-sm":["Inter"],"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-md":["Inter"],"display-hero":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 max-w-7xl mx-auto px-margin-sm lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><a class="flex items-center gap-space-sm focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-space-xs" data-path="inicio" href="#"><img alt="Curso IPO Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXSwv6nbtyYICYjp4TaI8i3FzxVzLtRb1t8zSR-2depBeXcH5_Nuj0lpdQbCXiPnv_sNnWvwvlkw0nAkl-1zXplUSFhnynedQt4-8_VhOmRFmmPye_Ob2o-qf4KOFZPfnsN3Vac76OT94Qcne4GBVM2vyQo4CGEDgcTcjdLIhqclbXddm_1UcE0s7gMU4fcdIxeitMpV-E00lnrjGrYaQE4do8Ls1MplvwN-yFp5E"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Curso IPO</span></a></div><nav aria-label="Navegación principal" class="hidden lg:flex items-center gap-space-md h-full" data-active-classes="text-primary font-bold border-b-2 border-primary"><a aria-current="page" class="transition-colors py-space-sm text-primary font-bold border-b-2 border-primary" data-path="inicio" href="#">Inicio</a><div class="relative group h-full flex items-center"><button aria-expanded="false" aria-haspopup="true" class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface flex items-center gap-space-xs transition-colors py-space-sm focus:outline-none focus:ring-2 focus:ring-primary rounded" id="btn-modules-dropdown"><span class="">Curso IPO</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface transition-transform duration-200 group-hover:rotate-180">expand_more</span></button><div aria-label="Módulos de IPO" class="absolute left-0 top-[calc(100%-4px)] w-80 bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container-highest rounded-2xl shadow-[0_12px_32px_-4px_rgba(0,0,0,0.08)] p-space-sm hidden group-hover:block group-focus-within:block focus-within:block transition-all z-50" role="menu"><div class="px-space-sm py-space-xs mb-space-xs border-b border-surface-container-high flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Plan Curricular</span><span class="text-[10px] font-code-inline text-primary font-bold bg-primary-fixed px-1.5 py-0.5 rounded-full">9 Unidades</span></div><div class="max-h-[360px] overflow-y-auto flex flex-col gap-1"><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-1-fundamentos" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">01</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M1: Fundamentos</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-2-factor-humano" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">02</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M2: Factor Humano</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-3-dcu" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">03</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M3: DCU (Centrado en Usuario)</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-4-analisis-requisitos" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">04</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M4: Análisis de Requisitos</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-5-prototipado" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">05</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M5: Prototipado</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-6-evaluacion-usabilidad" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">06</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M6: Evaluación</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-7-accesibilidad" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">07</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M7: Accesibilidad</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-8-1-estilos-paradigmas" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">08.1</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M8.1: Estilos de Interacción</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a><a class="px-space-sm py-2 rounded-xl text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm flex items-center justify-between group/item" data-path="modulo-8-2-diseno-interfaces" href="#"><div class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0">08.2</span><span class="font-medium group-hover/item:text-primary transition-colors truncate">M8.2: Diseño UI</span></div><span class="font-label-sm text-[10px] text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded-md">Acceder</span></a></div></div></div><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="mpiu-a" href="#">MPIu+a</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="recursos" href="#">Biblioteca de Recursos</a></nav><div class="flex items-center gap-space-sm shrink-0"><button aria-label="Buscar en la plataforma" class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors text-body-sm font-body-sm border border-surface-container-highest/60 focus:outline-none focus:ring-2 focus:ring-primary" id="cmd-search-btn" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden xl:inline text-label-sm font-label-sm">Buscar</span><kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 font-code-inline text-[11px] text-outline bg-surface-container-lowest border border-outline-variant/60 rounded shadow-xs">⌘K</kbd></button><button aria-label="Cambiar modo de color" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary" id="theme-toggle-btn" title="Cambiar modo visual" type="button"><span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span><span class="material-symbols-outlined text-[20px] hidden dark:inline">light_mode</span></button><a aria-label="Ver mi progreso en el curso" class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed hover:bg-primary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-path="mi-progreso" href="#"><span class="material-symbols-outlined text-[16px] text-primary">pie_chart</span><span class="font-label-sm text-label-sm font-semibold">Progreso</span><span class="font-label-sm text-label-sm font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded-full text-primary" id="global-progress-value">0%</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full py-space-xl lg:py-28 overflow-hidden bg-surface"><!-- Ambient subtle background depth --><div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[520px] bg-primary/5 rounded-full blur-3xl pointer-events-none -z-0"></div><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin relative z-10"><div class="flex flex-col items-start gap-6 max-w-4xl"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high w-fit"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider">Cátedra Interacción Persona-Ordenador</span></div><h1 class="font-display-hero text-headline-xl sm:text-[44px] lg:text-display-hero text-on-surface tracking-tight font-bold leading-tight max-w-4xl">Comprende la tecnología. <span class="text-primary block sm:inline">Diseña para las personas.</span></h1><p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">Explora la Interacción Persona-Ordenador y aprende a crear experiencias digitales intuitivas, accesibles y centradas en el ser humano a través de fundamentos científicos y metodologías contrastadas.</p><div class="flex flex-wrap items-center gap-4 pt-2"><a class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium hover:bg-tertiary transition-all shadow-sm hover:shadow-md active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary/25" href="#modulos-seccion"><span class="">Explorar el curso</span><span class="material-symbols-outlined ml-2 text-[18px]">arrow_downward</span></a><a class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container transition-all shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-outline" href="#que-es-ipo">Descubrir qué es IPO</a></div><div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 w-full max-w-2xl"><div class="bg-surface-container-low p-4 rounded-xl border border-surface-container-high"><span class="font-headline-sm text-headline-sm text-primary font-bold block">9</span><span class="font-label-sm text-label-sm text-on-surface-variant">Módulos maestros</span></div><div class="bg-surface-container-low p-4 rounded-xl border border-surface-container-high"><span class="font-headline-sm text-headline-sm text-primary font-bold block">MPIu+a</span><span class="font-label-sm text-label-sm text-on-surface-variant">Metodología ágil</span></div><div class="bg-surface-container-low p-4 rounded-xl border border-surface-container-high"><span class="font-headline-sm text-headline-sm text-primary font-bold block">WCAG 2.2</span><span class="font-label-sm text-label-sm text-on-surface-variant">Accesibilidad total</span></div></div></div></div></section>
+<!-- SECTION: ¿QUÉ ES IPO? -->
+<section class="w-full py-space-xl bg-surface-container-lowest" id="que-es-ipo"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin"><div class="flex flex-col gap-space-xs max-w-4xl mb-space-lg"><div class="flex items-center gap-2"><span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Módulo 1 • Fundamentos Disciplinares de IPO</span><span class="px-2.5 py-0.5 rounded-full text-[11px] font-code-inline bg-primary-fixed text-primary font-bold">Corpus Canónico Oficial AIPO &amp; ACM SIGCHI</span></div><h2 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">Fundamentos de la Interacción Persona-Ordenador</h2><p class="font-body-lg text-body-lg text-on-surface leading-relaxed font-medium bg-surface-container-low p-4 rounded-xl border-l-4 border-primary">«La Interacción Persona-Ordenador es la disciplina relacionada con el diseño, evaluación e implementación de sistemas informáticos interactivos para el uso de seres humanos, y con el estudio de los fenómenos más importantes con los que está relacionado.»<span class="block text-body-sm font-label-sm text-primary mt-1">— ACM SIGCHI (Special Interest Group on Computer-Human Interaction) Curricula for HCI</span></p><div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2"><div class="p-4 rounded-xl bg-surface-container-low"><div class="flex items-center gap-2 mb-1.5"><span class="material-symbols-outlined text-primary text-[20px]">public</span><span class="font-label-md text-label-md font-semibold text-on-surface">Denominaciones y Terminología</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">En el ámbito anglosajón se denomina <strong>HCI (Human-Computer Interaction)</strong> o <strong>CHI (Computer-Human Interaction)</strong>. En Latinoamérica es común <strong>IHC (Interacción Humano-Computador)</strong>. En el ámbito hispanohablante, <strong>AIPO</strong> acuñó y adoptó <strong>Interacción Persona-Ordenador (IPO)</strong> por rigor inclusivo (evitar 'hombre') y exactitud de 'persona' sobre el soporte de cómputo.</p></div><div class="p-4 rounded-xl bg-surface-container-low"><div class="flex items-center gap-2 mb-1.5"><span class="material-symbols-outlined text-primary text-[20px]">hub</span><span class="font-label-md text-label-md font-semibold text-on-surface">AIPO, CHISPA e Institucionalización</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><strong>AIPO</strong> (fundada a finales de 1999) vertebra la comunidad hispanohablante junto a su capítulo ACM <strong>CHISPA</strong> (Computer-Human Interaction in SPAin). Organiza el congreso anual <strong>INTERACCIÓN</strong>, publica la <strong>Revista INTERACCIÓN</strong> y edita el libro canónico de referencia de la disciplina.</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-space-lg"><div class="bg-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all hover:shadow-md duration-300"><div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[28px]">group</span></div><div><span class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">Dimensión Humana</span><h3 class="font-headline-md text-headline-md font-semibold text-on-surface mt-1">Personas</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">El usuario como destinatario final. Análisis del procesamiento humano de información, memoria sensorial y de trabajo, modelos mentales previos, capacidad motriz y diversidad funcional física o sensorial.</p></div><div class="mt-6 pt-4"><button class="btn-detail-trigger w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md font-medium hover:bg-primary-fixed transition-colors flex items-center justify-between" data-target="detail-personas" type="button"><span class="">Ver factores humanos</span><span class="material-symbols-outlined text-[18px] transition-transform duration-200">add</span></button><div class="hidden mt-4 p-4 rounded-xl bg-surface-container-lowest text-on-surface-variant flex flex-col gap-2 font-body-sm text-body-sm" id="detail-personas"><div class="font-label-sm text-label-sm text-primary font-semibold">Factores Clave:</div><p class="">• <strong>Psicología Cognitiva:</strong> Percepción selectiva, memoria a corto plazo, modelos mentales y leyes de Fitts y Hick.</p><p class="">• <strong>Accesibilidad Universal:</strong> Consideración de la variabilidad funcional en capacidades cognitivas, auditivas, visuales y motrices.</p></div></div></div><div class="bg-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all hover:shadow-md duration-300"><div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary"><span class="material-symbols-outlined text-[28px]">sync_alt</span></div><div><span class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">El Diálogo Bidireccional</span><h3 class="font-headline-md text-headline-md font-semibold text-on-surface mt-1">Interacción</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">El puente de comunicación entre persona y máquina: estilos de interacción, modelos conceptuales, metáforas de interfaz, affordances y feedback inmediato en bucle cerrado.</p></div><div class="mt-6 pt-4"><button class="btn-detail-trigger w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md font-medium hover:bg-primary-fixed transition-colors flex items-center justify-between" data-target="detail-interaccion" type="button"><span class="">Ver paradigmas clave</span><span class="material-symbols-outlined text-[18px] transition-transform duration-200">add</span></button><div class="hidden mt-4 p-4 rounded-xl bg-surface-container-lowest text-on-surface-variant flex flex-col gap-2 font-body-sm text-body-sm" id="detail-interaccion"><div class="font-label-sm text-label-sm text-primary font-semibold">Paradigmas y Modelos:</div><p class="">• <strong>Ciclo de Acción de Norman:</strong> Superación de los abismos de ejecución y evaluación.</p><p class="">• <strong>Manipulación Directa:</strong> Representación continua con acciones reversibles y respuesta visual inmediata.</p></div></div></div><div class="bg-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all hover:shadow-md duration-300"><div class="flex flex-col gap-4"><div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[28px]">devices</span></div><div><span class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">Soporte Computacional</span><h3 class="font-headline-md text-headline-md font-semibold text-on-surface mt-1">Tecnología</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Hardware, sistemas de entrada/salida y middleware que sostienen las interfaces gráficas (WIMP), táctiles, móviles o multimodales con latencia imperceptible.</p></div><div class="mt-6 pt-4"><button class="btn-detail-trigger w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md font-medium hover:bg-primary-fixed transition-colors flex items-center justify-between" data-target="detail-tecnologia" type="button"><span class="">Ver aspectos técnicos</span><span class="material-symbols-outlined text-[18px] transition-transform duration-200">add</span></button><div class="hidden mt-4 p-4 rounded-xl bg-surface-container-lowest text-on-surface-variant flex flex-col gap-2 font-body-sm text-body-sm" id="detail-tecnologia"><div class="font-label-sm text-label-sm text-primary font-semibold">Aspectos Técnicos:</div><p class="">• <strong>Arquitecturas UI y Accesibilidad:</strong> Sincronización de árbol DOM, ARIA para lectores de pantalla y gráficos acelerados.</p><p class="">• <strong>Computación Ubicua:</strong> Integración transparente de la tecnología en el entorno del usuario.</p></div></div></div></div><div class="bg-surface-container-low rounded-2xl p-6 sm:p-8 flex flex-col gap-6"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-surface-container-high pb-4"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[24px]">auto_stories</span><div><h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Lecturas recomendadas y referencias históricas</h3><p class="font-body-sm text-body-sm text-outline">Hitos canónicos de la literatura fundacional y de referencia de la IPO</p></div></div><span class="font-code-inline text-label-sm text-primary font-semibold bg-surface-container-lowest px-3 py-1 rounded-full w-fit">Corpus Canónico IPO</span></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">Brian Shackel (1959)</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Hito Fundacional</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«Ergonomics for a computer»</div><p class="text-[11px] text-outline leading-tight">Primer paper publicado en la historia de HCI, integrando la ergonomía en sistemas de cómputo.</p></div><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">B. Myers (1998)</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Historia Tecnológica</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«A Brief History of Human Computer Interaction Technology»</div><p class="text-[11px] text-outline leading-tight">Evolución de interfaces gráficas, ratón, ventanas y manipulación directa en ACM.</p></div><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">R. Baecker (2008)</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Evolución de Paradigmas</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«Themes in the early history of HCI»</div><p class="text-[11px] text-outline leading-tight">Los orígenes de la interacción y la transformación desde la ingeniería pura al diseño con usuarios.</p></div><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">J. M. Carroll</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Teoría Conceptual</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«Human Computer Interaction - brief intro»</div><p class="text-[11px] text-outline leading-tight">Introducción de referencia sobre modelos conceptuales y psicología cognitiva de la interacción.</p></div><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">Alan Dix (2016)</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Manual Canónico</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«Human Computer Interaction, foundations and new paradigms»</div><p class="text-[11px] text-outline leading-tight">Fundamentos esenciales de diseño interactivo y nuevos paradigmas ubicuos.</p></div><div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-bold text-primary">J. Grudin (2017)</span><span class="text-[11px] font-code-inline text-outline bg-surface-container px-1.5 py-0.5 rounded">Perspectiva Global</span></div><div class="font-body-sm text-body-sm font-medium text-on-surface">«A History of Human Computer Interaction»</div><p class="text-[11px] text-outline leading-tight">Visión comprehensiva del desarrollo interdisciplinar y las olas evolutivas de HCI.</p></div></div><div class="pt-4 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-3 text-body-sm text-on-surface-variant"><div><span class="font-label-sm text-label-sm font-semibold text-on-surface">Organizaciones de referencia internacional:</span> <span class="text-outline">ACM SIGCHI, IFIP TC.13, AIPO, GRIHO (UdL), HCI-Collab.</span></div><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline inline-flex items-center gap-1" data-path="recursos" href="#">Consultar Biblioteca de Recursos y Ensayos <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div></div></section>
+<!-- SECTION: MICRO-VÍDEOS IPO / SHORTS CAROUSEL (INSPIRADO EN TV3 / 3CAT FORMAT) -->
+<section class="w-full py-space-xl bg-surface border-y border-surface-container-high relative overflow-hidden" id="pildoras-videos-ipo">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<!-- Section Header with Title, Subtitle and Pagination Badge -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-primary font-code-inline text-[11px] font-bold mb-2">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+          MICRO-LECCIONES EN FORMATO VERTICAL
+        </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Píldoras y micro-vídeos IPO</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 max-w-3xl leading-relaxed">Formatos breves de 1-2 minutos sobre conceptos clave, casos reales y demostraciones de laboratorio con el Dr. Toni Granollers y especialistas de HCI.</p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-code-inline text-label-sm text-on-surface-variant bg-surface-container-high px-3 py-1.5 rounded-full font-medium" id="carousel-page-indicator">Página 1 de 2 • 8 micro-lecciones</span>
+<div class="flex items-center gap-1.5">
+<button aria-label="Página anterior de vídeos" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-highest shadow-sm hover:bg-surface-container text-on-surface flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-40 disabled:cursor-not-allowed" id="btn-video-prev" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Página siguiente de vídeos" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-highest shadow-sm hover:bg-surface-container text-on-surface flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-40 disabled:cursor-not-allowed" id="btn-video-next" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Carousel Container with Navigation Buttons -->
+<div class="relative group/carousel">
+<!-- Floating Navigation Buttons (Reference Image Style) -->
+<button aria-label="Ver vídeos anteriores" class="absolute -left-4 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container-highest shadow-[0_6px_20px_rgba(0,0,0,0.12)] text-on-surface flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary" id="btn-floating-prev" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<button aria-label="Ver vídeos siguientes" class="absolute -right-4 lg:-right-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-surface-container-highest shadow-[0_6px_20px_rgba(0,0,0,0.12)] text-on-surface flex items-center justify-center transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary" id="btn-floating-next" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</button>
+<!-- Carousel Track / Pages Wrapper -->
+<div class="relative overflow-hidden rounded-2xl">
+<!-- Page 1 (Active by default) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 transition-opacity duration-300" id="video-page-1">
+<!-- Card 1 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Dr. Toni Granollers" data-duration="01:45" data-sub="Conceptos Fundamentales de Interacción Humano-Computador" data-tag="LECCIÓN 01 • INTRODUCCIÓN" data-title="¿QUÉ ES REALMENTE LA INTERACCIÓN PERSONA-ORDENADOR?">
+<img alt="Dr. Toni Granollers explicando los fundamentos de IPO" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT22CzRMqcQOmBJ0He-kh0dtsZEQS7x1BtC2OQBLMOtH1b9tjftPn830xnwT5qF0E0XWcPnojL_G_n1ER06f_hoCpPpCed9azb8qpA_DtrV9jef7mkaWwzg3HMNGBf8Y3moXzMnSp6Hu8TiEJLtDz5sOFWkU89XB7t2zUomq4VYef8PaHyT_2n93QVzoWcql8Ru1rtO0TCg9iBmm7Dao_EsQdpZz7wLf1ePNXkqF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">LECCIÓN 01 • INTRODUCCIÓN</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">01:45</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>¿QUÉ ES REALMENTE LA INTERACCIÓN PERSONA-ORDENADOR?</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Dr. Toni Granollers • UdL</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Equipo MPIu+a" data-duration="02:10" data-sub="Ciclo de Prototipado y Métodos Ágiles" data-tag="METODOLOGÍA • MPIU+A" data-title="PROTOTIPADO RÁPIDO Y ARQUITECTURA DE DIÁLOGO">
+<img alt="Mesa de diseño con prototipado en papel y tablet digital" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe59cV5zJBuzjxnx673UZtI6ArnSJblaKAfpk4dO84M2-vyVdeQvhJqWCaVnhO-OqhMyVQ02AT03tuRCZ-YGGmDaBjMIHevNxG_nE1JiC0HJV6rD0Y5AIvZgP1E7FP2rtHXbXOAYwP6RB7VM2dX5qiDc-jfTG3xRiVItMKEaVqw1KL7TvyCnCN0RfS9ypnjkE2pNTQxda9g3TPTGV29qNOsnLd42imL9d5IRVvz_U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">METODOLOGÍA • MPIU+A</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">02:10</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>PROTOTIPADO RÁPIDO Y ARQUITECTURA DE DIÁLOGO</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Modelado Conceptual y Pruebas</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Especialistas en Accesibilidad" data-duration="01:30" data-sub="Tecnologías Asistenciales y Diseño Universal" data-tag="ACCESIBILIDAD • WCAG 2.2" data-title="LECTORES DE PANTALLA Y DIVERSIDAD FUNCIONAL">
+<img alt="Especialista demostrando lector de pantalla y teclado Braille" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Pne33GqidtLeHxfeXeEL5BCMhUwWf0nqNiHEDuB23c4ieCIdvUNA99dmU43aa9GaPUsms44MWS5Z0862Aweu3Lla1iWae2TEr74NH0v_JQao7elLMxxa5O_YeLKO5dXArJS-GXTtibWZOvu6D4KqFbjIk68cXre2ciIGCTROpwXVaEBpp91xJmXdOXxW-leccYy2L40hpnggENGHfUZOr4GTaSkg68EpBlkfI48"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">ACCESIBILIDAD • WCAG 2.2</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">01:30</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>LECTORES DE PANTALLA Y DIVERSIDAD FUNCIONAL</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Inclusión y Cumplimiento POUR</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Investigadores GRIHO UdL" data-duration="02:40" data-sub="Laboratorio de Usabilidad e Interacción" data-tag="LABORATORIO • GRIHO" data-title="TEST DE USABILIDAD CON EYE-TRACKING EN LA UDL">
+<img alt="Estudiante en laboratorio con gafas eye-tracking e interfaz táctil" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZWI64vvjtwWGJpkEC_ppsgONYBrKFP7ztUlz0_5WE_9vbnwjqyvtHDJvi5X5QFRWuCU4w6DQMQAPpcLtDgwrTarAmHEMuOiEMJykI4xffHaxk4-LIM9IiU1cjKfkR-D7C-RTpN8a3HjNvm2MlDq2KwrZkeVv1-pZEVVfT6V-mfPxMkpplj697N-mm1FbM2Ovnn1izmJEifOMgMlVZORRti-MfEPz7SeNVfXUTLoU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">LABORATORIO • GRIHO</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">02:40</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>TEST DE USABILIDAD CON EYE-TRACKING EN LA UDL</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Mapas de Calor y Fijaciones Oculares</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page 2 (Toggled via JS) -->
+<div class="hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 transition-opacity duration-300" id="video-page-2">
+<!-- Card 5 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Cátedra IPO" data-duration="02:15" data-sub="Conceptos Fundamentales de Interacción" data-tag="EXPERIENCIA DE USUARIO" data-title="UX VS USABILIDAD: DIFERENCIAS CLAVE">
+<img alt="Diseñador examinando wireframes y métricas UX" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida/AEtjO1UEjWRVCJy-jZmfM56mXvLKm5nDEcivn2QcibyYq1hw-0Q936bp_nQZv15bLnLlVHntBotaFKujmGu1D1zCGwx8BZsxo8X_Q2hDoZ1u9BYh0tKk3MKIEfdBvJ7WZz2to3TwaRP_To0rystJp5PHS8IbHJ1Ix9908dMUThgluSZ9oSpeJ3gYX-mF1rRB7RDX_rFlE1cCKojC4ZZIweShEJiuv0JnhyN-e9HXzohF63wG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">EXPERIENCIA DE USUARIO</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">02:15</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>UX VS USABILIDAD: DIFERENCIAS CLAVE</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Eficacia, Eficiencia y Satisfacción</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Inspección Heurística" data-duration="01:50" data-sub="Métodos de Evaluación Sin Usuarios" data-tag="EVALUACIÓN HEURÍSTICA" data-title="LOS 10 PRINCIPIOS DE NIELSEN APLICADOS">
+<img alt="Evaluación heurística de interfaces y principios de diseño" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida/AEtjO1VecXrO0hXTaVBmcjPyIUFDXb9ctXTyBTPIz4_7NEljeXsr2-8pPHydOorYpFLHT71oLL8knKINIOSVGNgqXfZ-t_6ZLuYWCMTI_PwBDtZTsezHo9ftOsgzYP4sUOfgNiuGBMHxbyzwmjkjOKcBKJHeH10WRFn2LiuIaitj2Q6URu7cQnb44Z1ua-1NcZbpZ2FB2wdH567_kThS-4N0MzayRxKo8_e3K2kV08XtzJs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">EVALUACIÓN HEURÍSTICA</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">01:50</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>LOS 10 PRINCIPIOS DE NIELSEN APLICADOS</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Visibilidad de Estado y Prevención de Errores</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Psicología Cognitiva" data-duration="02:05" data-sub="Procesamiento de la Información" data-tag="FACTOR HUMANO" data-title="MEMORIA DE TRABAJO Y MODELOS MENTALES">
+<img alt="Investigación de memoria humana y modelos de procesamiento mental" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida/AEtjO1UPibo2UE4i6dqF2BYC-BCEzoITu8D811VOYMT_FS1whpbFgx27l7KliNAfUpn4OxMOJoWkvDtTA6KXhZyEv5NbLQjoyZRNrhMqGlm0AGhN3K45wQEAn_uvpUkFOBRzGGu0amDSLUia7q3IzvBLjUiRJBuQ9y9vkc93h9xhPlfr3ur4n0vqkX7tcuVa6Oqt4BeleJrag-ELGmnSno7ub-jU9UAsK9cX1yZwER6RtZU5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">FACTOR HUMANO</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">02:05</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>MEMORIA DE TRABAJO Y MODELOS MENTALES</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Carga Cognitiva y Ley de Miller</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="video-short-card group relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-surface-container-high" data-author="Dr. Toni Granollers" data-duration="01:55" data-sub="Evolución de Interfaces Gráficas" data-tag="HISTORIA HCI" data-title="DE LOS SISTEMAS WIMP A LA INTERACCIÓN TÁCTIL">
+<img alt="Historia de la computación interactiva y evolución de ventanas y ratón" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT22CzRMqcQOmBJ0He-kh0dtsZEQS7x1BtC2OQBLMOtH1b9tjftPn830xnwT5qF0E0XWcPnojL_G_n1ER06f_hoCpPpCed9azb8qpA_DtrV9jef7mkaWwzg3HMNGBf8Y3moXzMnSp6Hu8TiEJLtDz5sOFWkU89XB7t2zUomq4VYef8PaHyT_2n93QVzoWcql8Ru1rtO0TCg9iBmm7Dao_EsQdpZz7wLf1ePNXkqF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
+<!-- Top Tag -->
+<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
+<span class="px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-white font-code-inline text-[10px] font-semibold tracking-wider uppercase">HISTORIA HCI</span>
+<span class="px-2 py-0.5 rounded bg-black/60 text-white/90 font-code-inline text-[11px] font-medium backdrop-blur-md">01:55</span>
+</div>
+<!-- Bottom Content (TV3 3Cat Inspired Accent Bar) -->
+<div class="absolute bottom-0 inset-x-0 p-3.5 z-10 flex flex-col gap-2.5">
+<div class="bg-[#e65100] text-white p-2.5 rounded-lg shadow-sm">
+<p class="font-headline-sm text-[12px] sm:text-[13px] font-bold leading-snug tracking-tight flex items-start gap-1.5 uppercase">
+<span class="text-white text-base leading-none">•</span>
+<span>DE LOS SISTEMAS WIMP A LA INTERACCIÓN TÁCTIL</span>
+</p>
+</div>
+<div class="flex items-center justify-between text-white/90 text-xs">
+<span class="text-[11px] font-medium text-white/80 line-clamp-1">Xerox Alto, Douglas Engelbart y UIs Táctiles</span>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL SIMULADOR REPRODUCTOR DE MICRO-VÍDEO (ACCESIBLE & WCAG COMPLIANT) -->
+<div aria-describedby="video-modal-desc" aria-labelledby="video-modal-title" aria-modal="true" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-md" id="video-player-modal" role="dialog">
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-surface-container-highest flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Video Player Simulation Header -->
+<div class="p-4 bg-surface-container-low border-b border-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-code-inline text-label-sm font-semibold text-primary" id="video-modal-badge">MICRO-LECCIÓN IPO</span>
+</div>
+<button aria-label="Cerrar reproductor" class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary" id="close-video-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Player Simulated Canvas (Aspect 9:16 vertical view in mobile frame) -->
+<div class="relative aspect-[9/14] bg-inverse-surface overflow-hidden flex flex-col justify-between p-6">
+<img alt="Fondo de la lección seleccionada" class="absolute inset-0 w-full h-full object-cover opacity-60" id="video-modal-poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT22CzRMqcQOmBJ0He-kh0dtsZEQS7x1BtC2OQBLMOtH1b9tjftPn830xnwT5qF0E0XWcPnojL_G_n1ER06f_hoCpPpCed9azb8qpA_DtrV9jef7mkaWwzg3HMNGBf8Y3moXzMnSp6Hu8TiEJLtDz5sOFWkU89XB7t2zUomq4VYef8PaHyT_2n93QVzoWcql8Ru1rtO0TCg9iBmm7Dao_EsQdpZz7wLf1ePNXkqF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60"></div>
+<!-- Top Video Player Meta -->
+<div class="relative z-10 flex items-center justify-between text-white/90">
+<span class="text-xs font-code-inline px-2 py-0.5 rounded bg-white/20 backdrop-blur-sm" id="video-modal-duration">01:45</span>
+<span class="text-xs font-label-sm text-white/80" id="video-modal-author">Cátedra IPO UdL</span>
+</div>
+<!-- Play Center Overlay Button -->
+<div class="relative z-10 my-auto flex flex-col items-center justify-center gap-3">
+<button aria-label="Reproducir / Pausar lección" class="w-16 h-16 rounded-full bg-primary text-on-primary shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-primary/40" id="video-modal-play-btn" type="button">
+<span class="material-symbols-outlined text-[36px] ml-1">play_arrow</span>
+</button>
+<span class="text-white/80 font-label-sm text-xs bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Simulación interactiva pedagógica</span>
+</div>
+<!-- Bottom Title and Controls -->
+<div class="relative z-10 flex flex-col gap-3">
+<div class="bg-[#e65100] text-white p-3 rounded-xl shadow-md">
+<h3 class="font-headline-sm text-sm font-bold uppercase leading-snug" id="video-modal-title">¿QUÉ ES REALMENTE LA INTERACCIÓN PERSONA-ORDENADOR?</h3>
+</div>
+<p class="text-white/80 text-xs font-body-sm line-clamp-2" id="video-modal-desc">Conceptos Fundamentales de Interacción Humano-Computador</p>
+<!-- Scrubber Progress Bar -->
+<div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/5 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="script-video-shorts">
+(function() {
+  const p1 = document.getElementById('video-page-1');
+  const p2 = document.getElementById('video-page-2');
+  const indicator = document.getElementById('carousel-page-indicator');
+  const btnPrev = document.getElementById('btn-video-prev');
+  const btnNext = document.getElementById('btn-video-next');
+  const btnFloatPrev = document.getElementById('btn-floating-prev');
+  const btnFloatNext = document.getElementById('btn-floating-next');
+
+  let currentPage = 1;
+
+  function setPage(page) {
+    currentPage = page;
+    if (currentPage === 1) {
+      if (p1) { p1.classList.remove('hidden'); p1.classList.add('grid'); }
+      if (p2) { p2.classList.add('hidden'); p2.classList.remove('grid'); }
+      if (indicator) indicator.textContent = 'Página 1 de 2 • 8 micro-lecciones';
+      if (btnPrev) btnPrev.disabled = true;
+      if (btnNext) btnNext.disabled = false;
+      if (btnFloatPrev) btnFloatPrev.classList.add('opacity-50');
+      if (btnFloatNext) btnFloatNext.classList.remove('opacity-50');
+    } else {
+      if (p1) { p1.classList.add('hidden'); p1.classList.remove('grid'); }
+      if (p2) { p2.classList.remove('hidden'); p2.classList.add('grid'); }
+      if (indicator) indicator.textContent = 'Página 2 de 2 • 8 micro-lecciones';
+      if (btnPrev) btnPrev.disabled = false;
+      if (btnNext) btnNext.disabled = true;
+      if (btnFloatPrev) btnFloatPrev.classList.remove('opacity-50');
+      if (btnFloatNext) btnFloatNext.classList.add('opacity-50');
+    }
+  }
+
+  if (btnPrev) btnPrev.addEventListener('click', () => setPage(1));
+  if (btnNext) btnNext.addEventListener('click', () => setPage(2));
+  if (btnFloatPrev) btnFloatPrev.addEventListener('click', () => setPage(1));
+  if (btnFloatNext) btnFloatNext.addEventListener('click', () => setPage(2));
+
+  // Initialize
+  setPage(1);
+
+  // Modal Player Preview Interactions
+  const modal = document.getElementById('video-player-modal');
+  const closeModalBtn = document.getElementById('close-video-modal');
+  const modalBadge = document.getElementById('video-modal-badge');
+  const modalTitle = document.getElementById('video-modal-title');
+  const modalDesc = document.getElementById('video-modal-desc');
+  const modalAuthor = document.getElementById('video-modal-author');
+  const modalDuration = document.getElementById('video-modal-duration');
+  const modalPoster = document.getElementById('video-modal-poster');
+
+  document.querySelectorAll('.video-short-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const tag = card.getAttribute('data-tag') || 'MICRO-LECCIÓN IPO';
+      const title = card.getAttribute('data-title') || '';
+      const sub = card.getAttribute('data-sub') || '';
+      const author = card.getAttribute('data-author') || 'Cátedra IPO UdL';
+      const duration = card.getAttribute('data-duration') || '01:30';
+      const img = card.querySelector('img');
+
+      if (modalBadge) modalBadge.textContent = tag;
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalDesc) modalDesc.textContent = sub;
+      if (modalAuthor) modalAuthor.textContent = author;
+      if (modalDuration) modalDuration.textContent = duration;
+      if (modalPoster && img) modalPoster.src = img.src;
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    });
+  });
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  }
+})();
+</script>
+<!-- SECTION: EXPLORA LOS 9 MÓDULOS DEL CURSO -->
+<section class="w-full py-space-xl bg-surface" id="modulos-seccion"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin"><div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-lg"><div class="flex items-center justify-center gap-2 mb-2"><span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Plan Docente Universitario &amp; Mapa Curricular</span><span class="px-2.5 py-0.5 rounded-full text-[11px] font-code-inline bg-primary-fixed text-primary font-bold">10 Nodos Formativos</span></div><h2 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">Roadmap módulos IPO:</h2><p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl mx-auto leading-relaxed">Explora interactivamente los módulos distribuidos en el ciclo formativo continuo. Pulsa o pasa el cursor por cualquier nodo de la órbita para inspeccionar su núcleo competencial en el display central.</p><div class="flex items-center justify-center gap-2 mt-4"><button class="text-body-sm font-body-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high" id="btn-reset-progress"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span class="">Reiniciar progreso</span></button></div></div><div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-12 lg:p-16 shadow-sm border border-surface-container-highest flex flex-col items-center justify-center relative overflow-hidden mb-space-lg mx-auto max-w-5xl"><div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div><div class="relative w-full max-w-[580px] aspect-square mx-auto flex items-center justify-center my-4"><div class="absolute inset-4 sm:inset-8 rounded-full border-2 border-dashed border-outline-variant/60 pointer-events-none"></div><div class="absolute inset-16 sm:inset-20 rounded-full border border-primary/20 pointer-events-none"></div><div class="relative z-20 w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-surface-container-low border-2 border-primary/30 shadow-xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300" id="orbit-central-display"><div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-code-inline text-[11px] font-bold mb-2" id="orbit-display-badge">MÓDULO 01 • ACTIVO</div><h3 class="font-headline-sm text-headline-sm sm:text-headline-md font-bold text-on-surface tracking-tight mb-2 line-clamp-2" id="orbit-display-title">Fundamentos de IPO</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-tight max-w-[210px] mb-3 line-clamp-3" id="orbit-display-desc">Orígenes de la disciplina, el modelo conceptual de Norman, principios de usabilidad según ISO 9241-11 y rentabilidad UX.</p><a class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-tertiary transition-all shadow-sm flex items-center gap-1.5 active:scale-95" data-path="modulo-1-fundamentos" href="#" id="orbit-display-cta"><span class="">Acceder al Módulo</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div><div class="absolute inset-0 pointer-events-auto" id="orbit-nodes-container"><button aria-label="Módulo 01: Fundamentos" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-lg border-2 border-surface-container-lowest focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 ring-4 ring-primary/20" data-badge="MÓDULO 01 • DISPONIBLE" data-desc="Orígenes de la disciplina, modelo conceptual de Norman, normas ISO 9241-11 y rentabilidad de UX." data-index="0" data-path="modulo-1-fundamentos" data-title="Fundamentos de IPO" style="left: 50%; top: 4%;" type="button"><span class="w-5 h-5 rounded-full bg-surface-container-lowest text-primary text-[10px] font-bold flex items-center justify-center shrink-0">01</span><span class="font-medium whitespace-nowrap">Fundamentos</span></button><button aria-label="Módulo 02: Factor Humano" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 02 • DISPONIBLE" data-desc="Sistemas sensoriales visuales y auditivos, psicología de la Gestalt, memoria operativa y leyes de Fitts/Hick." data-index="1" data-path="modulo-2-factor-humano" data-title="El Factor Humano" style="left: 77%; top: 12.8%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">02</span><span class="font-medium whitespace-nowrap">Factor Humano</span></button><button aria-label="Módulo 03: Diseño Centrado en el Usuario" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 03 • DISPONIBLE" data-desc="Filosofía del DCU, norma ISO 9241-210, participación activa, equipos multidisciplinares y modelo MPIu+a." data-index="2" data-path="modulo-3-dcu" data-title="Diseño Centrado en el Usuario (DCU)" style="left: 93.8%; top: 35.8%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">03</span><span class="font-medium whitespace-nowrap">DCU &amp; MPIu+a</span></button><button aria-label="Módulo 04: Análisis de Requisitos" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 04 • DISPONIBLE" data-desc="Técnicas etnográficas, modelado de arquetipos Persona, escenarios de uso crítico y análisis de tareas (HTA)." data-index="3" data-path="modulo-4-analisis-requisitos" data-title="Análisis de Requisitos" style="left: 93.8%; top: 64.2%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">04</span><span class="font-medium whitespace-nowrap">Requisitos</span></button><button aria-label="Módulo 05: Prototipado" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 05 • DISPONIBLE" data-desc="Prototipos de baja fidelidad en papel, wireframes funcionales, flujos de pantalla interactivos y maquetas." data-index="4" data-path="modulo-5-prototipado" data-title="Prototipado" style="left: 77%; top: 87.2%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">05</span><span class="font-medium whitespace-nowrap">Prototipado</span></button><button aria-label="Módulo 06: Evaluación" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 06 • DISPONIBLE" data-desc="Evaluación Heurística de Nielsen, test con usuarios de laboratorio, métricas cuantitativas SUS / SEQ y Cognitive Walkthrough." data-index="5" data-path="modulo-6-evaluacion-usabilidad" data-title="Evaluación de Usabilidad y UX" style="left: 50%; top: 96%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">06</span><span class="font-medium whitespace-nowrap">Evaluación UX</span></button><button aria-label="Módulo 07: Accesibilidad Digital" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 07 • DISPONIBLE" data-desc="Principios POUR, conformidad AA/AAA de WCAG 2.2, tecnología asistencial, árbol de accesibilidad y foco asistido." data-index="6" data-path="modulo-7-accesibilidad" data-title="Accesibilidad Digital Universal" style="left: 23%; top: 87.2%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">07</span><span class="font-medium whitespace-nowrap">Accesibilidad</span></button><button aria-label="Módulo 08.1: Estilos de Interacción" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 08.1 • DISPONIBLE" data-desc="Línea de comandos, interfaces gráficas WIMP, manipulación directa, voz (VUI), realidad virtual y computación ubicua." data-index="7" data-path="modulo-8-1-estilos-paradigmas" data-title="Estilos y Paradigmas de Interacción" style="left: 6.2%; top: 64.2%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">8.1</span><span class="font-medium whitespace-nowrap">Paradigmas</span></button><button aria-label="Módulo 08.2: Diseño de Interfaces" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 08.2 • DISPONIBLE" data-desc="Fundamentos UI, jerarquía visual, espaciado, teoría del color, tipografía, microcopy interactivo y diseño responsive." data-index="8" data-path="modulo-8-2-diseno-interfaces" data-title="Diseño de Interfaces de Usuario" style="left: 6.2%; top: 35.8%;" type="button"><span class="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0">8.2</span><span class="font-medium whitespace-nowrap">Diseño UI</span></button><button aria-label="Módulo 10: Integración &amp; Biblioteca de Recursos" class="orbit-node-btn group absolute -translate-x-1/2 -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-bold font-code-inline text-[12px] flex items-center gap-1.5 shadow-md border-2 border-surface-container-high focus:outline-none focus:ring-4 focus:ring-primary/40 transition-all hover:scale-105 active:scale-95 z-30 hover:border-primary" data-badge="MÓDULO 10 • REPOSITORIO" data-desc="Corpus canónico de artículos históricos, ensayos de investigación, glosario disciplinar y repositorio documental completo." data-index="9" data-path="recursos" data-title="Módulo Integrador &amp; Recursos Canónicos" style="left: 23%; top: 12.8%;" type="button"><span class="w-5 h-5 rounded-full bg-tertiary text-on-tertiary text-[10px] font-bold flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[13px]">auto_stories</span></span><span class="font-medium whitespace-nowrap">Biblioteca</span></button></div></div><div class="mt-4 flex items-center gap-4 text-[12px] font-medium text-outline"><span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-primary inline-block"></span> Módulo seleccionado</span><span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-surface-container-lowest border border-outline inline-block"></span> Nodos curriculares en órbita</span></div></div></div></section><script class="" id="script-orbit-curriculum">(function(){const nodes=document.querySelectorAll('.orbit-node-btn');const centralDisplay=document.getElementById('orbit-central-display');const badge=document.getElementById('orbit-display-badge');const title=document.getElementById('orbit-display-title');const desc=document.getElementById('orbit-display-desc');const cta=document.getElementById('orbit-display-cta');if(!nodes.length||!centralDisplay)return;function selectNode(btn){nodes.forEach(n=>{n.classList.remove('bg-primary','text-on-primary','ring-4','ring-primary/20','shadow-lg');n.classList.add('bg-surface-container-lowest','text-on-surface','shadow-md');});btn.classList.remove('bg-surface-container-lowest','text-on-surface','shadow-md');btn.classList.add('bg-primary','text-on-primary','ring-4','ring-primary/20','shadow-lg');if(badge)badge.textContent=btn.getAttribute('data-badge')||'MÓDULO SELECCIONADO';if(title)title.textContent=btn.getAttribute('data-title')||'';if(desc)desc.textContent=btn.getAttribute('data-desc')||'';if(cta){cta.setAttribute('data-path',btn.getAttribute('data-path')||'#');cta.href='#';}centralDisplay.classList.add('scale-105');setTimeout(()=>centralDisplay.classList.remove('scale-105'),150);}nodes.forEach(btn=>{btn.addEventListener('click',()=>selectNode(btn));btn.addEventListener('mouseenter',()=>selectNode(btn));});})();</script>
+<!-- SECTION: APRENDE HACIENDO (MICRO-LABORATORIO INTERACTIVO) -->
+<!-- SECTION: MODELO DE PROCESO MPIu+a -->
+<!-- QUICK SEARCH OVERLAY / MODAL (ACTIVABLE CON ⌘K O BOTÓN) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 hidden items-start justify-center pt-24 px-4" id="cmd-modal-backdrop">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-surface-container-highest">
+<!-- Search Input Header -->
+<div class="p-4 flex items-center gap-3 bg-surface-container-low">
+<span class="material-symbols-outlined text-outline text-[22px]">search</span>
+<input autocomplete="off" class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline" id="cmd-search-input" placeholder="Buscar conceptos (ej. Gestalt, Fitts, Nielsen, WCAG, MPIu+a)..." type="text"/>
+<kbd class="px-2 py-0.5 text-[11px] font-code-inline bg-surface-container-highest text-outline rounded">ESC</kbd>
+</div>
+<!-- Search Results List -->
+<div class="max-h-96 overflow-y-auto p-2 flex flex-col gap-1" id="cmd-results-list">
+<!-- Results injected dynamically via JS -->
+</div>
+<div class="p-3 bg-surface-container-low flex items-center justify-between text-[11px] font-code-inline text-outline">
+<span class="">Navega con teclas arriba/abajo y Enter</span>
+<span class="">Índice Curricular IPO v4.2</span>
+</div>
+</div>
+</div>
+<!-- FLOATING QUICK ACCESS BADGE -->
+<div class="fixed bottom-6 right-6 z-40">
+<button aria-label="Abrir buscador rápido" class="flex items-center gap-2 px-4 py-3 rounded-full bg-primary text-on-primary shadow-xl hover:bg-tertiary transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-primary/30" id="floating-quick-search-btn">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+<span class="font-label-md text-label-md font-medium hidden sm:inline">Índice Temático</span>
+<kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-code-inline bg-white/20 rounded">⌘K</kbd>
+</button>
+</div>
+</div>
+<script>
+  // ==========================================
+  // 1. DATA REPOSITORY & SEARCH INDEX
+  // ==========================================
+  const IPO_SEARCH_INDEX = [
+    { title: "Ley de Fitts", cat: "Ergonomía / Factor Humano", desc: "El tiempo necesario para alcanzar un objetivo depende de la distancia y el ancho del blanco.", path: "explorar-conceptos" },
+    { title: "Principios de la Gestalt", cat: "Percepción Visual", desc: "Leyes de proximidad, similitud, continuidad, cierre y figura-fondo en pantallas.", path: "modulo-2-factor-humano" },
+    { title: "10 Heurísticas de Jakob Nielsen", cat: "Evaluación UX", desc: "Reglas de oro para inspección de interfaces sin usuarios directos.", path: "modulo-8-evaluacion-usabilidad" },
+    { title: "Pautas WCAG 2.2", cat: "Accesibilidad Web", desc: "Requisitos POUR: Perceptible, Operable, Comprensible y Robusto.", path: "modulo-9-accesibilidad-universal" },
+    { title: "Modelo MPIu+a", cat: "Metodología", desc: "Ingeniería de la Usabilidad y de la Accesibilidad de Toni Granollers.", path: "mpiu-a" },
+    { title: "Affordance y Signifiers", cat: "Norman Design", desc: "Propiedades percibidas que indican cómo un elemento debe ser operado.", path: "modulo-1-introduccion" },
+    { title: "Ley de Hick-Hyman", cat: "Cognición", desc: "El tiempo de decisión se incrementa logarítmicamente con el número de opciones.", path: "explorar-conceptos" },
+    { title: "Prototipado en Papel", cat: "Ideación", desc: "Validación de flujos de baja fidelidad en etapas preliminares del diseño.", path: "modulo-7-prototipado-diseno" }
+  ];
+
+  // ==========================================
+  // 2. HERO INTERACTIVE LAB (Action-Feedback Loop)
+  // ==========================================
+  const heroToggle = document.getElementById('hero-toggle-switch');
+  const heroSlider = document.getElementById('hero-slider');
+  const toggleReadout = document.getElementById('toggle-readout');
+  const sliderReadout = document.getElementById('slider-readout');
+  const canvasStatus = document.getElementById('canvas-status-tag');
+  const canvasTarget = document.getElementById('hero-canvas-target');
+  const targetDesc = document.getElementById('target-desc');
+  const targetIconWrap = document.getElementById('target-icon-wrap');
+
+  function triggerFeedbackPulse(stepId) {
+    const el = document.getElementById(stepId);
+    if (!el) return;
+    el.classList.add('bg-primary', 'text-on-primary');
+    el.classList.remove('bg-surface-container-lowest');
+    setTimeout(() => {
+      el.classList.remove('bg-primary', 'text-on-primary');
+      el.classList.add('bg-surface-container-lowest');
+    }, 450);
+  }
+
+  if (heroToggle) {
+    heroToggle.addEventListener('change', (e) => {
+      triggerFeedbackPulse('step-accion');
+      setTimeout(() => triggerFeedbackPulse('step-feedback'), 120);
+
+      if (e.target.checked) {
+        toggleReadout.innerHTML = 'Estado: <strong class="text-primary">Activo</strong> (Señal procesada)';
+        canvasStatus.textContent = 'Feedback recibido con éxito';
+        canvasStatus.className = 'px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-primary text-on-primary';
+        canvasTarget.classList.add('bg-primary-fixed');
+        targetDesc.textContent = 'Estímulo táctil procesado: la interfaz respondió en < 20ms.';
+        targetIconWrap.style.transform = 'scale(1.2) rotate(15deg)';
+      } else {
+        toggleReadout.innerHTML = 'Estado: <span class="font-semibold text-outline">Inactivo</span> (Haz clic para enviar señal)';
+        canvasStatus.textContent = 'En reposo';
+        canvasStatus.className = 'px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-surface-container text-on-surface-variant';
+        canvasTarget.classList.remove('bg-primary-fixed');
+        targetDesc.textContent = 'Bucle cerrado: El usuario anticipa la respuesta y el sistema la valida inmediatamente.';
+        targetIconWrap.style.transform = 'scale(1) rotate(0deg)';
+      }
+    });
+  }
+
+  if (heroSlider) {
+    heroSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      sliderReadout.textContent = val + '%';
+      triggerFeedbackPulse('step-cognicion');
+      canvasTarget.style.opacity = (0.4 + (val / 100) * 0.6).toFixed(2);
+    });
+  }
+
+  // ==========================================
+  // 3. PILLARS EXPANDABLE DETAILS
+  // ==========================================
+  document.querySelectorAll('.btn-detail-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const target = document.getElementById(targetId);
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (target) {
+        const isHidden = target.classList.contains('hidden');
+        target.classList.toggle('hidden');
+        if (icon) {
+          icon.style.transform = isHidden ? 'rotate(45deg)' : 'rotate(0deg)';
+        }
+      }
+    });
+  });
+
+  // ==========================================
+  // 4. PROGRESS PERSISTENCE (LocalStorage)
+  // ==========================================
+  function loadModulesProgress() {
+    const raw = localStorage.getItem('ipo_modules_completed');
+    let completed = raw ? JSON.parse(raw) : [];
+
+    const cards = document.querySelectorAll('.module-card');
+    cards.forEach(card => {
+      const modId = parseInt(card.getAttribute('data-module'), 10);
+      const isDone = completed.includes(modId);
+      const bar = card.querySelector('.mod-progress-bar');
+      const text = card.querySelector('.mod-progress-text');
+      const btn = card.querySelector('.mod-action-btn');
+
+      if (isDone) {
+        if (bar) bar.style.width = '100%';
+        if (text) text.textContent = '100%';
+        if (btn) {
+          btn.innerHTML = '<span>Completado</span><span class="material-symbols-outlined text-[16px]">task_alt</span>';
+          btn.classList.add('bg-primary', 'text-on-primary');
+        }
+      } else {
+        if (bar) bar.style.width = '0%';
+        if (text) text.textContent = '0%';
+        if (btn) {
+          btn.innerHTML = '<span>Marcar como completado</span><span class="material-symbols-outlined text-[16px]">check_circle</span>';
+          btn.classList.remove('bg-primary', 'text-on-primary');
+        }
+      }
+    });
+
+    const percent = Math.round((completed.length / 9) * 100);
+    localStorage.setItem('ipo_user_progress', percent);
+    const globalEl = document.getElementById('global-progress-value');
+    if (globalEl) globalEl.textContent = percent + '%';
+  }
+
+  document.querySelectorAll('.mod-action-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modId = parseInt(btn.getAttribute('data-mod-id'), 10);
+      let completed = JSON.parse(localStorage.getItem('ipo_modules_completed') || '[]');
+
+      if (completed.includes(modId)) {
+        completed = completed.filter(id => id !== modId);
+      } else {
+        completed.push(modId);
+      }
+      localStorage.setItem('ipo_modules_completed', JSON.stringify(completed));
+      loadModulesProgress();
+    });
+  });
+
+  const resetBtn = document.getElementById('btn-reset-progress');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      localStorage.removeItem('ipo_modules_completed');
+      localStorage.setItem('ipo_user_progress', '0');
+      loadModulesProgress();
+    });
+  }
+
+  loadModulesProgress();
+
+  // ==========================================
+  // 5. APRENDE HACIENDO (TABS & DEMOS)
+  // ==========================================
+  const tabButtons = document.querySelectorAll('.lab-tab-btn');
+  const tabPanels = document.querySelectorAll('.lab-panel');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => {
+        b.classList.remove('active', 'bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        b.classList.add('text-on-surface-variant');
+      });
+      tabPanels.forEach(p => p.classList.add('hidden'));
+
+      btn.classList.add('active', 'bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btn.classList.remove('text-on-surface-variant');
+
+      const targetId = btn.getAttribute('data-tab');
+      const panel = document.getElementById(targetId);
+      if (panel) panel.classList.remove('hidden');
+    });
+  });
+
+  // Usabilidad tab toggle
+  const btnFlowBad = document.getElementById('btn-flow-bad');
+  const btnFlowGood = document.getElementById('btn-flow-good');
+  const flowResult = document.getElementById('flow-result-text');
+  const flowPreview = document.getElementById('flow-preview-area');
+
+  if (btnFlowBad && btnFlowGood) {
+    btnFlowBad.addEventListener('click', () => {
+      flowResult.innerHTML = '<span class="text-error font-semibold">Flujo Tradicional:</span> Formulario denso de 14 campos desarticulados, sin feedback de progreso. Tasa de abandono: 68%.';
+      flowPreview.innerHTML = `
+        <div class="p-4 bg-error-container text-on-error-container rounded-xl flex items-center justify-between">
+          <span class="font-body-sm font-semibold">Error: Código postal requerido antes de selección de provincia.</span>
+          <span class="material-symbols-outlined">warning</span>
+        </div>
+        <div class="grid grid-cols-1 gap-2 opacity-60">
+          <input disabled placeholder="DNI / NIE / Pasaporte..." class="p-2 bg-surface-container rounded border-0 text-body-sm">
+          <input disabled placeholder="Dirección de facturación (Línea 2)..." class="p-2 bg-surface-container rounded border-0 text-body-sm">
+          <input disabled placeholder="Teléfono fijo alternativo..." class="p-2 bg-surface-container rounded border-0 text-body-sm">
+        </div>
+        <button disabled class="w-full py-2 bg-surface-container-highest text-outline rounded-lg text-body-sm font-medium">Revisar términos extensos (Paso 1 de 5)</button>
+      `;
+    });
+
+    btnFlowGood.addEventListener('click', () => {
+      flowResult.innerHTML = 'Interfaz actual: Modelo simplificado en 1 solo paso con validación en línea. Tasa de éxito: 94%.';
+      flowPreview.innerHTML = `
+        <div class="flex items-center justify-between pb-3">
+          <span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Resumen de Compra Express</span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-code-inline bg-primary-fixed text-primary font-bold">1-Click IPO</span>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-surface-container-low rounded-xl">
+            <label class="font-label-sm text-label-sm text-outline block mb-1">Nombre completo</label>
+            <div class="font-body-sm text-body-sm text-on-surface font-medium">Clara Valero</div>
+          </div>
+          <div class="p-3 bg-surface-container-low rounded-xl">
+            <label class="font-label-sm text-label-sm text-outline block mb-1">Envío predeterminado</label>
+            <div class="font-body-sm text-body-sm text-on-surface font-medium">Campus UdL (Gratis)</div>
+          </div>
+        </div>
+        <div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+          <div>
+            <span class="font-label-sm text-label-sm text-outline block">Método de pago seguro</span>
+            <span class="font-body-sm text-body-sm text-on-surface font-medium">Apple Pay / Tarjeta **** 8241</span>
+          </div>
+          <span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+        </div>
+        <button class="w-full py-3 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-semibold hover:bg-tertiary transition-all">
+          Confirmar y Finalizar (€0.00 Demo)
+        </button>
+      `;
+    });
+  }
+
+  // Accesibilidad Contrast tester
+  const contrastBox = document.getElementById('contrast-sample-box');
+  const contrastBadge = document.getElementById('contrast-badge');
+  const passBtn = document.getElementById('contrast-pass-btn');
+  const failBtn = document.getElementById('contrast-fail-btn');
+
+  if (passBtn && failBtn && contrastBox) {
+    passBtn.addEventListener('click', () => {
+      contrastBox.className = 'p-8 rounded-xl bg-primary text-on-primary flex flex-col gap-3 transition-colors duration-300';
+      contrastBadge.className = 'px-2.5 py-1 rounded bg-white/20 text-white font-code-inline text-code-inline w-fit';
+      contrastBadge.textContent = 'Ratio Actual: 7.42:1 (Supera WCAG AAA)';
+    });
+
+    failBtn.addEventListener('click', () => {
+      contrastBox.className = 'p-8 rounded-xl bg-[#E2DFE1] text-[#9E9BA0] flex flex-col gap-3 transition-colors duration-300';
+      contrastBadge.className = 'px-2.5 py-1 rounded bg-error-container text-on-error-container font-code-inline text-code-inline w-fit';
+      contrastBadge.textContent = 'Ratio Actual: 1.84:1 (FALLO GRAVE WCAG)';
+    });
+  }
+
+  // UI Design Space Slider
+  const uiSlider = document.getElementById('slider-ui-padding');
+  const uiCard = document.getElementById('ui-sample-card');
+  const padLabel = document.getElementById('padding-val-label');
+
+  if (uiSlider && uiCard && padLabel) {
+    uiSlider.addEventListener('input', (e) => {
+      const v = e.target.value;
+      padLabel.textContent = v + 'px';
+      uiCard.style.padding = v + 'px';
+    });
+  }
+
+  // Nielsen checklist feedback
+  const nChecks = document.querySelectorAll('.nielsen-check');
+  const nFeedback = document.getElementById('heuristic-feedback-box');
+
+  const explanations = {
+    h1: "<strong>Heurística #1 (Visibilidad):</strong> Sin indicadores de estado (ej: spinners o barras de progreso), los usuarios creen que el sistema se ha congelado y repiten acciones provocando errores de duplicidad.",
+    h2: "<strong>Heurística #3 (Control):</strong> Los usuarios suelen escoger funciones por error. Disponer de 'Deshacer' reduce drásticamente el estrés de navegación.",
+    h3: "<strong>Heurística #5 (Prevención):</strong> Evitar el error (mediante restricciones de formato, selectores de fecha en lugar de campos de texto libre) es infinitamente superior a redactar mensajes explicativos."
+  };
+
+  nChecks.forEach(ch => {
+    ch.addEventListener('change', () => {
+      const activeIds = Array.from(nChecks).filter(c => c.checked).map(c => c.getAttribute('data-id'));
+      if (activeIds.length === 0) {
+        nFeedback.innerHTML = 'Selecciona una o más heurísticas a la derecha para ver la justificación heurística correspondiente.';
+      } else {
+        nFeedback.innerHTML = activeIds.map(id => `<p class="mb-2">${explanations[id]}</p>`).join('');
+      }
+    });
+  });
+
+  // ==========================================
+  // 6. MPIU+A INTERACTIVE DIAGRAM
+  // ==========================================
+  const mpiuData = {
+    "fase-1": {
+      step: "Fase 1 del Modelo",
+      title: "Análisis de Necesidades y Contexto",
+      desc: "Recopilación rigurosa de las metas reales del usuario mediante entrevistas semiestructuradas, análisis contextual in situ y creación de modelos Persona y Task Analysis.",
+      user: "Sujeto principal de observación. Se examinan sus frustraciones reales, sus capacidades físicas y el contexto ambiental donde operará la solución.",
+      artifacts: "Fichas de Arquetipos Persona, Árboles jerárquicos de tareas (HTA) y matriz de requisitos de usabilidad y accesibilidad."
+    },
+    "fase-2": {
+      step: "Fase 2 del Modelo",
+      title: "Diseño Conceptual y Prototipado",
+      desc: "Traducción de requerimientos a metáforas interactivas, modelos conceptuales y wireframes progresivos (baja fidelidad en papel hasta prototipos funcionales de alta fidelidad).",
+      user: "Co-diseñador activo en sesiones de card-sorting y validación de wireframes iniciales.",
+      artifacts: "Mapas de sitio, diagramas de flujo de tareas, wireframes interactivos y prototipos clickables validados."
+    },
+    "fase-3": {
+      step: "Fase 3 del Modelo",
+      title: "Desarrollo e Implementación",
+      desc: "Construcción técnica del software asegurando arquitectura accesible (ARIA, HTML semántico, soporte para tecnologías de asistencia) y rendimiento fluido a 60 FPS.",
+      user: "Auditor temprano mediante pruebas funcionales de teclado y tecnologías de apoyo.",
+      artifacts: "Código fuente accesible, biblioteca de componentes desacoplada y tests unitarios de accesibilidad."
+    },
+    "fase-4": {
+      step: "Fase 4 del Modelo",
+      title: "Evaluación de Usabilidad y Accesibilidad",
+      desc: "Inspección formal transversal (Heurística de Nielsen/Tognazzini) y pruebas empíricas con usuarios representativos midiendo eficacia, eficiencia y satisfacción.",
+      user: "Evaluador final realizando tareas en laboratorio o en remoto mediante protocolos de pensamiento en voz alta (Think Aloud).",
+      artifacts: "Informe de Usabilidad con severidad de problemas (0-4), puntuación System Usability Scale (SUS) y matriz de barreras WCAG resueltas."
+    }
+  };
+
+  const mpiuNodes = document.querySelectorAll('.mpiu-node');
+  const mpiuStepNumber = document.getElementById('mpiu-step-number');
+  const mpiuStepTitle = document.getElementById('mpiu-step-title');
+  const mpiuStepDesc = document.getElementById('mpiu-step-desc');
+  const mpiuStepUserRole = document.getElementById('mpiu-step-user-role');
+  const mpiuStepArtifacts = document.getElementById('mpiu-step-artifacts');
+
+  mpiuNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const phaseKey = node.getAttribute('data-phase');
+      const data = mpiuData[phaseKey];
+      if (!data) return;
+
+      mpiuNodes.forEach(n => {
+        const c = n.querySelector('circle');
+        if (c) c.setAttribute('fill', '#EEEDF3');
+      });
+
+      const currentCircle = node.querySelector('circle');
+      if (currentCircle) currentCircle.setAttribute('fill', '#D7E2FF');
+
+      if (mpiuStepNumber) mpiuStepNumber.textContent = data.step;
+      if (mpiuStepTitle) mpiuStepTitle.textContent = data.title;
+      if (mpiuStepDesc) mpiuStepDesc.textContent = data.desc;
+      if (mpiuStepUserRole) mpiuStepUserRole.textContent = data.user;
+      if (mpiuStepArtifacts) mpiuStepArtifacts.textContent = data.artifacts;
+    });
+  });
+
+  // ==========================================
+  // 7. CMD+K MODAL & SEARCH FUNCTIONALITY
+  // ==========================================
+  const cmdModal = document.getElementById('cmd-modal-backdrop');
+  const cmdInput = document.getElementById('cmd-search-input');
+  const cmdResults = document.getElementById('cmd-results-list');
+  const cmdOpenBtn = document.getElementById('cmd-search-btn');
+  const floatingBtn = document.getElementById('floating-quick-search-btn');
+
+  function openSearchModal() {
+    if (!cmdModal) return;
+    cmdModal.classList.remove('hidden');
+    cmdModal.classList.add('flex');
+    if (cmdInput) {
+      cmdInput.value = '';
+      cmdInput.focus();
+      renderSearchResults('');
+    }
+  }
+
+  function closeSearchModal() {
+    if (!cmdModal) return;
+    cmdModal.classList.add('hidden');
+    cmdModal.classList.remove('flex');
+  }
+
+  function renderSearchResults(query) {
+    if (!cmdResults) return;
+    const clean = query.trim().toLowerCase();
+    const filtered = IPO_SEARCH_INDEX.filter(item =>
+      item.title.toLowerCase().includes(clean) ||
+      item.cat.toLowerCase().includes(clean) ||
+      item.desc.toLowerCase().includes(clean)
+    );
+
+    if (filtered.length === 0) {
+      cmdResults.innerHTML = `
+        <div class="p-6 text-center text-outline font-body-sm text-body-sm">
+          No se encontraron conceptos para "${query}". Prueba con "Fitts", "Nielsen" o "WCAG".
+        </div>
+      `;
+      return;
+    }
+
+    cmdResults.innerHTML = filtered.map(item => `
+      <a href="#" data-path="${item.path}" class="p-3 rounded-xl hover:bg-surface-container flex flex-col gap-0.5 transition-colors group">
+        <div class="flex items-center justify-between">
+          <span class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">${item.title}</span>
+          <span class="font-label-sm text-label-sm text-outline">${item.cat}</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">${item.desc}</p>
+      </a>
+    `).join('');
+  }
+
+  if (cmdOpenBtn) cmdOpenBtn.addEventListener('click', openSearchModal);
+  if (floatingBtn) floatingBtn.addEventListener('click', openSearchModal);
+
+  if (cmdModal) {
+    cmdModal.addEventListener('click', (e) => {
+      if (e.target === cmdModal) closeSearchModal();
+    });
+  }
+
+  if (cmdInput) {
+    cmdInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (cmdModal.classList.contains('hidden')) {
+        openSearchModal();
+      } else {
+        closeSearchModal();
+      }
+    }
+    if (e.key === 'Escape' && !cmdModal.classList.contains('hidden')) {
+      closeSearchModal();
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container-highest py-space-xl text-on-surface-variant"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-xl"><div class="md:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Curso IPO</span><span class="px-2 py-0.5 text-[11px] font-label-sm rounded bg-surface-container text-on-surface-variant">v4.2 Open Course</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">Plataforma didáctica universitaria dedicada a la Interacción Persona-Ordenador, el Diseño Centrado en las Personas y la Accesibilidad Universal. Basada en el corpus académico y modelo de proceso MPIu+a.</p><p class="font-label-sm text-label-sm text-outline mt-space-xs">Autoría original y dirección académica: <strong class="text-on-surface font-medium">Dr. Toni Granollers i Saltiveri</strong> (GRIHO, Universitat de Lleida - UdL).</p></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface mb-space-xs">Marco Académico</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="mpiu-a" href="#">Metodología MPIu+a</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="modulo-8-evaluacion-usabilidad" href="#">Evaluación Heurística</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explorar-conceptos" href="#">Leyes de Fitts y Hick</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="recursos" href="#">Repositorio de Artículos y Ensayos</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface mb-space-xs">Garantías y Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" data-path="declaracion-accesibilidad" href="#"><span class="material-symbols-outlined text-[16px]">accessibility_new</span> Accesibilidad WCAG 2.2 AA</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="mapa-del-sitio" href="#">Mapa del Sitio Pedagógico</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacidad-terminos" href="#">Privacidad y Términos Académicos</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Licencia CC BY-NC 4.0 Internacional</a></div></div><div class="pt-space-md border-t border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-outline"><p class="">© 2025 Curso IPO • Universitat de Lleida. Contenidos bajo Licencia Creative Commons Atribución-NoComercial 4.0 Internacional.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Conforme WCAG 2.2 Nivel AA</span></div></div></div></footer><script>(function(){const stored=localStorage.getItem("ipo_user_progress");const el=document.getElementById("global-progress-value");if(el&&stored){el.textContent=stored+"%";}const themeToggle=document.getElementById("theme-toggle-btn");if(themeToggle){themeToggle.addEventListener("click",function(){document.documentElement.classList.toggle("dark");const isDark=document.documentElement.classList.contains("dark");localStorage.setItem("ipo_theme",isDark?"dark":"light");});if(localStorage.getItem("ipo_theme")==="dark"){document.documentElement.classList.add("dark");}}})();</script>
+</body></html>

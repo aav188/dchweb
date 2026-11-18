@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Universitat de Lleida</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#005cbb","error":"#ba1a1a","primary-container":"#0071e3","secondary-fixed":"#e4e2e4","surface-bright":"#faf8fe","inverse-primary":"#abc7ff","background":"#faf8fe","on-background":"#1a1b1f","on-primary":"#ffffff","inverse-surface":"#2f3034","tertiary-fixed":"#d7e3ff","on-primary-fixed":"#001b3f","primary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","tertiary":"#0059b4","surface-container-lowest":"#ffffff","secondary-container":"#e2dfe1","secondary-fixed-dim":"#c8c6c8","surface":"#faf8fe","on-primary-fixed-variant":"#00458f","on-secondary":"#ffffff","on-primary-container":"#fcfbff","primary":"#0059b5","surface-container-highest":"#e3e2e7","on-tertiary-fixed-variant":"#00458e","surface-container":"#eeedf3","outline":"#717785","on-surface":"#1a1b1f","outline-variant":"#c1c6d6","surface-container-high":"#e9e7ed","error-container":"#ffdad6","on-tertiary-fixed":"#001b3f","surface-container-low":"#f4f3f8","on-tertiary-container":"#fcfaff","surface-dim":"#dad9df","on-secondary-container":"#636264","secondary":"#5f5e60","on-secondary-fixed":"#1b1b1d","tertiary-container":"#0071e2","on-secondary-fixed-variant":"#474649","inverse-on-surface":"#f1f0f5","on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#abc7ff","on-tertiary":"#ffffff","on-surface-variant":"#414753","surface-variant":"#e3e2e7"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","margin-sm":"1.25rem","gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","margin":"3rem","space-sm":"0.5rem","space-lg":"1.5rem","margin-md":"2rem"},fontFamily:{"headline-lg":["Inter"],"body-sm":["Inter"],"code-inline":["JetBrains Mono"],"headline-md":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="inicio" href="#"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-sm text-on-primary font-headline-sm text-headline-sm font-bold tracking-tight">IPO</div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Curso IPO</span></a><nav class="hidden lg:flex items-center gap-space-md font-label-md text-label-md" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="inicio" href="#">Inicio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="curso-ipo" href="#">Curso IPO</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="mpiu-a" href="#">MPIu+a</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="recursos" href="#">Recursos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all text-left group" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-body-sm text-body-sm text-on-surface-variant">Buscar conceptos...</span><kbd class="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-code-inline text-code-inline text-[11px] shadow-sm">⌘K</kbd></button><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-12 bg-surface-container-low/90 backdrop-blur-md"><div class="h-full max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md overflow-x-auto"><div class="flex items-center gap-space-sm shrink-0"><span class="material-symbols-outlined text-primary text-[18px]">folder_open</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden md:inline">Módulo 3.2: Teoría del DCU</span><span class="text-outline-variant hidden md:inline">/</span></div><nav class="flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm" data-active-classes="bg-primary text-on-primary shadow-sm"><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="normativa-principios-dcu-iso-13407" href="#">3.2.1 Normativa y principios DCU (ISO 13407)</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="diseno-contextual-y-participacion" href="#">3.2.2 Diseño contextual y participación</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="#">3.2.3 Enfoques: DCUsuario vs DCUso vs DCTec</a></nav></div></div></header><main class="w-full pt-26 bg-surface min-h-[calc(100vh-260px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-gutter-sm lg:px-gutter py-space-md space-y-space-md">
+<!-- Subbarra superior de lecciones DCU 3.2 -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-xs flex items-center justify-between gap-space-sm overflow-x-auto shadow-sm">
+<div class="flex items-center gap-space-xs shrink-0">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="normativa-principios-dcu-iso-13407" href="#">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>3.2.1 Normativa y principios DCU</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" data-path="diseno-contextual-y-participacion" href="#">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>3.2.2 Diseño contextual y participación</span>
+</a>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-semibold">3.2.3 Enfoques: DCUsuario vs DCUso vs DCTec</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-2 pr-2 shrink-0">
+<span class="font-code-inline text-code-inline text-on-surface-variant text-[11px] bg-surface-container-highest px-2 py-0.5 rounded">ISO 9241-210 / MPIu+a</span>
+</div>
+</div>
+<!-- Tarjeta Hero interactiva canónica Usabilidad 03 -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-md shrink-0">
+<span class="material-symbols-outlined text-[30px]">sports_esports</span>
+</div>
+<div class="space-y-1">
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              JUEGO 3 · TODO EN UNO · Módulo 3 · 3.2.3 DCU
+            </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+              Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre Larry Constantine, Lucy Lockwood (Usage-Centered Design), modelos abstractos y la comparativa con DCTec.
+            </p>
+</div>
+</div>
+<div class="flex lg:flex-col items-start lg:items-end justify-between bg-surface-container-low px-space-md py-3 rounded-xl shrink-0 gap-1 shadow-inner">
+<div class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">checklist_rtl</span>
+<span>• 25 preguntas • 14 tarjetas • 7 textos</span>
+</div>
+<div class="font-code-inline text-code-inline text-on-surface-variant text-[12px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            Contenido temático completo
+          </div>
+</div>
+</div>
+</section>
+<!-- Controles de suite interactiva con pestañas y atajos -->
+<div class="w-full flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm bg-surface-container-low p-2 rounded-xl">
+<div class="flex items-center gap-2 overflow-x-auto">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all" id="tab-quiz" onclick="switchSuiteTab('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (25)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md font-medium transition-all" id="tab-flashcards" onclick="switchSuiteTab('flashcards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (14)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md font-medium transition-all" id="tab-fillgaps" onclick="switchSuiteTab('fillgaps')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (7)</span>
+</button>
+</div>
+<div class="hidden xl:flex items-center gap-2 text-on-surface-variant font-code-inline text-code-inline text-[12px] px-3 py-1.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span>Atajos activos: <kbd class="px-1 py-0.5 bg-surface-container rounded font-bold">[1-4]</kbd> Test · <kbd class="px-1 py-0.5 bg-surface-container rounded font-bold">[Espacio/Flechas]</kbd> Tarjetas · <kbd class="px-1 py-0.5 bg-surface-container rounded font-bold">[Enter]</kbd> Validar</span>
+</div>
+</div>
+<!-- CONTENEDOR MODO 1: TEST INTERACTIVO -->
+<div class="w-full flex flex-col gap-space-md" id="view-quiz">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<!-- Meta cabecera de progreso -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="quiz-question-counter">Pregunta 1 de 25</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-primary font-medium bg-primary-fixed px-2.5 py-0.5 rounded-full" id="quiz-score-badge">Aciertos acumulados: 0</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-code-inline text-code-inline text-on-surface-variant text-[13px]" id="quiz-percentage">0% completado</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors text-[13px] font-label-md flex items-center gap-1" onclick="restartQuiz()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reiniciar
+            </button>
+</div>
+</div>
+<!-- Barra de progreso -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container transition-all duration-300 rounded-full" id="quiz-progress-bar" style="width: 4%;"></div>
+</div>
+<!-- Pregunta actual -->
+<div class="space-y-space-md pt-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug" id="quiz-question-text">
+            ¿Qué tres enfoques de diseño compara el tema 3.2.3?
+          </h2>
+<!-- Opciones con número accesible -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm" id="quiz-options-container">
+<!-- Opción 1 -->
+<button class="quiz-option-btn group w-full text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-space-sm focus:outline-none" onclick="selectQuizAnswer(0)">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface group-hover:bg-primary-container group-hover:text-on-primary transition-colors flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0 shadow-sm">1</span>
+<span class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">DCUsuario, DCUso y DCTec</span>
+</button>
+<!-- Opción 2 -->
+<button class="quiz-option-btn group w-full text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-space-sm focus:outline-none" onclick="selectQuizAnswer(1)">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface group-hover:bg-primary-container group-hover:text-on-primary transition-colors flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0 shadow-sm">2</span>
+<span class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">Ágil, cascada y espiral</span>
+</button>
+<!-- Opción 3 -->
+<button class="quiz-option-btn group w-full text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-space-sm focus:outline-none" onclick="selectQuizAnswer(2)">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface group-hover:bg-primary-container group-hover:text-on-primary transition-colors flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0 shadow-sm">3</span>
+<span class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">DCU, UX y UI</span>
+</button>
+<!-- Opción 4 -->
+<button class="quiz-option-btn group w-full text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-space-sm focus:outline-none" onclick="selectQuizAnswer(3)">
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface group-hover:bg-primary-container group-hover:text-on-primary transition-colors flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0 shadow-sm">4</span>
+<span class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">MPIu+a, ISO y W3C</span>
+</button>
+</div>
+</div>
+<!-- Feedback pedagógico dinámico -->
+<div class="hidden p-space-md rounded-xl bg-surface-container-low transition-all" id="quiz-feedback-box">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-primary shrink-0" id="quiz-feedback-icon">info</span>
+<div class="space-y-1">
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface" id="quiz-feedback-title"></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="quiz-feedback-desc"></p>
+</div>
+</div>
+</div>
+<!-- Barra inferior de acciones del quiz -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-code-inline text-code-inline text-[12px] text-outline">Pulsa 1, 2, 3 o 4 en tu teclado</span>
+<button class="px-5 py-2.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all flex items-center gap-2 cursor-not-allowed" disabled="" id="quiz-next-btn" onclick="nextQuizQuestion()">
+<span>Siguiente pregunta</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CONTENEDOR MODO 2: FLASHCARDS 3D -->
+<div class="hidden w-full flex flex-col gap-space-md" id="view-flashcards">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<!-- Meta cabecera de flashcards -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="card-counter">Tarjeta 1 de 14</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-primary font-medium bg-tertiary-fixed px-2.5 py-0.5 rounded-full" id="card-category-badge">Conceptos DCUso</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5" id="mastered-counter">
+<span class="material-symbols-outlined text-[18px] text-primary">done_all</span>
+<span>Dominadas: <strong class="text-on-surface" id="mastered-count">0</strong> / 14</span>
+</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors text-[13px] font-label-md flex items-center gap-1" onclick="resetFlashcards()">
+<span class="material-symbols-outlined text-[16px]">refresh</span> Reiniciar
+            </button>
+</div>
+</div>
+<!-- Escenario 3D de la Flashcard -->
+<div class="w-full py-space-sm flex justify-center [perspective:1200px]">
+<div class="w-full max-w-2xl min-h-[300px] cursor-pointer relative transition-transform duration-500 [transform-style:preserve-3d] select-none" id="flashcard-element" onclick="flipFlashcard()">
+<!-- Cara A: Pregunta / Anverso -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-low hover:bg-surface-container transition-colors rounded-2xl p-space-lg flex flex-col justify-between [backface-visibility:hidden] shadow-sm">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest font-code-inline text-code-inline text-[11px] text-on-surface-variant uppercase font-semibold">Anverso · Pregunta</span>
+<span class="material-symbols-outlined text-outline text-[20px]">flip</span>
+</div>
+<div class="my-auto text-center px-4 space-y-3">
+<p class="font-headline-md text-headline-md text-on-surface font-semibold" id="card-front-text">
+                  ¿Quiénes propusieron el diseño centrado en el uso (Usage-Centered Design)?
+                </p>
+<p class="font-body-sm text-body-sm text-outline">Haz clic o pulsa [Espacio] para girar la tarjeta</p>
+</div>
+<div class="flex items-center justify-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Giro 3D interactivo</span>
+</div>
+</div>
+<!-- Cara B: Respuesta / Reverso -->
+<div class="absolute inset-0 w-full h-full bg-primary-container text-on-primary rounded-2xl p-space-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-primary font-code-inline text-code-inline text-[11px] text-on-primary uppercase font-semibold">Reverso · Respuesta</span>
+<span class="material-symbols-outlined text-on-primary text-[20px]">check_circle</span>
+</div>
+<div class="my-auto text-center px-4 space-y-3">
+<p class="font-headline-md text-headline-md text-on-primary font-bold" id="card-back-text">
+                  Larry Constantine y Lucy Lockwood (1999).
+                </p>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90 max-w-lg mx-auto" id="card-back-subtext">
+                  Enfoque orientado a tareas y modelos abstractos en lugar de centrarse únicamente en la psicología subjetiva del usuario.
+                </p>
+</div>
+<div class="flex items-center justify-center gap-1 font-label-sm text-label-sm text-on-primary opacity-80">
+<span>¿Te la sabías? Márcala abajo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Controles de navegación y maestría -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="prevFlashcard()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="nextFlashcard()">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<span class="font-code-inline text-code-inline text-on-surface-variant text-[12px] hidden sm:inline ml-2">Usa flechas izquierda / derecha</span>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" onclick="markCardMastered(false)">
+              Repasar luego
+            </button>
+<button class="flex-1 sm:flex-initial px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-1.5 shadow-sm" onclick="markCardMastered(true)">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>¡La domino!</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CONTENEDOR MODO 3: RELLENAR HUECOS -->
+<div class="hidden w-full flex flex-col gap-space-md" id="view-fillgaps">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-md">
+<!-- Meta cabecera de huecos -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="gap-counter">Texto 1 de 7</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-primary font-medium bg-tertiary-fixed px-2.5 py-0.5 rounded-full">Modelos y Enfoques</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-code-inline text-code-inline text-on-surface-variant text-[13px]" id="gap-score-display">Correctos: 0 / 7</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors text-[13px] font-label-md flex items-center gap-1" onclick="resetFillGaps()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reiniciar
+            </button>
+</div>
+</div>
+<!-- Área de texto con hueco a completar -->
+<div class="p-space-lg bg-surface-container-low rounded-2xl space-y-space-md">
+<div class="font-body-lg text-body-lg text-on-surface leading-loose" id="gap-text-paragraph">
+            El diseño centrado en el uso (DCUso), formulado por Constantine y Lockwood, se enfoca en el <span class="inline-block px-4 py-1 mx-1.5 min-w-[140px] text-center rounded-lg bg-surface-container-lowest text-primary font-bold shadow-sm transition-all" id="gap-slot">______</span> de la herramienta y sus patrones de actividad, más que en las preferencias subjetivas del individuo.
+          </div>
+<!-- Banco de palabras / chips interactivos -->
+<div class="space-y-2 pt-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Selecciona la palabra adecuada:</span>
+<div class="flex flex-wrap gap-2" id="gap-chips-container">
+<!-- Renderizado dinámicamente -->
+</div>
+</div>
+</div>
+<!-- Feedback de validación de hueco -->
+<div class="hidden p-space-md rounded-xl bg-surface-container transition-all" id="gap-feedback">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" id="gap-feedback-icon">check_circle</span>
+<span class="font-body-md text-body-md font-medium text-on-surface" id="gap-feedback-msg"></span>
+</div>
+</div>
+<!-- Botones de huecos -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all flex items-center gap-1" id="gap-prev-btn" onclick="prevGap()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Anterior</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-all" onclick="showGapSolution()">
+              Ver solución
+            </button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-1 shadow-sm" id="gap-next-btn" onclick="nextGap()">
+<span>Siguiente texto</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Barra de navegación curricular inferior canónica -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors order-2 md:order-1" data-path="diseno-contextual-y-participacion" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>← Anterior: 3.2.2 Diseño Contextual y Participación</span>
+</a>
+<div class="flex items-center gap-2 order-1 md:order-2 text-center">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-inline text-code-inline text-[13px] text-on-surface-variant font-medium">Capítulo 03 de 03 · Fin de Teoría del DCU</span>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-all shadow-sm order-3" data-path="mpiu-a" href="#">
+<span>Siguiente: 03 Modelo MPIu+a</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+// ==========================================
+// BANCO DE DATOS: 25 PREGUNTAS (QUIZ)
+// ==========================================
+const quizData = [
+  {
+    question: "¿Qué tres enfoques de diseño compara el tema 3.2.3?",
+    options: ["DCUsuario, DCUso y DCTec", "Ágil, cascada y espiral", "DCU, UX y UI", "MPIu+a, ISO y W3C"],
+    correct: 0,
+    feedback: "El tema 3.2.3 contrasta el Diseño Centrado en el Usuario (DCUsuario), el Diseño Centrado en el Uso (DCUso de Constantine y Lockwood) y el Diseño Centrado en la Tecnología (DCTec)."
+  },
+  {
+    question: "¿Quiénes son los autores principales del Diseño Centrado en el Uso (Usage-Centered Design)?",
+    options: ["Larry Constantine y Lucy Lockwood", "Jakob Nielsen y Don Norman", "Ben Shneiderman y Stu Card", "Alan Cooper y Jesse James Garrett"],
+    correct: 0,
+    feedback: "Larry Constantine y Lucy Lockwood publicaron en 1999 su obra seminal sobre Usage-Centered Design orientada al software orientado a tareas."
+  },
+  {
+    question: "¿En qué se diferencia fundamentalmente el DCUso del DCUsuario clásico?",
+    options: ["Se centra en la estructura y el uso del sistema más que en las opiniones y características del usuario", "Elimina totalmente a los programadores del ciclo", "Solo diseña interfaces de línea de comandos", "Ignora la eficiencia del software"],
+    correct: 0,
+    feedback: "El DCUso prioriza el modelado del uso, tareas y flujo de trabajo mediante modelos abstractos, evitando sesgos subjetivos o peticiones arbitrarias del usuario."
+  },
+  {
+    question: "¿Cuál es el núcleo del Diseño Centrado en la Tecnología (DCTec)?",
+    options: ["Construir sobre las capacidades técnicas y funciones del sistema sin priorizar al usuario", "Optimizar la tipografía para personas daltónicas", "Crear prototipos de papel interactivos", "Seguir fielmente la norma ISO 9241-210"],
+    correct: 0,
+    feedback: "El DCTec está guiado por la viabilidad de la ingeniería, las funciones de la arquitectura interna y la tecnología subyacente, delegando la adaptación al usuario."
+  },
+  {
+    question: "¿Qué tipo de modelos emplea preferentemente el Diseño Centrado en el Uso (DCUso)?",
+    options: ["Modelos abstractos (modelo de roles de usuario, de tareas y de contenido)", "Modelos de cascada secuencial estricta", "Diagramas de flujo físicos de microchips", "Matrices de contabilidad de costes"],
+    correct: 0,
+    feedback: "Constantine y Lockwood proponen tres modelos abstractos clave: modelo de roles de usuario, modelo de tareas esenciales y modelo de contenido."
+  },
+  {
+    question: "¿Qué caracteriza a un 'caso de uso esencial' (Essential Use Case) en DCUso?",
+    options: ["Es abstracto, libre de tecnología e independiente de la implementación UI", "Contiene coordenadas de píxeles y colores CSS", "Describe únicamente clics de ratón", "Es un script de base de datos SQL"],
+    correct: 0,
+    feedback: "Un caso de uso esencial describe la intención del usuario y la responsabilidad del sistema de forma simplificada, sin atarse a elementos concretos de interfaz."
+  },
+  {
+    question: "¿Qué riesgo principal presenta el enfoque centrado exclusivamente en el usuario (DCUsuario extremo)?",
+    options: ["Satisfacer deseos individuales y añadidos puntuales derivando en 'featuritis' y pérdida de cohesión", "Hacer el software demasiado rápido", "No documentar el código", "Usar demasiados estándares ISO"],
+    correct: 0,
+    feedback: "El exceso de foco en gustos personales o peticiones heterogéneas puede provocar dispersión funcional y degradar la arquitectura del producto."
+  },
+  {
+    question: "¿Cuál es el riesgo supremo del Diseño Centrado en la Tecnología (DCTec)?",
+    options: ["Crear sistemas muy potentes técnicamente pero incomprensibles e inoperables para las personas", "Gastar demasiado presupuesto en pruebas de usabilidad", "Tener demasiadas reuniones con usuarios", "Cumplir excesivamente con las heurísticas de Nielsen"],
+    correct: 0,
+    feedback: "El DCTec suele exponer la complejidad interna de la base de datos o el motor al usuario final, provocando altas tasas de abandono y error."
+  },
+  {
+    question: "¿Qué elemento describe el 'Modelo de Contenido' en DCUso?",
+    options: ["Los contenedores abstractos y herramientas necesarias para soportar las tareas esenciales", "El texto publicitario de marketing", "El CSS y los estilos visuales", "La estructura del servidor Linux"],
+    correct: 0,
+    feedback: "El modelo de contenido define las áreas funcionales de interacción (interaction spaces) y los componentes abstractos antes de decidir botones o ventanas."
+  },
+  {
+    question: "¿Cómo se define un 'Rol de Usuario' en DCUso frente a la 'Persona' de Alan Cooper?",
+    options: ["El rol es una relación funcional abstracta con el sistema; la Persona incluye detalles biográficos y psicosociales", "Son exactamente lo mismo sin diferencias", "El rol es un actor de cine", "La Persona solo se usa en hardware"],
+    correct: 0,
+    feedback: "El rol de usuario en DCUso abstrae la colección de responsabilidades y expectativas respecto al sistema, sin recrear biografías ficticias completas."
+  },
+  {
+    question: "¿Qué principio rige el diseño de navegación en Usage-Centered Design?",
+    options: ["El mapa de navegación debe derivar de la estructura de las tareas esenciales", "Todo debe estar a un clic de distancia siempre", "Debe imitar el árbol de carpetas de Windows", "No debe existir menú de opciones"],
+    correct: 0,
+    feedback: "La navegación en DCUso se mapea directamente desde las transiciones entre espacios de interacción requeridos por las tareas esenciales."
+  },
+  {
+    question: "En la matriz comparativa de enfoques, ¿cuál sitúa el foco en la 'eficacia de la tarea en contexto'?",
+    options: ["Diseño Centrado en el Uso (DCUso)", "Diseño Centrado en la Tecnología", "Diseño Gráfico Publicitario", "Diseño Asistido por Computador (CAD)"],
+    correct: 0,
+    feedback: "El DCUso enfatiza que el software debe ser una herramienta afinada para que el usuario cumpla tareas con máxima fluidez y mínimo esfuerzo cognitivo."
+  },
+  {
+    question: "¿Qué técnica de prototipado rápido abstracto introdujo DCUso?",
+    options: ["Mapas de navegación abstracta e Interaction Spaces con tarjetas", "Wireframes en Figma de alta fidelidad obligatorios", "Código C++ compilable desde el día uno", "Renders 3D fotorrealistas"],
+    correct: 0,
+    feedback: "Utiliza tarjetas de índice y esquemas espaciales abstractos para modelar contenedores y herramientas de interacción con suma agilidad."
+  },
+  {
+    question: "¿Por qué el DCTec sigue siendo común en proyectos industriales o de ingeniería pesada?",
+    options: ["Porque la complejidad técnica o de hardware condiciona fuertemente las prioridades del equipo", "Porque los ingenieros tienen prohibido hablar con usuarios", "Porque es más barato contratar diseñadores", "Porque la norma ISO así lo obliga"],
+    correct: 0,
+    feedback: "En proyectos de alta complejidad técnica o sistemas heredados (legacy), la arquitectura del sistema suele forzar inicialmente una perspectiva DCTec."
+  },
+  {
+    question: "¿Qué relación guarda el modelo MPIu+a con estos enfoques?",
+    options: ["Integra principios del DCU con la ingeniería de software, buscando equilibrar uso, usuario y técnica", "Rechaza el DCU para aplicar exclusivamente DCTec", "Solo aplica a aplicaciones móviles iOS", "Es un estándar militar obsoleto"],
+    correct: 0,
+    feedback: "MPIu+a busca amalgamar la rigurosidad de la ingeniería del software tradicional con los métodos iterativos centrados en el usuario y su uso."
+  },
+  {
+    question: "¿Qué componente de una tarea esencial responde a la 'intención del usuario'?",
+    options: ["User Intent (lo que el usuario desea lograr en términos abstractos)", "System Responsibility (cómo contesta la máquina)", "Graphic Asset (el icono mostrado)", "Database Commit (la transacción)"],
+    correct: 0,
+    feedback: "Los casos de uso esenciales tienen dos columnas: Intención del Usuario (User Intent) y Responsabilidad del Sistema (System Responsibility)."
+  },
+  {
+    question: "¿Cuál es el beneficio de mantener los casos de uso esenciales libres de referencias tecnológicas?",
+    options: ["Permiten diseñar soluciones innovadoras y duraderas aunque cambie la tecnología o los dispositivos", "Hacen que el código sea innecesario", "Evitan tener que hacer pruebas con usuarios", "Aumentan la velocidad del procesador"],
+    correct: 0,
+    feedback: "Al no presuponer tecnología (como 'hacer clic en botón'), la solución abstracta sigue siendo válida para interfaces táctiles, de voz o multimodales."
+  },
+  {
+    question: "¿Qué desventaja tiene priorizar ciegamente lo que los usuarios 'dicen que quieren' (DCU ingenuo)?",
+    options: ["Los usuarios a menudo no saben articular lo que realmente necesitan para ser productivos", "Los usuarios siempre mienten intencionadamente", "La ley de protección de datos lo impide", "Aumenta el coste del servidor web"],
+    correct: 0,
+    feedback: "Existe una discrepancia clásica en HCI entre lo que las personas dicen que hacen/quieren y sus patrones de trabajo y necesidades reales."
+  },
+  {
+    question: "¿Cómo concibe Constantine el 'espacio de interacción' (Interaction Space)?",
+    options: ["Un contenedor abstracto donde se agrupan herramientas y materiales para soportar una subtarea", "Un monitor de 27 pulgadas", "El espacio físico de la oficina", "Una sala de reuniones virtual"],
+    correct: 0,
+    feedback: "Un Interaction Space representa un agrupamiento lógico de información y acciones que luego puede materializarse en una pantalla, panel o diálogo."
+  },
+  {
+    question: "En el ciclo de DCUso, ¿cuándo se abordan los detalles estéticos y visuales finales?",
+    options: ["Tras haber validado los modelos abstractos de tareas, contenido y navegación", "Antes de empezar cualquier análisis", "Nunca, no le importa la interfaz", "Solo después del lanzamiento comercial"],
+    correct: 0,
+    feedback: "La estética y los componentes concretos de GUI se diseñan sobre una base sólida y ya probada de arquitectura funcional y modelos abstractos."
+  },
+  {
+    question: "¿Qué rol juega la retroalimentación continua en DCUsuario vs DCTec?",
+    options: ["En DCUsuario es obligatoria y continua; en DCTec suele postergarse hasta la fase de pruebas finales", "En DCTec se hace cada 5 minutos", "En DCUsuario solo se hace con ingenieros", "Ninguno de los dos usa feedback"],
+    correct: 0,
+    feedback: "El DCUsuario se fundamenta en ciclos iterativos de evaluación con personas reales, mientras que DCTec suele probarse internamente a nivel de especificación."
+  },
+  {
+    question: "¿Cuál de estos enunciados representa una formulación de caso de uso esencial correcta?",
+    options: ["'Identificarse ante el sistema' frente a 'Hacer clic con el ratón en el botón azul de Login'", "'Pulsar la tecla F5 para recargar'", "'Ejecutar script en Python 3'", "'Seleccionar combobox desplegable 2'"],
+    correct: 0,
+    feedback: "'Identificarse ante el sistema' describe el propósito esencial sin restringir el mecanismo físico (que podría ser huella dactilar, clave o reconocimiento facial)."
+  },
+  {
+    question: "¿Qué postula el DCUso sobre la participación de los usuarios?",
+    options: ["Participación enfocada y cualificada estudiando su trabajo, en lugar de involucrarlos como codiseñadores permanentes", "Prohibir el contacto con los usuarios", "Los usuarios deben programar el backend", "Solo se consulta a directivos de la empresa"],
+    correct: 0,
+    feedback: "Constantine y Lockwood defienden una implicación rigurosa centrada en entender el trabajo y el uso, confiando las decisiones de diseño a profesionales formados."
+  },
+  {
+    question: "Si un software tiene un rendimiento de motor excelente pero su interfaz requiere memorizar 40 comandos crípticos, es un ejemplo de:",
+    options: ["Enfoque Centrado en la Tecnología (DCTec)", "Diseño Centrado en el Usuario ejemplar", "Usage-Centered Design refinado", "Accesibilidad WCAG nivel AAA"],
+    correct: 0,
+    feedback: "Es el clásico síntoma de DCTec: optimización técnica interna desconectada de los modelos mentales humanos y la usabilidad."
+  },
+  {
+    question: "En conclusión, ¿cuál es la mejor práctica recomendada en la ingeniería de la usabilidad moderna?",
+    options: ["Armonizar la empatía y validación del DCUsuario con la disciplina de modelos abstractos del DCUso y la robustez técnica del DCTec", "Descartar la tecnología por completo", "Usar exclusivamente DCTec para ahorrar tiempo", "Confiar únicamente en plantillas prefabricadas"],
+    correct: 0,
+    feedback: "Los proyectos de éxito conjugan la comprensión del usuario (DCU), la sobriedad funcional y tareas del DCUso y la solidez técnica."
+  }
+];
+
+// ==========================================
+// BANCO DE DATOS: 14 FLASHCARDS 3D
+// ==========================================
+const flashcardsData = [
+  {
+    category: "Autores Fundacionales",
+    front: "¿Quiénes propusieron el diseño centrado en el uso (Usage-Centered Design)?",
+    back: "Larry Constantine y Lucy Lockwood (1999).",
+    subtext: "Presentado en su libro 'Software for Use' como respuesta a las limitaciones del DCU tradicional."
+  },
+  {
+    category: "Diferencia Clave",
+    front: "¿En qué se enfoca primordialmente el DCUso a diferencia del DCUsuario?",
+    back: "En el uso previsto y la estructura de las tareas, no en el usuario individual.",
+    subtext: "Busca optimizar la herramienta para el trabajo que debe realizarse."
+  },
+  {
+    category: "Modelos Abstractos",
+    front: "¿Cuáles son los 3 modelos abstractos del Usage-Centered Design?",
+    back: "Modelo de Roles de Usuario, Modelo de Tareas y Modelo de Contenido.",
+    subtext: "Permiten proyectar la interfaz sin atarse a detalles de implementación visual temprana."
+  },
+  {
+    category: "Casos de Uso",
+    front: "¿Qué es un Caso de Uso Esencial (Essential Use Case)?",
+    back: "Una descripción estructurada, abstracta y libre de tecnología de una tarea.",
+    subtext: "Divide la acción en Intención del Usuario vs Responsabilidad del Sistema."
+  },
+  {
+    category: "Enfoque Técnico",
+    front: "¿Qué caracteriza al Diseño Centrado en la Tecnología (DCTec)?",
+    back: "La arquitectura técnica y los datos internos dictan la interfaz de usuario.",
+    subtext: "Fuerza al usuario a entender cómo funciona la máquina por dentro."
+  },
+  {
+    category: "Modelado de Usuarios",
+    front: "¿Cómo define DCUso el 'Rol de Usuario'?",
+    back: "Relación funcional y conjunto de responsabilidades hacia el sistema.",
+    subtext: "A diferencia de las 'Personas', prescinde de detalles biográficos irrelevantes."
+  },
+  {
+    category: "Espacios de Interacción",
+    front: "¿Qué es un 'Interaction Space' en el modelo de contenido?",
+    back: "Un contenedor abstracto que reúne herramientas y materiales de trabajo.",
+    subtext: "Predecesor conceptual de una ventana, vista o tarjeta de interfaz."
+  },
+  {
+    category: "Riesgo de DCU Extremo",
+    front: "¿Qué es el fenómeno de 'Featuritis' en DCUsuario?",
+    back: "Sobrecarga de funciones por complacer todas las peticiones de los usuarios.",
+    subtext: "Genera interfaces incoherentes y laberínticas."
+  },
+  {
+    category: "Abstracción UI",
+    front: "¿Por qué los modelos de DCUso son libres de tecnología?",
+    back: "Para mantener su validez aunque cambie el hardware, la pantalla o el framework.",
+    subtext: "Facilita la migración entre web, móvil o sistemas de voz."
+  },
+  {
+    category: "Navegación",
+    front: "¿Cómo se construye el mapa de navegación en DCUso?",
+    back: "A partir de los enlaces funcionales entre espacios de interacción necesarios.",
+    subtext: "Refleja el flujo real de las tareas esenciales."
+  },
+  {
+    category: "Participación",
+    front: "¿Cuál es la postura de Constantine ante la co-creación con usuarios?",
+    back: "Los usuarios son expertos en su problema; los diseñadores en la solución.",
+    subtext: "Defiende la investigación profunda pero evita convertir al usuario en arquitecto de software."
+  },
+  {
+    category: "DCTec en la Industria",
+    front: "¿Cuándo suele emerger el DCTec inadvertidamente?",
+    back: "Cuando los desarrolladores exponen directamente el esquema CRUD de la BD.",
+    subtext: "Tablas, IDs internos y errores crípticos se trasladan a la pantalla."
+  },
+  {
+    category: "Eficiencia de Tarea",
+    front: "¿Qué métrica central persigue optimizar el DCUso?",
+    back: "La fluidez de interacción y la reducción del esfuerzo mental innecesario.",
+    subtext: "Software concebido como herramienta de alto rendimiento profesional."
+  },
+  {
+    category: "Síntesis MPIu+a",
+    front: "¿Cómo concilia MPIu+a los tres enfoques?",
+    back: "Integra rigurosidad técnica, modelos abstractos de uso y validación empírica con usuarios.",
+    subtext: "Evita los extremos estériles creando software robusto, útil y accesible."
+  }
+];
+
+// ==========================================
+// BANCO DE DATOS: 7 TEXTOS RELLENAR HUECOS
+// ==========================================
+const fillGapsData = [
+  {
+    prefix: "El diseño centrado en el uso (DCUso), formulado por Constantine y Lockwood, se enfoca en el ",
+    slot: "______",
+    suffix: " de la herramienta y sus patrones de actividad, más que en las preferencias subjetivas del individuo.",
+    correct: "uso",
+    options: ["uso", "código", "precio", "marketing"]
+  },
+  {
+    prefix: "A diferencia de las 'Personas' con datos biográficos, el DCUso utiliza ",
+    slot: "______",
+    suffix: " de usuario, que describen únicamente relaciones funcionales y responsabilidades hacia el sistema.",
+    correct: "roles",
+    options: ["roles", "nombres", "avatares", "fotografías"]
+  },
+  {
+    prefix: "Los casos de uso ",
+    slot: "______",
+    suffix: " se caracterizan por ser abstractos, concisos y totalmente independientes de la tecnología visual empleada.",
+    correct: "esenciales",
+    options: ["esenciales", "secundarios", "comerciales", "gráficos"]
+  },
+  {
+    prefix: "En el enfoque Centrado en la ",
+    slot: "______",
+    suffix: " (DCTec), la interfaz suele exponer directamente la estructura interna de la base de datos o del motor de cálculo.",
+    correct: "Tecnología",
+    options: ["Tecnología", "Persona", "Sociedad", "Estética"]
+  },
+  {
+    prefix: "El modelo de ",
+    slot: "______",
+    suffix: " define los contenedores de interacción y las herramientas abstractas antes de decidir botones o menús concretos.",
+    correct: "contenido",
+    options: ["contenido", "facturación", "redes", "servidores"]
+  },
+  {
+    prefix: "Un riesgo recurrente del DCUsuario ingenuo es la acumulación caótica de funciones o ",
+    slot: "______",
+    suffix: ", al ceder ante cada solicitud arbitraria de los entrevistados.",
+    correct: "featuritis",
+    options: ["featuritis", "depuración", "refactorización", "compilación"]
+  },
+  {
+    prefix: "El modelo metodológico ",
+    slot: "______",
+    suffix: " armoniza la ingeniería de software con los procesos iterativos de interacción persona-ordenador y accesibilidad.",
+    correct: "MPIu+a",
+    options: ["MPIu+a", "Scrum", "Waterfall", "MS-DOS"]
+  }
+];
+
+// ==========================================
+// ESTADO DE LA APLICACIÓN
+// ==========================================
+let currentQuizIdx = 0;
+let quizScore = 0;
+let quizAnswered = false;
+
+let currentCardIdx = 0;
+let cardIsFlipped = false;
+let masteredCards = new Set();
+
+let currentGapIdx = 0;
+let gapScore = 0;
+let gapSelectedWord = "";
+let gapCompleted = new Array(fillGapsData.length).fill(false);
+
+// ==========================================
+// CAMBIO DE PESTAÑAS (SUITE)
+// ==========================================
+function switchSuiteTab(tab) {
+  const tabs = ['quiz', 'flashcards', 'fillgaps'];
+  tabs.forEach(t => {
+    const btn = document.getElementById(`tab-${t}`);
+    const view = document.getElementById(`view-${t}`);
+    if (t === tab) {
+      btn.className = "flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all";
+      view.classList.remove('hidden');
+    } else {
+      btn.className = "flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md font-medium transition-all";
+      view.classList.add('hidden');
+    }
+  });
+}
+
+// ==========================================
+// LÓGICA DEL TEST INTERACTIVO (25 PREGUNTAS)
+// ==========================================
+function renderQuizQuestion() {
+  const item = quizData[currentQuizIdx];
+  quizAnswered = false;
+
+  document.getElementById('quiz-question-counter').innerText = `Pregunta ${currentQuizIdx + 1} de ${quizData.length}`;
+  document.getElementById('quiz-score-badge').innerText = `Aciertos acumulados: ${quizScore}`;
+  
+  const pct = Math.round(((currentQuizIdx) / quizData.length) * 100);
+  document.getElementById('quiz-percentage').innerText = `${pct}% completado`;
+  document.getElementById('quiz-progress-bar').style.width = `${Math.max(4, pct)}%`;
+
+  document.getElementById('quiz-question-text').innerText = item.question;
+
+  // Render opciones
+  const container = document.getElementById('quiz-options-container');
+  container.innerHTML = '';
+
+  item.options.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.onclick = () => selectQuizAnswer(idx);
+    btn.className = "quiz-option-btn group w-full text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-space-sm focus:outline-none";
+    btn.innerHTML = `
+      <span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface group-hover:bg-primary-container group-hover:text-on-primary transition-colors flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0 shadow-sm">${idx + 1}</span>
+      <span class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">${opt}</span>
+    `;
+    container.appendChild(btn);
+  });
+
+  // Ocultar feedback y deshabilitar botón siguiente
+  const fb = document.getElementById('quiz-feedback-box');
+  fb.classList.add('hidden');
+
+  const nextBtn = document.getElementById('quiz-next-btn');
+  nextBtn.disabled = true;
+  nextBtn.className = "px-5 py-2.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all flex items-center gap-2 cursor-not-allowed";
+}
+
+function selectQuizAnswer(idx) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+
+  const item = quizData[currentQuizIdx];
+  const buttons = document.querySelectorAll('.quiz-option-btn');
+  const fbBox = document.getElementById('quiz-feedback-box');
+  const fbIcon = document.getElementById('quiz-feedback-icon');
+  const fbTitle = document.getElementById('quiz-feedback-title');
+  const fbDesc = document.getElementById('quiz-feedback-desc');
+
+  const isCorrect = (idx === item.correct);
+
+  buttons.forEach((btn, bIdx) => {
+    btn.onclick = null;
+    if (bIdx === item.correct) {
+      btn.className = "quiz-option-btn w-full text-left p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed flex items-start gap-space-sm shadow-sm";
+      btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0";
+    } else if (bIdx === idx && !isCorrect) {
+      btn.className = "quiz-option-btn w-full text-left p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm";
+      btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-error text-on-error flex items-center justify-center font-code-inline text-code-inline font-bold shrink-0";
+    } else {
+      btn.className = "quiz-option-btn w-full text-left p-space-md rounded-xl bg-surface-container-low opacity-40 flex items-start gap-space-sm";
+    }
+  });
+
+  if (isCorrect) {
+    quizScore++;
+    document.getElementById('quiz-score-badge').innerText = `Aciertos acumulados: ${quizScore}`;
+    fbBox.className = "p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed flex items-start gap-space-sm";
+    fbIcon.innerText = "check_circle";
+    fbIcon.className = "material-symbols-outlined text-[24px] text-primary shrink-0";
+    fbTitle.innerText = "¡Respuesta Correcta!";
+  } else {
+    fbBox.className = "p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm";
+    fbIcon.innerText = "cancel";
+    fbIcon.className = "material-symbols-outlined text-[24px] text-error shrink-0";
+    fbTitle.innerText = "Respuesta Incorrecta";
+  }
+
+  fbDesc.innerText = item.feedback;
+  fbBox.classList.remove('hidden');
+
+  const nextBtn = document.getElementById('quiz-next-btn');
+  nextBtn.disabled = false;
+  nextBtn.className = "px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-2 shadow-sm cursor-pointer";
+  if (currentQuizIdx === quizData.length - 1) {
+    nextBtn.innerHTML = `<span>Ver resultado final</span><span class="material-symbols-outlined text-[18px]">workspace_premium</span>`;
+  }
+}
+
+function nextQuizQuestion() {
+  if (!quizAnswered) return;
+
+  if (currentQuizIdx < quizData.length - 1) {
+    currentQuizIdx++;
+    renderQuizQuestion();
+  } else {
+    showQuizSummary();
+  }
+}
+
+function showQuizSummary() {
+  const container = document.getElementById('quiz-options-container');
+  const notaSobre10 = ((quizScore / quizData.length) * 10).toFixed(1);
+
+  document.getElementById('quiz-question-counter').innerText = `Test finalizado`;
+  document.getElementById('quiz-progress-bar').style.width = `100%`;
+  document.getElementById('quiz-percentage').innerText = `100% completado`;
+  document.getElementById('quiz-question-text').innerText = `¡Evaluación completada con éxito!`;
+
+  container.innerHTML = `
+    <div class="col-span-1 md:col-span-2 p-space-lg bg-surface-container-low rounded-2xl flex flex-col items-center justify-center text-center space-y-3">
+      <div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+        <span class="material-symbols-outlined text-[32px]">emoji_events</span>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">Nota: ${notaSobre10} / 10</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Has acertado <strong>${quizScore}</strong> de <strong>${quizData.length}</strong> preguntas sobre DCUsuario, DCUso y DCTec.</p>
+      </div>
+      <div class="pt-2">
+        <button onclick="restartQuiz()" class="px-6 py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-all flex items-center gap-2 shadow-sm">
+          <span class="material-symbols-outlined text-[18px]">replay</span>
+          <span>Repetir evaluación</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('quiz-feedback-box').classList.add('hidden');
+  const nextBtn = document.getElementById('quiz-next-btn');
+  nextBtn.style.display = 'none';
+}
+
+function restartQuiz() {
+  currentQuizIdx = 0;
+  quizScore = 0;
+  document.getElementById('quiz-next-btn').style.display = 'inline-flex';
+  document.getElementById('quiz-next-btn').innerHTML = `<span>Siguiente pregunta</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+  renderQuizQuestion();
+}
+
+// ==========================================
+// LÓGICA DE LAS FLASHCARDS 3D (14 TARJETAS)
+// ==========================================
+function updateFlashcardUI() {
+  const card = flashcardsData[currentCardIdx];
+  const el = document.getElementById('flashcard-element');
+  
+  // reset rotación si estaba volteada
+  if (cardIsFlipped) {
+    cardIsFlipped = false;
+    el.style.transform = 'rotateY(0deg)';
+  }
+
+  document.getElementById('card-counter').innerText = `Tarjeta ${currentCardIdx + 1} de ${flashcardsData.length}`;
+  document.getElementById('card-category-badge').innerText = card.category;
+  document.getElementById('card-front-text').innerText = card.front;
+  document.getElementById('card-back-text').innerText = card.back;
+  document.getElementById('card-back-subtext').innerText = card.subtext;
+
+  document.getElementById('mastered-count').innerText = masteredCards.size;
+}
+
+function flipFlashcard() {
+  cardIsFlipped = !cardIsFlipped;
+  const el = document.getElementById('flashcard-element');
+  el.style.transform = cardIsFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+}
+
+function nextFlashcard() {
+  currentCardIdx = (currentCardIdx + 1) % flashcardsData.length;
+  updateFlashcardUI();
+}
+
+function prevFlashcard() {
+  currentCardIdx = (currentCardIdx - 1 + flashcardsData.length) % flashcardsData.length;
+  updateFlashcardUI();
+}
+
+function markCardMastered(isMastered) {
+  if (isMastered) {
+    masteredCards.add(currentCardIdx);
+  } else {
+    masteredCards.delete(currentCardIdx);
+  }
+  document.getElementById('mastered-count').innerText = masteredCards.size;
+  nextFlashcard();
+}
+
+function resetFlashcards() {
+  currentCardIdx = 0;
+  masteredCards.clear();
+  updateFlashcardUI();
+}
+
+// ==========================================
+// LÓGICA DE RELLENAR HUECOS (7 TEXTOS)
+// ==========================================
+function renderFillGapUI() {
+  const item = fillGapsData[currentGapIdx];
+  document.getElementById('gap-counter').innerText = `Texto ${currentGapIdx + 1} de ${fillGapsData.length}`;
+  document.getElementById('gap-score-display').innerText = `Correctos: ${gapScore} / ${fillGapsData.length}`;
+
+  const paragraph = document.getElementById('gap-text-paragraph');
+  paragraph.innerHTML = `${item.prefix}<span id="gap-slot" class="inline-block px-4 py-1 mx-1.5 min-w-[140px] text-center rounded-lg bg-surface-container-lowest text-primary font-bold shadow-sm transition-all">${gapCompleted[currentGapIdx] ? item.correct : '______'}</span>${item.suffix}`;
+
+  const chipsContainer = document.getElementById('gap-chips-container');
+  chipsContainer.innerHTML = '';
+
+  // Mezclar opciones para variedad didáctica
+  const shuffled = [...item.options].sort();
+  shuffled.forEach(opt => {
+    const chip = document.createElement('button');
+    chip.onclick = () => selectGapWord(opt);
+    chip.className = "px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary text-on-surface font-label-md text-label-md font-medium shadow-sm transition-all";
+    chip.innerText = opt;
+    chipsContainer.appendChild(chip);
+  });
+
+  const fb = document.getElementById('gap-feedback');
+  fb.classList.add('hidden');
+}
+
+function selectGapWord(word) {
+  const item = fillGapsData[currentGapIdx];
+  const slot = document.getElementById('gap-slot');
+  slot.innerText = word;
+  
+  const fb = document.getElementById('gap-feedback');
+  const fbMsg = document.getElementById('gap-feedback-msg');
+  const fbIcon = document.getElementById('gap-feedback-icon');
+
+  if (word.toLowerCase() === item.correct.toLowerCase()) {
+    if (!gapCompleted[currentGapIdx]) {
+      gapCompleted[currentGapIdx] = true;
+      gapScore++;
+      document.getElementById('gap-score-display').innerText = `Correctos: ${gapScore} / ${fillGapsData.length}`;
+    }
+    slot.className = "inline-block px-4 py-1 mx-1.5 min-w-[140px] text-center rounded-lg bg-primary-fixed text-on-primary-fixed font-bold shadow-sm transition-all";
+    fb.className = "p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center gap-2";
+    fbIcon.innerText = "check_circle";
+    fbIcon.className = "material-symbols-outlined text-[20px] text-primary";
+    fbMsg.innerText = `¡Correcto! "${word}" encaja perfectamente en este principio.`;
+  } else {
+    slot.className = "inline-block px-4 py-1 mx-1.5 min-w-[140px] text-center rounded-lg bg-error-container text-on-error-container font-bold shadow-sm transition-all";
+    fb.className = "p-space-md rounded-xl bg-error-container text-on-error-container flex items-center gap-2";
+    fbIcon.innerText = "error";
+    fbIcon.className = "material-symbols-outlined text-[20px] text-error";
+    fbMsg.innerText = `"${word}" no es el concepto adecuado para este contexto. Inténtalo de nuevo.`;
+  }
+  fb.classList.remove('hidden');
+}
+
+function showGapSolution() {
+  const item = fillGapsData[currentGapIdx];
+  selectGapWord(item.correct);
+}
+
+function nextGap() {
+  currentGapIdx = (currentGapIdx + 1) % fillGapsData.length;
+  renderFillGapUI();
+}
+
+function prevGap() {
+  currentGapIdx = (currentGapIdx - 1 + fillGapsData.length) % fillGapsData.length;
+  renderFillGapUI();
+}
+
+function resetFillGaps() {
+  currentGapIdx = 0;
+  gapScore = 0;
+  gapCompleted.fill(false);
+  renderFillGapUI();
+}
+
+// ==========================================
+// ATAJOS DE TECLADO GLOBALES
+// ==========================================
+document.addEventListener('keydown', (e) => {
+  const quizVisible = !document.getElementById('view-quiz').classList.contains('hidden');
+  const flashcardsVisible = !document.getElementById('view-flashcards').classList.contains('hidden');
+  const gapsVisible = !document.getElementById('view-fillgaps').classList.contains('hidden');
+
+  // Atajos para el Quiz: teclas 1 a 4
+  if (quizVisible) {
+    if (['1', '2', '3', '4'].includes(e.key)) {
+      const idx = parseInt(e.key, 10) - 1;
+      selectQuizAnswer(idx);
+    } else if (e.key === 'Enter') {
+      const nextBtn = document.getElementById('quiz-next-btn');
+      if (!nextBtn.disabled && nextBtn.style.display !== 'none') {
+        nextQuizQuestion();
+      }
+    }
+  }
+
+  // Atajos para Flashcards: Barra espaciadora gira, flechas navegan
+  if (flashcardsVisible) {
+    if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      flipFlashcard();
+    } else if (e.key === 'ArrowRight') {
+      nextFlashcard();
+    } else if (e.key === 'ArrowLeft') {
+      prevFlashcard();
+    }
+  }
+
+  // Atajos para Gaps: Enter siguiente
+  if (gapsVisible) {
+    if (e.key === 'ArrowRight') {
+      nextGap();
+    } else if (e.key === 'ArrowLeft') {
+      prevGap();
+    }
+  }
+});
+
+// Inicialización de la pantalla
+window.addEventListener('DOMContentLoaded', () => {
+  renderQuizQuestion();
+  updateFlashcardUI();
+  renderFillGapUI();
+});
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter space-y-space-lg"><div class="flex flex-wrap items-center justify-between gap-space-md pb-space-lg"><div class="flex flex-wrap items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Universitat de Lleida</span><span class="text-outline-variant">•</span><span class="font-body-md text-body-md text-on-surface-variant">Escola Politècnica Superior (EPS)</span></div><div class="flex flex-wrap items-center gap-space-xs"><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">GRIHO Research Group</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">AIPO</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">ACM SIGCHI</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">WCAG 2.2 AA</span></div></div><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><div class="md:col-span-8 space-y-space-xs"><p class="text-on-surface font-medium">Cátedra de Interacción Persona-Ordenador e Ingeniería del Software</p><p>Material didáctico e interactivo elaborado para el estudio del Diseño Centrado en el Usuario (DCU), modelos conceptuales y procesos MPIu+a.</p><p class="font-label-sm text-label-sm text-outline pt-space-xs">Licenciado bajo Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0).</p></div><div class="md:col-span-4 flex flex-col md:items-end justify-center space-y-space-xs font-label-sm text-label-sm"><span class="inline-flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>Declaración de Accesibilidad Web Validada</span><span class="text-outline">Conforme con directrices W3C / WCAG 2.2 Nivel AA</span><span class="text-outline">© Universitat de Lleida (UdL)</span></div></div></div></footer></body></html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Curso IPO — Módulo 3: Diseño Centrado en el Usuario (DCU)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#faf8fe",
+            "surface": "#faf8fe",
+            "background": "#faf8fe",
+            "surface-tint": "#005cbb",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "secondary": "#5f5e60",
+            "outline": "#717785",
+            "primary-fixed-dim": "#abc7ff",
+            "on-surface": "#1a1b1f",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#001b3f",
+            "outline-variant": "#c1c6d6",
+            "error": "#ba1a1a",
+            "primary": "#0059b5",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#001b3f",
+            "on-primary-container": "#fcfbff",
+            "inverse-primary": "#abc7ff",
+            "secondary-fixed-dim": "#c8c6c8",
+            "on-tertiary-fixed-variant": "#00458e",
+            "surface-container-high": "#e9e7ed",
+            "surface-variant": "#e3e2e7",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#fcfaff",
+            "secondary-container": "#e2dfe1",
+            "tertiary": "#0059b4",
+            "surface-container": "#eeedf3",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#0071e2",
+            "primary-container": "#0071e3",
+            "error-container": "#ffdad6",
+            "on-background": "#1a1b1f",
+            "primary-fixed": "#d7e2ff",
+            "inverse-on-surface": "#f1f0f5",
+            "surface-container-highest": "#e3e2e7",
+            "on-surface-variant": "#414753",
+            "surface-container-low": "#f4f3f8",
+            "surface-dim": "#dad9df",
+            "tertiary-fixed": "#d7e3ff",
+            "inverse-surface": "#2f3034",
+            "tertiary-fixed-dim": "#abc7ff",
+            "on-secondary-fixed-variant": "#474649",
+            "secondary-fixed": "#e4e2e4",
+            "on-primary-fixed-variant": "#00458f",
+            "on-secondary-container": "#636264",
+            "on-secondary-fixed": "#1b1b1d"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            margin: "3rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "space-sm": "0.5rem",
+            "margin-md": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            gutter: "1.5rem",
+            "margin-sm": "1.25rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "display-hero": ["Inter"],
+            "code-inline": ["JetBrains Mono"],
+            "label-md": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-xl": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-md": ["Inter"]
+          },
+          fontSize: {
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["19px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "code-inline": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }],
+            "label-md": ["14px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "headline-sm": ["17px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- HEADER FIJO PERSISTENTE -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3.html">Módulo 3: DCU</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3-02-teoria.html">02 Teoría del DCU</a><span class="text-outline-variant">/</span><span class="text-primary font-semibold">3.2.1 Normativa y principios</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1 scrollbar-none"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="pilares.html">M1 Fundamentos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="modulo-2.html">M2 Factor humano</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-sm text-label-sm" data-path="modulo-3-dcu" href="modulo-3.html">M3 DCU</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a></nav></div></header>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="w-full bg-surface min-h-[calc(100vh-280px)] pt-36"><div class="flex flex-col w-full"><div class="" style="max-width:1280px;margin:0 auto;padding:32px clamp(20px,4vw,48px) 0;box-sizing:border-box;width:100%;padding-bottom:24px"><section class="w-full mb-space-xl"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-sm"><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">3.2.1</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">policy</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Normativa y principios DCU</span><span class="font-body-sm text-body-sm text-on-primary-container/85">ISO 13407 / ISO 9241-210</span></div></div><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-2-contextual.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.2</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">groups</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Diseño contextual y participación</span><span class="font-body-sm text-body-sm text-on-surface-variant">Contextual Design y diseño participativo</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-3-enfoques.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.3</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">compare_arrows</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Enfoques de diseño</span><span class="font-body-sm text-body-sm text-on-surface-variant">DCUsuario vs DCUso vs DCTec</span></div></a></div></section><header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 3.2.1</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Marco Normativo Internacional de la Usabilidad</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight" style="font-size:40px;line-height:48px;letter-spacing:-0.02em;font-weight:600">3.2.1 — Normativa y Principios del DCU: Estándar ISO 13407</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl" style="font-size:19px;line-height:28px;letter-spacing:-0.005em">
+          El marco canónico internacional que guía la incorporación estructurada del Diseño Centrado en el Usuario a lo largo de todo el ciclo de vida del desarrollo software interactivo (evolucionado y consolidado posteriormente en <strong class="text-on-surface font-semibold">ISO 9241-210</strong>).
+        </p>
+</div>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-1-practica.html"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">ISO 13407 [ISO99] · ISO 9241-210 [BEV03]</span>
+</div>
+</div>
+</div>
+</header><div class="flex flex-wrap items-center gap-space-xs pt-4" style="margin-top:0">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-code-inline text-code-inline">
+<span class="material-symbols-outlined text-[16px] text-primary">policy</span>
+<span>Estándar: ISO 13407 [ISO99] &amp; ISO 9241-210 [BEV03]</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">account_tree</span>
+<span>Metodología: MPIu+a es DCU</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span>
+<span>GRIHO UdL • Cátedra Dr. Toni Granollers</span>
+</div>
+</div></div>
+<!-- SECCIÓN SUPERIOR: METADATA DIDÁCTICA Y ENCABEZADO EDITORIAL -->
+
+<!-- SUBNAVEGADOR DE LECCIONES DEL MÓDULO 3.2 -->
+<!-- BLOQUE TEÓRICO CENTRAL Y DIAGRAMA ITERATIVO -->
+<section class="w-full max-w-7xl mx-auto mb-16" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Explicación canónica conceptual -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant w-fit font-label-sm text-label-sm">
+<span>Fundamento del Estándar</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Un marco orientativo, no una receta prescriptiva
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          El estándar <strong class="text-on-surface font-semibold">ISO 13407: Human-centred design processes for interactive systems [ISO99]</strong> constituye un marco de referencia que sirve de guía para lograr el desarrollo de sistemas interactivos genuinamente usables, incorporando la filosofía del DCU a lo largo de todo el ciclo de vida de la ingeniería del software [BEV03].
+        </p>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Regla epistemológica del estándar</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                ISO 13407 <strong class="text-on-surface font-medium">no determina un proceso de diseño cerrado ni estipula métodos específicos</strong>. Establece una perspectiva centrada en lo humano: la secuencia de actividades, el grado de profundidad y las técnicas empíricas se adaptan a cada proyecto y dominio de aplicación.
+              </p>
+</div>
+</div>
+</div>
+<!-- Cita del Dr. Toni Granollers / Bevan -->
+<div class="bg-primary-fixed/30 p-5 rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed leading-relaxed">
+<span class="font-semibold italic">«El proceso implica iterar hasta satisfacer los objetivos de usabilidad y accesibilidad pactados. El refinamiento mediante prototipos empíricos es la única garantía de calidad en el uso.»</span>
+<span class="block mt-1 font-label-sm text-label-sm text-on-primary-fixed-variant">— Dr. Toni Granollers (GRIHO, UdL) / Nigel Bevan [BEV03]</span>
+</p>
+</div>
+</div>
+<!-- Diagrama de las 4 Actividades Iterativas con Interacción de Selección -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 md:p-8 rounded-2xl shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between flex-wrap gap-2 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">sync</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ciclo Iterativo de las 4 Actividades (ISO 13407)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Haz clic sobre cada fase para inspeccionar</span>
+</div>
+<!-- Tablero visual iterativo interconectado -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
+<!-- Actividad 1 -->
+<div class="cursor-pointer transition-all p-5 rounded-xl bg-surface-container-low hover:bg-surface-container relative group shadow-sm flex flex-col gap-2" id="act-card-1" onclick="selectActivity(1)">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">1</span>
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-1">Contexto de Uso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Identificar minuciosamente usuarios finales, sus objetivos, características físicas/sociales y el entorno ambiental y técnico.
+            </p>
+<div class="pt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span>Inspeccionar detalle</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Actividad 2 -->
+<div class="cursor-pointer transition-all p-5 rounded-xl bg-surface-container-low hover:bg-surface-container relative group shadow-sm flex flex-col gap-2" id="act-card-2" onclick="selectActivity(2)">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">2</span>
+<span class="material-symbols-outlined text-primary text-[20px]">rule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-1">Requisitos de Usuario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Especificar los requisitos ergonómicos, objetivos de negocio organizativos y limitaciones del sistema operacional.
+            </p>
+<div class="pt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span>Inspeccionar detalle</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Actividad 3 -->
+<div class="cursor-pointer transition-all p-5 rounded-xl bg-surface-container-low hover:bg-surface-container relative group shadow-sm flex flex-col gap-2" id="act-card-3" onclick="selectActivity(3)">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">3</span>
+<span class="material-symbols-outlined text-primary text-[20px]">design_services</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-1">Soluciones de Diseño</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Diseño conceptual, arquitectura de información, diálogo simple y natural, y prototipado progresivo (lo-fi a hi-fi).
+            </p>
+<div class="pt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span>Inspeccionar detalle</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Actividad 4 -->
+<div class="cursor-pointer transition-all p-5 rounded-xl bg-surface-container-low hover:bg-surface-container relative group shadow-sm flex flex-col gap-2" id="act-card-4" onclick="selectActivity(4)">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">4</span>
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold pt-1">Evaluación Empírica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Comprobación con usuarios representativos y evaluación heurística para validar si el diseño satisface los requisitos.
+            </p>
+<div class="pt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium">
+<span>Inspeccionar detalle</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Conector central de iteración continua y panel explicativo dinámico -->
+<div class="p-5 rounded-xl bg-surface-container flex flex-col gap-3 transition-all" id="activity-detail-panel">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">published_with_changes</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="act-detail-title">
+                Bucle de Iteración Continua (ISO 13407)
+              </span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm" id="act-detail-tag">
+              Propiedad Fundamental
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="act-detail-desc">
+            Si la evaluación (Fase 4) detecta desajustes o fallos en las métricas de eficacia, eficiencia o satisfacción de los usuarios, el flujo retorna inmediatamente a las fases anteriores (ajuste de requisitos o rediseño de interfaz) hasta alcanzar los criterios de conformidad definidos en el plan.
+          </p>
+<div class="flex flex-wrap items-center gap-2 pt-1 font-code-inline text-code-inline text-on-surface-variant">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm">Entregables: Informes de usabilidad</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm">Métricas: Tasa de éxito, tiempo y satisfacción SUS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOQUE CENTRAL 2: LOS 5 PRINCIPIOS FUNDAMENTALES DEL DCU (ISO 13407) -->
+<section class="w-full max-w-7xl mx-auto mb-16" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<div class="flex flex-col gap-2 mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">military_tech</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Principios Rectores Obligatorios</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">
+        Los 5 Principios Fundamentales del DCU
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+        Para que un proyecto de desarrollo sea homologable con ISO 13407 e ISO 9241-210, debe demostrar la aplicación de estos cinco pilares metodológicos irrenunciables:
+      </p>
+</div>
+<!-- Rejilla de los 5 principios con diseño editorial asimétrico -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Principio 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-primary font-semibold bg-primary-fixed/50 px-2 py-1 rounded">PRINCIPIO 01</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">diversity_3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Participación activa de usuarios representativos
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Involucrar activamente a usuarios reales y representativos desde las fases iniciales. El objetivo es alcanzar una comprensión profunda de sus tareas cotidianas, sus modelos mentales y el entorno de trabajo real.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-2xl font-label-sm text-label-sm text-on-surface">
+<strong class="font-semibold text-primary">Práctica clave:</strong> Sesiones contextuales, shadowing y entrevistas etnográficas.
+        </div>
+</div>
+<!-- Principio 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-primary font-semibold bg-primary-fixed/50 px-2 py-1 rounded">PRINCIPIO 02</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Distribución adecuada de funciones
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Asignar equilibradamente las responsabilidades entre la persona y la tecnología. Se debe delegar a la máquina tareas repetitivas o de cálculo para optimizar el esfuerzo mental y evitar sobrecargas cognitivas.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-2xl font-label-sm text-label-sm text-on-surface">
+<strong class="font-semibold text-primary">Práctica clave:</strong> Análisis de tareas (HTA) y delimitación de automatismos.
+        </div>
+</div>
+<!-- Principio 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-primary font-semibold bg-primary-fixed/50 px-2 py-1 rounded">PRINCIPIO 03</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">repeat</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Iteración de las soluciones de diseño
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            El diseño en DCU es intrínsecamente cíclico. Un sistema no se formula de una sola vez: progresa y madura a través de iteraciones consecutivas de prototipos evaluados antes del código final.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-2xl font-label-sm text-label-sm text-on-surface">
+<strong class="font-semibold text-primary">Práctica clave:</strong> Prototipos de papel a interactivos con tests formativos.
+        </div>
+</div>
+<!-- Principio 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-primary font-semibold bg-primary-fixed/50 px-2 py-1 rounded">PRINCIPIO 04</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Equipos multidisciplinares
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Integración de diversas disciplinas: ingenieros de software, diseñadores de interacción, psicólogos del factor humano, analistas de negocio y los propios usuarios para una visión 360°.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-2xl font-label-sm text-label-sm text-on-surface">
+<strong class="font-semibold text-primary">Práctica clave:</strong> Talleres de co-diseño interdepartamental en MPIu+a.
+        </div>
+</div>
+<!-- Principio 5 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-2">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-code-inline text-code-inline text-primary font-semibold bg-primary-fixed/50 px-2 py-1 rounded">PRINCIPIO 05</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Planificación integral del proceso centrado en el ser humano
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            El DCU no es una actividad accesoria ni un filtro cosmético final. Debe estar formalmente planificado en el cronograma del proyecto de software, con asignación presupuestaria clara, hitos de evaluación de usabilidad, entregables formalizados y margen temporal para aplicar los refinamientos iterativos derivados de los tests con usuarios.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low -mx-6 -mb-6 p-4 rounded-b-2xl font-label-sm text-label-sm text-on-surface flex items-center justify-between flex-wrap gap-2">
+<span><strong class="font-semibold text-primary">Práctica clave:</strong> Integración explícita de sprints de usabilidad en metodologías ágiles o fases MPIu+a.</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ISO 13407 Cl. 5.1</span>
+</div>
+</div>
+</div>
+</section>
+<!-- LABORATORIO DIDÁCTICO INTERACTIVO: EXPLORADOR DE EQUIPOS MULTIDISCIPLINARES -->
+<section class="w-full max-w-7xl mx-auto mb-16" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-10 shadow-sm flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Simulador Didáctico Interactivo</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            Explorador de Roles en Equipos Multidisciplinares de DCU
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            ISO 13407 establece que el éxito del DCU radica en la integración sinérgica de múltiples perfiles. Selecciona un rol para conocer su aporte crítico y responsabilidades en MPIu+a.
+          </p>
+</div>
+<div class="shrink-0">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span>Laboratorio GRIHO UdL</span>
+</span>
+</div>
+</div>
+<!-- Selector de Pestañas de Roles -->
+<div class="flex flex-wrap gap-2 pb-2">
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm" id="btn-role-ergonomist" onclick="setRole('ergonomist')">
+          Ergónomo / Psicólogo Cognitivo
+        </button>
+<button class="px-4 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" id="btn-role-designer" onclick="setRole('designer')">
+          Diseñador de Interacción (IxD/UI)
+        </button>
+<button class="px-4 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" id="btn-role-engineer" onclick="setRole('engineer')">
+          Ingeniero de Software
+        </button>
+<button class="px-4 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" id="btn-role-user" onclick="setRole('user')">
+          Usuario Participativo
+        </button>
+<button class="px-4 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" id="btn-role-business" onclick="setRole('business')">
+          Analista de Negocio / Cliente
+        </button>
+</div>
+<!-- Panel de Detalles del Rol -->
+<div class="bg-surface-container-low rounded-xl p-6 md:p-8 flex flex-col lg:flex-row gap-8 items-start" id="role-display-panel">
+<div class="w-full lg:w-1/3 flex flex-col gap-4">
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[36px]" id="role-icon">psychology</span>
+</div>
+<div>
+<span class="font-code-inline text-code-inline text-primary font-semibold" id="role-category">FACTOR HUMANO Y COGNICIÓN</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold pt-1" id="role-title">
+              Ergónomo / Psicólogo Cognitivo
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1" id="role-motto">
+              «Adapta la tecnología a las capacidades perceptivas y de memoria del cerebro humano.»
+            </p>
+</div>
+</div>
+<div class="w-full lg:w-2/3 flex flex-col gap-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Misión Principal en DCU</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed" id="role-mission">
+                Analizar los modelos mentales, la carga de memoria operativa, la percepción sensorial y diseñar experimentos empíricos rigurosos para validar hipótesis de diseño.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Entregables Clave</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed" id="role-deliverables">
+                Perfiles de usuario (Personas), modelos de carga cognitiva, protocolos de test de usabilidad y análisis cuantitativo de errores.
+              </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Impacto directo según ISO 13407:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="role-impact">
+                Garantiza que las decisiones de diseño no se basen en la intuición del desarrollador, sino en la realidad psicofísica del usuario final del sistema.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN DE REFERENCIAS CANÓNICAS Y CONFORMIDAD NORMATIVA -->
+<section class="w-full max-w-7xl mx-auto mb-16" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">menu_book</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+          Bibliografía Canónica y Marco Normativo de Referencia
+        </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-code-inline text-code-inline text-primary font-semibold">[ISO99] ISO 13407:1999</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            International Organization for Standardization. <em class="text-on-surface">Human-centred design processes for interactive systems</em>. Ginebra, Suiza.
+          </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-code-inline text-code-inline text-primary font-semibold">[BEV03] Bevan, Nigel (2003)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<em class="text-on-surface">Design for Usability: Methods and Tools</em>. A guide to human-centred design standards and techniques in real-world software engineering.
+          </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-code-inline text-code-inline text-primary font-semibold">Granollers, Toni (2004-2025)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<em class="text-on-surface">MPIu+a: Modelo de Proceso de la Ingeniería de la Usabilidad y de la Accesibilidad</em>. Universitat de Lleida, GRIHO.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- BARRA INFERIOR DE NAVEGACIÓN SECUENCIAL ENTRE LECCIONES -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-sm md:px-margin-md lg:px-margin pb-space-xl"><footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" href="modulo-3-02-teoria.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a 02 Teoría del DCU</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Tema 3.2.1 de 3</span></div><span class="hidden sm:inline text-outline-variant">•</span><a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-1-practica.html"><span class="material-symbols-outlined text-[18px]">sports_esports</span><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-2-contextual.html">
+<span>Siguiente: 3.2.2 Diseño Contextual y Participación</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer></div>
+</div>
+<!-- LÓGICA INTERACTIVA DE LA UNIDAD DIDÁCTICA -->
+<script>
+  // Interacción de Selección de Actividades de la Norma ISO 13407
+  const activities = {
+    1: {
+      title: "Actividad 1: Entender y Especificar el Contexto de Uso",
+      tag: "Fase de Descubrimiento",
+      desc: "Identificación de los grupos de usuarios directos e indirectos, sus capacidades y restricciones cognitivas, sus objetivos primarios y los entornos ambientales, técnicos y socioculturales en los que interactuarán con el sistema.",
+      meta: "Técnicas recomendadas: Observación etnográfica, entrevistas contextuales, creación de proto-personas y mapas de empatía."
+    },
+    2: {
+      title: "Actividad 2: Especificar los Requisitos de los Usuarios y Organizativos",
+      tag: "Fase de Análisis",
+      desc: "Definición rigurosa de los requisitos funcionales y no funcionales desde la perspectiva ergonómica y humana. Se alinean las metas de negocio de la organización con la reducción del esfuerzo y la prevención de fallos de uso.",
+      meta: "Técnicas recomendadas: Análisis jerárquico de tareas (HTA), escenarios operacionales y definición de criterios cuantitativos de usabilidad."
+    },
+    3: {
+      title: "Actividad 3: Producción de Soluciones de Diseño y Diálogo Simple",
+      tag: "Fase de Síntesis",
+      desc: "Traducción de los requisitos en propuestas de interfaz concretas: modelo conceptual, arquitectura de la información, metáforas de interacción, flujos de navegación y generación progresiva de prototipos con diálogo simple y natural.",
+      meta: "Técnicas recomendadas: Wireframes, prototipado rápido en papel, mockups dinámicos interactivos y design systems accesibles."
+    },
+    4: {
+      title: "Actividad 4: Evaluación de las Soluciones frente a los Requisitos",
+      tag: "Fase de Validación",
+      desc: "Verificación empírica de las soluciones de diseño con usuarios representativos y análisis heurístico por parte de evaluadores expertos. Es la actividad crítica que retroalimenta y valida si se cierran los objetivos o se vuelve a iterar.",
+      meta: "Técnicas recomendadas: Tests de usabilidad de laboratorio/remotos, think-aloud, evaluación heurística según Nielsen y métricas SUS."
+    }
+  };
+
+  function selectActivity(id) {
+    const act = activities[id];
+    if (!act) return;
+
+    // Resaltado visual en tarjetas
+    [1, 2, 3, 4].forEach(num => {
+      const card = document.getElementById('act-card-' + num);
+      if (card) {
+        if (num === id) {
+          card.classList.remove('bg-surface-container-low');
+          card.classList.add('bg-primary-fixed', 'ring-2', 'ring-primary');
+        } else {
+          card.classList.remove('bg-primary-fixed', 'ring-2', 'ring-primary');
+          card.classList.add('bg-surface-container-low');
+        }
+      }
+    });
+
+    // Actualización de contenidos del panel explicativo
+    document.getElementById('act-detail-title').textContent = act.title;
+    document.getElementById('act-detail-tag').textContent = act.tag;
+    document.getElementById('act-detail-desc').textContent = act.desc;
+  }
+
+  // Interacción del Explorador de Roles Multidisciplinares
+  const rolesData = {
+    ergonomist: {
+      category: "FACTOR HUMANO Y COGNICIÓN",
+      title: "Ergónomo / Psicólogo Cognitivo",
+      motto: "«Adapta la tecnología a las capacidades perceptivas y de memoria del cerebro humano.»",
+      icon: "psychology",
+      mission: "Analizar los modelos mentales, la carga de memoria operativa, la percepción sensorial y diseñar experimentos empíricos rigurosos para validar hipótesis de diseño.",
+      deliverables: "Perfiles de usuario (Personas), modelos de carga cognitiva, protocolos de test de usabilidad y análisis cuantitativo de errores.",
+      impact: "Garantiza que las decisiones de diseño no se basen en la intuición subjetiva del desarrollador, sino en la realidad psicofísica del usuario final del sistema."
+    },
+    designer: {
+      category: "ARQUITECTURA VISUAL E INTERACCIÓN",
+      title: "Diseñador de Interacción (IxD/UI)",
+      motto: "«Convierte la complejidad funcional en diálogos comprensibles y accesibles.»",
+      icon: "design_services",
+      mission: "Estructurar la arquitectura de la información, el diseño de interacción, la consistencia visual y construir prototipos interactivos testeables a distintas escalas de fidelidad.",
+      deliverables: "Flujos de usuario, mockups interactivos, kits de componentes atómicos y guías de estilos accesibles conformes con WCAG.",
+      impact: "Proporciona la interfaz tangible que el usuario ve y manipula, facilitando un diálogo natural y libre de fricciones cognitivas."
+    },
+    engineer: {
+      category: "DESARROLLO Y ARQUITECTURA TÉCNICA",
+      title: "Ingeniero de Software",
+      motto: "«Asegura la viabilidad técnica, el rendimiento, la robustez y la accesibilidad en código.»",
+      icon: "code",
+      mission: "Implementar la lógica de negocio y las capas de presentación respetando los requisitos de accesibilidad semántica, tiempo de respuesta y escalabilidad del sistema.",
+      deliverables: "Arquitectura de componentes frontend, código semántico ARIA, integración de APIs y bancos de pruebas automatizadas.",
+      impact: "Materializa la solución diseñada asegurando que las especificaciones de usabilidad se mantengan intactas en la versión final en producción."
+    },
+    user: {
+      category: "BENEFICIARIO Y CONTEXTO REAL",
+      title: "Usuario Participativo",
+      motto: "«Aporta la experiencia real y la verdad operativa sobre el trabajo cotidiano.»",
+      icon: "person_check",
+      mission: "Participar activamente en sesiones de co-diseño, compartir su contexto real de trabajo, verbalizar sus dudas y poner a prueba los prototipos en condiciones reales.",
+      deliverables: "Feedback directo no filtrado, verbalizaciones en protocolo think-aloud y validación de escenarios de uso reales.",
+      impact: "Evita supuestos erróneos del equipo técnico y valida si la herramienta responde a necesidades reales o artificios prescindibles."
+    },
+    business: {
+      category: "ESTRATEGIA Y GESTIÓN OPERATIVA",
+      title: "Analista de Negocio / Cliente",
+      motto: "«Alinea la satisfacción del usuario con el retorno de inversión y la viabilidad del proyecto.»",
+      icon: "query_stats",
+      mission: "Establecer las restricciones de recursos, los objetivos comerciales u organizativos y asegurar que el DCU aporte valor medible y competitivo a la entidad.",
+      deliverables: "Matriz de objetivos de negocio, análisis de retorno de inversión (ROI de Usabilidad) y definición del alcance del proyecto.",
+      impact: "Garantiza que la usabilidad sea vista como una palanca estratégica de eficiencia organizativa y no como un sobrecoste."
+    }
+  };
+
+  function setRole(roleKey) {
+    const data = rolesData[roleKey];
+    if (!data) return;
+
+    // Actualizar estilos de pestañas de roles
+    const keys = ['ergonomist', 'designer', 'engineer', 'user', 'business'];
+    keys.forEach(k => {
+      const btn = document.getElementById('btn-role-' + k);
+      if (btn) {
+        if (k === roleKey) {
+          btn.className = "px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm";
+        } else {
+          btn.className = "px-4 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all";
+        }
+      }
+    });
+
+    // Actualizar contenidos en el panel didáctico
+    document.getElementById('role-category').textContent = data.category;
+    document.getElementById('role-title').textContent = data.title;
+    document.getElementById('role-motto').textContent = data.motto;
+    document.getElementById('role-icon').textContent = data.icon;
+    document.getElementById('role-mission').textContent = data.mission;
+    document.getElementById('role-deliverables').textContent = data.deliverables;
+    document.getElementById('role-impact').textContent = data.impact;
+  }
+</script></main>
+<!-- FOOTER OFICIAL PERSISTENTE -->
+<footer class="w-full bg-surface-container-low mt-space-xl border-t border-surface-dim/60">
+<div class="max-w-7xl mx-auto px-gutter py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-xl pb-space-lg">
+<div class="md:col-span-2 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-bold text-sm">IPO</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Interacción Persona-Ordenador (IPO)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">
+            Portal docente e interactivo de la asignatura de Interacción Persona-Ordenador. Desarrollado y coordinado por el <strong class="text-on-surface font-semibold">Dr. Toni Granollers</strong> en la <strong class="text-on-surface font-semibold">Universitat de Lleida (UdL)</strong> dentro del grupo de investigación <strong class="text-on-surface font-semibold">GRIHO</strong> (Grup de Recerca en Interacció Persona-Ordinador).
+          </p>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">GRIHO UdL</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">AIPO</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">ACM SIGCHI</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">MPIu+a</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recursos Académicos</span>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-on-surface transition-colors" data-path="curso-ipo" href="index.html">Programa del Curso</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="explorar-conceptos" href="#">Heurísticas y Leyes de HCI</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="mpiu-a" href="modulo-3-03-modelo-mpiua.html">Modelo de Proceso MPIu+a</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="recursos" href="#">Laboratorio y Plantillas</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="blog" href="#">Artículos y Ensayos</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Conformidad y Licencia</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="text-on-surface font-medium">WCAG 2.2 Nivel AA</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Diseñado bajo pautas de accesibilidad para contenido web y usabilidad universal.</p>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">copyright</span>
+<span class="text-on-surface font-medium">CC BY-NC 4.0 Internacional</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reconocimiento - NoComercial 4.0 Internacional de Creative Commons.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant border-t border-surface-dim/40">
+<p>© 2025 Universitat de Lleida (UdL) • GRIHO • Cátedra Dr. Toni Granollers. Todos los derechos reservados.</p>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant">Asociación Interacción Persona-Ordenador (AIPO)</span>
+<span class="text-on-surface-variant">ACM SIGCHI Chapter</span>
+</div>
+</div>
+</div>
+</footer>
+<script defer="" src="persist.js"></script></body></html>

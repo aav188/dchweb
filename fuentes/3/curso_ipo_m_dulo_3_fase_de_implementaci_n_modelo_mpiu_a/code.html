@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO | Universitat de Lleida · GRIHO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-primary-container": "#fcfbff", "primary-fixed": "#d7e2ff", "primary-fixed-dim": "#abc7ff", "on-surface-variant": "#414753", "surface-container-low": "#f4f3f8", "on-error": "#ffffff", "tertiary-fixed": "#d7e3ff", "on-background": "#1a1b1f", "surface-container": "#eeedf3", "inverse-primary": "#abc7ff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#1b1b1d", "on-error-container": "#93000a", "on-surface": "#1a1b1f", "primary": "#0059b5", "on-tertiary-container": "#fcfaff", "outline-variant": "#c1c6d6", "on-tertiary-fixed-variant": "#00458e", "outline": "#717785", "secondary": "#5f5e60", "inverse-on-surface": "#f1f0f5", "surface-bright": "#faf8fe", "surface-dim": "#dad9df", "secondary-fixed": "#e4e2e4", "on-tertiary-fixed": "#001b3f", "on-secondary-fixed-variant": "#474649", "tertiary-fixed-dim": "#abc7ff", "surface-tint": "#005cbb", "error": "#ba1a1a", "tertiary": "#0059b4", "surface-container-highest": "#e3e2e7", "primary-container": "#0071e3", "on-secondary-container": "#636264", "surface-container-high": "#e9e7ed", "on-primary-fixed": "#001b3f", "secondary-fixed-dim": "#c8c6c8", "on-secondary": "#ffffff", "surface": "#faf8fe", "background": "#faf8fe", "tertiary-container": "#0071e2", "secondary-container": "#e2dfe1", "surface-variant": "#e3e2e7", "on-primary-fixed-variant": "#00458f", "inverse-surface": "#2f3034" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-md": "2rem", "margin": "3rem", "gutter-sm": "1rem", "gutter": "1.5rem", "margin-sm": "1.25rem", "space-xl": "2.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-xl": ["Inter"], "code-inline": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "display-hero-mobile": ["Inter"], "headline-md": ["Inter"], "display-hero": ["Inter"], "label-md": ["Inter"] }, fontSize: { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["19px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45 rounded-lg p-space-xs" data-path="inicio" href="#"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold shadow-sm">IPO</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Curso IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant">UdL · GRIHO</span></div></a><div class="hidden md:block w-px h-5 bg-outline-variant/40"></div><nav class="hidden xl:flex items-center gap-gutter" data-active-classes="text-primary font-label-md font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="inicio" href="#">Inicio</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="curso-ipo" href="#">Curso IPO</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="mpiu-a" href="#">MPIu+a</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="recursos" href="#">Recursos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-body-sm text-body-sm">Buscar conceptos...</span><kbd class="hidden sm:inline-flex items-center gap-space-xs font-code-inline text-code-inline bg-surface-container-lowest px-1.5 py-0.5 rounded shadow-sm text-outline">⌘K</kbd></button><div class="hidden lg:flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col items-end gap-1"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Progreso global</span><span class="font-code-inline text-code-inline font-medium text-primary">42%</span></div><div class="w-24 h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="w-5/12 h-full bg-primary-container rounded-full"></div></div></div></div><div class="flex items-center gap-space-xs pl-space-xs"><button aria-label="Cambiar tema visual" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/45" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full bg-surface-container-low/70 border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-gutter flex items-center overflow-x-auto no-scrollbar py-1"><nav class="flex items-center gap-space-xs py-0.5" data-active-classes="bg-surface-container-lowest text-primary shadow-[0_1px_4px_rgba(0,0,0,0.06)] font-semibold"><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="#">M1 Fundamentos</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="#">M2 Factor Humano</a><a aria-current="page" class="px-space-md py-1 rounded-full whitespace-nowrap transition-all bg-surface-container-lowest text-primary shadow-[0_1px_4px_rgba(0,0,0,0.06)] font-semibold" data-path="modulo-3-dcu" href="#">M3 DCU</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a><a class="px-space-md py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container whitespace-nowrap transition-all" data-path="modulo-7-accesibilidad" href="#">M7 Accesibilidad</a></nav></div></div></header><main class="w-full flex-1 pt-24 bg-background"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb & Back Context Bar -->
+<div class="w-full bg-surface-container-low/60 py-space-sm border-b border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<nav aria-label="Migas de pan" class="flex items-center flex-wrap gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Inicio</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Curso IPO</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Módulo 3: DCU</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Fases MPIu+a</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span aria-current="page" class="text-on-surface font-semibold">Fase de Implementación</span>
+</nav>
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-on-surface transition-colors self-start sm:self-auto group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+<span>Volver a 03 Modelo MPIu+a</span>
+</a>
+</div>
+</div>
+<!-- Main Lesson Canvas -->
+<div class="w-full max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-xl">
+<!-- Hero / Header Section of the Unit -->
+<header class="flex flex-col gap-space-md">
+<!-- Taxonomy Badge Stack -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold shadow-sm tracking-wide">
+          FASE 03 DE MPIu+a
+        </span>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">
+          INGENIERÍA DEL SOFTWARE Y CÓDIGO ACCESIBLE
+        </span>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm font-medium">
+          Cátedra Dr. Toni Granollers (GRIHO UdL)
+        </span>
+<span class="px-space-md py-1 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-medium">
+          Metodología MPIu+a
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs max-w-5xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">
+          UNIDAD DIDÁCTICA · M3.3 / INGENIERÍA DE LA USABILIDAD Y ACCESIBILIDAD
+        </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+          Fase de Implementación en el Modelo MPIu+a
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Tercera fase del ciclo de vida de MPIu+a donde el diseño validado se materializa en código ejecutable, garantizando que la arquitectura técnica, la usabilidad empírica y la accesibilidad universal se preserven sin desviaciones.
+        </p>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-gutter pt-space-xs">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Posición en MPIu+a</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Fase 3 de 4</span>
+<span class="font-body-sm text-body-sm text-outline">Previa a Lanzamiento</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dedicación de Recursos</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Máxima (Horas/Dev)</span>
+<span class="font-body-sm text-body-sm text-outline">Optimizada por DCU</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Criterio de Evaluación</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Prototipos Software</span>
+<span class="font-body-sm text-body-sm text-outline">Pruebas tempranas</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auditoría de Cierre</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Heurística Final</span>
+<span class="font-body-sm text-body-sm text-outline">WCAG 2.2 + Consistencia</span>
+</div>
+</div>
+</header>
+<!-- SECTION 2: General Introduction Card & Academic Foundation -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-start justify-between flex-wrap gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">De la Especificación y Prototipos al Código Software</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Naturaleza de la fase dentro de los ciclos interactivos de DCU</p>
+</div>
+</div>
+<span class="px-space-md py-1 bg-surface-container rounded-full font-code-inline text-code-inline text-on-surface-variant">
+          MPIu+a :: Pipeline-Phase-03
+        </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-md font-body-md text-body-md text-on-surface leading-relaxed">
+<p>
+            En el modelo de proceso <strong>MPIu+a</strong>, la fase de implementación no parte desde una hoja en blanco ni de conjeturas apresuradas. El trabajo sustancial de <em>comprensión conceptual, modelado de tareas del usuario y diseño arquitectónico</em> ha quedado plenamente consolidado en las etapas anteriores. Las actividades de esta fase pertenecen, mayoritariamente, al dominio riguroso de la <strong>Ingeniería del Software</strong> (codificación, arquitectura de módulos, integración y pruebas de integración).
+          </p>
+<p>
+            No obstante, MPIu+a introduce un postulado crítico: <strong>la programación no es una caja negra aislada del usuario</strong>. Resulta indispensable continuar realizando evaluaciones constantes con prototipos software funcionales y versiones preliminares en las que participen directamente usuarios e implicados representativos (<em>stakeholders</em>).
+          </p>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<span class="material-symbols-outlined text-[24px] text-primary flex-shrink-0">query_stats</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Minimización de costes por cambio tardío</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Aunque la fase de codificación consume habitualmente el mayor porcentaje de horas-persona del proyecto, aplicar de forma metódica el modelo MPIu+a reduce radicalmente la probabilidad de refactorizaciones estructurales provocadas por malinterpretaciones del problema.
+              </p>
+</div>
+</div>
+</div>
+<!-- Academic Quote Box -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm bg-surface-container p-space-lg rounded-xl">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[22px]">format_quote</span>
+<span>Testimonio Docente e Industrial</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+            "Cuento en mi experiencia laboral con más de una década desarrollando procesos y proyectos software para varias empresas, así como un elevado número de colaboraciones con empresas del sector informático especializado en servicios y desarrollo software. Ello me permite asegurar que la mayoría de proyectos de sistemas software interactivos parten de una pobre definición de requisitos funcionales para pasar directamente a la fase de codificación y a partir de las primeras líneas de código que los programadores escriben se va forjando el resto del código del sistema final. Y normalmente, estas primeras líneas de código permanecen en él durante el resto de su vida útil... causando innumerables problemas difícilmente justificables."
+          </blockquote>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Dr. Toni Granollers</span>
+<span>Director GRIHO · UdL</span>
+</div>
+</div>
+</div>
+<!-- Critical Milestone: Heuristic Pre-Launch Inspection -->
+<div class="p-space-md rounded-xl bg-primary-fixed/30 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-primary-fixed font-semibold">Hito Canónico de Cierre: Evaluación Heurística Pre-Lanzamiento</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Antes de transferir el código a la fase de Lanzamiento, es prescriptivo realizar una evaluación heurística formal para certificar la consistencia global del producto interactivo y el cumplimiento de las heurísticas de Nielsen y Tognazzini.
+            </p>
+</div>
+</div>
+<span class="px-space-md py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary font-semibold shadow-sm whitespace-nowrap self-start sm:self-auto">
+          Requisito de Salida
+        </span>
+</div>
+</section>
+<!-- SECTION 3: Deep Dives - Two Curricular Pillar Cards -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-stretch">
+<!-- PILLAR A: Codificación en MPIu+a -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">code</span>
+</div>
+<span class="px-space-md py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">
+              Eje Curricular A
+            </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+              Codificación en el Modelo MPIu+a
+            </h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">
+              Trazabilidad, preservación de especificaciones y gobernanza del código
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Durante la escritura de código existe un riesgo silencioso pero crítico: la <strong>corrupción inadvertida del diseño por alteraciones casuales o «bienintencionadas»</strong>. Pequeños cambios en espaciados, orden de tabulación, tiempos de respuesta o comportamiento de controles desarticulan los modelos mentales validados previamente en prototipado.
+          </p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0 mt-0.5">group_work</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Coordinación Diseñadores ⇄ Programadores</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Establecimiento de canales unificados (Design Tokens, Storybook, contratos de interfaz) para anular discrepancias entre el prototipo validado y el componente implementado.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline flex-shrink-0 mt-0.5">balance</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Superación del Sesgo Técnico</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Los desarrolladores han sido tradicionalmente formados para optimizar el peso del binario y la velocidad de CPU, postergando la usabilidad, la ergonomía visual y los estados accesibles.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-error flex-shrink-0 mt-0.5">rule</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Compromiso Estricto con el DCU</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Cualquier refactorización o alteración lógica que modifique la interacción debe someterse a validación con usuarios reales antes de consolidarse en producción.
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Ref: curso-ipo.com/codificacion</span>
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:underline font-semibold" href="#">
+<span>Ver directrices de codificación</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- PILLAR B: Accesibilidad en la Implementación -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">accessibility_new</span>
+</div>
+<span class="px-space-md py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-medium">
+              Eje Curricular B
+            </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+              Accesibilidad en la Implementación
+            </h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">
+              WAI-W3C, ética profesional y la tecnología de asistencia
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            La accesibilidad debe proyectarse <strong>desde la primera línea de código</strong>. Si se programa de manera secuencial y estructurada, el esfuerzo marginal añadido es prácticamente nulo; si se posterga como un parche cosmético final, el coste se multiplica exponencialmente.
+          </p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-error-container/30 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-error flex-shrink-0 mt-0.5">gavel</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Advertencia Ética: Las Trampas Sintácticas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Es fácil «engañar» a validadores automáticos inyectando atributos <code>aria-*</code> o <code>alt=""</code> vacíos para obtener una puntuación 100%. La accesibilidad genuina requiere rigor ético hacia personas con necesidades reales.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0 mt-0.5">flaky</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">La Falacia de la Equiparación Automática</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<em>«Hacer un sistema accesible no lo convierte automáticamente en usable para personas con discapacidad»</em>. Se requiere evaluar cómo interactúan lectores de pantalla (JAWS/NVDA), pulsadores únicos y magnificadores.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface flex-shrink-0 mt-0.5">checklist</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Estándares WAI &amp; WCAG 2.2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Cumplimiento verificado de los principios: Perceptible, Operable, Comprensible y Robusto a nivel semántico de marcado.
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Ref: curso-ipo.com/implementacion-accesibilidad</span>
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:underline font-semibold" href="#">
+<span>Explorar estándares WAI</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- SECTION 4: Interactive Didactic Simulator / Code Audit Sandbox -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg sm:p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">bug_report</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Laboratorio de Implementación MPIu+a</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auditoría Didáctica de Código, Accesibilidad y Usabilidad Pre-Lanzamiento</p>
+</div>
+</div>
+<span class="px-space-md py-1 bg-surface-container rounded-full font-label-sm text-label-sm text-on-surface-variant">
+          Simulador Interactivo
+        </span>
+</div>
+<!-- Simulator Tabs Navigation -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="lab-tab-group" role="tablist">
+<button class="lab-tab-trigger active px-space-md py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-primary-container text-on-primary shadow-sm flex items-center gap-space-xs whitespace-nowrap" id="tab-btn-1" onclick="switchLabTab(1)" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+<span>1. Prototipos Software Iniciales</span>
+</button>
+<button class="lab-tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs whitespace-nowrap" id="tab-btn-2" onclick="switchLabTab(2)" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+<span>2. Prevención de Alteraciones</span>
+</button>
+<button class="lab-tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs whitespace-nowrap" id="tab-btn-3" onclick="switchLabTab(3)" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>3. Accesibilidad vs Trampas</span>
+</button>
+<button class="lab-tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-space-xs whitespace-nowrap" id="tab-btn-4" onclick="switchLabTab(4)" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>4. Heurística Pre-Lanzamiento</span>
+</button>
+</div>
+<!-- Tab Content Panels -->
+<!-- Panel 1: Prototipos Software Iniciales -->
+<div class="lab-panel block space-y-space-md" id="lab-panel-1">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Concepto Didáctico #1</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              Prototipos de Alta Fidelidad Tempranos en Código
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              En MPIu+a, no se espera al ensamblaje del 100% del software. Se construyen <em>«esqueletos interactivos»</em> que conectan componentes clave para medir tiempos de respuesta percibidos y confirmar que el modelo mental del usuario se respeta en la tecnología real.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Validar latencias antes de asentar la base de datos definitiva.</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Detectar fricciones no visibles en herramientas de diseño gráfico.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm font-code-inline text-code-inline">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs border-b border-outline-variant/30">
+<span class="font-semibold text-primary">Protocolo_MPIu+a_Test.sh</span>
+<span class="text-[11px] bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded">CI/CD Pipeline</span>
+</div>
+<pre class="text-[12px] text-on-surface overflow-x-auto leading-relaxed"><span class="text-secondary"># 1. Despliegue de prototipo funcional mínimo</span>
+$ git checkout -b feature/user-task-flow-alpha
+$ npm run build:interactive-skeleton
+
+<span class="text-secondary"># 2. Test empírico con 5 usuarios representativos</span>
+$ ./mpiua-cli audit --users=representative --task="checkout_01"
+✓ Flujo completado sin desbordamiento cognitivo
+✓ Latencia percibida: 120ms (Cumple ISO 9241-11)</pre>
+</div>
+</div>
+</div>
+<!-- Panel 2: Prevención de Alteraciones en Código -->
+<div class="lab-panel hidden space-y-space-md" id="lab-panel-2">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="p-space-md rounded-xl bg-error-container/20 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+<span>Mala Práctica: Alteración Arbitraria de Dev</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              El desarrollador reemplaza un menú validado por conveniencia técnica de un framework, rompiendo la navegación:
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg font-code-inline text-[12px] text-error">
+<code>&lt;!-- Cambiado por el dev sin consultar al diseñador --&gt;<br/>&lt;div onclick="doAction()" class="btn-custom"&gt;<br/>  Aceptar operación<br/>&lt;/div&gt;</code>
+</div>
+<span class="font-label-sm text-label-sm text-error">Riesgo: Pierde soporte de teclado (Tab/Enter), foco y accesibilidad semántica.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Solución MPIu+a: Preservación Semántica</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Componente fiel a la especificación, accesible por teclado y con estado de carga predecible:
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg font-code-inline text-[12px] text-on-surface">
+<code>&lt;button type="button" aria-busy="false" class="btn-primary"&gt;<br/>  &lt;span class="label"&gt;Aceptar operación&lt;/span&gt;<br/>&lt;/button&gt;</code>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ventaja: Garantiza interacción nativa para cualquier tecnología de asistencia.</span>
+</div>
+</div>
+</div>
+<!-- Panel 3: Accesibilidad vs Trampas Sintácticas -->
+<div class="lab-panel hidden space-y-space-md" id="lab-panel-3">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="p-space-md rounded-xl bg-error-container/20 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-error font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span>«Trampa» para el Auditor Automático</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Etiquetas añadidas para burlar validadores que frustran al usuario de lector de pantalla:
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg font-code-inline text-[12px] text-error">
+<code>&lt;!-- Pasa tests automáticos con 100% pero es inútil --&gt;<br/>&lt;img src="grafica.png" alt="imagen" /&gt;<br/>&lt;input type="text" aria-label="campo" /&gt;</code>
+</div>
+<span class="font-label-sm text-label-sm text-error">El lector verbaliza: «Imagen. Campo». Cero contenido informativo real.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span>Rigor Ético en Código MPIu+a</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Descripción substantiva y contextual que otorga autonomía real al usuario ciego o con baja visión:
+            </p>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg font-code-inline text-[12px] text-on-surface">
+<code>&lt;img src="grafica.png" <br/>  alt="Gráfico de barras: tasa de errores reducida en un 64% tras DCU." /&gt;<br/>&lt;input type="email" id="user-email" <br/>  aria-describedby="email-hint" required /&gt;</code>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Resultado: Información equivalente y usabilidad plena para el usuario.</span>
+</div>
+</div>
+</div>
+<!-- Panel 4: Heurística Pre-Lanzamiento -->
+<div class="lab-panel hidden space-y-space-md" id="lab-panel-4">
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[20px] text-primary">checklist_rtl</span>
+<span>Checklist Canónico Pre-Lanzamiento (Evaluación Heurística de Código)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Metodología Toni Granollers</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary font-semibold">1. Consistencia Visual y Operativa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Verificar que la terminología, ubicaciones de botones y comportamientos del cursor no difieren entre módulos implementados por distintos equipos.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary font-semibold">2. Control y Libertad del Usuario</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Comprobar que todas las transacciones críticas cuentan con confirmación previa y posibilidad real de «Deshacer» (Undo/Redo).
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary font-semibold">3. Mensajes de Error en Código</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Eliminar códigos de excepción de base de datos (`SQLSTATE 23505`) y presentar textos orientados a la solución para el usuario.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Practical Comparison Matrix (Software Engineering vs MPIu+a Implementation) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg sm:p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Matriz de Diferenciación</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Ingeniería de Software Tradicional vs. Fase de Implementación MPIu+a</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cómo transforma el DCU el trabajo de codificación del producto</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="border-b border-outline-variant/30 text-on-surface-variant font-label-md text-label-md">
+<th class="py-space-sm pr-space-md">Dimensión de Desarrollo</th>
+<th class="py-space-sm px-space-md">Enfoque Tradicional / Cascada</th>
+<th class="py-space-sm pl-space-md text-primary font-semibold">Enfoque MPIu+a (DCU)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-on-surface">
+<tr>
+<td class="py-space-md pr-space-md font-semibold text-on-surface">Punto de inicio en código</td>
+<td class="py-space-md px-space-md text-on-surface-variant">A menudo se programa desde especificaciones abstractas no testeadas.</td>
+<td class="py-space-md pl-space-md font-medium text-primary">Se programa sobre prototipos validados empíricamente con usuarios.</td>
+</tr>
+<tr>
+<td class="py-space-md pr-space-md font-semibold text-on-surface">Criterio de éxito del programador</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Cumplir requerimientos funcionales y optimizar CPU/RAM.</td>
+<td class="py-space-md pl-space-md font-medium text-primary">Eficacia, eficiencia y satisfacción del usuario final + accesibilidad.</td>
+</tr>
+<tr>
+<td class="py-space-md pr-space-md font-semibold text-on-surface">Tratamiento de la Accesibilidad</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Parche cosmético de última hora para cumplir auditorías normativas.</td>
+<td class="py-space-md pl-space-md font-medium text-primary">Semántica nativa integrada desde la primera línea de código.</td>
+</tr>
+<tr>
+<td class="py-space-md pr-space-md font-semibold text-on-surface">Gestión del cambio en código</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Decisiones unilaterales de desarrollo ante dificultades técnicas.</td>
+<td class="py-space-md pl-space-md font-medium text-primary">Todo cambio en la interacción se revalida con usuarios e implicados.</td>
+</tr>
+<tr>
+<td class="py-space-md pr-space-md font-semibold text-on-surface">Auditoría previa a puesta en producción</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Pruebas unitarias de software y tests de carga exclusivamente.</td>
+<td class="py-space-md pl-space-md font-medium text-primary">Pruebas de software + Evaluación heurística formal de usabilidad.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 6: Curricular Stepper & Navigation -->
+<nav aria-label="Navegación curricular entre fases" class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-space-md">
+<!-- Previous Step Link -->
+<a class="p-space-lg rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col gap-space-xs group" href="#">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">cloud_upload</span>
+<span>Fase Anterior</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold">
+          02. Fase de Diseño
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Modelado conceptual, arquitectura de información y prototipado
+        </span>
+</a>
+<!-- Central Index Button -->
+<a class="p-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-all flex flex-col items-center justify-center text-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[24px] text-primary">view_timeline</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Índice General MPIu+a</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ver las 4 fases y ciclo de vida</span>
+</a>
+<!-- Next Step Link -->
+<a class="p-space-lg rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col gap-space-xs items-end text-right group" href="#">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-space-xs">
+<span>Siguiente Fase</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors font-semibold">
+          04. Fase de Lanzamiento
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Despliegue operativo, mantenimiento y seguimiento en el mundo real
+        </span>
+</a>
+</nav>
+<!-- Academic Copyright & Institutional Attribution Card -->
+<aside class="p-space-md rounded-xl bg-surface-container text-on-surface-variant flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-primary">school</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">
+            Material Académico Oficial UdL · GRIHO — Cátedra Dr. Toni Granollers
+          </span>
+<span class="font-body-sm text-body-sm text-outline">
+            Universitat de Lleida · Grup de Recerca en Interacció Persona-Ordinador
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>Licencia CC BY-NC 4.0 Internacional</span>
+</div>
+</aside>
+</div>
+<!-- Interactive JavaScript for Simulator Tabs -->
+<script>
+    function switchLabTab(index) {
+      // Hide all panels
+      const panels = document.querySelectorAll('.lab-panel');
+      panels.forEach(p => {
+        p.classList.add('hidden');
+        p.classList.remove('block');
+      });
+
+      // Show selected panel
+      const targetPanel = document.getElementById('lab-panel-' + index);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+        targetPanel.classList.add('block');
+      }
+
+      // Reset button styles
+      const buttons = document.querySelectorAll('.lab-tab-trigger');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container');
+      });
+
+      // Activate clicked button
+      const activeBtn = document.getElementById('tab-btn-' + index);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container');
+        activeBtn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl border-t border-outline-variant/30"><div class="max-w-7xl mx-auto px-gutter flex flex-col gap-space-lg"><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/20"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Curso de Interacción Persona-Ordenador (IPO)</span><p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">Iniciativa docente e investigadora liderada por el <strong class="text-on-surface font-medium">Dr. Toni Granollers</strong> dentro del grupo <strong class="text-on-surface font-medium">GRIHO</strong> (Grup de Recerca en Interacció Persona-Ordinador) en la Universitat de Lleida.</p></div><div class="flex flex-wrap items-center gap-space-md text-on-surface-variant"><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">Universitat de Lleida</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">GRIHO</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">AIPO</span><span class="px-3 py-1 bg-surface-container-low rounded-lg font-label-sm text-label-sm text-on-surface-variant font-medium">ACM SIGCHI</span></div></div><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px] text-primary">verified</span><span>Garantía de accesibilidad conforme a <strong class="text-on-surface-variant font-medium">WCAG 2.2 Nivel AA</strong></span></div><div class="flex flex-wrap items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">apps</span><span>Contenidos bajo licencia <a class="text-primary hover:underline font-medium" href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" rel="noopener noreferrer" target="_blank">Creative Commons CC BY-NC 4.0 Internacional</a></span></div></div></div></footer></body></html>

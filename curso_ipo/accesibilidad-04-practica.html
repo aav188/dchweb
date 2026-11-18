@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#faf8fe]" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curso IPO — Accesibilidad 01: Accesibilidad de las Interfaces (con Test, Flashcards y Huecos)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#faf8fe',
+              dim: '#dad9df',
+              bright: '#faf8fe',
+              lowest: '#ffffff',
+              low: '#f4f3f8',
+              container: '#eeedf3',
+              high: '#e9e7ed',
+              highest: '#e3e2e7',
+            },
+            'on-surface': {
+              DEFAULT: '#1a1b20',
+              variant: '#45464f',
+            },
+            outline: {
+              DEFAULT: '#717785',
+              variant: '#c7c5d0',
+            },
+            primary: {
+              DEFAULT: '#0071e3',
+              hover: '#0059b5',
+              soft: '#e8f2ff',
+              border: '#abc7ff',
+              container: '#0071e3',
+              'on-container': '#fcfbff',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1b20;
+      background-color: #faf8fe;
+      -webkit-font-smoothing: antialiased;
+    }
+    .fc { perspective: 1200px; }
+    .fc-in { position: relative; width: 100%; height: 100%; transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+    .fc.flip .fc-in { transform: rotateY(180deg); }
+    .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1rem; }
+    .face-back { transform: rotateY(180deg); }
+  </style>
+<meta content="web_standard" name="shell-type"/></head>
+<body class="min-h-full flex flex-col bg-[#faf8fe] text-[#1a1b20] antialiased">
+<!-- 1. ENCABEZADO PERSISTENTE GLOBAL -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#dad9df]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div>
+<!-- Migas de pan de navegación curricular -->
+<div class="bg-[#f4f3f8]/80 border-t border-[#eeedf3]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-2 text-xs text-[#45464f] flex items-center gap-1.5 overflow-x-auto whitespace-nowrap">
+<a class="hover:text-[#0071e3] transition-colors" href="index.html">Inicio</a>
+<span class="text-[#c7c5d0]">/</span>
+<a class="hover:text-[#0071e3] transition-colors" href="index.html">Curso IPO</a>
+<span class="text-[#c7c5d0]">/</span>
+<a class="hover:text-[#0071e3] transition-colors" href="accesibilidad.html">Módulo 1: Fundamentos · Accesibilidad</a>
+<span class="text-[#c7c5d0]">/</span>
+<span class="text-[#1a1b20] font-medium">01 Accesibilidad de las Interfaces</span>
+</div>
+</div>
+</header>
+<!-- 2. SUBBARRA TEMÁTICA DE ACCESIBILIDAD (4 TEMAS HOMOGÉNEOS CON PÍLDORAS) -->
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-2">
+<div class="flex items-center gap-2 overflow-x-auto pb-2">
+<a class="px-4 py-2 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm transition whitespace-nowrap flex items-center gap-1.5" href="accesibilidad-01-interfaces.html">
+<span>01 Accesibilidad de las Interfaces</span>
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+</a>
+<a class="px-4 py-2 rounded-full text-xs font-medium bg-white text-[#45464f] border border-[#dad9df] hover:border-[#0071e3] hover:text-[#0071e3] transition whitespace-nowrap" href="accesibilidad-02-necesidad-general.html">
+        02 Una Necesidad General
+      </a>
+<a class="px-4 py-2 rounded-full text-xs font-medium bg-white text-[#45464f] border border-[#dad9df] hover:border-[#0071e3] hover:text-[#0071e3] transition whitespace-nowrap" href="accesibilidad-03-internet.html">
+        03 Accesibilidad en Internet
+      </a>
+<a class="px-4 py-2 rounded-full text-xs font-medium bg-white text-[#45464f] border border-[#dad9df] hover:border-[#0071e3] hover:text-[#0071e3] transition whitespace-nowrap" href="accesibilidad-04-motivos.html">
+        04 Motivos de Diseño Accesible
+      </a>
+</div>
+</div>
+<!-- 3. CONTENEDOR PRINCIPAL ESTILO USABILIDAD 03 -->
+<main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 space-y-6"><div class="flex flex-col w-full space-y-8">
+<!-- 1. HERO DIDÁCTICO MULTI-MODAL -->
+<section class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+<div class="flex items-start gap-4 z-10 max-w-3xl">
+<div class="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[32px]">sports_esports</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">JUEGO 4 · TODO EN UNO</span>
+<span class="text-outline-variant font-bold">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Módulo 1 · Accesibilidad 04 Motivos</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-1">
+          Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre los 5 pilares estratégicos, Directiva 2016/2102, norma EN 301 549, silver economy y ROI de la accesibilidad.
+        </p>
+</div>
+</div>
+<!-- Badge métricas condensadas -->
+<div class="z-10 shrink-0 w-full md:w-auto bg-surface-container-low p-4 rounded-xl flex md:flex-col items-center md:items-end justify-between gap-1 shadow-2xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        20 preguntas • 12 tarjetas • 6 textos
+      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Contenido temático completo</span>
+</div>
+<!-- Fondo sutil decorativo -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-primary-fixed opacity-30 blur-3xl pointer-events-none"></div>
+</section>
+<!-- 2. INTERACTIVE SUITE: TABS Y CONTENEDOR DE JUEGO -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Barra de Pestañas y Atajos de Teclado -->
+<div class="p-4 sm:p-5 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0" role="tablist">
+<button class="px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center gap-2 transition cursor-pointer" id="btnQuiz" onclick="switchSuiteTab('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (20)</span>
+</button>
+<button class="px-5 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition flex items-center gap-2 cursor-pointer" id="btnCards" onclick="switchSuiteTab('cards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (12)</span>
+</button>
+<button class="px-5 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition flex items-center gap-2 cursor-pointer" id="btnGaps" onclick="switchSuiteTab('gaps')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (6)</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-outline text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">keyboard</span>
+<span>Atajos activos: [1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</div>
+<!-- Contenedor Dinámico Principal de la Actividad -->
+<div class="p-6 sm:p-10 min-h-[460px] flex flex-col justify-center" id="activityContainer">
+<!-- El JavaScript inyecta aquí dinámicamente la UI activa -->
+</div>
+</section>
+<!-- 3. BARRA INFERIOR DE NAVEGACIÓN CURRICULAR -->
+<nav aria-label="Navegación del capítulo" class="bg-surface-container-lowest rounded-xl p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md text-center transition flex items-center justify-center gap-2" href="accesibilidad-03-internet.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>03 Accesibilidad en Internet</span>
+</a>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Capítulo 04 de 04</span>
+<span class="font-body-sm text-body-sm text-outline">Fin del bloque de Accesibilidad</span>
+</div>
+<a class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md text-center shadow-sm transition flex items-center justify-center gap-2" href="accesibilidad.html">
+<span>Volver al Índice de Accesibilidad</span>
+<span class="material-symbols-outlined text-[18px]">vertical_align_top</span>
+</a>
+</nav>
+</div>
+<script>
+  /* -------------------------------------------------------------
+     BANCO DE DATOS OFICIAL IPO — ACCESIBILIDAD 04: MOTIVOS
+  ------------------------------------------------------------- */
+  const TEST_DATA = [
+    {
+      q: "¿Cuáles son los cinco motivos estratégicos del diseño accesible?",
+      options: [
+        "Social, moral, técnico, económico y legal",
+        "Económico, político, estético, funcional y legal",
+        "Social, legal, educativo, sanitario y comercial",
+        "Técnico, operativo, estético, comercial y normativo"
+      ],
+      a: 0,
+      exp: "La literatura y los marcos directivos estructuran los motivos en: Social, Moral/Ético, Técnico, Económico/Comercial y Legal."
+    },
+    {
+      q: "Según el motivo social, ¿qué efecto secundario provoca la digitalización de servicios esenciales (banca, salud, trámites) si no son accesibles?",
+      options: [
+        "Aumento en el coste del hardware doméstico",
+        "Riesgo crítico de exclusión social y discriminación de colectivos vulnerables",
+        "Reducción automática de los impuestos digitales",
+        "Saturación de los servidores web universitarios"
+      ],
+      a: 1,
+      exp: "Al digitalizar trámites vitales sin diseño accesible, se priva a personas mayores o con discapacidad de sus derechos ciudadanos básicos."
+    },
+    {
+      q: "El concepto de «Diseño Universal» o «Diseño para Todos» persigue diseñar productos para que sean utilizables por…",
+      options: [
+        "Únicamente personas certificadas con más del 33% de discapacidad",
+        "El mayor rango posible de personas sin necesidad de adaptaciones especializadas",
+        "Exclusivamente usuarios de productos de apoyo avanzados",
+        "Desarrolladores sénior de software de escritorio"
+      ],
+      a: 1,
+      exp: "El Diseño Universal busca maximizar el rango de capacidades humanas atendidas desde el diseño conceptual original."
+    },
+    {
+      q: "¿Qué porcentaje aproximado de la población mundial vive con algún tipo de discapacidad según la OMS?",
+      options: ["Aproximadamente el 5%", "Alrededor del 16% (más de 1.300 millones de personas)", "Más del 45%", "Menos del 1%"],
+      a: 1,
+      exp: "El informe mundial de la OMS sobre discapacidad estima que más de 1.300 millones de personas (16% mundial) viven con discapacidad."
+    },
+    {
+      q: "¿Qué fenómeno demográfico actual refuerza enormemente el motivo económico de la accesibilidad?",
+      options: [
+        "El auge de la Silver Economy debido al progresivo envejecimiento poblacional",
+        "La disminución del uso de teléfonos inteligentes",
+        "El abandono de los servicios bancarios en internet",
+        "La desaparición del comercio electrónico B2C"
+      ],
+      a: 0,
+      exp: "La 'Silver Economy' representa el poder adquisitivo creciente de adultos mayores que requieren interfaces accesibles ante el declive sensorial y motriz."
+    },
+    {
+      q: "¿Qué beneficio técnico colateral directo produce la implementación rigurosa de accesibilidad web (WCAG)?",
+      options: [
+        "Incompatibilidad con navegadores antiguos",
+        "Mejora sustancial en la indexación SEO, código semántico limpio y compatibilidad multiplataforma",
+        "Mayor consumo de ancho de banda y latencia de red",
+        "Obligatoriedad de maquetar con tablas HTML"
+      ],
+      a: 1,
+      exp: "El HTML semántico y los metadatos accesibles son exactamente los mismos factores que los motores de búsqueda utilizan para indexar contenidos eficientemente."
+    },
+    {
+      q: "¿Qué directiva comunitaria obliga a que los sitios web y apps móviles del sector público sean accesibles en la UE?",
+      options: [
+        "Directiva (UE) 2016/2102",
+        "Directiva 95/46/CE",
+        "Reglamento General RGPD",
+        "Norma ISO 9001"
+      ],
+      a: 0,
+      exp: "La Directiva (UE) 2016/2102 establece la obligatoriedad de la accesibilidad de los sitios web y aplicaciones móviles de los organismos del sector público."
+    },
+    {
+      q: "¿Qué transposición española aplica la Directiva (UE) 2016/2102 a nivel estatal?",
+      options: [
+        "Ley de Enjuiciamiento Civil 1/2000",
+        "Real Decreto 1112/2018, de 7 de septiembre",
+        "Ley General de Telecomunicaciones de 1998",
+        "Real Decreto Legislativo 1/1996"
+      ],
+      a: 1,
+      exp: "El Real Decreto 1112/2018 regula los requisitos de accesibilidad para el sector público y empresas financiadas con fondos públicos."
+    },
+    {
+      q: "¿Qué estándar técnico europeo armonizado concreta los requisitos de compra pública TIC accesible (EN)?",
+      options: ["EN 301 549", "ISO/IEC 27001", "IEEE 802.11", "EN 50128"],
+      a: 0,
+      exp: "La norma EN 301 549 especifica los requisitos funcionales de accesibilidad aplicables a productos y servicios TIC en Europa."
+    },
+    {
+      q: "¿A qué sector expande las obligaciones legales la European Accessibility Act (Directiva UE 2019/882)?",
+      options: [
+        "Exclusivamente a centros educativos rurales",
+        "Al sector privado: comercio electrónico, servicios bancarios, transporte, terminales de autoservicio y libros electrónicos",
+        "Únicamente a agencias espaciales",
+        "A desarrolladores de videojuegos de consola fija"
+      ],
+      a: 1,
+      exp: "El Acta Europea de Accesibilidad (2019/882) amplía los requisitos de accesibilidad al sector privado y servicios comerciales clave desde 2025."
+    },
+    {
+      q: "¿Qué demuestra el «Efecto Rampa Digital» (Curb-Cut Effect) en IPO?",
+      options: [
+        "Que las rampas aumentan los costes sin beneficiar a nadie",
+        "Que las características diseñadas para personas con discapacidad terminan beneficiando a todos los usuarios",
+        "Que solo los edificios físicos requieren accesibilidad",
+        "Que el diseño accesible empeora la estética visual"
+      ],
+      a: 1,
+      exp: "Así como las rampas en aceras ayudan a carritos de bebés y maletas, los subtítulos o contrastes altos benefician a cualquier persona según su contexto."
+    },
+    {
+      q: "En términos de Retorno de la Inversión (ROI), ¿por qué es más rentable diseñar con accesibilidad desde la fase inicial?",
+      options: [
+        "Corregir barreras en fases de producción o posproducción cuesta hasta 30-100 veces más que prevenirlas en diseño",
+        "El software accesible no requiere pruebas de control de calidad",
+        "No existe diferencia de coste entre prevenir y parchear a posteriori",
+        "Permite omitir las hojas de estilo CSS"
+      ],
+      a: 0,
+      exp: "La remediación retroactiva es carísima en comparación con la adopción de pautas y arquitectura inclusiva desde la fase de prototipado."
+    },
+    {
+      q: "El argumento de «discapacidad situacional o temporal» ayuda a convencer a las empresas porque demuestra que…",
+      options: [
+        "La discapacidad es una condición estática que solo afecta a una minoría fija",
+        "Cualquier usuario experimentará limitaciones funcionales por lesiones, reflejos solares, ruido o fatiga",
+        "Las leyes solo protegen a usuarios de ordenadores portátiles",
+        "No es necesario diseñar para lectores de pantalla"
+      ],
+      a: 1,
+      exp: "Un brazo roto (temporal) o conducir con ruido ambiental (situacional) demuestran que la accesibilidad universal impacta en el 100% de los clientes."
+    },
+    {
+      q: "¿Qué riesgo legal y comercial corren las empresas internacionales que ignoran la accesibilidad (ej. ADA en EE.UU.)?",
+      options: [
+        "Demandas judiciales masivas, sanciones millonarias y severo daño reputacional de marca",
+        "Premios gubernamentales a la innovación",
+        "Mayor facilidad para licitaciones públicas internacionales",
+        "Inmunidad diplomática digital"
+      ],
+      a: 0,
+      exp: "Casos como Target, Domino's Pizza o Netflix sentaron jurisprudencia sobre cómo la falta de accesibilidad acarrea litigios multimillonarios bajo la ADA y leyes europeas."
+    },
+    {
+      q: "El motivo ético o moral se fundamenta en que el acceso a la tecnología e información es…",
+      options: [
+        "Un lujo prescindible reservado al sector tecnológico",
+        "Un Derecho Humano fundamental respaldado por la Convención de la ONU sobre los Derechos de las Personas con Discapacidad",
+        "Una recomendación puramente estética sin trascendencia",
+        "Un protocolo opcional de software libre"
+      ],
+      a: 1,
+      exp: "El artículo 9 de la Convención de la ONU reconoce explícitamente el acceso a las TIC y sistemas de información como un derecho inalienable."
+    },
+    {
+      q: "¿Por qué el mercado de personas con necesidades de accesibilidad suele denominarse «el mercado desatendido más grande del mundo»?",
+      options: [
+        "Porque su volumen y poder adquisitivo superan al de economías enteras pero encuentran barreras constantes de compra",
+        "Porque no tienen dinero para comprar en internet",
+        "Porque prefieren el comercio analógico tradicional exclusivamente",
+        "Porque no disponen de conexión a internet"
+      ],
+      a: 0,
+      exp: "Conocido como 'The Click-Away Pound', millones de transacciones se pierden anualmente en webs donde el proceso de checkout no es accesible."
+    },
+    {
+      q: "¿Qué relación existe entre la accesibilidad y la sostenibilidad del software?",
+      options: [
+        "El código accesible y semántico es más ligero, reduce peticiones innecesarias y maximiza la vida útil del sistema",
+        "El software accesible gasta tres veces más energía de servidor",
+        "No hay ninguna relación",
+        "La accesibilidad obliga a usar servidores de carbón"
+      ],
+      a: 0,
+      exp: "La optimización de arquitecturas semánticas limpias reduce la huella de carbono digital y mejora la eficiencia de renderizado."
+    },
+    {
+      q: "En el marco de la norma EN 301 549, ¿qué pautas globales se adoptan como referencia técnica para páginas web?",
+      options: [
+        "WCAG 2.1 / 2.2 nivel AA",
+        "Directrices de impresión ISO 12647",
+        "Pautas de usabilidad de Nielsen de 1994 exclusivamente",
+        "Estándares TCP/IP RFC 791"
+      ],
+      a: 0,
+      exp: "La norma armonizada EN 301 549 incorpora íntegramente los criterios de conformidad de las WCAG nivel AA para el entorno web y documental."
+    },
+    {
+      q: "¿Qué implica la «Declaración de Accesibilidad» exigida por el RD 1112/2018?",
+      options: [
+        "Un documento público obligatorio que especifica el nivel de conformidad del sitio, contenido no accesible y vías de reclamación",
+        "Un logotipo ornamental sin valor legal",
+        "Una carta privada dirigida al rector universitario",
+        "Un formulario de renuncia de responsabilidad civil"
+      ],
+      a: 0,
+      exp: "Es un informe estructurado y público donde la entidad declara su estado de accesibilidad, excepciones y mecanismos de retroalimentación ciudadana."
+    },
+    {
+      q: "En conclusión, el diseño accesible debe entenderse en IPO como…",
+      options: [
+        "Un parche cosmético opcional al final del ciclo de vida",
+        "Un pilar intrínseco de calidad, innovación técnica, justicia social y viabilidad económica",
+        "Una imposición exclusiva para sitios web gubernamentales",
+        "Un impedimento para crear interfaces creativas"
+      ],
+      a: 1,
+      exp: "La accesibilidad no limita el diseño; potencia la calidad general, expande el mercado y asegura un ecosistema digital equitativo."
+    }
+  ];
+
+  const FLASHCARDS_DATA = [
+    {
+      f: "Los 5 Motivos Estratégicos",
+      b: "Social, Moral/Ético, Técnico, Económico/Comercial y Legal. Justifican la accesibilidad como vector de excelencia integral en IPO."
+    },
+    {
+      f: "Directiva (UE) 2016/2102",
+      b: "Normativa comunitaria obligatoria que exige accesibilidad universal en sitios web y apps móviles del sector público."
+    },
+    {
+      f: "Real Decreto 1112/2018",
+      b: "Transposición española de la Directiva 2016/2102. Obliga a revisiones periódicas y declaraciones públicas de conformidad."
+    },
+    {
+      f: "Norma EN 301 549",
+      b: "Estándar europeo armonizado de requisitos de accesibilidad para compras y licitaciones de productos y servicios TIC."
+    },
+    {
+      f: "European Accessibility Act (2019/882)",
+      b: "Expansión histórica de la exigencia de accesibilidad hacia el sector privado: e-commerce, banca digital, billetes y terminales."
+    },
+    {
+      f: "Efecto Rampa (Curb-Cut Effect)",
+      b: "Principio de IPO donde innovaciones creadas para discapacidad benefician transversalmente a toda la sociedad (ej. subtítulos)."
+    },
+    {
+      f: "Silver Economy",
+      b: "Mercado económico impulsado por adultos mayores. Requiere interfaces con tipografía flexible, alto contraste y modelos de tarea claros."
+    },
+    {
+      f: "Coste de Remediación (ROI)",
+      b: "Resolver problemas de accesibilidad en fase de desarrollo o posventa es entre 30 y 100 veces más costoso que preverlo en prototipado."
+    },
+    {
+      f: "Sinergia SEO & Accesibilidad",
+      b: "El HTML semántico, títulos jerárquicos y transcripciones textuales multiplican la indexación en motores de búsqueda de forma orgánica."
+    },
+    {
+      f: "Convención ONU (Art. 9)",
+      b: "Marco moral supremo: consagra el acceso a las TIC y a internet como un Derecho Humano fundamental e irrenunciable."
+    },
+    {
+      f: "The Click-Away Pound",
+      b: "Fenómeno económico cuantificado: millones de euros/libras perdidos en comercio electrónico por carritos de compra inaccesibles."
+    },
+    {
+      f: "Discapacidad Situacional",
+      b: "Limitación impuesta por el entorno físico: usar el móvil con una mano bajo luz solar cegadora o en entornos con ruido extremo."
+    }
+  ];
+
+  const GAPS_DATA = [
+    {
+      title: "1. Marco Legal Comunitario y Español",
+      text: "La Directiva europea [2016/2102] supuso un hito al exigir accesibilidad en el sector público. En España se transpuso mediante el Real Decreto [1112/2018], obligando a publicar una declaración de accesibilidad estructurada."
+    },
+    {
+      title: "2. Estándar Técnico de Adquisición",
+      text: "Las compras públicas de tecnología en Europa se rigen por la norma técnica [EN 301 549], la cual adopta como pauta troncal los criterios de conformidad [WCAG] en su nivel intermedio [AA]."
+    },
+    {
+      title: "3. Expansión al Mercado Privado",
+      text: "El Acta Europea de Accesibilidad o Directiva [2019/882] extiende la obligatoriedad al sector comercial privado, alcanzando a plataformas de comercio [electrónico], servicios de banca digital y terminales de autoservicio."
+    },
+    {
+      title: "4. Economía del Envejecimiento y Retorno",
+      text: "El progresivo envejecimiento poblacional ha consolidado la denominada [Silver] Economy. En términos de ROI, prevenir barreras en fase de diseño es hasta [30] veces más económico que rediseñar a posteriori."
+    },
+    {
+      title: "5. Efecto Rampa y Beneficio Transversal",
+      text: "El conocido efecto [rampa] demuestra que soluciones concebidas para personas con discapacidad mejoran la usabilidad general, protegiendo al usuario ante limitaciones [temporales] o de carácter situacional."
+    },
+    {
+      title: "6. Fundamento Moral y Ético",
+      text: "El artículo 9 de la Convención de la [ONU] reconoce el acceso universal a los sistemas de información e internet no como una cortesía técnica, sino como un auténtico [derecho] humano fundamental."
+    }
+  ];
+
+  /* -------------------------------------------------------------
+     CONTROLADOR DE SUITE EDUCATIVA (MODO TABS)
+  ------------------------------------------------------------- */
+  let currentActiveTab = 'quiz';
+  let activeKeydownListener = null;
+
+  function switchSuiteTab(tab) {
+    currentActiveTab = tab;
+    const btnQ = document.getElementById('btnQuiz');
+    const btnC = document.getElementById('btnCards');
+    const btnG = document.getElementById('btnGaps');
+
+    const defaultBtnClass = "px-5 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition flex items-center gap-2 cursor-pointer";
+    const activeBtnClass = "px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center gap-2 transition cursor-pointer";
+
+    [btnQ, btnC, btnG].forEach(b => { if (b) b.className = defaultBtnClass; });
+
+    if (tab === 'quiz') {
+      if (btnQ) btnQ.className = activeBtnClass;
+      renderQuizMode();
+    } else if (tab === 'cards') {
+      if (btnC) btnC.className = activeBtnClass;
+      renderCardsMode();
+    } else if (tab === 'gaps') {
+      if (btnG) btnG.className = activeBtnClass;
+      renderGapsMode();
+    }
+  }
+
+  /* -------------------------------------------------------------
+     MODO 1: TEST INTERACTIVO (20 PREGUNTAS)
+  ------------------------------------------------------------- */
+  function renderQuizMode() {
+    const container = document.getElementById('activityContainer');
+    const deck = [...TEST_DATA].sort(() => Math.random() - 0.5);
+    let currentIndex = 0;
+    let scoreCount = 0;
+    let isAnswered = false;
+    const failedQuestions = [];
+
+    function renderCurrentQuestion() {
+      if (currentIndex >= deck.length) {
+        showQuizResults();
+        return;
+      }
+      isAnswered = false;
+      const q = deck[currentIndex];
+      const progressPercent = Math.round((currentIndex / deck.length) * 100);
+
+      container.innerHTML = `
+        <div class="space-y-6 max-w-3xl mx-auto w-full">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between font-code-inline text-code-inline text-outline">
+              <span class="font-semibold text-on-surface">Pregunta ${currentIndex + 1} de ${deck.length}</span>
+              <span>Aciertos acumulados: <strong class="text-primary">${scoreCount}</strong></span>
+              <span>${progressPercent}% completado</span>
+            </div>
+            <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+              <div class="h-full bg-primary rounded-full transition-all duration-300" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
+
+          <h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+            ${q.q}
+          </h2>
+
+          <div class="grid grid-cols-1 gap-3 pt-2" id="quizButtonsGrid">
+            ${q.options.map((opt, idx) => `
+              <button onclick="handleOptionSelect(${idx})" class="quiz-btn group w-full text-left p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition flex items-start gap-3.5 text-on-surface cursor-pointer">
+                <span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-outline group-hover:text-primary font-code-inline font-bold text-xs flex items-center justify-center shrink-0 shadow-2xs">
+                  ${idx + 1}
+                </span>
+                <span class="font-body-md text-body-md flex-1 mt-0.5">${opt}</span>
+              </button>
+            `).join('')}
+          </div>
+
+          <div id="quizFeedbackBox" class="hidden"></div>
+          <div id="quizNextAction" class="hidden flex justify-end pt-2"></div>
+        </div>
+      `;
+
+      activeKeydownListener = e => {
+        if (e.target.tagName === 'INPUT') return;
+        const keyVal = parseInt(e.key, 10);
+        if (!isAnswered && keyVal >= 1 && keyVal <= q.options.length) {
+          handleOptionSelect(keyVal - 1);
+        } else if (isAnswered && e.key === 'Enter') {
+          e.preventDefault();
+          currentIndex++;
+          renderCurrentQuestion();
+        }
+      };
+
+      window.handleOptionSelect = selectedIdx => {
+        if (isAnswered) return;
+        isAnswered = true;
+        const buttons = document.querySelectorAll('.quiz-btn');
+        buttons.forEach(b => { b.disabled = true; b.classList.add('cursor-default'); });
+
+        const correct = selectedIdx === q.a;
+        if (correct) {
+          scoreCount++;
+        } else {
+          failedQuestions.push(q);
+        }
+
+        buttons[q.a].classList.remove('bg-surface-container-low');
+        buttons[q.a].classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+
+        if (!correct) {
+          buttons[selectedIdx].classList.remove('bg-surface-container-low');
+          buttons[selectedIdx].classList.add('bg-error-container', 'text-on-error-container');
+        }
+
+        const feedback = document.getElementById('quizFeedbackBox');
+        feedback.className = `p-4 sm:p-5 rounded-xl font-body-sm text-body-sm leading-relaxed ${correct ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-error-container text-on-error-container'} block shadow-2xs`;
+        feedback.innerHTML = `<strong>${correct ? '¡Exacto! Respuesta correcta.' : 'Respuesta errónea.'}</strong> ${q.exp}`;
+
+        const nextAction = document.getElementById('quizNextAction');
+        nextAction.className = "flex justify-end pt-3";
+        nextAction.innerHTML = `
+          <button onclick="triggerNextQuestion()" class="px-6 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition shadow-sm flex items-center gap-2 cursor-pointer">
+            <span>${currentIndex + 1 < deck.length ? 'Siguiente pregunta' : 'Ver balance final'}</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        `;
+        window.triggerNextQuestion = () => {
+          currentIndex++;
+          renderCurrentQuestion();
+        };
+      };
+    }
+
+    function showQuizResults() {
+      activeKeydownListener = null;
+      const finalGrade = ((scoreCount / deck.length) * 10).toFixed(1);
+      const ratio = scoreCount / deck.length;
+      let reviewMsg = "Excelente desempeño. Tienes un dominio riguroso del marco normativo y estratégico de accesibilidad.";
+      if (ratio < 0.5) reviewMsg = "Has obtenido una calificación insuficiente. Conviene estudiar nuevamente la EN 301 549 y los 5 pilares estratégicos.";
+      else if (ratio < 0.8) reviewMsg = "Buen nivel conceptual con algunos detalles a afianzar en cuanto a directivas y ROI.";
+
+      container.innerHTML = `
+        <div class="text-center py-6 space-y-6 max-w-xl mx-auto w-full">
+          <div class="space-y-2">
+            <div class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">${finalGrade} <span class="font-headline-sm text-headline-sm text-outline">/ 10</span></div>
+            <div class="font-headline-sm text-headline-sm text-on-surface">${scoreCount} aciertos de ${deck.length} preguntas formuladas</div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mx-auto">${reviewMsg}</p>
+          </div>
+
+          ${failedQuestions.length > 0 ? `
+            <div class="text-left space-y-3 pt-4">
+              <div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Preguntas a reforzar:</div>
+              <div class="space-y-2 max-h-64 overflow-y-auto pr-2">
+                ${failedQuestions.map(item => `
+                  <div class="p-3.5 bg-surface-container-low rounded-xl space-y-1">
+                    <div class="font-label-md text-label-md text-on-surface">${item.q}</div>
+                    <div class="font-body-sm text-body-sm text-primary font-medium">Clave correcta: ${item.options[item.a]}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="pt-4 flex items-center justify-center gap-3">
+            <button onclick="renderQuizMode()" class="px-6 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition shadow-sm cursor-pointer flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">replay</span>
+              <span>Reintentar evaluación test</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    renderCurrentQuestion();
+  }
+
+  /* -------------------------------------------------------------
+     MODO 2: FLASHCARDS 3D (12 TARJETAS)
+  ------------------------------------------------------------- */
+  function renderCardsMode() {
+    const container = document.getElementById('activityContainer');
+    let cardsDeck = FLASHCARDS_DATA.map((c, i) => ({ ...c, originalIdx: i }));
+    let cardIdx = 0;
+    const learnedCards = new Set();
+
+    function updateCardView() {
+      if (cardsDeck.length === 0) {
+        activeKeydownListener = null;
+        container.innerHTML = `
+          <div class="text-center py-12 space-y-4 max-w-md mx-auto">
+            <div class="w-16 h-16 rounded-full bg-primary-fixed text-primary flex items-center justify-center mx-auto text-3xl font-bold shadow-sm">
+              <span class="material-symbols-outlined text-[36px]">verified</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">¡Todas las flashcards dominadas!</h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Has repasado y fijado los 12 conceptos clave sobre directivas, retorno y marco social.</p>
+            <button onclick="renderCardsMode()" class="px-6 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition shadow-sm cursor-pointer">
+              Reiniciar mazo de tarjetas
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      cardIdx = (cardIdx + cardsDeck.length) % cardsDeck.length;
+      const current = cardsDeck[cardIdx];
+
+      container.innerHTML = `
+        <div class="space-y-6 max-w-2xl mx-auto w-full">
+          <div class="flex items-center justify-between font-code-inline text-code-inline text-outline">
+            <span class="font-semibold text-on-surface">Tarjeta ${cardIdx + 1} de ${cardsDeck.length}</span>
+            <span>Dominadas: <strong class="text-primary">${learnedCards.size} / ${FLASHCARDS_DATA.length}</strong></span>
+          </div>
+
+          <!-- Componente Flashcard Flip 3D -->
+          <div id="interactive3dCard" onclick="this.classList.toggle('flip')" class="fc w-full h-[320px] cursor-pointer select-none">
+            <div class="fc-in">
+              <!-- CARA FRONTAL -->
+              <div class="face front bg-surface-container-lowest p-8 flex flex-col justify-between items-center text-center shadow-md">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary bg-primary-fixed px-3 py-1 rounded-full font-semibold">Concepto o Norma</span>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight my-auto">${current.f}</h3>
+                <div class="font-code-inline text-code-inline text-outline flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">touch_app</span>
+                  <span>Haz clic o pulsa Espacio para voltear</span>
+                </div>
+              </div>
+              <!-- CARA DORSAL -->
+              <div class="face face-back bg-primary text-on-primary p-8 flex flex-col justify-between items-center text-center shadow-md">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-lowest/20 text-on-primary px-3 py-1 rounded-full font-semibold">Explicación & Trascendencia</span>
+                <p class="font-body-lg text-body-lg font-medium leading-relaxed my-auto max-w-lg">${current.b}</p>
+                <div class="font-code-inline text-code-inline text-on-primary/80 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">sync</span>
+                  <span>Toca de nuevo para revertir</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles de Navegación y Aprendizaje -->
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button onclick="navPrevCard()" class="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition cursor-pointer flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              <span>Anterior</span>
+            </button>
+            <div class="flex items-center gap-2">
+              <button onclick="shuffleDeck()" class="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition cursor-pointer flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">shuffle</span>
+                <span class="hidden sm:inline">Barajar</span>
+              </button>
+              <button onclick="markCurrentKnown()" class="px-5 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition shadow-sm cursor-pointer flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">check</span>
+                <span>Me la sé</span>
+              </button>
+            </div>
+            <button onclick="navNextCard()" class="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition cursor-pointer flex items-center gap-1.5">
+              <span>Siguiente</span>
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+
+          <div class="text-center font-code-inline text-code-inline text-outline">
+            Atajos: [Espacio] Girar tarjeta · [← / →] Cambiar tarjeta · [S] Marcar sabida
+          </div>
+        </div>
+      `;
+
+      window.navPrevCard = () => { cardIdx--; updateCardView(); };
+      window.navNextCard = () => { cardIdx++; updateCardView(); };
+      window.shuffleDeck = () => {
+        cardsDeck.sort(() => Math.random() - 0.5);
+        cardIdx = 0;
+        updateCardView();
+      };
+      window.markCurrentKnown = () => {
+        learnedCards.add(current.originalIdx);
+        cardsDeck.splice(cardIdx, 1);
+        updateCardView();
+      };
+
+      activeKeydownListener = e => {
+        const fc = document.getElementById('interactive3dCard');
+        if (e.key === ' ' && fc) {
+          e.preventDefault();
+          fc.classList.toggle('flip');
+        } else if (e.key === 'ArrowRight') {
+          navNextCard();
+        } else if (e.key === 'ArrowLeft') {
+          navPrevCard();
+        } else if (e.key.toLowerCase() === 's') {
+          markCurrentKnown();
+        }
+      };
+    }
+
+    updateCardView();
+  }
+
+  /* -------------------------------------------------------------
+     MODO 3: RELLENAR HUECOS (6 TEXTOS)
+  ------------------------------------------------------------- */
+  function renderGapsMode() {
+    activeKeydownListener = null;
+    const container = document.getElementById('activityContainer');
+    const normalizeStr = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+    const vocabularyWords = [];
+    const fieldsDescriptor = [];
+
+    let generatedBlocksHtml = '';
+    GAPS_DATA.forEach((paragraphItem, pIdx) => {
+      let segmentHtml = '';
+      paragraphItem.text.split(/\[([^\]]+)\]/).forEach((chunk, chunkIdx) => {
+        if (chunkIdx % 2 === 0) {
+          segmentHtml += chunk;
+        } else {
+          const solutionVariants = chunk.split('|');
+          vocabularyWords.push(solutionVariants[0]);
+          const fieldUniqueId = `gapField_${pIdx}_${chunkIdx}`;
+          fieldsDescriptor.push({ id: fieldUniqueId, solutions: solutionVariants });
+          segmentHtml += ` <input id="${fieldUniqueId}" type="text" autocomplete="off" spellcheck="false" class="gap-input px-3 py-1 font-code-inline text-code-inline font-bold bg-surface-container-low rounded focus:bg-primary-fixed focus:text-on-primary-fixed focus:outline-none transition inline-block text-center w-36 shadow-2xs" /> `;
+        }
+      });
+
+      generatedBlocksHtml += `
+        <div class="p-5 rounded-xl bg-surface-container-low space-y-2">
+          <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">${paragraphItem.title}</h4>
+          <p class="font-body-md text-body-md text-on-surface leading-loose">${segmentHtml}</p>
+        </div>
+      `;
+    });
+
+    const randomizedWordChips = [...vocabularyWords].sort(() => Math.random() - 0.5);
+
+    container.innerHTML = `
+      <div class="space-y-6 max-w-3xl mx-auto w-full">
+        <!-- Banco de Palabras Auxiliar -->
+        <div class="p-5 rounded-xl bg-surface-container-low space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px] text-primary">dictionary</span>
+              <span>Banco de términos clave</span>
+            </span>
+            <span class="font-code-inline text-code-inline text-outline">${fieldsDescriptor.length} huecos totales</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Escribe la palabra exacta en su casilla correspondiente. El comprobador no distingue mayúsculas de minúsculas ni tildes.</p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            ${randomizedWordChips.map(w => `
+              <span class="px-3 py-1 bg-surface-container-lowest text-on-surface font-code-inline text-code-inline font-medium rounded-full shadow-2xs">
+                ${w}
+              </span>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Textos para completar -->
+        <div class="space-y-4">
+          ${generatedBlocksHtml}
+        </div>
+
+        <!-- Acciones de Validación -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <div id="gapsStatusFeedback" class="font-label-md text-label-md text-primary font-semibold"></div>
+          <div class="flex items-center gap-2">
+            <button onclick="renderGapsMode()" class="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition cursor-pointer">
+              Reiniciar
+            </button>
+            <button onclick="revealGapSolutions()" class="px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition cursor-pointer">
+              Ver soluciones
+            </button>
+            <button onclick="verifyAllGaps()" class="px-6 py-2.5 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition shadow-sm cursor-pointer flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>Comprobar respuestas</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    window.verifyAllGaps = () => {
+      let matchedCount = 0;
+      fieldsDescriptor.forEach(desc => {
+        const inputElem = document.getElementById(desc.id);
+        const userValue = normalizeStr(inputElem.value);
+        const isMatched = userValue && desc.solutions.some(s => normalizeStr(s) === userValue);
+        if (isMatched) {
+          matchedCount++;
+          inputElem.className = "gap-input px-3 py-1 font-code-inline text-code-inline font-bold bg-primary-fixed text-on-primary-fixed rounded transition inline-block text-center w-36 shadow-2xs";
+        } else {
+          inputElem.className = "gap-input px-3 py-1 font-code-inline text-code-inline font-bold bg-error-container text-on-error-container rounded transition inline-block text-center w-36 shadow-2xs";
+        }
+      });
+      const feedbackDiv = document.getElementById('gapsStatusFeedback');
+      feedbackDiv.innerText = `${matchedCount} de ${fieldsDescriptor.length} términos correctos${matchedCount === fieldsDescriptor.length ? ' 🎉 ¡Perfecto! Dominas todo el marco.' : ''}`;
+    };
+
+    window.revealGapSolutions = () => {
+      fieldsDescriptor.forEach(desc => {
+        const inputElem = document.getElementById(desc.id);
+        inputElem.value = desc.solutions[0];
+        inputElem.className = "gap-input px-3 py-1 font-code-inline text-code-inline font-bold bg-primary-fixed text-on-primary-fixed rounded transition inline-block text-center w-36 shadow-2xs";
+      });
+      document.getElementById('gapsStatusFeedback').innerText = "Soluciones reveladas con fines pedagógicos.";
+    };
+  }
+
+  // Listener global de atajos accesible
+  document.addEventListener('keydown', e => {
+    if (activeKeydownListener) activeKeydownListener(e);
+  });
+
+  // Inicializar test por defecto
+  switchSuiteTab('quiz');
+</script></main>
+<!-- 6. PIE DE PÁGINA INSTITUCIONAL HOMOGÉNEO -->
+<footer class="mt-16 bg-white border-t border-[#dad9df] py-10 text-xs text-[#45464f]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<div class="font-bold text-sm text-[#1a1b20]">Plataforma Educativa de Interacción Persona-Ordenador</div>
+<p class="text-[#717785] mt-0.5">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</p>
+<p class="text-[#717785]">Dirección docente e investigadora: Dr. Toni Granollers</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 bg-[#f4f3f8] border border-[#dad9df] rounded-lg text-xs font-semibold text-[#1a1b20]">UdL</span>
+<span class="px-3 py-1 bg-[#f4f3f8] border border-[#dad9df] rounded-lg text-xs font-semibold text-[#1a1b20]">GRIHO</span>
+<span class="px-3 py-1 bg-[#f4f3f8] border border-[#dad9df] rounded-lg text-xs font-semibold text-[#1a1b20]">AIPO</span>
+<span class="px-3 py-1 bg-[#f4f3f8] border border-[#dad9df] rounded-lg text-xs font-semibold text-[#1a1b20]">ACM SIGCHI</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 border-t border-[#eeedf3] text-[11px] text-[#717785]">
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-[#0071e3]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span>
+</div>
+<div>
+          Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional
+        </div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT CON DATOS EXACTOS DE LA ACTIVIDAD -->
+<script>
+    const QUESTIONS = [
+      { q: "Según Abascal et al. [ABA03], ¿dónde reside la barrera de accesibilidad?",
+        options: ["En las capacidades de la persona", "En el diseño de la interfaz", "En el hardware", "En la falta de formación del usuario"],
+        a: 1, exp: "La barrera no está en la persona: se manifiesta y perpetúa en el diseño de la interfaz." },
+      { q: "Las dificultades de personas con discapacidad y mayores al usar sistemas informáticos son, según el tema…",
+        options: ["Patologías del usuario", "Deficiencias en la arquitectura de interacción", "Problemas inevitables", "Culpa de la falta de práctica"],
+        a: 1, exp: "Por eso hacen falta interfaces adaptables e interoperables." },
+      { q: "¿Qué tipo de interfaces evidencian como urgentes los estudios de usabilidad, sobre todo en entornos ubicuos inteligentes?",
+        options: ["Interfaces adaptables e interoperables", "Interfaces solo táctiles", "Interfaces de línea de comandos", "Interfaces 3D"],
+        a: 0, exp: "Deben adaptarse a cada persona y funcionar con distintos productos de apoyo." },
+      { q: "¿Qué pasa con el texto embebido en una imagen PNG/JPG al ampliarlo al 400%?",
+        options: ["Se ve nítido", "Se pixela y se vuelve ilegible", "Se convierte en texto real", "Desaparece"],
+        a: 1, exp: "La interpolación lo destruye; el texto real o vectorial (SVG) sigue nítido." },
+      { q: "¿Qué criterio WCAG trata las imágenes de texto?",
+        options: ["1.4.5 (Nivel AA)", "1.3.1 (Nivel A)", "2.1.1 (Nivel A)", "4.1.2 (Nivel A)"],
+        a: 0, exp: "WCAG 1.4.5: Imágenes de texto." },
+      { q: "¿Qué ocurre si se usan tablas <table> para maquetar columnas visuales?",
+        options: ["Nada", "El lector Braille anuncia filas y columnas y se rompe el flujo lógico del contenido", "La página carga más rápido", "Mejora el SEO"],
+        a: 1, exp: "El transductor Braille procesa la tabla de forma rígida." },
+      { q: "¿Qué criterio WCAG trata la información y sus relaciones (estructura semántica)?",
+        options: ["1.3.1 (Nivel A)", "1.4.5 (Nivel AA)", "3.3.1 (Nivel A)", "2.4.7 (Nivel AA)"],
+        a: 0, exp: "WCAG 1.3.1: Información y relaciones." },
+      { q: "¿Cuál es la alternativa correcta a maquetar con tablas?",
+        options: ["CSS Grid y ARIA semántico", "Más tablas anidadas", "Imágenes con todo el texto", "Frames"],
+        a: 0, exp: "Así el lector anuncia «Artículo», «Botón de acción», etc." },
+      { q: "¿Qué problema provoca omitir el texto alternativo de una imagen?",
+        options: ["El lector lee el nombre del archivo o nada útil", "La imagen no carga", "La página es más lenta", "Ninguno"],
+        a: 0, exp: "Por ejemplo, «Imagen 49301.jpg»." },
+      { q: "¿Qué supuesto hacen las interfaces estándar sobre el usuario?",
+        options: ["Que usa teclado y ratón en un escritorio estable y ve una pantalla fija", "Que usa la voz", "Que es ciego", "Que usa el móvil caminando"],
+        a: 0, exp: "Eso exige precisión motriz fina, coordinación visuomotora y agudeza perceptiva." },
+      { q: "¿Qué tres requisitos exige el supuesto de teclado, ratón y pantalla fija?",
+        options: ["Precisión motriz fina, coordinación visuomotora y agudeza perceptiva", "Velocidad, memoria y fuerza", "Formación, experiencia e idiomas", "Paciencia, atención y lectura rápida"],
+        a: 0, exp: "Muchos usuarios no los cumplen por edad, diversidad funcional o situación." },
+      { q: "Usar el móvil en movimiento con una sola mano o bajo el sol es un ejemplo de…",
+        options: ["Discapacidad situacional", "Discapacidad permanente", "Discapacidad cognitiva", "Brecha digital"],
+        a: 0, exp: "El contexto impone limitaciones parecidas a una discapacidad." },
+      { q: "¿Quién dirige el proyecto Adaptive Brain Interfaces (ABI)?",
+        options: ["José del Rocío Millán", "Julio Abascal", "José J. Cañas", "Toni Granollers"],
+        a: 0, exp: "En el Dalle Molle Institute for Perceptive Artificial Intelligence (Suiza) [MIL03]." },
+      { q: "¿Qué tecnología usa el proyecto ABI?",
+        options: ["Control electroencefalográfico no invasivo", "Implantes cerebrales", "Reconocimiento de voz", "Seguimiento ocular"],
+        a: 0, exp: "Decodifica ritmos cerebrales para interactuar con el ordenador." },
+      { q: "¿Cuál de estas NO es una aplicación del proyecto ABI citada en la página?",
+        options: ["Teclados virtuales", "Conducción de sillas de ruedas robotizadas", "Domótica", "Traducción automática de idiomas"],
+        a: 3, exp: "Las aplicaciones son teclados virtuales, autonomía motriz, domótica y aprendizaje mutuo." },
+      { q: "En el ABI, ¿qué significa «aprendizaje mutuo»?",
+        options: ["Redes neuronales que se calibran continuamente a las oscilaciones cognitivas de la persona", "Que el usuario aprende a programar", "Que dos usuarios se enseñan", "Un curso online"],
+        a: 0, exp: "El sistema y la persona se adaptan el uno al otro." },
+      { q: "Según Cañas et al. [CAÑ01b], la usabilidad efectiva solo ocurre si…",
+        options: ["El modelo mental del usuario coincide con el modelo del sistema del desarrollador", "El sistema es rápido", "El usuario es experto", "Hay manual"],
+        a: 0, exp: "Debe haber correspondencia entre la «visión del mundo» del usuario y el modelo del sistema." },
+      { q: "El escritorio, la papelera o el carrito de compra son ejemplos de…",
+        options: ["Metáforas operativas", "Atajos de teclado", "Errores de diseño", "Normas ISO"],
+        a: 0, exp: "Las interfaces estructuran el diálogo con modelos de tareas basados en metáforas." },
+      { q: "¿Qué pasa si la interfaz asume conocimientos implícitos de informática?",
+        options: ["Excluye a colectivos con brecha digital o declive cognitivo", "Mejora la eficiencia de todos", "Nada", "Atrae a más usuarios"],
+        a: 0, exp: "Es el problema del ajuste de modelos mentales." },
+      { q: "Terminología extranjera, siglas sin explicar o iconos que dependen de la cultura son…",
+        options: ["Barreras lingüísticas", "Barreras motoras", "Mejoras de diseño", "Requisitos WCAG"],
+        a: 0, exp: "Saturan la memoria de trabajo." },
+      { q: "¿Por qué la multitarea en la calle es una barrera cognitiva?",
+        options: ["Porque reduce la retención: los procesos largos sin autoguardado se vuelven infranqueables", "Porque el móvil va lento", "Porque no hay cobertura", "No es una barrera"],
+        a: 0, exp: "Es la atención dividida en movilidad." },
+      { q: "¿Cuál es la «paradoja de la investigación en IPO» sobre accesibilidad cognitiva?",
+        options: ["Las barreras cognitivas afectan a más gente, pero las normas han desarrollado más las pautas sensoriales y motoras", "No hay barreras cognitivas", "Las normas solo tratan lo cognitivo", "La cognición no se puede medir"],
+        a: 0, exp: "Fatiga, estrés o envejecimiento afectan a mucha población." },
+      { q: "¿En qué normas se basa el simulador de la página?",
+        options: ["ISO 9241-171 / ISO 16071", "ISO 9001", "ISO 25010", "IEEE 830"],
+        a: 0, exp: "Son normas sobre accesibilidad del software." }
+    ];
+
+    const FLASHCARDS = [
+      { f: "Diagnóstico de Abascal [ABA03]", b: "La barrera no reside en la persona; se manifiesta y perpetúa en el diseño de la interfaz." },
+      { f: "Interfaces adaptables e interoperables", b: "Lo que hace falta según los estudios de usabilidad, sobre todo en entornos ubicuos inteligentes." },
+      { f: "Texto en mapa de bits", b: "Al ampliar (p. ej. 400%) se pixela y se vuelve ilegible. Mejor texto real o SVG. WCAG 1.4.5 (AA)." },
+      { f: "Tablas para maquetar", b: "El lector Braille anuncia filas y columnas y rompe el flujo. Usar CSS Grid y ARIA. WCAG 1.3.1 (A)." },
+      { f: "Supuesto de la interfaz estándar", b: "Teclado + ratón + pantalla fija: exige precisión motriz fina, coordinación visuomotora y agudeza perceptiva." },
+      { f: "Discapacidad situacional", b: "El contexto limita al usuario: móvil en movimiento, una sola mano, sol directo." },
+      { f: "Adaptive Brain Interfaces (ABI)", b: "José del Rocío Millán [MIL03], Dalle Molle Institute (Suiza). Control por EEG no invasivo." },
+      { f: "Aplicaciones del ABI", b: "Teclados virtuales, sillas de ruedas y brazos robóticos, domótica y aprendizaje mutuo." },
+      { f: "Cañas et al. [CAÑ01b]", b: "La usabilidad solo ocurre si el modelo mental del usuario coincide con el modelo del sistema del desarrollador." },
+      { f: "Metáforas operativas", b: "Escritorio, papelera, carrito de compra: estructuran el diálogo persona-software." },
+      { f: "3 barreras cognitivas", b: "Desajuste de modelos mentales, barreras lingüísticas y atención dividida en movilidad." },
+      { f: "Paradoja de la investigación en IPO", b: "Las barreras cognitivas afectan a más gente, pero las normas han desarrollado más las pautas sensoriales y motoras." }
+    ];
+
+    const GAPS = [
+      { title: "Abascal", text: "La [barrera] no reside en las capacidades de la persona; se manifiesta y perpetúa en el [diseño] de la interfaz. Hacen falta interfaces [adaptables] e interoperables." },
+      { title: "Baja visión", text: "El texto embebido en mapas de [bits] se pixela al ampliarlo, mientras que el texto real o [vectorial] sigue nítido. Lo regula el criterio WCAG [1.4.5] sobre imágenes de texto." },
+      { title: "Braille y tablas", text: "Si se usan [tablas] para maquetar, el lector Braille anuncia filas y columnas y el flujo se rompe. La alternativa es CSS Grid y [ARIA] semántico, según el criterio WCAG [1.3.1]." },
+      { title: "Física y sensorial", text: "Las interfaces estándar exigen precisión motriz [fina], coordinación [visuomotora] y agudeza perceptiva. Usar el móvil con una mano o bajo el sol es una discapacidad [situacional]." },
+      { title: "ABI", text: "El proyecto Adaptive Brain Interfaces, de José del Rocío [Millán], usa control [electroencefalográfico] no invasivo para manejar teclados virtuales, sillas de ruedas y [domótica]." },
+      { title: "Cognitiva", text: "Según [Cañas] et al., la usabilidad solo ocurre si el modelo [mental] del usuario coincide con el modelo del sistema. Las interfaces se apoyan en [metáforas] como el escritorio o la papelera." },
+      { title: "Paradoja", text: "Las barreras [cognitivas] afectan a mucha más población, pero las normas han desarrollado con más rigor las pautas [sensoriales] y motoras." }
+    ];
+
+    let currentMode = 'quiz';
+    let keyHandler = null;
+    document.addEventListener('keydown', e => {
+      if (keyHandler && !(e.target.tagName === 'INPUT')) keyHandler(e);
+    });
+
+    function switchMode(mode) {
+      currentMode = mode;
+      const tQ = document.getElementById('tabQuiz');
+      const tC = document.getElementById('tabCards');
+      const tG = document.getElementById('tabGaps');
+
+      [tQ, tC, tG].forEach(btn => {
+        btn.className = "px-4 py-2 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#45464f] hover:bg-[#eeedf3] hover:text-[#1a1b20] transition flex items-center gap-1.5";
+      });
+
+      if (mode === 'quiz') {
+        tQ.className = "px-4 py-2 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm transition flex items-center gap-1.5";
+        initQuiz();
+      } else if (mode === 'cards') {
+        tC.className = "px-4 py-2 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm transition flex items-center gap-1.5";
+        initCards();
+      } else if (mode === 'gaps') {
+        tG.className = "px-4 py-2 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm transition flex items-center gap-1.5";
+        initGaps();
+      }
+    }
+
+    /* ---- LÓGICA TEST ---- */
+    function initQuiz() {
+      const app = document.getElementById('gameApp');
+      const deck = [...QUESTIONS].sort(() => Math.random() - 0.5);
+      let i = 0, hits = 0, answered = false;
+      const wrong = [];
+
+      function renderQuestion() {
+        if (i >= deck.length) {
+          renderResult();
+          return;
+        }
+        answered = false;
+        const q = deck[i];
+        const pct = Math.round((i / deck.length) * 100);
+
+        app.innerHTML = `
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono text-[#717785]">
+                <span>Pregunta ${i + 1} de ${deck.length}</span>
+                <span>Aciertos: ${hits}</span>
+                <span>${pct}%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#eeedf3] rounded-full overflow-hidden">
+                <div class="h-full bg-[#0071e3] rounded-full transition-all duration-300" style="width: ${pct}%"></div>
+              </div>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-[#1a1b20] tracking-tight leading-snug">
+              ${q.q}
+            </h2>
+
+            <div class="grid grid-cols-1 gap-2.5" id="quizOptions">
+              ${q.options.map((opt, idx) => `
+                <button onclick="selectOption(${idx})" class="opt-btn w-full text-left p-4 rounded-xl border-2 border-transparent bg-[#f4f3f8] hover:bg-[#eeedf3] transition flex items-start gap-3 text-sm text-[#1a1b20]">
+                  <span class="w-6 h-6 rounded-md bg-white border border-[#dad9df] flex items-center justify-center font-mono font-semibold text-xs text-[#717785] flex-shrink-0">
+                    ${idx + 1}
+                  </span>
+                  <span class="flex-1 mt-0.5">${opt}</span>
+                </button>
+              `).join('')}
+            </div>
+
+            <div id="quizFeedback" class="hidden"></div>
+            <div id="quizAction" class="hidden flex justify-end"></div>
+          </div>
+        `;
+
+        keyHandler = e => {
+          const k = parseInt(e.key, 10);
+          if (!answered && k >= 1 && k <= q.options.length) {
+            selectOption(k - 1);
+          } else if (answered && e.key === 'Enter') {
+            e.preventDefault();
+            i++;
+            renderQuestion();
+          }
+        };
+
+        window.selectOption = idx => {
+          if (answered) return;
+          answered = true;
+          const btns = document.querySelectorAll('.opt-btn');
+          btns.forEach(b => b.disabled = true);
+
+          const isCorrect = idx === q.a;
+          if (isCorrect) hits++; else wrong.push(q);
+
+          btns[q.a].classList.remove('bg-[#f4f3f8]', 'border-transparent');
+          btns[q.a].classList.add('bg-[#ecfdf5]', 'border-[#10b981]', 'text-emerald-950');
+
+          if (!isCorrect) {
+            btns[idx].classList.remove('bg-[#f4f3f8]', 'border-transparent');
+            btns[idx].classList.add('bg-[#fef2f2]', 'border-[#ef4444]', 'text-red-950');
+          }
+
+          const fb = document.getElementById('quizFeedback');
+          fb.className = `p-4 rounded-xl text-xs sm:text-sm leading-relaxed ${isCorrect ? 'bg-[#ecfdf5] border border-[#a7f3d0] text-emerald-950' : 'bg-[#fef2f2] border border-[#fecaca] text-red-950'} block`;
+          fb.innerHTML = `<strong>${isCorrect ? '¡Correcto!' : 'Respuesta incorrecta.'}</strong> ${q.exp}`;
+
+          const act = document.getElementById('quizAction');
+          act.className = "flex justify-end pt-2";
+          act.innerHTML = `
+            <button onclick="nextQ()" class="px-6 py-2.5 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-white text-xs font-bold transition shadow-sm">
+              ${i + 1 < deck.length ? 'Siguiente pregunta →' : 'Ver resultado'}
+            </button>
+          `;
+          window.nextQ = () => { i++; renderQuestion(); };
+        };
+      }
+
+      function renderResult() {
+        keyHandler = null;
+        const nota = ((hits / deck.length) * 10).toFixed(1);
+        const msg = hits === deck.length ? '¡Sobresaliente! Dominio absoluto de los conceptos.' : hits / deck.length >= 0.7 ? '¡Muy bien! Nivel notable con pequeños detalles a pulir.' : hits / deck.length >= 0.5 ? 'Aprobado raspado. Conviene repasar.' : 'Insuficiente. Te recomendamos estudiar la unidad.';
+
+        app.innerHTML = `
+          <div class="text-center py-6 space-y-6 max-w-xl mx-auto">
+            <div class="space-y-2">
+              <div class="text-6xl font-extrabold text-[#0071e3] tracking-tight">${nota}</div>
+              <div class="text-sm font-semibold text-[#1a1b20]">${hits} de ${deck.length} aciertos</div>
+              <p class="text-xs text-[#45464f]">${msg}</p>
+            </div>
+            ${wrong.length > 0 ? `
+              <div class="text-left space-y-2.5 pt-2">
+                <div class="text-xs font-bold text-[#1a1b20] uppercase tracking-wider">Preguntas a reforzar:</div>
+                <div class="space-y-2 max-h-60 overflow-y-auto pr-1">
+                  ${wrong.map(w => `
+                    <div class="p-3 bg-[#f4f3f8] border border-[#dad9df] rounded-xl text-xs space-y-1">
+                      <div class="font-semibold text-[#1a1b20]">${w.q}</div>
+                      <div class="text-[#0071e3] font-medium">Solución: ${w.options[w.a]}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+            <div class="pt-4">
+              <button onclick="initQuiz()" class="px-6 py-2.5 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-white text-xs font-bold transition shadow-sm">
+                Volver a realizar el test
+              </button>
+            </div>
+          </div>
+        `;
+      }
+      renderQuestion();
+    }
+
+    /* ---- LÓGICA FLASHCARDS 3D ---- */
+    function initCards() {
+      const app = document.getElementById('gameApp');
+      let deck = FLASHCARDS.map((c, idx) => ({ ...c, idx }));
+      let i = 0;
+      const known = new Set();
+
+      function showCard() {
+        if (!deck.length) {
+          keyHandler = null;
+          app.innerHTML = `
+            <div class="text-center py-12 space-y-4">
+              <div class="w-16 h-16 rounded-full bg-[#ecfdf5] text-[#10b981] flex items-center justify-center mx-auto text-3xl font-bold">✓</div>
+              <h2 class="text-xl font-bold text-[#1a1b20]">¡Todas las tarjetas dominadas!</h2>
+              <p class="text-xs text-[#45464f]">Has completado las ${FLASHCARDS.length} tarjetas de repaso.</p>
+              <button onclick="initCards()" class="px-5 py-2.5 rounded-xl bg-[#0071e3] text-white text-xs font-bold hover:bg-[#0059b5] transition">Reiniciar tarjetas</button>
+            </div>
+          `;
+          return;
+        }
+
+        i = (i + deck.length) % deck.length;
+        const c = deck[i];
+
+        app.innerHTML = `
+          <div class="space-y-5 max-w-2xl mx-auto">
+            <div class="flex items-center justify-between text-xs font-mono text-[#717785]">
+              <span>Tarjeta ${i + 1} de ${deck.length}</span>
+              <span>Sabidas: ${known.size} / ${FLASHCARDS.length}</span>
+            </div>
+
+            <!-- TARJETA 3D FLIP -->
+            <div id="flashcardBox" onclick="this.classList.toggle('flip')" class="fc w-full h-[300px] cursor-pointer">
+              <div class="fc-in">
+                <!-- Frente -->
+                <div class="face front bg-white border-2 border-[#dad9df] shadow-sm p-8 flex flex-col justify-between items-center text-center">
+                  <span class="text-[11px] font-bold text-[#0071e3] uppercase tracking-wider bg-[#e8f2ff] px-2.5 py-0.5 rounded-full">Concepto canónico</span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-[#1a1b20] leading-snug my-auto">${c.f}</h3>
+                  <div class="text-[11px] text-[#717785] font-mono">Toca o pulsa Espacio para voltear</div>
+                </div>
+                <!-- Reverso -->
+                <div class="face face-back bg-[#0071e3] text-white p-8 flex flex-col justify-between items-center text-center shadow-md">
+                  <span class="text-[11px] font-bold text-white/80 uppercase tracking-wider bg-white/10 px-2.5 py-0.5 rounded-full">Definición y clave</span>
+                  <p class="text-base sm:text-lg leading-relaxed font-medium my-auto">${c.b}</p>
+                  <div class="text-[11px] text-white/70 font-mono">Toca para volver</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTROLES -->
+            <div class="flex items-center justify-between gap-3 pt-2">
+              <button onclick="prevCard()" class="px-4 py-2 rounded-xl bg-[#f4f3f8] hover:bg-[#eeedf3] text-xs font-semibold text-[#1a1b20] transition">← Anterior</button>
+              <div class="flex items-center gap-2">
+                <button onclick="shuffleDeck()" class="px-4 py-2 rounded-xl bg-[#f4f3f8] hover:bg-[#eeedf3] text-xs font-semibold text-[#1a1b20] transition">Barajar</button>
+                <button onclick="markCardKnown()" class="px-5 py-2 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-xs font-bold text-white transition shadow-sm">Me la sé ✓</button>
+              </div>
+              <button onclick="nextCard()" class="px-4 py-2 rounded-xl bg-[#f4f3f8] hover:bg-[#eeedf3] text-xs font-semibold text-[#1a1b20] transition">Siguiente →</button>
+            </div>
+            <div class="text-center text-[11px] font-mono text-[#717785]">Espacio: voltear · Flechas ← →: moverte · S: me la sé</div>
+          </div>
+        `;
+
+        window.prevCard = () => { i--; showCard(); };
+        window.nextCard = () => { i++; showCard(); };
+        window.shuffleDeck = () => { deck.sort(() => Math.random() - 0.5); i = 0; showCard(); };
+        window.markCardKnown = () => { known.add(c.idx); deck.splice(i, 1); showCard(); };
+
+        keyHandler = e => {
+          const fc = document.getElementById('flashcardBox');
+          if (e.key === ' ' && fc) { e.preventDefault(); fc.classList.toggle('flip'); }
+          else if (e.key === 'ArrowRight') { i++; showCard(); }
+          else if (e.key === 'ArrowLeft') { i--; showCard(); }
+          else if (e.key.toLowerCase() === 's') { window.markCardKnown(); }
+        };
+      }
+      showCard();
+    }
+
+    /* ---- LÓGICA RELLENAR HUECOS ---- */
+    function initGaps() {
+      keyHandler = null;
+      const app = document.getElementById('gameApp');
+      const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      const words = [];
+      const inputsData = [];
+
+      let gapsHtml = '';
+      GAPS.forEach((g, gIdx) => {
+        let textParsed = '';
+        g.text.split(/\[([^\]]+)\]/).forEach((part, idx) => {
+          if (idx % 2 === 0) {
+            textParsed += part;
+          } else {
+            const answers = part.split('|');
+            words.push(answers[0]);
+            const inputId = `gap_${gIdx}_${idx}`;
+            inputsData.push({ id: inputId, answers: answers });
+            textParsed += ` <input id="${inputId}" type="text" autocomplete="off" spellcheck="false" class="gap-input px-2.5 py-1 text-xs sm:text-sm font-semibold border-b-2 border-[#717785] bg-[#f4f3f8] rounded focus:bg-[#e8f2ff] focus:border-[#0071e3] focus:outline-none transition inline-block text-center w-32" /> `;
+          }
+        });
+
+        gapsHtml += `
+          <div class="p-4 sm:p-5 rounded-xl bg-white border border-[#dad9df] space-y-2">
+            <h4 class="text-xs font-bold text-[#0071e3] uppercase tracking-wider">${g.title}</h4>
+            <p class="text-xs sm:text-sm text-[#1a1b20] leading-loose">${textParsed}</p>
+          </div>
+        `;
+      });
+
+      const shuffledWords = [...words].sort(() => Math.random() - 0.5);
+
+      app.innerHTML = `
+        <div class="space-y-6">
+          <!-- Banco de palabras -->
+          <div class="p-4 rounded-xl bg-[#f4f3f8] border border-[#dad9df] space-y-2.5">
+            <div class="text-xs font-bold text-[#1a1b20]">Banco de palabras clave</div>
+            <p class="text-xs text-[#45464f]">Escribe la palabra exacta en cada hueco. Insensible a mayúsculas y acentos. Pulsa Enter para avanzar.</p>
+            <div class="flex flex-wrap gap-2 pt-1" id="wordChips">
+              ${shuffledWords.map(w => `<span class="chip px-3 py-1 bg-white border border-[#dad9df] text-xs font-medium text-[#1a1b20] rounded-full shadow-2xs">${w}</span>`).join('')}
+            </div>
+          </div>
+
+          <!-- Párrafos con huecos -->
+          <div class="space-y-3">
+            ${gapsHtml}
+          </div>
+
+          <!-- Barra de comprobación -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3">
+            <div id="gapsScore" class="text-xs font-bold text-[#0071e3]"></div>
+            <div class="flex items-center gap-2">
+              <button onclick="initGaps()" class="px-4 py-2 rounded-xl bg-[#f4f3f8] hover:bg-[#eeedf3] text-xs font-semibold text-[#1a1b20] transition">Reiniciar</button>
+              <button onclick="revealGaps()" class="px-4 py-2 rounded-xl bg-[#f4f3f8] hover:bg-[#eeedf3] text-xs font-semibold text-[#1a1b20] transition">Ver soluciones</button>
+              <button onclick="checkGaps()" class="px-6 py-2 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-xs font-bold text-white transition shadow-sm">Comprobar respuestas</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      window.checkGaps = () => {
+        let correct = 0;
+        inputsData.forEach(item => {
+          const inp = document.getElementById(item.id);
+          const val = norm(inp.value);
+          const isRight = val && item.answers.some(a => norm(a) === val);
+          if (isRight) {
+            correct++;
+            inp.className = "gap-input px-2.5 py-1 text-xs sm:text-sm font-semibold border-b-2 border-[#10b981] bg-[#ecfdf5] text-emerald-950 rounded transition inline-block text-center w-32";
+          } else {
+            inp.className = "gap-input px-2.5 py-1 text-xs sm:text-sm font-semibold border-b-2 border-[#ef4444] bg-[#fef2f2] text-red-950 rounded transition inline-block text-center w-32";
+          }
+        });
+        document.getElementById('gapsScore').innerText = `${correct} de ${inputsData.length} correctos${correct === inputsData.length ? ' 🎉 ¡Perfecto!' : ''}`;
+      };
+
+      window.revealGaps = () => {
+        inputsData.forEach(item => {
+          const inp = document.getElementById(item.id);
+          inp.value = item.answers[0];
+          inp.className = "gap-input px-2.5 py-1 text-xs sm:text-sm font-semibold border-b-2 border-[#0071e3] bg-[#e8f2ff] text-[#0071e3] rounded transition inline-block text-center w-32";
+        });
+        document.getElementById('gapsScore').innerText = "Soluciones mostradas.";
+      };
+    }
+
+    // Inicializar test al cargar
+    initQuiz();
+  </script>
+<a href="accesibilidad-04-motivos.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>

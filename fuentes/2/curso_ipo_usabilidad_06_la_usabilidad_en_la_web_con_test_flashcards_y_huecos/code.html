@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO — Usabilidad 06: La Usabilidad en la Web (con Test, Flashcards y Huecos)</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+::-webkit-scrollbar{display:none;}
+/* 3D Flip Card Styles */
+.perspective-1000 { perspective: 1000px; }
+.transform-style-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+.fc { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.fc.flipped { transform: rotateY(180deg); }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1b1f","surface-container":"#eeedf3","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#636264","surface-variant":"#e3e2e7","outline-variant":"#c1c6d6","on-secondary-fixed":"#1b1b1d","surface-container-high":"#e9e7ed","on-tertiary-fixed-variant":"#00458e","on-tertiary":"#ffffff","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed-variant":"#474649","on-primary-fixed-variant":"#00458f","tertiary-fixed":"#d7e3ff","error-container":"#ffdad6","on-tertiary-container":"#fcfaff","background":"#faf8fe","secondary-fixed-dim":"#c8c6c8","error":"#ba1a1a","primary":"#0059b5","surface":"#faf8fe","surface-tint":"#005cbb","tertiary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","surface-bright":"#faf8fe","surface-dim":"#dad9df","tertiary":"#0059b4","secondary-container":"#e2dfe1","outline":"#717785","tertiary-container":"#0071e2","on-primary":"#ffffff","secondary-fixed":"#e4e2e4","on-tertiary-fixed":"#001b3f","on-surface-variant":"#414753","on-primary-container":"#fcfbff","secondary":"#5f5e60","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","primary-container":"#0071e3","inverse-primary":"#abc7ff","on-secondary":"#ffffff","surface-container-highest":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-low":"#f4f3f8","on-surface":"#1a1b1f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","margin-sm":"1.25rem","margin":"3rem","gutter-sm":"1rem","space-sm":"0.5rem","gutter":"1.5rem","margin-md":"2rem"},fontFamily:{"label-sm":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"code-inline":["JetBrains Mono"],"body-lg":["Inter"],"headline-md":["Inter"],"display-hero-mobile":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"]},fontSize:{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm shadow-sm">IPO</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Curso IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">UdL · Dr. Toni Granollers</span></div></div><nav class="hidden xl:flex items-center gap-gutter" data-active-classes="text-primary font-label-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="curso-ipo" href="#">Curso IPO</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="mpiu-a" href="#">MPIu+a</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="recursos" href="#">Recursos</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a></nav><div class="flex items-center gap-space-md"><button class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar</span><kbd class="bg-surface-container-lowest text-on-surface-variant px-space-xs py-0.5 rounded font-code-inline text-code-inline">⌘K</kbd></button><button aria-label="Cambiar tema" class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="hidden md:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="material-symbols-outlined text-primary text-[18px]">school</span><span class="font-label-sm text-label-sm text-on-surface-variant">Progreso:</span><span class="font-label-sm text-label-sm text-primary font-bold">100% de Usabilidad</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="#">Curso IPO</a><span class="text-outline-variant">/</span><span class="text-on-surface-variant">Módulo 1: Fundamentos</span><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="#">Usabilidad</a><span class="text-outline-variant">/</span><span class="text-primary font-semibold">06 Usabilidad en la Web</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="01-definicion-de-usabilidad" href="#">01 Definición</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="02-importancia-de-la-usabilidad" href="#">02 Importancia</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="03-beneficios-de-la-usabilidad" href="#">03 Beneficios</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="04-atributos-de-usabilidad" href="#">04 Atributos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="05-calidad-de-software-y-usabilidad" href="#">05 Calidad de Software</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)] font-semibold" data-path="06-usabilidad-web" href="#">06 Usabilidad Web</a></nav></div></header><main class="w-full pt-36 bg-background"><div class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+<!-- Tarjeta Encabezado Actividad Todo en Uno (Idéntica a Usabilidad 03) -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-sm border border-outline-variant/30 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-inline text-[11px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">JUEGO 6 · TODO EN UNO</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Módulo 1 · 06 Usabilidad en la Web</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Todo junto: test interactivo, flashcards con giro 3D y textos con huecos para rellenar sobre la usabilidad de sitios web, arquitectura de información, hipertexto y diseño para la Web.</p>
+</div>
+</div>
+<div class="self-start md:self-center shrink-0 bg-surface-container-low px-4 py-2.5 rounded-xl border border-outline-variant/40 text-center">
+<span class="font-code-inline text-[12px] font-semibold text-primary block">30 preguntas · 17 tarjetas · 9 textos</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Contenido temático completo</span>
+</div>
+</div>
+</div>
+<!-- Contenedor Interactivo #app -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/30 overflow-hidden min-h-[520px] flex flex-col" id="app">
+<!-- Se inyecta dinámicamente -->
+</div>
+<!-- Navegación Inferior -->
+<nav class="w-full flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-outline-variant/30">
+<a class="w-full sm:w-auto inline-flex items-center justify-center sm:justify-start gap-2 px-5 py-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/40 font-label-md text-label-md transition-all shadow-sm" data-path="05-calidad-de-software-y-usabilidad" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_back</span>
+<span>← Anterior: 05 Calidad de Software</span>
+</a>
+<div class="flex items-center gap-space-xs font-code-inline text-label-sm text-on-surface-variant px-space-md py-space-xs rounded-full bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">task_alt</span>
+<span>Capítulo 06 de 06 · Bloque Usabilidad Completado</span>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center sm:justify-end gap-2 px-6 py-3 rounded-xl bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-md text-label-md transition-all shadow-md" data-path="curso-ipo" href="#">
+<span>Volver al Índice de Usabilidad ↑</span>
+<span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+</a>
+</nav>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-12"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter pb-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span><span class="font-body-sm text-body-sm text-on-surface-variant">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dirección docente e investigadora: Dr. Toni Granollers</span></div><div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">UdL</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">GRIHO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">AIPO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">ACM SIGCHI</span></div></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">lock_open</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer><script>
+(function() {
+  const QUESTIONS = [
+    {
+      q: "¿Cuál es el principio fundamental que rige la lectura y el comportamiento de los usuarios en la Web según Jakob Nielsen?",
+      opts: [
+        "Los usuarios leen minuciosamente cada palabra de arriba a abajo.",
+        "Los usuarios no leen, escanean la página buscando palabras clave y encabezados destacados.",
+        "La densidad de texto no influye en la tasa de rebote web.",
+        "Los usuarios prefieren párrafos largos y continuos sin subtítulos."
+      ],
+      a: 1,
+      exp: "Los estudios de Nielsen constatan que los usuarios no leen palabra por palabra: realizan un escaneo rápido siguiendo patrones como la 'F' en busca de anclas conceptuales."
+    },
+    {
+      q: "¿Cuál es la diferencia interactiva más radical entre una aplicación de escritorio tradicional y un sitio web?",
+      opts: [
+        "En la web la competencia está a un solo clic y no existen manuales de instrucciones ni cursos formativos obligatorios",
+        "El escritorio siempre tiene peor calidad gráfica que la web",
+        "En la web el usuario está forzado contractualmente a permanecer en la página",
+        "No existe ninguna diferencia; los patrones de interacción son exactamente idénticos"
+      ],
+      a: 0,
+      exp: "En la web, el coste de abandono es nulo y los internautas no leen manuales ni toleran esperas: la interfaz debe autoexplicarse de inmediato."
+    },
+    {
+      q: "¿Por qué se afirma que la navegación web es de naturaleza eminentemente hipertextual?",
+      opts: [
+        "Porque el usuario sólo puede avanzar en un orden estricto de izquierda a derecha",
+        "Porque no existe un camino lineal obligatorio: el internauta salta impredeciblemente entre nodos conceptuales y enlaces externos",
+        "Porque los documentos web están escritos únicamente en código binario plano",
+        "Porque requiere forzosamente periféricos de realidad virtual"
+      ],
+      a: 1,
+      exp: "La estructura en malla del hipertexto permite bifurcaciones libres que exigen puntos de anclaje contextuales permanentes (breadcrumbs, menús claros)."
+    },
+    {
+      q: "En el entorno web, ¿cuál es el riesgo interactivo derivado de una arquitectura de hipertexto desestructurada?",
+      opts: [
+        "Desorientación cognitiva y pérdida del hilo de navegación del usuario ('¿Dónde estoy?' y '¿A dónde puedo ir?')",
+        "Sobrecalentamiento del router de fibra óptica",
+        "Aumento repentino de la resolución física del monitor",
+        "Bloqueo irreversible del sistema operativo local"
+      ],
+      a: 0,
+      exp: "La desorientación cognitiva es la patología primaria de la navegación web confusa, provocando abandono inmediato."
+    },
+    {
+      q: "¿Cuál es la regla cognitiva vinculada a la cultura de la inmediatez en el uso de la web?",
+      opts: [
+        "El umbral de los 3 segundos: si una tarea o carga dilata su respuesta, el usuario experimenta frustración y abandona",
+        "La ley de que el usuario espera gustosamente hasta dos minutos",
+        "La regla de apagar el ordenador si la web tarda más de 24 horas",
+        "La obligación de mostrar siempre publicidad de bienvenida durante 30 segundos"
+      ],
+      a: 0,
+      exp: "Los estudios de HCI en web constatan que la tolerancia a la latencia es mínima; a partir de los 2-3 segundos la tasa de fuga se dispara."
+    },
+    {
+      q: "¿Qué implica la 'ausencia de manuales' en la usabilidad de sitios y servicios web?",
+      opts: [
+        "Que los programadores tienen prohibido documentar sus bases de datos",
+        "Que la interfaz debe poseer autoexplicabilidad total y affordance intuitivo desde el milisegundo cero",
+        "Que los manuales deben enviarse por correo postal al domicilio del usuario",
+        "Que sólo los graduados en informática pueden usar páginas web"
+      ],
+      a: 1,
+      exp: "Nadie se capacita para navegar por un sitio web: la usabilidad autosuficiente es un requisito sine qua non."
+    },
+    {
+      q: "¿Qué significa el fenómeno del 'Abandono a un solo clic'?",
+      opts: [
+        "En un entorno corporativo cautivo el usuario está condicionado, pero en la web el coste de fuga hacia un competidor es instantáneo y nulo",
+        "Que el ratón se desconecta tras hacer un clic continuo",
+        "Que los navegadores impiden abrir más de una pestaña a la vez",
+        "Que los enlaces web se eliminan automáticamente tras ser pulsados"
+      ],
+      a: 0,
+      exp: "El coste de cambio para el consumidor web es cero: basta cerrar la pestaña o pulsar 'Atrás' para acudir a la competencia."
+    },
+    {
+      q: "¿En qué consiste la falacia de la homogeneidad de máquinas en el desarrollo web?",
+      opts: [
+        "En creer que todos los usuarios navegan con procesadores potentes, pantallas 4K calibradas y fibra de gigabit como el equipo técnico",
+        "En pensar que todos los ordenadores portátiles tienen teclado numérico",
+        "En asumir que la inteligencia artificial reemplazará a los servidores web",
+        "En afirmar que el protocolo TCP/IP es idéntico en satélites y cables"
+      ],
+      a: 0,
+      exp: "Los desarrolladores trabajan en condiciones de laboratorio ideales; los usuarios operan con luz solar, móviles modestos y redes 4G inestables."
+    },
+    {
+      q: "¿Cuáles son las 3 dimensiones del contexto ecológico diverso del usuario web?",
+      opts: [
+        "Multi-viewport (resoluciones diversas), diversidad de motores de renderizado (Chromium, Gecko, WebKit) y latencia de red fluctuante",
+        "Voltaje de la red eléctrica, peso del teclado y color de la torre",
+        "Longitud de los cables USB, marca del ratón y versión de BIOS",
+        "Uso exclusivo de monitores monocromáticos y módems telefónicos"
+      ],
+      a: 0,
+      exp: "El diseño web profesional debe contemplar adaptabilidad multi-pantalla, compatibilidad entre motores y resiliencia ante conexiones lentas."
+    },
+    {
+      q: "Según Gerry Gaffney (1999), ¿cuál es el error del enfoque «diseñar pensando en el usuario»?",
+      opts: [
+        "El equipo técnico asume supuestos cognitivos basados en su propia pericia y no involucra a personas reales hasta la entrega final",
+        "Gasta demasiado presupuesto en prototipos de papel",
+        "Obliga a realizar pruebas con miles de usuarios en laboratorios",
+        "Impide que el software se compile con librerías modernas"
+      ],
+      a: 0,
+      exp: "Pensar en el usuario desde el aislamiento intelectual lleva a proyectar las propias destrezas técnicas, detectando errores tarde y con alto coste."
+    },
+    {
+      q: "¿Qué postula el paradigma canónico de «implicar al usuario en el diseño» (Gaffney, 1999 / MPIu+a)?",
+      opts: [
+        "Diseño participativo activo: co-creación y pruebas empíricas continuas sobre prototipos de baja y media fidelidad desde la fase conceptual",
+        "Exigir que el usuario aprenda a codificar en JavaScript",
+        "Entregar el producto terminado y modificarlo sólo si hay demandas judiciales",
+        "Sustituir las sesiones de diseño por encuestas automatizadas de marketing"
+      ],
+      a: 0,
+      exp: "Implicar al usuario calibra empíricamente la interfaz con los hábitos reales de las personas antes de codificar la solución definitiva."
+    },
+    {
+      q: "¿Qué enunció Constantine Stephanidis (1995) respecto al Diseño para Todos (Design for All)?",
+      opts: [
+        "Centrarse en el usuario significa centrarse en todos los usuarios, garantizando que la arquitectura incorpore la totalidad de rasgos diferenciales",
+        "Que todos los ciudadanos deben someterse a tests de usabilidad presenciales obligatorios",
+        "Que los sitios web sólo deben admitir texto plano para evitar exclusiones",
+        "Que la accesibilidad deteriora necesariamente el diseño visual"
+      ],
+      a: 0,
+      exp: "Stephanidis formalizó el Diseño para Todos: no exige testar con cada individuo, sino estructurar el sistema para abarcar toda capacidad humana."
+    },
+    {
+      q: "Según la perspectiva contemporánea de accesibilidad de la W3C y Stephanidis, ¿dónde reside la discapacidad?",
+      opts: [
+        "No en el sujeto intrínseco, sino en la barrera impuesta por una arquitectura tecnológica o de diseño deficiente",
+        "En la velocidad de la tarjeta de red del usuario",
+        "En la falta de motivación personal del internauta",
+        "En la carencia de títulos universitarios en informática"
+      ],
+      a: 0,
+      exp: "El modelo social de accesibilidad define que la barrera la crea el entorno tecnológico cuando excluye rasgos diferenciales."
+    },
+    {
+      q: "¿Qué es una limitación funcional de naturaleza circunstancial o contextual en la web?",
+      opts: [
+        "Navegar en un móvil con deslumbramiento solar intenso, con una sola mano ocupada o con ancho de banda degradado en movilidad",
+        "Una patología auditiva congénita de por vida",
+        "Una rotura ósea que inmoviliza temporalmente un brazo",
+        "La falta total de suministro eléctrico permanente"
+      ],
+      a: 0,
+      exp: "Las limitaciones circunstanciales afectan a cualquier persona en contextos ambientales adversos (sol, ruido, prisas, movilidad)."
+    },
+    {
+      q: "¿En qué consiste el patrón de lectura en 'F' descubierto por los estudios de eye-tracking (Nielsen)?",
+      opts: [
+        "Los usuarios leen horizontalmente las primeras líneas y luego descienden verticalmente por el margen izquierdo, escaneando contenidos",
+        "Los internautas leen cada palabra de principio a fin como en una novela impresa",
+        "Los ojos dibujan un círculo perfecto en el centro de la pantalla",
+        "La mirada se concentra exclusivamente en los banners publicitarios inferiores"
+      ],
+      a: 0,
+      exp: "El patrón en F demuestra que el internauta no lee en profundidad: escanea en busca de palabras ancla, titulares y viñetas."
+    },
+    {
+      q: "A tenor del patrón de lectura en F, ¿dónde deben concentrarse la información sustantiva y las acciones críticas?",
+      opts: [
+        "En la zona superior izquierda y en los primeros párrafos mediante titulares y viñetas directas",
+        "En el pie de página dentro de notas al pie en letra pequeña",
+        "En la esquina inferior derecha oculta tras un scroll prolongado",
+        "En animaciones emergentes que bloqueen la pantalla"
+      ],
+      a: 0,
+      exp: "Ubicar lo sustantivo en la zona de máximo barrido visual garantiza que el internauta capte el valor clave sin esfuerzo."
+    },
+    {
+      q: "¿Qué técnica de Arquitectura de Información se utiliza para estructurar taxonomías web lógicas con los usuarios?",
+      opts: [
+        "Card Sorting (clasificación de tarjetas abierta y cerrada)",
+        "Compilación inversa de código fuente",
+        "Pruebas de estrés de base de datos MySQL",
+        "Encuestas telefónicas aleatorias"
+      ],
+      a: 0,
+      exp: "El Card Sorting revela el modelo mental taxonómico de los usuarios para agrupar y rotular menús y categorías."
+    },
+    {
+      q: "¿Cuál es la recomendación habitual de profundidad en la jerarquía de navegación de un sitio web usable?",
+      opts: [
+        "No superar los 3 niveles de anidación para evitar la pérdida de contexto",
+        "Crear un mínimo de 15 niveles para jerarquizar cada dato",
+        "Eliminar todos los menús y dejar sólo una página de 50.000 palabras",
+        "Obligar al usuario a volver a la portada antes de cada clic"
+      ],
+      a: 0,
+      exp: "Estructuras poco profundas (hasta 3 niveles) minimizan el coste interactivo y la carga mental de navegación."
+    },
+    {
+      q: "¿Qué interrogantes cognitivos debe responder la navegación web clara en todo momento?",
+      opts: [
+        "¿Dónde estoy?, ¿De dónde vengo? y ¿A dónde puedo ir desde aquí?",
+        "¿Cuánto cuesta el servidor?, ¿Quién es el administrador? y ¿Cuál es la IP?",
+        "¿Qué versión de CSS se utiliza?, ¿Cuál es el hash SHA? y ¿Qué RAM tengo?",
+        "¿Quién fundó la empresa?, ¿Cuál es su CIF? y ¿Qué cuota de mercado tiene?"
+      ],
+      a: 0,
+      exp: "La triada de ubicación contextual garantiza orientación permanente mediante breadcrumbs, títulos y estados activos."
+    },
+    {
+      q: "¿Por qué el 'tiempo de carga percibido' es más relevante cognitivamente que la mera velocidad de red?",
+      opts: [
+        "Porque el uso de esqueletos (skeletons) y retroalimentación progresiva mitiga la ansiedad subjetiva del tiempo de espera",
+        "Porque engaña al cronómetro del navegador para alterar las auditorías",
+        "Porque permite cobrar más por el diseño visual",
+        "Porque el cerebro humano no procesa imágenes en menos de diez segundos"
+      ],
+      a: 0,
+      exp: "El tiempo percibido depende del feedback psicológico: un skeleton bien diseñado hace sentir la interfaz viva y reactiva."
+    },
+    {
+      q: "¿Qué métrica clave de Core Web Vitals evalúa el tiempo que tarda en visualizarse el primer contenido sustantivo?",
+      opts: [
+        "FCP (First Contentful Paint) con umbral óptimo inferior a 1.2 - 1.8 segundos",
+        "DNS lookup time superior a 30 segundos",
+        "Número total de etiquetas div en el DOM",
+        "Cantidad de megabytes de imágenes descargadas"
+      ],
+      a: 0,
+      exp: "El FCP mide el momento en que el usuario percibe la primera evidencia tangible de renderizado de la interfaz."
+    },
+    {
+      q: "¿Por qué es crucial la retroalimentación interactiva (feedback) en botones y formularios web?",
+      opts: [
+        "Para confirmar visiblemente el estado de la acción (hover, focus, spinner de envío) reduciendo errores y dobles envíos involuntarios",
+        "Para saturar los recursos de renderizado de la tarjeta gráfica",
+        "Para obligar al usuario a hacer doble clic siempre",
+        "Para que la página cambie de idioma automáticamente"
+      ],
+      a: 0,
+      exp: "El feedback oportuno mantiene la sensación de control del operador humano y evita repeticiones accidentales de tareas."
+    },
+    {
+      q: "¿Qué función desempeñan las 'migas de pan' (breadcrumbs) en la usabilidad web?",
+      opts: [
+        "Muestran la jerarquía contextual del nodo actual y posibilitan el retorno a niveles superiores con un solo clic",
+        "Muestran los anuncios de patrocinadores del sitio web",
+        "Descargan ficheros temporales en la papelera del ordenador",
+        "Indican el historial de contraseñas guardadas en el navegador"
+      ],
+      a: 0,
+      exp: "Los breadcrumbs son un pilar de sintetizabilidad y navegación espacial que afianzan el '¿Dónde estoy?' en el hipertexto."
+    },
+    {
+      q: "¿Qué estándar internacional de accesibilidad web promulga la iniciativa WAI de la W3C?",
+      opts: [
+        "WCAG 2.1 / 2.2 (Web Content Accessibility Guidelines)",
+        "ISO 9001 de gestión de calidad administrativa",
+        "IEEE 802.3 de redes ethernet",
+        "RFC 791 de direccionamiento IP"
+      ],
+      a: 0,
+      exp: "Las WCAG establecen los criterios de éxito verificables organizados en cuatro principios: Perceptible, Operable, Comprensible y Robusto."
+    },
+    {
+      q: "¿Qué nivel de conformidad WCAG es el estándar de referencia legal y formativo exigido universalmente?",
+      opts: [
+        "Nivel AA",
+        "Nivel Básico Beta",
+        "Nivel AAA exclusivamente para blogs personales",
+        "Nivel Cero sin requisitos técnicos"
+      ],
+      a: 0,
+      exp: "El nivel AA de las WCAG equilibra rigor técnico y viabilidad en los ecosistemas digitales públicos y privados."
+    },
+    {
+      q: "¿Qué problema genera el uso de textos de enlace genéricos como 'Haz clic aquí' o 'Leer más'?",
+      opts: [
+        "Atenta contra la usabilidad y los lectores de pantalla al carecer de sentido fuera de contexto y no informar del destino",
+        "Provoca errores de compilación en el servidor web",
+        "Aumenta exponencialmente el consumo de batería del teclado",
+        "Impide que el ratón detecte la pulsación física"
+      ],
+      a: 0,
+      exp: "Los enlaces deben ser autodescriptivos para que usuarios de lectores de pantalla y escaneadores rápidos entiendan el destino."
+    },
+    {
+      q: "¿Qué papel juega el contraste tipográfico (mínimo 4.5:1 para texto normal) en la usabilidad web?",
+      opts: [
+        "Garantiza legibilidad universal para personas con baja agudeza visual, daltonismo y bajo condiciones de luz ambiental desfavorable",
+        "Es un adorno gráfico reservado a webs gubernamentales",
+        "Obliga a que el fondo sea siempre de color rojo intenso",
+        "Reduce el ancho de banda consumido por el servidor"
+      ],
+      a: 0,
+      exp: "Un contraste riguroso asegura legibilidad sin fatiga cognitiva tanto para personas con discapacidad visual como bajo luz solar."
+    },
+    {
+      q: "¿Qué es el 'affordance' en los componentes web interactivos?",
+      opts: [
+        "La cualidad visual que hace evidente cómo debe manipularse un elemento (ej. que un botón parezca pulsable y no texto plano)",
+        "El coste de adquisición de un dominio web en internet",
+        "El tiempo que tarda el servidor en reiniciar el motor de PHP",
+        "La cantidad de memoria swap asignada al navegador"
+      ],
+      a: 0,
+      exp: "El affordance claro orienta la acción sin necesidad de textos instructivos adicionales."
+    },
+    {
+      q: "¿Por qué el diseño adaptativo (Responsive Web Design) es una exigencia de usabilidad y no sólo de estética?",
+      opts: [
+        "Porque reconfigura la jerarquía y áreas táctiles (touch targets) para preservar la eficacia operativa en pantallas pequeñas",
+        "Porque elimina la necesidad de programar bases de datos",
+        "Porque triplica la velocidad de cálculo del procesador móvil",
+        "Porque prohíbe el uso de ratones en ordenadores portátiles"
+      ],
+      a: 0,
+      exp: "En móviles, los touch targets reducidos o los textos ilegibles provocan tasas masivas de error operativo y frustración."
+    },
+    {
+      q: "En el marco metodológico MPIu+a, ¿cómo se articula la integración entre Usabilidad y Accesibilidad en la Web?",
+      opts: [
+        "De forma simbiótica e inseparable: un sitio web accesible que no es usable resulta frustrante, y uno usable pero inaccesible discrimina",
+        "Tratando la usabilidad en el frontend y la accesibilidad en una base de datos externa separada",
+        "Aplicando accesibilidad únicamente cuando finaliza el mantenimiento plurianual",
+        "Subcontratando ambas disciplinas a departamentos que no se comunican entre sí"
+      ],
+      a: 0,
+      exp: "Usabilidad y Accesibilidad convergen para garantizar que cualquier persona logre sus metas con eficacia, fluidez y confort."
+    }
+  ];
+
+  const FLASHCARDS = [
+    {
+      front: "Paradigma de la Inmediatez Web",
+      back: "El usuario web carece de capacitación previa, no lee manuales y la competencia se sitúa exactamente a un clic de distancia. La interfaz debe autoexplicarse de inmediato."
+    },
+    {
+      front: "Navegación Hipertextual",
+      back: "Navegación en malla no lineal: el usuario salta libremente entre páginas y dominios. Requiere orientación permanente mediante migas de pan y jerarquías sin ambigüedad."
+    },
+    {
+      front: "Regla del Abandono a un Solo Clic",
+      back: "A diferencia de las aplicaciones corporativas cerradas, en la web el coste de cambio es cero: si el usuario percibe fricción o lentitud, migra instantáneamente a otra opción."
+    },
+    {
+      front: "Falacia de la Homogeneidad de Máquinas",
+      back: "Creer que los usuarios operan con los mismos monitores 4K calibrados, procesadores potentes y fibra óptica que los ingenieros en el laboratorio de desarrollo."
+    },
+    {
+      front: "Contexto Ecológico del Usuario Web",
+      back: "Heterogeneidad radical: múltiples viewports (móvil, tablet, escritorio), distintos motores de renderizado (Chromium, Gecko, WebKit) y conexiones de red fluctuantes."
+    },
+    {
+      front: "«Pensar en el usuario» vs. «Implicar al usuario» (Gaffney 1999)",
+      back: "«Pensar» asume hipótesis abstractas sin consulta; «implicar» co-diseña activamente y valida prototipos empíricamente con personas reales desde la fase conceptual."
+    },
+    {
+      front: "Diseño para Todos (Stephanidis 1995)",
+      back: "Centrarse en el usuario significa centrarse en TODOS los usuarios, proyectando interfaces que contemplen los rasgos diferenciales y personas con discapacidad."
+    },
+    {
+      front: "Discapacidad como Barrera Tecnológica",
+      back: "La discapacidad no reside intrínsecamente en el sujeto, sino en la barrera impuesta por un diseño web inaccesible, excluyente o con mala ingeniería de interfaz."
+    },
+    {
+      front: "Diversidad Funcional Circunstancial",
+      back: "Limitaciones transitorias impuestas por el entorno: luz solar directa en la pantalla, uso con una sola mano llevando maletas o ruido ambiental intenso."
+    },
+    {
+      front: "Patrón de Lectura en F (Nielsen)",
+      back: "Los internautas escanean la pantalla horizontalmente en los primeros párrafos y luego barren en vertical por el margen izquierdo. Lo sustancial debe ir arriba a la izquierda."
+    },
+    {
+      front: "Card Sorting en Arquitectura Web",
+      back: "Técnica de diseño centrado en el usuario para organizar taxonómicamente el contenido y la navegación en base a los modelos mentales de los usuarios reales."
+    },
+    {
+      front: "Regla de los 3 Niveles de Anidación",
+      back: "Pauta de arquitectura de información: limitar la profundidad del árbol de navegación a 3 clics para evitar la sobrecarga y la desorientación cognitiva."
+    },
+    {
+      front: "Triada de la Navegación Contextual",
+      back: "Toda interfaz web usable debe responder sin vacilación a 3 preguntas esenciales: ¿Dónde estoy?, ¿De dónde vengo? y ¿A dónde puedo ir desde aquí?"
+    },
+    {
+      front: "Tiempo de Carga Percibido y Skeletons",
+      back: "El tiempo subjetivo de espera se reduce radicalmente usando interfaces esqueléticas (skeletons) y retroalimentación progresiva en lugar de pantallas blancas inertes."
+    },
+    {
+      front: "Retroalimentación Interactiva Web",
+      back: "Confirmación visual y táctil de las acciones del operador (hover, focus visible, estados de carga y confirmación de envío) para mantener el control y evitar errores."
+    },
+    {
+      front: "Pautas de Accesibilidad Web (WCAG 2.2 AA)",
+      back: "Marco internacional de la W3C estructurado en cuatro principios: Perceptible, Operable, Comprensible y Robusto. El nivel AA es el estándar de referencia universal."
+    },
+    {
+      front: "Affordance e Inmediatez Intuitiva",
+      back: "Cualidad de un elemento interactivo que comunica su función por su mera apariencia: los enlaces parecen enlaces y los botones invitan a ser pulsados con claridad."
+    }
+  ];
+
+  const GAPS = [
+    {
+      title: "1. Paradigma de la Inmediatez y Abandono",
+      text: "En la web los usuarios carecen de {0} previa, no leen manuales y la competencia se sitúa exactamente a un {1} de distancia, exigiendo interfaces con total {2} desde el primer contacto.",
+      gaps: ["capacitación", "clic", "autoexplicabilidad"]
+    },
+    {
+      title: "2. Navegación Hipertextual y Desorientación",
+      text: "A diferencia del escritorio lineal, la web es una estructura {0} donde el usuario salta libremente. Sin puntos de anclaje contextuales claros, se desencadena la {1} cognitiva del navegante.",
+      gaps: ["hipertextual", "desorientación"]
+    },
+    {
+      title: "3. La Falacia de la Homogeneidad",
+      text: "El equipo técnico opera en condiciones de {0} con monitores de alta gama y redes estables, cayendo en la falacia de asumir que el usuario final dispone de un entorno tecnológico {1} y constante.",
+      gaps: ["laboratorio", "homogéneo"]
+    },
+    {
+      title: "4. Diseño Participativo vs. Pensar en el Usuario",
+      text: "Según Gerry {0} (1999), de nada sirve limitarse a pensar en el usuario desde el aislamiento intelectual si no se pasa a {1} al usuario en sesiones de diseño {2} temprano.",
+      gaps: ["Gaffney", "implicar", "participativo"]
+    },
+    {
+      title: "5. Diseño Universal e Inclusión (Stephanidis)",
+      text: "Constantine {0} (1995) sentenció que centrarse en el usuario exige centrarse en {1} los usuarios, garantizando que la arquitectura no cree {2} para personas con diversidad funcional.",
+      gaps: ["Stephanidis", "todos", "barreras"]
+    },
+    {
+      title: "6. Patrón de Lectura en F de Eye-Tracking",
+      text: "Los estudios de oculometría demuestran que los internautas exploran la pantalla siguiendo un patrón en {0}, por lo que la información sustantiva debe poblar la zona superior {1} de la interfaz.",
+      gaps: ["F", "izquierda"]
+    },
+    {
+      title: "7. Arquitectura de Información y Card Sorting",
+      text: "Para organizar la taxonomía web se recurre a técnicas como el {0} con usuarios, procurando no rebasar los {1} niveles de profundidad jerárquica.",
+      gaps: ["Card Sorting", "3"]
+    },
+    {
+      title: "8. Tiempo Percibido y Esqueletos",
+      text: "El tiempo de carga {0} impacta más en la satisfacción que las métricas de red; el uso de pantallas esqueléticas o {1} mitiga la sensación subjetiva de demora.",
+      gaps: ["percibido", "skeletons"]
+    },
+    {
+      title: "9. Preguntas Clave de Navegación",
+      text: "Una navegación contextual excelente responde en todo instante a tres preguntas críticas: ¿Dónde {0}?, ¿De dónde {1}? y ¿A dónde puedo {2} desde aquí?",
+      gaps: ["estoy", "vengo", "ir"]
+    }
+  ];
+
+  // Estado reactivo
+  let currentTab = 'test'; // 'test' | 'fc' | 'gaps'
+  
+  // Test State
+  let qIdx = 0;
+  let qSelected = null;
+  let qConfirmed = false;
+  let qScore = 0;
+  let qFinished = false;
+  let qWrongList = [];
+
+  // Flashcards State
+  let fcIdx = 0;
+  let fcFlipped = false;
+  let fcKnown = new Set();
+
+  // Gaps State
+  let gIdx = 0;
+  let gAnswers = {};
+  let gChecked = false;
+
+  const app = document.getElementById('app');
+
+  function renderTabs() {
+    return `
+      <div class="flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low px-4 sm:px-6 pt-3">
+        <div class="flex gap-2">
+          <button type="button" data-tab="test" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'test' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">quiz</span>
+            <span>Test interactivo</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'test' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">30</span>
+          </button>
+          <button type="button" data-tab="fc" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'fc' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">style</span>
+            <span>Flashcards 3D</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'fc' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">17</span>
+          </button>
+          <button type="button" data-tab="gaps" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'gaps' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">edit_note</span>
+            <span>Rellenar huecos</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'gaps' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">9</span>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center gap-2 text-[12px] text-on-surface-variant font-code-inline pb-2">
+          <span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+          <span>Atajos de teclado habilitados</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTest() {
+    if (qFinished) {
+      const pct = Math.round((qScore / QUESTIONS.length) * 100);
+      const nota = (qScore / QUESTIONS.length * 10).toFixed(1).replace('.0','');
+      return `
+        <div class="p-6 sm:p-10 flex flex-col items-center justify-center text-center my-auto">
+          <div class="w-20 h-20 rounded-full ${pct >= 70 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'} flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[42px]">${pct >= 70 ? 'emoji_events' : 'psychology'}</span>
+          </div>
+          <div class="font-display-hero text-[48px] font-bold text-primary mb-1">${nota}</div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">¡Test de Usabilidad Web completado!</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">Has respondido correctamente <strong class="text-on-surface">${qScore}</strong> de las <strong class="text-on-surface">${QUESTIONS.length}</strong> preguntas (${pct}% de acierto).</p>
+          
+          <div class="w-full max-w-xs bg-surface-container-high h-3 rounded-full overflow-hidden mb-6">
+            <div class="h-full ${pct >= 70 ? 'bg-green-600' : 'bg-amber-600'} transition-all duration-700" style="width: ${pct}%"></div>
+          </div>
+
+          ${qWrongList.length > 0 ? `
+            <div class="w-full max-w-2xl text-left bg-surface-container-low rounded-xl p-5 border border-outline-variant/30 mb-8 space-y-3">
+              <span class="font-label-md text-label-md font-bold text-error flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">warning</span>
+                Preguntas para repasar (${qWrongList.length}):
+              </span>
+              <div class="max-h-60 overflow-y-auto space-y-3 pr-2">
+                ${qWrongList.map(item => `
+                  <div class="p-3 bg-surface-container-lowest rounded-lg border-l-4 border-l-error text-body-sm">
+                    <p class="font-semibold text-on-surface">${item.q}</p>
+                    <p class="text-green-800 text-[13px] mt-1"><strong class="font-medium text-green-900">Solución:</strong> ${item.opts[item.a]}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : `
+            <div class="p-4 bg-green-50 text-green-900 rounded-xl font-label-md mb-8 flex items-center gap-2">
+              <span class="material-symbols-outlined text-green-700">task_alt</span>
+              <span>¡Dominio absoluto! Has acertado todas las preguntas a la primera.</span>
+            </div>
+          `}
+
+          <button type="button" id="restart-test" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-md">
+            <span class="material-symbols-outlined text-[20px]">refresh</span>
+            <span>Volver a intentar el test</span>
+          </button>
+        </div>
+      `;
+    }
+
+    const cur = QUESTIONS[qIdx];
+    const progressPct = ((qIdx + 1) / QUESTIONS.length) * 100;
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra de progreso superior -->
+          <div class="flex items-center justify-between gap-4 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Pregunta ${qIdx + 1} / ${QUESTIONS.length}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Aciertos: ${qScore}</span>
+            </div>
+            <span class="font-code-inline text-[12px] text-on-surface-variant">${Math.round(progressPct)}%</span>
+          </div>
+          <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-6">
+            <div class="h-full bg-primary transition-all duration-300" style="width: ${progressPct}%"></div>
+          </div>
+
+          <!-- Pregunta -->
+          <h3 class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mb-6">${cur.q}</h3>
+
+          <!-- Opciones -->
+          <div class="space-y-3 mb-6">
+            ${cur.opts.map((opt, i) => {
+              let stateClasses = "bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface";
+              let badge = `<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">${i + 1}</span>`;
+
+              if (qConfirmed) {
+                if (i === cur.a) {
+                  stateClasses = "bg-green-50 border-green-400 text-green-900 font-semibold ring-1 ring-green-400";
+                  badge = `<span class="w-7 h-7 rounded-lg bg-green-500 text-white flex items-center justify-center font-code-inline text-[14px] font-bold mr-3 shrink-0"><span class="material-symbols-outlined text-[18px]">check</span></span>`;
+                } else if (i === qSelected) {
+                  stateClasses = "bg-red-50 border-red-300 text-red-900 ring-1 ring-red-300";
+                  badge = `<span class="w-7 h-7 rounded-lg bg-red-500 text-white flex items-center justify-center font-code-inline text-[14px] font-bold mr-3 shrink-0"><span class="material-symbols-outlined text-[18px]">close</span></span>`;
+                } else {
+                  stateClasses = "bg-surface-container-low/60 border-outline-variant/20 text-on-surface-variant/70 opacity-60";
+                }
+              } else if (qSelected === i) {
+                stateClasses = "bg-primary-fixed/40 border-primary text-primary font-semibold ring-1 ring-primary";
+                badge = `<span class="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center font-code-inline text-[12px] font-semibold mr-3 shrink-0">${i + 1}</span>`;
+              }
+
+              return `
+                <button type="button" data-opt="${i}" ${qConfirmed ? 'disabled' : ''} class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer ${stateClasses}">
+                  ${badge}
+                  <span class="font-body-md text-body-md">${opt}</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Explicación al confirmar -->
+          ${qConfirmed ? `
+            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 mb-6 flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+              <div>
+                <span class="font-label-md text-label-md font-bold text-on-surface block mb-1">Fundamento teórico (Cátedra de IPO):</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">${cur.exp}</p>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+          <div class="text-[12px] text-on-surface-variant font-code-inline hidden sm:block">
+            ${!qConfirmed ? 'Pulsa 1, 2, 3 o 4 para seleccionar' : 'Pulsa Enter para continuar'}
+          </div>
+          <div class="flex items-center gap-3 ml-auto">
+            ${!qConfirmed ? `
+              <button type="button" id="confirm-ans" ${qSelected === null ? 'disabled' : ''} class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-sm">
+                Comprobar respuesta
+              </button>
+            ` : `
+              <button type="button" id="next-q" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-md flex items-center gap-2">
+                <span>${qIdx === QUESTIONS.length - 1 ? 'Ver resultados' : 'Siguiente pregunta'}</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            `}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFlashcards() {
+    const cur = FLASHCARDS[fcIdx];
+    const isKnown = fcKnown.has(fcIdx);
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra superior de estado flashcards -->
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Tarjeta ${fcIdx + 1} de ${FLASHCARDS.length}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Aprendidas: ${fcKnown.size} / ${FLASHCARDS.length}</span>
+            </div>
+            <button type="button" id="fc-toggle-known" class="px-3 py-1 rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 transition-all ${isKnown ? 'bg-green-100 text-green-800' : 'bg-surface-container hover:bg-surface-container-high text-on-surface-variant'}">
+              <span class="material-symbols-outlined text-[16px]">${isKnown ? 'check_circle' : 'radio_button_unchecked'}</span>
+              <span>${isKnown ? 'Dominada' : 'Me la sé (S)'}</span>
+            </button>
+          </div>
+
+          <!-- Tarjeta 3D interactiva con volteo -->
+          <div class="perspective-1000 w-full min-h-[260px] cursor-pointer" id="fc-card-trigger">
+            <div class="fc transform-style-3d relative w-full min-h-[260px] rounded-2xl ${fcFlipped ? 'flipped' : ''}">
+              <!-- Cara Frontal -->
+              <div class="backface-hidden absolute inset-0 bg-surface-container-low hover:bg-surface-container/80 border border-outline-variant/40 rounded-2xl p-8 flex flex-col justify-between shadow-sm transition-colors">
+                <div class="flex items-center justify-between text-on-surface-variant">
+                  <span class="font-code-inline text-[11px] uppercase tracking-wider font-semibold text-primary">Anverso · Concepto Clave</span>
+                  <span class="material-symbols-outlined text-[20px]">flip_camera_android</span>
+                </div>
+                <div class="my-auto text-center py-4">
+                  <h3 class="font-headline-md text-headline-md font-bold text-on-surface leading-relaxed">${cur.front}</h3>
+                </div>
+                <div class="text-center font-label-sm text-[12px] text-on-surface-variant">
+                  Clic para girar o pulsa <kbd class="px-1.5 py-0.5 bg-surface-container-highest rounded font-code-inline">Espacio</kbd>
+                </div>
+              </div>
+
+              <!-- Cara Posterior (Reverso) -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 bg-primary-container text-on-primary-container rounded-2xl p-8 flex flex-col justify-between shadow-md">
+                <div class="flex items-center justify-between opacity-80">
+                  <span class="font-code-inline text-[11px] uppercase tracking-wider font-semibold">Reverso · Definición / Fundamento</span>
+                  <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                </div>
+                <div class="my-auto text-center py-4">
+                  <p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed font-medium">${cur.back}</p>
+                </div>
+                <div class="text-center font-label-sm text-[12px] opacity-80">
+                  Clic para volver o pulsa <kbd class="px-1.5 py-0.5 bg-white/20 rounded font-code-inline">Espacio</kbd>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles Inferiores Flashcards -->
+        <div class="flex items-center justify-between pt-6 border-t border-outline-variant/20 mt-6">
+          <button type="button" id="fc-prev" ${fcIdx === 0 ? 'disabled' : ''} class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Anterior</span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <button type="button" id="fc-shuffle" class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+              <span class="material-symbols-outlined text-[18px]">shuffle</span>
+              <span>Barajar</span>
+            </button>
+          </div>
+
+          <button type="button" id="fc-next" ${fcIdx === FLASHCARDS.length - 1 ? 'disabled' : ''} class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+            <span>Siguiente</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderGaps() {
+    const cur = GAPS[gIdx];
+    const currentGaps = cur.gaps;
+
+    // Generar banco de palabras mezclado para este texto
+    const wordBank = [...currentGaps].sort();
+
+    // Reemplazar {0}, {1}, etc. con inputs o spans
+    let renderedText = cur.text;
+    currentGaps.forEach((val, i) => {
+      const userVal = gAnswers[`${gIdx}_${i}`] || '';
+      let borderClass = "border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary";
+
+      if (gChecked) {
+        if (userVal.trim().toLowerCase() === val.toLowerCase()) {
+          borderClass = "border-green-500 bg-green-50 text-green-900 font-bold ring-1 ring-green-500";
+        } else {
+          borderClass = "border-red-400 bg-red-50 text-red-900 ring-1 ring-red-400";
+        }
+      }
+
+      const inputHtml = `
+        <span class="inline-block mx-1">
+          <input type="text" data-gap="${i}" value="${userVal}" placeholder="[palabra]" ${gChecked ? 'readonly' : ''} class="px-2.5 py-1 text-center font-code-inline text-body-sm rounded-lg border shadow-sm outline-none transition-all w-36 ${borderClass}" />
+          ${gChecked && userVal.trim().toLowerCase() !== val.toLowerCase() ? `<span class="block text-[11px] font-code-inline text-green-700 font-semibold text-center mt-0.5">${val}</span>` : ''}
+        </span>
+      `;
+      renderedText = renderedText.replace(`{${i}}`, inputHtml);
+    });
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra superior estado huecos -->
+          <div class="flex items-center justify-between gap-4 mb-4">
+            <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Texto ${gIdx + 1} de ${GAPS.length}</span>
+            <div class="flex items-center gap-1">
+              ${GAPS.map((_, i) => `
+                <button type="button" data-goto-gap="${i}" class="w-6 h-6 rounded-md font-code-inline text-[11px] ${i === gIdx ? 'bg-primary text-white font-bold' : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'}">${i + 1}</button>
+              `).join('')}
+            </div>
+          </div>
+
+          <h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">${cur.title}</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Completa los espacios en blanco basándote en la teoría de Usabilidad en la Web:</p>
+
+          <!-- Banco de palabras de ayuda -->
+          <div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 mb-6 flex flex-wrap items-center gap-2">
+            <span class="font-label-sm text-label-sm text-on-surface-variant mr-2 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">dictionary</span>
+              <span>Palabras disponibles:</span>
+            </span>
+            ${wordBank.map(w => {
+              const isUsed = currentGaps.some((val, i) => {
+                const userVal = (gAnswers[`${gIdx}_${i}`] || '').trim().toLowerCase();
+                return userVal === w.toLowerCase();
+              });
+              return `
+                <span class="px-2.5 py-1 rounded-lg ${isUsed ? 'bg-surface-container text-on-surface-variant/40 line-through' : 'bg-surface-container-lowest text-primary'} border border-outline-variant/40 font-code-inline text-[12px] font-semibold shadow-xs">${w}</span>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Texto con los huecos interactivos -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 leading-loose text-on-surface font-body-md text-body-md shadow-xs">
+            ${renderedText}
+          </div>
+        </div>
+
+        <!-- Acciones Inferiores Huecos -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-outline-variant/20 mt-6">
+          <div class="flex items-center gap-2">
+            <button type="button" id="gap-prev" ${gIdx === 0 ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1 text-on-surface transition-all">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Anterior texto</span>
+            </button>
+            <button type="button" id="gap-next" ${gIdx === GAPS.length - 1 ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1 text-on-surface transition-all">
+              <span>Siguiente texto</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+            ${!gChecked ? `
+              <button type="button" id="check-gaps" class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm">
+                Comprobar texto
+              </button>
+            ` : `
+              <button type="button" id="retry-gaps" class="px-4 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                Reintentar
+              </button>
+              <button type="button" id="solve-gaps" class="px-4 py-2.5 rounded-xl bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                Ver solución
+              </button>
+              ${gIdx < GAPS.length - 1 ? `
+                <button type="button" id="next-gap-btn" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-md flex items-center gap-2">
+                  <span>Siguiente texto</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </button>
+              ` : ''}
+            `}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function render() {
+    let contentHtml = '';
+    if (currentTab === 'test') {
+      contentHtml = renderTest();
+    } else if (currentTab === 'fc') {
+      contentHtml = renderFlashcards();
+    } else if (currentTab === 'gaps') {
+      contentHtml = renderGaps();
+    }
+
+    app.innerHTML = renderTabs() + contentHtml;
+    attachEvents();
+  }
+
+  function attachEvents() {
+    // Tabs
+    app.querySelectorAll('[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentTab = btn.getAttribute('data-tab');
+        render();
+      });
+    });
+
+    // TEST EVENTS
+    if (currentTab === 'test') {
+      app.querySelectorAll('[data-opt]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (!qConfirmed) {
+            qSelected = parseInt(btn.getAttribute('data-opt'), 10);
+            render();
+          }
+        });
+      });
+
+      const confirmBtn = document.getElementById('confirm-ans');
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+          if (qSelected !== null) {
+            qConfirmed = true;
+            if (qSelected === QUESTIONS[qIdx].a) {
+              qScore++;
+            } else {
+              qWrongList.push(QUESTIONS[qIdx]);
+            }
+            render();
+          }
+        });
+      }
+
+      const nextBtn = document.getElementById('next-q');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (qIdx < QUESTIONS.length - 1) {
+            qIdx++;
+            qSelected = null;
+            qConfirmed = false;
+          } else {
+            qFinished = true;
+          }
+          render();
+        });
+      }
+
+      const restartBtn = document.getElementById('restart-test');
+      if (restartBtn) {
+        restartBtn.addEventListener('click', () => {
+          qIdx = 0;
+          qScore = 0;
+          qSelected = null;
+          qConfirmed = false;
+          qFinished = false;
+          qWrongList = [];
+          render();
+        });
+      }
+    }
+
+    // FLASHCARD EVENTS
+    if (currentTab === 'fc') {
+      const cardTrigger = document.getElementById('fc-card-trigger');
+      if (cardTrigger) {
+        cardTrigger.addEventListener('click', () => {
+          fcFlipped = !fcFlipped;
+          render();
+        });
+      }
+
+      const toggleKnownBtn = document.getElementById('fc-toggle-known');
+      if (toggleKnownBtn) {
+        toggleKnownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (fcKnown.has(fcIdx)) {
+            fcKnown.delete(fcIdx);
+          } else {
+            fcKnown.add(fcIdx);
+          }
+          render();
+        });
+      }
+
+      const prevBtn = document.getElementById('fc-prev');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          if (fcIdx > 0) {
+            fcIdx--;
+            fcFlipped = false;
+            render();
+          }
+        });
+      }
+
+      const nextBtn = document.getElementById('fc-next');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (fcIdx < FLASHCARDS.length - 1) {
+            fcIdx++;
+            fcFlipped = false;
+            render();
+          }
+        });
+      }
+
+      const shuffleBtn = document.getElementById('fc-shuffle');
+      if (shuffleBtn) {
+        shuffleBtn.addEventListener('click', () => {
+          FLASHCARDS.sort(() => Math.random() - 0.5);
+          fcIdx = 0;
+          fcFlipped = false;
+          render();
+        });
+      }
+    }
+
+    // GAPS EVENTS
+    if (currentTab === 'gaps') {
+      app.querySelectorAll('input[data-gap]').forEach(inp => {
+        inp.addEventListener('input', (e) => {
+          const gapIndex = inp.getAttribute('data-gap');
+          gAnswers[`${gIdx}_${gapIndex}`] = e.target.value;
+        });
+      });
+
+      app.querySelectorAll('[data-goto-gap]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          gIdx = parseInt(btn.getAttribute('data-goto-gap'), 10);
+          gChecked = false;
+          render();
+        });
+      });
+
+      const checkGapsBtn = document.getElementById('check-gaps');
+      if (checkGapsBtn) {
+        checkGapsBtn.addEventListener('click', () => {
+          gChecked = true;
+          render();
+        });
+      }
+
+      const retryGapsBtn = document.getElementById('retry-gaps');
+      if (retryGapsBtn) {
+        retryGapsBtn.addEventListener('click', () => {
+          gChecked = false;
+          render();
+        });
+      }
+
+      const solveGapsBtn = document.getElementById('solve-gaps');
+      if (solveGapsBtn) {
+        solveGapsBtn.addEventListener('click', () => {
+          GAPS[gIdx].gaps.forEach((val, i) => {
+            gAnswers[`${gIdx}_${i}`] = val;
+          });
+          gChecked = true;
+          render();
+        });
+      }
+
+      const nextGapBtn = document.getElementById('next-gap-btn');
+      if (nextGapBtn) {
+        nextGapBtn.addEventListener('click', () => {
+          if (gIdx < GAPS.length - 1) {
+            gIdx++;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+
+      const gapPrev = document.getElementById('gap-prev');
+      if (gapPrev) {
+        gapPrev.addEventListener('click', () => {
+          if (gIdx > 0) {
+            gIdx--;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+
+      const gapNext = document.getElementById('gap-next');
+      if (gapNext) {
+        gapNext.addEventListener('click', () => {
+          if (gIdx < GAPS.length - 1) {
+            gIdx++;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+    }
+  }
+
+  // Soporte Teclado
+  window.addEventListener('keydown', (e) => {
+    if (e.target && e.target.tagName === 'INPUT') {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const checkBtn = document.getElementById('check-gaps');
+        if (checkBtn) checkBtn.click();
+      }
+      return;
+    }
+
+    if (currentTab === 'test' && !qFinished) {
+      if (['1', '2', '3', '4'].includes(e.key) && !qConfirmed) {
+        qSelected = parseInt(e.key, 10) - 1;
+        render();
+      } else if (e.key === 'Enter') {
+        if (!qConfirmed && qSelected !== null) {
+          qConfirmed = true;
+          if (qSelected === QUESTIONS[qIdx].a) {
+            qScore++;
+          } else {
+            qWrongList.push(QUESTIONS[qIdx]);
+          }
+          render();
+        } else if (qConfirmed) {
+          if (qIdx < QUESTIONS.length - 1) {
+            qIdx++;
+            qSelected = null;
+            qConfirmed = false;
+          } else {
+            qFinished = true;
+          }
+          render();
+        }
+      }
+    } else if (currentTab === 'fc') {
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        fcFlipped = !fcFlipped;
+        render();
+      } else if (e.key === 'ArrowRight' && fcIdx < FLASHCARDS.length - 1) {
+        fcIdx++;
+        fcFlipped = false;
+        render();
+      } else if (e.key === 'ArrowLeft' && fcIdx > 0) {
+        fcIdx--;
+        fcFlipped = false;
+        render();
+      } else if (e.key.toLowerCase() === 's') {
+        if (fcKnown.has(fcIdx)) fcKnown.delete(fcIdx);
+        else fcKnown.add(fcIdx);
+        render();
+      }
+    }
+  });
+
+  // Inicialización directa
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+</script></body></html>

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Universitat de Lleida</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#005cbb","error":"#ba1a1a","primary-container":"#0071e3","secondary-fixed":"#e4e2e4","surface-bright":"#faf8fe","inverse-primary":"#abc7ff","background":"#faf8fe","on-background":"#1a1b1f","on-primary":"#ffffff","inverse-surface":"#2f3034","tertiary-fixed":"#d7e3ff","on-primary-fixed":"#001b3f","primary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","tertiary":"#0059b4","surface-container-lowest":"#ffffff","secondary-container":"#e2dfe1","secondary-fixed-dim":"#c8c6c8","surface":"#faf8fe","on-primary-fixed-variant":"#00458f","on-secondary":"#ffffff","on-primary-container":"#fcfbff","primary":"#0059b5","surface-container-highest":"#e3e2e7","on-tertiary-fixed-variant":"#00458e","surface-container":"#eeedf3","outline":"#717785","on-surface":"#1a1b1f","outline-variant":"#c1c6d6","surface-container-high":"#e9e7ed","error-container":"#ffdad6","on-tertiary-fixed":"#001b3f","surface-container-low":"#f4f3f8","on-tertiary-container":"#fcfaff","surface-dim":"#dad9df","on-secondary-container":"#636264","secondary":"#5f5e60","on-secondary-fixed":"#1b1b1d","tertiary-container":"#0071e2","on-secondary-fixed-variant":"#474649","inverse-on-surface":"#f1f0f5","on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#abc7ff","on-tertiary":"#ffffff","on-surface-variant":"#414753","surface-variant":"#e3e2e7"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","margin-sm":"1.25rem","gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","margin":"3rem","space-sm":"0.5rem","space-lg":"1.5rem","margin-md":"2rem"},fontFamily:{"headline-lg":["Inter"],"body-sm":["Inter"],"code-inline":["JetBrains Mono"],"headline-md":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-12 bg-surface-container-low/90 backdrop-blur-md"><div class="h-full max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md overflow-x-auto"><div class="flex items-center gap-space-sm shrink-0"><span class="material-symbols-outlined text-primary text-[18px]">folder_open</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden md:inline">Módulo 3.2: Teoría del DCU</span><span class="text-outline-variant hidden md:inline">/</span></div><nav class="flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm" data-active-classes="bg-primary text-on-primary shadow-sm"><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="normativa-principios-dcu-iso-13407" href="modulo-3-02-1-normativa.html">3.2.1 Normativa y principios DCU (ISO 13407)</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="diseno-contextual-y-participacion" href="modulo-3-02-2-contextual.html">3.2.2 Diseño contextual y participación</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="modulo-3-02-3-enfoques.html">3.2.3 Enfoques: DCUsuario vs DCUso vs DCTec</a></nav></div></div></header><main class="w-full pt-26 bg-surface min-h-[calc(100vh-260px)]"><div class="flex flex-col w-full">
+<!-- Subbarra de navegación superior de lecciones DCU 3.2 -->
+<div class="w-full bg-surface-container-lowest shadow-sm mb-space-lg">
+<div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter py-space-sm flex items-center justify-between gap-space-md overflow-x-auto">
+<div class="flex items-center gap-space-xs shrink-0 font-label-md text-label-md">
+<a class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="normativa-principios-dcu-iso-13407" href="modulo-3-02-1-normativa.html">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>3.2.1 Normativa y principios DCU</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-primary text-on-primary font-semibold shadow-sm transition-all" data-path="diseno-contextual-y-participacion" href="modulo-3-02-2-contextual.html">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>3.2.2 Diseño contextual y participación</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="modulo-3-02-3-enfoques.html">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>3.2.3 Enfoques: DCUsuario vs DCUso / DCTec</span>
+</a>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Autoevaluación Oficial UdL · GRIHO</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter w-full space-y-space-lg pb-space-xl">
+<!-- Tarjeta Hero interactiva canónica (estilo Usabilidad 03 / Accesibilidad) -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-lg lg:p-space-xl">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 pointer-events-none blur-3xl"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[32px]">sports_esports</span>
+</div>
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold tracking-wide">
+<span>JUEGO 2 · TODO EN UNO · Módulo 3 · 3.2.2 DCU</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+              Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre Hugh Beyer, Karen Holtzblatt, los 5 modelos de trabajo, UED y diseño participativo de Gaffney.
+            </p>
+</div>
+</div>
+<div class="flex lg:flex-col items-center lg:items-end justify-between shrink-0 bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>22 preguntas • 15 tarjetas • 7 textos</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Contenido temático completo</span>
+</div>
+</div>
+</div>
+<!-- Controles de suite interactiva con pestañas y atajos -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto p-1" id="suite-tab-buttons">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all cursor-pointer" id="tab-btn-test" onclick="switchSuiteMode('test')" type="button">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (22)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all cursor-pointer" id="tab-btn-flashcards" onclick="switchSuiteMode('flashcards')" type="button">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (15)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all cursor-pointer" id="tab-btn-cloze" onclick="switchSuiteMode('cloze')" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (7)</span>
+</button>
+</div>
+<div class="px-space-sm py-1 font-code-inline text-code-inline text-on-surface-variant flex items-center gap-space-xs text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span>Atajos activos: <kbd class="px-1 py-0.5 rounded bg-surface-container text-on-surface font-mono">[1-4]</kbd> Test · <kbd class="px-1 py-0.5 rounded bg-surface-container text-on-surface font-mono">[Espacio/Flechas]</kbd> Tarjetas · <kbd class="px-1 py-0.5 rounded bg-surface-container text-on-surface font-mono">[Enter]</kbd> Validar</span>
+</div>
+</div>
+<!-- MODO 1: TEST INTERACTIVO (22 PREGUNTAS) -->
+<div class="space-y-space-md" id="section-test">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-lg space-y-space-lg">
+<!-- Meta cabecera -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary" id="test-q-number">Pregunta 1 de 22</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span id="test-score-counter">Aciertos acumulados: 0</span>
+</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-on-surface-variant" id="test-progress-text">0% completado</span>
+</div>
+</div>
+<!-- Barra de progreso -->
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" id="test-progress-bar" style="width: 4.54%;"></div>
+</div>
+<!-- Pregunta -->
+<div class="space-y-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">psychology_alt</span>
+<span id="test-q-category">Diseño Contextual · Fundamentos</span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" id="test-q-text">
+            ¿En qué principio se basa el diseño contextual?
+          </h2>
+</div>
+<!-- Opciones de respuesta -->
+<div class="grid grid-cols-1 gap-space-sm pt-space-xs" id="test-options-container">
+<!-- Inyectado dinámicamente -->
+</div>
+<!-- Feedback explicativo dinámico -->
+<div class="hidden p-space-md rounded-xl transition-all space-y-space-xs" id="test-feedback-box">
+<div class="flex items-center gap-space-xs font-label-md text-label-md font-semibold" id="test-feedback-title">
+<!-- Icono y estado -->
+</div>
+<p class="font-body-md text-body-md" id="test-feedback-desc"></p>
+</div>
+<!-- Pie de navegación de test -->
+<div class="flex items-center justify-between pt-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed" id="btn-prev-test" onclick="prevTestQuestion()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Anterior</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer" onclick="restartTest()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="hidden sm:inline">Reiniciar</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:opacity-95 transition-all cursor-pointer" id="btn-next-test" onclick="nextTestQuestion()" type="button">
+<span>Siguiente</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODO 2: FLASHCARDS 3D (15 TARJETAS) -->
+<div class="hidden space-y-space-md" id="section-flashcards">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-lg space-y-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary" id="fc-counter">Tarjeta 1 de 15</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span id="fc-mastered-counter">Dominadas: 0 de 15</span>
+</span>
+</div>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Clic en tarjeta o [Espacio] para voltear</span>
+</div>
+<!-- Tarjeta 3D -->
+<div class="w-full flex justify-center py-space-sm">
+<div class="w-full max-w-2xl h-80 sm:h-96 [perspective:1200px] cursor-pointer group select-none" onclick="flipFlashcard()">
+<div class="relative w-full h-full duration-500 [transform-style:preserve-3d] rounded-2xl shadow-md group-hover:shadow-xl transition-all" id="flashcard-inner">
+<!-- CARA FRONTAL -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-low rounded-2xl p-space-lg flex flex-col justify-between [backface-visibility:hidden]">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">contact_support</span>
+<span id="fc-front-tag">Concepto Clave</span>
+</span>
+<span class="material-symbols-outlined text-outline-variant text-[24px]">flip</span>
+</div>
+<div class="text-center px-space-sm">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-wider mb-space-xs">Término / Pregunta</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface" id="fc-front-text">
+                    ¿Qué es el Diseño Contextual?
+                  </h3>
+</div>
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Toca para ver la definición y aplicación</span>
+</div>
+</div>
+<!-- CARA TRASERA -->
+<div class="absolute inset-0 w-full h-full bg-primary text-on-primary rounded-2xl p-space-lg flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden]">
+<div class="flex items-center justify-between text-on-primary/80">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-lowest/15 font-label-sm text-label-sm text-on-primary">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span>Respuesta y Relevancia</span>
+</span>
+<span class="material-symbols-outlined text-[24px]">sync</span>
+</div>
+<div class="text-center px-space-sm overflow-y-auto max-h-52">
+<p class="font-headline-sm text-headline-sm leading-relaxed text-on-primary font-medium" id="fc-back-text">
+                    Metodología de DCU centrada en trabajo de campo (Beyer &amp; Holtzblatt) que extrae datos empíricos de usuarios en su entorno real mediante indagación contextual.
+                  </p>
+</div>
+<div class="flex items-center justify-center gap-space-sm pt-space-xs">
+<span class="text-on-primary/80 font-label-sm text-label-sm">Usa las flechas ← / → para navegar</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Controles Flashcard -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer" onclick="prevFlashcard()" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Anterior</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high text-tertiary font-label-md text-label-md font-semibold hover:bg-tertiary-fixed transition-all cursor-pointer" id="btn-master-card" onclick="markCardMastered()" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Marcar como aprendida</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium transition-all cursor-pointer" onclick="flipFlashcard()" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Voltear</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all cursor-pointer" onclick="nextFlashcard()" type="button">
+<span>Siguiente</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODO 3: RELLENAR HUECOS (7 TEXTOS) -->
+<div class="hidden space-y-space-md" id="section-cloze">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-lg space-y-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary" id="cloze-counter">Texto 1 de 7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1" id="cloze-score-badge">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fact_check</span>
+<span>Completados con éxito: 0 de 7</span>
+</span>
+</div>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Haz clic en los chips del banco para insertar</span>
+</div>
+<!-- Título y contexto del texto -->
+<div class="space-y-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">auto_stories</span>
+<span id="cloze-text-topic">Beyer &amp; Holtzblatt · Indagación Contextual</span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface" id="cloze-text-title">
+            Los fundamentos del Diseño Contextual
+          </h2>
+</div>
+<!-- Párrafo interactivo con huecos -->
+<div class="p-space-lg rounded-xl bg-surface-container-low text-on-surface font-body-lg text-body-lg leading-loose" id="cloze-body-container">
+<!-- Inyectado dinámicamente con spans/inputs clickeables -->
+</div>
+<!-- Banco de palabras disponibles -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Banco de términos disponibles:</span>
+<button class="font-label-sm text-label-sm text-error hover:underline inline-flex items-center gap-1 cursor-pointer" onclick="clearCurrentCloze()" type="button">
+<span class="material-symbols-outlined text-[14px]">backspace</span>
+<span>Vaciar huecos</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-space-xs p-space-sm bg-surface-container rounded-lg min-h-12 items-center" id="cloze-bank-container">
+<!-- Chips dinámicos -->
+</div>
+</div>
+<!-- Feedback de validación de huecos -->
+<div class="hidden p-space-md rounded-xl space-y-1" id="cloze-feedback">
+<div class="flex items-center gap-space-xs font-label-md text-label-md font-semibold" id="cloze-feedback-title"></div>
+<p class="font-body-md text-body-md" id="cloze-feedback-msg"></p>
+</div>
+<!-- Pie de navegación modo huecos -->
+<div class="flex items-center justify-between pt-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all cursor-pointer" id="btn-prev-cloze" onclick="prevCloze()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Texto anterior</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:opacity-95 transition-all cursor-pointer" onclick="validateCloze()" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Validar respuestas</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md transition-all cursor-pointer" id="btn-next-cloze" onclick="nextCloze()" type="button">
+<span>Siguiente</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Barra de navegación curricular inferior -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all group" data-path="normativa-principios-dcu-iso-13407" href="modulo-3-02-1-normativa.html">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+<span>← Anterior: 3.2.1 Normativa y Principios del DCU</span>
+</a>
+<div class="font-label-md text-label-md text-on-surface-variant text-center">
+<span>Capítulo 02 de 03 · Módulo 3.2</span>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:opacity-95 transition-all group" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="modulo-3-02-3-enfoques.html">
+<span>Siguiente: 3.2.3 Diferencias entre Enfoques de Diseño →</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  // -------------------------------------------------------------
+  // BANCO DE DATOS: 22 PREGUNTAS DE AUTOEVALUACIÓN (DOCUMENT_10)
+  // -------------------------------------------------------------
+  const testQuestions = [
+    {
+      q: "¿En qué principio se basa el diseño contextual?",
+      category: "Diseño Contextual · Fundamentos",
+      options: [
+        "En situarse directamente en el lugar donde ocurre la actividad",
+        "En encuestas online",
+        "En la intuición del equipo",
+        "En copiar a la competencia"
+      ],
+      correct: 0,
+      explanation: "El Diseño Contextual postula que cualquier sistema debe diseñarse observando directamente a los usuarios en su entorno real y cotidiano de trabajo."
+    },
+    {
+      q: "¿Quiénes son los creadores del Diseño Contextual?",
+      category: "Historia & Autores",
+      options: [
+        "Hugh Beyer y Karen Holtzblatt",
+        "Don Norman y Jakob Nielsen",
+        "Ben Shneiderman y Alan Cooper",
+        "Stuart Card y Thomas Moran"
+      ],
+      correct: 0,
+      explanation: "Hugh Beyer y Karen Holtzblatt desarrollaron el enfoque de Contextual Design (1998) en InContext Solutions."
+    },
+    {
+      q: "¿Cuál es la primera etapa del proceso de Diseño Contextual?",
+      category: "Proceso Contextual",
+      options: [
+        "Indagación contextual (Contextual Inquiry)",
+        "Prototipado en papel",
+        "Diseño del entorno de usuario (UED)",
+        "Consolidación de modelos"
+      ],
+      correct: 0,
+      explanation: "La Indagación Contextual es el punto de partida donde se realizan observaciones y entrevistas en campo."
+    },
+    {
+      q: "¿Cuáles son los 4 principios de la indagación contextual?",
+      category: "Indagación Contextual",
+      options: [
+        "Contexto, Asociación, Interpretación y Enfoque",
+        "Rapidez, Eficiencia, Coste y Calidad",
+        "Empatía, Definición, Ideación y Test",
+        "Consistencia, Flexibilidad, Robustez y Accesibilidad"
+      ],
+      correct: 0,
+      explanation: "Los 4 pilares formulados por Beyer y Holtzblatt son: Contexto (lugar real), Asociación (maestro-aprendiz), Interpretación (compartir hallazgos) y Enfoque focalizado."
+    },
+    {
+      q: "¿Qué modelo de trabajo refleja la comunicación y coordinación entre personas?",
+      category: "5 Modelos de Trabajo",
+      options: [
+        "Modelo de Flujo (Flow Model)",
+        "Modelo de Secuencia",
+        "Modelo Físico",
+        "Modelo Cultural"
+      ],
+      correct: 0,
+      explanation: "El Modelo de Flujo diagrama cómo circulan la información, las peticiones y los artefactos entre roles humanos y departamentos."
+    },
+    {
+      q: "¿Qué modelo de trabajo detalla los pasos cronológicos que sigue un usuario para lograr un objetivo?",
+      category: "5 Modelos de Trabajo",
+      options: [
+        "Modelo de Secuencia (Sequence Model)",
+        "Modelo de Artefacto",
+        "Modelo Físico",
+        "Modelo de Flujo"
+      ],
+      correct: 0,
+      explanation: "El Modelo de Secuencia desglosa los pasos, disparadores, vacilaciones y rupturas ordenadas temporalmente."
+    },
+    {
+      q: "¿Qué modelo describe las normas, presiones, influencias y valores del entorno de trabajo?",
+      category: "5 Modelos de Trabajo",
+      options: [
+        "Modelo Cultural (Cultural Model)",
+        "Modelo de Secuencia",
+        "Modelo de Entorno",
+        "Modelo de Flujo"
+      ],
+      correct: 0,
+      explanation: "El Modelo Cultural captura las expectativas implícitas, presiones políticas y climas organizacionales que moldean el comportamiento."
+    },
+    {
+      q: "¿Qué modelo de trabajo plasma los objetos físicos que la persona crea, usa o modifica?",
+      category: "5 Modelos de Trabajo",
+      options: [
+        "Modelo de Artefacto (Artifact Model)",
+        "Modelo Físico",
+        "Modelo Cultural",
+        "Modelo de Prototipo"
+      ],
+      correct: 0,
+      explanation: "El Modelo de Artefacto representa notas adhesivas, fotocopias marcadas, carpetas o herramientas físicas complementarias."
+    },
+    {
+      q: "¿Qué modelo refleja la disposición espacial, mobiliario, ruidos y obstáculos del puesto?",
+      category: "5 Modelos de Trabajo",
+      options: [
+        "Modelo Físico (Physical Model)",
+        "Modelo de Red",
+        "Modelo Estructural",
+        "Modelo de Secuencia"
+      ],
+      correct: 0,
+      explanation: "El Modelo Físico diagrama las limitaciones espaciales, distancias a impresoras, pantallas compartidas y ergonomía real."
+    },
+    {
+      q: "¿Qué técnica de consolidación agrupa cientos de notas de campo en una jerarquía temática?",
+      category: "Consolidación de Datos",
+      options: [
+        "Diagrama de Afinidad (Affinity Diagram)",
+        "Árbol de Decisión",
+        "Matriz de Priorización MoSCoW",
+        "Diagrama de Gantt"
+      ],
+      correct: 0,
+      explanation: "El Diagrama de Afinidad agrupa inductivamente (bottom-up) las observaciones en notas amarillas, etiquetas azules y títulos rosas."
+    },
+    {
+      q: "¿Qué significa UED en el marco del Diseño Contextual?",
+      category: "Arquitectura & UED",
+      options: [
+        "User Environment Design (Diseño del Entorno de Usuario)",
+        "User Experience Definition",
+        "Unified Enterprise Diagram",
+        "Universal Ergonomic Device"
+      ],
+      correct: 0,
+      explanation: "El UED define la arquitectura funcional del sistema desde la perspectiva del usuario mostrando áreas de trabajo y enlaces."
+    },
+    {
+      q: "En una sesión de indagación contextual, ¿qué relación de rol es la recomendada?",
+      category: "Indagación Contextual",
+      options: [
+        "Maestro y Aprendiz (el usuario es el maestro que enseña su labor)",
+        "Médico y Paciente (el analista receta la solución)",
+        "Examinador y Candidato",
+        "Vendedor y Cliente"
+      ],
+      correct: 0,
+      explanation: "La relación Maestro-Aprendiz empodera al usuario para que comparta sus rutinas tácitas mientras el investigador aprende observando."
+    },
+    {
+      q: "¿Qué es una 'ruptura' (breakdown) en los modelos de trabajo?",
+      category: "Modelado Contextual",
+      options: [
+        "Un problema, interrupción o fallo recurrente en la rutina habitual",
+        "Una rotura física del monitor del ordenador",
+        "La hora del descanso o café del usuario",
+        "El cierre repentino del sistema operativo"
+      ],
+      correct: 0,
+      explanation: "Una ruptura representa cualquier fricción, ineficiencia o bloqueo que el nuevo sistema debe subsanar activamente."
+    },
+    {
+      q: "¿En qué consiste el 'Wall Walk' (Paseo por el muro)?",
+      category: "Consolidación de Datos",
+      options: [
+        "En que todo el equipo multidisciplinar recorre los diagramas murales para extraer ideas y problemas",
+        "En un ejercicio de relajación y ergonomía laboral",
+        "En una inspección de seguridad en las instalaciones",
+        "En medir con láser las dimensiones de la oficina"
+      ],
+      correct: 0,
+      explanation: "El Wall Walk invita a ingenieros, diseñadores y directivos a inspeccionar las notas murales de campo anotando oportunidades de innovación."
+    },
+    {
+      q: "¿Qué nivel de participación propone el 'Diseño Participativo' (Co-design)?",
+      category: "Diseño Participativo",
+      options: [
+        "Los usuarios actúan como co-diseñadores activos con capacidad de decisión directa",
+        "Los usuarios solo responden encuestas cerradas al final",
+        "Los usuarios son únicamente sujetos de ensayo en laboratorio",
+        "Los usuarios no participan hasta después del lanzamiento comercial"
+      ],
+      correct: 0,
+      explanation: "El Diseño Participativo (de origen escandinavo) involucra a los trabajadores como socios creativos de pleno derecho en el proceso de diseño."
+    },
+    {
+      q: "Según el modelo de participación de Gerry Gaffney, ¿cuál de estos NO es un nivel habitual?",
+      category: "Niveles de Participación",
+      options: [
+        "Diseño autocrático impuesto por la gerencia",
+        "Informativo (los usuarios aportan datos)",
+        "Consultivo (los usuarios opinan sobre propuestas)",
+        "Participativo (los usuarios colaboran en la toma de decisiones)"
+      ],
+      correct: 0,
+      explanation: "Los modelos de participación reconocidos dividen los niveles en Informativo, Consultivo y Participativo / Co-decisión."
+    },
+    {
+      q: "¿Qué papel juega el 'prototipado en papel' dentro del Diseño Contextual?",
+      category: "Prototipado Contextual",
+      options: [
+        "Permite evaluar ideas funcionales y estructuras UED in situ con los usuarios sin distracciones visuales",
+        "Abaratar costes para no gastar licencias de software",
+        "Entregar el manual de usuario en formato impreso",
+        "Crear documentación legal del proyecto"
+      ],
+      correct: 0,
+      explanation: "El prototipo en papel facilita iteraciones instantáneas e invita al usuario a modificar la interfaz con tijeras y rotuladores sin miedo."
+    },
+    {
+      q: "¿Qué se busca capturar con el principio de 'Enfoque' (Focus) en indagación?",
+      category: "Indagación Contextual",
+      options: [
+        "Dirigir la atención a las preguntas del proyecto pero manteniendo la mente abierta a sorpresas",
+        "Usar una cámara réflex con autoenfoque rápido",
+        "Mirar fijamente las manos del usuario sin hablar",
+        "Centrarse únicamente en el software actual sin mirar alrededor"
+      ],
+      correct: 0,
+      explanation: "El enfoque delimita los objetivos de la investigación pero sin cegar al investigador ante hallazgos imprevistos y reveladores."
+    },
+    {
+      q: "¿Por qué no basta con una entrevista tradicional de preguntas y respuestas en una sala de reuniones?",
+      category: "Indagación vs Entrevista",
+      options: [
+        "Porque las personas no recuerdan con exactitud el trabajo tácito y tienden a idealizar su comportamiento",
+        "Porque las salas de reuniones son muy caras de alquilar",
+        "Porque las leyes de protección de datos lo impiden",
+        "Porque el entrevistador no sabe qué preguntar"
+      ],
+      correct: 0,
+      explanation: "El conocimiento humano sobre sus rutinas operativas es predominantemente tácito; solo aflora al realizar la tarea en su entorno."
+    },
+    {
+      q: "¿Cómo se llama la sesión donde el entrevistador comparte su interpretación con el usuario?",
+      category: "Indagación Contextual",
+      options: [
+        "Interpretación compartida in situ (Interpretation principle)",
+        "Auditoría técnica",
+        "Juicio de usabilidad",
+        "Validación de nómina"
+      ],
+      correct: 0,
+      explanation: "El analista comparte su comprensión en tiempo real ('¿Corriges esto ahora porque el formato anterior daba error?') permitiendo corregir sesgos."
+    },
+    {
+      q: "¿Qué representa una 'Área de Enfoque' en el diagrama UED?",
+      category: "Arquitectura & UED",
+      options: [
+        "Un espacio conceptual que reúne funciones y artefactos para apoyar una tarea concreta del usuario",
+        "La resolución en píxeles del monitor del cliente",
+        "La zona del escritorio donde se apoya el ratón",
+        "La lupa de búsqueda en la cabecera"
+      ],
+      correct: 0,
+      explanation: "En UED, un Focus Area describe las responsabilidades, funciones disponibles y enlaces hacia otras áreas funcionales coherentes."
+    },
+    {
+      q: "¿Cuál es el beneficio primordial del Diseño Participativo según la literatura de IPO?",
+      category: "Diseño Participativo",
+      options: [
+        "Incrementa la aceptación del sistema, reduce la resistencia al cambio y genera soluciones realistas",
+        "Elimina la necesidad de programadores e ingenieros",
+        "Reduce a cero el tiempo total de desarrollo",
+        "Garantiza un diseño estético idéntico a los competidores"
+      ],
+      correct: 0,
+      explanation: "La implicación genuina de los usuarios genera compromiso, previene errores de adopción y aprovecha el conocimiento operativo profundo."
+    }
+  ];
+
+  // -------------------------------------------------------------
+  // BANCO DE DATOS: 15 FLASHCARDS 3D (DOCUMENT_10)
+  // -------------------------------------------------------------
+  const flashcardsData = [
+    {
+      tag: "Fundamentos DCU",
+      front: "¿Qué es el Diseño Contextual?",
+      back: "Metodología completa de DCU creada por Hugh Beyer y Karen Holtzblatt que fundamenta el diseño en la observación e indagación directa de usuarios en su entorno laboral real."
+    },
+    {
+      tag: "Indagación",
+      front: "Principio 1: Contexto",
+      back: "Ir adonde se realiza el trabajo genuino. No confiar en recuerdos o salas aisladas: ver los problemas en el mismo instante en que se producen."
+    },
+    {
+      tag: "Indagación",
+      front: "Principio 2: Asociación (Partnership)",
+      back: "Relación maestro-aprendiz. El usuario lidera enseñando sus tareas reales y el investigador observa, formula preguntas y aprende con humildad."
+    },
+    {
+      tag: "Indagación",
+      front: "Principio 3: Interpretación",
+      back: "Asignar significado conjunto a lo observado. El analista verbaliza sus hipótesis ('Me da la sensación de que...') y el usuario las confirma o rectifica."
+    },
+    {
+      tag: "Indagación",
+      front: "Principio 4: Enfoque (Focus)",
+      back: "Mantener una perspectiva clara de lo que se busca resolver, pero abiertos a cuestionar supuestos preconcebidos y atender detalles inesperados."
+    },
+    {
+      tag: "Modelos de Trabajo",
+      front: "1. Modelo de Flujo (Flow)",
+      back: "Diagrama las redes de comunicación, coordinación de tareas, paso de documentación y delegación de responsabilidades entre diferentes roles."
+    },
+    {
+      tag: "Modelos de Trabajo",
+      front: "2. Modelo de Secuencia (Sequence)",
+      back: "Desglosa paso a paso las acciones cronológicas que ejecuta una persona para conseguir un objetivo, detallando disparadores y rupturas."
+    },
+    {
+      tag: "Modelos de Trabajo",
+      front: "3. Modelo Cultural (Cultural)",
+      back: "Ilustra influencias intangibles: políticas internas, tono corporativo, temores al cambio, expectativas no escritas y presiones de grupo."
+    },
+    {
+      tag: "Modelos de Trabajo",
+      front: "4. Modelo de Artefacto (Artifact)",
+      back: "Representa el uso, creación o anotación de objetos tangibles o digitales (plantillas Excel paralelas, notas Post-it en marcos de monitor, carpetas)."
+    },
+    {
+      tag: "Modelos de Trabajo",
+      front: "5. Modelo Físico (Physical)",
+      back: "Mapea el espacio físico: distribución del escritorio, ruidos ambientales, distancias a impresoras, estanterías, iluminación y barreras corporales."
+    },
+    {
+      tag: "Consolidación",
+      front: "Diagrama de Afinidad",
+      back: "Técnica inductiva para estructurar cientos de observaciones de campo en grupos temáticos jerárquicos (azul, rosa, amarillo) destilando patrones universales."
+    },
+    {
+      tag: "Consolidación",
+      front: "Ruptura (Breakdown)",
+      back: "Cualquier problema, obstáculo, retraso o frustración que interrumpe la fluidez normal de la tarea del usuario en su jornada."
+    },
+    {
+      tag: "Arquitectura",
+      front: "UED (User Environment Design)",
+      back: "Muestra la arquitectura del nuevo sistema como áreas de enfoque funcional (Focus Areas), sus contenidos, conexiones e intenciones de usuario."
+    },
+    {
+      tag: "Participación",
+      front: "Diseño Participativo (Co-design)",
+      back: "Enfoque nacido en Escandinavia que trata a los usuarios finales no como objetos de estudio, sino como co-diseñadores con voz decisoria activa."
+    },
+    {
+      tag: "Niveles",
+      front: "Escala de Gerry Gaffney",
+      back: "Define tres niveles de implicación del usuario: Informativo (provee datos), Consultivo (opina sobre propuestas) y Participativo (co-decisión real)."
+    }
+  ];
+
+  // -------------------------------------------------------------
+  // BANCO DE DATOS: 7 TEXTOS CON HUECOS (CLOZE) (DOCUMENT_10)
+  // -------------------------------------------------------------
+  const clozeData = [
+    {
+      topic: "Beyer & Holtzblatt · Indagación Contextual",
+      title: "Los fundamentos del Diseño Contextual",
+      template: "El diseño contextual fue formulado por [Beyer] y [Holtzblatt]. Su premisa básica es que para diseñar software útil es imprescindible situarse en el [contexto] real de trabajo del usuario.",
+      answers: ["Beyer", "Holtzblatt", "contexto"],
+      distractors: ["Nielsen", "laboratorio", "Norman"]
+    },
+    {
+      topic: "Principios de Campo",
+      title: "La relación Maestro - Aprendiz",
+      template: "En la indagación contextual se establece una relación de [asociación] donde el usuario actúa como maestro y el investigador como un [aprendiz] que busca comprender las tareas tácitas.",
+      answers: ["asociación", "aprendiz"],
+      distractors: ["jerarquía", "auditor", "supervisor"]
+    },
+    {
+      topic: "5 Modelos de Trabajo",
+      title: "Modelado de Flujo y Secuencia",
+      template: "El modelo de [flujo] describe la comunicación y el trasvase de información entre roles, mientras que el modelo de [secuencia] detalla los pasos cronológicos y las [rupturas] que sufre el usuario.",
+      answers: ["flujo", "secuencia", "rupturas"],
+      distractors: ["físico", "ventas", "mejoras"]
+    },
+    {
+      topic: "5 Modelos de Trabajo",
+      title: "Cultura y Entorno Tangible",
+      template: "Las presiones políticas e influencias colectivas se plasman en el modelo [cultural], mientras que los objetos manipulados y notas adhesivas se documentan en el modelo de [artefacto].",
+      answers: ["cultural", "artefacto"],
+      distractors: ["físico", "financiero", "espectral"]
+    },
+    {
+      topic: "Consolidación de Datos",
+      title: "El Diagrama de Afinidad",
+      template: "Tras el trabajo de campo se realiza un diagrama de [afinidad] agrupando notas individuales de forma [inductiva] para identificar los patrones troncales de todos los usuarios observados.",
+      answers: ["afinidad", "inductiva"],
+      distractors: ["dispersión", "deductiva", "cascada"]
+    },
+    {
+      topic: "Arquitectura de Software",
+      title: "User Environment Design (UED)",
+      template: "El diagrama [UED] estructura la aplicación en áreas de [enfoque], especificando funciones y vínculos entre espacios sin caer prematuramente en el diseño visual de botones.",
+      answers: ["UED", "enfoque"],
+      distractors: ["UML", "servidor", "estilos"]
+    },
+    {
+      topic: "Diseño Participativo",
+      title: "Tradición y Niveles de Gaffney",
+      template: "El diseño participativo tiene sus raíces en la tradición [escandinava] y busca transformar al usuario de simple consultor en un auténtico [co-diseñador] con poder decisorio.",
+      answers: ["escandinava", "co-diseñador"],
+      distractors: ["americana", "espectador", "cliente"]
+    }
+  ];
+
+  // =============================================================
+  // ESTADO GLOBAL DE LA SUITE
+  // =============================================================
+  let currentMode = 'test';
+
+  // Estado Test
+  let currentTestIndex = 0;
+  let testAnswers = new Array(testQuestions.length).fill(null);
+  let testScore = 0;
+
+  // Estado Flashcards
+  let currentFcIndex = 0;
+  let isFcCardFlipped = false;
+  let masteredCards = new Set();
+
+  // Estado Cloze
+  let currentClozeIndex = 0;
+  let clozeUserSelections = {}; // { 0: "Beyer", 1: "Holtzblatt" }
+  let completedClozeCount = 0;
+
+  // -------------------------------------------------------------
+  // CONTROL DE PESTAÑAS (MODOS)
+  // -------------------------------------------------------------
+  function switchSuiteMode(mode) {
+    currentMode = mode;
+    
+    // Ocultar todas las secciones
+    document.getElementById('section-test').classList.add('hidden');
+    document.getElementById('section-flashcards').classList.add('hidden');
+    document.getElementById('section-cloze').classList.add('hidden');
+
+    // Desactivar estilos de pestañas
+    const tabs = ['test', 'flashcards', 'cloze'];
+    tabs.forEach(t => {
+      const btn = document.getElementById(`tab-btn-${t}`);
+      btn.className = "flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all cursor-pointer";
+    });
+
+    // Activar sección y pestaña seleccionada
+    document.getElementById(`section-${mode}`).classList.remove('hidden');
+    const activeBtn = document.getElementById(`tab-btn-${mode}`);
+    activeBtn.className = "flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all cursor-pointer";
+
+    if (mode === 'test') renderTestQuestion();
+    if (mode === 'flashcards') renderFlashcard();
+    if (mode === 'cloze') renderCloze();
+  }
+
+  // =============================================================
+  // LÓGICA MODO TEST (22 PREGUNTAS)
+  // =============================================================
+  function renderTestQuestion() {
+    const qData = testQuestions[currentTestIndex];
+    document.getElementById('test-q-number').textContent = `Pregunta ${currentTestIndex + 1} de ${testQuestions.length}`;
+    document.getElementById('test-q-category').textContent = qData.category;
+    document.getElementById('test-q-text').textContent = qData.q;
+
+    const progressPct = Math.round(((currentTestIndex + 1) / testQuestions.length) * 100);
+    document.getElementById('test-progress-text').textContent = `${progressPct}% completado`;
+    document.getElementById('test-progress-bar').style.width = `${progressPct}%`;
+    document.getElementById('test-score-counter').textContent = `Aciertos acumulados: ${testScore}`;
+
+    document.getElementById('btn-prev-test').disabled = currentTestIndex === 0;
+
+    const container = document.getElementById('test-options-container');
+    container.innerHTML = '';
+
+    const userAnswer = testAnswers[currentTestIndex];
+    const isAnswered = userAnswer !== null;
+
+    qData.options.forEach((opt, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      
+      let styleClass = "w-full text-left p-space-md rounded-xl transition-all flex items-center justify-between gap-space-md shadow-sm ";
+      
+      if (!isAnswered) {
+        styleClass += "bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer";
+      } else {
+        if (idx === qData.correct) {
+          styleClass += "bg-surface-container text-tertiary font-semibold";
+        } else if (idx === userAnswer) {
+          styleClass += "bg-error-container text-on-error-container";
+        } else {
+          styleClass += "bg-surface-container-low text-on-surface-variant opacity-60";
+        }
+      }
+
+      btn.className = styleClass;
+      btn.disabled = isAnswered;
+      btn.onclick = () => selectTestOption(idx);
+
+      const numBadge = idx + 1;
+      let badgeStyle = "w-7 h-7 rounded-lg flex items-center justify-center font-label-md text-label-md shrink-0 ";
+      if (!isAnswered) {
+        badgeStyle += "bg-surface-container-highest text-on-surface";
+      } else if (idx === qData.correct) {
+        badgeStyle += "bg-tertiary text-on-tertiary";
+      } else if (idx === userAnswer) {
+        badgeStyle += "bg-error text-on-error";
+      } else {
+        badgeStyle += "bg-surface-container text-on-surface-variant";
+      }
+
+      btn.innerHTML = `
+        <div class="flex items-center gap-space-md">
+          <span class="${badgeStyle}">${numBadge}</span>
+          <span class="font-body-md text-body-md">${opt}</span>
+        </div>
+        ${isAnswered && idx === qData.correct ? '<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>' : ''}
+        ${isAnswered && idx === userAnswer && idx !== qData.correct ? '<span class="material-symbols-outlined text-error text-[20px]">cancel</span>' : ''}
+      `;
+
+      container.appendChild(btn);
+    });
+
+    // Feedback explicativo
+    const feedbackBox = document.getElementById('test-feedback-box');
+    const feedbackTitle = document.getElementById('test-feedback-title');
+    const feedbackDesc = document.getElementById('test-feedback-desc');
+
+    if (isAnswered) {
+      feedbackBox.classList.remove('hidden');
+      const isCorrect = userAnswer === qData.correct;
+      if (isCorrect) {
+        feedbackBox.className = "p-space-md rounded-xl bg-surface-container text-on-surface transition-all space-y-1 shadow-sm";
+        feedbackTitle.innerHTML = `<span class="material-symbols-outlined text-tertiary">check_circle</span><span class="text-tertiary">¡Respuesta correcta!</span>`;
+      } else {
+        feedbackBox.className = "p-space-md rounded-xl bg-error-container text-on-error-container transition-all space-y-1 shadow-sm";
+        feedbackTitle.innerHTML = `<span class="material-symbols-outlined text-error">error</span><span class="text-error font-semibold">Respuesta incorrecta</span>`;
+      }
+      feedbackDesc.textContent = qData.explanation;
+    } else {
+      feedbackBox.classList.add('hidden');
+    }
+
+    // Botón siguiente / finalizar
+    const nextBtn = document.getElementById('btn-next-test');
+    if (currentTestIndex === testQuestions.length - 1) {
+      nextBtn.innerHTML = `<span>Ver balance de nota</span><span class="material-symbols-outlined text-[18px]">workspace_premium</span>`;
+    } else {
+      nextBtn.innerHTML = `<span>Siguiente</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    }
+  }
+
+  function selectTestOption(idx) {
+    if (testAnswers[currentTestIndex] !== null) return;
+    testAnswers[currentTestIndex] = idx;
+    if (idx === testQuestions[currentTestIndex].correct) {
+      testScore++;
+    }
+    renderTestQuestion();
+  }
+
+  function nextTestQuestion() {
+    if (currentTestIndex < testQuestions.length - 1) {
+      currentTestIndex++;
+      renderTestQuestion();
+    } else {
+      showTestResultsModal();
+    }
+  }
+
+  function prevTestQuestion() {
+    if (currentTestIndex > 0) {
+      currentTestIndex--;
+      renderTestQuestion();
+    }
+  }
+
+  function restartTest() {
+    currentTestIndex = 0;
+    testAnswers = new Array(testQuestions.length).fill(null);
+    testScore = 0;
+    renderTestQuestion();
+  }
+
+  function showTestResultsModal() {
+    const grade = ((testScore / testQuestions.length) * 10).toFixed(1);
+    const feedbackBox = document.getElementById('test-feedback-box');
+    feedbackBox.classList.remove('hidden');
+    feedbackBox.className = "p-space-lg rounded-xl bg-primary text-on-primary shadow-lg space-y-space-sm text-center";
+    feedbackBox.innerHTML = `
+      <div class="w-12 h-12 mx-auto rounded-full bg-surface-container-lowest/20 flex items-center justify-center">
+        <span class="material-symbols-outlined text-[28px] text-on-primary">school</span>
+      </div>
+      <h3 class="font-headline-lg text-headline-lg">Evaluación Completada: ${grade} / 10</h3>
+      <p class="font-body-md text-body-md text-on-primary/90 max-w-xl mx-auto">
+        Has respondido correctamente a <strong>${testScore}</strong> de las <strong>${testQuestions.length}</strong> preguntas del temario de Diseño Contextual y Participación.
+      </p>
+      <div class="pt-space-xs flex justify-center gap-space-sm">
+        <button type="button" onclick="restartTest()" class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold cursor-pointer">
+          Reintentar cuestionario
+        </button>
+        <button type="button" onclick="switchSuiteMode('flashcards')" class="px-space-md py-2 rounded-lg bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 text-on-primary font-label-md text-label-md font-medium cursor-pointer">
+          Practicar con Flashcards →
+        </button>
+      </div>
+    `;
+  }
+
+  // =============================================================
+  // LÓGICA MODO FLASHCARDS (15 TARJETAS)
+  // =============================================================
+  function renderFlashcard() {
+    const card = flashcardsData[currentFcIndex];
+    document.getElementById('fc-counter').textContent = `Tarjeta ${currentFcIndex + 1} de ${flashcardsData.length}`;
+    document.getElementById('fc-mastered-counter').textContent = `Dominadas: ${masteredCards.size} de ${flashcardsData.length}`;
+    document.getElementById('fc-front-tag').textContent = card.tag;
+    document.getElementById('fc-front-text').textContent = card.front;
+    document.getElementById('fc-back-text').textContent = card.back;
+
+    // Resetear giro al cambiar
+    isFcCardFlipped = false;
+    document.getElementById('flashcard-inner').style.transform = 'rotateY(0deg)';
+
+    const masterBtn = document.getElementById('btn-master-card');
+    if (masteredCards.has(currentFcIndex)) {
+      masterBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold cursor-pointer";
+      masterBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">task_alt</span><span>¡Aprendida!</span>`;
+    } else {
+      masterBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high text-tertiary font-label-md text-label-md font-semibold hover:bg-tertiary-fixed transition-all cursor-pointer";
+      masterBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">verified</span><span>Marcar como aprendida</span>`;
+    }
+  }
+
+  function flipFlashcard() {
+    isFcCardFlipped = !isFcCardFlipped;
+    const inner = document.getElementById('flashcard-inner');
+    inner.style.transform = isFcCardFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+  }
+
+  function nextFlashcard() {
+    currentFcIndex = (currentFcIndex + 1) % flashcardsData.length;
+    renderFlashcard();
+  }
+
+  function prevFlashcard() {
+    currentFcIndex = (currentFcIndex - 1 + flashcardsData.length) % flashcardsData.length;
+    renderFlashcard();
+  }
+
+  function markCardMastered() {
+    if (masteredCards.has(currentFcIndex)) {
+      masteredCards.delete(currentFcIndex);
+    } else {
+      masteredCards.add(currentFcIndex);
+    }
+    renderFlashcard();
+  }
+
+  // =============================================================
+  // LÓGICA MODO CLOZE / RELLENAR HUECOS (7 TEXTOS)
+  // =============================================================
+  function renderCloze() {
+    const cData = clozeData[currentClozeIndex];
+    document.getElementById('cloze-counter').textContent = `Texto ${currentClozeIndex + 1} de ${clozeData.length}`;
+    document.getElementById('cloze-score-badge').innerHTML = `
+      <span class="material-symbols-outlined text-[16px] text-tertiary">fact_check</span>
+      <span>Completados con éxito: ${completedClozeCount} de ${clozeData.length}</span>
+    `;
+    document.getElementById('cloze-text-topic').textContent = cData.topic;
+    document.getElementById('cloze-text-title').textContent = cData.title;
+
+    document.getElementById('cloze-feedback').classList.add('hidden');
+
+    clozeUserSelections = {};
+
+    // Render del texto con huecos
+    const bodyContainer = document.getElementById('cloze-body-container');
+    bodyContainer.innerHTML = '';
+
+    // Reemplaza [palabra] por slots interactivos
+    let parts = cData.template.split(/(\[[^\]]+\])/g);
+    let slotCounter = 0;
+
+    parts.forEach(part => {
+      if (part.startsWith('[') && part.endsWith(']')) {
+        const slotIdx = slotCounter++;
+        const spanSlot = document.createElement('span');
+        spanSlot.id = `cloze-slot-${slotIdx}`;
+        spanSlot.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-surface-container-highest text-primary font-semibold font-code-inline text-code-inline border-b-2 border-primary/40 cursor-pointer shadow-sm align-middle";
+        spanSlot.textContent = "___?";
+        spanSlot.onclick = () => removeWordFromSlot(slotIdx);
+        bodyContainer.appendChild(spanSlot);
+      } else {
+        const textNode = document.createTextNode(part);
+        bodyContainer.appendChild(textNode);
+      }
+    });
+
+    renderClozeBank();
+  }
+
+  function renderClozeBank() {
+    const cData = clozeData[currentClozeIndex];
+    const bankContainer = document.getElementById('cloze-bank-container');
+    bankContainer.innerHTML = '';
+
+    // Unir respuestas y distractores y mezclar
+    const allWords = [...cData.answers, ...cData.distractors];
+    // orden pseudoaleatorio consistente basado en el índice
+    allWords.sort();
+
+    allWords.forEach(word => {
+      // Verificar si ya está usada en algún hueco
+      const isUsed = Object.values(clozeUserSelections).includes(word);
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = `px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all cursor-pointer ${
+        isUsed 
+          ? 'bg-surface-container-highest text-outline opacity-40 cursor-not-allowed' 
+          : 'bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary shadow-sm'
+      }`;
+      chip.textContent = word;
+      chip.disabled = isUsed;
+      chip.onclick = () => insertWordInNextAvailableSlot(word);
+      bankContainer.appendChild(chip);
+    });
+  }
+
+  function insertWordInNextAvailableSlot(word) {
+    const cData = clozeData[currentClozeIndex];
+    const totalSlots = cData.answers.length;
+
+    // Buscar el primer slot vacío
+    for (let i = 0; i < totalSlots; i++) {
+      if (!clozeUserSelections[i]) {
+        clozeUserSelections[i] = word;
+        const slotEl = document.getElementById(`cloze-slot-${i}`);
+        if (slotEl) {
+          slotEl.textContent = word;
+          slotEl.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-primary text-on-primary font-semibold font-code-inline text-code-inline shadow-sm align-middle cursor-pointer";
+        }
+        renderClozeBank();
+        break;
+      }
+    }
+  }
+
+  function removeWordFromSlot(slotIdx) {
+    if (clozeUserSelections[slotIdx]) {
+      delete clozeUserSelections[slotIdx];
+      const slotEl = document.getElementById(`cloze-slot-${slotIdx}`);
+      if (slotEl) {
+        slotEl.textContent = "___?";
+        slotEl.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-surface-container-highest text-primary font-semibold font-code-inline text-code-inline border-b-2 border-primary/40 cursor-pointer shadow-sm align-middle";
+      }
+      renderClozeBank();
+    }
+  }
+
+  function clearCurrentCloze() {
+    clozeUserSelections = {};
+    const cData = clozeData[currentClozeIndex];
+    for (let i = 0; i < cData.answers.length; i++) {
+      const slotEl = document.getElementById(`cloze-slot-${i}`);
+      if (slotEl) {
+        slotEl.textContent = "___?";
+        slotEl.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-surface-container-highest text-primary font-semibold font-code-inline text-code-inline border-b-2 border-primary/40 cursor-pointer shadow-sm align-middle";
+      }
+    }
+    renderClozeBank();
+    document.getElementById('cloze-feedback').classList.add('hidden');
+  }
+
+  function validateCloze() {
+    const cData = clozeData[currentClozeIndex];
+    const totalSlots = cData.answers.length;
+    let correctCount = 0;
+
+    for (let i = 0; i < totalSlots; i++) {
+      const userWord = cloozeUserSelections[i];
+      const slotEl = document.getElementById(`cloze-slot-${i}`);
+      if (userWord && userWord.toLowerCase() === cData.answers[i].toLowerCase()) {
+        correctCount++;
+        if (slotEl) slotEl.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-surface-container text-tertiary font-bold font-code-inline text-code-inline shadow-sm align-middle";
+      } else {
+        if (slotEl) slotEl.className = "inline-flex items-center justify-center min-w-28 px-3 py-1 mx-1.5 rounded-lg bg-error-container text-on-error-container font-bold font-code-inline text-code-inline shadow-sm align-middle";
+      }
+    }
+
+    const fb = document.getElementById('cloze-feedback');
+    const fbTitle = document.getElementById('cloze-feedback-title');
+    const fbMsg = document.getElementById('cloze-feedback-msg');
+    fb.classList.remove('hidden');
+
+    if (correctCount === totalSlots) {
+      completedClozeCount = Math.min(clozeData.length, completedClozeCount + 1);
+      fb.className = "p-space-md rounded-xl bg-surface-container text-on-surface space-y-1 shadow-sm";
+      fbTitle.innerHTML = `<span class="material-symbols-outlined text-tertiary">task_alt</span><span class="text-tertiary">¡Texto completado a la perfección!</span>`;
+      fbMsg.textContent = "Has asociado correctamente todos los términos conceptuales en su posición exacta.";
+    } else {
+      fb.className = "p-space-md rounded-xl bg-error-container text-on-error-container space-y-1 shadow-sm";
+      fbTitle.innerHTML = `<span class="material-symbols-outlined text-error">warning</span><span class="text-error font-semibold">Hay conceptos erróneos o huecos vacíos</span>`;
+      fbMsg.textContent = `Aciertos: ${correctCount} de ${totalSlots}. Revisa los huecos en rojo y haz clic en ellos para corregirlos.`;
+    }
+  }
+
+  function nextCloze() {
+    currentClozeIndex = (currentClozeIndex + 1) % clozeData.length;
+    renderCloze();
+  }
+
+  function prevCloze() {
+    currentClozeIndex = (currentClozeIndex - 1 + clozeData.length) % clozeData.length;
+    renderCloze();
+  }
+
+  // =============================================================
+  // SOPORTE DE TECLADO / ATAJOS GLOBALES
+  // =============================================================
+  window.addEventListener('keydown', (e) => {
+    // Si el usuario escribe en un campo de texto ignorar
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+
+    if (currentMode === 'test') {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const optIdx = parseInt(e.key, 10) - 1;
+        selectTestOption(optIdx);
+      } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
+        nextTestQuestion();
+      } else if (e.key === 'ArrowLeft') {
+        prevTestQuestion();
+      }
+    } else if (currentMode === 'flashcards') {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        flipFlashcard();
+      } else if (e.key === 'ArrowRight') {
+        nextFlashcard();
+      } else if (e.key === 'ArrowLeft') {
+        prevFlashcard();
+      }
+    } else if (currentMode === 'cloze') {
+      if (e.key === 'Enter') {
+        validateCloze();
+      }
+    }
+  });
+
+  // Inicialización al cargar
+  document.addEventListener('DOMContentLoaded', () => {
+    renderTestQuestion();
+  });
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter space-y-space-lg"><div class="flex flex-wrap items-center justify-between gap-space-md pb-space-lg"><div class="flex flex-wrap items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Universitat de Lleida</span><span class="text-outline-variant">•</span><span class="font-body-md text-body-md text-on-surface-variant">Escola Politècnica Superior (EPS)</span></div><div class="flex flex-wrap items-center gap-space-xs"><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">GRIHO Research Group</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">AIPO</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">ACM SIGCHI</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">WCAG 2.2 AA</span></div></div><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><div class="md:col-span-8 space-y-space-xs"><p class="text-on-surface font-medium">Cátedra de Interacción Persona-Ordenador e Ingeniería del Software</p><p>Material didáctico e interactivo elaborado para el estudio del Diseño Centrado en el Usuario (DCU), modelos conceptuales y procesos MPIu+a.</p><p class="font-label-sm text-label-sm text-outline pt-space-xs">Licenciado bajo Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0).</p></div><div class="md:col-span-4 flex flex-col md:items-end justify-center space-y-space-xs font-label-sm text-label-sm"><span class="inline-flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>Declaración de Accesibilidad Web Validada</span><span class="text-outline">Conforme con directrices W3C / WCAG 2.2 Nivel AA</span><span class="text-outline">© Universitat de Lleida (UdL)</span></div></div></div></footer><a href="modulo-3-02-2-contextual.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>

@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO — Usabilidad 04: Atributos (con Test, Flashcards y Huecos)</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+::-webkit-scrollbar{display:none;}
+/* 3D Flip Card Styles */
+.perspective-1000 { perspective: 1000px; }
+.transform-style-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+.fc { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.fc.flipped { transform: rotateY(180deg); }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1b1f","surface-container":"#eeedf3","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#636264","surface-variant":"#e3e2e7","outline-variant":"#c1c6d6","on-secondary-fixed":"#1b1b1d","surface-container-high":"#e9e7ed","on-tertiary-fixed-variant":"#00458e","on-tertiary":"#ffffff","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed-variant":"#474649","on-primary-fixed-variant":"#00458f","tertiary-fixed":"#d7e3ff","error-container":"#ffdad6","on-tertiary-container":"#fcfaff","background":"#faf8fe","secondary-fixed-dim":"#c8c6c8","error":"#ba1a1a","primary":"#0059b5","surface":"#faf8fe","surface-tint":"#005cbb","tertiary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","surface-bright":"#faf8fe","surface-dim":"#dad9df","tertiary":"#0059b4","secondary-container":"#e2dfe1","outline":"#717785","tertiary-container":"#0071e2","on-primary":"#ffffff","secondary-fixed":"#e4e2e4","on-tertiary-fixed":"#001b3f","on-surface-variant":"#414753","on-primary-container":"#fcfbff","secondary":"#5f5e60","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","primary-container":"#0071e3","inverse-primary":"#abc7ff","on-secondary":"#ffffff","surface-container-highest":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-low":"#f4f3f8","on-surface":"#1a1b1f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","margin-sm":"1.25rem","margin":"3rem","gutter-sm":"1rem","space-sm":"0.5rem","gutter":"1.5rem","margin-md":"2rem"},fontFamily:{"label-sm":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"code-inline":["JetBrains Mono"],"body-lg":["Inter"],"headline-md":["Inter"],"display-hero-mobile":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"]},fontSize:{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><span class="text-on-surface-variant">Módulo 1: Fundamentos</span><span class="text-outline-variant">/</span><span class="text-on-surface-variant">Usabilidad</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">04 Atributos</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="01-definicion-de-usabilidad" href="usabilidad-01-definicion.html">01 Definición</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="02-importancia-de-la-usabilidad" href="usabilidad-02-importancia.html">02 Importancia</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html">03 Beneficios</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)] font-semibold" data-path="04-atributos-de-usabilidad" href="usabilidad-04-atributos.html">04 Atributos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html">05 Calidad de Software</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="06-usabilidad-web" href="usabilidad-06-usabilidad-web.html">06 Usabilidad Web</a></nav></div></header><main class="w-full pt-36 bg-background"><div class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+<!-- Tarjeta Encabezado Actividad Todo en Uno -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-sm border border-outline-variant/30 mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-code-inline text-[11px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">JUEGO 3 · TODO EN UNO</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Módulo 1 · 04 Atributos</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Todo junto: test interactivo, flashcards con giro 3D y textos con huecos para rellenar sobre los 10 atributos fundamentales, flexibilidad, consistencia y umbrales de Miller y Card.</p>
+</div>
+</div>
+<div class="self-start md:self-center shrink-0 bg-surface-container-low px-4 py-2.5 rounded-xl border border-outline-variant/40 text-center">
+<span class="font-code-inline text-[12px] font-semibold text-primary block">41 preguntas · 20 tarjetas · 9 textos</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Contenido temático completo</span>
+</div>
+</div>
+</div>
+<!-- Contenedor Interactivo #app -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/30 overflow-hidden min-h-[520px] flex flex-col" id="app">
+<div class="flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low px-4 sm:px-6 pt-3">
+<div class="flex gap-2">
+<button class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm" data-tab="test" type="button">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo</span>
+<span class="px-2 py-0.5 text-[11px] rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline font-bold">41</span>
+</button>
+<button class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all text-on-surface-variant hover:text-on-surface border-transparent" data-tab="fc" type="button">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D</span>
+<span class="px-2 py-0.5 text-[11px] rounded-full bg-surface-container text-on-surface-variant font-code-inline font-bold">20</span>
+</button>
+<button class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all text-on-surface-variant hover:text-on-surface border-transparent" data-tab="gaps" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos</span>
+<span class="px-2 py-0.5 text-[11px] rounded-full bg-surface-container text-on-surface-variant font-code-inline font-bold">9</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-[12px] text-on-surface-variant font-code-inline pb-2">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span>Atajos de teclado habilitados</span>
+</div>
+</div>
+<div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+<div>
+<!-- Barra de progreso superior -->
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Pregunta 1 / 41</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aciertos: 0</span>
+</div>
+<span class="font-code-inline text-[12px] text-on-surface-variant">2%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary transition-all duration-300" style="width: 2.4390243902439024%"></div>
+</div>
+<!-- Pregunta -->
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mb-6">¿Por qué es necesario descomponer la usabilidad en una serie de aspectos característicos o atributos?</h3>
+<!-- Opciones -->
+<div class="space-y-3 mb-6">
+<button class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface" data-opt="0" type="button">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">1</span>
+<span class="font-body-md text-body-md">Porque la ley obliga a redactar informes de más de cincuenta páginas</span>
+</button>
+<button class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface" data-opt="1" type="button">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">2</span>
+<span class="font-body-md text-body-md">Por la compleja relación existente entre la usabilidad y los diversos criterios de calidad que la definen y hacen medible</span>
+</button>
+<button class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface" data-opt="2" type="button">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">3</span>
+<span class="font-body-md text-body-md">Porque el hardware del ordenador no soporta definiciones abstractas</span>
+</button>
+<button class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface" data-opt="3" type="button">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">4</span>
+<span class="font-body-md text-body-md">Para evitar tener que consultar a los usuarios durante las evaluaciones</span>
+</button>
+</div>
+<!-- Explicación formativa al confirmar -->
+</div>
+<!-- Botones de Acción -->
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+<div class="text-[12px] text-on-surface-variant font-code-inline hidden sm:block">
+            Pulsa 1, 2, 3 o 4 para seleccionar
+          </div>
+<div class="flex items-center gap-3 ml-auto">
+<button class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-sm" disabled="" id="confirm-ans" type="button">
+                Comprobar respuesta
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navegación Inferior -->
+<nav class="w-full flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-outline-variant/30">
+<a class="w-full sm:w-auto inline-flex items-center justify-center sm:justify-start gap-2 px-5 py-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/40 font-label-md text-label-md transition-all shadow-sm" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_back</span>
+<span>← Anterior: 03 Beneficios de la Usabilidad</span>
+</a>
+<span class="font-code-inline text-label-sm text-on-surface-variant">Capítulo 04 de 06</span>
+<a class="w-full sm:w-auto inline-flex items-center justify-center sm:justify-end gap-2 px-6 py-3 rounded-xl bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-md text-label-md transition-all shadow-md" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html">
+<span>Siguiente: 05 Calidad de Software →</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</nav>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-12"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter pb-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span><span class="font-body-sm text-body-sm text-on-surface-variant">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dirección docente e investigadora: Dr. Toni Granollers</span></div><div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">UdL</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">GRIHO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">AIPO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">ACM SIGCHI</span></div></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">lock_open</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer><script>
+(function() {
+  const QUESTIONS = [
+    {
+      q: "¿Por qué es necesario descomponer la usabilidad en una serie de aspectos característicos o atributos?",
+      opts: [
+        "Porque la ley obliga a redactar informes de más de cincuenta páginas",
+        "Por la compleja relación existente entre la usabilidad y los diversos criterios de calidad que la definen y hacen medible",
+        "Porque el hardware del ordenador no soporta definiciones abstractas",
+        "Para evitar tener que consultar a los usuarios durante las evaluaciones"
+      ],
+      a: 1,
+      exp: "La usabilidad es un constructo multidimensional complejo que requiere desagregarse en atributos medibles para ser evaluada y diseñada con rigor."
+    },
+    {
+      q: "¿Qué denominación emplean autores como Dix et al. [DIX93] para referirse a estos aspectos característicos?",
+      opts: [
+        "Algoritmos de interfaz",
+        "Principios de usabilidad",
+        "Variables de compilación",
+        "Clases estáticas"
+      ],
+      a: 1,
+      exp: "Dix, Finlay, Abowd y Beale categorizan estas dimensiones como «principios» que guían el diseño de interacción."
+    },
+    {
+      q: "¿Qué término utiliza Preece [PRE94] para aludir a las dimensiones de la usabilidad?",
+      opts: [
+        "Protocolos de comunicación",
+        "Componentes de la usabilidad",
+        "Instrucciones de ensamble",
+        "Subrutinas del sistema"
+      ],
+      a: 1,
+      exp: "Jenny Preece prefiere el vocablo «componentes» para describir los factores constituyentes de la usabilidad."
+    },
+    {
+      q: "¿Cuál es el término más habitual y con mayor consenso en la literatura científica para describir estas dimensiones?",
+      opts: [
+        "Atributos de usabilidad (adoptado por Nielsen, Bevan y Wixon)",
+        "Directivas de máquina",
+        "Axiomas de codificación",
+        "Fórmulas de rendimiento"
+      ],
+      a: 0,
+      exp: "«Atributos de usabilidad» es la convención generalizada mayoritaria respaldada por Nielsen, Bevan y Wixon."
+    },
+    {
+      q: "¿Existe desacuerdo de fondo entre los diversos autores sobre la esencia de la usabilidad?",
+      opts: [
+        "Sí, cada autor rechaza radicalmente los postulados de los demás",
+        "No; todos convergen en la misma esencia y solo difieren en la categorización y terminología taxonómica",
+        "Sí, únicamente coinciden en el tipo de tipografía a utilizar",
+        "No hay acuerdo posible porque no existen estudios empíricos"
+      ],
+      a: 1,
+      exp: "Existe un consenso profundo sobre la esencia operativa de la usabilidad; las discrepancias son meramente taxonómicas o de agrupación."
+    },
+    {
+      q: "¿Cómo se define el atributo de 'Facilidad de Aprendizaje' (Learnability)?",
+      opts: [
+        "La velocidad a la que el ordenador descarga actualizaciones",
+        "El grado de facilidad que permite a los usuarios noveles alcanzar un nivel aceptable de competencia productiva en el menor tiempo",
+        "La capacidad del sistema de traducirse a múltiples idiomas",
+        "El coste de adquisición de la licencia de software"
+      ],
+      a: 1,
+      exp: "La facilidad de aprendizaje evalúa la pendiente y rapidez con la que un usuario novato alcanza la autonomía operativa en la interfaz."
+    },
+    {
+      q: "¿Qué caracteriza al atributo de 'Sintetizabilidad' (Synthesizability)?",
+      opts: [
+        "La compresión de archivos multimedia en formato ZIP",
+        "La capacidad del usuario para evaluar el efecto y las implicaciones de operaciones anteriores en el estado actual del sistema",
+        "La síntesis de voz automática en asistentes virtuales",
+        "El resumen textual de los manuales de usuario"
+      ],
+      a: 1,
+      exp: "Sintetizabilidad es la aptitud de la interfaz para hacer visible y comprensible cómo las acciones pasadas alteraron el estado presente."
+    },
+    {
+      q: "¿En qué consiste la 'Familiaridad' según la teoría de IPO?",
+      opts: [
+        "En que el software sea desarrollado por miembros de una misma familia",
+        "En la correlación entre los conocimientos previos del mundo real o de otros entornos y los requeridos para operar el nuevo sistema",
+        "En almacenar fotografías familiares en el disco duro",
+        "En permitir únicamente usuarios que residan en el mismo domicilio"
+      ],
+      a: 1,
+      exp: "La familiaridad aprovecha las analogías y metáforas del mundo real para que el usuario extrapole sus modelos mentales previos."
+    },
+    {
+      q: "¿Qué establece el atributo de 'Consistencia' en el diseño interactivo?",
+      opts: [
+        "Que todos los monitores deben tener la misma resolución en píxeles",
+        "El uso homogéneo e invariante de mecanismos, elementos gráficos y convenciones para acciones equivalentes en todo el sistema",
+        "Que el programa no pueda cerrarse mientras esté encendido el ordenador",
+        "Que el código backend esté redactado en un único fichero plano"
+      ],
+      a: 1,
+      exp: "Consistencia implica que situaciones idénticas deben resolverse mediante los mismos patrones de interacción, lenguaje y apariencia."
+    },
+    {
+      q: "¿Qué abarca el atributo de 'Flexibilidad' en una interfaz de usuario?",
+      opts: [
+        "La capacidad física de la pantalla de doblarse sin romperse",
+        "La multiplicidad de vías mediante las cuales usuario y sistema intercambian información técnica, adaptándose al nivel de pericia",
+        "La posibilidad de ejecutar el software sin conexión eléctrica",
+        "El cambio arbitrario de menús cada vez que se reinicia la aplicación"
+      ],
+      a: 1,
+      exp: "La flexibilidad ofrece vías alternas, atajos y mecanismos adaptativos acordes al nivel de maestría de novatos o expertos."
+    },
+    {
+      q: "¿Cómo se define el atributo de 'Robustez' en HCI?",
+      opts: [
+        "El grosor físico del chasis del equipo informático",
+        "La garantía de que las características de interacción permiten cumplir con éxito los objetivos encomendados, ofreciendo soporte adecuado",
+        "La imposibilidad absoluta de que el software sea desinstalado",
+        "El uso de bases de datos relacionales pesadas"
+      ],
+      a: 1,
+      exp: "La robustez garantiza que el usuario alcance efectivamente sus metas operativas contando con asesoramiento y resiliencia ante contingencias."
+    },
+    {
+      q: "¿En qué consiste la 'Recuperabilidad' (Recoverability)?",
+      opts: [
+        "En rescatar ficheros borrados por virus informáticos",
+        "En el grado de facilidad que el sistema concede al usuario para enmendar o revertir una acción errónea tras ser detectada",
+        "En recuperar el dinero invertido en el proyecto si falla",
+        "En reiniciar automáticamente el servidor cada hora"
+      ],
+      a: 1,
+      exp: "La recuperabilidad mide la tolerancia a fallos humanos mediante mecanismos sencillos de deshacer, reintentar y subsanar acciones involuntarias."
+    },
+    {
+      q: "¿Qué evalúa el atributo de 'Tiempo de Respuesta'?",
+      opts: [
+        "Los años que tarda una empresa de software en responder a un correo postal",
+        "La latencia temporal que requiere la interfaz para expresar cambios de estado, la cual debe mantenerse en límites cognitivamente tolerables",
+        "La frecuencia en GHz a la que oscila el reloj del microprocesador",
+        "El tiempo que el usuario duerme entre sesiones de trabajo"
+      ],
+      a: 1,
+      exp: "El tiempo de respuesta es la demora perceptible del sistema, la cual debe ajustarse a las expectativas cognitivas del usuario."
+    },
+    {
+      q: "¿A qué alude la 'Adecuación a las Tareas' (Task Conformance)?",
+      opts: [
+        "A que el usuario realice horas extraordinarias para cumplir plazos",
+        "A la correspondencia directa entre los objetivos del usuario/su modelo mental y las capacidades funcionales provistas por el sistema",
+        "A que el software obligue al usuario a cambiar su forma tradicional de pensar",
+        "Al número de tareas que el procesador puede computar en paralelo"
+      ],
+      a: 1,
+      exp: "Significa que la interfaz se ajusta con fidelidad a las metas del usuario y no impone una lógica técnica ajena a su labor cotidiana."
+    },
+    {
+      q: "¿Qué persigue el atributo de 'Disminución de la Carga Cognitiva'?",
+      opts: [
+        "Limitar el uso de la memoria RAM del ordenador por debajo de 2 GB",
+        "Fomentar el principio de reconocer antes que recordar, evitando exigir la memorización de códigos crípticos o secuencias complejas",
+        "Apagar el monitor cada 15 minutos para descansar la vista",
+        "Suprimir los textos explicativos para acelerar la lectura"
+      ],
+      a: 1,
+      exp: "Reconocer es cognitivamente mucho más liviano que recordar: la interfaz debe mostrar las opciones contextualmente en vez de exigir memorización."
+    },
+    {
+      q: "¿Cuál es el núcleo del dilema conocido como 'El Problema de la Consistencia'?",
+      opts: [
+        "Que los diseñadores se aburren si usan siempre la misma tipografía",
+        "Cómo introducir innovaciones e interacciones evolucionadas sin romper la familiaridad y coherencia con versiones y productos previos",
+        "Que los cables de red pierden consistencia física con el paso de los años",
+        "La falta de acuerdo sobre si usar mayúsculas o minúsculas en el código"
+      ],
+      a: 1,
+      exp: "El dilema radica en cómo actualizar y enriquecer la interfaz con nuevas metáforas sin desorientar a los usuarios habituados al estándar anterior."
+    },
+    {
+      q: "¿Qué solución metodológica se recomienda para preservar la consistencia sin paralizar la evolución del producto?",
+      opts: [
+        "Rediseñar la interfaz desde cero en cada actualización anual",
+        "Adherirse a guías de estilo, look & feel común, moderar cambios drásticos y añadir capacidades en lugar de reemplazar patrones conocidos",
+        "Prohibir tajantemente cualquier cambio en los elementos gráficos de por vida",
+        "Eliminar todos los atajos de teclado para homogeneizar"
+      ],
+      a: 1,
+      exp: "Guías de estilo sólidas, moderación en los cambios y sumar opciones en vez de destruir las ya aprendidas protegen la consistencia."
+    },
+    {
+      q: "Dentro de la Flexibilidad, ¿qué representa el 'Control del Usuario'?",
+      opts: [
+        "Que el usuario debe saber programar en ensamblador",
+        "Que el usuario lleva la iniciativa del diálogo, pudiendo iniciar, pausar, deshacer o modular el ritmo de la interacción a voluntad",
+        "Que el sistema decide arbitrariamente cuándo dejar entrar al usuario",
+        "El bloqueo del ratón durante procesos automáticos"
+      ],
+      a: 1,
+      exp: "El usuario debe sentirse al mando del sistema, sin verse forzado a secuencias rígidas e irreversibles impuestas por la máquina."
+    },
+    {
+      q: "¿En qué consiste la 'Migración de Tareas' como pilar de la flexibilidad interactiva?",
+      opts: [
+        "En mudar el servidor de datos a otro continente",
+        "En la transferencia dinámica de control operativo entre el usuario y el sistema (ej. corrección ortográfica asistida o automática)",
+        "En despedir empleados y sustituirlos por computadoras",
+        "En enviar las tareas pendientes por correo electrónico"
+      ],
+      a: 1,
+      exp: "Permite calibrar qué parte del trabajo asume automáticamente el sistema y cuál queda bajo juicio y supervisión humana."
+    },
+    {
+      q: "¿Qué es la 'Capacidad de Sustitución' (Substitutivity) en una interfaz flexible?",
+      opts: [
+        "Sustituir al diseñador gráfico por un programa de IA",
+        "Permitir valores equivalentes intercambiables en la entrada/salida (ej. unidades en cm/pulgadas, selección numérica o mediante slider)",
+        "Remplazar el monitor por altavoces",
+        "Cambiar de navegador web continuamente"
+      ],
+      a: 1,
+      exp: "La sustitutividad permite que datos y comandos se expresen en diferentes modalidades equivalentes según la comodidad del operador."
+    },
+    {
+      q: "¿Qué define a la 'Adaptabilidad' de una interfaz?",
+      opts: [
+        "Que el monitor ajuste su brillo automáticamente según la luz solar",
+        "El ajuste dinámico o personalizable de la presentación, ayudas y atajos en función del nivel novato o experto detectado",
+        "Que el ordenador cambie de sistema operativo sin avisar",
+        "La instalación automática de aplicaciones de terceros"
+      ],
+      a: 1,
+      exp: "Una interfaz adaptable amolda su densidad informativa, menús y niveles de ayuda a la pericia progresiva del usuario."
+    },
+    {
+      q: "Según los experimentos históricos de Miller [NMIL68] y Card [CAR91], ¿qué sucede a los 0.1 segundos (100 ms)?",
+      opts: [
+        "El usuario pierde la paciencia y abandona el programa",
+        "Es el límite perceptivo para sentir que el sistema reacciona de forma instantánea; no requiere indicador de espera",
+        "El microprocesador se sobrecalienta y requiere refrigeración",
+        "Es el tiempo mínimo necesario para leer una página de texto"
+      ],
+      a: 1,
+      exp: "100 milisegundos es el umbral de la percepción de inmediatez física: el usuario siente que el clic causó directamente la respuesta."
+    },
+    {
+      q: "Según los umbrales de Miller y Card, ¿cuál es la significación cognitiva del límite de 1.0 segundo?",
+      opts: [
+        "El ordenador entra en modo de suspensión automática",
+        "Se percibe una demora perceptible, pero el flujo de pensamiento del usuario permanece ininterrumpido sin perder concentración",
+        "El usuario ha olvidado por completo qué estaba haciendo",
+        "Obliga legalmente a mostrar una barra de progreso porcentual"
+      ],
+      a: 1,
+      exp: "A 1.0 segundo el usuario nota el retraso técnico, pero mantiene la continuidad cognitiva de su plan de acción mental."
+    },
+    {
+      q: "¿Qué ocurre cognitivamente cuando la respuesta del sistema se demora hasta los 10 segundos?",
+      opts: [
+        "El usuario experimenta fatiga visual severa",
+        "Es el límite extremo de la atención; el usuario desconecta o cambia de tarea a menos que exista feedback dinámico continuo (barra de progreso)",
+        "El navegador cierra la pestaña automáticamente",
+        "No causa ningún impacto si el fondo de pantalla es agradable"
+      ],
+      a: 1,
+      exp: "A los 10 segundos la atención se fractura irremediablemente; el usuario requiere retroalimentación clara o abandonará el proceso."
+    },
+    {
+      q: "¿Qué elemento de interfaz es imprescindible incorporar si una operación demora entre 2 y 10 segundos?",
+      opts: [
+        "Un vídeo promocional de la empresa",
+        "Indicadores visuales de progreso (spinner o barra porcentual determinista) informando que el sistema continúa activo",
+        "Un botón para formatear el disco",
+        "Una alarma acústica estridente"
+      ],
+      a: 1,
+      exp: "El feedback visual continuado evita la incertidumbre de si la aplicación se ha congelado o sigue procesando la orden."
+    },
+    {
+      q: "¿Cómo se relaciona el principio DCU 'Diseño para usuarios y tareas' con la taxonomía de Dix et al. [DIX93]?",
+      opts: [
+        "Con la robustez del hardware",
+        "Con la Adecuación a las tareas",
+        "Con el protocolo TCP/IP",
+        "Con la velocidad del ventilador"
+      ],
+      a: 1,
+      exp: "Diseñar enfocado a usuarios y tareas equivale directamente al atributo de adecuación funcional a los objetivos reales de trabajo."
+    },
+    {
+      q: "¿Qué atributo de Nielsen [NIE93] responde al principio DCU de 'Diálogo simple y natural'?",
+      opts: [
+        "Consistencia de ficheros",
+        "Eficiencia de uso y adecuación",
+        "Criptografía asimétrica",
+        "Multiplicación matricial"
+      ],
+      a: 1,
+      exp: "El diálogo claro y natural minimiza la fricción comunicativa, elevando drásticamente la eficiencia operativa y pertinencia."
+    },
+    {
+      q: "¿A qué atributo de Dix et al. corresponde el principio DCU de 'Proporcionar realimentación' (Feedback)?",
+      opts: [
+        "A la Sintetizabilidad (evaluar el nuevo estado tras una acción)",
+        "Al consumo energético",
+        "A la portabilidad de código en Linux",
+        "A la compresión de audio"
+      ],
+      a: 0,
+      exp: "El feedback oportuno permite al usuario sintetizar qué ha cambiado en el sistema como consecuencia directa de su acción."
+    },
+    {
+      q: "¿Qué atributo de Dix et al. materializa la 'Reducción de errores' postulada por el DCU?",
+      opts: [
+        "La Recuperabilidad y Robustez",
+        "El ancho de banda de red",
+        "El número de transistores en la CPU",
+        "La resolución del sensor óptico del ratón"
+      ],
+      a: 0,
+      exp: "La recuperabilidad mitiga el impacto de los fallos mediante tolerancia y mecanismos claros de enmienda o deshecho."
+    },
+    {
+      q: "Según la norma ISO 9241-11 para multimedia, ¿qué evalúa la 'Usabilidad Operacional'?",
+      opts: [
+        "La velocidad de rotación del ventilador",
+        "La facilidad de manejo de los controles clásicos de la interfaz: menús, iconos, navegación y mecanismos de selección",
+        "El balance contable de la empresa desarrolladora",
+        "El voltaje de la fuente de alimentación"
+      ],
+      a: 1,
+      exp: "La usabilidad operacional examina la ergonomía y control directo de los dispositivos interactivos y componentes del software."
+    },
+    {
+      q: "En ISO 9241-11 para multimedia, ¿qué mide el componente 'Entrega de Información'?",
+      opts: [
+        "El coste de los sellos de correos para enviar cartas",
+        "La claridad, legibilidad, integración multimedia y focalización atencional en la presentación de datos complejos",
+        "El número de correos spam recibidos por el usuario",
+        "La velocidad de impresión en papel continuo"
+      ],
+      a: 1,
+      exp: "Se centra en la idoneidad perceptual de los canales mediáticos (texto, audio, vídeo, gráficos) para transmitir conocimiento."
+    },
+    {
+      q: "¿Qué dimensión valora el componente 'Estudio y Aprendizaje' en software multimedia educativo?",
+      opts: [
+        "El precio de la matrícula universitaria",
+        "La efectividad con la que la interfaz facilita la adquisición y asimilación conceptual de nuevos conocimientos formativos",
+        "La duración física de la batería del dispositivo portátil",
+        "El peso de los libros de texto de la asignatura"
+      ],
+      a: 1,
+      exp: "Evalúa en qué grado la tecnología potencia o entorpece la absorción y retención de competencias por parte del estudiante."
+    },
+    {
+      q: "¿A qué hace referencia el componente de 'Utilidad' en los sistemas interactivos según ISO?",
+      opts: [
+        "Al beneficio económico neto de los accionistas",
+        "A la idoneidad de las funciones provistas para satisfacer las metas sustantivas y el valor práctico percibido por el operador",
+        "A que el producto ocupe poco espacio en el disco duro",
+        "A la cantidad de páginas impresas generadas por día"
+      ],
+      a: 1,
+      exp: "Un sistema usable pero inútil no resuelve el problema real: la utilidad calibra la capacidad de cumplir las metas del usuario."
+    },
+    {
+      q: "¿Qué papel desempeña la 'Apariencia' en la usabilidad de entornos interactivos y multimedia?",
+      opts: [
+        "Ninguno, la estética es totalmente irrelevante en la ingeniería de software",
+        "Impacto estético y emocional que genera confianza, seducción visual y predisposición cognitiva favorable en el usuario",
+        "Solo sirve para que el producto gane concursos de dibujo",
+        "Obliga a utilizar exclusivamente fondos negros"
+      ],
+      a: 1,
+      exp: "La estética no es superficial: genera bienestar subjetivo, disminuye la ansiedad y predispone positivamente al usuario ante la tarea."
+    },
+    {
+      q: "¿Qué publicación histórica sentó las bases del estudio 'What is Usability' según la referencia [BEV91]?",
+      opts: [
+        "Bevan, Kirakowsky y Maissel (1991)",
+        "Alan Turing (1950)",
+        "Bill Gates (1985)",
+        "Steve Jobs (2007)"
+      ],
+      a: 0,
+      exp: "Nigel Bevan, Jurek Kirakowsky y J. Maissel formularon en 1991 las bases analíticas de la medición de usabilidad en software."
+    },
+    {
+      q: "¿Qué sintetiza el célebre manual de principios de usabilidad [BRO97]?",
+      opts: [
+        "Brock y Steven (1997) en la Universidad Estatal de San Diego",
+        "Linus Torvalds en el kernel de Linux",
+        "Un tratado militar sobre criptografía naval",
+        "Un curso de mecanografía para secretariado"
+      ],
+      a: 0,
+      exp: "El 'Handbook of Usability Principles' de Brock y Steven compila las directrices ergonómicas esenciales para sistemas interactivos."
+    },
+    {
+      q: "¿Qué postula el marco de ingeniería de la usabilidad de Wixon y Wilson [WIX97]?",
+      opts: [
+        "Que la usabilidad debe evaluarse exclusivamente al jubilarse el desarrollador",
+        "Un marco sistemático donde los atributos de usabilidad se integran en metas medibles desde la concepción del producto",
+        "Que los ordenadores personales serían reemplazados por máquinas de escribir",
+        "La eliminación de los monitores a favor de cintas perforadas"
+      ],
+      a: 1,
+      exp: "Wixon y Wilson formalizaron la ingeniería de usabilidad como disciplina cuantitativa integrada en el ciclo de vida del software."
+    },
+    {
+      q: "¿Por qué un mensaje de error como 'Error fatal 0x80004005 en kernel' atenta contra los atributos de usabilidad?",
+      opts: [
+        "Porque gasta demasiada tinta de impresora",
+        "Porque carece de sintetizabilidad, recuperabilidad y orientación a tareas; no informa al usuario de qué ocurrió ni cómo subsanarlo",
+        "Porque está redactado en formato hexadecimal",
+        "Porque los números pares son difíciles de comprender"
+      ],
+      a: 1,
+      exp: "Un mensaje de error debe hablar el lenguaje del usuario, explicar la causa con claridad y ofrecer vías claras de recuperación."
+    },
+    {
+      q: "¿Cuál es el beneficio de admitir combinaciones de teclado estándar (como Ctrl+Z o ⌘Z) en una aplicación?",
+      opts: [
+        "Acelera el desgaste físico del teclado",
+        "Refuerza simultáneamente la familiaridad, la consistencia, la flexibilidad y la recuperabilidad inmediata del usuario",
+        "Reduce el consumo de energía del monitor",
+        "Evita tener que conectar un ratón al ordenador"
+      ],
+      a: 1,
+      exp: "El atajo de deshacer encarna múltiples atributos: es universalmente familiar, consistente entre apps y concede control y recuperabilidad."
+    },
+    {
+      q: "En interfaces táctiles móviles, ¿cómo influye el retardo táctil (input lag) superior a 100 ms en la percepción humana?",
+      opts: [
+        "El usuario percibe que el teléfono es resistente al agua",
+        "La interfaz se percibe pesada, torpe o desconectada del dedo físico, arruinando la ilusión de manipulación directa",
+        "Mejora la precisión de escritura al ralentizar el teclado",
+        "Aumenta la vida útil de la batería un 50%"
+      ],
+      a: 1,
+      exp: "El retardo por encima de 100 ms rompe la sensación de manipulación directa y causa frustración táctil inmediata."
+    },
+    {
+      q: "En conclusión, ¿cuál es el propósito de dominar los 10 atributos canónicos de usabilidad en el Curso de IPO?",
+      opts: [
+        "Aprobar un examen memorístico sin aplicación real",
+        "Disponer de un vocabulario riguroso y una matriz de criterios operativos para diseñar, evaluar y defender interfaces de alta calidad centradas en las personas",
+        "Aprender a instalar drivers de tarjetas gráficas",
+        "Sustituir a los programadores por analistas de bases de datos"
+      ],
+      a: 1,
+      exp: "Dominar estos atributos dota a los ingenieros de HCI de criterios científicos para diagnosticar y garantizar la excelencia interactiva."
+    }
+  ];
+
+  const FLASHCARDS = [
+    {
+      f: "Facilidad de Aprendizaje (Learnability)",
+      b: "Permite a los usuarios novatos alcanzar un nivel aceptable de desempeño productivo en el menor tiempo posible tras su primer contacto con el sistema."
+    },
+    {
+      f: "Sintetizabilidad (Synthesizability)",
+      b: "Capacidad del usuario para evaluar el efecto y las consecuencias de operaciones previas en el estado actual de la aplicación de forma visible e inequívoca."
+    },
+    {
+      f: "Familiaridad (Familiarity)",
+      b: "Correlación directa entre los conocimientos previos adquiridos en el mundo real u otros entornos digitales y los requeridos para operar el nuevo software."
+    },
+    {
+      f: "Consistencia (Consistency)",
+      b: "Uso homogéneo e invariante de mecanismos, terminología, iconografía y patrones de diseño en todas las situaciones de interacción y subsistemas del software."
+    },
+    {
+      f: "Flexibilidad (Flexibility)",
+      b: "Multiplicidad de vías mediante las cuales usuario y sistema intercambian información, adaptándose a distintos niveles de pericia mediante atajos y personalización."
+    },
+    {
+      f: "Robustez (Robustness)",
+      b: "Garantía de que las características de interacción permiten cumplir con éxito los objetivos del usuario, ofreciendo resiliencia, ayuda y orientación permanente."
+    },
+    {
+      f: "Recuperabilidad (Recoverability)",
+      b: "Grado de facilidad que el sistema concede al operador para enmendar, revertir o corregir una acción errónea una vez que el fallo ha sido detectado."
+    },
+    {
+      f: "Tiempo de Respuesta (Response Time)",
+      b: "Latencia temporal requerida por la interfaz para expresar cambios de estado; debe mantenerse dentro de límites cognitivamente soportables (0.1s, 1s, 10s)."
+    },
+    {
+      f: "Adecuación a las Tareas (Task Conformance)",
+      b: "Correspondencia directa y fiel entre las capacidades operativas del software y el modelo mental del usuario, sin forzar lógicas artificiales del programador."
+    },
+    {
+      f: "Disminución de Carga Cognitiva",
+      b: "Principio de «reconocer antes que recordar». El sistema minimiza el esfuerzo de memoria de trabajo mostrando contextualmente las opciones y affordances necesarias."
+    },
+    {
+      f: "El Problema de la Consistencia",
+      b: "Dilema de introducir innovaciones o metáforas evolucionadas en un producto sin destruir la consistencia y modelos mentales ya asimilados en versiones previas."
+    },
+    {
+      f: "Control del Usuario",
+      b: "Pilar de flexibilidad que concede la iniciativa del diálogo al operador, permitiéndole iniciar, pausar, deshacer o marcar el ritmo de las acciones a voluntad."
+    },
+    {
+      f: "Migración de Tareas",
+      b: "Capacidad de transferir el control operativo de una tarea entre el usuario y la computadora (por ejemplo, corrección ortográfica manual asistida o automática)."
+    },
+    {
+      f: "Capacidad de Sustitución (Substitutivity)",
+      b: "Posibilidad de introducir o representar datos mediante valores equivalentes intercambiables (ej. medidas en cm o pulgadas, control visual deslizante o teclado)."
+    },
+    {
+      f: "Adaptabilidad de Interfaz",
+      b: "Ajuste dinámico o personalizable de la presentación, ayudas y atajos en función del perfil y destreza detectada (usuario novato vs. usuario avanzado)."
+    },
+    {
+      f: "Umbral de 0.1 Segundos (Miller & Card)",
+      b: "Límite perceptivo máximo para que la respuesta se sienta instantánea en tiempo real. No requiere ningún indicador gráfico de carga o espera."
+    },
+    {
+      f: "Umbral de 1.0 Segundo (Miller & Card)",
+      b: "Límite en el que el usuario percibe un retardo en la máquina, pero su flujo mental e hilo de pensamiento permanecen intactos sin distracciones."
+    },
+    {
+      f: "Umbral de 10 Segundos (Miller & Card)",
+      b: "Límite extremo de atención; pasado este tiempo el usuario desconecta o cambia de tarea. Exige barra de progreso determinista o feedback visual activo."
+    },
+    {
+      f: "Usabilidad Operacional (ISO 9241-11 Multimedia)",
+      b: "Concierne a los controles directos de la interfaz gráfica: menús, barras de herramientas, botones interactivos y fluidez en la navegación hipermedia."
+    },
+    {
+      f: "Entrega de Información (ISO 9241-11 Multimedia)",
+      b: "Calidad de transmisión perceptual en sistemas intensivos en datos: selección adecuada de medios, legibilidad visual y balance de la atención humana."
+    }
+  ];
+
+  const GAPS = [
+    {
+      title: "1. Descomposición y Consenso Terminológico",
+      text: "La relación que existe entre la usabilidad y los criterios de calidad conlleva su descomposición en aspectos característicos. Mientras Dix et al. hablan de [principios|normas] y Preece de [componentes|reglas], la denominación con mayor consenso científico es la de [atributos|etiquetas] de usabilidad.",
+      gaps: ["principios", "componentes", "atributos"]
+    },
+    {
+      title: "2. Facilidad de Aprendizaje y Sintetizabilidad",
+      text: "La [facilidad de aprendizaje|curva de uso] permite a usuarios noveles ser productivos en el menor tiempo, mientras que la [sintetizabilidad|observabilidad] les permite evaluar el efecto de operaciones anteriores en el [estado|diseño] actual de la interfaz.",
+      gaps: ["facilidad de aprendizaje", "sintetizabilidad", "estado"]
+    },
+    {
+      title: "3. Familiaridad y Metáforas del Mundo Real",
+      text: "La familiaridad aprovecha las correlaciones con conocimientos previos y [metáforas|paletas] del mundo real para que el usuario opere el nuevo sistema de forma [intuitiva|automática] y con menor esfuerzo.",
+      gaps: ["metáforas", "intuitiva"]
+    },
+    {
+      title: "4. Consistencia y Preservación del Look & Feel",
+      text: "Para mitigar el problema de la consistencia al introducir nuevas funcionalidades, los diseñadores deben seguir estrictamente las [guías de estilo|plantillas básicas], mantener un [look & feel|estilo plano] común y añadir técnicas en vez de alterar los patrones operativos ya asimilados.",
+      gaps: ["guías de estilo", "look & feel"]
+    },
+    {
+      title: "5. Flexibilidad: Control y Sustitución",
+      text: "La flexibilidad se potencia cuando el usuario retiene el [control|código] de la interacción, se posibilita la migración de tareas y se asegura la capacidad de [sustitución|redundancia] mediante formatos de entrada equivalentes.",
+      gaps: ["control", "sustitución"]
+    },
+    {
+      title: "6. Robustez y Recuperabilidad",
+      text: "Un software con alta [robustez|complejidad] garantiza el cumplimiento cabal de las metas del usuario, concediendo una alta [recuperabilidad|resistencia] para revertir o enmendar acciones erróneas tras ser detectadas.",
+      gaps: ["robustez", "recuperabilidad"]
+    },
+    {
+      title: "7. Umbrales Temporales de Miller y Card",
+      text: "Según Miller y Card, el retardo de [0.1|0.5] segundos da sensación de respuesta inmediata, el límite de [1.0|2.0] segundo conserva el flujo de pensamiento sin interrupción, y a los [10|30] segundos se pierde irremediablemente la atención si no hay barra de progreso.",
+      gaps: ["0.1", "1.0", "10"]
+    },
+    {
+      title: "8. Carga Cognitiva y Modelo Mental",
+      text: "La disminución de la carga cognitiva defiende el principio de reconocer antes que [recordar|olvidar], asegurando que las funciones respondan con fidelidad al [modelo mental|código fuente] del usuario y no a la conveniencia del programador.",
+      gaps: ["recordar", "modelo mental"]
+    },
+    {
+      title: "9. Componentes Multimedia en ISO 9241-11",
+      text: "En sistemas multimedia, la norma ISO distingue la usabilidad [operacional|mecánica], la entrega de información, el estudio y aprendizaje, la [utilidad|inversión] sustantiva para resolver problemas y la [apariencia|caligrafía] como factor de confianza y motivación estética.",
+      gaps: ["operacional", "utilidad", "apariencia"]
+    }
+  ];
+
+  // Estado reactivo
+  let currentTab = 'test'; // 'test' | 'fc' | 'gaps'
+  
+  // Test State
+  let qList = [...QUESTIONS];
+  let qIdx = 0;
+  let qSelected = null;
+  let qConfirmed = false;
+  let qScore = 0;
+  let qFinished = false;
+  let qWrongList = [];
+
+  // Flashcards State
+  let fcList = [...FLASHCARDS];
+  let fcIdx = 0;
+  let fcFlipped = false;
+  let fcKnown = new Set();
+
+  // Gaps State
+  let gIdx = 0;
+  let gAnswers = {};
+  let gChecked = false;
+
+  const app = document.getElementById('app');
+
+  function renderTabs() {
+    return `
+      <div class="flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low px-4 sm:px-6 pt-3">
+        <div class="flex gap-2">
+          <button type="button" data-tab="test" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'test' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">quiz</span>
+            <span>Test interactivo</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'test' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">41</span>
+          </button>
+          <button type="button" data-tab="fc" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'fc' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">style</span>
+            <span>Flashcards 3D</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'fc' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">20</span>
+          </button>
+          <button type="button" data-tab="gaps" class="px-4 py-2.5 rounded-t-xl font-label-md text-label-md flex items-center gap-2 border-b-2 transition-all ${currentTab === 'gaps' ? 'bg-surface-container-lowest text-primary border-primary font-semibold shadow-sm' : 'text-on-surface-variant hover:text-on-surface border-transparent'}">
+            <span class="material-symbols-outlined text-[18px]">edit_note</span>
+            <span>Rellenar huecos</span>
+            <span class="px-2 py-0.5 text-[11px] rounded-full ${currentTab === 'gaps' ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container text-on-surface-variant'} font-code-inline font-bold">9</span>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center gap-2 text-[12px] text-on-surface-variant font-code-inline pb-2">
+          <span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+          <span>Atajos de teclado habilitados</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTest() {
+    if (qFinished) {
+      const pct = Math.round((qScore / qList.length) * 100);
+      const nota = ((qScore / qList.length) * 10).toFixed(1).replace('.0','');
+      return `
+        <div class="p-6 sm:p-10 flex flex-col items-center justify-center text-center my-auto">
+          <div class="w-20 h-20 rounded-full ${pct >= 70 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'} flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[42px]">${pct >= 70 ? 'emoji_events' : 'psychology'}</span>
+          </div>
+          <div class="font-display-hero text-[48px] font-bold text-primary mb-1">${nota}</div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">¡Test de Atributos completado!</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">Has respondido correctamente <strong class="text-on-surface">${qScore}</strong> de las <strong class="text-on-surface">${qList.length}</strong> preguntas (${pct}% de acierto).</p>
+          
+          <div class="w-full max-w-xs bg-surface-container-high h-3 rounded-full overflow-hidden mb-6">
+            <div class="h-full ${pct >= 70 ? 'bg-green-600' : 'bg-amber-600'} transition-all duration-700" style="width: ${pct}%"></div>
+          </div>
+
+          ${qWrongList.length > 0 ? `
+            <div class="w-full max-w-2xl text-left bg-surface-container-low rounded-xl p-5 border border-outline-variant/30 mb-8 space-y-3">
+              <span class="font-label-md text-label-md font-bold text-error flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[18px]">warning</span>
+                Preguntas para repasar (${qWrongList.length}):
+              </span>
+              <div class="max-h-60 overflow-y-auto space-y-3 pr-2">
+                ${qWrongList.map(item => `
+                  <div class="p-3 bg-surface-container-lowest rounded-lg border-l-4 border-l-error text-body-sm">
+                    <p class="font-semibold text-on-surface">${item.q}</p>
+                    <p class="text-green-800 text-[13px] mt-1"><strong class="font-medium text-green-900">Solución:</strong> ${item.opts[item.a]}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : `
+            <div class="p-4 bg-green-50 text-green-900 rounded-xl font-label-md mb-8 flex items-center gap-2">
+              <span class="material-symbols-outlined text-green-700">task_alt</span>
+              <span>¡Dominio absoluto! Has acertado todas las preguntas de Atributos de Usabilidad.</span>
+            </div>
+          `}
+
+          <button type="button" id="restart-test" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-md">
+            <span class="material-symbols-outlined text-[20px]">refresh</span>
+            <span>Reiniciar el test</span>
+          </button>
+        </div>
+      `;
+    }
+
+    const cur = qList[qIdx];
+    const progressPct = ((qIdx + 1) / qList.length) * 100;
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra de progreso superior -->
+          <div class="flex items-center justify-between gap-4 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Pregunta ${qIdx + 1} / ${qList.length}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Aciertos: ${qScore}</span>
+            </div>
+            <span class="font-code-inline text-[12px] text-on-surface-variant">${Math.round(progressPct)}%</span>
+          </div>
+          <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-6">
+            <div class="h-full bg-primary transition-all duration-300" style="width: ${progressPct}%"></div>
+          </div>
+
+          <!-- Pregunta -->
+          <h3 class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mb-6">${cur.q}</h3>
+
+          <!-- Opciones -->
+          <div class="space-y-3 mb-6">
+            ${cur.opts.map((opt, i) => {
+              let stateClasses = "bg-surface-container-low hover:bg-surface-container border-outline-variant/30 text-on-surface";
+              let badge = `<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center font-code-inline text-[12px] font-semibold text-on-surface-variant mr-3 shrink-0">${i + 1}</span>`;
+
+              if (qConfirmed) {
+                if (i === cur.a) {
+                  stateClasses = "bg-green-50 border-green-400 text-green-900 font-semibold ring-1 ring-green-400";
+                  badge = `<span class="w-7 h-7 rounded-lg bg-green-500 text-white flex items-center justify-center font-code-inline text-[14px] font-bold mr-3 shrink-0"><span class="material-symbols-outlined text-[18px]">check</span></span>`;
+                } else if (i === qSelected) {
+                  stateClasses = "bg-red-50 border-red-300 text-red-900 ring-1 ring-red-300";
+                  badge = `<span class="w-7 h-7 rounded-lg bg-red-500 text-white flex items-center justify-center font-code-inline text-[14px] font-bold mr-3 shrink-0"><span class="material-symbols-outlined text-[18px]">close</span></span>`;
+                } else {
+                  stateClasses = "bg-surface-container-low/60 border-outline-variant/20 text-on-surface-variant/70 opacity-60";
+                }
+              } else if (qSelected === i) {
+                stateClasses = "bg-primary-fixed/40 border-primary text-primary font-semibold ring-1 ring-primary";
+                badge = `<span class="w-7 h-7 rounded-lg bg-primary text-white flex items-center justify-center font-code-inline text-[12px] font-semibold mr-3 shrink-0">${i + 1}</span>`;
+              }
+
+              return `
+                <button type="button" data-opt="${i}" ${qConfirmed ? 'disabled' : ''} class="w-full text-left p-4 rounded-xl border flex items-center transition-all cursor-pointer ${stateClasses}">
+                  ${badge}
+                  <span class="font-body-md text-body-md">${opt}</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Explicación formativa al confirmar -->
+          ${qConfirmed ? `
+            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 mb-6 flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+              <div>
+                <span class="font-label-md text-label-md font-bold text-on-surface block mb-1">Fundamento teórico (Cátedra de IPO):</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">${cur.exp}</p>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+          <div class="text-[12px] text-on-surface-variant font-code-inline hidden sm:block">
+            ${!qConfirmed ? 'Pulsa 1, 2, 3 o 4 para seleccionar' : 'Pulsa Enter para continuar'}
+          </div>
+          <div class="flex items-center gap-3 ml-auto">
+            ${!qConfirmed ? `
+              <button type="button" id="confirm-ans" ${qSelected === null ? 'disabled' : ''} class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-sm">
+                Comprobar respuesta
+              </button>
+            ` : `
+              <button type="button" id="next-q" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-md flex items-center gap-2">
+                <span>${qIdx === qList.length - 1 ? 'Ver resultados' : 'Siguiente pregunta'}</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            `}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFlashcards() {
+    const cur = fcList[fcIdx];
+    const isKnown = fcKnown.has(fcIdx);
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra superior de estado flashcards -->
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Tarjeta ${fcIdx + 1} de ${fcList.length}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Aprendidas: ${fcKnown.size} / ${fcList.length}</span>
+            </div>
+            <button type="button" id="fc-toggle-known" class="px-3 py-1 rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 transition-all ${isKnown ? 'bg-green-100 text-green-800' : 'bg-surface-container hover:bg-surface-container-high text-on-surface-variant'}">
+              <span class="material-symbols-outlined text-[16px]">${isKnown ? 'check_circle' : 'radio_button_unchecked'}</span>
+              <span>${isKnown ? 'Dominada' : 'Me la sé (S)'}</span>
+            </button>
+          </div>
+
+          <!-- Tarjeta 3D interactiva con volteo -->
+          <div class="perspective-1000 w-full min-h-[260px] cursor-pointer" id="fc-card-trigger">
+            <div class="fc transform-style-3d relative w-full min-h-[260px] rounded-2xl ${fcFlipped ? 'flipped' : ''}">
+              <!-- Cara Frontal (Anverso) -->
+              <div class="backface-hidden absolute inset-0 bg-surface-container-low hover:bg-surface-container/80 border border-outline-variant/40 rounded-2xl p-8 flex flex-col justify-between shadow-sm transition-colors">
+                <div class="flex items-center justify-between text-on-surface-variant">
+                  <span class="font-code-inline text-[11px] uppercase tracking-wider font-semibold text-primary">Anverso · Atributo / Concepto</span>
+                  <span class="material-symbols-outlined text-[20px]">flip_camera_android</span>
+                </div>
+                <div class="my-auto text-center py-4">
+                  <h3 class="font-headline-md text-headline-md font-bold text-on-surface leading-relaxed">${cur.f}</h3>
+                </div>
+                <div class="text-center font-label-sm text-[12px] text-on-surface-variant">
+                  Clic para voltear o pulsa <kbd class="px-1.5 py-0.5 bg-surface-container-highest rounded font-code-inline">Espacio</kbd>
+                </div>
+              </div>
+
+              <!-- Cara Posterior (Reverso) -->
+              <div class="backface-hidden rotate-y-180 absolute inset-0 bg-primary-container text-on-primary-container rounded-2xl p-8 flex flex-col justify-between shadow-md">
+                <div class="flex items-center justify-between opacity-80">
+                  <span class="font-code-inline text-[11px] uppercase tracking-wider font-semibold">Reverso · Definición / Fundamento</span>
+                  <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                </div>
+                <div class="my-auto text-center py-4">
+                  <p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed font-medium">${cur.b}</p>
+                </div>
+                <div class="text-center font-label-sm text-[12px] opacity-80">
+                  Clic para volver o pulsa <kbd class="px-1.5 py-0.5 bg-white/20 rounded font-code-inline">Espacio</kbd>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles Inferiores Flashcards -->
+        <div class="flex items-center justify-between pt-6 border-t border-outline-variant/20 mt-6">
+          <button type="button" id="fc-prev" ${fcIdx === 0 ? 'disabled' : ''} class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Anterior</span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <button type="button" id="fc-shuffle" class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+              <span class="material-symbols-outlined text-[18px]">shuffle</span>
+              <span>Barajar</span>
+            </button>
+          </div>
+
+          <button type="button" id="fc-next" ${fcIdx === fcList.length - 1 ? 'disabled' : ''} class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1.5 transition-all text-on-surface">
+            <span>Siguiente</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function cleanStr(s) {
+    return (s || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  }
+
+  function renderGaps() {
+    const cur = GAPS[gIdx];
+    const currentGaps = cur.gaps;
+
+    // Generar banco de palabras mezclado para este texto
+    const wordBank = [...currentGaps].sort();
+
+    // Reemplazar [palabra|opcion2] o [palabra] por inputs dinámicos
+    let gapCounter = 0;
+    const regex = /\[([^\]]+)\]/g;
+    
+    let renderedText = cur.text.replace(regex, (match, p1) => {
+      const targetWord = currentGaps[gapCounter];
+      const userVal = gAnswers[`${gIdx}_${gapCounter}`] || '';
+      const idx = gapCounter;
+      gapCounter++;
+
+      let borderClass = "border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary";
+      const isCorrect = cleanStr(userVal) === cleanStr(targetWord);
+
+      if (gChecked) {
+        if (isCorrect) {
+          borderClass = "border-green-500 bg-green-50 text-green-900 font-bold ring-1 ring-green-500";
+        } else {
+          borderClass = "border-red-400 bg-red-50 text-red-900 ring-1 ring-red-400";
+        }
+      }
+
+      const inputWidth = Math.max(120, targetWord.length * 11 + 24);
+
+      return `
+        <span class="inline-block mx-1 align-baseline">
+          <input type="text" data-gap="${idx}" value="${userVal}" placeholder="[palabra]" ${gChecked ? 'readonly' : ''} style="width: ${inputWidth}px;" class="px-2.5 py-1 text-center font-code-inline text-body-sm rounded-lg border shadow-sm outline-none transition-all ${borderClass}" />
+          ${gChecked && !isCorrect ? `<span class="block text-[11px] font-code-inline text-red-600 font-bold text-center mt-0.5">${targetWord}</span>` : ''}
+        </span>
+      `;
+    });
+
+    return `
+      <div class="p-6 sm:p-8 flex flex-col justify-between flex-1">
+        <div>
+          <!-- Barra superior estado huecos -->
+          <div class="flex items-center justify-between gap-4 mb-4">
+            <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-code-inline text-[12px] font-bold text-primary">Texto ${gIdx + 1} de ${GAPS.length}</span>
+            <div class="flex items-center gap-1">
+              ${GAPS.map((_, i) => `
+                <button type="button" data-goto-gap="${i}" class="w-6 h-6 rounded-md font-code-inline text-[11px] ${i === gIdx ? 'bg-primary text-white font-bold' : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high'}">${i + 1}</button>
+              `).join('')}
+            </div>
+          </div>
+
+          <h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">${cur.title}</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Completa los espacios en blanco basándote en la teoría de Atributos de Usabilidad:</p>
+
+          <!-- Banco de palabras de ayuda -->
+          <div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 mb-6 flex flex-wrap items-center gap-2">
+            <span class="font-label-sm text-label-sm text-on-surface-variant mr-2 flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">dictionary</span>
+              <span>Banco de términos:</span>
+            </span>
+            ${wordBank.map(w => {
+              const isUsed = currentGaps.some((val, i) => {
+                const userVal = cleanStr(gAnswers[`${gIdx}_${i}`]);
+                return userVal === cleanStr(w);
+              });
+              return `
+                <span class="px-2.5 py-1 rounded-lg ${isUsed ? 'bg-surface-container text-on-surface-variant/40 line-through' : 'bg-surface-container-lowest text-primary'} border border-outline-variant/40 font-code-inline text-[12px] font-semibold shadow-xs">${w}</span>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Texto con los huecos interactivos -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 leading-loose text-on-surface font-body-md text-body-md shadow-xs">
+            ${renderedText}
+          </div>
+        </div>
+
+        <!-- Acciones Inferiores Huecos -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-outline-variant/20 mt-6">
+          <div class="flex items-center gap-2">
+            <button type="button" id="gap-prev" ${gIdx === 0 ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1 text-on-surface transition-all">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Anterior texto</span>
+            </button>
+            <button type="button" id="gap-next" ${gIdx === GAPS.length - 1 ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high disabled:opacity-30 disabled:cursor-not-allowed font-label-md text-label-md flex items-center gap-1 text-on-surface transition-all">
+              <span>Siguiente texto</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+            ${!gChecked ? `
+              <button type="button" id="check-gaps" class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm">
+                Comprobar texto
+              </button>
+            ` : `
+              <button type="button" id="retry-gaps" class="px-4 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                Reiniciar
+              </button>
+              <button type="button" id="solve-gaps" class="px-4 py-2.5 rounded-xl bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all">
+                Ver soluciones
+              </button>
+              ${gIdx < GAPS.length - 1 ? `
+                <button type="button" id="next-gap-btn" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-md flex items-center gap-2">
+                  <span>Siguiente texto</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </button>
+              ` : ''}
+            `}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function render() {
+    let contentHtml = '';
+    if (currentTab === 'test') {
+      contentHtml = renderTest();
+    } else if (currentTab === 'fc') {
+      contentHtml = renderFlashcards();
+    } else if (currentTab === 'gaps') {
+      contentHtml = renderGaps();
+    }
+
+    app.innerHTML = renderTabs() + contentHtml;
+    attachEvents();
+  }
+
+  function attachEvents() {
+    // Tabs
+    app.querySelectorAll('[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentTab = btn.getAttribute('data-tab');
+        render();
+      });
+    });
+
+    // TEST EVENTS
+    if (currentTab === 'test') {
+      app.querySelectorAll('[data-opt]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (!qConfirmed) {
+            qSelected = parseInt(btn.getAttribute('data-opt'), 10);
+            render();
+          }
+        });
+      });
+
+      const confirmBtn = document.getElementById('confirm-ans');
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', () => {
+          if (qSelected !== null) {
+            qConfirmed = true;
+            if (qSelected === qList[qIdx].a) {
+              qScore++;
+            } else {
+              qWrongList.push(qList[qIdx]);
+            }
+            render();
+          }
+        });
+      }
+
+      const nextBtn = document.getElementById('next-q');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (qIdx < qList.length - 1) {
+            qIdx++;
+            qSelected = null;
+            qConfirmed = false;
+          } else {
+            qFinished = true;
+          }
+          render();
+        });
+      }
+
+      const restartBtn = document.getElementById('restart-test');
+      if (restartBtn) {
+        restartBtn.addEventListener('click', () => {
+          qList = [...QUESTIONS].sort(() => Math.random() - 0.5);
+          qIdx = 0;
+          qScore = 0;
+          qSelected = null;
+          qConfirmed = false;
+          qFinished = false;
+          qWrongList = [];
+          render();
+        });
+      }
+    }
+
+    // FLASHCARD EVENTS
+    if (currentTab === 'fc') {
+      const cardTrigger = document.getElementById('fc-card-trigger');
+      if (cardTrigger) {
+        cardTrigger.addEventListener('click', () => {
+          fcFlipped = !fcFlipped;
+          render();
+        });
+      }
+
+      const toggleKnownBtn = document.getElementById('fc-toggle-known');
+      if (toggleKnownBtn) {
+        toggleKnownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (fcKnown.has(fcIdx)) {
+            fcKnown.delete(fcIdx);
+          } else {
+            fcKnown.add(fcIdx);
+          }
+          render();
+        });
+      }
+
+      const prevBtn = document.getElementById('fc-prev');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          if (fcIdx > 0) {
+            fcIdx--;
+            fcFlipped = false;
+            render();
+          }
+        });
+      }
+
+      const nextBtn = document.getElementById('fc-next');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (fcIdx < fcList.length - 1) {
+            fcIdx++;
+            fcFlipped = false;
+            render();
+          }
+        });
+      }
+
+      const shuffleBtn = document.getElementById('fc-shuffle');
+      if (shuffleBtn) {
+        shuffleBtn.addEventListener('click', () => {
+          fcList.sort(() => Math.random() - 0.5);
+          fcIdx = 0;
+          fcFlipped = false;
+          render();
+        });
+      }
+    }
+
+    // GAPS EVENTS
+    if (currentTab === 'gaps') {
+      app.querySelectorAll('input[data-gap]').forEach(inp => {
+        inp.addEventListener('input', (e) => {
+          const gapIndex = inp.getAttribute('data-gap');
+          gAnswers[`${gIdx}_${gapIndex}`] = e.target.value;
+        });
+      });
+
+      app.querySelectorAll('[data-goto-gap]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          gIdx = parseInt(btn.getAttribute('data-goto-gap'), 10);
+          gChecked = false;
+          render();
+        });
+      });
+
+      const checkGapsBtn = document.getElementById('check-gaps');
+      if (checkGapsBtn) {
+        checkGapsBtn.addEventListener('click', () => {
+          gChecked = true;
+          render();
+        });
+      }
+
+      const retryGapsBtn = document.getElementById('retry-gaps');
+      if (retryGapsBtn) {
+        retryGapsBtn.addEventListener('click', () => {
+          gChecked = false;
+          render();
+        });
+      }
+
+      const solveGapsBtn = document.getElementById('solve-gaps');
+      if (solveGapsBtn) {
+        solveGapsBtn.addEventListener('click', () => {
+          GAPS[gIdx].gaps.forEach((val, i) => {
+            gAnswers[`${gIdx}_${i}`] = val;
+          });
+          gChecked = true;
+          render();
+        });
+      }
+
+      const nextGapBtn = document.getElementById('next-gap-btn');
+      if (nextGapBtn) {
+        nextGapBtn.addEventListener('click', () => {
+          if (gIdx < GAPS.length - 1) {
+            gIdx++;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+
+      const gapPrev = document.getElementById('gap-prev');
+      if (gapPrev) {
+        gapPrev.addEventListener('click', () => {
+          if (gIdx > 0) {
+            gIdx--;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+
+      const gapNext = document.getElementById('gap-next');
+      if (gapNext) {
+        gapNext.addEventListener('click', () => {
+          if (gIdx < GAPS.length - 1) {
+            gIdx++;
+            gChecked = false;
+            render();
+          }
+        });
+      }
+    }
+  }
+
+  // Soporte Teclado
+  window.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT') return;
+
+    if (currentTab === 'test' && !qFinished) {
+      if (['1', '2', '3', '4'].includes(e.key) && !qConfirmed) {
+        qSelected = parseInt(e.key, 10) - 1;
+        render();
+      } else if (e.key === 'Enter') {
+        if (!qConfirmed && qSelected !== null) {
+          qConfirmed = true;
+          if (qSelected === qList[qIdx].a) {
+            qScore++;
+          } else {
+            qWrongList.push(qList[qIdx]);
+          }
+          render();
+        } else if (qConfirmed) {
+          if (qIdx < qList.length - 1) {
+            qIdx++;
+            qSelected = null;
+            qConfirmed = false;
+          } else {
+            qFinished = true;
+          }
+          render();
+        }
+      }
+    } else if (currentTab === 'fc') {
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        fcFlipped = !fcFlipped;
+        render();
+      } else if (e.key === 'ArrowRight' && fcIdx < fcList.length - 1) {
+        fcIdx++;
+        fcFlipped = false;
+        render();
+      } else if (e.key === 'ArrowLeft' && fcIdx > 0) {
+        fcIdx--;
+        fcFlipped = false;
+        render();
+      } else if (e.key.toLowerCase() === 's') {
+        if (fcKnown.has(fcIdx)) fcKnown.delete(fcIdx);
+        else fcKnown.add(fcIdx);
+        render();
+      }
+    }
+  });
+
+  // Inicialización
+  render();
+})();
+</script>
+<a href="usabilidad-04-atributos.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>

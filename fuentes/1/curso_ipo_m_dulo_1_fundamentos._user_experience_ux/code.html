@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html class="h-full bg-[#faf8fe]" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curso IPO — Módulo 1: Fundamentos. User eXperience (UX)</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#faf8fe',
+              dim: '#dad9df',
+              bright: '#faf8fe',
+              lowest: '#ffffff',
+              low: '#f4f3f8',
+              container: '#eeedf3',
+              high: '#e9e7ed',
+              highest: '#e3e2e7',
+            },
+            'on-surface': {
+              DEFAULT: '#1a1b20',
+              variant: '#45464f',
+            },
+            outline: {
+              DEFAULT: '#717785',
+              variant: '#c7c5d0',
+            },
+            primary: {
+              DEFAULT: '#0071e3',
+              hover: '#0059b5',
+              soft: '#e8f2ff',
+              border: '#abc7ff',
+              container: '#0071e3',
+              'on-container': '#fcfbff',
+            },
+            secondary: {
+              DEFAULT: '#5f5e60',
+              container: '#eeedf3',
+              'on-container': '#45464f',
+            },
+            success: {
+              DEFAULT: '#10b981',
+              soft: '#ecfdf5',
+              border: '#a7f3d0',
+            },
+            warning: {
+              DEFAULT: '#f59e0b',
+              soft: '#fffbeb',
+              border: '#fde68a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1b20;
+      background-color: #faf8fe;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Estilos de scroll horizontal suave en móvil */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Hexágonos SVG o polígonos interactivos */
+    .hex-cell {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      transition: all 0.2s ease;
+    }
+    .hex-cell:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col bg-[#faf8fe] text-[#1a1b20] antialiased">
+<!-- ========================================== -->
+<!-- 1. BARRA SUPERIOR FIJA Y NAVEGACIÓN        -->
+<!-- ========================================== -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#dad9df]">
+<!-- Fila superior: Logo y Enlaces -->
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2.5 text-[#1a1b20] font-bold text-lg tracking-tight focus:outline-none focus:ring-2 focus:ring-[#0071e3] rounded-lg px-1" href="#">
+<div class="w-8 h-8 rounded-lg bg-[#0071e3] flex items-center justify-center text-white shadow-sm font-extrabold text-sm">
+            IPO
+          </div>
+<span>Curso IPO</span>
+</a>
+</div>
+<!-- Menú principal superior -->
+<nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[#45464f]">
+<a class="hover:text-[#0071e3] transition-colors py-1" href="#">Inicio</a>
+<a class="text-[#0071e3] font-semibold py-1" href="#">Curso IPO</a>
+<a class="hover:text-[#0071e3] transition-colors py-1" href="#">Explorar conceptos</a>
+<a class="hover:text-[#0071e3] transition-colors py-1" href="#">MPIu+a</a>
+<a class="hover:text-[#0071e3] transition-colors py-1" href="#">Blog</a>
+</nav>
+<!-- Utilidades: Buscar y Perfil -->
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-[#f4f3f8] hover:bg-[#eeedf3] rounded-full text-xs text-[#45464f] cursor-pointer transition border border-[#dad9df]">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Buscar</span>
+<kbd class="font-sans px-1.5 py-0.5 bg-white rounded border border-[#dad9df] text-[10px] text-[#717785]">⌘K</kbd>
+</div>
+<div class="w-8 h-8 rounded-full bg-[#f4f3f8] border border-[#dad9df] flex items-center justify-center text-[#45464f] text-xs font-semibold">
+          AL
+        </div>
+</div>
+</div>
+<!-- Barra de pestañas de módulos -->
+<div class="border-t border-[#eeedf3] bg-white">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<nav aria-label="Módulos" class="flex space-x-1 sm:space-x-4 overflow-x-auto hide-scrollbar text-xs sm:text-sm font-medium py-1">
+<a aria-current="page" class="px-3 py-2 text-[#0071e3] border-b-2 border-[#0071e3] font-semibold whitespace-nowrap" href="#">
+            M1 Fundamentos
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M2 Factor humano
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M3 DCU
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M4 Requisitos
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M5 Prototipado
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M6 Evaluación
+          </a>
+<a class="px-3 py-2 text-[#45464f] hover:text-[#1a1b20] border-b-2 border-transparent hover:border-[#c7c5d0] transition-colors whitespace-nowrap" href="#">
+            M7 Accesibilidad
+          </a>
+</nav>
+</div>
+</div>
+<!-- Migas de pan -->
+<div class="bg-[#f4f3f8]/80 border-t border-[#eeedf3]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-2 text-xs text-[#45464f] flex items-center gap-1.5">
+<a class="hover:text-[#0071e3] transition-colors" href="#">Inicio</a>
+<span class="text-[#c7c5d0]">/</span>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Módulos</a>
+<span class="text-[#c7c5d0]">/</span>
+<span class="text-[#1a1b20] font-medium">Módulo 1: Fundamentos</span>
+</div>
+</div>
+</header>
+<!-- CONTENEDOR PRINCIPAL (1280px con espaciado uniforme) -->
+<main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 space-y-12">
+<!-- ========================================== -->
+<!-- 2. HERO EN DOS COLUMNAS                    -->
+<!-- ========================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Columna izquierda (Hero Principal) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Píldoras y chips superiores -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-[#e8f2ff] text-[#0071e3] border border-[#abc7ff]">
+            Módulo 01
+          </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#45464f] border border-[#dad9df]">
+            7 temas
+          </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#45464f] border border-[#dad9df]">
+            35 min de lectura
+          </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#45464f] border border-[#dad9df]">
+            ISO 9241-210
+          </span>
+</div>
+<!-- H1 y descripción en sentence case -->
+<div class="space-y-3">
+<h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1a1b20] tracking-tight leading-tight">
+            User eXperience (UX): mucho más que una interfaz
+          </h1>
+<p class="text-base sm:text-lg text-[#45464f] leading-relaxed max-w-2xl">
+            Qué es la experiencia de usuario, en qué se diferencia de la usabilidad y de la interfaz (UI), y qué facetas hay que cuidar para que un sistema interactivo dé una buena experiencia.
+          </p>
+</div>
+<!-- Tres tarjetas pequeñas en fila (sin numerar) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
+<!-- Usabilidad -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-[#c7c5d0] transition flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded-lg bg-[#e8f2ff] text-[#0071e3] flex items-center justify-center mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="font-semibold text-sm text-[#1a1b20] mb-1">Usabilidad</h2>
+<p class="text-xs text-[#45464f] leading-relaxed">
+                Qué tan fácil y rápido es aprender y usar el sistema.
+              </p>
+</div>
+</div>
+<!-- Experiencia de usuario -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-[#c7c5d0] transition flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded-lg bg-[#e8f2ff] text-[#0071e3] flex items-center justify-center mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="font-semibold text-sm text-[#1a1b20] mb-1">Experiencia de usuario</h2>
+<p class="text-xs text-[#45464f] leading-relaxed">
+                Todo lo que siente la persona al usar el sistema, en su contexto.
+              </p>
+</div>
+</div>
+<!-- Interfaz (UI) -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-[#c7c5d0] transition flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded-lg bg-[#e8f2ff] text-[#0071e3] flex items-center justify-center mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm4 8h8M8 10h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="font-semibold text-sm text-[#1a1b20] mb-1">Interfaz (UI)</h2>
+<p class="text-xs text-[#45464f] leading-relaxed">
+                La capa visible: pantallas, controles, color y tipografía.
+              </p>
+</div>
+</div>
+</div>
+<!-- Grupo de botones con objetivos táctiles >= 40px -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="min-h-[42px] px-5 py-2.5 rounded-lg bg-[#0071e3] text-white text-sm font-semibold hover:bg-[#0059b5] active:scale-[0.99] transition shadow-sm flex items-center gap-2">
+<span>Empezar el módulo</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<a class="min-h-[42px] px-4 py-2.5 rounded-lg bg-white border border-[#c7c5d0] text-[#1a1b20] text-sm font-medium hover:bg-[#f4f3f8] transition flex items-center gap-2" href="#simulador-ux">
+<svg class="w-4 h-4 text-[#0071e3]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Probar el simulador</span>
+</a>
+<button class="min-h-[42px] px-3.5 py-2.5 rounded-lg text-[#45464f] hover:text-[#1a1b20] text-sm font-medium transition flex items-center gap-1.5">
+<svg class="w-4 h-4 text-[#717785]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Marcar módulo como completado</span>
+</button>
+</div>
+</div>
+<!-- Columna derecha: Tarjeta "Estado de aprendizaje" (300px min/fijo) -->
+<div class="lg:col-span-4 w-full">
+<div class="p-6 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-5">
+<div class="flex items-center justify-between">
+<h2 class="text-xs font-semibold text-[#45464f] tracking-wider">Estado de aprendizaje</h2>
+<span class="text-xs font-semibold text-[#0071e3] px-2 py-0.5 rounded bg-[#e8f2ff]">En curso</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-baseline justify-between">
+<span class="text-4xl font-extrabold text-[#1a1b20] tracking-tight">0%</span>
+<span class="text-xs font-medium text-[#45464f]">0 de 7 temas</span>
+</div>
+<!-- Barra de progreso fina -->
+<div class="w-full h-1.5 bg-[#f4f3f8] rounded-full overflow-hidden">
+<div class="h-full bg-[#0071e3] rounded-full transition-all duration-300" style="width: 4%;"></div>
+</div>
+</div>
+<!-- Lista de datos con separadores finos -->
+<div class="divide-y divide-[#eeedf3] text-xs">
+<div class="py-2.5 flex justify-between items-center">
+<span class="text-[#45464f]">Nivel</span>
+<span class="font-medium text-[#1a1b20]">Introductorio</span>
+</div>
+<div class="py-2.5 flex justify-between items-start gap-4">
+<span class="text-[#45464f]">Estándares</span>
+<span class="font-medium text-[#1a1b20] text-right">ISO/IEC 25010, ISO 9241-210</span>
+</div>
+<div class="py-2.5 flex justify-between items-start gap-4">
+<span class="text-[#45464f]">Material de</span>
+<span class="font-medium text-[#1a1b20] text-right">Toni Granollers, GRIHO (UdL)</span>
+</div>
+</div>
+<!-- Nota en caja de tono suave -->
+<div class="p-3.5 rounded-xl bg-[#e8f2ff]/80 border border-[#abc7ff]/60 text-xs text-[#1a1b20] leading-relaxed flex items-start gap-2.5">
+<svg class="w-4 h-4 text-[#0071e3] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<p>
+              Este módulo es la base del resto del curso: lo que definas aquí como buena experiencia guía el diseño, el prototipado y la evaluación.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 3. RUTA DEL MÓDULO (LÍNEA DE TIEMPO)       -->
+<!-- ========================================== -->
+<section class="space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h2 class="text-lg sm:text-xl font-bold text-[#1a1b20] tracking-tight">
+          Ruta del módulo: de qué es la UX a cómo se evalúa
+        </h2>
+<span class="text-xs text-[#45464f]">Secuencia formativa recomendada</span>
+</div>
+<!-- Línea de tiempo horizontal con 7 nodos circulares (scroll horizontal en móvil) -->
+<div class="p-6 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] overflow-x-auto hide-scrollbar">
+<div class="min-w-[680px] relative py-2">
+<!-- Línea conectora -->
+<div class="absolute top-[22px] left-6 right-6 h-0.5 bg-[#dad9df] -z-0"></div>
+<div class="relative z-10 flex justify-between items-start">
+<!-- Nodo 1 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                1
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">Concepto</span>
+</div>
+<!-- Nodo 2 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                2
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">Definición</span>
+</div>
+<!-- Nodo 3 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                3
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">Elementos</span>
+</div>
+<!-- Nodo 4 (ACTIVO: Relleno con primario #0071e3 y halo suave) -->
+<div class="flex flex-col items-center cursor-pointer text-center w-24">
+<div class="w-9 h-9 rounded-full bg-[#0071e3] text-white text-xs font-bold flex items-center justify-center ring-4 ring-[#e8f2ff] shadow-sm -mt-0.5">
+                4
+              </div>
+<span class="mt-1.5 text-xs font-bold text-[#0071e3]">Facetas</span>
+</div>
+<!-- Nodo 5 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                5
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">UX vs usabilidad</span>
+</div>
+<!-- Nodo 6 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                6
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">UX vs UI</span>
+</div>
+<!-- Nodo 7 -->
+<div class="flex flex-col items-center group cursor-pointer text-center w-24">
+<div class="w-8 h-8 rounded-full bg-white border-2 border-[#c7c5d0] text-[#45464f] text-xs font-semibold flex items-center justify-center shadow-xs group-hover:border-[#0071e3] group-hover:text-[#0071e3] transition">
+                7
+              </div>
+<span class="mt-2 text-xs font-medium text-[#45464f] group-hover:text-[#1a1b20]">Evaluación</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tarjeta de lección activa con dos columnas -->
+<div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Columna Izquierda: Contenido pedagógico -->
+<div class="lg:col-span-7 space-y-4">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#e8f2ff] text-[#0071e3] border border-[#abc7ff]">
+              Tema 4 de 7
+            </span>
+<span class="text-xs text-[#45464f] font-medium">7 min de lectura</span>
+</div>
+<h3 class="text-xl font-bold text-[#1a1b20] tracking-tight">Las facetas de la UX</h3>
+<div class="space-y-3 text-sm text-[#45464f] leading-relaxed">
+<p>
+              No hay consenso sobre qué facetas forman la UX. Morville propone siete: usable, útil, deseable, valioso, creíble, encontrable y accesible.
+            </p>
+<p>
+              Otros autores proponen alternativas: Hassenzahl y Tractinsky hablan de lo instrumental, lo experiencial y las emociones; Hassan Montero y Ortega Santamaría, de usuario, contexto y contenido.
+            </p>
+</div>
+<div class="pt-2 flex flex-wrap items-center gap-3">
+<button class="min-h-[40px] px-4 py-2 rounded-lg bg-[#1a1b20] hover:bg-[#2f3034] text-white text-xs font-semibold transition flex items-center gap-2">
+<svg class="w-4 h-4 text-[#10b981]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Marcar como completado</span>
+</button>
+<a class="min-h-[40px] px-4 py-2 rounded-lg bg-white border border-[#c7c5d0] text-[#1a1b20] hover:bg-[#f4f3f8] text-xs font-medium transition flex items-center gap-1.5" href="https://curso-ipo.com" rel="noopener noreferrer" target="_blank">
+<span>Abrir la lección en curso-ipo.com</span>
+<svg class="w-3.5 h-3.5 text-[#717785]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Columna Derecha: Caja de tono suave "Ejemplo aplicado" -->
+<div class="lg:col-span-5 w-full">
+<div class="p-5 rounded-xl bg-[#e8f2ff]/70 border border-[#abc7ff]/80 space-y-3">
+<div class="flex items-center gap-2 text-xs font-bold text-[#0071e3] tracking-wide">
+<svg class="w-4 h-4 text-[#0071e3]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Ejemplo aplicado</span>
+</div>
+<p class="text-xs sm:text-sm text-[#1a1b20] leading-relaxed">
+              Prueba el simulador de más abajo: activa cada faceta y comprueba cómo cambia una app de reserva de citas.
+            </p>
+<div class="pt-1">
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5]" href="#simulador-ux">
+<span>Ir al simulador interactivo</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 4. FUNDAMENTOS: TRES CONCEPTOS            -->
+<!-- ========================================== -->
+<section class="space-y-6">
+<div class="space-y-2">
+<h2 class="text-lg sm:text-xl font-bold text-[#1a1b20] tracking-tight">
+          Fundamentos: tres conceptos que se confunden
+        </h2>
+<p class="text-sm text-[#45464f] max-w-3xl leading-relaxed">
+          Un error muy extendido es pensar que diseñar la UX es dibujar interfaces. La UX empieza en la estrategia y afecta a todo el ciclo de vida del proyecto.
+        </p>
+</div>
+<!-- Cita destacada con barra del color primario #0071e3 a la izquierda -->
+<div class="p-4 sm:p-5 rounded-r-xl bg-white border border-[#dad9df] border-l-4 border-l-[#0071e3] shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+<blockquote class="text-sm sm:text-base font-medium text-[#1a1b20] italic leading-snug">
+          «La usabilidad es una pieza de la experiencia de usuario, y la interfaz es solo la parte visible de ambas.»
+        </blockquote>
+</div>
+<!-- Tabla comparativa (con scroll horizontal en móvil) -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="text-sm font-semibold text-[#1a1b20]">
+            Matriz comparativa: usabilidad, UX e interfaz
+          </h3>
+<span class="text-xs text-[#45464f] hidden sm:inline">Desplazar horizontalmente si es necesario</span>
+</div>
+<div class="rounded-xl border border-[#dad9df] overflow-hidden bg-white shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+<div class="overflow-x-auto hide-scrollbar">
+<table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[640px]">
+<thead>
+<tr class="bg-[#e8f2ff]/80 border-b border-[#abc7ff]/70 text-[#1a1b20]">
+<th class="py-3 px-4 font-bold text-[#1a1b20] w-1/4" scope="col">Dimensión</th>
+<th class="py-3 px-4 font-bold text-[#1a1b20] w-1/4" scope="col">Usabilidad</th>
+<th class="py-3 px-4 font-bold text-[#1a1b20] w-1/4" scope="col">Experiencia de usuario (UX)</th>
+<th class="py-3 px-4 font-bold text-[#1a1b20] w-1/4" scope="col">Interfaz (UI)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#eeedf3] text-[#45464f]">
+<!-- Fila 1 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Qué es</td>
+<td class="py-3 px-4 text-[#1a1b20]">Una de las categorías de calidad del estándar ISO/IEC 25010.</td>
+<td class="py-3 px-4 font-medium text-[#1a1b20]">Concepto global: todos los factores internos y externos que provocan alguna sensación al usar el sistema.</td>
+<td class="py-3 px-4 text-[#1a1b20]">La capa con la que se interactúa: pantallas, controles, color y tipografía.</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Pregunta que responde</td>
+<td class="py-3 px-4 text-[#45464f]">¿Puede la persona completar la tarea con facilidad, rapidez y sin errores?</td>
+<td class="py-3 px-4 text-[#45464f]">¿Qué siente la persona y qué valor percibe antes, durante y después del uso?</td>
+<td class="py-3 px-4 text-[#45464f]">¿Cómo se organizan y ven los controles para que se puedan accionar?</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Objetivo</td>
+<td class="py-3 px-4 text-[#45464f]">Eficacia, eficiencia y satisfacción pragmática en un contexto dado.</td>
+<td class="py-3 px-4 text-[#45464f]">Generar valor integral, deseabilidad, fidelidad y confianza positiva.</td>
+<td class="py-3 px-4 text-[#45464f]">Claridad visual, jerarquía estética, affordance y consistencia gráfica.</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Cómo se observa</td>
+<td class="py-3 px-4 text-[#45464f]">Tasa de éxito de tarea, tiempo empleado y número de errores.</td>
+<td class="py-3 px-4 text-[#45464f]">Cuestionarios estandarizados (UEQ, SUS), entrevistas y emociones.</td>
+<td class="py-3 px-4 text-[#45464f]">Inspección de diseño, guías de estilo, tokens y accesibilidad visual.</td>
+</tr>
+<!-- Fila 5 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Cuándo interviene</td>
+<td class="py-3 px-4 text-[#45464f]">En el modelado de interacción, arquitectura y test de usabilidad.</td>
+<td class="py-3 px-4 text-[#45464f]">Desde la estrategia de negocio y empatía hasta el servicio posventa.</td>
+<td class="py-3 px-4 text-[#45464f]">En la fase de diseño visual, diseño de componentes y maquetación.</td>
+</tr>
+<!-- Fila 6 -->
+<tr class="hover:bg-[#f4f3f8]/70 transition">
+<td class="py-3 px-4 font-semibold text-[#1a1b20] bg-[#f4f3f8]/50">Riesgo principal</td>
+<td class="py-3 px-4 text-[#45464f]">Producto fácil de usar que no resuelve el problema real.</td>
+<td class="py-3 px-4 text-[#45464f]">No existe consenso sobre qué facetas medir.</td>
+<td class="py-3 px-4 text-[#45464f]">Confundir un buen aspecto con una buena experiencia.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 5. RESÚMENES RÁPIDOS                      -->
+<!-- ========================================== -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg sm:text-xl font-bold text-[#1a1b20] tracking-tight">
+          Resúmenes rápidos
+        </h2>
+<span class="text-xs text-[#45464f]">Puntos clave para asimilar</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Columna Izquierda: Lista de 3 capítulos como botones -->
+<div class="lg:col-span-3 space-y-2">
+<button class="w-full text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold bg-[#0071e3] text-white shadow-sm flex items-center justify-between transition min-h-[44px]">
+<span>UX vs usabilidad</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-[#f4f3f8] border border-[#dad9df] text-[#1a1b20] flex items-center justify-between transition min-h-[44px]">
+<span>UX no es UI</span>
+<svg class="w-4 h-4 text-[#717785]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-medium bg-white hover:bg-[#f4f3f8] border border-[#dad9df] text-[#1a1b20] flex items-center justify-between transition min-h-[44px]">
+<span>Las facetas</span>
+<svg class="w-4 h-4 text-[#717785]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Columna Centro: Tarjeta con título, párrafo y esquema SVG -->
+<div class="lg:col-span-5 p-6 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] space-y-4">
+<div class="space-y-1.5">
+<h3 class="text-base font-bold text-[#1a1b20] tracking-tight">
+              La usabilidad es una parte de la UX
+            </h3>
+<p class="text-xs sm:text-sm text-[#45464f] leading-relaxed">
+              Mientras que la usabilidad se enfoca en si la persona puede lograr su meta sin tropiezos, la UX abarca la emoción, la estética y el valor recibido en todo momento.
+            </p>
+</div>
+<!-- Esquema SVG inclusivo y limpio con paleta Design System -->
+<div class="p-3 bg-[#f4f3f8]/70 rounded-xl border border-[#eeedf3] flex items-center justify-center">
+<svg class="w-full max-w-[340px] h-auto" fill="none" viewbox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Elipse grande exterior: Experiencia de usuario (UX) -->
+<ellipse cx="170" cy="110" fill="#faf8fe" rx="160" ry="100" stroke="#c7c5d0" stroke-dasharray="4 4" stroke-width="1.5"></ellipse>
+<text fill="#0071e3" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="170" y="32">
+                Experiencia de usuario (UX)
+              </text>
+<!-- Círculo interior: Usabilidad -->
+<circle cx="105" cy="122" fill="#e8f2ff" r="55" stroke="#abc7ff" stroke-width="1.5"></circle>
+<text fill="#0059b5" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="105" y="105">
+                Usabilidad
+              </text>
+<text fill="#0071e3" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" x="105" y="122">
+                Eficacia · Eficiencia
+              </text>
+<!-- Rectángulo redondeado: Interfaz (dentro de Usabilidad) -->
+<rect fill="#ffffff" height="26" rx="6" stroke="#abc7ff" stroke-width="1.2" width="70" x="70" y="134"></rect>
+<text fill="#0071e3" font-family="Inter, sans-serif" font-size="9" font-weight="600" text-anchor="middle" x="105" y="151">
+                Interfaz (UI)
+              </text>
+<!-- Círculo interior: Otras facetas -->
+<circle cx="235" cy="122" fill="#eeedf3" r="55" stroke="#dad9df" stroke-width="1.5"></circle>
+<text fill="#1a1b20" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="235" y="105">
+                Otras facetas
+              </text>
+<text fill="#45464f" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" x="235" y="122">
+                Utilidad · Deseo
+              </text>
+<text fill="#45464f" font-family="Inter, sans-serif" font-size="9" text-anchor="middle" x="235" y="137">
+                Valor · Confianza
+              </text>
+</svg>
+</div>
+</div>
+<!-- Columna Derecha: Tarjeta Glosario -->
+<div class="lg:col-span-4 p-6 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.03)] space-y-4">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-[#0071e3]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<h3 class="text-sm font-bold text-[#1a1b20] tracking-tight">Glosario</h3>
+</div>
+<div class="space-y-3 text-xs leading-relaxed divide-y divide-[#eeedf3]">
+<div class="pt-2 first:pt-0">
+<span class="font-semibold text-[#1a1b20]">Usabilidad:</span>
+<span class="text-[#45464f] ml-1">Grado en que un producto puede ser utilizado para lograr objetivos específicos con efectividad, eficiencia y satisfacción.</span>
+</div>
+<div class="pt-2">
+<span class="font-semibold text-[#1a1b20]">Experiencia de usuario:</span>
+<span class="text-[#45464f] ml-1">Percepciones y respuestas de la persona resultantes del uso o uso anticipado de un producto o servicio.</span>
+</div>
+<div class="pt-2">
+<span class="font-semibold text-[#1a1b20]">Interfaz (UI):</span>
+<span class="text-[#45464f] ml-1">Conjunto de componentes visuales y controles a través de los cuales la persona interactúa con la máquina.</span>
+</div>
+<div class="pt-2">
+<span class="font-semibold text-[#1a1b20]">Contexto de uso:</span>
+<span class="text-[#45464f] ml-1">Usuarios, tareas, equipamiento (hardware, software) y el entorno físico y social en que se usa un sistema.</span>
+</div>
+<div class="pt-2">
+<span class="font-semibold text-[#1a1b20]">UEQ:</span>
+<span class="text-[#45464f] ml-1">Cuestionario estándar de 26 ítems para medir rápidamente la experiencia de usuario integral.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 6. SIMULADOR: LA COLMENA DE LA UX          -->
+<!-- ========================================== -->
+<section class="space-y-6" id="simulador-ux">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<div>
+<h2 class="text-lg sm:text-xl font-bold text-[#1a1b20] tracking-tight">
+            Simulador: la colmena de la UX
+          </h2>
+<p class="text-xs sm:text-sm text-[#45464f]">
+            Descubre el impacto de cada atributo de Morville sobre un caso práctico de cita médica.
+          </p>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#f4f3f8] text-[#45464f] border border-[#dad9df] self-start sm:self-auto">
+          Interactivo
+        </span>
+</div>
+<div class="p-6 sm:p-7 rounded-2xl bg-white border border-[#dad9df] shadow-[0_1px_3px_rgba(0,0,0,0.04)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Columna 1: 7 Hexágonos en panal (filas de 2, 3 y 2) -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center space-y-5">
+<div class="text-xs font-semibold text-[#45464f] uppercase tracking-wider text-center">
+            Facetas de Peter Morville
+          </div>
+<!-- Contenedor del Panal con estructura simétrica -->
+<div class="flex flex-col items-center space-y-2 py-2">
+<!-- Fila 1 (2 hexágonos) -->
+<div class="flex justify-center gap-3">
+<!-- Usable (Activo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#0071e3] text-white flex flex-col items-center justify-center p-2 cursor-pointer shadow-sm" title="Usable (Activa)">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[11px] font-bold">Usable</span>
+</div>
+<!-- Útil (Activo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#0071e3] text-white flex flex-col items-center justify-center p-2 cursor-pointer shadow-sm" title="Útil (Activa)">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[11px] font-bold">Útil</span>
+</div>
+</div>
+<!-- Fila 2 (3 hexágonos) -->
+<div class="flex justify-center gap-3 -mt-3">
+<!-- Deseable (Inactivo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#f4f3f8] border border-[#c7c5d0] text-[#45464f] hover:border-[#0071e3] hover:text-[#0071e3] flex flex-col items-center justify-center p-2 cursor-pointer" title="Deseable (Inactiva)">
+<span class="text-[#717785] text-[10px] mb-0.5">○</span>
+<span class="text-[11px] font-medium">Deseable</span>
+</div>
+<!-- Valioso (Activo - Núcleo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#0071e3] text-white flex flex-col items-center justify-center p-2 cursor-pointer shadow-sm ring-2 ring-[#e8f2ff]" title="Valioso (Activa)">
+<svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[11px] font-bold">Valioso</span>
+</div>
+<!-- Creíble (Inactivo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#f4f3f8] border border-[#c7c5d0] text-[#45464f] hover:border-[#0071e3] hover:text-[#0071e3] flex flex-col items-center justify-center p-2 cursor-pointer" title="Creíble (Inactiva)">
+<span class="text-[#717785] text-[10px] mb-0.5">○</span>
+<span class="text-[11px] font-medium">Creíble</span>
+</div>
+</div>
+<!-- Fila 3 (2 hexágonos) -->
+<div class="flex justify-center gap-3 -mt-3">
+<!-- Encontrable (Inactivo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#f4f3f8] border border-[#c7c5d0] text-[#45464f] hover:border-[#0071e3] hover:text-[#0071e3] flex flex-col items-center justify-center p-2 cursor-pointer" title="Encontrable (Inactiva)">
+<span class="text-[#717785] text-[10px] mb-0.5">○</span>
+<span class="text-[11px] font-medium">Encontrable</span>
+</div>
+<!-- Accesible (Inactivo) -->
+<div class="hex-cell w-20 h-20 sm:w-22 sm:h-22 bg-[#f4f3f8] border border-[#c7c5d0] text-[#45464f] hover:border-[#0071e3] hover:text-[#0071e3] flex flex-col items-center justify-center p-2 cursor-pointer" title="Accesible (Inactiva)">
+<span class="text-[#717785] text-[10px] mb-0.5">○</span>
+<span class="text-[11px] font-medium">Accesible</span>
+</div>
+</div>
+</div>
+<!-- Botones de control del panal -->
+<div class="flex items-center gap-2 pt-2">
+<button class="min-h-[40px] px-3.5 py-1.5 rounded-lg bg-[#eeedf3] hover:bg-[#dad9df] text-[#1a1b20] text-xs font-semibold transition">
+              Activar todas
+            </button>
+<button class="min-h-[40px] px-3.5 py-1.5 rounded-lg text-[#45464f] hover:text-[#1a1b20] text-xs font-medium transition">
+              Reiniciar
+            </button>
+</div>
+</div>
+<!-- Columna 2: Maqueta de móvil con esquinas muy redondeadas -->
+<div class="lg:col-span-4 flex justify-center w-full">
+<div class="w-full max-w-[320px] rounded-[32px] border-4 border-[#dad9df] bg-white shadow-md p-4 space-y-3.5">
+<!-- Barra de estado ficticia -->
+<div class="flex justify-between items-center text-[10px] text-[#717785] px-1">
+<span>09:41</span>
+<div class="flex items-center gap-1">
+<span>5G</span>
+<div class="w-4 h-2 rounded-xs border border-[#717785]"></div>
+</div>
+</div>
+<!-- Cabecera de la app con avatar "DR" -->
+<div class="p-2.5 rounded-xl bg-[#f4f3f8] border border-[#dad9df] flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-[#0071e3] text-white font-bold text-xs flex items-center justify-center shadow-xs">
+                DR
+              </div>
+<div class="leading-tight">
+<span class="text-xs font-bold text-[#1a1b20] block">Reservar cita · Cardiología</span>
+<span class="text-[10px] text-[#45464f]">Hospital Universitari Arnau de Vilanova</span>
+</div>
+</div>
+<!-- Siete recuadros apilados (3 resueltos con éxito, 4 no resueltos con borde discontinuo) -->
+<div class="space-y-1.5 text-xs">
+<!-- 1. Usable (Resuelta) -->
+<div class="p-2 rounded-lg bg-[#ecfdf5] border border-[#a7f3d0] text-[#1a1b20] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+<span class="font-semibold text-[11px]">Usable:</span>
+<span class="text-[11px]">Se reserva en 3 toques</span>
+</div>
+<svg class="w-3.5 h-3.5 text-[#10b981]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- 2. Útil (Resuelta) -->
+<div class="p-2 rounded-lg bg-[#ecfdf5] border border-[#a7f3d0] text-[#1a1b20] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+<span class="font-semibold text-[11px]">Útil:</span>
+<span class="text-[11px]">Permite elegir especialista directo</span>
+</div>
+<svg class="w-3.5 h-3.5 text-[#10b981]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- 3. Valioso (Resuelta) -->
+<div class="p-2 rounded-lg bg-[#ecfdf5] border border-[#a7f3d0] text-[#1a1b20] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#10b981]"></span>
+<span class="font-semibold text-[11px]">Valioso:</span>
+<span class="text-[11px]">Ahorra desplazamientos y espera</span>
+</div>
+<svg class="w-3.5 h-3.5 text-[#10b981]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- 4. Deseable (Sin resolver) -->
+<div class="p-2 rounded-lg bg-white border border-dashed border-[#c7c5d0] text-[#45464f] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#dad9df]"></span>
+<span class="font-medium text-[11px]">Deseable:</span>
+<span class="text-[11px] text-[#45464f]">Aspecto tosco y frío</span>
+</div>
+<span class="text-[10px] text-[#717785]">Sin resolver</span>
+</div>
+<!-- 5. Creíble (Sin resolver) -->
+<div class="p-2 rounded-lg bg-white border border-dashed border-[#c7c5d0] text-[#45464f] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#dad9df]"></span>
+<span class="font-medium text-[11px]">Creíble:</span>
+<span class="text-[11px] text-[#45464f]">No muestra sello oficial médico</span>
+</div>
+<span class="text-[10px] text-[#717785]">Sin resolver</span>
+</div>
+<!-- 6. Encontrable (Sin resolver) -->
+<div class="p-2 rounded-lg bg-white border border-dashed border-[#c7c5d0] text-[#45464f] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#dad9df]"></span>
+<span class="font-medium text-[11px]">Encontrable:</span>
+<span class="text-[11px] text-[#45464f]">Reservar exige 8 pantallas</span>
+</div>
+<span class="text-[10px] text-[#717785]">Sin resolver</span>
+</div>
+<!-- 7. Accesible (Sin resolver) -->
+<div class="p-2 rounded-lg bg-white border border-dashed border-[#c7c5d0] text-[#45464f] flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#dad9df]"></span>
+<span class="font-medium text-[11px]">Accesible:</span>
+<span class="text-[11px] text-[#45464f]">Falta soporte para lectores de pantalla</span>
+</div>
+<span class="text-[10px] text-[#717785]">Sin resolver</span>
+</div>
+</div>
+<!-- Botón simulado en la app -->
+<button class="w-full py-2 bg-[#1a1b20] hover:bg-[#2f3034] text-white rounded-lg text-xs font-semibold transition">
+              Confirmar cita médica
+            </button>
+</div>
+</div>
+<!-- Columna 3: Tarjeta de diagnóstico -->
+<div class="lg:col-span-4 w-full space-y-4">
+<div class="p-5 rounded-xl bg-[#f4f3f8] border border-[#dad9df] space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-[#45464f] uppercase tracking-wider">Diagnóstico</span>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#e8f2ff] text-[#0071e3] border border-[#abc7ff]">
+                3 de 7 facetas
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-[#1a1b20] tracking-tight">Experiencia incompleta</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+                El sistema permite completar la tarea con rapidez funcional, pero descuida la confianza, el descubrimiento intuitivo y la inclusión de todas las personas.
+              </p>
+</div>
+<!-- Barra de progreso -->
+<div class="space-y-1.5">
+<div class="flex justify-between text-[11px] text-[#45464f]">
+<span>Nivel de madurez UX</span>
+<span class="font-semibold text-[#1a1b20]">43%</span>
+</div>
+<div class="w-full h-1.5 bg-[#dad9df] rounded-full overflow-hidden">
+<div class="h-full bg-[#0071e3] rounded-full" style="width: 43%;"></div>
+</div>
+</div>
+<!-- Aviso en color de advertencia suave -->
+<div class="p-3.5 rounded-lg bg-[#fffbeb] border border-[#fde68a] text-xs text-amber-950 leading-relaxed flex items-start gap-2.5">
+<svg class="w-4 h-4 text-[#f59e0b] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<p>
+                Solo la usabilidad está activa: la app es fácil de usar, pero eso no basta.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 7. SECCIÓN "LECTURAS Y REFERENCIAS" (3x2)  -->
+<!-- ========================================== -->
+<section class="space-y-6">
+<div class="space-y-1">
+<h2 class="text-lg sm:text-xl font-bold text-[#1a1b20] tracking-tight">
+          Lecturas y referencias
+        </h2>
+<p class="text-xs sm:text-sm text-[#45464f]">
+          Publicaciones científicas, modelos canónicos y artículos de referencia para profundizar.
+        </p>
+</div>
+<!-- Cuadrícula 3x2 (6 tarjetas) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Tarjeta 1 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Modelo conceptual</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">The Elements of User Experience</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              Jesse James Garrett desglosa la UX en cinco planos sucesivos desde la estrategia hasta la superficie.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Ver referencia</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Tarjeta 2 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Artículo de investigación</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">User experience specification through quality attributes</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              Masip, Oliva y Granollers (GRIHO, UdL) definen la experiencia mediante atributos medibles en el software.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Consultar publicación</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Tarjeta 3 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Métrica estandarizada</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">User Experience Questionnaire (UEQ)</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              Instrumento validado internacionalmente para capturar tanto la calidad pragmática como la hedónica.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Acceder al cuestionario</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Tarjeta 4 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Taxonomía canónica</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">Los siete atributos de Peter Morville</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              El panal de la información y la experiencia: usable, útil, deseable, valioso, creíble, encontrable y accesible.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Leer ensayo</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Tarjeta 5 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Clarificación teórica</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">UX is not UI</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              Desmontando la confusión entre diseñar la arquitectura y el viaje del usuario frente a diseñar las pantallas finales.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Ver artículo</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Tarjeta 6 -->
+<div class="p-4 rounded-xl bg-white border border-[#dad9df] shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-[#c7c5d0] transition flex flex-col justify-between space-y-3">
+<div class="space-y-1.5">
+<span class="text-[11px] font-bold text-[#0071e3] tracking-wide block">Guía práctica</span>
+<h3 class="text-sm font-bold text-[#1a1b20] leading-snug">10 ideas erróneas sobre el diseño de UX</h3>
+<p class="text-xs text-[#45464f] leading-relaxed">
+              Whitney Hess repasa los mitos más comunes en equipos de desarrollo al abordar la experiencia de usuario.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0071e3] hover:text-[#0059b5] pt-1" href="#">
+<span>Consultar decálogo</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- Línea divisoria fina entre secciones -->
+<hr class="border-t border-[#dad9df]"/>
+<!-- ========================================== -->
+<!-- 8. NAVEGACIÓN INFERIOR                    -->
+<!-- ========================================== -->
+<section class="py-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto min-h-[44px] px-5 py-2.5 rounded-xl bg-white border border-[#c7c5d0] text-[#1a1b20] hover:bg-[#f4f3f8] text-sm font-semibold transition flex items-center justify-center gap-2" href="#">
+<svg class="w-4 h-4 text-[#717785]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Anterior: Usabilidad</span>
+</a>
+<a class="w-full sm:w-auto min-h-[44px] px-6 py-2.5 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-white text-sm font-semibold shadow-sm transition flex items-center justify-center gap-2" href="#">
+<span>Siguiente: Accesibilidad</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</section>
+</main>
+<!-- ========================================== -->
+<!-- 9. PIE DE PÁGINA EN TRES COLUMNAS         -->
+<!-- ========================================== -->
+<footer class="mt-16 bg-white border-t border-[#dad9df] text-[#45464f] text-xs">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Columna 1: Descripción y autoría -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 text-[#1a1b20] font-bold text-sm">
+<div class="w-6 h-6 rounded bg-[#0071e3] flex items-center justify-center text-white text-xs font-extrabold">
+              IPO
+            </div>
+<span>Curso IPO</span>
+</div>
+<p class="text-[#45464f] leading-relaxed">
+            Plataforma educativa para la formación universitaria y profesional en Interacción Persona-Ordenador, Diseño Centrado en las Personas y Accesibilidad Digital.
+          </p>
+<div class="text-[#1a1b20] font-medium pt-1">
+            Dirección académica: <br/>
+<span class="text-[#1a1b20] font-bold">Dr. Toni Granollers</span> · GRIHO, Universitat de Lleida
+          </div>
+</div>
+<!-- Columna 2: Marco académico -->
+<div class="space-y-3">
+<h3 class="font-semibold text-[#1a1b20] text-sm">Marco académico</h3>
+<ul class="space-y-2">
+<li>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Metodología MPIu+a</a>
+</li>
+<li>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Usabilidad</a>
+</li>
+<li>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Accesibilidad</a>
+</li>
+</ul>
+</div>
+<!-- Columna 3: Legal -->
+<div class="space-y-3">
+<h3 class="font-semibold text-[#1a1b20] text-sm">Legal</h3>
+<ul class="space-y-2">
+<li>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Privacidad</a>
+</li>
+<li>
+<a class="hover:text-[#0071e3] transition-colors" href="#">Cookies</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Línea final con licencia y copyright -->
+<div class="mt-12 pt-6 border-t border-[#eeedf3] flex flex-col sm:flex-row items-center justify-between gap-3 text-[#717785] text-[11px]">
+<p>
+          Contenido bajo licencia Creative Commons Reconocimiento-NoComercial 4.0.
+        </p>
+<p>
+          © Curso IPO · Universitat de Lleida
+        </p>
+</div>
+</div>
+</footer>
+</body>
+</html>

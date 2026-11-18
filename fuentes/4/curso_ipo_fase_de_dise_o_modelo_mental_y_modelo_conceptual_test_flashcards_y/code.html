@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary":"#ffffff","primary-container":"#0071e3","inverse-surface":"#2f3034","primary":"#0059b5","surface-variant":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-highest":"#e3e2e7","on-secondary-fixed-variant":"#474649","on-secondary-fixed":"#1b1b1d","secondary-fixed":"#e4e2e4","tertiary-fixed-dim":"#abc7ff","outline-variant":"#c1c6d6","tertiary-fixed":"#d7e3ff","surface-container":"#eeedf3","secondary-fixed-dim":"#c8c6c8","secondary":"#5f5e60","error-container":"#ffdad6","on-tertiary-fixed":"#001b3f","secondary-container":"#e2dfe1","background":"#faf8fe","on-secondary":"#ffffff","primary-fixed":"#d7e2ff","on-error":"#ffffff","on-surface-variant":"#414753","on-primary-fixed-variant":"#00458f","on-tertiary-fixed-variant":"#00458e","surface":"#faf8fe","error":"#ba1a1a","on-secondary-container":"#636264","surface-container-high":"#e9e7ed","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","outline":"#717785","surface-dim":"#dad9df","on-primary-container":"#fcfbff","on-surface":"#1a1b1f","on-primary":"#ffffff","on-background":"#1a1b1f","primary-fixed-dim":"#abc7ff","surface-container-low":"#f4f3f8","on-tertiary-container":"#fcfaff","inverse-primary":"#abc7ff","tertiary-container":"#0071e2","surface-bright":"#faf8fe","surface-tint":"#005cbb","on-error-container":"#93000a","tertiary":"#0059b4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"3rem","margin-sm":"1.25rem","margin-md":"2rem","space-sm":"0.5rem","space-xl":"2.5rem"},"fontFamily":{"label-md":["Inter"],"headline-sm":["Inter"],"body-sm":["Inter"],"display-hero":["Inter"],"headline-lg":["Inter"],"code-inline":["JetBrains Mono"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"display-hero-mobile":["Inter"]},"fontSize":{"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-8"><a class="flex items-center gap-2 group" data-path="inicio" href="#"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-sm font-bold tracking-tight shadow-sm">IPO</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Cátedra IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal leading-tight">UdL · GRIHO</span></div></a><nav class="hidden xl:flex items-center gap-6 font-label-md text-label-md" data-active-classes="text-primary font-semibold"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="inicio" href="#">Inicio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="curso-ipo" href="#">Curso IPO</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="mpiu-a" href="#">MPIu+a</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="recursos" href="#">Recursos</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center bg-surface-container-low px-3 py-1.5 rounded-full text-on-surface-variant gap-2 transition-colors focus-within:bg-surface-container"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent border-0 outline-none text-body-sm font-body-sm w-48 lg:w-64 placeholder:text-outline" placeholder="Buscar módulo, modelo o heurística..." type="text"/><kbd class="font-code-inline text-code-inline px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-medium text-[11px]">⌘K</kbd></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="bg-surface-container-low/90 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between font-label-sm text-label-sm overflow-x-auto"><div class="flex items-center gap-1.5 text-on-surface-variant shrink-0"><a class="hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-on-surface transition-colors" data-path="curso-ipo" href="#">Curso IPO</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-on-surface-variant">Módulo 3: DCU</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="text-primary font-semibold">Fase de Diseño (Modelo MPIu+a)</span></div><div class="hidden sm:flex items-center gap-2 text-on-surface-variant shrink-0 pl-4"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-code-inline text-code-inline text-[11px]">ESTADO: EN CURSO</span></div></div></div><div class="bg-surface-container-lowest/95 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-12 flex items-center overflow-x-auto"><nav class="flex items-center gap-2" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-label-md font-label-md shrink-0" data-path="leccion-01-objetivos-del-diseno" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">01</span><span>Objetivos del Diseño</span></a><span class="text-outline-variant font-light select-none">/</span><a class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all text-label-md font-label-md shrink-0" data-path="leccion-02-relacion-con-los-factores-humanos" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">02</span><span>Relación con los Factores Humanos</span></a><span class="text-outline-variant font-light select-none">/</span><a aria-current="page" class="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all shrink-0 bg-surface-container-high text-primary font-semibold" data-path="leccion-03-modelo-mental-y-modelo-conceptual" href="#"><span class="font-code-inline text-code-inline text-[12px] opacity-70">03</span><span>Modelo Mental y Modelo Conceptual</span></a></nav></div></div></header><main class="w-full pt-36 bg-surface flex-1"><div class="max-w-7xl mx-auto px-6 py-6"><div class="flex flex-col w-full">
+<!-- Píldoras temáticas superiores inspiradas en la imagen -->
+<section class="mb-8 overflow-x-auto pb-2">
+<div class="flex items-center gap-3 min-w-max">
+<!-- Píldora 01 Inactiva -->
+<a class="flex flex-col justify-between w-48 p-3.5 bg-surface-container-lowest rounded-xl shadow-sm hover:bg-surface-container-low transition-all text-left group" data-path="leccion-01-objetivos-del-diseno" href="#">
+<div class="flex items-center justify-between text-outline text-label-sm font-code-inline">
+<span>01</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-on-surface transition-colors">menu_book</span>
+</div>
+<div class="mt-2">
+<p class="font-headline-sm text-headline-sm text-on-surface leading-tight">Objetivos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Eficacia, satisfacción y metas</p>
+</div>
+</a>
+<!-- Píldora 02 Inactiva -->
+<a class="flex flex-col justify-between w-52 p-3.5 bg-surface-container-lowest rounded-xl shadow-sm hover:bg-surface-container-low transition-all text-left group" data-path="leccion-02-relacion-con-los-factores-humanos" href="#">
+<div class="flex items-center justify-between text-outline text-label-sm font-code-inline">
+<span>02</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-on-surface transition-colors">psychology</span>
+</div>
+<div class="mt-2">
+<p class="font-headline-sm text-headline-sm text-on-surface leading-tight">Factores Humanos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Carga cognitiva y percepción</p>
+</div>
+</a>
+<!-- Píldora 03 ACTIVA (Highlight con halo y estilo exacto de Usabilidad) -->
+<div class="relative flex flex-col justify-between w-64 p-3.5 bg-primary-container text-on-primary-container rounded-xl shadow-md ring-4 ring-primary-container/20">
+<span class="absolute -top-2.5 right-3 bg-surface-container-lowest text-primary-container font-label-sm text-[11px] font-bold px-2 py-0.5 rounded-full shadow-sm">ACTIVO</span>
+<div class="flex items-center justify-between text-on-primary-container/80 text-label-sm font-code-inline">
+<span class="font-bold">03</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="mt-2">
+<p class="font-headline-sm text-headline-sm font-semibold leading-tight text-on-primary-container">Modelo Mental &amp; Conceptual</p>
+<p class="font-body-sm text-body-sm text-on-primary-container/90 truncate">Axioma de Norman &amp; Brechas</p>
+</div>
+</div>
+<!-- Métricas complementarias de módulo -->
+<div class="flex items-center gap-3 pl-4 border-l border-surface-variant text-on-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Metodología</span>
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">MPIu+a v3.2</span>
+</div>
+<div class="flex flex-col pl-3">
+<span class="font-label-sm text-label-sm uppercase text-outline">Formato</span>
+<span class="font-label-md text-label-md text-primary font-medium">Evaluación formativa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Tarjeta Hero Estilo Usabilidad 03 -->
+<section class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm mb-8 relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+<div class="space-y-3 max-w-3xl">
+<div class="flex items-center gap-3 flex-wrap">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-code-inline text-[12px] font-semibold tracking-wide uppercase">
+            JUEGO 3 · TODO EN UNO · FASE DE DISEÑO: MODELO MENTAL Y CONCEPTUAL
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Test, flashcards y huecos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre el diálogo entre modelo mental del usuario y modelo conceptual del sistema a través de la interfaz, el axioma de Don Norman, los principios de asimilabilidad, consistencia y simplicidad, y la resolución de brechas cognitivas.
+        </p>
+</div>
+<!-- Tarjeta curricular a la derecha -->
+<div class="w-full lg:w-auto shrink-0 bg-surface-container-low p-4 rounded-xl shadow-xs space-y-2.5">
+<div class="flex items-center justify-between gap-4">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-outline">Volumen curricular</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code-inline text-[11px] font-semibold">100% Completitud</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">dataset</span>
+          23 preguntas • 12 tarjetas • 6 textos
+        </div>
+<div class="pt-2 border-t border-surface-variant flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Basado en normas ISO 9241 e ingeniería de la usabilidad</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Barra de Control de la Suite Interactiva: Tabs & Atajos -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-2 flex-wrap" role="tablist">
+<button aria-selected="true" class="suite-tab px-4 py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-2 bg-primary-container text-on-primary-container font-semibold shadow-sm transition-all" id="tab-test" onclick="switchSuiteTab('test')" role="tab">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (23)</span>
+</button>
+<button aria-selected="false" class="suite-tab px-4 py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-2 bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" id="tab-flashcards" onclick="switchSuiteTab('flashcards')" role="tab">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (12)</span>
+</button>
+<button aria-selected="false" class="suite-tab px-4 py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-2 bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" id="tab-blanks" onclick="switchSuiteTab('blanks')" role="tab">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (6)</span>
+</button>
+</div>
+<!-- Atajos visibles -->
+<div class="flex items-center gap-2 text-outline font-code-inline text-code-inline bg-surface-container-low px-3 py-1.5 rounded-lg overflow-x-auto">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span class="font-medium text-on-surface-variant whitespace-nowrap">[1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</section>
+<!-- ==================== SUITE VISTA 1: QUIZ / TEST (23 Preguntas) ==================== -->
+<div class="suite-view flex flex-col gap-6" id="view-test">
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm">
+<!-- Cabecera de estado del Quiz -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-surface-variant">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center font-code-inline text-primary-container font-bold text-headline-sm">
+<span id="quiz-qnum-badge">01</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline" id="quiz-progress-text">Pregunta 1 de 23</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" id="quiz-category-title">Modelo Mental vs. Conceptual</h2>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-surface-container px-3 py-1.5 rounded-lg font-code-inline text-label-md flex items-center gap-2">
+<span class="text-on-surface-variant">Aciertos:</span>
+<span class="font-bold text-primary" id="quiz-score-badge">0</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="resetQuiz()" title="Reiniciar Test">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Barra de progreso lineal -->
+<div class="w-full bg-surface-container-low h-2 rounded-full mb-8 overflow-hidden">
+<div class="bg-primary-container h-full transition-all duration-300" id="quiz-progress-bar" style="width: 4.34%;"></div>
+</div>
+<!-- Tarjeta de pregunta actual y opciones -->
+<div class="space-y-6" id="quiz-active-container">
+<p class="font-headline-md text-headline-md text-on-surface leading-snug" id="quiz-question-text">
+          ¿Qué representa el Modelo Mental según la teoría clásica formulada por Donald Norman en la interacción persona-ordenador?
+        </p>
+<!-- Contenedor dinámico de opciones -->
+<div class="grid grid-cols-1 gap-3" id="quiz-options-container">
+<!-- Las opciones se inyectan con JavaScript -->
+</div>
+<!-- Feedback inmediato contextual -->
+<div class="hidden p-5 rounded-xl bg-surface-container-low flex flex-col gap-2 transition-all" id="quiz-feedback-box">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm" id="quiz-feedback-header">
+<!-- Icono y mensaje -->
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="quiz-feedback-explanation"></p>
+<div class="pt-3 flex justify-end">
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-2 shadow-sm" id="quiz-btn-next" onclick="nextQuizQuestion()">
+<span>Siguiente pregunta</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Vista Final del Quiz (Oculta por defecto) -->
+<div class="hidden flex-col items-center text-center py-8 space-y-6" id="quiz-summary-container">
+<div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[40px]">emoji_events</span>
+</div>
+<div class="space-y-2 max-w-lg">
+<h3 class="font-headline-xl text-headline-xl text-on-surface">¡Evaluación completada!</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Has finalizado las 23 preguntas temáticas de la Fase de Diseño (Modelo Mental y Conceptual).</p>
+</div>
+<div class="flex items-center justify-center gap-6 p-6 bg-surface-container-low rounded-xl w-full max-w-md">
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Puntuación</span>
+<span class="font-display-hero text-headline-xl font-bold text-primary" id="quiz-final-score">0 / 23</span>
+</div>
+<div class="h-10 w-px bg-outline-variant"></div>
+<div class="text-center">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Calificación</span>
+<span class="font-display-hero text-headline-xl font-bold text-on-surface" id="quiz-final-grade">0.0</span>
+</div>
+</div>
+<div class="w-full text-left space-y-3 mt-4" id="quiz-review-section">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Registro de respuestas para refuerzo</h4>
+<div class="space-y-2 max-h-96 overflow-y-auto pr-2" id="quiz-review-list"></div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<button class="px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-all" onclick="resetQuiz()">
+            Repetir Test Completo
+          </button>
+<button class="px-5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" onclick="switchSuiteTab('flashcards')">
+            Ir a Flashcards 3D
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== SUITE VISTA 2: FLASHCARDS 3D (12 Tarjetas) ==================== -->
+<div class="suite-view hidden flex-col gap-6" id="view-flashcards">
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm">
+<!-- Cabecera de controles Flashcards -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-surface-variant">
+<div>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline" id="fc-progress-counter">Tarjeta 1 de 12</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Repaso Nemotécnico Conceptual</h2>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-low px-3 py-1.5 rounded-lg font-code-inline text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="text-on-surface-variant">Dominadas:</span>
+<span class="font-bold text-primary" id="fc-known-counter">0/12</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="resetFlashcards()" title="Reiniciar mazo">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Escenario de Tarjeta 3D -->
+<div class="flex justify-center items-center py-6">
+<div class="w-full max-w-2xl h-80 sm:h-96 [perspective:1000px] cursor-pointer select-none" onclick="flipFlashcard()">
+<div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] rounded-2xl shadow-md" id="flashcard-inner">
+<!-- Cara A: Anverso (Pregunta / Concepto) -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-lowest p-8 rounded-2xl [backface-visibility:hidden] flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant font-code-inline text-[11px] font-bold uppercase tracking-wider">
+                  CONCEPTO CLAVE
+                </span>
+<span class="material-symbols-outlined text-outline text-[20px]">touch_app</span>
+</div>
+<div class="text-center my-auto px-4">
+<p class="font-headline-lg text-headline-lg text-on-surface mb-3" id="fc-front-title">Modelo Mental</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant" id="fc-front-prompt">¿Qué es y en qué mente reside durante el uso de una interfaz?</p>
+</div>
+<div class="flex items-center justify-between text-outline text-label-sm font-code-inline pt-4 border-t border-surface-variant">
+<span>Click o [Espacio] para voltear</span>
+<span id="fc-front-idx">01 / 12</span>
+</div>
+</div>
+<!-- Cara B: Reverso (Definición / Explicación MPIu+a) -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-high p-8 rounded-2xl [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between shadow-xs text-on-surface">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-code-inline text-[11px] font-bold uppercase tracking-wider">
+                  RESPUESTA Y FUNDAMENTO
+                </span>
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+</div>
+<div class="my-auto px-2 overflow-y-auto max-h-48 text-left">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2" id="fc-back-heading">Construcción Cognitiva Interna</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed" id="fc-back-body">
+                  Reside exclusivamente en la cabeza del usuario. Es la representación mental de cómo funciona el sistema, formada por sus experiencias previas, metáforas cotidianas y la percepción del diseño visible.
+                </p>
+</div>
+<div class="flex items-center justify-between text-outline text-label-sm font-code-inline pt-4 border-t border-outline-variant/40">
+<span>Axioma: "El diseñador no habla directamente con el usuario"</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Controles de navegación de tarjetas -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-surface-variant">
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md flex items-center gap-1.5 transition-colors" onclick="prevFlashcard()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Anterior [←]</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md flex items-center gap-1.5 transition-colors" onclick="nextFlashcard()">
+<span>Siguiente [→]</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-2" id="fc-btn-toggle-known" onclick="toggleKnownCard()">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span id="fc-btn-known-label">Marcar como aprendida [S]</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== SUITE VISTA 3: RELLENAR HUECOS (6 Textos) ==================== -->
+<div class="suite-view hidden flex-col gap-6" id="view-blanks">
+<div class="bg-surface-container-lowest rounded-xl p-6 sm:p-8 shadow-sm">
+<!-- Cabecera de huecos -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-surface-variant">
+<div>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline" id="blank-counter-text">Texto 1 de 6</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" id="blank-title">El Axioma de Don Norman y la Imagen del Sistema</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="prevBlankText()" title="Texto anterior">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" onclick="nextBlankText()" title="Texto siguiente">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="resetCurrentBlank()" title="Limpiar huecos">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+</div>
+</div>
+<!-- Párrafo interactivo con ranuras drop/click -->
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-xl leading-loose font-body-lg text-body-lg text-on-surface mb-8">
+<div class="space-y-4" id="blank-passage">
+<!-- El texto dinámico con slots de relleno se inyecta por JS -->
+</div>
+</div>
+<!-- Banco de chips disponibles -->
+<div class="space-y-3 mb-8">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-outline">Banco de términos (haz clic para insertar en el hueco activo)</span>
+<span class="font-code-inline text-[12px] text-on-surface-variant">Pulsa un chip para asignar</span>
+</div>
+<div class="flex flex-wrap gap-2.5 p-4 bg-surface-container rounded-xl min-h-[60px] items-center" id="blank-chips-pool">
+<!-- Chips interactivos inyectados por JS -->
+</div>
+</div>
+<!-- Acciones de validación -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-surface-variant">
+<div class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2" id="blank-feedback-msg">
+<span class="material-symbols-outlined text-outline text-[20px]">info</span>
+<span>Completa todos los espacios y valida tu respuesta.</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md transition-colors" onclick="solveBlankText()">
+            Ver solución
+          </button>
+<button class="px-6 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-all shadow-sm flex items-center gap-2" onclick="validateBlankText()">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Comprobar respuesta [Enter]</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Barra de navegación curricular inferior -->
+<section class="mt-8 pt-6 border-t border-surface-variant flex flex-col md:flex-row items-center justify-between gap-4">
+<a class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-lg hover:bg-surface-container-low" data-path="leccion-02-relacion-con-los-factores-humanos" href="#">
+<span class="material-symbols-outlined text-[18px]">west</span>
+<span>Anterior: 02 Relación con los Factores Humanos</span>
+</a>
+<div class="flex items-center gap-2 text-outline font-code-inline text-code-inline">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Capítulo 03 de 03 · Fin de la Fase de Diseño</span>
+</div>
+<a class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-all shadow-sm" data-path="fase-de-implementacion" href="#">
+<span>Siguiente Unidad: Fase de Implementación</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</section>
+</div>
+<!-- ==================== LÓGICA Y DATOS DE LA SUITE ==================== -->
+<script>
+// Base de datos completa curricular (23 Test + 12 Flashcards + 6 Rellenar Huecos)
+const SUITE_DATA = {
+  questions: [
+    {
+      id: 1,
+      category: "Fundamentos de Modelos",
+      question: "¿Qué representa el Modelo Mental según la formulación clásica de Donald Norman en HCI?",
+      options: [
+        "El código fuente y la arquitectura física de bases de datos diseñada por ingenieros.",
+        "La representación cognitiva interna que el usuario construye sobre el funcionamiento del sistema.",
+        "La interfaz gráfica renderizada mediante hojas de estilo CSS y componentes.",
+        "La especificación funcional de casos de uso entregada al cliente."
+      ],
+      correct: 1,
+      explanation: "El modelo mental reside en la cabeza del usuario y se forma a partir de su experiencia previa, expectativas e interpretación de la interfaz física o visual."
+    },
+    {
+      id: 2,
+      category: "Axioma de Donald Norman",
+      question: "¿Cuál es el postulado central del Axioma de Don Norman respecto a la interacción persona-ordenador?",
+      options: [
+        "El usuario y el programador deben reunirse semanalmente en reuniones de diseño participativo.",
+        "El diseñador no se comunica directamente con el usuario, sino únicamente a través de la 'Imagen del Sistema'.",
+        "Toda interfaz gráfica debe incluir un manual impreso de más de cien páginas.",
+        "Los modelos mentales son estáticos e idénticos en todos los estratos socioculturales."
+      ],
+      correct: 1,
+      explanation: "El diseñador vuelca su Modelo Conceptual en la Imagen del Sistema (UI, textos, feedback). El usuario únicamente puede deducir ese modelo interactuando con dicha imagen."
+    },
+    {
+      id: 3,
+      category: "Modelo Conceptual",
+      question: "¿Qué define rigurosamente al Modelo Conceptual en la metodología MPIu+a?",
+      options: [
+        "El mapa mental desordenado que el usuario primerizo esboza al abrir la app.",
+        "La descripción precisa y explícita del sistema en términos de entidades, relaciones y operaciones que el diseñador proyecta.",
+        "El hardware de servidor sobre el cual se ejecutan los contenedores en la nube.",
+        "La plantilla tipográfica corporativa aprobada por marketing."
+      ],
+      correct: 1,
+      explanation: "El Modelo Conceptual es la concepción intencionada, estructurada y coherente que los diseñadores conciben para que el usuario logre operar el software con éxito."
+    },
+    {
+      id: 4,
+      category: "Brechas Cognitivas",
+      question: "La 'Brecha de Ejecución' (Gulf of Execution) descrita por Norman se produce cuando:",
+      options: [
+        "El tiempo de compilación del software supera el umbral de los diez segundos.",
+        "El usuario tiene una intención pero le resulta difícil discernir qué acciones físicas debe ejecutar en la interfaz para alcanzarla.",
+        "La base de datos rechaza la conexión por exceso de transacciones simultáneas.",
+        "El sistema no actualiza su pantalla después de confirmar una transacción financiera."
+      ],
+      correct: 1,
+      explanation: "La brecha de ejecución mide la distancia entre las metas psicológicas del usuario y las acciones físicas permitidas por el sistema en su interfaz."
+    },
+    {
+      id: 5,
+      category: "Brechas Cognitivas",
+      question: "¿En qué consiste la 'Brecha de Evaluación' (Gulf of Evaluation)?",
+      options: [
+        "El retraso presupuestario en los proyectos de consultoría tecnológica.",
+        "El esfuerzo cognitivo requerido por el usuario para interpretar el estado del sistema tras ejecutar una acción.",
+        "La falta de pruebas unitarias automatizadas en el repositorio central.",
+        "La diferencia salarial entre diseñadores de producto e ingenieros de back-end."
+      ],
+      correct: 1,
+      explanation: "Refleja el grado de dificultad que tiene el usuario para evaluar el nuevo estado del artefacto y comprender si su meta inicial fue satisfecha."
+    },
+    {
+      id: 6,
+      category: "Asimilabilidad",
+      question: "El principio de diseño de 'Asimilabilidad' (Learnability) persigue principalmente que:",
+      options: [
+        "El sistema requiera obligatoriamente un curso de certificación previa.",
+        "Nuevos usuarios alcancen rápidamente un nivel aceptable de competencia con mínima curva de esfuerzo cognitivo.",
+        "El código Javascript consuma menos de cincuenta megabytes en memoria RAM.",
+        "La paleta cromática se componga exclusivamente de tonalidades monocromáticas."
+      ],
+      correct: 1,
+      explanation: "La asimilabilidad o aprendibilidad evalúa la facilidad con la que usuarios noveles completan tareas básicas la primera vez que se enfrentan a la interfaz."
+    },
+    {
+      id: 7,
+      category: "Consistencia",
+      question: "¿Qué tipología de consistencia se viola si en un formulario el botón 'Aceptar' es azul a la derecha y en el siguiente paso es verde a la izquierda?",
+      options: [
+        "Consistencia externa con las plataformas del mercado.",
+        "Consistencia interna del propio producto.",
+        "Consistencia ontológica de requisitos.",
+        "Consistencia de infraestructura de redes."
+      ],
+      correct: 1,
+      explanation: "La consistencia interna demanda que los mismos elementos visuales, sintácticos y de colocación mantengan significados idénticos en todo el producto."
+    },
+    {
+      id: 8,
+      category: "Metáforas de Interfaz",
+      question: "¿Por qué el 'Escritorio' (Desktop Metaphor) de los sistemas operativos WIMP tuvo tanto éxito ergonómico?",
+      options: [
+        "Porque eliminaba totalmente la necesidad de memoria RAM y tarjeta de vídeo.",
+        "Porque mapeaba conceptos informáticos abstractos sobre el modelo mental preexistente del trabajo físico de oficina.",
+        "Porque obligaba a imprimir cada documento para su archivo en archivadores metálicos.",
+        "Porque fue desarrollada bajo un estándar de telecomunicaciones militar."
+      ],
+      correct: 1,
+      explanation: "Las metáforas aprovechan el conocimiento previo del mundo real para acelerar la comprensión del modelo conceptual del software."
+    },
+    {
+      id: 9,
+      category: "Affordance",
+      question: "¿Qué es una 'Affordance' percibida según la reinterpretación de Don Norman en interfaces de usuario?",
+      options: [
+        "La tarifa económica por licencia de software SaaS.",
+        "Las propiedades observables del objeto que comunican de manera inmediata cómo puede ser accionado o manipulado.",
+        "El margen perimetral de espaciado en la cuadrícula CSS.",
+        "La compatibilidad del navegador con WebAssembly."
+      ],
+      correct: 1,
+      explanation: "Una affordance percibida señala al usuario qué acciones son física o virtualmente viables (ej. un botón con relieve que invita a pulsar)."
+    },
+    {
+      id: 10,
+      category: "Significantes",
+      question: "Si una puerta de vaivén de cristal requiere ser empujada pero no tiene pomo, ¿qué elemento actúa como 'Significante' (Signifier)?",
+      options: [
+        "El marco invisible superior.",
+        "Una placa metálica plana colocada a la altura de la mano que indica visualmente dónde empujar.",
+        "El manual de usuario de evacuación del edificio.",
+        "La resistencia al viento del edificio."
+      ],
+      correct: 1,
+      explanation: "Los significantes son señales perceptibles (marcas, placas, iconos, etiquetas) que clarifican dónde y cómo debe ocurrir la interacción."
+    },
+    {
+      id: 11,
+      category: "Simplicidad y Ley de Hick",
+      question: "¿Qué relación establece la Ley de Hick con el diseño de menús y opciones?",
+      options: [
+        "El tiempo para tomar una decisión se incrementa logarítmicamente con el número y complejidad de las opciones.",
+        "La distancia al botón duplica el tiempo de respuesta según su tamaño.",
+        "Los usuarios siempre leen palabra por palabra de izquierda a derecha.",
+        "El color rojo siempre agiliza la toma de decisiones críticas."
+      ],
+      correct: 0,
+      explanation: "A mayor número de estímulos u opciones alternativas presentadas a la vez, mayor es el tiempo y esfuerzo de decisión del usuario (T = b · log2(n + 1))."
+    },
+    {
+      id: 12,
+      category: "Mapeo Natural",
+      question: "¿Cuál de estos ejemplos representa un 'Mapeo Natural' óptimo en el diseño de un producto?",
+      options: [
+        "Los mandos de una placa vitrocerámica dispuestos en la misma disposición espacial relativa que los fuegos de cocción.",
+        "Un volante que gira las ruedas a la izquierda cuando se rota hacia la derecha.",
+        "Una lista de ajustes ordenada según el código ASCII de cada comando.",
+        "Un teclado numérico que invierte los dígitos 1 y 9 según la hora del día."
+      ],
+      correct: 0,
+      explanation: "El mapeo natural aprovecha analogías espaciales, culturales y físicas inmediatas, eliminando la necesidad de memorizar reglas arbitrarias."
+    },
+    {
+      id: 13,
+      category: "Feedback",
+      question: "En el diálogo Modelo Mental / Conceptual, ¿qué función crucial cumple el Feedback?",
+      options: [
+        "Almacenar cookies de telemetría publicitaria.",
+        "Confirmar al usuario que su acción fue recibida y manifestar explícitamente el cambio de estado del sistema.",
+        "Comprimir las imágenes del lado del servidor.",
+        "Generar reportes anuales de rentabilidad financiera."
+      ],
+      correct: 1,
+      explanation: "Sin feedback visible e inmediato, el usuario no puede alimentar ni corregir su modelo mental respecto a lo que la máquina está procesando."
+    },
+    {
+      id: 14,
+      category: "Modelos en Conflicto",
+      question: "¿Qué sucede cuando existe una discordancia severa entre el modelo mental del usuario y el modelo conceptual del sistema?",
+      options: [
+        "El procesador del ordenador se bloquea por saturación de hilos.",
+        "Surgen errores de manejo reiterados, frustración, sensación de incompetencia y abandono del software.",
+        "Se incrementa automáticamente la velocidad de tipeo del operador.",
+        "La pantalla conmuta a modo seguro de alta definición."
+      ],
+      correct: 1,
+      explanation: "Cuando los modelos no encajan, el usuario intenta resolver sus tareas ejecutando acciones erróneas basadas en suposiciones lógicas equivocadas."
+    },
+    {
+      id: 15,
+      category: "Imagen del Sistema",
+      question: "La 'Imagen del Sistema' según Norman está constituida por:",
+      options: [
+        "Únicamente el logotipo vectorial y la tipografía de la marca.",
+        "La totalidad de la manifestación física y perceptible: interfaz, mensajes de error, documentación, ayuda y comportamiento.",
+        "El diagrama de clases UML guardado en el archivo de especificaciones.",
+        "La captura de pantalla promocional en la tienda de aplicaciones."
+      ],
+      correct: 1,
+      explanation: "La imagen del sistema es todo aquello tangible con lo que el usuario entra en contacto sensorial e intelectual."
+    },
+    {
+      id: 16,
+      category: "Sobrecarga Cognitiva",
+      question: "¿Qué técnica de diseño arquitectónico ayuda a prevenir la sobrecarga de la memoria de trabajo a corto plazo (7 ± 2 elementos de Miller)?",
+      options: [
+        "La divulgación progresiva (Progressive Disclosure) y el agrupamiento de información (Chunking).",
+        "Mostrar todas las funciones secundarias en una sola pantalla saturada de barras de herramientas.",
+        "Eliminar todos los textos explicativos para favorecer el minimalismo extremo.",
+        "Obligar al usuario a recordar códigos alfanuméricos entre pantalla y pantalla."
+      ],
+      correct: 0,
+      explanation: "Mostrar la información únicamente cuando se necesita y organizarla en bloques lógicos preserva los recursos finitos de la memoria humana."
+    },
+    {
+      id: 17,
+      category: "Consistencia Externa",
+      question: "Seguir las guías de diseño de la plataforma anfitriona (ej. Human Interface Guidelines de Apple o Material Design de Google) garantiza:",
+      options: [
+        "Consistencia Externa con el ecosistema y hábitos ya consolidados de los usuarios.",
+        "Exención fiscal en la publicación de la aplicación.",
+        "Cero líneas de código CSS personalizadas.",
+        "Inmunidad ante vulnerabilidades de ciberseguridad."
+      ],
+      correct: 0,
+      explanation: "La consistencia externa permite al usuario transferir sus modelos mentales adquiridos en otras aplicaciones del mismo sistema operativo."
+    },
+    {
+      id: 18,
+      category: "Restricciones (Constraints)",
+      question: "¿Cuál es el propósito de aplicar restricciones físicas o lógicas en el diseño conceptual?",
+      options: [
+        "Limitar arbitrariamente el rendimiento de la GPU del usuario.",
+        "Prevenir errores antes de que ocurran, guiando al usuario únicamente por caminos válidos (ej. desactivar un botón hasta rellenar campos requeridos).",
+        "Aumentar el tiempo medio que el usuario permanece en la plataforma.",
+        "Evitar que el usuario personalice el tamaño de la ventana."
+      ],
+      correct: 1,
+      explanation: "Las restricciones (constraints) reducen drásticamente el espacio de error humano al impedir mecánicamente o lógicamente elecciones inválidas."
+    },
+    {
+      id: 19,
+      category: "Modelos Erróneos (Superstición)",
+      question: "Cuando un usuario pulsa repetidamente el botón de llamada de un ascensor creyendo que así llegará más rápido, estamos ante:",
+      options: [
+        "Un modelo mental supersticioso o erróneo sobre el mecanismo causal del sistema.",
+        "Un fallo en el sensor fotoeléctrico de la puerta.",
+        "Un modelo conceptual optimizado de cola prioritaria.",
+        "Una acción plenamente justificada por las leyes de la termodinámica."
+      ],
+      correct: 0,
+      explanation: "Los modelos mentales no tienen por qué ser técnicamente veraces; son construcciones pragmáticas que a menudo incorporan creencias intuitivas falsas."
+    },
+    {
+      id: 20,
+      category: "Diseño Basado en Tareas",
+      question: "Para que el modelo conceptual sea asimilable, la jerarquía de la interfaz debe estructurarse en torno a:",
+      options: [
+        "La estructura de tablas del modelo relacional de base de datos del servidor.",
+        "Las metas y modelos de tareas reales de los usuarios finales en su contexto de trabajo.",
+        "El organigrama departamental de la empresa proveedora de software.",
+        "El orden cronológico en el que los módulos de software fueron programados."
+      ],
+      correct: 1,
+      explanation: "Un error habitual es proyectar la arquitectura de datos técnica en la UI en lugar de modelar los flujos de tareas que el usuario necesita resolver."
+    },
+    {
+      id: 21,
+      category: "Recuperabilidad",
+      question: "La función 'Deshacer' (Undo, Ctrl+Z) mitiga el miedo a explorar una interfaz porque:",
+      options: [
+        "Optimiza el consumo de batería en ordenadores portátiles.",
+        "Permite revertir estados indeseados, reduciendo el coste del error y estimulando el aprendizaje por descubrimiento.",
+        "Sustituye completamente la necesidad de realizar copias de seguridad remotas.",
+        "Reinicia el sistema operativo a su configuración de fábrica."
+      ],
+      correct: 1,
+      explanation: "La recuperabilidad alivia la ansiedad del usuario, permitiéndole tantear la interfaz y consolidar su modelo mental con tranquilidad."
+    },
+    {
+      id: 22,
+      category: "Simplicidad vs. Facilidad",
+      question: "Según John Maeda en 'Las Leyes de la Simplicidad', simplificar una interfaz implica:",
+      options: [
+        "Ocultar o eliminar funciones hasta que la herramienta sea inútil.",
+        "Reducir la complejidad innecesaria conservando el poder operativo mediante organización inteligente y contexto.",
+        "Pintar todos los elementos en blanco y negro.",
+        "Reemplazar texto por iconos abstractos sin etiqueta."
+      ],
+      correct: 1,
+      explanation: "La verdadera simplicidad consiste en eliminar lo superfluo para que lo esencial y significativo pueda emerger con nitidez."
+    },
+    {
+      id: 23,
+      category: "Evolución de Modelos",
+      question: "¿Por qué los modelos mentales de los usuarios son dinámicos y evolucionan en el tiempo?",
+      options: [
+        "Porque el hardware degrada su precisión con el paso de los años.",
+        "Porque se reconfiguran continuamente a medida que el usuario acumula experiencia, observa feedback y usa nuevas tecnologías.",
+        "Porque los navegadores web eliminan la memoria caché cada veinticuatro horas.",
+        "Porque las leyes de la ergonomía cambian semestralmente."
+      ],
+      correct: 1,
+      explanation: "Los modelos mentales son plásticos: una interfaz puede enseñar y transformar gradualmente las nociones preconcebidas de una persona."
+    }
+  ],
+  flashcards: [
+    {
+      id: 1,
+      frontTitle: "Modelo Mental",
+      frontPrompt: "¿Qué es y en qué mente reside durante el uso de una interfaz?",
+      backHeading: "Construcción Cognitiva Interna",
+      backBody: "Reside exclusivamente en la cabeza del usuario. Es la representación mental de cómo funciona el sistema, formada por sus experiencias previas, metáforas cotidianas y la percepción del diseño visible."
+    },
+    {
+      id: 2,
+      frontTitle: "Modelo Conceptual",
+      frontPrompt: "¿Quién lo diseña y cuál es su objetivo explícito en MPIu+a?",
+      backHeading: "Diseño Estructurado del Creador",
+      backBody: "Lo concibe el equipo de diseño y arquitectura de software. Es la especificación rigurosa de las entidades, relaciones y operaciones pensadas para que el usuario construya un modelo mental idóneo."
+    },
+    {
+      id: 3,
+      frontTitle: "La Imagen del Sistema",
+      frontPrompt: "¿Por qué es el único puente de contacto entre diseñador y usuario?",
+      backHeading: "El Mediador Tangible",
+      backBody: "El axioma de Don Norman dicta que el diseñador no habla en persona con el usuario. Toda comunicación transcurre a través de la UI física/digital, sus mensajes, ayuda, respuesta y feedback."
+    },
+    {
+      id: 4,
+      frontTitle: "Brecha de Ejecución",
+      frontPrompt: "¿Qué distancia psicológica mide y cuándo se hace grande?",
+      backHeading: "De la Intención a la Acción",
+      backBody: "Mide la dificultad del usuario para traducir sus intenciones en acciones concretas del sistema. Si los mandos son confusos o faltan significantes claros, la brecha de ejecución es enorme."
+    },
+    {
+      id: 5,
+      frontTitle: "Brecha de Evaluación",
+      frontPrompt: "¿Qué evalúa el usuario y qué ingrediente de diseño la reduce?",
+      backHeading: "Del Estado Físico a la Interpretación",
+      backBody: "Mide el esfuerzo para interpretar el nuevo estado del artefacto tras una acción. Se reduce radicalmente ofreciendo feedback inmediato, comprensible y visualmente evidente."
+    },
+    {
+      id: 6,
+      frontTitle: "Affordance vs. Significante",
+      frontPrompt: "¿En qué se diferencian fundamentalmente según Donald Norman?",
+      backHeading: "Capacidad Real vs. Señal Perceptible",
+      backBody: "Affordance es la posibilidad real de acción que ofrece un objeto. El Significante es cualquier marca perceptiva (etiqueta, icono, relieve) que comunica explícitamente al usuario dónde actuar."
+    },
+    {
+      id: 7,
+      frontTitle: "Consistencia Interna",
+      frontPrompt: "¿Qué principio garantiza y cómo evita la desorientación?",
+      backHeading: "Coherencia Intra-Producto",
+      backBody: "Exige que los patrones, botones, terminología y ubicaciones mantengan el mismo comportamiento dentro de toda la aplicación, reduciendo la memoria de trabajo y sorpresas."
+    },
+    {
+      id: 8,
+      frontTitle: "Consistencia Externa",
+      frontPrompt: "¿Con qué debe alinearse un software para que el usuario sienta familiaridad?",
+      backHeading: "Transferencia de Conocimiento",
+      backBody: "Se alinea con las convenciones de la plataforma anfitriona (ej. Android, iOS, Web estándar) y modelos mentales previos consolidados en otras herramientas que el usuario ya domina."
+    },
+    {
+      id: 9,
+      frontTitle: "Mapeo Natural (Natural Mapping)",
+      frontPrompt: "¿Cómo aprovecha la relación espacial entre controles y efectos?",
+      backHeading: "Correspondencia Espacial Inmediata",
+      backBody: "Dispone los controles de modo que imiten la disposición de los objetos controlados (ej. encender los fuegos de la cocina con mandos situados en la misma geometría relativa)."
+    },
+    {
+      id: 10,
+      frontTitle: "Ley de Hick-Hyman",
+      frontPrompt: "¿Qué relación matemática predice sobre la toma de decisiones?",
+      backHeading: "Sobrecarga por Opciones",
+      backBody: "El tiempo de decisión crece de forma logarítmica respecto al número de alternativas disponibles. Menos opciones a la vez implican decisiones más rápidas y con menos vacilación."
+    },
+    {
+      id: 11,
+      frontTitle: "Divulgación Progresiva",
+      frontPrompt: "¿Cómo contribuye a simplificar interfaces complejas?",
+      backHeading: "Progressive Disclosure",
+      backBody: "Muestra solo las opciones esenciales al principio y posterga las funciones avanzadas o infrecuentes a pantallas o desplegables secundarios, evitando saturar la atención del usuario."
+    },
+    {
+      id: 12,
+      frontTitle: "Modelos Mentales Erróneos",
+      frontPrompt: "¿Por qué los usuarios persisten en hábitos ineficientes o supersticiosos?",
+      backHeading: "Pragmatismo Subjetivo",
+      backBody: "Los usuarios no necesitan saber cómo funciona la física o el código subyacente: crean hipótesis que 'les funcionan' para salir del paso aunque técnicamente sean totalmente falsas."
+    }
+  ],
+  blanksPassages: [
+    {
+      id: 1,
+      title: "1. El Axioma de Don Norman y la Imagen del Sistema",
+      template: "En la interacción persona-ordenador, el diseñador nunca dialoga de forma directa con el usuario final. Su único medio de transmisión es la {0}. El usuario interactúa con ella y a partir de sus percepciones e interpretaciones construye en su mente un {1}, el cual puede o no coincidir con el {2} formulado originalmente por el equipo de ingeniería.",
+      tokens: [
+        { slot: 0, answer: "imagen del sistema" },
+        { slot: 1, answer: "modelo mental" },
+        { slot: 2, answer: "modelo conceptual" }
+      ],
+      distractors: ["código fuente", "manual de usuario", "servidor central"]
+    },
+    {
+      id: 2,
+      title: "2. Las Dos Brechas de la Interacción",
+      template: "La brecha de {0} refleja la dificultad que experimenta una persona para trasladar sus intenciones psicológicas a acciones concretas sobre los controles de la interfaz. Por su parte, la brecha de {1} cuantifica el esfuerzo requerido para interpretar el nuevo estado del artefacto y verificar si sus metas iniciales se han satisfecho gracias al {2} oportuno.",
+      tokens: [
+        { slot: 0, answer: "ejecución" },
+        { slot: 1, answer: "evaluación" },
+        { slot: 2, answer: "feedback" }
+      ],
+      distractors: ["rendimiento", "compilación", "latencia"]
+    },
+    {
+      id: 3,
+      title: "3. Affordances y Significantes",
+      template: "Mientras que una {0} describe las posibilidades reales de acción entre un sujeto y un objeto según la física del entorno, los {1} son señales perceptibles explícitas —como textos, flechas o relieves— que indican al usuario dónde y cómo debe ocurrir la interacción, evitando que deba recurrir a la {2} ciega.",
+      tokens: [
+        { slot: 0, answer: "affordance" },
+        { slot: 1, answer: "significantes" },
+        { slot: 2, answer: "adivinación" }
+      ],
+      distractors: ["restricción", "consistencia", "metafísica"]
+    },
+    {
+      id: 4,
+      title: "4. Consistencia y Transferencia Cognitiva",
+      template: "La consistencia {0} garantiza que la terminología, controles y estilos visuales se mantengan uniformes a lo largo de todas las pantallas de un mismo software. En cambio, la consistencia {1} aprovecha las convenciones consolidadas del sistema operativo o del mercado para permitir la {2} positiva de modelos mentales previos.",
+      tokens: [
+        { slot: 0, answer: "interna" },
+        { slot: 1, answer: "externa" },
+        { slot: 2, answer: "transferencia" }
+      ],
+      distractors: ["semántica", "completa", "anulación"]
+    },
+    {
+      id: 5,
+      title: "5. Mapeo Natural y Correspondencia Espacial",
+      template: "Un buen {0} aprovecha las analogías espaciales, culturales y mecánicas inmediatas entre los actuadores físicos y los resultados producidos. De este modo, se minimiza la {1} innecesaria en la memoria a corto plazo y el usuario no se ve obligado a memorizar {2} arbitrarias de control.",
+      tokens: [
+        { slot: 0, answer: "mapeo natural" },
+        { slot: 1, answer: "carga cognitiva" },
+        { slot: 2, answer: "reglas" }
+      ],
+      distractors: ["algoritmo", "latencia de red", "excepciones"]
+    },
+    {
+      id: 6,
+      title: "6. Simplicidad y Divulgación Progresiva",
+      template: "Para combatir la sobrecarga de información y no saturar al usuario, se utiliza el patrón de {0}, el cual prioriza las operaciones habituales en la vista primaria. Las funciones avanzadas se descubren solo cuando se solicitan explícitamente, respetando la Ley de {1} para acelerar el tiempo de {2}.",
+      tokens: [
+        { slot: 0, answer: "divulgación progresiva" },
+        { slot: 1, answer: "Hick" },
+        { slot: 2, answer: "decisión" }
+      ],
+      distractors: ["ocultación total", "Fitts", "procesamiento"]
+    }
+  ]
+};
+
+// ==================== ESTADO GLOBAL DE LA SUITE ====================
+let currentTab = 'test';
+
+// Estado Quiz
+let quizIndex = 0;
+let quizScore = 0;
+let quizAnswered = false;
+let userQuizAnswers = [];
+
+// Estado Flashcards
+let fcIndex = 0;
+let fcFlipped = false;
+let fcKnownSet = new Set();
+
+// Estado Rellenar Huecos
+let blankIndex = 0;
+let userBlankSelections = {}; // { slotIndex: chosenWord }
+let activeSlotIndex = null;
+
+// ==================== GESTIÓN DE TABS ====================
+function switchSuiteTab(tab) {
+  currentTab = tab;
+  ['test', 'flashcards', 'blanks'].forEach(t => {
+    const btn = document.getElementById(`tab-${t}`);
+    const view = document.getElementById(`view-${t}`);
+    if (t === tab) {
+      btn.className = "suite-tab px-4 py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-2 bg-primary-container text-on-primary-container font-semibold shadow-sm transition-all";
+      btn.setAttribute('aria-selected', 'true');
+      view.classList.remove('hidden');
+      view.classList.add('flex');
+    } else {
+      btn.className = "suite-tab px-4 py-2.5 rounded-lg font-label-md text-label-md flex items-center gap-2 bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all";
+      btn.setAttribute('aria-selected', 'false');
+      view.classList.remove('flex');
+      view.classList.add('hidden');
+    }
+  });
+
+  if (tab === 'flashcards') updateFlashcardUI();
+  if (tab === 'blanks') renderBlankPassage();
+}
+
+// ==================== LÓGICA DE QUIZ (TEST INTERACTIVO) ====================
+function renderQuizQuestion() {
+  quizAnswered = false;
+  const q = SUITE_DATA.questions[quizIndex];
+  const total = SUITE_DATA.questions.length;
+
+  document.getElementById('quiz-qnum-badge').textContent = String(quizIndex + 1).padStart(2, '0');
+  document.getElementById('quiz-progress-text').textContent = `Pregunta ${quizIndex + 1} de ${total}`;
+  document.getElementById('quiz-category-title').textContent = q.category;
+  document.getElementById('quiz-score-badge').textContent = quizScore;
+  document.getElementById('quiz-progress-bar').style.width = `${((quizIndex + 1) / total) * 100}%`;
+  document.getElementById('quiz-question-text').textContent = q.question;
+
+  const feedbackBox = document.getElementById('quiz-feedback-box');
+  feedbackBox.classList.add('hidden');
+
+  const optionsContainer = document.getElementById('quiz-options-container');
+  optionsContainer.innerHTML = '';
+
+  q.options.forEach((optText, optIdx) => {
+    const optBtn = document.createElement('button');
+    optBtn.id = `quiz-opt-${optIdx}`;
+    optBtn.onclick = () => selectQuizOption(optIdx);
+    optBtn.className = "w-full text-left p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-start gap-3 group border-0";
+    
+    optBtn.innerHTML = `
+      <span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center font-code-inline text-label-md font-semibold text-outline group-hover:text-on-surface shrink-0">
+        ${optIdx + 1}
+      </span>
+      <span class="font-body-md text-body-md text-on-surface leading-normal">${optText}</span>
+    `;
+    optionsContainer.appendChild(optBtn);
+  });
+}
+
+function selectQuizOption(choiceIdx) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+
+  const q = SUITE_DATA.questions[quizIndex];
+  const isCorrect = (choiceIdx === q.correct);
+
+  userQuizAnswers[quizIndex] = {
+    qId: q.id,
+    question: q.question,
+    chosen: choiceIdx,
+    correct: q.correct,
+    isCorrect: isCorrect
+  };
+
+  if (isCorrect) {
+    quizScore++;
+    document.getElementById('quiz-score-badge').textContent = quizScore;
+  }
+
+  // Pintar opciones
+  q.options.forEach((_, optIdx) => {
+    const btn = document.getElementById(`quiz-opt-${optIdx}`);
+    if (optIdx === q.correct) {
+      btn.className = "w-full text-left p-4 rounded-xl bg-primary-fixed text-on-primary-fixed-variant transition-all flex items-start gap-3 border-0";
+      btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-code-inline text-label-md font-bold shrink-0";
+    } else if (optIdx === choiceIdx && !isCorrect) {
+      btn.className = "w-full text-left p-4 rounded-xl bg-error-container text-on-error-container transition-all flex items-start gap-3 border-0";
+      btn.querySelector('span:first-child').className = "w-7 h-7 rounded-lg bg-error text-on-error flex items-center justify-center font-code-inline text-label-md font-bold shrink-0";
+    } else {
+      btn.classList.add('opacity-50');
+      btn.disabled = true;
+    }
+  });
+
+  // Mostrar Feedback
+  const feedbackBox = document.getElementById('quiz-feedback-box');
+  const header = document.getElementById('quiz-feedback-header');
+  const expl = document.getElementById('quiz-feedback-explanation');
+  feedbackBox.classList.remove('hidden');
+
+  if (isCorrect) {
+    header.innerHTML = `
+      <span class="material-symbols-outlined text-[24px] text-primary">check_circle</span>
+      <span class="text-primary font-semibold">¡Respuesta Correcta!</span>
+    `;
+  } else {
+    header.innerHTML = `
+      <span class="material-symbols-outlined text-[24px] text-error">cancel</span>
+      <span class="text-error font-semibold">Respuesta Incorrecta</span>
+    `;
+  }
+  expl.textContent = q.explanation;
+}
+
+function nextQuizQuestion() {
+  if (quizIndex < SUITE_DATA.questions.length - 1) {
+    quizIndex++;
+    renderQuizQuestion();
+  } else {
+    showQuizSummary();
+  }
+}
+
+function showQuizSummary() {
+  document.getElementById('quiz-active-container').classList.add('hidden');
+  const summary = document.getElementById('quiz-summary-container');
+  summary.classList.remove('hidden');
+  summary.classList.add('flex');
+
+  const total = SUITE_DATA.questions.length;
+  const grade = ((quizScore / total) * 10).toFixed(1);
+
+  document.getElementById('quiz-final-score').textContent = `${quizScore} / ${total}`;
+  document.getElementById('quiz-final-grade').textContent = `${grade} / 10`;
+
+  const reviewList = document.getElementById('quiz-review-list');
+  reviewList.innerHTML = '';
+
+  userQuizAnswers.forEach((ans, idx) => {
+    const item = document.createElement('div');
+    item.className = `p-3 rounded-lg flex items-start gap-3 ${ans.isCorrect ? 'bg-surface-container-low' : 'bg-error-container/30'}`;
+    item.innerHTML = `
+      <span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5 ${ans.isCorrect ? 'text-primary' : 'text-error'}">
+        ${ans.isCorrect ? 'check_circle' : 'cancel'}
+      </span>
+      <div class="text-body-sm space-y-1">
+        <p class="font-medium text-on-surface">P${idx+1}: ${ans.question}</p>
+        <p class="text-on-surface-variant font-code-inline text-[12px]">
+          Tu respuesta: ${SUITE_DATA.questions[idx].options[ans.chosen] || 'Ninguna'}
+          ${!ans.isCorrect ? `<br><strong class="text-primary font-semibold">Correcta:</strong> ${SUITE_DATA.questions[idx].options[ans.correct]}` : ''}
+        </p>
+      </div>
+    `;
+    reviewList.appendChild(item);
+  });
+}
+
+function resetQuiz() {
+  quizIndex = 0;
+  quizScore = 0;
+  userQuizAnswers = [];
+  document.getElementById('quiz-summary-container').classList.remove('flex');
+  document.getElementById('quiz-summary-container').classList.add('hidden');
+  document.getElementById('quiz-active-container').classList.remove('hidden');
+  renderQuizQuestion();
+}
+
+// ==================== LÓGICA DE FLASHCARDS 3D ====================
+function updateFlashcardUI() {
+  const card = SUITE_DATA.flashcards[fcIndex];
+  const total = SUITE_DATA.flashcards.length;
+
+  document.getElementById('fc-progress-counter').textContent = `Tarjeta ${fcIndex + 1} de ${total}`;
+  document.getElementById('fc-known-counter').textContent = `${fcKnownSet.size}/${total}`;
+  document.getElementById('fc-front-idx').textContent = `${String(fcIndex + 1).padStart(2, '0')} / ${total}`;
+
+  document.getElementById('fc-front-title').textContent = card.frontTitle;
+  document.getElementById('fc-front-prompt').textContent = card.frontPrompt;
+  document.getElementById('fc-back-heading').textContent = card.backHeading;
+  document.getElementById('fc-back-body').textContent = card.backBody;
+
+  // Restaurar giro
+  fcFlipped = false;
+  document.getElementById('flashcard-inner').style.transform = 'rotateY(0deg)';
+
+  // Estado del botón "sabida"
+  const isKnown = fcKnownSet.has(card.id);
+  const btn = document.getElementById('fc-btn-toggle-known');
+  const label = document.getElementById('fc-btn-known-label');
+
+  if (isKnown) {
+    btn.className = "px-5 py-2 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-label-md transition-all flex items-center gap-2";
+    label.textContent = "Aprendida ✓ [S]";
+  } else {
+    btn.className = "px-5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-2";
+    label.textContent = "Marcar como aprendida [S]";
+  }
+}
+
+function flipFlashcard() {
+  fcFlipped = !fcFlipped;
+  const inner = document.getElementById('flashcard-inner');
+  inner.style.transform = fcFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+}
+
+function nextFlashcard() {
+  if (fcIndex < SUITE_DATA.flashcards.length - 1) {
+    fcIndex++;
+  } else {
+    fcIndex = 0; // bucle suave
+  }
+  updateFlashcardUI();
+}
+
+function prevFlashcard() {
+  if (fcIndex > 0) {
+    fcIndex--;
+  } else {
+    fcIndex = SUITE_DATA.flashcards.length - 1;
+  }
+  updateFlashcardUI();
+}
+
+function toggleKnownCard() {
+  const cardId = SUITE_DATA.flashcards[fcIndex].id;
+  if (fcKnownSet.has(cardId)) {
+    fcKnownSet.delete(cardId);
+  } else {
+    fcKnownSet.add(cardId);
+  }
+  updateFlashcardUI();
+}
+
+function resetFlashcards() {
+  fcIndex = 0;
+  fcKnownSet.clear();
+  updateFlashcardUI();
+}
+
+// ==================== LÓGICA DE RELLENAR HUECOS ====================
+function renderBlankPassage() {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  const total = SUITE_DATA.blanksPassages.length;
+
+  document.getElementById('blank-counter-text').textContent = `Texto ${blankIndex + 1} de ${total}`;
+  document.getElementById('blank-title').textContent = passageData.title;
+  document.getElementById('blank-feedback-msg').innerHTML = `
+    <span class="material-symbols-outlined text-outline text-[20px]">info</span>
+    <span>Completa todos los espacios y valida tu respuesta.</span>
+  `;
+
+  userBlankSelections = {};
+  activeSlotIndex = 0;
+
+  const passageEl = document.getElementById('blank-passage');
+  let html = passageData.template;
+
+  passageData.tokens.forEach(tok => {
+    const placeholder = `{${tok.slot}}`;
+    const slotBtn = `<button id="blank-slot-${tok.slot}" onclick="selectBlankSlot(${tok.slot})" class="blank-slot inline-flex items-center justify-center min-w-[140px] px-3 py-1 mx-1.5 rounded-lg bg-surface-container font-code-inline text-label-md text-primary font-semibold border-b-2 border-primary-container transition-all hover:bg-surface-variant cursor-pointer align-baseline select-none" data-slot="${tok.slot}">___ [Hueco ${tok.slot + 1}] ___</button>`;
+    html = html.replace(placeholder, slotBtn);
+  });
+
+  passageEl.innerHTML = html;
+  renderBlankChipsPool();
+  highlightActiveSlot();
+}
+
+function selectBlankSlot(slotIdx) {
+  activeSlotIndex = slotIdx;
+  highlightActiveSlot();
+}
+
+function highlightActiveSlot() {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  passageData.tokens.forEach(tok => {
+    const slotBtn = document.getElementById(`blank-slot-${tok.slot}`);
+    if (!slotBtn) return;
+    if (tok.slot === activeSlotIndex) {
+      slotBtn.classList.add('ring-2', 'ring-primary-container', 'bg-primary-fixed/40');
+    } else {
+      slotBtn.classList.remove('ring-2', 'ring-primary-container', 'bg-primary-fixed/40');
+    }
+  });
+}
+
+function renderBlankChipsPool() {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  const pool = document.getElementById('blank-chips-pool');
+  pool.innerHTML = '';
+
+  // Combinar respuestas correctas y distractores, y mezclar
+  const allWords = [
+    ...passageData.tokens.map(t => t.answer),
+    ...(passageData.distractors || [])
+  ].sort(() => Math.random() - 0.5);
+
+  allWords.forEach(word => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.onclick = () => assignWordToActiveSlot(word);
+    chip.className = "px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-primary-container hover:text-on-primary-container font-code-inline text-body-sm transition-all shadow-xs cursor-pointer";
+    chip.textContent = word;
+    pool.appendChild(chip);
+  });
+}
+
+function assignWordToActiveSlot(word) {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  if (activeSlotIndex === null) {
+    // Buscar primer slot libre
+    const nextFree = passageData.tokens.find(t => !userBlankSelections[t.slot]);
+    activeSlotIndex = nextFree ? nextFree.slot : 0;
+  }
+
+  userBlankSelections[activeSlotIndex] = word;
+  const slotBtn = document.getElementById(`blank-slot-${activeSlotIndex}`);
+  if (slotBtn) {
+    slotBtn.textContent = word;
+    slotBtn.classList.add('text-on-surface');
+  }
+
+  // Avanzar al siguiente hueco automáticamente si existe uno sin llenar
+  const unfilled = passageData.tokens.find(t => !userBlankSelections[t.slot]);
+  if (unfilled) {
+    activeSlotIndex = unfilled.slot;
+  }
+  highlightActiveSlot();
+}
+
+function validateBlankText() {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  let allCorrect = true;
+  let missing = false;
+
+  passageData.tokens.forEach(tok => {
+    const chosen = userBlankSelections[tok.slot];
+    const slotBtn = document.getElementById(`blank-slot-${tok.slot}`);
+    if (!chosen) {
+      missing = true;
+      allCorrect = false;
+      return;
+    }
+    if (chosen.trim().toLowerCase() === tok.answer.trim().toLowerCase()) {
+      slotBtn.className = "blank-slot inline-flex items-center justify-center min-w-[140px] px-3 py-1 mx-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-code-inline text-label-md font-bold transition-all border-0";
+    } else {
+      slotBtn.className = "blank-slot inline-flex items-center justify-center min-w-[140px] px-3 py-1 mx-1.5 rounded-lg bg-error-container text-on-error-container font-code-inline text-label-md font-bold transition-all border-0";
+      allCorrect = false;
+    }
+  });
+
+  const feedbackMsg = document.getElementById('blank-feedback-msg');
+  if (missing) {
+    feedbackMsg.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] text-error">warning</span>
+      <span class="text-error font-medium">Por favor, rellena todos los huecos antes de comprobar.</span>
+    `;
+  } else if (allCorrect) {
+    feedbackMsg.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+      <span class="text-primary font-bold">¡Perfecto! Todos los términos encajan exactamente con la teoría de MPIu+a.</span>
+    `;
+  } else {
+    feedbackMsg.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] text-error">error</span>
+      <span class="text-error font-medium">Algunos términos no son correctos. Corrige los espacios marcados en rojo o pulsa 'Ver solución'.</span>
+    `;
+  }
+}
+
+function solveBlankText() {
+  const passageData = SUITE_DATA.blanksPassages[blankIndex];
+  passageData.tokens.forEach(tok => {
+    userBlankSelections[tok.slot] = tok.answer;
+    const slotBtn = document.getElementById(`blank-slot-${tok.slot}`);
+    if (slotBtn) {
+      slotBtn.textContent = tok.answer;
+      slotBtn.className = "blank-slot inline-flex items-center justify-center min-w-[140px] px-3 py-1 mx-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-code-inline text-label-md font-bold transition-all border-0";
+    }
+  });
+  document.getElementById('blank-feedback-msg').innerHTML = `
+    <span class="material-symbols-outlined text-[20px] text-primary">lightbulb</span>
+    <span class="text-on-surface-variant">Solución curricular cargada para autoestudio.</span>
+  `;
+}
+
+function resetCurrentBlank() {
+  renderBlankPassage();
+}
+
+function nextBlankText() {
+  if (blankIndex < SUITE_DATA.blanksPassages.length - 1) {
+    blankIndex++;
+  } else {
+    blankIndex = 0;
+  }
+  renderBlankPassage();
+}
+
+function prevBlankText() {
+  if (blankIndex > 0) {
+    blankIndex--;
+  } else {
+    blankIndex = SUITE_DATA.blanksPassages.length - 1;
+  }
+  renderBlankPassage();
+}
+
+// ==================== ATAJOS DE TECLADO GLOBALES ====================
+document.addEventListener('keydown', (e) => {
+  // Ignorar si el usuario está tipeando en un input o search de la shell
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  if (currentTab === 'test') {
+    if (['1', '2', '3', '4'].includes(e.key)) {
+      const idx = parseInt(e.key, 10) - 1;
+      selectQuizOption(idx);
+    } else if (e.key === 'Enter') {
+      const nextBtn = document.getElementById('quiz-btn-next');
+      if (nextBtn && !document.getElementById('quiz-feedback-box').classList.contains('hidden')) {
+        nextQuizQuestion();
+      }
+    }
+  } else if (currentTab === 'flashcards') {
+    if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      flipFlashcard();
+    } else if (e.key === 'ArrowRight') {
+      nextFlashcard();
+    } else if (e.key === 'ArrowLeft') {
+      prevFlashcard();
+    } else if (e.key === 's' || e.key === 'S') {
+      toggleKnownCard();
+    }
+  } else if (currentTab === 'blanks') {
+    if (e.key === 'Enter') {
+      validateBlankText();
+    }
+  }
+});
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+  renderQuizQuestion();
+});
+// Ejecución inmediata en caso de script diferido
+renderQuizQuestion();
+</script></div></main><footer class="w-full bg-surface-container-low text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 py-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10"><div class="md:col-span-2 space-y-3"><div class="flex items-center gap-2"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">Universitat de Lleida</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Plataforma docente interactiva de Interacción Persona-Ordenador (IPO) y Diseño Centrado en el Usuario desarrollada por el Grupo de Investigación en Interacción Persona-Ordenador e Integración de Datos (GRIHO).</p><p class="font-body-sm text-body-sm text-on-surface-variant">Dirección académica y contenidos: <strong class="text-on-surface font-semibold">Dr. Toni Granollers</strong> · Cátedra de Usabilidad y Accesibilidad.</p></div><div><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold block mb-3">Marco Conceptual</span><ul class="space-y-2 font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="mpiu-a" href="#">Ingeniería de la Usabilidad (MPIu+a)</a></li><li><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="#">Ciclo de Vida DCU</a></li><li><a class="hover:text-primary transition-colors" data-path="explorar-conceptos" href="#">Heurísticas y Accesibilidad</a></li><li><a class="hover:text-primary transition-colors" data-path="recursos" href="#">Normativa ISO 9241-210</a></li></ul></div><div><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold block mb-3">Afiliaciones Académicas</span><div class="flex flex-wrap gap-2"><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">UdL</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">GRIHO</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">AIPO</span><span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-code-inline text-code-inline text-[11px] font-medium">ACM SIGCHI</span></div><div class="mt-4 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span>WCAG 2.2 Nivel AA</span></div></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline"><p>© Universitat de Lleida · GRIHO Research Group. Licencia <a class="underline hover:text-on-surface" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0)</a>.</p><p class="font-code-inline text-code-inline text-[12px]">v3.4.0 · Laboratorio de Usabilidad UdL</p></div></div></footer></body></html>

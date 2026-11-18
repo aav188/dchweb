@@ -1,0 +1,527 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Curso IPO - Interacción Persona-Ordenador · UdL</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#5f5e60","surface-container-low":"#f4f3f8","on-primary-fixed-variant":"#00458f","surface-variant":"#e3e2e7","outline-variant":"#c1c6d6","on-primary-fixed":"#001b3f","on-surface":"#1a1b1f","surface-bright":"#faf8fe","primary-fixed":"#d7e2ff","surface-tint":"#005cbb","on-tertiary-fixed":"#001b3f","on-surface-variant":"#414753","inverse-surface":"#2f3034","on-error-container":"#93000a","primary-fixed-dim":"#abc7ff","on-tertiary-fixed-variant":"#00458e","surface-dim":"#dad9df","surface-container":"#eeedf3","on-primary-container":"#fcfbff","secondary-fixed":"#e4e2e4","on-secondary-fixed":"#1b1b1d","background":"#faf8fe","surface-container-high":"#e9e7ed","inverse-primary":"#abc7ff","on-secondary":"#ffffff","error-container":"#ffdad6","on-tertiary":"#ffffff","on-primary":"#ffffff","secondary-container":"#e2dfe1","tertiary-fixed":"#d7e3ff","inverse-on-surface":"#f1f0f5","on-error":"#ffffff","secondary-fixed-dim":"#c8c6c8","surface":"#faf8fe","error":"#ba1a1a","primary-container":"#0071e3","surface-container-highest":"#e3e2e7","on-secondary-fixed-variant":"#474649","tertiary-fixed-dim":"#abc7ff","on-secondary-container":"#636264","tertiary-container":"#0071e2","surface-container-lowest":"#ffffff","on-background":"#1a1b1f","tertiary":"#0059b4","on-tertiary-container":"#fcfaff","outline":"#717785","primary":"#0059b5"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin-md":"2rem","space-md":"1rem","margin":"3rem","space-xl":"2.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-sm":"1.25rem","space-lg":"1.5rem","gutter":"1.5rem"},fontFamily:{"display-hero-mobile":["Inter"],"label-sm":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"display-hero":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"code-inline":["JetBrains Mono"]},fontSize:{"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin flex items-center justify-between gap-gutter-sm"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group text-left" data-path="inicio" href="#"><span class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm font-bold shadow-sm">IPO</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors leading-none">Curso IPO</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">UdL · Dr. Toni Granollers</span></div></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full"><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inicio" href="#">Inicio</a><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="curso-ipo" href="#">Curso IPO</a><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="explorar-conceptos" href="#">Explorar Conceptos</a><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="mpiua" href="#">MPIu+a</a><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="recursos" href="#">Recursos</a><a class="px-space-md py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="blog" href="#">Blog</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-space-md py-1.5 rounded-xl cursor-pointer transition-all gap-space-sm"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline pr-space-md">Buscar teorías, métodos...</span><kbd class="font-code-inline text-code-inline bg-surface-container-highest text-on-surface-variant px-1.5 py-0.5 rounded shadow-sm">⌘K</kbd></div><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-full"><span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Progreso: 30%</span><div class="w-16 h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 30%;"></div></div></div><button aria-label="Cambiar tema" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin overflow-x-auto"><nav class="flex items-center gap-space-lg whitespace-nowrap py-1" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m1-fundamentos" href="#">M1 Fundamentos</a><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m2-factor-humano" href="#">M2 Factor Humano</a><a class="py-2 font-label-md text-label-md text-primary font-semibold transition-all border-b-2 border-primary" data-path="m3-dcu" href="#">M3 DCU</a><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m4-requisitos" href="#">M4 Requisitos</a><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m5-prototipado" href="#">M5 Prototipado</a><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m6-evaluacion" href="#">M6 Evaluación</a><a class="py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all border-b-2 border-transparent" data-path="m7-accesibilidad" href="#">M7 Accesibilidad</a></nav></div></div><div class="bg-surface-container-low/60"><div class="max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin py-2"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant overflow-x-auto whitespace-nowrap"><a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="#">Curso IPO</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" data-path="m3-dcu" href="#">Módulo 3: DCU</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" data-path="fases-mpiua" href="#">Fases MPIu+a</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><a class="hover:text-primary transition-colors" data-path="fase-diseno" href="#">Fase de Diseño</a><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span aria-current="page" class="text-on-surface font-semibold">Modelo Mental y Conceptual</span></nav></div></div></header><main class="w-full flex-1 pt-[132px] bg-background"><div class="flex flex-col w-full">
+<!-- Cabecera Temática & Metadata Superior -->
+<div class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin py-space-lg">
+<div class="flex flex-col gap-space-md">
+<!-- Barra de Navegación Contextual & Retorno -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<a class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md hover:underline font-semibold transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            Volver a Fase de Diseño (MPIu+a)
+          </a>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wide uppercase">Fase 02 de MPIu+a</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Eje Cognitivo de la Interacción</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Cátedra Dr. Toni Granollers (GRIHO UdL)</span>
+</div>
+</div>
+<!-- Título H1 Académico & Síntesis Semántica -->
+<div class="space-y-space-xs max-w-4xl">
+<div class="inline-flex items-center gap-space-xs text-outline font-code-inline text-code-inline">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+<span>DCU-DSG-03 // EPISTEMOLOGÍA DE LA INTERFAZ</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Modelo Mental y Modelo Conceptual en el Diseño Interactivo
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            La articulación de la interfaz como puente semántico y conversacional entre la representación mental del usuario y la abstracción conceptual formalizada por el equipo de diseño dentro del marco del Modelo de Proceso de la Ingeniería de la Usabilidad y de la Accesibilidad (MPIu+a).
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contenedor Principal de la Lección -->
+<div class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin py-space-xl space-y-space-xl">
+<!-- Cuadrícula de Métricas Clave / Indicadores Cognitivos -->
+<section aria-labelledby="metricas-clave-title">
+<h2 class="sr-only" id="metricas-clave-title">Pilares y Fundamentos Epistemológicos</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tarjeta 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-code-inline text-code-inline text-primary font-semibold">01. MEDIACIÓN</span>
+<span class="material-symbols-outlined text-primary text-[22px]">swap_horiz</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Interfaz como Mediador</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              El diálogo entre el modelo conceptual y el mental se realiza exclusivamente por medio de la interfaz. No hay telepatía sistema-humano.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t-0 bg-surface-container-low px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant">
+            Vía de comunicación única
+          </div>
+</div>
+<!-- Tarjeta 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-code-inline text-code-inline text-primary font-semibold">02. NATURALEZA</span>
+<span class="material-symbols-outlined text-primary text-[22px]">memory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Incompleto y Parsimonioso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              El modelo mental es dinámico, inestable, acientífico, con supersticiones intuitivas y ejecutable mentalmente de forma imperfecta.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t-0 bg-surface-container-low px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant">
+            Memoria a Largo Plazo (MLP)
+          </div>
+</div>
+<!-- Tarjeta 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-code-inline text-code-inline text-primary font-semibold">03. POSTULADO NORMAN</span>
+<span class="material-symbols-outlined text-primary text-[22px]">schema</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Predictibilidad de Actos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Un modelo conceptual riguroso evita que el usuario actúe de memoria: le permite anticipar y comprender el porqué de los comportamientos.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t-0 bg-surface-container-low px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant">
+            Norman [NOR90]
+          </div>
+</div>
+<!-- Tarjeta 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-code-inline text-code-inline text-primary font-semibold">04. SESGO TÉCNICO</span>
+<span class="material-symbols-outlined text-primary text-[22px]">code_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">El Sesgo del Desarrollador</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              El peligro de imponer arquitecturas de base de datos o motores de búsqueda al usuario final que desconoce dicha lógica computacional.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t-0 bg-surface-container-low px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant">
+            Antipatrón de Diseño
+          </div>
+</div>
+</div>
+</section>
+<!-- Sección 1: La Gran Brecha Cognitiva -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-sm space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Fundamento Teórico</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">
+            La Gran Brecha Cognitiva: Modelo Mental vs. Modelo Conceptual
+          </h2>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container text-on-surface-variant font-code-inline text-code-inline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">menu_book</span>
+<span>Material Didáctico Canónico · Toni Granollers</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Texto explicativo -->
+<div class="lg:col-span-6 space-y-space-md text-on-surface-variant font-body-md text-body-md">
+<p>
+            Durante la interacción y el aprendizaje con cualquier artefacto tecnológico, la persona adquiere conocimientos sobre las relaciones estructurales y funcionales del entorno con el que interactúa. En este proceso continuo, va configurando internamente su propio <strong class="text-on-surface font-semibold">Modelo Mental</strong>.
+          </p>
+<p>
+            Por contrapartida, el <strong class="text-on-surface font-semibold">Modelo Conceptual</strong> del sistema software representa una abstracción externa y formalizada, descrita mediante diagramas, notaciones y modelos con rigor analítico. Dicha abstracción formaliza el conocimiento que cualquier usuario debería poseer para operar el sistema eficazmente.
+          </p>
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">warning_amber</span>
+              El axioma de Norman [NOR90]
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface">
+              «Un modelo conceptual correcto permite predecir los efectos de los actos propios sobre el sistema. La carencia de un modelo conceptual inteligible fuerza al usuario a actuar estrictamente de memoria: operando botones sin entender los principios subyacentes ni el porqué de las respuestas del software.»
+            </p>
+</div>
+<!-- Píldoras de atributos del Modelo Mental -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Atributos inherentes al modelo mental:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">No es estático</span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">Incompleto</span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">Inestable</span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">Límites difusos</span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">Acientífico</span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">Parsimonioso</span>
+</div>
+</div>
+</div>
+<!-- Figura canónica IMAGE_4 con desglose -->
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center shadow-sm">
+<div class="w-full flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Figura 1 · Esquema Canónico GRIHO</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-inline text-[11px]">NOR90 / MPIu+a</span>
+</div>
+<div class="w-full overflow-hidden rounded-xl bg-surface-container-lowest p-space-md flex items-center justify-center">
+<img alt="El Diálogo entre Modelo Conceptual y Modelo Mental a través de la Interfaz" class="max-h-64 object-contain mx-auto" data-alt="Technical schematic diagram showing Conceptual Model on the left with a desktop computer graphic, and Mental Model on the right with a user figure, separated by a vertical pillar labeled Interface with bidirectional communication arrows between them on a clean neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKYXv56jjEPMwNsmyvGBOtjMC3ga_a-r0jIpZgtAQ1o4AuY5IpzCL9lOjzbVhFA5xlsCURpZN3R1DfD13t5xYe1xbOE7bsUq1eNul_Qbnu214S7C8dNpzphHNCSLQjLHR0Ab2-ei0qaNJXlOwFf-ip6aEUEoYjaEb6p1Z_6pUymMkLvxaVmpmYkPAana4LxMh1m005vdu6CHaZzlu0Jaa7D5aQ8_7eroqr5kMjg8g">
+</div>
+<div class="mt-space-md w-full bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs text-left">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Análisis Pedagógico del Diagrama</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Observa los dos vectores bidireccionales convergentes: el computador alberga el <em>Modelo Conceptual</em> del diseñador; la persona contiene su <em>Modelo Mental</em> subjetivo. Ambos mundos son herméticos entre sí: <strong>solo pueden intercambiar estados cognitivos a través del pilar vertical de la interfaz gráfica y sensorial</strong>.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección 2: Los 3 Principios Rectores del Modelo Conceptual -->
+<section class="space-y-space-lg">
+<div class="text-left space-y-space-xs max-w-3xl">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Criterios de Excelencia Metodológica</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Los 3 Principios Rectores del Modelo Conceptual (MC)
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Para que el modelo conceptual sirva genuinamente de guía y reduzca la carga cognitiva, el equipo de diseño en MPIu+a debe formularlo sobre tres pilares innegociables:
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Principio 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">psychology_alt</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-code-inline text-code-inline text-primary font-semibold">PRINCIPIO 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Asimilable</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Fundamentado en conceptos, objetos y analogías que ya resulten plenamente familiares al ecosistema habitual del usuario. Minimiza el desaprendizaje.
+              </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block mb-0.5">En la práctica:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Adopción de metáforas semánticas del mundo real (carpetas, carritos de compra, escritorios, lupas).
+            </p>
+</div>
+</div>
+<!-- Principio 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">sync_saved_locally</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-code-inline text-code-inline text-primary font-semibold">PRINCIPIO 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Consistente</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Estructura lógica coherente, estable y bien formulada en todos los módulos, pantallas y estados interactivos sin contradicciones sintácticas.
+              </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block mb-0.5">En la práctica:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Una misma acción produce siempre consecuencias predecibles en idénticas coordenadas temporales y de interfaz.
+            </p>
+</div>
+</div>
+<!-- Principio 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">filter_vintage</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-code-inline text-code-inline text-primary font-semibold">PRINCIPIO 03</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Simple</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Descripciones operativas comprensibles de inmediato por un usuario medio, despojadas de jerga computacional o tecnicismos de implementación.
+              </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block mb-0.5">En la práctica:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mensajes centrados en la tarea humana («Guardando cambios») y nunca en la ingeniería interna («Commit en BD OK»).
+            </p>
+</div>
+</div>
+</div>
+<!-- Axioma de Cátedra Granollers -->
+<div class="p-space-lg rounded-2xl bg-surface-container flex flex-col md:flex-row items-center gap-space-lg shadow-sm">
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">format_quote</span>
+</div>
+<div class="space-y-space-xs">
+<blockquote class="font-headline-sm text-headline-sm text-on-surface italic leading-snug">
+            «El diálogo entre el modelo conceptual del sistema y el modelo mental de los usuarios se realiza exclusivamente por medio de la interfaz. No basta con diseñar para la mera efectividad o funcionalidad: si la estructura no dialoga armónicamente con la mente de quien la opera, el sistema fracasará.»
+          </blockquote>
+<div class="flex items-center gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<span class="font-semibold text-on-surface">Dr. Toni Granollers</span>
+<span>·</span>
+<span>Director del GRIHO, Cátedra Universitat de Lleida</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección 3: Caso Canónico: La Metáfora del Supermercado y Tienda Online -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-sm space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="max-w-3xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Estudio de Caso Canónico</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            La Metáfora del Supermercado y la Tienda Online
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            La evidencia empírica de cómo la imposición del modelo preconcebido del programador quebranta la experiencia del comprador común.
+          </p>
+</div>
+<span class="px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+          Evidencia Empírica IPO
+        </span>
+</div>
+<!-- Inserción de la Imagen Canónica IMAGE_3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col items-center gap-space-md">
+<div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+            Figura 2 · Contraste de Modelos: Modelo Conceptual Sistemático vs. Modelo Mental del Usuario
+          </h3>
+<span class="font-code-inline text-code-inline text-outline">GRIHO Caso Supermercado</span>
+</div>
+<div class="w-full overflow-hidden rounded-xl bg-surface-container-lowest p-space-md flex items-center justify-center">
+<img alt="Contraste de Modelos: Modelo Conceptual Sistemático frente a Modelo Mental del Usuario" class="max-h-80 object-contain mx-auto" data-alt="Educational comparative diagram illustrating on the left a conceptual system model depicted as a hierarchical logic tree inside a thought cloud, and on the right a user mental model inside a thought cloud showing shopping cart, web browser, and supermarket cashier concepts, pointing down to an e-commerce grocery store interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQUlny1HIdGbiVPrLVc2gXx8o-SYhX1HXiUT7yL7-NwlstWA9AYF0XoilWUm6QtjM_ONdxdKNZY7eK-InIByDVoksjLeNa4ketrYosHgV5WwMqN6gbet-c_rtw79LfaLXWttH01aYIQyld9ToOHEO0x4uQyTtLigSkUUi02QbjgjJIKvGCKH3Y88ywYTEQ_gVLs5DAKernqA7ykOpRQdyzeYFXwykWFxpLSc0BPU">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md w-full mt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+              Nube Izquierda: El Modelo Conceptual Sistemático
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pensado desde la ingeniería: <strong>sistemático, estrictamente lógico y comprehensivo</strong>. Representado habitualmente mediante taxonomías de grafos rígidos o índices booleanos donde cada entidad pertenece a una clave primaria técnica.
+            </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+              Nube Derecha: El Modelo Mental del Usuario
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pensado desde la experiencia vital: <strong>individualizado, informal e incompleto</strong>. El usuario evoca el pasillo del supermercado, los productos vecinos por contexto cotidiano, el acto físico de empujar el carrito y la figura de la cajera que liquida la cuenta.
+            </p>
+</div>
+</div>
+</div>
+<!-- Matriz Comparativa Detallada -->
+<div class="space-y-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+          Matriz de Fricción: Pensamiento del Usuario vs. Estructura del Programador
+        </h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-md text-label-md">
+<th class="p-space-md">Dimensión de Interacción</th>
+<th class="p-space-md">Modelo Mental del Cliente</th>
+<th class="p-space-md">Sesgo Técnico del Programador</th>
+<th class="p-space-md">Resolución MPIu+a</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface-variant divide-y-0">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Organización de Productos</td>
+<td class="p-space-md">Estanterías contextuales: salsas junto a pastas; carbón junto a carnes para asar.</td>
+<td class="p-space-md">Categorías alfabéticas o particiones por tablas relacionales de la BD.</td>
+<td class="p-space-md text-primary font-medium">Card Sorting centrado en escenarios de uso y compra contextual.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-space-md font-semibold text-on-surface">Búsqueda y Localización</td>
+<td class="p-space-md">Recorrido visual guiado, cartelería de pasillo, hallazgos casuales y ofertas directas.</td>
+<td class="p-space-md">Caja de texto única con sintaxis booleana estricta similar a motores genéricos.</td>
+<td class="p-space-md text-primary font-medium">Búsqueda tolerante a erratas combinada con navegación por pasillos visuales.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Acumulación de Compra</td>
+<td class="p-space-md">Carrito visible, sensación de volumen físico y fácil descarte en cualquier momento.</td>
+<td class="p-space-md">Buffer de IDs temporales en memoria o tablas de órdenes pendientes no tangibles.</td>
+<td class="p-space-md text-primary font-medium">Metáfora persistente del carrito de compra con feedback háptico y visual.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-space-md font-semibold text-on-surface">Finalización y Pago</td>
+<td class="p-space-md">Caja registradora, ticket desglosado con total acumulado y despedida cordial.</td>
+<td class="p-space-md">Formulario de pasarela con tokens cifrados, códigos de respuesta HTTP y reintentos.</td>
+<td class="p-space-md text-primary font-medium">Proceso de Checkout transparente en 3 pasos con confirmación visual clara.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Sección 4: Laboratorio Interactivo de Alineación de Modelos -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-sm space-y-space-lg" id="laboratorio-interactivo">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Simulador Cognitivo</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">
+            Laboratorio de Brecha: Ejecución y Evaluación de Norman
+          </h2>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="tab-btn-desalineado" onclick="switchLabMode('desalineado')" type="button">
+            Modelo Desalineado (Brecha Alta)
+          </button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="tab-btn-alineado" onclick="switchLabMode('alineado')" type="button">
+            Modelo Alineado MPIu+a (Brecha Mínima)
+          </button>
+</div>
+</div>
+<!-- Contenedor Dinámico del Simulador -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low space-y-space-md transition-all" id="lab-canvas">
+<!-- Estado: Desalineado -->
+<div class="space-y-space-md" id="lab-view-desalineado">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-space-xs text-error font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">error</span>
+              Falla del Modelo: Se exige al usuario actuar de memoria
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-error-container text-on-error-container font-code-inline text-code-inline">Brecha de Ejecución: 87%</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Interfaz Vista por el Usuario:</span>
+<div class="p-space-md bg-surface-container rounded-lg font-code-inline text-code-inline text-on-surface space-y-2">
+<div class="text-on-surface-variant">// Input de consulta:</div>
+<div class="bg-surface-container-lowest p-2 rounded text-outline">SELECT * FROM products WHERE cat_id = 49 AND in_stock = 1;</div>
+<div class="text-error flex items-center gap-1 text-[12px]">
+<span class="material-symbols-outlined text-[14px]">close</span>
+                  Error: 'cat_id' desconocido por el cliente habitual.
+                </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                El usuario se frustra: «Solo quería comprar tomates frescos, no entiendo qué es cat_id».
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Impacto Cognitivo Medido:</span>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+                  Carga cognitiva intrínseca desbordada.
+                </li>
+<li class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[18px]">running_with_errors</span>
+                  Abandono del carrito de compra &gt; 74%.
+                </li>
+<li class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+                  Supersticiones: «Si toco el botón rojo pierdo mi tarjeta».
+                </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Estado: Alineado (Oculto por defecto) -->
+<div class="space-y-space-md hidden" id="lab-view-alineado">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+              Alineación Perfecta: Interfaz transparente y metafórica
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline">Brecha de Ejecución: 4%</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Interfaz Vista por el Usuario:</span>
+<div class="p-space-md bg-surface-container rounded-lg space-y-2">
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 rounded-lg">
+<span class="flex items-center gap-2 font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary">eco</span>
+                    Pasillo: Frutería y Verduras
+                  </span>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Pasillo 3</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<span class="font-body-sm text-body-sm">Tomate de Huerto (1 Kg)</span>
+<button class="px-3 py-1 bg-primary text-on-primary rounded-full text-xs font-medium" type="button">
+                    + Añadir al carrito
+                  </button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs">
+                El usuario reconoce de inmediato su modelo mental: navega por pasillos y deposita en el carro.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Impacto Cognitivo Medido:</span>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                  Predecibilidad absoluta de los efectos de cada acción.
+                </li>
+<li class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">sentiment_very_satisfied</span>
+                  Alineación con la Memoria de Trabajo del usuario medio.
+                </li>
+<li class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">model_training</span>
+                  Fórmula MPIu+a: Asimilable, Consistente y Simple.
+                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bloque de Navegación Curricular Inferior -->
+<nav aria-label="Navegación entre lecciones" class="w-full bg-surface-container-lowest p-space-md md:p-space-lg rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-outline">Lección anterior</span>
+<span class="font-semibold text-on-surface">Relación con Factores Humanos</span>
+</span>
+</a>
+<a class="px-space-lg py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all shadow-sm" href="#">
+        Ver Índice de la Fase de Diseño (MPIu+a)
+      </a>
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors text-right" href="#">
+<span class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">Siguiente fase</span>
+<span class="font-semibold text-on-surface">Fase de Implementación (MPIu+a)</span>
+</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</nav>
+</div>
+</div>
+<script>
+  function switchLabMode(mode) {
+    var viewDes = document.getElementById('lab-view-desalineado');
+    var viewAli = document.getElementById('lab-view-alineado');
+    var btnDes = document.getElementById('tab-btn-desalineado');
+    var btnAli = document.getElementById('tab-btn-alineado');
+
+    if (!viewDes || !viewAli || !btnDes || !btnAli) return;
+
+    if (mode === 'alineado') {
+      viewDes.classList.add('hidden');
+      viewAli.classList.remove('hidden');
+
+      btnAli.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      btnAli.classList.remove('text-on-surface-variant');
+
+      btnDes.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      btnDes.classList.add('text-on-surface-variant');
+    } else {
+      viewAli.classList.add('hidden');
+      viewDes.classList.remove('hidden');
+
+      btnDes.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      btnDes.classList.remove('text-on-surface-variant');
+
+      btnAli.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      btnAli.classList.add('text-on-surface-variant');
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest mt-auto shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl"><div class="md:col-span-5 space-y-space-sm"><div class="flex items-center gap-space-sm"><span class="flex items-center justify-center w-7 h-7 rounded-md bg-primary text-on-primary font-headline-sm text-headline-sm font-bold">IPO</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Plataforma académica y de investigación dedicada al Diseño Centrado en las Personas (DCU) y la metodología de ingeniería de la usabilidad y de la accesibilidad (MPIu+a).</p><p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Coordinación: <span class="text-on-surface">Dr. Toni Granollers</span> · Escola Politècnica Superior (EPS), Universitat de Lleida (UdL)</p></div><div class="md:col-span-4 space-y-space-sm"><h3 class="font-label-md text-label-md text-on-surface uppercase font-semibold tracking-wider">Entidades Colaboradoras</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px] text-primary">school</span>GRIHO (Grup de Recerca en Interacció Persona-Ordinador)</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px] text-primary">apartment</span>Universitat de Lleida (UdL)</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px] text-primary">groups</span>AIPO (Asociación Interacción Persona-Ordenador)</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px] text-primary">public</span>ACM SIGCHI Spanish Chapter</a></li></ul></div><div class="md:col-span-3 space-y-space-sm"><h3 class="font-label-md text-label-md text-on-surface uppercase font-semibold tracking-wider">Calidad &amp; Accesibilidad</h3><div class="space-y-space-xs"><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container font-code-inline text-code-inline text-on-surface font-medium"><span class="material-symbols-outlined text-[16px] text-primary">verified</span>WCAG 2.2 Nivel AA</div><p class="font-body-sm text-body-sm text-on-surface-variant">Arquitectura de contenidos certificada según estándares internacionales de ergonomía cognitiva y accesibilidad web.</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-xs text-center md:text-left"><span>Contenidos bajo licencia</span><a class="text-primary hover:underline font-medium" href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noreferrer" target="_blank">Creative Commons CC BY-NC 4.0 Internacional</a><span>· Universitat de Lleida (UdL)</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="aviso-legal-privacidad" href="#">Aviso Legal &amp; Privacidad</a><a class="hover:text-primary transition-colors" data-path="accesibilidad" href="#">Declaración de Accesibilidad</a><a class="hover:text-primary transition-colors" data-path="contacto" href="#">Contacto</a></div></div></div></footer>
+
+</body></html>

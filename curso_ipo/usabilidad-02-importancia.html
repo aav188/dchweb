@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1b1f","surface-container":"#eeedf3","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3f","on-secondary-container":"#636264","surface-variant":"#e3e2e7","outline-variant":"#c1c6d6","on-secondary-fixed":"#1b1b1d","surface-container-high":"#e9e7ed","on-tertiary-fixed-variant":"#00458e","on-tertiary":"#ffffff","on-error-container":"#93000a","on-error":"#ffffff","on-secondary-fixed-variant":"#474649","on-primary-fixed-variant":"#00458f","tertiary-fixed":"#d7e3ff","error-container":"#ffdad6","on-tertiary-container":"#fcfaff","background":"#faf8fe","secondary-fixed-dim":"#c8c6c8","error":"#ba1a1a","primary":"#0059b5","surface":"#faf8fe","surface-tint":"#005cbb","tertiary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","surface-bright":"#faf8fe","surface-dim":"#dad9df","tertiary":"#0059b4","secondary-container":"#e2dfe1","outline":"#717785","tertiary-container":"#0071e2","on-primary":"#ffffff","secondary-fixed":"#e4e2e4","on-tertiary-fixed":"#001b3f","on-surface-variant":"#414753","on-primary-container":"#fcfbff","secondary":"#5f5e60","inverse-surface":"#2f3034","primary-fixed-dim":"#abc7ff","primary-container":"#0071e3","inverse-primary":"#abc7ff","on-secondary":"#ffffff","surface-container-highest":"#e3e2e7","inverse-on-surface":"#f1f0f5","surface-container-low":"#f4f3f8","on-surface":"#1a1b1f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","margin-sm":"1.25rem","margin":"3rem","gutter-sm":"1rem","space-sm":"0.5rem","gutter":"1.5rem","margin-md":"2rem"},fontFamily:{"label-sm":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"code-inline":["JetBrains Mono"],"body-lg":["Inter"],"headline-md":["Inter"],"display-hero-mobile":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"]},fontSize:{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><span class="text-on-surface-variant">Módulo 1: Fundamentos</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">Usabilidad</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="01-definicion-de-usabilidad" href="usabilidad-01-definicion.html">01 Definición</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-[0_2px_8px_rgba(0,113,227,0.18)]" data-path="02-importancia-de-la-usabilidad" href="usabilidad-02-importancia.html">02 Importancia</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html">03 Beneficios</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="04-atributos-de-usabilidad" href="usabilidad-04-atributos.html">04 Atributos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html">05 Calidad de Software</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="06-usabilidad-web" href="usabilidad-06-usabilidad-web.html">06 Usabilidad Web</a></nav></div></header><main class="w-full pt-36 bg-background"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col w-full">
+<!-- 1. Menú / Selector de las 6 tarjetas temáticas de Usabilidad -->
+<section class="w-full mb-space-xl"><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-gutter-sm"><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="01-definicion-de-usabilidad" href="usabilidad-01-definicion.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">01</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">menu_book</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Definición</span><span class="font-body-sm text-body-sm text-on-surface-variant">Conceptos e ISO 9241</span></div></a><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">02</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">priority_high</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Importancia</span><span class="font-body-sm text-body-sm text-on-primary-container/85">El factor humano frente al chip</span></div></div><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="03-beneficios-de-la-usabilidad" href="usabilidad-03-beneficios.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">03</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">trending_up</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Beneficios</span><span class="font-body-sm text-body-sm text-on-surface-variant">Retorno de inversión ROI</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="04-atributos-de-usabilidad" href="usabilidad-04-atributos.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">04</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">tune</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Atributos</span><span class="font-body-sm text-body-sm text-on-surface-variant">Eficacia, eficiencia y agrado</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="05-calidad-de-software-y-usabilidad" href="usabilidad-05-calidad-software.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">05</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">verified</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Calidad Soft.</span><span class="font-body-sm text-body-sm text-on-surface-variant">ISO 25010 &amp; Ingeniería</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="06-usabilidad-web" href="usabilidad-06-usabilidad-web.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">06</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">language</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Usabilidad Web</span><span class="font-body-sm text-body-sm text-on-surface-variant">Hipertexto y navegación</span></div></a></div></section>
+<!-- 2. Header Temático & Reflexión Inicial -->
+<header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 02</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fundamentos MPIu+a · Módulo 1</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Importancia de la Usabilidad</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl">Comprender la usabilidad exige desplazar la atención desde el ancho de banda del silicio hacia los modelos mentales, capacidades sensoriales y límites de la atención humana.</p>
+</div>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="usabilidad-02-practica.html"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Dix et al. [DIX04] · Norman · Nielsen</span>
+</div>
+</div>
+</div>
+</header><section class="w-full mb-space-xl"><h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">La tecnología se acelera; la biología cognoscitiva humana permanece constante.</h2></section>
+<!-- 3. Gran Fundamentación: Dix et al. (2004) -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl mb-space-xl shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+<span>Potencia tecnológica vs. Principios de interacción</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+          El principio de independencia tecnológica
+        </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          El gran avance en la tecnología de los ordenadores ha incrementado exponencialmente su capacidad de cálculo y ensanchado la banda de comunicación entre máquina y persona. No obstante, como establecen <strong>Dix, Finlay, Abowd y Beale [DIX04]</strong>, los principios básicos de la interacción son estrictamente <span class="text-primary font-semibold">independientes del soporte técnico</span>.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Dichos principios descansan en el conocimiento científico de las capacidades, condicionantes y limitaciones psicofísicas del ser humano (percepción visual, memoria de trabajo, atención selectiva) antes que en la velocidad del microprocesador o en la resolución de los monitores.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-code-inline text-code-inline text-on-surface-variant">
+<span class="bg-surface-container px-space-sm py-1 rounded">Dix et al., 2004</span>
+<span>·</span>
+<span>Prentice Hall 3rd Ed.</span>
+<span>·</span>
+<span>HCI Canonical Corpus</span>
+</div>
+</div>
+<!-- Diagrama SVG: Ancho de banda vs Modelo Humano -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl flex flex-col items-center justify-center">
+<div class="w-full flex items-center justify-between mb-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span>Evolución Disociada</span>
+<span class="text-primary font-bold">1980 — Actualidad</span>
+</div>
+<svg class="w-full h-48 overflow-visible" fill="none" viewbox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Cuadrícula de fondo -->
+<line class="text-surface-variant" stroke="currentColor" stroke-width="1.5" x1="20" x2="320" y1="150" y2="150"></line>
+<line class="text-surface-variant" stroke="currentColor" stroke-dasharray="3 3" x1="20" x2="320" y1="100" y2="100"></line>
+<line class="text-surface-variant" stroke="currentColor" stroke-dasharray="3 3" x1="20" x2="320" y1="50" y2="50"></line>
+<!-- Curva Potencia Tecnológica (Exponencial) -->
+<path class="text-primary" d="M 25 142 Q 180 135 315 28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.5"></path>
+<circle class="fill-primary" cx="315" cy="28" r="5"></circle>
+<!-- Curva Capacidad Cognitiva Humana (Constante) -->
+<path class="text-outline" d="M 25 110 L 315 110" fill="none" stroke="currentColor" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-outline" cx="315" cy="110" r="4"></circle>
+<!-- Textos y etiquetas en SVG -->
+<text class="fill-primary text-[11px] font-medium font-sans" x="32" y="40">Potencia &amp; Ancho de banda de cálculo (exponencial)</text>
+<text class="fill-outline text-[11px] font-medium font-sans" x="32" y="102">Capacidades psicofísicas del usuario (invariantes)</text>
+<text class="fill-on-surface-variant text-[10px] font-sans" x="25" y="168">Aparición PC</text>
+<text class="fill-on-surface-variant text-[10px] font-sans" x="160" y="168">Web &amp; Móvil</text>
+<text class="fill-on-surface-variant text-[10px] font-sans" x="270" y="168">Era Actual</text>
+</svg>
+<div class="w-full mt-space-sm pt-space-xs text-center font-label-sm text-label-sm text-on-surface-variant">
+          La brecha resultante sólo se solventa mediante <strong class="text-on-surface">Ingeniería de Usabilidad</strong>.
+        </div>
+</div>
+</div>
+</section>
+<!-- 4. Reflexión Crítica: Dos preguntas cardinales -->
+<section class="w-full mb-space-xl">
+<div class="bg-surface-container-high rounded-xl p-space-lg lg:p-space-xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">contact_support</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Cuestionamiento de Base</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-lg">
+        Preguntas clave para desarmar la complacencia tecnológica
+      </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Pregunta 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+              01
+            </div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">
+              ¿Por qué nos tenemos que preocupar por la usabilidad?
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Porque el éxito de un producto interactivo nunca se mide por la sofisticación de su código interno, sino por la precisión y comodidad con la que capacita a un ser humano real para alcanzar sus propósitos. La tecnología que no es adoptada con soltura se convierte automáticamente en coste inútil.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Alineación de metas usuario-sistema</span>
+</div>
+</div>
+<!-- Pregunta 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+              02
+            </div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">
+              ¿Por qué las cosas son tan difíciles de utilizar?
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Porque el diseño tecnológico tradicional refleja el modelo mental del programador (centrado en la estructura de datos y el flujo algorítmico) en lugar del modelo mental de las personas usuarias, obligando al usuario a transformarse forzosamente en un operario del sistema.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">sync_problem</span>
+<span>Inversión del modelo mental dominante</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Los Teóricos Fundacionales: Norman & Nielsen -->
+<section class="w-full mb-space-xl">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Autoridades Académicas Canónicas</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+        Perspectivas de Donald Norman y Jakob Nielsen
+      </h3>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Tarjeta Donald Norman -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                DN
+              </div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Donald A. Norman</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">The Invisible Computer (1999) · MIT Press</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[28px]">format_quote</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface italic pl-space-md py-space-xs">
+            “El verdadero problema no radica en el énfasis de la propia tecnología, sino en la persona para la cual está hecho el dispositivo. El despliegue tecnológico habitual olvida por completo al usuario final.”
+          </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Norman expone que la tecnología madura debe volverse <em>invisible</em>. Si los usuarios se ven obligados a concentrarse en los mecanismos mecánicos o lógicos del ordenador para redactar un informe, planificar o comunicarse, el ordenador ha fracasado en su propósito instrumental primario.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility_off</span>
+<span class="font-semibold">Postulado central [NOR99]:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Cuando la complejidad técnica se interpone entre la persona y su objetivo, la máquina se convierte en un obstáculo en lugar de una herramienta potenciadora.
+          </p>
+</div>
+</div>
+<!-- Tarjeta Jakob Nielsen -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+                JN
+              </div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Jakob Nielsen</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Usability Engineering (1993) · Academic Press</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[28px]">format_quote</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface italic pl-space-md py-space-xs">
+            “La usabilidad es un factor crítico para que el sistema alcance su objetivo. Los usuarios deben tener la sensación real de que el sistema les ayudará a realizar sus tareas. Y éste debe hacerlo; de otra forma serán reacios a su utilización.”
+          </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Nielsen traslada la discusión al terreno de la supervivencia económica y operativa del software: ninguna funcionalidad, por matemáticamente perfecta que resulte, genera valor si el usuario percibe fricción o rechazo durante los primeros minutos de interacción.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-semibold">Postulado central [NIE93]:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            La usabilidad no es un añadido estético o secundario, sino la condición <em>sine qua non</em> para que el sistema sea aceptado y consiga su objetivo proyectado.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Matriz de Consecuencias e Impacto Operativo -->
+<section class="w-full mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Patología del Software</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Impacto operativo y consecuencias de la falta de usabilidad
+          </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Cuando el diseño desoye al usuario, las consecuencias no son meramente estéticas: desencadenan daños directos en adopción, salud laboral y costes corporativos.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Factor 1: Abandono -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[22px]">exit_to_app</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Abandono de aplicaciones
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Fuga masiva de usuarios en entornos web abiertos o búsqueda activa de vías alternativas (<em>shadow IT</em>) en organizaciones corporativas.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-inline text-code-inline text-on-surface-variant">
+            &gt; 68% abandono primer uso
+          </div>
+</div>
+<!-- Factor 2: Frustración -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[22px]">sentiment_very_dissatisfied</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Frustración y estrés
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Sobrecarga cognitiva, sensación de incompetencia forzada e irritación sistemática que socavan el bienestar del operador.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-inline text-code-inline text-on-surface-variant">
+            Agotamiento atencional
+          </div>
+</div>
+<!-- Factor 3: Pérdida Productividad -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Pérdida de productividad
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tiempos desmedidos de ejecución de tareas básicas, iteraciones fallidas continuas y proliferación de errores no recuperables.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-inline text-code-inline text-on-surface-variant">
+            Multiplicación x3 en tiempos
+          </div>
+</div>
+<!-- Factor 4: Costes Derivados -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+              Costes de soporte y rediseño
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Saturación del soporte técnico, extensas horas lectivas de capacitación y necesidad de refactorizar código en etapas tardías.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-code-inline text-code-inline text-on-surface-variant">
+            Hasta 100x corregir en prod.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Ilustración / Laboratorio de Evaluación de Fricción (Visual Richness) -->
+<section class="w-full bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl mb-space-xl shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Laboratorio de Percepción y Respuesta</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+          El coste cognitivo invisible de la interfaz hostil
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          En los experimentos de usabilidad llevados a cabo en el laboratorio GRIHO de la Universitat de Lleida, se constata que cada segundo de duda originado por un botón ambiguo o una navegación críptica fragmenta la atención, reduciendo la memoria de trabajo disponible para la toma estratégica de decisiones.
+        </p>
+<div class="pt-space-xs flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">biotech</span>
+<span>Estudios con Eye-Tracking</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">monitoring</span>
+<span>Métricas de Eficiencia Task-Time</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="relative w-full h-64 rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Modern HCI laboratory at Universitat de Lleida with student researchers conducting usability testing with an eye-tracking monitor, displaying interface heatmaps in soft blue and slate tones, academic research setting, natural soft lighting, pristine tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7L5EY1BLYoVQb3cX0MmbAVvgF6UtkZsG6Te5HuG6pfmhDvckjsbnSOg5EMLSg5t716BP5EfwuFzUBktWv8E34xFUivXoiEvZn6uPNTy6F4VIO6phpIaXYGnztVhNfyU1rMuRt7wjEer0UlP2VndEOrBs63fIEzPVTxttbNuhH-Zs8LVVZ40ovCEbwhMKKYQ5DXs_jwEblWeEy997tq3TS1W0AnOWg5SGdP_bbmY0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm text-surface-container-lowest">
+              Pruebas con usuarios en laboratorio · Medición empírica del esfuerzo mental
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Referencias Bibliográficas Canónicas -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl mb-space-xl shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-primary text-[22px]">library_books</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+        Referencias bibliográficas canónicas
+      </h3>
+</div>
+<div class="space-y-space-md">
+<!-- DIX04 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<span class="font-code-inline text-code-inline font-bold px-space-xs py-1 rounded bg-surface-container text-primary">
+            [DIX04]
+          </span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+              Dix, A.; Finlay, J.; Abowd, G.; Beale, R. (2004)
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant italic">
+              Human-Computer Interaction (3rd edition). Prentice Hall, Englewood Cliffs, NJ.
+            </div>
+</div>
+</div>
+<a class="self-start md:self-center flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline" href="https://hcibook.com" rel="noopener noreferrer" target="_blank">
+<span>hcibook.com</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- NIE93 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<span class="font-code-inline text-code-inline font-bold px-space-xs py-1 rounded bg-surface-container text-primary">
+            [NIE93]
+          </span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+              Nielsen, Jakob (1993)
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant italic">
+              Usability Engineering. Academic Press Professional, Boston, MA.
+            </div>
+</div>
+</div>
+<span class="self-start md:self-center font-label-sm text-label-sm text-on-surface-variant">
+          ISBN 0-12-518406-9
+        </span>
+</div>
+<!-- NOR99 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<span class="font-code-inline text-code-inline font-bold px-space-xs py-1 rounded bg-surface-container text-primary">
+            [NOR99]
+          </span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+              Norman, Donald A. (1999)
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant italic">
+              The Invisible Computer: Why Good Products Can Fail, the Personal Computer Is So Complex, and What Can Be Done About It. The MIT Press.
+            </div>
+</div>
+</div>
+<span class="self-start md:self-center font-label-sm text-label-sm text-on-surface-variant">
+          MIT Press Ed.
+        </span>
+</div>
+</div>
+</section>
+<!-- 9. Botones de Navegación Inferior Canónica -->
+<footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" data-path="usabilidad" href="usabilidad.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a Usabilidad General</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Capítulo 02 de 06</span></div><span class="hidden sm:inline text-outline-variant">•</span><a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="usabilidad-02-practica.html"><span class="material-symbols-outlined text-[18px]">sports_esports</span><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="usabilidad-03-beneficios.html">
+<span>Siguiente: 03 Beneficios de la Usabilidad</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer>
+</div></div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin py-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter pb-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span><span class="font-body-sm text-body-sm text-on-surface-variant">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dirección docente e investigadora: Dr. Toni Granollers</span></div><div class="flex flex-wrap items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">UdL</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">GRIHO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">AIPO</span><span class="px-space-md py-space-xs rounded bg-surface-container-low text-on-surface">ACM SIGCHI</span></div></div><div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pt-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">lock_open</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer>
+<script src="persist.js" defer></script></body></html>

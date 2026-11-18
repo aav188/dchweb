@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#e2dfe1","on-secondary":"#ffffff","tertiary-fixed":"#d7e3ff","on-primary":"#ffffff","on-tertiary-fixed-variant":"#00458e","on-surface-variant":"#414753","error":"#ba1a1a","surface-tint":"#005cbb","on-secondary-fixed":"#1b1b1d","on-secondary-fixed-variant":"#474649","inverse-surface":"#2f3034","on-primary-fixed-variant":"#00458f","surface-container-lowest":"#ffffff","on-secondary-container":"#636264","inverse-primary":"#abc7ff","surface-container-high":"#e9e7ed","surface-variant":"#e3e2e7","on-error-container":"#93000a","inverse-on-surface":"#f1f0f5","background":"#faf8fe","on-error":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#fcfaff","on-primary-fixed":"#001b3f","primary-fixed":"#d7e2ff","secondary-fixed":"#e4e2e4","tertiary-fixed-dim":"#abc7ff","outline":"#717785","on-background":"#1a1b1f","secondary":"#5f5e60","surface":"#faf8fe","tertiary-container":"#0071e2","surface-dim":"#dad9df","surface-container-low":"#f4f3f8","on-tertiary":"#ffffff","surface-container":"#eeedf3","tertiary":"#0059b4","secondary-fixed-dim":"#c8c6c8","on-surface":"#1a1b1f","surface-bright":"#faf8fe","on-primary-container":"#fcfbff","on-tertiary-fixed":"#001b3f","surface-container-highest":"#e3e2e7","primary":"#0059b5","primary-fixed-dim":"#abc7ff","outline-variant":"#c1c6d6","primary-container":"#0071e3"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","gutter-sm":"1rem","margin-md":"2rem","margin-sm":"1.25rem",margin:"3rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"body-md":["Inter"],"label-sm":["Inter"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-hero":["Inter"],"headline-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-xl":["Inter"],"headline-md":["Inter"],"code-inline":["JetBrains Mono"],"label-md":["Inter"]},fontSize:{"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"body-lg":["19px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-sm":["17px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"display-hero-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-inline":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["14px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3.html">Módulo 3: DCU</a><span class="text-outline-variant">/</span><span class="text-primary font-semibold">01 Introducción al DCU</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1 scrollbar-none"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="pilares.html">M1 Fundamentos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="modulo-2.html">M2 Factor humano</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-sm text-label-sm" data-path="modulo-3-dcu" href="modulo-3.html">M3 DCU</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a></nav></div></header><main class="w-full bg-surface min-h-[calc(100vh-280px)] pt-36"><div class="flex flex-col w-full"><div class="" style="max-width:1280px;margin:0 auto;padding:32px clamp(20px,4vw,48px) 0;box-sizing:border-box;width:100%;padding-bottom:24px"><section class="w-full mb-space-xl"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-sm"><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">01</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">menu_book</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Introducción al DCU</span><span class="font-body-sm text-body-sm text-on-primary-container/85">Fundamentos y conceptos clave</span></div></div><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-teoria.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">02</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">policy</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Teoría del DCU</span><span class="font-body-sm text-body-sm text-on-surface-variant">Normativa, principios y contexto</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-03-modelo-mpiua.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">03</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">account_tree</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Modelo MPIu+a</span><span class="font-body-sm text-body-sm text-on-surface-variant">Proceso, fases e iteratividad</span></div></a></div></section><header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 01</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Módulo 3 · 7 min de lectura</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight" style="font-size:40px;line-height:48px;letter-spacing:-0.02em;font-weight:600">01 Diseño Centrado en el Usuario: Fundamentos</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl" style="font-size:19px;line-height:28px;letter-spacing:-0.005em">
+          Introducción a la metodología y filosofía de desarrollo que sitúa a las personas, sus necesidades, capacidades y contexto de uso en el núcleo central del diseño de sistemas interactivos eficaces.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">ISO 9241-210:2019 · Nivel Universitario</span>
+</div>
+</div>
+</div>
+</header></div>
+<!-- SCRIPT FOR DYNAMIC SUB-NAV HIGHLIGHT -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const subnavLink = document.querySelector('nav a[data-path="m3-leccion-01-introduccion"]');
+      if (subnavLink) {
+        subnavLink.classList.remove('bg-surface-container-low', 'hover:bg-surface-container-high');
+        subnavLink.classList.add('bg-surface-container-high', 'text-on-surface', 'shadow-sm');
+      }
+    });
+  </script>
+<!-- LESSON HERO HEADER -->
+<section class="w-full bg-surface-container-lowest shadow-sm py-space-xl">
+<div class="max-w-[1280px] mx-auto flex flex-col gap-space-md" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<!-- Metatags row -->
+<!-- Main Titles -->
+<!-- Academic Context Anchor Link -->
+<div class="pt-space-xs flex items-center gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 text-primary hover:underline cursor-pointer font-semibold">
+<span class="material-symbols-outlined text-[18px]">launch</span>
+          Material docente original en curso-ipo.com
+        </span>
+<span class="text-outline-variant">•</span>
+<span>Cátedra de IPO: <strong class="text-on-surface">Dr. Toni Granollers (GRIHO · UdL)</strong></span>
+</div>
+</div>
+</section>
+<!-- CONTENT WRAPPER -->
+<div class="max-w-[1280px] mx-auto py-space-xl w-full flex flex-col gap-space-xl" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<!-- SECCIÓN 1: FUNDAMENTOS DEL DCU (4 CARDS) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Bloque Teórico Fundamental</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+          Pilares conceptuales de la interacción persona-ordenador
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Comprender el DCU exige trascender el diseño estético para abordar una disciplina ingenieril rigurosa orientada a la resolución de problemas reales.
+        </p>
+</div>
+<!-- 4 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">group</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              ¿Qué es el Diseño Centrado en el Usuario?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Es un enfoque y filosofía de desarrollo en el que las metas y particularidades de los usuarios guían activamente cada decisión de diseño. Rompe drásticamente con los métodos tecnológicos tradicionales, los cuales relegan la intervención humana a la fase tardía de despliegue provocando fricción y costes correctivos masivos.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Ergonomía cognitiva</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Necesidades reales</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Empatía técnica</span>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">tune</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              Principios y Actividades Clave
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              La implicación activa y continua del usuario, la asignación apropiada de funciones entre personas y tecnología, ciclos reiterativos de refinamiento y la conformación de equipos multidisciplinares (psicólogos cognitivos, desarrolladores y sociólogos) que convergen en una meta compartida.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Co-diseño</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Retroalimentación</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Contexto de uso</span>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              Ingeniería de la Usabilidad
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Consiste en integrar métricas estructuradas, técnicas de muestreo y criterios cuantitativos de usabilidad definidos por la ISO 9241-11 —efectividad, eficiencia y satisfacción— de manera regular a lo largo del ciclo de vida del software, elevando la experiencia de usuario a un estándar científico verificable.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">ISO 9241-11</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Métricas de uso</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Calidad en uso</span>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              Introducción al Modelo MPIu+a
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Marco de referencia formalizado por el Dr. Toni Granollers (GRIHO - Universitat de Lleida). Articula en un solo cuerpo la Ingeniería de la Usabilidad y la Accesibilidad Universal, unificando metodológicamente la concepción iterativa de la interacción humana con el ciclo de vida del software comercial.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Marco metodológico</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Accesibilidad transversal</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant font-code-inline text-code-inline">Prototipado y evaluación</span>
+</div>
+</article>
+</div>
+</section>
+<!-- SECCIÓN 2: ESQUEMA INTERACTIVO DEL PROCESO DCU (ISO 9241-210) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Ciclo Iterativo Normativo</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold mt-1">
+            Proceso de Diseño Centrado en el Usuario (ISO 9241-210)
+          </h2>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm self-start sm:self-auto">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Explorador interactivo de etapas
+        </div>
+</div>
+<!-- Horizontal Stage Steps Visualizer -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm relative">
+<!-- Stage 1 Tab -->
+<button class="stage-btn text-left p-space-md rounded-xl bg-surface-container-high transition-all flex flex-col gap-2" id="stage-btn-0" onclick="selectStage(0)" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<span class="material-symbols-outlined text-primary text-[20px]">person_search</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Contexto de Uso</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Identificar usuarios, tareas y ambientes operacionales.</span>
+</button>
+<!-- Stage 2 Tab -->
+<button class="stage-btn text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-2" id="stage-btn-1" onclick="selectStage(1)" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">assignment</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Requisitos de Usuario</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Especificar necesidades operativas y metas de negocio.</span>
+</button>
+<!-- Stage 3 Tab -->
+<button class="stage-btn text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-2" id="stage-btn-2" onclick="selectStage(2)" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">draw</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Soluciones de Diseño</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">De bocetos conceptuales a prototipos interactivos.</span>
+</button>
+<!-- Stage 4 Tab -->
+<button class="stage-btn text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-2" id="stage-btn-3" onclick="selectStage(3)" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">fact_check</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Evaluación con Usuarios</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Medición de usabilidad y contraste directo de hipótesis.</span>
+</button>
+</div>
+<!-- Iterative loop banner -->
+<div class="bg-primary-fixed/30 rounded-lg p-space-sm flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[24px]">sync</span>
+<p class="font-body-sm text-body-sm">
+<strong>Bucle de Retorno Iterativo:</strong> Si la evaluación revela deficiencias de usabilidad o incumplimiento de requisitos, el ciclo regresa de inmediato a refinamiento de diseño o revisión de contexto.
+        </p>
+</div>
+<!-- Interactive detail card display -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col md:flex-row gap-space-lg items-start" id="stage-detail-panel">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="font-code-inline text-code-inline text-primary font-bold" id="stage-detail-number">FASE 01 / 04</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="stage-detail-tag">Investigación etnográfica y perfiles</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="stage-detail-title">
+            1. Comprender y especificar el contexto de uso
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="stage-detail-desc">
+            Se estudian en profundidad las características de los usuarios (habilidades cognitivas, experiencia previa, diversidad funcional), las tareas que desarrollarán, la jerarquía de objetivos y el entorno físico, social y tecnológico donde se interactuará.
+          </p>
+</div>
+<div class="w-full md:w-80 bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-xs shrink-0">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-secondary">Ejemplo Práctico en Aula</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="stage-detail-example">
+            Entrevistas contextuales con médicos en unidades de urgencia y creación de proto-personas con modelado de carga cognitiva bajo estrés.
+          </p>
+<div class="pt-2 flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+            Técnicas recomendadas: Etnografía, Personas, Observación directa.
+          </div>
+</div>
+</div>
+<script>
+        const stagesData = [
+          {
+            num: "FASE 01 / 04",
+            tag: "Investigación etnográfica y perfiles",
+            title: "1. Comprender y especificar el contexto de uso",
+            desc: "Se estudian en profundidad las características de los usuarios finales (habilidades cognitivas, experiencia previa, diversidad funcional), las tareas exactas que desarrollarán, sus objetivos prioritarios y el entorno físico, organizacional y tecnológico.",
+            example: "Entrevistas contextuales con médicos en salas de urgencias y creación de mapas de empatía analizando la fatiga visual bajo iluminación intensa."
+          },
+          {
+            num: "FASE 02 / 04",
+            tag: "Formalización de criterios",
+            title: "2. Especificar los requisitos del usuario y de la organización",
+            desc: "Se traducen las necesidades y frustraciones detectadas en requerimientos funcionales y no funcionales claros, definiendo metas cuantitativas de usabilidad (tasas de éxito, tiempos máximos de tarea y satisfacción aceptable).",
+            example: "Definir que un enfermero debe registrar la medicación en menos de 20 segundos con 0% de errores críticos de dosificación."
+          },
+          {
+            num: "FASE 03 / 04",
+            tag: "Ideación y prototipado multinivel",
+            title: "3. Producir soluciones de diseño interactivas",
+            desc: "Evolución iterativa de conceptos desde diagramas de flujo y wireframes de baja fidelidad en papel hasta prototipos interactivos de alta fidelidad que simulan con precisión la lógica del sistema final.",
+            example: "Diseñar bocetos rápidos de la interfaz de control de alarmas, seguidos de prototipos interactivos en tableta para validar la jerarquía cromática."
+          },
+          {
+            num: "FASE 04 / 04",
+            tag: "Pruebas empíricas y validación",
+            title: "4. Evaluar los diseños frente a los requisitos",
+            desc: "Sometimiento del diseño a pruebas con usuarios reales en entornos controlados y evaluaciones heurísticas por especialistas, obteniendo métricas cuantitativas y percepciones cualitativas para validar la solución.",
+            example: "Test de usabilidad en laboratorio con eye-tracking calculando tiempos medios de fijación y recuento de errores de navegación."
+          }
+        ];
+
+        function selectStage(index) {
+          for (let i = 0; i < 4; i++) {
+            const btn = document.getElementById(`stage-btn-${i}`);
+            const badge = btn.querySelector('span:first-child');
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (i === index) {
+              btn.className = "stage-btn text-left p-space-md rounded-xl bg-surface-container-high shadow-sm transition-all flex flex-col gap-2";
+              badge.className = "w-7 h-7 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold";
+              icon.classList.remove('text-on-surface-variant');
+              icon.classList.add('text-primary');
+            } else {
+              btn.className = "stage-btn text-left p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-2";
+              badge.className = "w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold";
+              icon.classList.add('text-on-surface-variant');
+              icon.classList.remove('text-primary');
+            }
+          }
+          const data = stagesData[index];
+          document.getElementById('stage-detail-number').innerText = data.num;
+          document.getElementById('stage-detail-tag').innerText = data.tag;
+          document.getElementById('stage-detail-title').innerText = data.title;
+          document.getElementById('stage-detail-desc').innerText = data.desc;
+          document.getElementById('stage-detail-example').innerText = data.example;
+        }
+      </script>
+</section>
+<!-- SECCIÓN 3: CONTENIDO DOCENTE Y RECURSOS ACADÉMICOS -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Material Oficial GRIHO</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+          Contenido docente y recursos académicos
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Descarga y consulta los recursos de apoyo preparados por el equipo docente de la Universitat de Lleida.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Resource 1 -->
+<a class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">videocam</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Grabación Oficial</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Vídeo completo de la sesión</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Grabación íntegra de la clase magistral del Dr. Toni Granollers sobre fundamentos del DCU (1h 15m).
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface font-label-sm text-label-sm font-medium mt-space-sm">
+<span>Ver vídeo</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Resource 2 -->
+<a class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">slideshow</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Material GRIHO</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Transparencias del tema</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Diapositivas oficiales en formato PDF/PPTX revisadas y actualizadas para el curso académico 2024-2025.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface font-label-sm text-label-sm font-medium mt-space-sm">
+<span>Abrir diapositivas</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Resource 3 -->
+<a class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Estándares Internacionales</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Marco Normativo ISO</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Resumen ejecutivo y comparativa detallada entre la clásica norma ISO 13407 y la vigente ISO 9241-210.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface font-label-sm text-label-sm font-medium mt-space-sm">
+<span>Consultar resumen</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Resource 4 -->
+<a class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Investigación Académica</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Documentación MPIu+a</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tesis y publicaciones formales del modelo del ciclo de vida interactivo accesible desarrollado en la UdL.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface font-label-sm text-label-sm font-medium mt-space-sm">
+<span>Explorar repositorio</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- SECCIÓN 4: PÍLDORAS Y MICRO-VÍDEOS IPO (OBLIGATORIA) -->
+<section class="flex flex-col gap-space-md">
+<!-- Section Header aligned with inspiration image -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold w-fit">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+            MICRO-LECCIONES EN FORMATO VERTICAL
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+            Píldoras y micro-vídeos IPO
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Formatos breves de 1-2 minutos sobre conceptos clave, casos reales y demostraciones de laboratorio con el Dr. Toni Granollers y especialistas de HCI.
+          </p>
+</div>
+<!-- Controls: pagination badge and chevron buttons -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<span class="px-3 py-1.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+            Página 1 de 2 · 8 micro-lecciones
+          </span>
+<div class="flex items-center gap-1">
+<button aria-label="Anterior micro-lección" class="w-9 h-9 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button aria-label="Siguiente micro-lección" class="w-9 h-9 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Carousel Cards: 9:16 vertical ratio cards inspired by provided screenshot -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Dr. Toni Granollers in a modern Human-Computer Interaction academic university computer lab speaking directly to the camera explaining user centered design methodologies, natural daylight, soft blue and neutral lighting, editorial photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1yJWjoX8bEsHSU3GHEPKHSABOqeDB_zC_8xXEY1A2TiXdxBJZCykvnLs63heptOX644bfZnP5AxVj-Pe4hbB7gtORiblU1wwEhy7o8tC76vWa3v7ckfsuLdNGeFHG21Br_2D5UvuqOgvXGb88Trv0Ejxa9ejGb49q-14fApBBI2I_53VjCHlyfWQh8T_iBooKVwSR8YIGIuZhTEs7bb4IiuBGLLFKrt6moPGqgYU')">
+</div>
+<!-- Dark scrim gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50"></div>
+<!-- Top Header inside card -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<div class="px-2.5 py-1 rounded bg-black/50 backdrop-blur-md text-white font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+              LECCIÓN 01 · INTRODUCCIÓN
+            </div>
+<div class="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-white font-code-inline text-code-inline">
+              01:45
+            </div>
+</div>
+<!-- Bottom Card Content -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<!-- Orange Callout Badge -->
+<div class="bg-[#EA580C] text-white p-3 rounded-xl shadow-md">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-white/90">Concepto Clave</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold leading-tight">
+                ¿QUÉ SIGNIFICA DISEÑAR PARA EL USUARIO?
+              </h4>
+</div>
+<!-- Footer meta row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="text-white font-label-md text-label-md font-semibold">Dr. Toni Granollers</span>
+<span class="text-white/70 font-label-sm text-label-sm">GRIHO · UdL</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-[#EA580C] transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up over the shoulder shot of a digital product designer interacting with paper UI wireframes next to a digital tablet with a stylus, clean modern wooden studio desk, cozy ambient daylight, UX research atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAc4hdftI4omEhI9wFivcV36W1SatbPmyZnA_2NlGPYUIBQnq1WSQVbCbvcBlhx_b7zPtusTqV9qxR77SaF8qfu43gjbJoFptuN6sT3mmMXegF8kTv00Yn70NMaQfzPGNUduNH5LX4WfGWEA4Xl-fds7Y6k-xgqkIcp37Vjgf5yUublKs-7efFdSQyeAE6-_j3Ob1awxKZojQpEobvYHXtuWqvmauQmSJGy9XJPoJg')">
+</div>
+<!-- Dark scrim gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50"></div>
+<!-- Top Header inside card -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<div class="px-2.5 py-1 rounded bg-black/50 backdrop-blur-md text-white font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+              METODOLOGÍA · MPIU+A
+            </div>
+<div class="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-white font-code-inline text-code-inline">
+              02:10
+            </div>
+</div>
+<!-- Bottom Card Content -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<!-- Orange Callout Badge -->
+<div class="bg-[#EA580C] text-white p-3 rounded-xl shadow-md">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-white/90">Investigación</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold leading-tight">
+                PARTICIPACIÓN REAL DE USUARIOS EN EL DESARROLLO
+              </h4>
+</div>
+<!-- Footer meta row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="text-white font-label-md text-label-md font-semibold">Técnicas Participativas</span>
+<span class="text-white/70 font-label-sm text-label-sm">Co-diseño y Entrevistas</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-[#EA580C] transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="An accessibility researcher in a tech office explaining web design guidelines in front of a monitor with coding and screen reader diagnostics, bright contemporary office interior, crisp professional visual composition." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbjLdRJ_ct9S5RGXDRuz3yYm5nFKfblODYDir4bPRiJb5xRf9pYMh3nF_YGVbCNdol8-YVqb0TYVipGYQJVco4LKCs-VuNpEJ3QtvBZ-KzAwmgkLknDk6xtBojKW7Zo9UhD7pW3zS3SbnLFYGBPGQav4LSGPwHBnslFRm7ztFrFZ3DyDqqaEKQhhooKn5LxIwfpNGNKNzSClzejDUHCWTcXiS5eXkDeIFjanZqor8')">
+</div>
+<!-- Dark scrim gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50"></div>
+<!-- Top Header inside card -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<div class="px-2.5 py-1 rounded bg-black/50 backdrop-blur-md text-white font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+              CICLO DE PROCESO
+            </div>
+<div class="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-white font-code-inline text-code-inline">
+              01:50
+            </div>
+</div>
+<!-- Bottom Card Content -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<!-- Orange Callout Badge -->
+<div class="bg-[#EA580C] text-white p-3 rounded-xl shadow-md">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-white/90">Estrategia</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold leading-tight">
+                ¿POR QUÉ ES VITAL ITERAR EN CADA FASE?
+              </h4>
+</div>
+<!-- Footer meta row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="text-white font-label-md text-label-md font-semibold">Economía del Software</span>
+<span class="text-white/70 font-label-sm text-label-sm">Reducción de Costes DCU</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-[#EA580C] transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Usability testing laboratory at university with eye tracking glasses device and heatmaps visible on a high precision display screen, HCI scientific research environment with specialized testing equipment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcQpbyHajiBCTKvhumsrW4uRKQGlO_UGdzl5tBeMZX4KTwEsF9dKpxAVfFeFNfA0hgQTE4NTZ4hAFO8-zTFoePcmPZMM4VqhZatgdb5sj3HVEIIr_5l3V3RfCDeUN8j7jl0OLYD6nenqw93g1zDAPsOeToqgBa-eB__KFvEe6OHuHFexogTdq69Kh27YfrAbr5XBHbskpYYCYAXrNhkkBn57vc9NcgqL66ccf9U_Y')">
+</div>
+<!-- Dark scrim gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50"></div>
+<!-- Top Header inside card -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<div class="px-2.5 py-1 rounded bg-black/50 backdrop-blur-md text-white font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+              MODELO MPIU+A
+            </div>
+<div class="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-white font-code-inline text-code-inline">
+              02:25
+            </div>
+</div>
+<!-- Bottom Card Content -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2">
+<!-- Orange Callout Badge -->
+<div class="bg-[#EA580C] text-white p-3 rounded-xl shadow-md">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-white/90">Metodología GRIHO</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold leading-tight">
+                INGENIERÍA DE LA USABILIDAD Y ACCESIBILIDAD
+              </h4>
+</div>
+<!-- Footer meta row -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="text-white font-label-md text-label-md font-semibold">Integración Metodológica</span>
+<span class="text-white/70 font-label-sm text-label-sm">Normas ISO y WCAG</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-[#EA580C] transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 6: NAVEGACIÓN INFERIOR ENTRE LECCIONES -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-sm md:px-margin-md lg:px-margin pb-space-xl"><footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" href="modulo-2.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Anterior: Módulo 2 (Factor Humano)</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Capítulo 01 de 03</span></div></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-teoria.html">
+<span>Siguiente: 02 Teoría del DCU</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer></div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-[1280px] mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-lg"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm mb-1"><div class="w-7 h-7 rounded bg-primary flex items-center justify-center"><span class="font-headline-sm text-headline-sm text-on-primary text-xs font-bold">IPO</span></div><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Curso Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">Portal educativo académico para el estudio riguroso del Diseño Centrado en el Usuario, usabilidad, factores humanos y evaluación de interfaces en entornos interactivos modernos.</p><p class="font-label-sm text-label-sm text-on-surface-variant">Cátedra universitaria y coordinación pedagógica: <strong class="text-on-surface font-medium">Dr. Toni Granollers</strong></p></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">Afiliaciones Académicas</span><ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">GRIHO · UdL</a></li><li><a class="hover:text-primary transition-colors" href="#">Universitat de Lleida (UdL)</a></li><li><a class="hover:text-primary transition-colors" href="#">AIPO (Asoc. Interacción Persona-Ordenador)</a></li><li><a class="hover:text-primary transition-colors" href="#">ACM SIGCHI Chapter</a></li></ul></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">Garantías &amp; Calidad</span><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-sm text-label-sm">WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">copyright</span><span class="font-label-sm text-label-sm">CC BY-NC 4.0 Internacional</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">privacy_tip</span><a class="font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Aviso Legal &amp; Privacidad</a></div></div></div><div class="pt-space-md bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><p class="font-label-sm text-label-sm text-on-surface-variant">© 2025 Universitat de Lleida &amp; GRIHO. Todos los derechos reservados para fines educativos no comerciales.</p><div class="flex items-center gap-space-md"><span class="font-code-inline text-code-inline text-outline text-xs">v3.4.1 — MPIu+a Framework</span></div></div></div></footer>
+<script defer="" src="persist.js"></script></body></html>

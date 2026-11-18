@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO · UdL / GRIHO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#d7e2ff", "surface-variant": "#e3e2e7", "tertiary-fixed-dim": "#abc7ff", "on-secondary-fixed": "#1b1b1d", "on-secondary-container": "#636264", "outline-variant": "#c1c6d6", "outline": "#717785", "tertiary-fixed": "#d7e3ff", "inverse-on-surface": "#f1f0f5", "secondary-fixed": "#e4e2e4", "secondary-container": "#e2dfe1", "on-tertiary-fixed": "#001b3f", "tertiary-container": "#0071e2", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-error": "#ffffff", "primary": "#0059b5", "inverse-surface": "#2f3034", "surface-container": "#eeedf3", "on-primary": "#ffffff", "secondary": "#5f5e60", "surface-container-high": "#e9e7ed", "surface-bright": "#faf8fe", "on-error-container": "#93000a", "on-surface-variant": "#414753", "inverse-primary": "#abc7ff", "on-primary-fixed-variant": "#00458f", "on-surface": "#1a1b1f", "error": "#ba1a1a", "primary-fixed-dim": "#abc7ff", "surface": "#faf8fe", "secondary-fixed-dim": "#c8c6c8", "tertiary": "#0059b4", "on-primary-fixed": "#001b3f", "surface-container-low": "#f4f3f8", "surface-container-highest": "#e3e2e7", "primary-container": "#0071e3", "on-primary-container": "#fcfbff", "surface-dim": "#dad9df", "background": "#faf8fe", "on-tertiary-container": "#fcfaff", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#00458e", "on-secondary-fixed-variant": "#474649", "on-background": "#1a1b1f", "surface-tint": "#005cbb" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-md": "2rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-sm": "1.25rem", "gutter": "1.5rem" }, "fontFamily": { "display-hero-mobile": ["Inter"], "display-hero": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "code-inline": ["JetBrains Mono"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "headline-xl": ["Inter"], "headline-lg": ["Inter"], "headline-xl-mobile": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-lg": ["19px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "code-inline": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-24 max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-col justify-between pt-3 pb-2"><div class="flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="flex items-center overflow-x-auto py-1 text-on-surface-variant font-label-sm text-label-sm"><nav aria-label="Breadcrumb" class="flex items-center space-x-1.5 min-w-max"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><a class="hover:text-primary transition-colors" data-path="curso-ipo" href="index.html">Curso IPO</a><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><span class="text-on-surface font-medium">Módulo 2: El Factor Humano</span><span class="material-symbols-outlined text-[15px] text-outline select-none">chevron_right</span><span class="text-primary font-semibold">Aspectos Perceptivos y Cognitivos</span></nav></div></div></header><main class="w-full pt-24 bg-surface min-h-[calc(100vh-14rem)]"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-margin-sm lg:px-margin py-space-md flex flex-col gap-space-lg">
+<!-- 1. Subbarra de navegación superior de temas del Módulo 2 -->
+<div class="w-full flex items-center justify-between pb-1 overflow-x-auto">
+<div class="flex items-center gap-2 p-1.5 rounded-full bg-surface-container/70 shadow-sm">
+<a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" href="modulo-2.html">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>01 El Factor Humano: Introducción</span>
+</a>
+<a class="px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap flex items-center gap-2" href="modulo-2-02-percepcion.html">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>02 Percepción</span>
+</a>
+<a class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold shadow-sm whitespace-nowrap flex items-center gap-2" href="modulo-2-03-memoria.html">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+<span>03 La Memoria Humana</span>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-3.5 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[17px] text-primary">psychology</span>
+<span>Módulo 2 · Arquitectura Cognitiva</span>
+</div>
+</div>
+<!-- 2. Hero Card interactiva -->
+<section class="w-full bg-surface-container-lowest rounded-2xl p-space-md lg:p-space-lg shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative overflow-hidden">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0 shadow-[0_2px_12px_rgba(0,113,227,0.12)]">
+<span class="material-symbols-outlined text-[30px] lg:text-[34px]" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wide">
+              JUEGO 3 · TODO EN UNO · MÓDULO 2 · 03 MEMORIA HUMANA
+            </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">
+            Test, flashcards y huecos
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre memoria sensorial (icónica y ecoica), memoria de trabajo (regla de Miller 7±2, chunking, Cowan), memoria a largo plazo (episódica, semántica, procedimental) y affordance (Gibson y Norman).
+          </p>
+</div>
+</div>
+<!-- Caja lateral con contador -->
+<div class="w-full lg:w-auto bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2 shrink-0 self-stretch lg:self-auto justify-center">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">dataset</span>
+<span class="font-semibold text-on-surface">Suite de Evaluación</span>
+</div>
+<div class="font-code-inline text-code-inline text-on-surface font-semibold bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+          21 preguntas • 13 tarjetas • 6 textos
+        </div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Contenido temático completo
+        </span>
+</div>
+</section>
+<!-- 3. Barra de selector de modo interactivo -->
+<div class="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 p-1 bg-surface-container-low rounded-xl" id="mode-tabs">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md font-semibold bg-primary-container text-on-primary-container shadow-sm transition-all" id="tab-quiz" onclick="switchMode('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Test interactivo (21)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-cards" onclick="switchMode('cards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+<span>Flashcards 3D (13)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-gaps" onclick="switchMode('gaps')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Rellenar huecos (6)</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-outline font-code-inline text-code-inline bg-surface-container-low px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-outline">keyboard</span>
+<span>[1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</div>
+<!-- 4. Contenedor de la Suite Interactiva -->
+<div class="w-full min-h-[460px]" id="interactive-app"></div>
+<!-- 5. Barra de navegación inferior entre módulos/capítulos -->
+<nav aria-label="Navegación entre temas" class="w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-md">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="modulo-2-02-percepcion.html">
+<div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary">arrow_back</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Capítulo Anterior</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">02 El Factor Humano: Percepción</span>
+</div>
+</a>
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Capítulo 03 de 03 · Fin de Módulo 2</span>
+</div>
+<a class="flex items-center gap-3 text-on-primary-container bg-primary-container hover:bg-primary px-5 py-2.5 rounded-xl shadow-[0_2px_10px_rgba(0,113,227,0.22)] transition-all transform active:scale-95 group" href="modulo-3.html">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-primary-fixed opacity-90 leading-tight">Siguiente Unidad</span>
+<span class="font-headline-sm text-headline-sm text-on-primary-container leading-tight">Módulo 3: DCU →</span>
+</div>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</a>
+</nav>
+</div>
+</div>
+<script>
+(function() {
+  const QUESTIONS = [
+    { q: "¿Cuáles son los tres sistemas de memoria que presenta la página?",
+      options: ["Sensorial, de trabajo (corto plazo) y a largo plazo", "Visual, auditiva y táctil", "Episódica, semántica y procedimental", "Icónica, ecoica y háptica"],
+      a: 0, exp: "Es la arquitectura cognitiva básica de Atkinson y Shiffrin." },
+    { q: "¿Qué es la memoria sensorial?",
+      options: ["Un buffer transitorio que registra impresiones brutas antes del filtro atencional", "Un depósito permanente", "La memoria de los atajos de teclado", "La memoria consciente"],
+      a: 0, exp: "Almacenamiento ultracorto y precognitivo." },
+    { q: "¿Qué es la memoria icónica?",
+      options: ["El registro visual efímero de la memoria sensorial", "El registro auditivo", "La memoria de iconos de la interfaz", "La memoria a largo plazo"],
+      a: 0, exp: "Persistencia aproximada de ~0,5 s según el modelo perceptivo." },
+    { q: "¿Qué es la memoria ecoica?",
+      options: ["El registro auditivo de la memoria sensorial", "El registro visual", "La memoria procedimental", "La memoria semántica"],
+      a: 0, exp: "Retención aproximada de ~3-4 s según la evidencia empírica." },
+    { q: "¿Qué memoria sensorial dura más según la página?",
+      options: ["La ecoica (auditiva)", "La icónica (visual)", "Duran lo mismo", "Ninguna dura"],
+      a: 0, exp: "Ecoica ~3-4 s frente a icónica ~0,5 s." },
+    { q: "¿Qué estímulos pasan de la memoria sensorial a la de trabajo?",
+      options: ["Solo los que reciben atención", "Todos", "Solo los auditivos", "Ninguno"],
+      a: 0, exp: "Es el filtro atencional selectivo." },
+    { q: "¿Qué es la memoria de trabajo?",
+      options: ["El espacio consciente donde se manipula y procesa la información activa", "Un depósito ilimitado", "Un buffer precognitivo", "La memoria del ordenador"],
+      a: 0, exp: "También llamada memoria a corto plazo operativa." },
+    { q: "¿Qué dice la regla de Miller?",
+      options: ["Retenemos simultáneamente unos 7±2 elementos", "Retenemos 20 elementos", "Recordamos todo lo que vemos", "Olvidamos en 1 segundo"],
+      a: 0, exp: "Capacidad mítica limitada de la memoria inmediata (1956)." },
+    { q: "¿Qué es el chunking?",
+      options: ["Agrupar datos en bloques para aumentar la capacidad efectiva de la memoria", "Borrar datos", "Dividir la pantalla", "Comprimir archivos"],
+      a: 0, exp: "Ej.: números telefónicos o tarjetas bancarias agrupados de 4 en 4." },
+    { q: "Según la página, ¿qué capacidad propone Cowan para la memoria de trabajo?",
+      options: ["4±1 elementos", "7±2", "10±3", "2±1"],
+      a: 0, exp: "Una estimación moderna más restrictiva cuando no hay repaso activo." },
+    { q: "¿Cuánto tarda en decaer la memoria de trabajo sin repaso, según la página?",
+      options: ["18-30 segundos", "1 hora", "1 día", "0,1 segundos"],
+      a: 0, exp: "Por eso es crítico no forzar al usuario a memorizar códigos efímeros." },
+    { q: "¿Cómo es la memoria a largo plazo?",
+      options: ["Un depósito casi ilimitado y permanente", "Muy limitada y volátil", "Solo visual", "Precognitiva"],
+      a: 0, exp: "Almacena conocimientos, destrezas, vivencias y modelos conceptuales." },
+    { q: "¿Qué diferencia la memoria episódica de la semántica?",
+      options: ["La episódica guarda recuerdos con contexto temporal; la semántica, conceptos y hechos", "Son lo mismo", "La episódica es motora", "La semántica es auditiva"],
+      a: 0, exp: "Ambas forman parte del subsistema declarativo a largo plazo." },
+    { q: "¿Qué tipo de memoria guarda habilidades automatizadas como los atajos de teclado?",
+      options: ["Procedimental", "Episódica", "Semántica", "Icónica"],
+      a: 0, exp: "Secuencias motoras y operativas no declarativas." },
+    { q: "¿Qué implica el principio «reconocimiento vs. recuerdo»?",
+      options: ["La interfaz debe mostrar opciones para reconocer, en vez de exigir memorizar comandos", "Hay que memorizar todos los comandos", "Los menús son innecesarios", "Recordar es más fácil que reconocer"],
+      a: 0, exp: "Reconocer pistas visuales reduce notablemente la carga cognitiva." },
+    { q: "¿De quién es el concepto original de affordance?",
+      options: ["J. J. Gibson", "Don Norman", "Jakob Nielsen", "George Miller"],
+      a: 0, exp: "Gibson lo postuló en 1979 como propiedad física objetiva del entorno ecológico." },
+    { q: "¿Quién adaptó el concepto de affordance a la HCI como «affordance percibida»?",
+      options: ["Don Norman", "J. J. Gibson", "Card y Moran", "Cowan"],
+      a: 0, exp: "Norman lo introdujo en 'The Design of Everyday Things' para guiar al usuario." },
+    { q: "¿Qué comunica la affordance de un botón?",
+      options: ["Que se puede pulsar (sombras, elevación, contraste, bordes redondeados)", "Que se puede arrastrar", "Que es decorativo", "Que es un texto"],
+      a: 0, exp: "Pistas visuales que suscitan la acción de clic o pulsación." },
+    { q: "¿Qué comunican las manijas protuberantes y las pistas ranuradas de un slider?",
+      options: ["Arrastre continuo a lo largo de un eje", "Que hay que escribir", "Que se puede pulsar una vez", "Que es un enlace"],
+      a: 0, exp: "Transmite movimiento físico restrictivo en un recorrido." },
+    { q: "Un contenedor hueco con placeholder y cursor parpadeante comunica…",
+      options: ["Que admite escritura con el teclado", "Que es un botón", "Que es una imagen", "Que está desactivado"],
+      a: 0, exp: "Es la affordance canónica de un campo de texto interactivo." },
+    { q: "¿Qué es un falso affordance?",
+      options: ["Un elemento que parece interactivo pero no lo es (p. ej., texto subrayado que no es enlace)", "Un botón que funciona bien", "Un icono decorativo bien diseñado", "Un menú desplegable"],
+      a: 0, exp: "Es un anti-patrón de diseño que confunde y rompe el modelo mental." }
+  ];
+
+  const FLASHCARDS = [
+    { f: "Los 3 sistemas de memoria", b: "Memoria sensorial, memoria de trabajo (corto plazo) y memoria a largo plazo." },
+    { f: "Memoria sensorial", b: "Buffer transitorio que registra impresiones brutas antes del filtro atencional." },
+    { f: "Memoria icónica y ecoica", b: "Icónica: registro visual (~0,5 s). Ecoica: registro auditivo (~3-4 s)." },
+    { f: "Filtro atencional", b: "Solo los estímulos que reciben atención consciente pasan a la memoria de trabajo." },
+    { f: "Memoria de trabajo", b: "Espacio consciente de procesamiento activo. Capacidad limitada y volátil (decae en 18-30 s sin repaso)." },
+    { f: "Regla de Miller", b: "Retenemos unos 7±2 elementos a la vez en la memoria inmediata sin soporte externo." },
+    { f: "Chunking", b: "Agrupar datos en unidades semánticas con significado para ampliar la capacidad efectiva (Cowan: 4±1)." },
+    { f: "Memoria a largo plazo", b: "Depósito casi ilimitado y permanente de conocimientos, destrezas motoras y modelos mentales." },
+    { f: "Episódica, semántica y procedimental", b: "Episódica: eventos con contexto espacio-temporal. Semántica: conceptos abstractos. Procedimental: hábitos y acciones automatizadas." },
+    { f: "Reconocimiento vs. recuerdo", b: "Mostrar opciones explícitas en pantalla en lugar de forzar a recordar sintaxis de comandos." },
+    { f: "Affordance (Gibson → Norman)", b: "Gibson: propiedad física intrínseca. Norman: affordance percibida, pistas visuales que expresan cómo interactuar." },
+    { f: "Ejemplos de affordance", b: "Botones con relieve y sombras (pulsar), sliders ranurados (arrastrar), inputs con cursor (escribir)." },
+    { f: "Falso affordance", b: "Parece interactivo pero no ejecuta acción: texto estático subrayado o cajas decorativas que parecen botones." }
+  ];
+
+  const GAPS = [
+    { title: "1. Memoria Sensorial", text: "La memoria [sensorial] es un buffer transitorio. La memoria [icónica] registra lo visual y la [ecoica] lo auditivo. Solo lo que recibe [atención] pasa a la memoria de trabajo." },
+    { title: "2. Memoria de Trabajo y Capacidad", text: "Según la regla de [Miller], retenemos unos [7] ± 2 elementos. El [chunking] agrupa datos para ampliar la capacidad. Sin repaso, la información [decae] muy rápido." },
+    { title: "3. Memoria a Largo Plazo", text: "La memoria a largo plazo es casi [ilimitada]. Incluye la memoria [episódica], la [semántica] y la [procedimental], que guarda habilidades como los atajos de teclado." },
+    { title: "4. Principio de Usabilidad: Reconocer", text: "La interfaz debe permitir [reconocer] opciones en lugar de obligar a [recordar] comandos." },
+    { title: "5. Origen del Concepto Affordance", text: "El concepto de affordance es de J. J. [Gibson], y Don [Norman] lo adaptó a la HCI como affordance [percibida]." },
+    { title: "6. Affordances en Componentes Web", text: "La elevación de un [botón] invita a pulsar; la manija de un [slider] invita a arrastrar. Un texto subrayado que no es enlace es un [falso] affordance." }
+  ];
+
+  const $ = (s, el = document) => el.querySelector(s);
+  const shuffle = a => {
+    const r = [...a];
+    for(let i = r.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [r[i], r[j]] = [r[j], r[i]];
+    }
+    return r;
+  };
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
+
+  let activeMode = 'quiz';
+  let globalKeyHandler = null;
+
+  document.addEventListener('keydown', e => {
+    if (globalKeyHandler && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+      globalKeyHandler(e);
+    }
+  });
+
+  window.switchMode = function(mode) {
+    activeMode = mode;
+    ['quiz', 'cards', 'gaps'].forEach(m => {
+      const tab = $(`#tab-${m}`);
+      if (m === mode) {
+        tab.className = 'flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md font-semibold bg-primary-container text-on-primary-container shadow-sm transition-all';
+      } else {
+        tab.className = 'flex items-center gap-2 px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all';
+      }
+    });
+    renderCurrentMode();
+  };
+
+  function renderCurrentMode() {
+    const root = $('#interactive-app');
+    root.innerHTML = '';
+    globalKeyHandler = null;
+    if (activeMode === 'quiz') renderQuiz(root);
+    else if (activeMode === 'cards') renderCards(root);
+    else if (activeMode === 'gaps') renderGaps(root);
+  }
+
+  /* ---------------- MODO QUIZ ---------------- */
+  function renderQuiz(container) {
+    const deck = shuffle(QUESTIONS).map(q => {
+      const order = shuffle(q.options.map((_, idx) => idx));
+      return {
+        ...q,
+        shuffledOpts: order.map(i => q.options[i]),
+        correctIdx: order.indexOf(q.a)
+      };
+    });
+
+    let current = 0;
+    let hits = 0;
+    let answered = false;
+    const errors = [];
+
+    function updateQuestion() {
+      container.innerHTML = '';
+      answered = false;
+
+      if (current >= deck.length) {
+        return renderQuizScore();
+      }
+
+      const q = deck[current];
+      const percent = Math.round((current / deck.length) * 100);
+
+      const card = document.createElement('div');
+      card.className = 'w-full bg-surface-container-lowest rounded-2xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md';
+
+      // Meta + Barra de progreso
+      card.innerHTML = `
+        <div class="flex items-center justify-between font-code-inline text-code-inline text-on-surface-variant">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+            <span class="font-semibold text-on-surface">Pregunta ${current + 1} de ${deck.length}</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span>Aciertos: <b class="text-primary font-bold">${hits}</b></span>
+            <span class="text-outline">·</span>
+            <span>${percent}% completado</span>
+          </div>
+        </div>
+        <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+          <div class="h-full bg-primary-container transition-all duration-300 rounded-full" style="width: ${percent}%;"></div>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          ${q.q}
+        </h2>
+        <div id="options-list" class="grid grid-cols-1 gap-2.5 mt-2"></div>
+        <div id="feedback-slot"></div>
+        <div id="action-slot" class="flex items-center justify-between pt-2"></div>
+      `;
+
+      container.appendChild(card);
+
+      const optsContainer = card.querySelector('#options-list');
+      const feedbackSlot = card.querySelector('#feedback-slot');
+      const actionSlot = card.querySelector('#action-slot');
+
+      q.shuffledOpts.forEach((optText, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'w-full flex items-center gap-3.5 p-3.5 lg:p-4 rounded-xl text-left bg-surface-container-low hover:bg-surface-container transition-all text-on-surface font-body-md text-body-md';
+        btn.innerHTML = `
+          <span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-on-surface font-code-inline text-code-inline font-bold flex items-center justify-center shrink-0 shadow-sm">
+            ${idx + 1}
+          </span>
+          <span class="grow">${optText}</span>
+        `;
+        btn.onclick = () => selectOption(idx);
+        optsContainer.appendChild(btn);
+      });
+
+      actionSlot.innerHTML = `
+        <span class="font-code-inline text-code-inline text-outline hidden sm:inline">Presiona [1-4] en el teclado o pulsa la opción</span>
+        <div class="grow sm:grow-0 flex justify-end"></div>
+      `;
+
+      function selectOption(chosenIdx) {
+        if (answered) return;
+        answered = true;
+
+        const buttons = optsContainer.querySelectorAll('button');
+        buttons.forEach(b => b.disabled = true);
+
+        const isCorrect = (chosenIdx === q.correctIdx);
+
+        // Feedback visual en opciones
+        buttons[q.correctIdx].className = 'w-full flex items-center gap-3.5 p-3.5 lg:p-4 rounded-xl text-left bg-emerald-50 text-emerald-900 font-body-md text-body-md shadow-sm';
+        buttons[q.correctIdx].querySelector('span').className = 'w-7 h-7 rounded-lg bg-emerald-600 text-white font-code-inline text-code-inline font-bold flex items-center justify-center shrink-0 shadow-sm';
+
+        if (!isCorrect) {
+          buttons[chosenIdx].className = 'w-full flex items-center gap-3.5 p-3.5 lg:p-4 rounded-xl text-left bg-red-50 text-red-900 font-body-md text-body-md shadow-sm';
+          buttons[chosenIdx].querySelector('span').className = 'w-7 h-7 rounded-lg bg-red-600 text-white font-code-inline text-code-inline font-bold flex items-center justify-center shrink-0 shadow-sm';
+          errors.push(q);
+        } else {
+          hits++;
+        }
+
+        // Explicación
+        feedbackSlot.innerHTML = `
+          <div class="p-4 rounded-xl ${isCorrect ? 'bg-emerald-50 text-emerald-950' : 'bg-red-50 text-red-950'} flex flex-col gap-1 text-body-sm font-body-sm mt-2">
+            <span class="font-semibold text-headline-sm flex items-center gap-1.5 ${isCorrect ? 'text-emerald-700' : 'text-red-700'}">
+              <span class="material-symbols-outlined text-[20px]">${isCorrect ? 'check_circle' : 'cancel'}</span>
+              ${isCorrect ? '¡Respuesta correcta!' : 'Respuesta incorrecta'}
+            </span>
+            <p class="leading-relaxed mt-0.5">${q.exp}</p>
+          </div>
+        `;
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-[0_2px_10px_rgba(0,113,227,0.25)] flex items-center gap-2';
+        nextBtn.innerHTML = `<span>${current + 1 < deck.length ? 'Siguiente pregunta' : 'Ver resultados'}</span> <span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+        nextBtn.onclick = () => {
+          current++;
+          updateQuestion();
+        };
+
+        const targetSlot = actionSlot.querySelector('div') || actionSlot;
+        targetSlot.appendChild(nextBtn);
+        nextBtn.focus();
+      }
+
+      globalKeyHandler = (e) => {
+        const val = parseInt(e.key, 10);
+        if (!answered && val >= 1 && val <= q.shuffledOpts.length) {
+          selectOption(val - 1);
+        } else if (answered && e.key === 'Enter') {
+          e.preventDefault();
+          current++;
+          updateQuestion();
+        }
+      };
+    }
+
+    function renderQuizScore() {
+      const score = ((hits / deck.length) * 10).toFixed(1).replace('.0', '');
+      const isHigh = hits / deck.length >= 0.7;
+      const isPass = hits / deck.length >= 0.5;
+
+      const card = document.createElement('div');
+      card.className = 'w-full bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col items-center text-center gap-space-md';
+
+      let msg = 'Toca repasar los conceptos fundamentales del factor humano.';
+      if (hits === deck.length) msg = '¡Dominio total! Has superado todas las preguntas sin fallos.';
+      else if (isHigh) msg = '¡Excelente comprensión! Has asimilado la mayor parte del módulo.';
+      else if (isPass) msg = 'Aprobado satisfactorio, aunque conviene repasar las preguntas falladas.';
+
+      card.innerHTML = `
+        <div class="w-20 h-20 rounded-full ${isPass ? 'bg-primary-container/10 text-primary-container' : 'bg-red-50 text-red-600'} flex items-center justify-center">
+          <span class="material-symbols-outlined text-[48px]">${isPass ? 'workspace_premium' : 'auto_stories'}</span>
+        </div>
+        <div class="flex flex-col gap-1 items-center">
+          <span class="font-display-hero text-display-hero text-primary font-bold tracking-tight">${score}</span>
+          <span class="font-label-md text-label-md text-outline">Calificación sobre 10 · ${hits} de ${deck.length} aciertos (${Math.round((hits/deck.length)*100)}%)</span>
+          <p class="font-headline-sm text-headline-sm text-on-surface font-semibold max-w-md mt-2">${msg}</p>
+        </div>
+
+        ${errors.length > 0 ? `
+          <div class="w-full text-left bg-surface-container-low rounded-xl p-space-md mt-2 flex flex-col gap-3">
+            <div class="flex items-center gap-2 font-headline-sm text-headline-sm text-on-surface font-semibold">
+              <span class="material-symbols-outlined text-[20px] text-red-600">error</span>
+              <span>Revisión de preguntas falladas (${errors.length}):</span>
+            </div>
+            <div class="flex flex-col gap-2.5 max-h-80 overflow-y-auto pr-1">
+              ${errors.map((err, i) => `
+                <div class="bg-surface-container-lowest p-3 rounded-lg flex flex-col gap-1 shadow-xs">
+                  <span class="font-label-md text-label-md text-on-surface font-semibold">${i + 1}. ${err.q}</span>
+                  <span class="font-body-sm text-body-sm text-emerald-700 font-medium">✓ Solución: ${err.options[err.a]}</span>
+                  <span class="font-body-sm text-body-sm text-outline">${err.exp}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="flex items-center gap-3 mt-4">
+          <button id="retry-btn" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-[0_2px_10px_rgba(0,113,227,0.25)] flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px]">replay</span>
+            <span>Volver a intentar</span>
+          </button>
+        </div>
+      `;
+
+      container.appendChild(card);
+      card.querySelector('#retry-btn').onclick = () => renderQuiz(container);
+
+      globalKeyHandler = (e) => {
+        if (e.key === 'Enter') renderQuiz(container);
+      };
+    }
+
+    updateQuestion();
+  }
+
+  /* ---------------- MODO FLASHCARDS ---------------- */
+  function renderCards(container) {
+    let deck = FLASHCARDS.map((c, idx) => ({ ...c, idx }));
+    let currentIndex = 0;
+    const knownSet = new Set();
+
+    function renderCardView() {
+      container.innerHTML = '';
+
+      if (deck.length === 0) {
+        globalKeyHandler = null;
+        const completeCard = document.createElement('div');
+        completeCard.className = 'w-full bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col items-center justify-center text-center gap-space-md py-16';
+        completeCard.innerHTML = `
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[40px]">check</span>
+          </div>
+          <h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">¡Colección completada!</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Has validado las ${FLASHCARDS.length} tarjetas de memoria de esta unidad temática.
+          </p>
+          <button id="restart-cards" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm flex items-center gap-2 mt-2">
+            <span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            <span>Reiniciar baraja</span>
+          </button>
+        `;
+        container.appendChild(completeCard);
+        completeCard.querySelector('#restart-cards').onclick = () => renderCards(container);
+        return;
+      }
+
+      currentIndex = (currentIndex + deck.length) % deck.length;
+      const curCard = deck[currentIndex];
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'w-full flex flex-col gap-space-md';
+
+      wrapper.innerHTML = `
+        <div class="flex items-center justify-between font-code-inline text-code-inline text-on-surface-variant px-1">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+            <span class="font-semibold text-on-surface">Tarjeta ${currentIndex + 1} de ${deck.length} pendientes</span>
+          </div>
+          <div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1 rounded-full shadow-xs">
+            <span class="material-symbols-outlined text-[16px] text-emerald-600">task_alt</span>
+            <span class="text-on-surface">Aprendidas: <b>${knownSet.size}</b> / ${FLASHCARDS.length}</span>
+          </div>
+        </div>
+
+        <!-- 3D Perspective Card -->
+        <div id="flipper" class="w-full h-80 cursor-pointer select-none group" style="perspective: 1200px;">
+          <div id="card-inner" class="relative w-full h-full duration-500 rounded-2xl shadow-sm transition-transform" style="transform-style: preserve-3d;">
+            
+            <!-- Front Face -->
+            <div class="absolute inset-0 w-full h-full bg-surface-container-lowest rounded-2xl p-space-lg flex flex-col items-center justify-center text-center gap-space-sm" style="backface-visibility: hidden;">
+              <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                Concepto / Pregunta
+              </span>
+              <h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold max-w-xl">
+                ${curCard.f}
+              </h3>
+              <span class="font-code-inline text-code-inline text-outline flex items-center gap-1.5 mt-4">
+                <span class="material-symbols-outlined text-[16px]">touch_app</span>
+                Pulsa o presiona [Espacio] para ver definición
+              </span>
+            </div>
+
+            <!-- Back Face -->
+            <div class="absolute inset-0 w-full h-full bg-primary-container text-on-primary-container rounded-2xl p-space-lg flex flex-col items-center justify-center text-center gap-space-sm" style="backface-visibility: hidden; transform: rotateY(180deg);">
+              <span class="px-3 py-1 rounded-full bg-surface-container-lowest/20 text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                Definición & Explicación
+              </span>
+              <p class="font-headline-sm text-headline-sm text-on-primary-container leading-relaxed max-w-xl font-normal">
+                ${curCard.b}
+              </p>
+              <span class="font-code-inline text-code-inline text-primary-fixed flex items-center gap-1.5 mt-4">
+                <span class="material-symbols-outlined text-[16px]">flip_camera_android</span>
+                Pulsa para volver al anverso
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Controls bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-2">
+          <button id="btn-prev" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-xs transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Anterior</span>
+          </button>
+
+          <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+            <button id="btn-shuffle" class="px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-xs transition-all flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px]">shuffle</span>
+              <span>Barajar</span>
+            </button>
+            <button id="btn-known" class="px-5 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-[0_2px_10px_rgba(0,113,227,0.22)] flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px]">check_circle</span>
+              <span>Me la sé [S]</span>
+            </button>
+          </div>
+
+          <button id="btn-next" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container shadow-xs transition-all flex items-center justify-center gap-2">
+            <span>Siguiente</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        </div>
+
+        <div class="text-center font-code-inline text-code-inline text-outline hidden sm:block">
+          Atajos: [Espacio] Girar tarjeta · [← / →] Navegar · [S] Marcar aprendida
+        </div>
+      `;
+
+      container.appendChild(wrapper);
+
+      let flipped = false;
+      const flipper = wrapper.querySelector('#flipper');
+      const inner = wrapper.querySelector('#card-inner');
+
+      function toggleFlip() {
+        flipped = !flipped;
+        inner.style.transform = flipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+      }
+
+      function markKnown() {
+        knownSet.add(curCard.idx);
+        deck.splice(currentIndex, 1);
+        renderCardView();
+      }
+
+      flipper.onclick = toggleFlip;
+      wrapper.querySelector('#btn-prev').onclick = () => { currentIndex--; renderCardView(); };
+      wrapper.querySelector('#btn-next').onclick = () => { currentIndex++; renderCardView(); };
+      wrapper.querySelector('#btn-shuffle').onclick = () => { deck = shuffle(deck); currentIndex = 0; renderCardView(); };
+      wrapper.querySelector('#btn-known').onclick = markKnown;
+
+      globalKeyHandler = (e) => {
+        if (e.key === ' ') {
+          e.preventDefault();
+          toggleFlip();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          currentIndex++;
+          renderCardView();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          currentIndex--;
+          renderCardView();
+        } else if (e.key.toLowerCase() === 's') {
+          e.preventDefault();
+          markKnown();
+        }
+      };
+    }
+
+    renderCardView();
+  }
+
+  /* ---------------- MODO RELLENAR HUECOS ---------------- */
+  function renderGaps(container) {
+    globalKeyHandler = null;
+    container.innerHTML = '';
+
+    const inputs = [];
+    const wordsList = [];
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'w-full flex flex-col gap-space-md';
+
+    // Parsear textos y huecos
+    const textsContainer = document.createElement('div');
+    textsContainer.className = 'grid grid-cols-1 gap-4';
+
+    GAPS.forEach((gapItem) => {
+      const card = document.createElement('div');
+      card.className = 'w-full bg-surface-container-lowest rounded-2xl p- space-md lg:p-space-lg p-5 shadow-sm flex flex-col gap-2';
+
+      const title = document.createElement('h3');
+      title.className = 'font-headline-sm text-headline-sm text-primary font-semibold flex items-center gap-2';
+      title.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>${gapItem.title}`;
+      card.appendChild(title);
+
+      const p = document.createElement('p');
+      p.className = 'font-body-md text-body-md text-on-surface leading-loose';
+
+      const parts = gapItem.text.split(/\[([^\]]+)\]/);
+      parts.forEach((part, idx) => {
+        if (idx % 2 === 0) {
+          p.appendChild(document.createTextNode(part));
+        } else {
+          const answers = part.split('|');
+          wordsList.push(answers[0]);
+
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.autocomplete = 'off';
+          input.spellcheck = false;
+          input.className = 'mx-1 px-2.5 py-0.5 rounded-md font-body-md text-body-md text-center bg-surface-container-low text-on-surface outline-none transition-all border-b-2 border-outline-variant focus:border-primary-container focus:bg-primary-fixed/20';
+          input.style.width = Math.max(5, answers[0].length + 2) + 'ch';
+          input.dataset.answers = JSON.stringify(answers);
+
+          input.addEventListener('input', () => {
+            input.classList.remove('bg-emerald-100', 'text-emerald-900', 'border-emerald-500', 'bg-red-100', 'text-red-900', 'border-red-500');
+            updateUsedChips();
+          });
+
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              const curIdx = inputs.indexOf(input);
+              if (curIdx + 1 < inputs.length) {
+                inputs[curIdx + 1].focus();
+              } else {
+                validateGaps();
+              }
+            }
+          });
+
+          inputs.push(input);
+          p.appendChild(input);
+        }
+      });
+
+      card.appendChild(p);
+      textsContainer.appendChild(card);
+    });
+
+    // Banco de palabras desordenadas
+    const bankCard = document.createElement('div');
+    bankCard.className = 'w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm';
+    bankCard.innerHTML = `
+      <div class="flex items-center justify-between">
+        <span class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-primary">sort_by_alpha</span>
+          Banco de palabras (${wordsList.length})
+        </span>
+        <span class="font-label-sm text-label-sm text-outline">Insensible a tildes y mayúsculas</span>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">
+        Escribe el término correspondiente en cada hueco interactivo. Pulsa [Enter] para saltar al siguiente hueco.
+      </p>
+      <div id="word-chips" class="flex flex-wrap gap-2 pt-1"></div>
+    `;
+
+    const chipsContainer = bankCard.querySelector('#word-chips');
+    const shuffledChips = shuffle(wordsList);
+    shuffledChips.forEach(w => {
+      const chip = document.createElement('span');
+      chip.className = 'px-3 py-1 rounded-full font-code-inline text-code-inline font-medium bg-surface-container-low text-on-surface-variant shadow-xs transition-opacity';
+      chip.textContent = w;
+      chipsContainer.appendChild(chip);
+    });
+
+    // Actions & Results bar
+    const actionsBar = document.createElement('div');
+    actionsBar.className = 'w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md';
+    actionsBar.innerHTML = `
+      <div id="gap-feedback" class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+        <span class="material-symbols-outlined text-[20px] text-outline">pending</span>
+        <span>Completa los huecos y pulsa comprobar</span>
+      </div>
+      <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+        <button id="btn-reset-gaps" class="px-4 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-all">
+          Reiniciar
+        </button>
+        <button id="btn-reveal-gaps" class="px-4 py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-all">
+          Ver soluciones
+        </button>
+        <button id="btn-check-gaps" class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-[0_2px_10px_rgba(0,113,227,0.22)] flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span>Comprobar</span>
+        </button>
+      </div>
+    `;
+
+    wrapper.appendChild(bankCard);
+    wrapper.appendChild(textsContainer);
+    wrapper.appendChild(actionsBar);
+    container.appendChild(wrapper);
+
+    const feedbackEl = actionsBar.querySelector('#gap-feedback');
+
+    function checkAnswer(inp) {
+      const val = norm(inp.value);
+      if (!val) return false;
+      const expected = JSON.parse(inp.dataset.answers);
+      return expected.some(a => norm(a) === val);
+    }
+
+    function updateUsedChips() {
+      const allChips = chipsContainer.querySelectorAll('span');
+      const matchedAnswers = inputs.filter(checkAnswer).map(inp => norm(JSON.parse(inp.dataset.answers)[0]));
+
+      allChips.forEach(c => {
+        const cNorm = norm(c.textContent);
+        const idx = matchedAnswers.indexOf(cNorm);
+        if (idx >= 0) {
+          c.className = 'px-3 py-1 rounded-full font-code-inline text-code-inline font-medium bg-surface-container text-outline opacity-40 line-through';
+          matchedAnswers.splice(idx, 1);
+        } else {
+          c.className = 'px-3 py-1 rounded-full font-code-inline text-code-inline font-medium bg-surface-container-low text-on-surface-variant shadow-xs transition-opacity';
+        }
+      });
+    }
+
+    function validateGaps() {
+      let correct = 0;
+      inputs.forEach(inp => {
+        const ok = checkAnswer(inp);
+        inp.classList.remove('bg-emerald-100', 'text-emerald-900', 'border-emerald-500', 'bg-red-100', 'text-red-900', 'border-red-500');
+        if (ok) {
+          inp.classList.add('bg-emerald-100', 'text-emerald-900', 'border-emerald-500');
+          correct++;
+        } else {
+          inp.classList.add('bg-red-100', 'text-red-900', 'border-red-500');
+        }
+      });
+
+      updateUsedChips();
+
+      if (correct === inputs.length) {
+        feedbackEl.innerHTML = `<span class="material-symbols-outlined text-emerald-600 text-[22px]">celebration</span><span class="text-emerald-700">¡Perfecto! ${correct} de ${inputs.length} correctos</span>`;
+      } else {
+        feedbackEl.innerHTML = `<span class="material-symbols-outlined text-primary text-[22px]">fact_check</span><span>${correct} de ${inputs.length} aciertos. Revisa los marcados en rojo.</span>`;
+      }
+    }
+
+    function revealSolutions() {
+      inputs.forEach(inp => {
+        const rightWord = JSON.parse(inp.dataset.answers)[0];
+        const ok = checkAnswer(inp);
+        if (!ok) {
+          inp.value = rightWord;
+          inp.className = 'mx-1 px-2.5 py-0.5 rounded-md font-body-md text-body-md text-center bg-red-100 text-red-900 border-b-2 border-red-500 outline-none';
+        } else {
+          inp.className = 'mx-1 px-2.5 py-0.5 rounded-md font-body-md text-body-md text-center bg-emerald-100 text-emerald-900 border-b-2 border-emerald-500 outline-none';
+        }
+      });
+      updateUsedChips();
+      feedbackEl.innerHTML = `<span class="material-symbols-outlined text-outline text-[22px]">info</span><span class="text-on-surface-variant font-medium">Soluciones completadas (en rojo las que no tenías)</span>`;
+    }
+
+    actionsBar.querySelector('#btn-check-gaps').onclick = validateGaps;
+    actionsBar.querySelector('#btn-reveal-gaps').onclick = revealSolutions;
+    actionsBar.querySelector('#btn-reset-gaps').onclick = () => renderGaps(container);
+  }
+
+  // Inicio en modo Quiz interactivo
+  renderCurrentMode();
+})();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin py-space-xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start pb-space-lg"><div class="lg:col-span-7 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container"></div><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad<br/>Dirección docente e investigadora: <span class="text-on-surface font-medium">Dr. Toni Granollers</span> · Departament d'Informàtica i Enginyeria Industrial.</p></div><div class="lg:col-span-5 flex flex-wrap lg:justify-end items-center gap-2"><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">UdL</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">GRIHO</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">AIPO</div><div class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm">ACM SIGCHI</div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left font-label-sm text-label-sm text-outline"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span><span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span></div><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">apps</span><span>Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional</span></div></div></div></footer><a href="modulo-2-03-memoria.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>

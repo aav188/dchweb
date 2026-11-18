@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Accesibilidad 02: Una Necesidad General - Curso IPO</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#414753","surface":"#faf8fe","primary-container":"#0071e3","tertiary-fixed":"#d7e3ff","background":"#faf8fe","on-background":"#1a1b1f","error-container":"#ffdad6","error":"#ba1a1a","on-tertiary-fixed-variant":"#00458e","on-error-container":"#93000a","primary-fixed-dim":"#abc7ff","surface-bright":"#faf8fe","inverse-primary":"#abc7ff","on-secondary-fixed":"#1b1b1d","surface-dim":"#dad9df","secondary-fixed":"#e4e2e4","inverse-on-surface":"#f1f0f5","on-primary":"#ffffff","secondary-container":"#e2dfe1","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#474649","on-tertiary-container":"#fcfaff","secondary-fixed-dim":"#c8c6c8","tertiary-fixed-dim":"#abc7ff","surface-tint":"#005cbb","on-surface":"#1a1b1f","outline":"#717785","tertiary":"#0059b4","inverse-surface":"#2f3034","on-secondary":"#ffffff","on-secondary-container":"#636264","on-tertiary-fixed":"#001b3f","on-primary-container":"#fcfbff","surface-variant":"#e3e2e7","primary":"#0059b5","on-primary-fixed":"#001b3f","outline-variant":"#c1c6d6","on-primary-fixed-variant":"#00458f","surface-container-high":"#e9e7ed","surface-container":"#eeedf3","secondary":"#5f5e60","on-tertiary":"#ffffff","on-error":"#ffffff","tertiary-container":"#0071e2","primary-fixed":"#d7e2ff","surface-container-highest":"#e3e2e7","surface-container-low":"#f4f3f8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-sm":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-sm":"1rem","margin":"3rem","margin-md":"2rem","gutter":"1.5rem"},"fontFamily":{"body-md":["Inter"],"label-sm":["Inter"],"display-hero-mobile":["Inter"],"display-hero":["Inter"],"headline-xl-mobile":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"]},"fontSize":{"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-gutter flex flex-col justify-between pt-3 pb-2 gap-2">
+<div class="flex items-center justify-between gap-gutter">
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-sm group text-left" data-path="inicio" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold shadow-[0_2px_8px_rgba(0,113,227,0.25)]">IPO</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Curso IPO</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">UdL • Dr. Toni Granollers</span>
+</div>
+</a>
+<nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container-low rounded-full">
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Inicio</a>
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md bg-primary-container text-on-primary-container font-medium" data-path="accesibilidad-interfaces" href="#">Curso IPO</a>
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="explorar-conceptos" href="#">Explorar Conceptos</a>
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="mpiua" href="#">MPIu+a</a>
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="recursos" href="#">Recursos</a>
+<a class="px-space-md py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a>
+</nav>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="hidden md:flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<span class="font-body-sm text-body-sm">Buscar en IPO...</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-code-inline text-code-inline text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.08)]">⌘K</kbd>
+</div>
+<div class="hidden lg:flex items-center gap-space-sm pl-space-sm pr-space-md py-1 rounded-full bg-surface-container-low">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Curricular:</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Pilar 03 • 75%</span>
+</div>
+<button aria-label="Alternar modo visual" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">light_mode</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-on-surface cursor-pointer">Módulo 1: Fundamentos</span>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" data-path="accesibilidad-interfaces" href="#">Accesibilidad</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">02 Una Necesidad General</span>
+</div>
+<!-- 4 Tarjetas Temáticas Persistentes (Idénticas al patrón canónico y referencia) -->
+<nav aria-label="Pestañas de Lecciones del Módulo" class="grid grid-cols-2 lg:grid-cols-4 gap-space-sm w-full py-1">
+<!-- Tarjeta 01 (Inactiva) -->
+<a class="group relative flex flex-col justify-between p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/50 hover:border-primary/40 hover:bg-surface-container-low transition-all shadow-sm text-left" data-path="accesibilidad-interfaces" href="#">
+<div class="flex items-center justify-between w-full">
+<span class="font-code-inline text-[12px] font-semibold text-on-surface-variant">01</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">menu_book</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">Accesibilidad de las Interfaces</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant mt-0.5">Barreras e ISO 16071</span>
+</div>
+</a>
+<!-- Tarjeta 02 (ACTIVO) -->
+<a class="relative flex flex-col justify-between p-3 rounded-xl bg-[#0071e3] text-white shadow-[0_4px_14px_rgba(0,113,227,0.35)] text-left ring-2 ring-primary" data-path="necesidad-general" href="#">
+<div class="flex items-center justify-between w-full">
+<span class="font-code-inline text-[12px] font-bold text-white">02</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-[10px] font-bold uppercase tracking-wider bg-white text-[#0071e3] px-2 py-0.5 rounded-full shadow-sm">ACTIVO</span>
+<span class="material-symbols-outlined text-[18px] text-white">priority_high</span>
+</div>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-white leading-tight">Una Necesidad General</span>
+<span class="font-label-sm text-[12px] text-white/90 mt-0.5">Diversidad y rampa urbana</span>
+</div>
+</a>
+<!-- Tarjeta 03 (Inactiva) -->
+<a class="group relative flex flex-col justify-between p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/50 hover:border-primary/40 hover:bg-surface-container-low transition-all shadow-sm text-left" data-path="motivos-diseno-accesible" href="#">
+<div class="flex items-center justify-between w-full">
+<span class="font-code-inline text-[12px] font-semibold text-on-surface-variant">03</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">trending_up</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">Motivos de Diseño Accesible</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant mt-0.5">Ética, leyes y ROI</span>
+</div>
+</a>
+<!-- Tarjeta 04 (Inactiva) -->
+<a class="group relative flex flex-col justify-between p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/50 hover:border-primary/40 hover:bg-surface-container-low transition-all shadow-sm text-left" data-path="accesibilidad-internet" href="#">
+<div class="flex items-center justify-between w-full">
+<span class="font-code-inline text-[12px] font-semibold text-on-surface-variant">04</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">public</span>
+</div>
+<div class="mt-2 flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">Accesibilidad en Internet</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant mt-0.5">W3C, WAI y pautas POUR</span>
+</div>
+</a>
+</nav>
+</div>
+</div></header><main class="w-full pt-48 pb-16 bg-surface">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col gap-space-xl">
+<!-- ENCABEZADO CANÓNICO -->
+<header class="flex flex-col gap-space-sm max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary w-fit font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">diversity_3</span>
+<span>Módulo 1 • Pilar Fundacional de Accesibilidad</span>
+</div>
+<h1 class="font-headline-xl text-3xl md:text-headline-xl font-bold tracking-tight text-on-surface">
+        Accesibilidad 02: Una Necesidad General
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Todos en algún momento de nuestras vidas experimentamos discapacidades temporales, situacionales o permanentes. La accesibilidad es una ventaja universal para toda la sociedad, no una concesión caritativa para una minoría aislada.
+      </p>
+</header>
+<!-- CITA CANÓNICA ISO/TS 16071 -->
+<section class="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-surface-container-lowest via-surface-container to-surface-container-low border-l-4 border-primary shadow-sm">
+<div class="flex flex-col sm:flex-row gap-4 items-start">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">format_quote</span>
+</div>
+<div class="flex flex-col gap-2">
+<blockquote class="font-body-lg text-on-surface italic text-[18px] leading-relaxed">
+            «Tener una discapacidad debe ser visto como un elemento natural de la vida humana. Todos podemos, en algún periodo de nuestra vida, vernos afectados por circunstancias que nos dificulten usar productos y servicios.»
+          </blockquote>
+<div class="flex items-center gap-2 text-label-sm font-code-inline text-on-surface-variant">
+<span class="font-semibold text-primary">— ISO/TS 16071:2003</span>
+<span>[ISO03]</span>
+<span class="text-outline-variant">•</span>
+<span>Directrices de Accesibilidad para Interfaces de Software</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOQUE DESTACADO: LA ANALOGÍA CANÓNICA DE LA RAMPA URBANA -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg p-6 md:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm items-center">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary font-headline-sm font-bold text-headline-sm">
+<span class="material-symbols-outlined text-[26px]">accessible_forward</span>
+<h2>La analogía canónica de la rampa urbana (Curb Cut Effect)</h2>
+</div>
+<p class="font-body-md text-on-surface leading-relaxed">
+          En arquitectura civil, la decisión de <strong>rebajar los bordillos de las aceras</strong> y habilitar <strong>rampas mecánicas en autobuses</strong> se diseñó originalmente pensando en personas que se desplazan en sillas de ruedas.
+        </p>
+<p class="font-body-md text-on-surface leading-relaxed">
+          Sin embargo, el impacto positivo superó radicalmente el caso de uso original: hoy los principales beneficiarios cotidianos son <strong>familias con carritos de bebés</strong>, <strong>personas mayores</strong> con movilidad reducida, <strong>repartidores con carros de carga</strong>, <strong>viajeros arrastrando maletas</strong> y ciclistas urbanos.
+        </p>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">lightbulb</span>
+<p class="font-body-sm text-on-surface-variant text-[14px]">
+<strong>Principio Fundamental en IPO:</strong> Cuando un sistema interactivo se optimiza para eliminar barreras a personas con limitaciones funcionales extremas, la experiencia de usuario resultante es radicalmente superior para el 100% de la población.
+          </p>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-3">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]">child_friendly</span>
+<span class="font-label-md font-semibold text-on-surface">Carritos de bebés</span>
+<span class="text-xs text-on-surface-variant">Desplazamiento fluido sin esfuerzo físico.</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]">luggage</span>
+<span class="font-label-md font-semibold text-on-surface">Viajeros y maletas</span>
+<span class="text-xs text-on-surface-variant">Tránsito aeroportuario y estaciones sin obstáculos.</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]">local_shipping</span>
+<span class="font-label-md font-semibold text-on-surface">Repartidores y logística</span>
+<span class="text-xs text-on-surface-variant">Eficiencia operativa y menor tasa de lesiones.</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]">elderly</span>
+<span class="font-label-md font-semibold text-on-surface">Adultos mayores</span>
+<span class="text-xs text-on-surface-variant">Prevención de caídas y autonomía de movimiento.</span>
+</div>
+</div>
+</section>
+<!-- COLECTIVOS BENEFICIADOS EXPLICADOS CON DETALLE -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-label-md font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+<span>Diversidad y Espectro Humano</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+          Colectivos y situaciones beneficiadas por el Diseño Accesible
+        </h2>
+<p class="font-body-md text-on-surface-variant">
+          La visión restrictiva de la discapacidad omite la realidad cotidiana. Analizamos los colectivos críticos respaldados por la evidencia empírica en IPO:
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md mt-2">
+<!-- Colectivo 1 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">elderly</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Personas de edad avanzada</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              El envejecimiento poblacional mundial conlleva una degradación simultánea y progresiva de la agudeza visual (presbicia, cataratas), pérdida auditiva gradual y temblores motores leves.
+            </p>
+<div class="p-3 rounded-lg bg-surface-container text-xs font-code-inline text-on-surface-variant border-l-2 border-primary">
+<strong>Evidencia AIMC [AIM03]:</strong> El 89.2% de los usuarios de internet registrados en los estudios de la Asociación tenían menos de 45 años, evidenciando una brecha histórica que solo el diseño accesible ha comenzado a cerrar.
+            </div>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Contraste, tipografía escalable y botones amplios</span>
+</article>
+<!-- Colectivo 2 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">escalator_warning</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Etapa pre-lectora o infantil</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Niños y personas en proceso inicial de alfabetización experimentan una falta transitoria de comprensión de textos densos.
+            </p>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              La estructuración jerárquica clara, los apoyos iconográficos consistentes, el feedback auditivo y la redundancia visual permiten que naveguen y operen sistemas interactivos con plena autonomía.
+            </p>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Metáforas claras, iconografía y lenguaje directo</span>
+</article>
+<!-- Colectivo 3 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">signal_cellular_connected_no_internet_0_bar</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Brecha técnica y conectividad</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Usuarios con equipos de cómputo obsoletos, pantallas con baja fidelidad cromática, o ubicados en zonas rurales con conectividad intermitente y anchos de banda muy limitados.
+            </p>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Por el contrario, dispositivos de última generación ultra-compactos o terminales industriales incompatibles sufren cuando los sitios no respetan el estándar semántico web estricto.
+            </p>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Código semántico ligero y degradación elegante</span>
+</article>
+<!-- Colectivo 4 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">personal_injury</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Discapacidades temporales</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Situaciones biológicas imprevistas y reversibles: una persona diestra con el brazo dominante escayolado por un accidente deportivo obligada a manejar el ratón con la mano izquierda o sólo mediante teclado.
+            </p>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              También incluye una persona con dilatación pupilar oftalmológica, pérdida de voz por laringitis o dolor agudo de oído temporal.
+            </p>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Navegación completa por teclado y atajos</span>
+</article>
+<!-- Colectivo 5 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">translate</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Limitaciones situacionales y contexto</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Interactuar con un smartphone a plena luz del sol directo con reflejos cegadores; conducir un automóvil y necesitar interacción exclusivamente por voz; o estar en un país extranjero sin comprender la lengua local.
+            </p>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              El entorno ambiental impone las mismas restricciones funcionales que una discapacidad física severa.
+            </p>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Modos de contraste alto y subtítulos canónicos</span>
+</article>
+<!-- Colectivo 6 -->
+<article class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">accessible</span>
+</div>
+<h3 class="font-headline-sm font-bold text-on-surface">Discapacidad permanente o regular</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Personas con ceguera total, daltonismo severo, sordera congénita, parálisis cerebral, esclerosis múltiple o amputación de extremidades.
+            </p>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+              Para este colectivo el diseño accesible no es una conveniencia o una mejora marginal: es la <strong>única puerta de entrada</strong> que define si pueden o no estudiar, trabajar y ejercer sus derechos ciudadanos.
+            </p>
+</div>
+<span class="font-label-sm text-[12px] font-semibold text-primary">Necesidad: Soporte estricto de lectores de pantalla (ARIA/WCAG)</span>
+</article>
+</div>
+</section>
+<!-- MATRIZ CANÓNICA: DIMENSIONES DE LA DISCAPACIDAD -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-label-md font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+<span>Modelo de Exclusión de Microsoft &amp; W3C</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+          Matriz de Colectivos y Tipos de Limitación
+        </h2>
+<p class="font-body-md text-on-surface-variant">
+          La discapacidad no es un atributo personal de salud, sino el <strong>desajuste entre las capacidades de una persona y los obstáculos que impone el diseño de su entorno</strong>:
+        </p>
+</div>
+<div class="overflow-x-auto rounded-2xl border border-outline-variant/40 bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant/40 font-headline-sm text-headline-sm">
+<th class="p-4 text-on-surface font-semibold">Tipo Sensorial / Motor</th>
+<th class="p-4 text-on-surface font-semibold">Limitación Permanente</th>
+<th class="p-4 text-on-surface font-semibold">Limitación Temporal</th>
+<th class="p-4 text-on-surface font-semibold">Limitación Situacional</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Visual</span>
+</td>
+<td class="p-4 text-on-surface">Ceguera total, baja visión severa, acromatopsia.</td>
+<td class="p-4 text-on-surface">Catarata operable, dilatación pupilar médica, conjuntivitis.</td>
+<td class="p-4 text-on-surface">Pantalla bajo sol cegador directo, fatiga visual nocturna.</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">hearing</span>
+<span>Auditiva</span>
+</td>
+<td class="p-4 text-on-surface">Hipoacusia profunda bilateral, sordera congénita.</td>
+<td class="p-4 text-on-surface">Infección de oído agudo (otitis), tapón de cerumen severo.</td>
+<td class="p-4 text-on-surface">Entorno muy ruidoso (fábrica, metro), olvido de auriculares en biblioteca.</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+<span>Motora</span>
+</td>
+<td class="p-4 text-on-surface">Amputación de extremidad, tetraplejia, párkinson avanzado.</td>
+<td class="p-4 text-on-surface">Brazo roto enyesado, esguince de muñeca, tendinitis severa.</td>
+<td class="p-4 text-on-surface">Sostener un bebé en brazos, viajar de pie en autobús sujetándose al pasamanos.</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>Cognitiva / Habla</span>
+</td>
+<td class="p-4 text-on-surface">Afasia severa, autismo no verbal, retraso madurativo permanente.</td>
+<td class="p-4 text-on-surface">Laringitis aguda sin voz, conmoción cerebral leve, resaca intensa.</td>
+<td class="p-4 text-on-surface">País con idioma desconocido, estrés cognitivo agudo bajo emergencia, distracción extrema.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- TECNOLOGÍA DE LA REHABILITACIÓN Y SU IMPACTO EN IPO -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg p-6 md:p-8 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 text-primary font-headline-sm font-bold text-headline-sm">
+<span class="material-symbols-outlined text-[24px]">vital_signs</span>
+<h2>La Tecnología de la Rehabilitación y su impacto en IPO</h2>
+</div>
+<p class="font-body-md text-on-surface leading-relaxed">
+          Históricamente, los avances más disruptivos de la computación moderna nacieron en laboratorios de <strong>tecnología asistencial y de rehabilitación</strong> para solucionar discapacidades motoras y sensoriales extremas, convirtiéndose años más tarde en tecnologías comerciales masivas:
+        </p>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface mt-1">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div><strong>Reconocimiento de voz y dictado:</strong> Inicialmente creado para permitir redactar documentos a personas con parálisis motriz severa o tetraplejia; hoy sustenta Siri, Google Assistant, Alexa y los centros de atención telefónica automatizados.</div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div><strong>Pantallas táctiles capacitivas:</strong> Desarrolladas en sus orígenes para personas con problemas articulares que no podían aplicar fuerza en teclas mecánicas tradicionales.</div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div><strong>Sistemas de captación cerebral (ABI / BCI) [MIL03]:</strong> Investigaciones pioneras de Millán et al. en neuroprótesis permiten controlar cursores mediante electroencefalografía no invasiva, sentando las bases de la interacción hombre-máquina neuronal del futuro.</div>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div><strong>Texto a Voz (TTS - Text to Speech):</strong> Inventado para lectura de libros en ciegos, transformado hoy en el estándar global de audiolibros, podcasts sintéticos y sistemas GPS de navegación.</div>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-4 p-5 rounded-xl bg-surface-container flex flex-col justify-between gap-4 border border-outline-variant/30">
+<div class="flex flex-col gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+            Inclusión = Innovación
+          </span>
+<p class="font-body-sm text-on-surface-variant text-[14px]">
+            «Diseñar para la frontera de la capacidad humana expande el horizonte de interacción de toda la especie humana.»
+          </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest font-code-inline text-[12px] text-on-surface-variant flex flex-col gap-1 border border-outline-variant/30">
+<span class="font-bold text-primary">Cátedra Dr. Toni Granollers</span>
+<span>Laboratorio GRIHO • UdL</span>
+<span class="text-on-surface-variant">Líneas de I+D en accesibilidad perceptual</span>
+</div>
+</div>
+</section>
+<!-- REFERENCIAS BIBLIOGRÁFICAS CANÓNICAS -->
+<section class="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface font-headline-sm font-bold text-headline-sm">
+<span class="material-symbols-outlined text-[22px] text-primary">menu_book</span>
+<h3>Referencias Bibliográficas Canónicas</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 flex flex-col gap-1">
+<span class="font-code-inline text-label-sm font-bold text-primary">[ISO03]</span>
+<p class="font-body-sm text-[13px] text-on-surface">
+<strong>ISO/TS 16071:2003:</strong> Ergonomics of human-system interaction — Guidance on software accessibility. International Organization for Standardization, Ginebra.
+          </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 flex flex-col gap-1">
+<span class="font-code-inline text-label-sm font-bold text-primary">[AIM03]</span>
+<p class="font-body-sm text-[13px] text-on-surface">
+<strong>AIMC (2003):</strong> «Navegantes en la Red: 6ª Encuesta a usuarios de Internet». Asociación para la Investigación de Medios de Comunicación, Madrid.
+          </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 flex flex-col gap-1">
+<span class="font-code-inline text-label-sm font-bold text-primary">[ABA02b]</span>
+<p class="font-body-sm text-[13px] text-on-surface">
+<strong>Abascal, J. y Civit, A. (2002):</strong> «La tecnología de la rehabilitación y su impacto en la Interacción Persona-Ordenador». AIPO, Informes Técnicos de IPO.
+          </p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 flex flex-col gap-1">
+<span class="font-code-inline text-label-sm font-bold text-primary">[MIL03]</span>
+<p class="font-body-sm text-[13px] text-on-surface">
+<strong>Millán, J. d. R. et al. (2003):</strong> «Non-invasive brain-actuated control of a mobile robot by human EEG». IEEE Transactions on Biomedical Engineering, 51(6).
+          </p>
+</div>
+</div>
+</section>
+<!-- BARRA INFERIOR DE NAVEGACIÓN ENTRE LECCIONES -->
+<nav aria-label="Navegación de Lecciones" class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-outline-variant/30">
+<a class="w-full sm:w-auto inline-flex items-center gap-space-sm px-6 py-3 rounded-full bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/50 text-on-surface font-label-md font-semibold transition-all shadow-sm hover:shadow" data-path="accesibilidad-interfaces" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_back</span>
+<div class="flex flex-col text-left">
+<span class="text-[11px] text-on-surface-variant font-normal">Lección anterior</span>
+<span>01 Accesibilidad de las Interfaces</span>
+</div>
+</a><div class="flex items-center gap-3"><span class="text-xs text-[#45464f]">Capítulo 02 de 04</span><span class="text-[#c7c5d0]">•</span><a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0071e3] hover:bg-[#0059b5] text-white text-xs font-semibold shadow-sm transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-end gap-space-sm px-6 py-3 rounded-full bg-primary-container text-on-primary-container hover:bg-primary font-label-md font-semibold transition-all shadow-sm hover:shadow-md group" data-path="motivos-diseno-accesible" href="#">
+<div class="flex flex-col text-right">
+<span class="text-[11px] text-on-primary-container/80 font-normal">Siguiente lección</span>
+<span>03 Motivos de Diseño Accesible</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</nav>
+</div>
+</main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold">IPO</div><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">Espacio académico oficial para la formación, experimentación e investigación en diseño centrado en las personas, heurísticas de usabilidad y evaluación de sistemas accesibles.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Universitat de Lleida (UdL)</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Cátedra Dr. Toni Granollers</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface">Ecosistema de Investigación</span><ul class="flex flex-col gap-1 font-body-sm text-body-sm"><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">GRIHO • Grup de Recerca en IPO</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">AIPO • Asoc. Interacción Persona-Ordenador</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">ACM SIGCHI Special Interest Group</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">Máster MPIu+a</span></li></ul></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface">Compromiso Técnico</span><div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5"><div class="flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-sm text-label-sm font-semibold">WCAG 2.2 Nivel AA</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Diseñado bajo directrices internacionales de accesibilidad perceptiva, operable, comprensible y robusta.</p></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs flex-wrap"><span class="material-symbols-outlined text-[16px] text-secondary">info</span><span>Licencia Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0).</span></div><div class="flex items-center gap-space-md"><span class="hover:text-on-surface cursor-pointer">Guía de Estilo IPO</span><span class="hover:text-on-surface cursor-pointer">Declaración de Accesibilidad</span><span class="hover:text-on-surface cursor-pointer">Contacto Académico</span></div></div></div></footer>
+
+</body></html>

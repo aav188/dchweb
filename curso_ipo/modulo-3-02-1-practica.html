@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Universitat de Lleida</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#005cbb","error":"#ba1a1a","primary-container":"#0071e3","secondary-fixed":"#e4e2e4","surface-bright":"#faf8fe","inverse-primary":"#abc7ff","background":"#faf8fe","on-background":"#1a1b1f","on-primary":"#ffffff","inverse-surface":"#2f3034","tertiary-fixed":"#d7e3ff","on-primary-fixed":"#001b3f","primary-fixed-dim":"#abc7ff","primary-fixed":"#d7e2ff","tertiary":"#0059b4","surface-container-lowest":"#ffffff","secondary-container":"#e2dfe1","secondary-fixed-dim":"#c8c6c8","surface":"#faf8fe","on-primary-fixed-variant":"#00458f","on-secondary":"#ffffff","on-primary-container":"#fcfbff","primary":"#0059b5","surface-container-highest":"#e3e2e7","on-tertiary-fixed-variant":"#00458e","surface-container":"#eeedf3","outline":"#717785","on-surface":"#1a1b1f","outline-variant":"#c1c6d6","surface-container-high":"#e9e7ed","error-container":"#ffdad6","on-tertiary-fixed":"#001b3f","surface-container-low":"#f4f3f8","on-tertiary-container":"#fcfaff","surface-dim":"#dad9df","on-secondary-container":"#636264","secondary":"#5f5e60","on-secondary-fixed":"#1b1b1d","tertiary-container":"#0071e2","on-secondary-fixed-variant":"#474649","inverse-on-surface":"#f1f0f5","on-error":"#ffffff","on-error-container":"#93000a","tertiary-fixed-dim":"#abc7ff","on-tertiary":"#ffffff","on-surface-variant":"#414753","surface-variant":"#e3e2e7"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","margin-sm":"1.25rem","gutter":"1.5rem","gutter-sm":"1rem","space-md":"1rem","margin":"3rem","space-sm":"0.5rem","space-lg":"1.5rem","margin-md":"2rem"},fontFamily:{"headline-lg":["Inter"],"body-sm":["Inter"],"code-inline":["JetBrains Mono"],"headline-md":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"display-hero":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"display-hero-mobile":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><span class="ipo-logo">IPO</span><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="#">Explorar Conceptos</a><a href="modulo-3-03-modelo-mpiua.html">MPIu+a</a><a href="#">Recursos</a><a href="#">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span><kbd>⌘K</kbd></button><button aria-label="Cambiar tema" class="ipo-ic" id="theme-toggle-btn" type="button"><svg viewbox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"></path></svg></button><div class="ipo-prog"><svg style="color:#0059b5" viewbox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg>Progreso: <b id="global-progress-value">0%</b></div><div class="ipo-av"><svg viewbox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg></div></div></div></div><div class="h-12 bg-surface-container-low/90 backdrop-blur-md"><div class="h-full max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md overflow-x-auto"><div class="flex items-center gap-space-sm shrink-0"><span class="material-symbols-outlined text-primary text-[18px]">folder_open</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden md:inline">Módulo 3.2: Teoría del DCU</span><span class="text-outline-variant hidden md:inline">/</span></div><nav class="flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm" data-active-classes="bg-primary text-on-primary shadow-sm"><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="normativa-principios-dcu-iso-13407" href="modulo-3-02-1-normativa.html">3.2.1 Normativa y principios DCU (ISO 13407)</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="diseno-contextual-y-participacion" href="modulo-3-02-2-contextual.html">3.2.2 Diseño contextual y participación</a><a class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="modulo-3-02-3-enfoques.html">3.2.3 Enfoques: DCUsuario vs DCUso vs DCTec</a></nav></div></div></header><main class="w-full pt-26 bg-surface min-h-[calc(100vh-260px)]"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-container-low/60 py-space-sm">
+<div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-sm overflow-x-auto">
+<div class="flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm">
+<a class="inline-flex items-center px-space-md py-1.5 rounded-full bg-primary-container text-on-primary shadow-sm font-semibold transition-all" data-path="normativa-principios-dcu-iso-13407" href="modulo-3-02-1-normativa.html">
+<span class="material-symbols-outlined text-[16px] mr-1.5">check_circle</span>
+          3.2.1 Normativa y principios DCU
+        </a>
+<a class="inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="diseno-contextual-y-participacion" href="modulo-3-02-2-contextual.html">
+          3.2.2 Diseño contextual y participación
+        </a>
+<a class="inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="enfoques-dcusuario-vs-dcuso-vs-dctec" href="modulo-3-02-3-enfoques.html">
+          3.2.3 Enfoques: DCUsuario vs DCUso / DCTec
+        </a>
+</div>
+<div class="hidden md:flex items-center gap-space-xs font-code-inline text-code-inline text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>ISO 13407 / ISO 9241-210</span>
+</div>
+</div>
+</div>
+<section class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter py-space-lg w-full space-y-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg md:p-space-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[32px]">sports_esports</span>
+</div>
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wide">
+            JUEGO 1 · TODO EN UNO · Módulo 3 · 3.2.1 DCU
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Test, flashcards y huecos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Todo junto: test interactivo, flashcards con giro 3D y textos con huecos sobre el estándar ISO 13407 / ISO 9241-210, los 5 principios del DCU y roles multidisciplinares.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-center items-start lg:items-end shrink-0 space-y-1">
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+<span>• 25 preguntas • 12 tarjetas • 7 textos</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Contenido temático completo</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-xl shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary shadow-sm font-label-md text-label-md transition-all" id="tab-quiz" onclick="switchSuiteTab('quiz')">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+          Test interactivo (25)
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" id="tab-flashcards" onclick="switchSuiteTab('flashcards')">
+<span class="material-symbols-outlined text-[18px]">style</span>
+          Flashcards 3D (12)
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" id="tab-blanks" onclick="switchSuiteTab('blanks')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+          Rellenar huecos (7)
+        </button>
+</div>
+<div class="hidden xl:inline-flex items-center gap-space-xs font-code-inline text-code-inline text-on-surface-variant bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+<span>Atajos activos: [1-4] Test · [Espacio/Flechas] Tarjetas · [Enter] Validar</span>
+</div>
+</div>
+<!-- PANE 1: TEST INTERACTIVO (25 PREGUNTAS) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md md:p-space-xl space-y-space-lg" id="pane-quiz">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="quiz-meta-step">Pregunta 1 de 25</span>
+<div class="flex items-center gap-space-md">
+<span class="bg-surface-container px-2.5 py-1 rounded-full text-primary font-medium" id="quiz-score-badge">Aciertos acumulados: 0</span>
+<span class="font-code-inline text-code-inline" id="quiz-progress-percent">0% completado</span>
+</div>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container transition-all duration-300 rounded-full" id="quiz-progress-bar" style="width: 4%;"></div>
+</div>
+</div>
+<div class="space-y-space-md py-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug" id="quiz-question-title">
+          ¿Qué título tiene la norma ISO 13407?
+        </h2>
+<div class="grid grid-cols-1 gap-space-sm pt-space-xs" id="quiz-options-container">
+<!-- Dynamically populated via JS -->
+</div>
+<div class="hidden p-space-md rounded-xl transition-all" id="quiz-feedback-box">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] shrink-0 mt-0.5" id="quiz-feedback-icon"></span>
+<div class="space-y-1">
+<h4 class="font-headline-sm text-headline-sm" id="quiz-feedback-title"></h4>
+<p class="font-body-md text-body-md" id="quiz-feedback-desc"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md bg-surface-container-lowest">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md disabled:opacity-40 disabled:cursor-not-allowed" id="quiz-btn-prev" onclick="handleQuizPrev()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Anterior
+        </button>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-label-md text-label-md font-semibold transition-all" id="quiz-btn-action" onclick="handleQuizAction()">
+<span>Comprobar respuesta</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PANE 2: FLASHCARDS 3D (12 TARJETAS) -->
+<div class="hidden w-full space-y-space-lg" id="pane-flashcards">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md md:p-space-lg flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="flash-count">Tarjeta 1 de 12</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary" id="flash-mastered-count">0 dominadas</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="shuffleFlashcards()">
+<span class="material-symbols-outlined text-[16px]">shuffle</span>
+            Barajar
+          </button>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="resetFlashcards()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+            Reiniciar
+          </button>
+</div>
+</div>
+<!-- 3D Card Area -->
+<div class="w-full flex justify-center [perspective:1200px]">
+<div class="w-full max-w-2xl h-80 rounded-xl cursor-pointer relative [transform-style:preserve-3d] transition-transform duration-500 shadow-sm hover:shadow-md select-none" id="flashcard-3d-box" onclick="flipCurrentFlashcard()">
+<!-- Anverso -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-lowest p-space-xl rounded-xl flex flex-col justify-between [backface-visibility:hidden]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary bg-primary-fixed px-space-sm py-0.5 rounded-full" id="flash-tag">CONCEPTO NORMATIVO</span>
+<span class="material-symbols-outlined text-outline-variant text-[22px]">touch_app</span>
+</div>
+<div class="text-center py-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">PREGUNTA / CONCEPTO</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold leading-relaxed" id="flash-front-text">
+                ISO 13407
+              </h3>
+</div>
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+<span>Haz clic o pulsa [Espacio] para girar</span>
+</div>
+</div>
+<!-- Reverso -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-high p-space-xl rounded-xl flex flex-col justify-between [backface-visibility:hidden] [transform:rotateY(180deg)]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary bg-primary px-space-sm py-0.5 rounded-full">DEFINICIÓN ISO / DCU</span>
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+</div>
+<div class="text-center py-space-sm overflow-y-auto">
+<p class="font-headline-sm text-headline-sm text-on-surface font-normal leading-relaxed" id="flash-back-text">
+                "Human-centred design processes for interactive systems". Norma de referencia internacional que establece un marco estructurado de ciclo de vida centrado en el usuario.
+              </p>
+</div>
+<div class="flex items-center justify-center gap-space-xs text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Respuesta clave contrastada</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<div class="flex items-center justify-between max-w-2xl mx-auto w-full">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all" onclick="prevFlashcard()">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+          Anterior
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md font-medium transition-all" id="btn-master-card" onclick="toggleCardMastered()">
+<span class="material-symbols-outlined text-[20px] text-primary">bookmark_add</span>
+<span>Marcar: "Me la sé ✓"</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-label-md text-label-md transition-all" onclick="nextFlashcard()">
+          Siguiente
+          <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- PANE 3: RELLENAR HUECOS (7 TEXTOS) -->
+<div class="hidden w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md md:p-space-xl space-y-space-lg" id="pane-blanks">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider" id="blank-step-label">Texto 1 de 7</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1" id="blank-title">Fundamentos del Diseño Centrado en el Usuario</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="resetCurrentBlank()">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+            Limpiar huecos
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Banco de palabras disponibles (haz clic para insertar en el hueco activo):</span>
+<div class="flex flex-wrap gap-space-xs pt-1" id="blank-word-bank">
+<!-- chips populated by JS -->
+</div>
+</div>
+<div class="bg-surface p-space-lg rounded-xl leading-relaxed text-on-surface font-body-lg text-body-lg space-y-4" id="blank-text-canvas">
+<!-- Text with input boxes populated by JS -->
+</div>
+<div class="hidden p-space-md rounded-xl transition-all" id="blank-feedback"></div>
+<div class="flex items-center justify-between pt-space-md bg-surface-container-lowest">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md disabled:opacity-40 disabled:cursor-not-allowed" id="blank-btn-prev" onclick="handleBlankPrev()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Texto anterior
+        </button>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-label-md text-label-md font-semibold transition-all" id="blank-btn-validate" onclick="validateCurrentBlank()">
+<span class="material-symbols-outlined text-[18px]">check</span>
+            Validar texto
+          </button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all" id="blank-btn-next" onclick="handleBlankNext()">
+            Siguiente texto
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Navegación Curricular Inferior -->
+<div class="w-full bg-surface-container-lowest py-space-lg">
+<div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-md text-label-md">
+<a class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors py-2" data-path="curso-ipo" href="modulo-3-02-teoria.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        Volver al Índice de Teoría del DCU
+      </a>
+<span class="font-code-inline text-code-inline text-on-surface-variant">
+        Capítulo 01 de 03 · Módulo 3.2
+      </span>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-semibold transition-all" data-path="diseno-contextual-y-participacion" href="modulo-3-02-2-contextual.html">
+        Siguiente: 02 Diseño Contextual y Participación
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  // BANCO DE DATOS: 25 PREGUNTAS ISO 13407 / DCU
+  const quizData = [
+    {
+      q: "¿Qué título tiene la norma ISO 13407?",
+      options: [
+        "Human-centred design processes for interactive systems",
+        "Guidance on usability",
+        "Software product quality",
+        "Guidance on software accessibility"
+      ],
+      answer: 0,
+      feedback: "La norma ISO 13407 (1999), posteriormente actualizada por ISO 9241-210, se titula formalmente 'Human-centred design processes for interactive systems'."
+    },
+    {
+      q: "¿Cuál de las siguientes afirmaciones describe mejor el objetivo de la ISO 13407?",
+      options: [
+        "Especificar exactamente los lenguajes de programación y frameworks recomendados.",
+        "Proporcionar una guía para lograr la usabilidad mediante la incorporación de actividades de DCU a lo largo del ciclo de vida.",
+        "Establecer la estructura de base de datos relacional óptima para aplicaciones interactivas.",
+        "Definir los costes económicos estandarizados por hora de desarrollo de software."
+      ],
+      answer: 1,
+      feedback: "El estándar ofrece directrices de gestión y actividades de proceso para incorporar el diseño centrado en el usuario de forma transversal en el ciclo de vida del producto."
+    },
+    {
+      q: "¿Cuántos principios fundamentales del diseño centrado en el usuario establece la norma ISO 13407?",
+      options: [
+        "Tres principios clave",
+        "Cuatro principios",
+        "Cinco principios clave",
+        "Ocho principios heurísticos"
+      ],
+      answer: 2,
+      feedback: "ISO 13407 formaliza 5 principios esenciales: participación activa de usuarios, asignación adecuada de funciones, iteración de soluciones, diseño multidisciplinar y comprensión del contexto."
+    },
+    {
+      q: "¿Cuál de los siguientes NO es uno de los 5 principios clave de ISO 13407?",
+      options: [
+        "La participación activa de los usuarios y comprensión clara de sus tareas.",
+        "La asignación adecuada de funciones entre los usuarios y la tecnología.",
+        "La minimización del testing presencial para reducir costes presupuestarios.",
+        "La iteración de las soluciones de diseño evaluadas continuamente."
+      ],
+      answer: 2,
+      feedback: "El DCU promueve la evaluación empírica sistemática con usuarios reales; reducir o suprimir las pruebas contradice de raíz la normativa."
+    },
+    {
+      q: "¿Qué norma posterior revisó, consolidó y sustituyó formalmente a la ISO 13407?",
+      options: [
+        "ISO 9241-210 (2010)",
+        "ISO 9001 (2015)",
+        "ISO/IEC 25010 (2011)",
+        "ISO 14001 (2004)"
+      ],
+      answer: 0,
+      feedback: "En 2010 la norma ISO 9241-210 ('Ergonomics of human-system interaction -- Part 210: Human-centred design for interactive systems') sustituyó y amplió la ISO 13407."
+    },
+    {
+      q: "Según el principio de 'asignación adecuada de funciones', ¿cuál es el criterio ergonómico prioritario?",
+      options: [
+        "Asignar a la máquina lo que mejor hace la computación y al humano el juicio, control y toma de decisiones crítica.",
+        "Automatizar el 100% de las funciones sin intervención humana.",
+        "Dejar todo el procesamiento de datos al usuario para que mantenga su concentración.",
+        "Delegar siempre la confirmación en el servidor sin dar feedback inmediato."
+      ],
+      answer: 0,
+      feedback: "La asignación balanceada aprovecha la rapidez, consistencia y memoria del ordenador, reservando al usuario el control, creatividad y comprensión semántica."
+    },
+    {
+      q: "¿Qué característica define la naturaleza 'iterativa' del proceso de diseño según ISO 13407?",
+      options: [
+        "Un modelo lineal rígido en cascada donde no se vuelve nunca a fases previas.",
+        "Un bucle donde el diseño se formula, se evalúa con usuarios y se retroalimenta para refinar la solución antes del despliegue.",
+        "La repetición del código fuente sin cambiar los elementos de interfaz.",
+        "El desarrollo exclusivamente secuencial tras la aprobación de los requisitos."
+      ],
+      answer: 1,
+      feedback: "La iteración implica ciclos continuos de diseño-evaluación-rediseño, admitiendo que un diseño interactivo rara vez es óptimo en la primera iteración."
+    },
+    {
+      q: "¿Por qué el equipo de diseño en DCU debe ser 'multidisciplinar'?",
+      options: [
+        "Para que los desarrolladores solo programen sin interactuar con nadie más.",
+        "Para integrar psicología, ergonomía, ingeniería, diseño visual, lingüística y conocimiento del dominio del usuario.",
+        "Porque las leyes laborales universitarias obligan a contratar al menos 8 personas.",
+        "Para sustituir la participación de usuarios finales por opiniones de expertos."
+      ],
+      answer: 1,
+      feedback: "La complejidad de la interacción exige perspectivas combinadas: factores humanos, arquitectura de información, tecnología e industria del dominio."
+    },
+    {
+      q: "En el ciclo de actividades de ISO 13407, ¿cuál es la primera actividad específica tras planificar el proceso DCU?",
+      options: [
+        "Producir prototipos de alta fidelidad en código final.",
+        "Entender y especificar el contexto de uso.",
+        "Validar el sistema con 50 usuarios finales.",
+        "Escribir los manuales técnicos de usuario."
+      ],
+      answer: 1,
+      feedback: "La primera actividad de diseño es 'Entender y especificar el contexto de uso' (usuarios, tareas, entornos físicos y sociales)."
+    },
+    {
+      q: "¿Cuáles son las 3 dimensiones constitutivas del 'Contexto de Uso' según los estándares ISO?",
+      options: [
+        "CPU, memoria RAM y velocidad de banda ancha.",
+        "Usuarios (características), Tareas (objetivos) y Entornos (físico, técnico y social/organizacional).",
+        "Color, tipografía y resolución de pantalla.",
+        "Presupuesto, tiempo de entrega y número de programadores."
+      ],
+      answer: 1,
+      feedback: "El contexto de uso está determinado por la tríada: quién lo usa (usuarios), para qué (tareas) y bajo qué condiciones (entorno)."
+    },
+    {
+      q: "Tras entender el contexto de uso, ¿cuál es la siguiente actividad obligatoria en el ciclo ISO 13407?",
+      options: [
+        "Especificar los requisitos del usuario y de la organización.",
+        "Comercializar la aplicación en tiendas oficiales.",
+        "Diseñar los iconos en vectores de alta resolución.",
+        "Programar los servicios backend en microservicios."
+      ],
+      answer: 0,
+      feedback: "El flujo estándar es: Contexto de uso -> Requisitos de usuario/organización -> Soluciones de diseño -> Evaluación contra requisitos."
+    },
+    {
+      q: "¿Cuál es la última actividad del ciclo iterativo antes de considerar si el diseño satisface los requisitos?",
+      options: [
+        "Evaluación de los diseños frente a los requisitos de usuario.",
+        "Contratación de un auditor externo contable.",
+        "Exportar el código a binario ejecutable.",
+        "Rediseño visual completo sin métricas."
+      ],
+      answer: 0,
+      feedback: "La evaluación determina si la solución cumple los requisitos o si debe iniciarse otra iteración en el contexto, requisitos o diseño."
+    },
+    {
+      q: "En ISO 9241-11, la 'Usabilidad' se define formalmente mediante tres métricas básicas:",
+      options: [
+        "Velocidad, coste y estética.",
+        "Eficacia, Eficiencia y Satisfacción.",
+        "Modularidad, robustez y portabilidad.",
+        "Accesibilidad, redundancia y compatibilidad."
+      ],
+      answer: 1,
+      feedback: "ISO define usabilidad como el grado en que un producto puede ser usado por usuarios específicos para lograr metas con eficacia, eficiencia y satisfacción."
+    },
+    {
+      q: "¿Qué mide la 'Eficacia' según el estándar de interacción persona-ordenador?",
+      options: [
+        "La precisión y plenitud con la que los usuarios alcanzan objetivos especificados.",
+        "Los recursos (tiempo, esfuerzo) empleados en relación con los resultados logrados.",
+        "El agrado y la ausencia de incomodidad experimentada por el usuario.",
+        "El número de líneas de código generadas por día."
+      ],
+      answer: 0,
+      feedback: "Eficacia = Precisión y compleción de las metas (¿lo consigue o comete errores insalvables?)."
+    },
+    {
+      q: "¿Qué mide la 'Eficiencia' en las pruebas de usabilidad según ISO?",
+      options: [
+        "La cantidad de recursos gastados (tiempo, pulsaciones, clics, carga mental) para alcanzar el objetivo.",
+        "El porcentaje de aprobados de los alumnos de ingeniería.",
+        "La calidad de la paleta cromática seleccionada.",
+        "El número total de pantallas del sistema."
+      ],
+      answer: 0,
+      feedback: "Eficiencia = Relación entre la eficacia alcanzada y los recursos gastados (tiempo de tarea, esfuerzo cognitivo)."
+    },
+    {
+      q: "¿Qué rol desempeña el 'Patrocinador / Cliente' frente al 'Usuario final' en DCU?",
+      options: [
+        "Son siempre la misma persona con exactamente las mismas necesidades.",
+        "El cliente financia o encarga el sistema, pero el usuario final es quien realiza la tarea interactiva real en su día a día.",
+        "El usuario final decide el precio de compra del producto.",
+        "El cliente nunca debe ser entrevistado en un proyecto."
+      ],
+      answer: 1,
+      feedback: "El DCU recalca distinguir entre comprador/patrocinador (cuyos intereses suelen ser costes/plazos) y usuarios directos (cuyas tareas y frustraciones dictan el éxito del diseño)."
+    },
+    {
+      q: "¿Qué es un 'Usuario Secundario' según la taxonomía de usuarios en DCU?",
+      options: [
+        "Alguien que usa el producto ocasionalmente o a través de un intermediario (ej. un paciente cuyos datos carga un médico).",
+        "Un usuario que suspende un test de usabilidad.",
+        "Un desarrollador que revisa logs del servidor.",
+        "Una persona que no tiene acceso a internet."
+      ],
+      answer: 0,
+      feedback: "Los usuarios secundarios interactúan esporádicamente o reciben el resultado directo de la interacción de un usuario primario."
+    },
+    {
+      q: "¿Qué se entiende por 'modelo mental' del usuario según la teoría HCI?",
+      options: [
+        "El esquema mental interno de cómo cree el usuario que funciona el sistema, basado en su experiencia previa.",
+        "La estructura exacta de las clases orientadas a objetos del software.",
+        "El mapa mental dibujado por el director de marketing.",
+        "El manual de usuario impreso en el paquete comercial."
+      ],
+      answer: 0,
+      feedback: "El modelo mental es la representación interna que guía las expectativas del usuario; el diseño debe armonizar con dicho modelo."
+    },
+    {
+      q: "Cuando el sistema no cumple los requisitos en la fase de evaluación de ISO 13407, ¿qué ocurre?",
+      options: [
+        "Se cancela inmediatamente el proyecto de software.",
+        "Se lanza al mercado ignorando los fallos para cumplir la fecha.",
+        "Se itera retornando a redefinir el contexto, ajustar requisitos o generar nuevas alternativas de diseño.",
+        "Se sanciona económicamente a los diseñadores gráficos."
+      ],
+      answer: 2,
+      feedback: "La iteración permite volver atrás ordenadamente para subsanar deficiencias detectadas antes de la implantación final."
+    },
+    {
+      q: "¿Cuál es la principal ventaja de utilizar prototipos de baja fidelidad en etapas tempranas?",
+      options: [
+        "Generan código de producción inmediatamente compilable.",
+        "Permiten evaluar conceptos e iterar con usuarios a muy bajo coste antes de invertir en código complejo.",
+        "No requieren ninguna interacción humana.",
+        "Demuestran que no se necesitan pruebas posteriores de accesibilidad."
+      ],
+      answer: 1,
+      feedback: "El prototipado temprano (papel, wireframes rápidos) minimiza el apego y abarata drásticamente el cambio conceptual."
+    },
+    {
+      q: "¿Qué documento formal sintetiza las características, habilidades, tareas y restricciones de la población de usuarios?",
+      options: [
+        "Diagrama de clases UML.",
+        "Perfil de usuario y descripción de personas / escenarios.",
+        "Licencia de distribución de software GNU GPL.",
+        "Hoja de balance contable de la empresa."
+      ],
+      answer: 1,
+      feedback: "Las Personas y perfiles sintetizan atributos reales de usuarios recopilados durante la investigación contextual."
+    },
+    {
+      q: "¿Por qué no basta con diseñar según el 'sentido común' o la propia intuición de los programadores?",
+      options: [
+        "Porque el programador NO es el usuario representativo y su modelo mental técnico difiere profundamente del público meta.",
+        "Porque el sentido común está patentado por la ISO.",
+        "Porque los programadores tienen prohibido usar ratón y teclado a la vez.",
+        "Porque solo los licenciados en bellas artes pueden diseñar interfaces."
+      ],
+      answer: 0,
+      feedback: "El 'sesgo del programador' asume familiaridad con estructuras de datos y conceptos técnicos ajenos al usuario real."
+    },
+    {
+      q: "¿Qué papel juega la 'retroalimentación activa' (feedback) de los usuarios durante el diseño de prototipos?",
+      options: [
+        "Permite descubrir fallos conceptuales y de navegación cuando corregirlos cuesta hasta 100 veces menos que en producción.",
+        "Sirve únicamente para fines promocionales en redes sociales.",
+        "Retrasa innecesariamente la salida al mercado según todas las metodologías ágiles.",
+        "Sustituye la necesidad de compilar y realizar pruebas unitarias."
+      ],
+      answer: 0,
+      feedback: "La regla de Boehm en ingeniería de software demuestra que detectar un error conceptual en diseño cuesta una fracción de resolverlo tras el despliegue."
+    },
+    {
+      q: "¿Cómo se relaciona la accesibilidad universal (WCAG) con los principios de la ISO 13407?",
+      options: [
+        "Son normativas opuestas que no pueden aplicarse conjuntamente.",
+        "La accesibilidad forma parte intrínseca de considerar la diversidad total de capacidades de los usuarios en el contexto de uso.",
+        "La accesibilidad solo aplica si el cliente es una entidad gubernamental suiza.",
+        "ISO 13407 prohíbe el uso de lectores de pantalla."
+      ],
+      answer: 1,
+      feedback: "Un DCU riguroso abarca las capacidades sensoriales, cognitivas y motrices de todos los usuarios potenciales dentro del contexto de uso."
+    },
+    {
+      q: "¿Qué criterio marca el final del ciclo de vida interactivo de la norma ISO 13407 / ISO 9241-210?",
+      options: [
+        "Cuando se gasta la totalidad del presupuesto disponible.",
+        "Cuando la evaluación con usuarios demuestra fehacientemente que el sistema satisface los requisitos de usabilidad especificados.",
+        "Cuando el diseñador principal decide cambiar de empleo.",
+        "Al alcanzar exactamente 100 descargas en internet."
+      ],
+      answer: 1,
+      feedback: "El proceso concluye (o pasa a despliegue) cuando la evaluación con criterios objetivos valida el cumplimiento de las metas de usabilidad."
+    }
+  ];
+
+  // BANCO DE DATOS: 12 FLASHCARDS 3D
+  const flashcardsData = [
+    {
+      tag: "NORMATIVA INTERNACIONAL",
+      front: "ISO 13407",
+      back: "Publicada en 1999: 'Human-centred design processes for interactive systems'. Marco rector que establece las 4 actividades clave y 5 principios de ergonomía del software."
+    },
+    {
+      tag: "ACTUALIZACIÓN",
+      front: "ISO 9241-210",
+      back: "Evolución y sustitución de la ISO 13407 en 2010. Consolida la experiencia de usuario (UX) e integra el DCU en metodologías ágiles modernas."
+    },
+    {
+      tag: "PRINCIPIO 1 DCU",
+      front: "Comprensión de Usuarios y Contexto",
+      back: "El diseño se fundamenta explícitamente en la comprensión total de los usuarios, sus tareas concretas y los entornos donde interactúan."
+    },
+    {
+      tag: "PRINCIPIO 2 DCU",
+      front: "Participación Activa de Usuarios",
+      back: "Involucración directa y constante de los usuarios finales a lo largo de todas las etapas, aportando requisitos y validando soluciones."
+    },
+    {
+      tag: "PRINCIPIO 3 DCU",
+      front: "Evaluación Dirigida por Usuarios",
+      back: "La evaluación empírica con usuarios es el motor indispensable que guía y retroalimenta las decisiones del proyecto."
+    },
+    {
+      tag: "PRINCIPIO 4 DCU",
+      front: "Proceso Iterativo",
+      back: "Ciclo continuo de refinamiento: diseñar, prototipar, probar y corregir. El diseño nunca es un proceso lineal en cascada."
+    },
+    {
+      tag: "PRINCIPIO 5 DCU",
+      front: "Equipo Multidisciplinar",
+      back: "Integración sinérgica de roles: psicología cognitiva, ingeniería de software, diseño de interacción, análisis de negocio y expertos de dominio."
+    },
+    {
+      tag: "ACTIVIDAD DE PROCESO 1",
+      front: "Especificar el Contexto de Uso",
+      back: "Identificar características de los usuarios, sus metas reales, equipamiento disponible y las restricciones físicas u organizacionales del entorno."
+    },
+    {
+      tag: "ACTIVIDAD DE PROCESO 2",
+      front: "Especificar Requisitos de Usuario",
+      back: "Definir objetivos medibles de eficacia, eficiencia, satisfacción y necesidades de negocio que el sistema debe satisfacer."
+    },
+    {
+      tag: "ACTIVIDAD DE PROCESO 3",
+      front: "Producir Soluciones de Diseño",
+      back: "Crear conceptos tangibles progresivos: arquitectura de información, flujos, wireframes, prototipos funcionales y diseño de interfaz."
+    },
+    {
+      tag: "ACTIVIDAD DE PROCESO 4",
+      front: "Evaluar Diseños contra Requisitos",
+      back: "Contrastar las soluciones mediante pruebas de usabilidad, heurísticas e inspecciones con usuarios para decidir si se itera o se pasa a producción."
+    },
+    {
+      tag: "MÉTRICA ISO 9241-11",
+      front: "Tríada de Usabilidad",
+      back: "1. Eficacia (precisión y plenitud) · 2. Eficiencia (recursos y tiempo invertido) · 3. Satisfacción (ausencia de frustración y actitud positiva)."
+    }
+  ];
+
+  // BANCO DE DATOS: 7 TEXTOS CON HUECOS
+  const blanksData = [
+    {
+      title: "Fundamentos y Título de la Norma ISO 13407",
+      text: "La norma ISO 13407 se titula formalmente Human-centred design processes for interactive [systems]. Su objetivo principal es guiar la incorporación de actividades de usabilidad durante todo el ciclo de [vida] del desarrollo de software mediante un enfoque rigurosamente [iterativo].",
+      words: ["systems", "vida", "iterativo", "hardware", "lineal", "estético"]
+    },
+    {
+      title: "Los 5 Principios Clave del DCU",
+      text: "El DCU se asienta sobre la comprensión de usuarios, tareas y [entornos], la participación activa de los [usuarios], la evaluación continua de las soluciones, la naturaleza iterativa del diseño y la composición de un equipo de trabajo [multidisciplinar].",
+      words: ["entornos", "usuarios", "multidisciplinar", "algoritmos", "directivos", "aislado"]
+    },
+    {
+      title: "Asignación Ergonómica de Funciones",
+      text: "Uno de los principios de diseño instruye realizar una asignación adecuada de funciones entre los usuarios y la [tecnología]. El sistema debe delegar en la máquina las tareas de cálculo repetitivo y mantener en la persona el control de la [decisión] y el juicio [humano].",
+      words: ["tecnología", "decisión", "humano", "robot", "imposición", "automático"]
+    },
+    {
+      title: "Las 4 Actividades Esenciales del Ciclo DCU",
+      text: "El proceso comienza por especificar el [contexto] de uso, seguido de definir los [requisitos] de usuario y de negocio, generar [soluciones] de diseño progresivas y finalmente evaluar los resultados contrastándolos con las metas iniciales.",
+      words: ["contexto", "requisitos", "soluciones", "presupuesto", "gráficos", "manuales"]
+    },
+    {
+      title: "Métricas de Usabilidad (ISO 9241-11)",
+      text: "La norma define usabilidad a través de tres dimensiones medibles: la [eficacia] que evalúa si se completan las tareas, la [eficiencia] que cuantifica los recursos y tiempo requeridos, y la [satisfacción] que refleja la actitud del usuario.",
+      words: ["eficacia", "eficiencia", "satisfacción", "memoria", "estética", "velocidad"]
+    },
+    {
+      title: "La Naturaleza del Contexto de Uso",
+      text: "El contexto de uso no se limita a la pantalla: comprende la descripción de los [usuarios] finales, las [tareas] u operaciones que necesitan completar y las condiciones del [entorno] físico, técnico y organizativo.",
+      words: ["usuarios", "tareas", "entorno", "servidores", "programas", "diseños"]
+    },
+    {
+      title: "Evolución hacia la ISO 9241-210",
+      text: "En el año 2010 la norma ISO 13407 fue revisada y reemplazada por la [ISO 9241-210]. Esta actualización consolida el concepto contemporáneo de experiencia de [usuario] y enfatiza que la interactividad exige una adaptación empírica constante a sus [necesidades].",
+      words: ["ISO 9241-210", "usuario", "necesidades", "ISO 9001", "marketing", "opiniones"]
+    }
+  ];
+
+  // STATE MANAGEMENT
+  let currentSuiteTab = 'quiz';
+
+  // Quiz State
+  let quizIndex = 0;
+  let quizScore = 0;
+  let quizSelectedOption = null;
+  let quizAnswered = false;
+
+  // Flashcards State
+  let flashIndex = 0;
+  let flashFlipped = false;
+  let flashMastered = new Set();
+  let flashList = [...flashcardsData];
+
+  // Blanks State
+  let blankIndex = 0;
+  let blankUserAnswers = {};
+  let blankActiveInputIndex = 0;
+
+  // TAB SWITCHER
+  function switchSuiteTab(tab) {
+    currentSuiteTab = tab;
+    ['quiz', 'flashcards', 'blanks'].forEach(t => {
+      const pane = document.getElementById('pane-' + t);
+      const tabBtn = document.getElementById('tab-' + t);
+      if (t === tab) {
+        pane.classList.remove('hidden');
+        tabBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary shadow-sm font-label-md text-label-md transition-all";
+      } else {
+        pane.classList.add('hidden');
+        tabBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all";
+      }
+    });
+
+    if (tab === 'flashcards') {
+      renderFlashcard();
+    } else if (tab === 'blanks') {
+      renderBlankText();
+    }
+  }
+
+  // QUIZ ENGINE
+  function renderQuizQuestion() {
+    const item = quizData[quizIndex];
+    document.getElementById('quiz-meta-step').innerText = `Pregunta ${quizIndex + 1} de ${quizData.length}`;
+    document.getElementById('quiz-score-badge').innerText = `Aciertos acumulados: ${quizScore}`;
+    const percent = Math.round(((quizIndex) / quizData.length) * 100);
+    document.getElementById('quiz-progress-percent').innerText = `${percent}% completado`;
+    document.getElementById('quiz-progress-bar').style.width = `${Math.max(4, Math.round(((quizIndex + 1) / quizData.length) * 100))}%`;
+    document.getElementById('quiz-question-title').innerText = item.q;
+
+    const optContainer = document.getElementById('quiz-options-container');
+    optContainer.innerHTML = '';
+    quizSelectedOption = null;
+    quizAnswered = false;
+
+    // Reset feedback
+    const fb = document.getElementById('quiz-feedback-box');
+    fb.className = "hidden p-space-md rounded-xl transition-all";
+    fb.innerHTML = `
+      <div class="flex items-start gap-space-sm">
+        <span id="quiz-feedback-icon" class="material-symbols-outlined text-[24px] shrink-0 mt-0.5"></span>
+        <div class="space-y-1">
+          <h4 id="quiz-feedback-title" class="font-headline-sm text-headline-sm"></h4>
+          <p id="quiz-feedback-desc" class="font-body-md text-body-md"></p>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('quiz-btn-prev').disabled = (quizIndex === 0);
+    const actionBtn = document.getElementById('quiz-btn-action');
+    actionBtn.innerHTML = `<span>Comprobar respuesta</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    actionBtn.disabled = false;
+
+    item.options.forEach((optText, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = `quiz-opt-${i}`;
+      btn.onclick = () => selectQuizOption(i);
+      btn.className = "w-full text-left p-space-md rounded-xl bg-surface hover:bg-surface-container flex items-center justify-between transition-all group focus:outline-none";
+      btn.innerHTML = `
+        <div class="flex items-center gap-space-md">
+          <span class="w-8 h-8 rounded-lg bg-surface-container group-hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center font-bold shrink-0 transition-colors">
+            ${i + 1}
+          </span>
+          <span class="font-body-md text-body-md text-on-surface">${optText}</span>
+        </div>
+        <span class="material-symbols-outlined text-outline-variant text-[20px] group-hover:text-primary transition-colors">radio_button_unchecked</span>
+      `;
+      optContainer.appendChild(btn);
+    });
+  }
+
+  function selectQuizOption(index) {
+    if (quizAnswered) return;
+    quizSelectedOption = index;
+    quizData[quizIndex].options.forEach((_, i) => {
+      const btn = document.getElementById(`quiz-opt-${i}`);
+      const circle = btn.querySelector('.material-symbols-outlined');
+      if (i === index) {
+        btn.className = "w-full text-left p-space-md rounded-xl bg-surface-container-high text-on-surface flex items-center justify-between transition-all shadow-sm";
+        circle.innerText = 'radio_button_checked';
+        circle.className = 'material-symbols-outlined text-primary text-[20px]';
+      } else {
+        btn.className = "w-full text-left p-space-md rounded-xl bg-surface hover:bg-surface-container flex items-center justify-between transition-all group";
+        circle.innerText = 'radio_button_unchecked';
+        circle.className = 'material-symbols-outlined text-outline-variant text-[20px]';
+      }
+    });
+  }
+
+  function handleQuizAction() {
+    if (!quizAnswered) {
+      if (quizSelectedOption === null) return;
+      // Evaluate
+      quizAnswered = true;
+      const current = quizData[quizIndex];
+      const isCorrect = (quizSelectedOption === current.answer);
+      if (isCorrect) quizScore++;
+
+      document.getElementById('quiz-score-badge').innerText = `Aciertos acumulados: ${quizScore}`;
+
+      // Style options
+      current.options.forEach((_, i) => {
+        const btn = document.getElementById(`quiz-opt-${i}`);
+        const circle = btn.querySelector('.material-symbols-outlined');
+        btn.disabled = true;
+        if (i === current.answer) {
+          btn.className = "w-full text-left p-space-md rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm";
+          circle.innerText = "check_circle";
+          circle.className = "material-symbols-outlined text-primary text-[20px]";
+        } else if (i === quizSelectedOption && !isCorrect) {
+          btn.className = "w-full text-left p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between";
+          circle.innerText = "cancel";
+          circle.className = "material-symbols-outlined text-error text-[20px]";
+        } else {
+          btn.className = "w-full text-left p-space-md rounded-xl bg-surface opacity-40 flex items-center justify-between";
+        }
+      });
+
+      // Feedback display
+      const fb = document.getElementById('quiz-feedback-box');
+      fb.classList.remove('hidden');
+      if (isCorrect) {
+        fb.className = "p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed flex items-start gap-space-sm";
+        document.getElementById('quiz-feedback-icon').innerText = 'verified';
+        document.getElementById('quiz-feedback-icon').className = 'material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5';
+        document.getElementById('quiz-feedback-title').innerText = '¡Respuesta Correcta!';
+      } else {
+        fb.className = "p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-space-sm";
+        document.getElementById('quiz-feedback-icon').innerText = 'error';
+        document.getElementById('quiz-feedback-icon').className = 'material-symbols-outlined text-error text-[24px] shrink-0 mt-0.5';
+        document.getElementById('quiz-feedback-title').innerText = 'Respuesta Incorrecta';
+      }
+      document.getElementById('quiz-feedback-desc').innerText = current.feedback;
+
+      // Update button to Next
+      const actionBtn = document.getElementById('quiz-btn-action');
+      if (quizIndex < quizData.length - 1) {
+        actionBtn.innerHTML = `<span>Siguiente pregunta</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+      } else {
+        actionBtn.innerHTML = `<span>Ver balance de resultados</span><span class="material-symbols-outlined text-[18px]">emoji_events</span>`;
+      }
+    } else {
+      // Next or finish
+      if (quizIndex < quizData.length - 1) {
+        quizIndex++;
+        renderQuizQuestion();
+      } else {
+        renderQuizFinish();
+      }
+    }
+  }
+
+  function handleQuizPrev() {
+    if (quizIndex > 0) {
+      quizIndex--;
+      renderQuizQuestion();
+    }
+  }
+
+  function renderQuizFinish() {
+    const pane = document.getElementById('pane-quiz');
+    const nota = ((quizScore / quizData.length) * 10).toFixed(1);
+    let gradeLabel = "Excelente dominio del estándar ISO 13407";
+    let iconName = "workspace_premium";
+
+    if (nota < 5) {
+      gradeLabel = "Es aconsejable repasar los 5 principios y las 4 actividades clave";
+      iconName = "menu_book";
+    } else if (nota < 8) {
+      gradeLabel = "Buen progreso en fundamentos y métricas de usabilidad";
+      iconName = "task_alt";
+    }
+
+    pane.innerHTML = `
+      <div class="text-center py-space-xl space-y-space-md max-w-xl mx-auto">
+        <div class="w-20 h-20 rounded-full bg-primary-container text-on-primary flex items-center justify-center mx-auto shadow-md">
+          <span class="material-symbols-outlined text-[44px]">${iconName}</span>
+        </div>
+        <div class="space-y-space-xs">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">EVALUACIÓN COMPLETADA</span>
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">Puntuación: ${nota} / 10</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">${gradeLabel}</p>
+        </div>
+        <div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-around font-label-md text-label-md">
+          <div>
+            <span class="text-on-surface-variant block">Aciertos totales</span>
+            <span class="font-headline-sm text-headline-sm text-primary font-bold">${quizScore} de ${quizData.length}</span>
+          </div>
+          <div>
+            <span class="text-on-surface-variant block">Porcentaje</span>
+            <span class="font-headline-sm text-headline-sm text-on-surface font-bold">${Math.round((quizScore / quizData.length) * 100)}%</span>
+          </div>
+        </div>
+        <div class="pt-space-md flex flex-wrap items-center justify-center gap-space-sm">
+          <button onclick="restartQuiz()" class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-semibold transition-all">
+            <span class="material-symbols-outlined text-[18px]">replay</span>
+            Reintentar Test
+          </button>
+          <button onclick="switchSuiteTab('flashcards')" class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-all">
+            <span class="material-symbols-outlined text-[18px]">style</span>
+            Practicar con Flashcards
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function restartQuiz() {
+    quizIndex = 0;
+    quizScore = 0;
+    const pane = document.getElementById('pane-quiz');
+    pane.innerHTML = `
+      <div class="flex flex-col gap-space-sm">
+        <div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+          <span id="quiz-meta-step" class="font-headline-sm text-headline-sm text-on-surface font-semibold"></span>
+          <div class="flex items-center gap-space-md">
+            <span class="bg-surface-container px-2.5 py-1 rounded-full text-primary font-medium" id="quiz-score-badge"></span>
+            <span id="quiz-progress-percent" class="font-code-inline text-code-inline"></span>
+          </div>
+        </div>
+        <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+          <div id="quiz-progress-bar" class="h-full bg-primary-container transition-all duration-300 rounded-full" style="width: 4%;"></div>
+        </div>
+      </div>
+
+      <div class="space-y-space-md py-space-xs">
+        <h2 id="quiz-question-title" class="font-headline-md text-headline-md text-on-surface leading-snug"></h2>
+        <div id="quiz-options-container" class="grid grid-cols-1 gap-space-sm pt-space-xs"></div>
+        <div id="quiz-feedback-box" class="hidden p-space-md rounded-xl transition-all"></div>
+      </div>
+
+      <div class="flex items-center justify-between pt-space-md bg-surface-container-lowest">
+        <button id="quiz-btn-prev" onclick="handleQuizPrev()" class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md disabled:opacity-40 disabled:cursor-not-allowed">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Anterior
+        </button>
+        <div class="flex items-center gap-space-sm">
+          <button id="quiz-btn-action" onclick="handleQuizAction()" class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm font-label-md text-label-md font-semibold transition-all">
+            <span>Comprobar respuesta</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    `;
+    renderQuizQuestion();
+  }
+
+  // FLASHCARDS ENGINE
+  function renderFlashcard() {
+    const item = flashList[flashIndex];
+    document.getElementById('flash-count').innerText = `Tarjeta ${flashIndex + 1} de ${flashList.length}`;
+    document.getElementById('flash-mastered-count').innerText = `${flashMastered.size} dominadas`;
+
+    document.getElementById('flash-tag').innerText = item.tag;
+    document.getElementById('flash-front-text').innerText = item.front;
+    document.getElementById('flash-back-text').innerText = item.back;
+
+    // Reset flip
+    const cardEl = document.getElementById('flashcard-3d-box');
+    flashFlipped = false;
+    cardEl.style.transform = 'rotateY(0deg)';
+
+    // Update master button
+    const masterBtn = document.getElementById('btn-master-card');
+    if (flashMastered.has(item.front)) {
+      masterBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium shadow-sm transition-all";
+      masterBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">task_alt</span><span>Dominada ✓</span>`;
+    } else {
+      masterBtn.className = "inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md font-medium transition-all";
+      masterBtn.innerHTML = `<span class="material-symbols-outlined text-[20px] text-primary">bookmark_add</span><span>Marcar: "Me la sé ✓"</span>`;
+    }
+  }
+
+  function flipCurrentFlashcard() {
+    const cardEl = document.getElementById('flashcard-3d-box');
+    flashFlipped = !flashFlipped;
+    cardEl.style.transform = flashFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+  }
+
+  function nextFlashcard() {
+    flashIndex = (flashIndex + 1) % flashList.length;
+    renderFlashcard();
+  }
+
+  function prevFlashcard() {
+    flashIndex = (flashIndex - 1 + flashList.length) % flashList.length;
+    renderFlashcard();
+  }
+
+  function toggleCardMastered() {
+    const item = flashList[flashIndex];
+    if (flashMastered.has(item.front)) {
+      flashMastered.delete(item.front);
+    } else {
+      flashMastered.add(item.front);
+    }
+    renderFlashcard();
+  }
+
+  function shuffleFlashcards() {
+    flashList.sort(() => Math.random() - 0.5);
+    flashIndex = 0;
+    renderFlashcard();
+  }
+
+  function resetFlashcards() {
+    flashMastered.clear();
+    flashList = [...flashcardsData];
+    flashIndex = 0;
+    renderFlashcard();
+  }
+
+  // BLANKS ENGINE
+  function renderBlankText() {
+    const item = blanksData[blankIndex];
+    document.getElementById('blank-step-label').innerText = `Texto ${blankIndex + 1} de ${blanksData.length}`;
+    document.getElementById('blank-title').innerText = item.title;
+    document.getElementById('blank-feedback').className = 'hidden p-space-md rounded-xl transition-all';
+
+    // Word Bank
+    const bankEl = document.getElementById('blank-word-bank');
+    bankEl.innerHTML = '';
+    const shuffled = [...item.words].sort(() => 0.5 - Math.random());
+    shuffled.forEach(w => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.innerText = w;
+      chip.onclick = () => fillActiveBlank(w);
+      chip.className = "px-space-sm py-1 rounded-full bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary text-on-surface font-code-inline text-code-inline shadow-sm transition-all";
+      bankEl.appendChild(chip);
+    });
+
+    // Text Canvas with inputs
+    blankUserAnswers = {};
+    blankActiveInputIndex = 0;
+
+    const canvasEl = document.getElementById('blank-text-canvas');
+    let html = item.text.replace(/\[([^\]]+)\]/g, (match, word, offset) => {
+      const inputId = `blank-input-${blankActiveInputIndex}`;
+      const idx = blankActiveInputIndex;
+      blankActiveInputIndex++;
+      return `<input type="text" id="${inputId}" data-correct="${word}" data-index="${idx}" onfocus="selectBlankInput(${idx})" placeholder="[escribir]" class="px-2 py-0.5 mx-1 font-semibold text-primary bg-surface-container-lowest rounded-md text-center inline-block w-36 shadow-sm focus:outline-none" autocomplete="off" />`;
+    });
+    canvasEl.innerHTML = html;
+
+    // Buttons
+    document.getElementById('blank-btn-prev').disabled = (blankIndex === 0);
+    document.getElementById('blank-btn-next').disabled = (blankIndex === blanksData.length - 1);
+  }
+
+  function selectBlankInput(idx) {
+    blankActiveInputIndex = idx;
+  }
+
+  function fillActiveBlank(word) {
+    const inputs = document.querySelectorAll('#blank-text-canvas input');
+    if (!inputs.length) return;
+    // Find next empty or the focused one
+    let target = null;
+    for (let input of inputs) {
+      if (!input.value.trim()) {
+        target = input;
+        break;
+      }
+    }
+    if (!target) target = inputs[inputs.length - 1];
+    target.value = word;
+    target.focus();
+  }
+
+  function resetCurrentBlank() {
+    const inputs = document.querySelectorAll('#blank-text-canvas input');
+    inputs.forEach(inp => {
+      inp.value = '';
+      inp.className = "px-2 py-0.5 mx-1 font-semibold text-primary bg-surface-container-lowest rounded-md text-center inline-block w-36 shadow-sm focus:outline-none";
+    });
+    document.getElementById('blank-feedback').className = 'hidden';
+  }
+
+  function validateCurrentBlank() {
+    const inputs = document.querySelectorAll('#blank-text-canvas input');
+    let allCorrect = true;
+    let filledCount = 0;
+
+    inputs.forEach(inp => {
+      const correct = inp.getAttribute('data-correct').trim().toLowerCase();
+      const val = inp.value.trim().toLowerCase();
+      if (val) filledCount++;
+
+      if (val === correct) {
+        inp.className = "px-2 py-0.5 mx-1 font-semibold text-on-primary bg-primary rounded-md text-center inline-block w-36 shadow-sm";
+      } else {
+        allCorrect = false;
+        inp.className = "px-2 py-0.5 mx-1 font-semibold text-on-error-container bg-error-container rounded-md text-center inline-block w-36 shadow-sm";
+      }
+    });
+
+    const fb = document.getElementById('blank-feedback');
+    fb.classList.remove('hidden');
+
+    if (filledCount === inputs.length && allCorrect) {
+      fb.className = "p-space-md rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center gap-space-sm font-headline-sm text-headline-sm";
+      fb.innerHTML = `<span class="material-symbols-outlined text-[24px]">verified</span><span>¡Texto completado a la perfección! Has dominado este concepto.</span>`;
+    } else {
+      fb.className = "p-space-md rounded-xl bg-error-container text-on-error-container flex items-center justify-between gap-space-sm font-label-md text-label-md";
+      fb.innerHTML = `
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[20px]">warning</span>
+          <span>Revisa los huecos señalados en rojo o consulta las palabras del banco.</span>
+        </div>
+        <button onclick="showBlankSolutions()" class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-semibold hover:bg-surface-container">Ver soluciones</button>
+      `;
+    }
+  }
+
+  function showBlankSolutions() {
+    const inputs = document.querySelectorAll('#blank-text-canvas input');
+    inputs.forEach(inp => {
+      inp.value = inp.getAttribute('data-correct');
+      inp.className = "px-2 py-0.5 mx-1 font-semibold text-on-primary bg-primary rounded-md text-center inline-block w-36 shadow-sm";
+    });
+  }
+
+  function handleBlankNext() {
+    if (blankIndex < blanksData.length - 1) {
+      blankIndex++;
+      renderBlankText();
+    }
+  }
+
+  function handleBlankPrev() {
+    if (blankIndex > 0) {
+      blankIndex--;
+      renderBlankText();
+    }
+  }
+
+  // KEYBOARD ACCELERATORS
+  window.addEventListener('keydown', (e) => {
+    // Avoid interfering when typing in blanks inputs
+    if (e.target.tagName === 'INPUT') {
+      if (e.key === 'Enter') {
+        validateCurrentBlank();
+      }
+      return;
+    }
+
+    if (currentSuiteTab === 'quiz') {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        selectQuizOption(idx);
+      } else if (e.key === 'Enter') {
+        handleQuizAction();
+      }
+    } else if (currentSuiteTab === 'flashcards') {
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        flipCurrentFlashcard();
+      } else if (e.key === 'ArrowRight') {
+        nextFlashcard();
+      } else if (e.key === 'ArrowLeft') {
+        prevFlashcard();
+      }
+    } else if (currentSuiteTab === 'blanks') {
+      if (e.key === 'Enter') {
+        validateCurrentBlank();
+      }
+    }
+  });
+
+  // INITIALIZE ON LOAD
+  renderQuizQuestion();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter space-y-space-lg"><div class="flex flex-wrap items-center justify-between gap-space-md pb-space-lg"><div class="flex flex-wrap items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Universitat de Lleida</span><span class="text-outline-variant">•</span><span class="font-body-md text-body-md text-on-surface-variant">Escola Politècnica Superior (EPS)</span></div><div class="flex flex-wrap items-center gap-space-xs"><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">GRIHO Research Group</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">AIPO</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">ACM SIGCHI</span><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">WCAG 2.2 AA</span></div></div><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><div class="md:col-span-8 space-y-space-xs"><p class="text-on-surface font-medium">Cátedra de Interacción Persona-Ordenador e Ingeniería del Software</p><p>Material didáctico e interactivo elaborado para el estudio del Diseño Centrado en el Usuario (DCU), modelos conceptuales y procesos MPIu+a.</p><p class="font-label-sm text-label-sm text-outline pt-space-xs">Licenciado bajo Creative Commons Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0).</p></div><div class="md:col-span-4 flex flex-col md:items-end justify-center space-y-space-xs font-label-sm text-label-sm"><span class="inline-flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>Declaración de Accesibilidad Web Validada</span><span class="text-outline">Conforme con directrices W3C / WCAG 2.2 Nivel AA</span><span class="text-outline">© Universitat de Lleida (UdL)</span></div></div></div></footer><a href="modulo-3-02-1-normativa.html" style="position:fixed;left:16px;bottom:16px;z-index:9999;background:#0059b5;color:#fff;padding:10px 16px;border-radius:9999px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">← Volver a la lección</a><script src="persist.js" defer></script></body></html>
