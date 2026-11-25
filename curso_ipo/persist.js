@@ -1,7 +1,7 @@
 /* Persistencia del curso IPO (localStorage): páginas visitadas, progreso global,
    y última página. Compartido por todas las pantallas. */
 (function () {
-  var PAGES = ["accesibilidad-01-interfaces.html", "accesibilidad-01-practica.html", "accesibilidad-02-necesidad-general.html", "accesibilidad-02-practica.html", "accesibilidad-03-internet.html", "accesibilidad-03-practica.html", "accesibilidad-04-motivos.html", "accesibilidad-04-practica.html", "accesibilidad.html", "modulo-2-01-practica.html", "modulo-2-02-percepcion.html", "modulo-2-02-practica.html", "modulo-2-03-memoria.html", "modulo-2-03-practica.html", "modulo-2.html", "modulo-3-02-1-normativa.html", "modulo-3-02-1-practica.html", "modulo-3-02-2-contextual.html", "modulo-3-02-2-practica.html", "modulo-3-02-3-enfoques.html", "modulo-3-02-3-practica.html", "modulo-3-02-teoria.html", "modulo-3-03-modelo-mpiua.html", "modulo-3-fase-diseno-01-objetivos.html", "modulo-3-fase-diseno-01-practica.html", "modulo-3-fase-diseno-02-factores-humanos.html", "modulo-3-fase-diseno-02-practica.html", "modulo-3-fase-diseno-03-modelo-mental.html", "modulo-3-fase-diseno-03-practica.html", "modulo-3-fase-diseno.html", "modulo-3-fase-implementacion.html", "modulo-3-fase-lanzamiento.html", "modulo-3.html", "pilares.html", "usabilidad-01-definicion.html", "usabilidad-01-practica.html", "usabilidad-02-importancia.html", "usabilidad-02-practica.html", "usabilidad-03-beneficios.html", "usabilidad-03-practica.html", "usabilidad-04-atributos.html", "usabilidad-04-practica.html", "usabilidad-05-calidad-software.html", "usabilidad-05-practica.html", "usabilidad-06-practica.html", "usabilidad-06-usabilidad-web.html", "usabilidad.html", "ux-practica.html", "ux.html"];           // páginas que cuentan para el progreso (sin la home)
+  var PAGES = ["modulo-6.html", "modulo-6-01-introduccion.html", "modulo-6-01-practica.html", "modulo-6-06-metodos-usabilidad.html", "modulo-6-06-practica.html", "accesibilidad-01-interfaces.html", "accesibilidad-01-practica.html", "accesibilidad-02-necesidad-general.html", "accesibilidad-02-practica.html", "accesibilidad-03-internet.html", "accesibilidad-03-practica.html", "accesibilidad-04-motivos.html", "accesibilidad-04-practica.html", "accesibilidad.html", "modulo-2-01-practica.html", "modulo-2-02-percepcion.html", "modulo-2-02-practica.html", "modulo-2-03-memoria.html", "modulo-2-03-practica.html", "modulo-2.html", "modulo-3-02-1-normativa.html", "modulo-3-02-1-practica.html", "modulo-3-02-2-contextual.html", "modulo-3-02-2-practica.html", "modulo-3-02-3-enfoques.html", "modulo-3-02-3-practica.html", "modulo-3-02-teoria.html", "modulo-3-03-modelo-mpiua.html", "modulo-3-fase-diseno-01-objetivos.html", "modulo-3-fase-diseno-01-practica.html", "modulo-3-fase-diseno-02-factores-humanos.html", "modulo-3-fase-diseno-02-practica.html", "modulo-3-fase-diseno-03-modelo-mental.html", "modulo-3-fase-diseno-03-practica.html", "modulo-3-fase-diseno.html", "modulo-3-fase-implementacion.html", "modulo-3-fase-lanzamiento.html", "modulo-3.html", "pilares.html", "usabilidad-01-definicion.html", "usabilidad-01-practica.html", "usabilidad-02-importancia.html", "usabilidad-02-practica.html", "usabilidad-03-beneficios.html", "usabilidad-03-practica.html", "usabilidad-04-atributos.html", "usabilidad-04-practica.html", "usabilidad-05-calidad-software.html", "usabilidad-05-practica.html", "usabilidad-06-practica.html", "usabilidad-06-usabilidad-web.html", "usabilidad.html", "ux-practica.html", "ux.html"];           // páginas que cuentan para el progreso (sin la home)
   var K_VISITED = 'ipo_visited', K_LAST = 'ipo_last_page', K_SCROLL = 'ipo_scroll', K_PROG = 'ipo_user_progress';
 
   function read(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
@@ -150,7 +150,7 @@
   var SUN = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
   if (!document.querySelector('link[href^="dark.css"]')) {
     var link = document.createElement('link');
-    link.rel = 'stylesheet'; link.href = 'dark.css?v=1';
+    link.rel = 'stylesheet'; link.href = 'dark.css?v=2';
     document.head.appendChild(link);
   }
   function saved() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
@@ -174,4 +174,15 @@
     paint();
   }, true);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint); else paint();
+})();
+
+/* Barra de unidades del módulo (desplazable): deja visible la unidad activa. */
+(function () {
+  function go() {
+    var r = document.querySelector('[aria-label="Unidades del módulo 6"][role="region"]');
+    var a = r && r.querySelector('[aria-current="page"]');
+    if (a) r.scrollLeft = Math.max(0, a.offsetLeft - r.offsetLeft - 8);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+  window.addEventListener('load', go);
 })();
