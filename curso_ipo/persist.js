@@ -186,3 +186,6 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
   window.addEventListener('load', go);
 })();
+
+/* Barra de desplazamiento horizontal visible en las tarjetas de unidades */
+(function(){try{var st=document.createElement('style');st.textContent='.ipo-hscroll{scrollbar-width:thin;scrollbar-color:#0071e3 rgba(128,128,128,.25)}.ipo-hscroll::-webkit-scrollbar{height:10px}.ipo-hscroll::-webkit-scrollbar-track{background:rgba(128,128,128,.25);border-radius:6px}.ipo-hscroll::-webkit-scrollbar-thumb{background:#0071e3;border-radius:6px}';document.head.appendChild(st);}catch(e){}})();
