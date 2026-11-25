@@ -73,3 +73,72 @@
     });
   }
 })();
+
+/* Accesibilidad compartida por todas las pantallas:
+   1) enlace "Saltar al contenido", 2) foco de teclado siempre visible,
+   3) botón de menú cuando la barra de navegación se oculta (pantallas estrechas / zoom alto). */
+(function () {
+  function init() {
+    var css = document.createElement('style');
+    css.id = 'ipo-a11y';
+    css.textContent =
+      'html{scroll-padding-top:176px}' +
+      '.ipo-skip{position:fixed;left:8px;top:-100px;z-index:10000;background:#0059b5;color:#fff;padding:12px 20px;border-radius:8px;font:600 15px Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}' +
+      '.ipo-skip:focus{top:8px;outline:3px solid #fff;outline-offset:2px}' +
+      'a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #0059b5 !important;outline-offset:3px !important;box-shadow:0 0 0 6px #fff !important;border-radius:6px}' +
+      'main:focus{outline:none}' +
+      '.ipo-top .ipo-burger{display:none}' +
+      '@media(max-width:1279.98px){' +
+        '.ipo-top{position:relative}' +
+        '.ipo-top .ipo-burger{display:flex}' +
+        '.ipo-top .ipo-nav.ipo-open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.18);padding:8px;z-index:200;max-height:70vh;overflow-y:auto}' +
+        '.ipo-top .ipo-nav.ipo-open>a,.ipo-top .ipo-nav.ipo-open .ipo-ddb{padding:12px 8px;font-size:15px}' +
+        '.ipo-top .ipo-nav.ipo-open .ipo-dd{display:block;align-self:auto}' +
+        '.ipo-top .ipo-nav.ipo-open .ipo-ddb svg{display:none}' +
+        '.ipo-top .ipo-nav.ipo-open .ipo-menu{display:block;position:static;width:auto;border:0;box-shadow:none;padding:0 0 0 12px}' +
+        '.ipo-top .ipo-nav.ipo-open .ipo-ml{max-height:none;overflow:visible}' +
+      '}' +
+      '@media(max-width:520px){.ipo-top{gap:8px}.ipo-top .ipo-right{gap:8px}.ipo-top .ipo-av{display:none}}' +
+      '@media(max-width:420px){.ipo-top .ipo-bt{display:none}.ipo-top .ipo-brand{gap:0}}';
+    document.head.appendChild(css);
+
+    // 1) saltar al contenido
+    var target = document.querySelector('main') || document.querySelector('h1');
+    if (target) {
+      if (!target.id) target.id = 'contenido-principal';
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      var skip = document.createElement('a');
+      skip.className = 'ipo-skip';
+      skip.href = '#' + target.id;
+      skip.textContent = 'Saltar al contenido';
+      skip.addEventListener('click', function (e) { e.preventDefault(); target.focus(); target.scrollIntoView(); });
+      document.body.insertBefore(skip, document.body.firstChild);
+    }
+
+    // 3) botón de menú
+    var nav = document.querySelector('.ipo-top .ipo-nav'), right = document.querySelector('.ipo-top .ipo-right');
+    if (nav && right) {
+      if (!nav.id) nav.id = 'ipo-nav-principal';
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'ipo-ic ipo-burger';
+      b.setAttribute('aria-label', 'Abrir menú de navegación');
+      b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', nav.id);
+      b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+      right.insertBefore(b, right.firstChild);
+      var set = function (open) {
+        nav.classList.toggle('ipo-open', open);
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+        b.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+      };
+      b.addEventListener('click', function () { set(!nav.classList.contains('ipo-open')); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('ipo-open')) { set(false); b.focus(); }
+      });
+      document.addEventListener('click', function (e) {
+        if (nav.classList.contains('ipo-open') && !nav.contains(e.target) && !b.contains(e.target)) set(false);
+      });
+      window.addEventListener('resize', function () { if (window.innerWidth >= 1280) set(false); });
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
