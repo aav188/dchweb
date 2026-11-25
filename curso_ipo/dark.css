@@ -258,3 +258,7 @@ html.dark a:focus-visible,html.dark button:focus-visible,html.dark input:focus-v
 html.dark ::selection{background:#2a4d8f;color:#fff}
 html.dark [style*="background:#fff"]{background:#1b1d23 !important}
 html.dark b[style*="0059b5"],html.dark [style*="color:#0059b5"]{color:#8ab4ff !important}
+
+/* Tarjeta de unidad actual (azul, como la píldora del módulo) */
+a.ipo-cur,html.dark a.ipo-cur{background-color:#0071e3;box-shadow:0 2px 8px rgba(0,113,227,.35)}
+a.ipo-cur *,html.dark a.ipo-cur *{color:#fcfbff!important}
