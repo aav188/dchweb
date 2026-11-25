@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Interacción Persona-Ordenador</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary":"#ffffff","tertiary":"#0059b4","error":"#ba1a1a","on-tertiary-container":"#fcfaff","background":"#faf8fe","inverse-surface":"#2f3034","secondary-fixed-dim":"#c8c6c8","on-secondary-container":"#636264","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#00458e","on-primary-container":"#fcfbff","surface-dim":"#dad9df","outline-variant":"#c1c6d6","tertiary-fixed-dim":"#abc7ff","on-primary":"#ffffff","surface-container":"#eeedf3","on-surface-variant":"#414753","surface-bright":"#faf8fe","surface-container-high":"#e9e7ed","secondary":"#5f5e60","surface-container-low":"#f4f3f8","on-secondary-fixed-variant":"#474649","on-error":"#ffffff","on-primary-fixed-variant":"#00458f","inverse-primary":"#abc7ff","primary":"#0059b5","tertiary-container":"#0071e2","on-surface":"#1a1b1f","surface-container-lowest":"#ffffff","on-background":"#1a1b1f","surface-tint":"#005cbb","error-container":"#ffdad6","primary-fixed":"#d7e2ff","secondary-fixed":"#e4e2e4","primary-container":"#0071e3","tertiary-fixed":"#d7e3ff","surface-variant":"#e3e2e7","on-primary-fixed":"#001b3f","on-error-container":"#93000a","inverse-on-surface":"#f1f0f5","secondary-container":"#e2dfe1","surface-container-highest":"#e3e2e7","outline":"#717785","on-secondary-fixed":"#1b1b1d","primary-fixed-dim":"#abc7ff","surface":"#faf8fe","on-tertiary-fixed":"#001b3f"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-lg":"1.5rem","margin":"3rem","space-md":"1rem","margin-sm":"1.25rem","gutter":"1.5rem","space-xs":"0.25rem","margin-md":"2rem","space-sm":"0.5rem","gutter-sm":"1rem"},fontFamily:{"body-sm":["Inter"],"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-md":["Inter"],"display-hero":["Inter"],"label-md":["Inter"]},fontSize:{"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}]}}}};</script><link href="curso.css" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md border-b border-surface-container-highest shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 max-w-7xl mx-auto px-margin-sm lg:px-margin flex items-center justify-between gap-space-md"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><svg class="ipo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" style="fill:#0059b5"/><rect x="15.5" y="9" width="13" height="10" rx="2" style="fill:none;stroke:#fff;stroke-width:2"/><path d="M20 23h3" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round"/><circle cx="11" cy="13.5" r="3.2" style="fill:#fff"/><path d="M5.5 27.5c0-3.6 2.5-6.2 5.5-6.2s5.5 2.6 5.5 6.2z" style="fill:#fff"/></svg><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="mpiua.html">MPIu+a</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span></button><div class="ipo-acc" id="ipo-account"></div></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Section Anchor & Breadcrumb Navigation Strip -->
+<section class="w-full bg-surface-container-lowest py-space-sm">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-wrap items-center justify-between gap-space-sm">
+<nav aria-label="Ruta de migas de pan" class="flex items-center flex-wrap gap-1.5 font-label-sm text-label-sm text-outline">
+<a class="text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors" data-path="modulo-1-introduccion" href="index.html">Curso IPO</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors" data-path="modulo-1-introduccion" href="pilares.html">Módulo 1: Fundamentos</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Usabilidad</span>
+</nav>
+<a class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary hover:text-tertiary transition-colors" data-path="modulo-1-introduccion" href="pilares.html">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+        Volver a Pilares de IPO
+      </a>
+</div>
+</section>
+<!-- Title & Academic Context Banner -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">touch_app</span>
+            MÓDULO 1 • PILAR DE HCI
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-space-xs">
+            Usabilidad en Sistemas Interactivos
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-1">
+            Eficacia, eficiencia y satisfacción del usuario según el corpus canónico de Jakob Nielsen y el estándar internacional ISO 9241.
+          </p>
+</div>
+<!-- Academic metadata pill group -->
+<div class="flex items-center gap-space-sm flex-wrap self-stretch lg:self-auto bg-surface-container p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Marco Referencial</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">ISO 9241-11</span>
+</div>
+</div>
+<span class="text-outline-variant font-light text-xl">/</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-tertiary">psychology</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Modelo Metodológico</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">MPIu+a</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Rigorous Academic Core Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Primary Theory & Mathematical Ratio -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">school</span>
+              Fundamentación Teórica Original
+            </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              El concepto <strong class="text-primary font-semibold">usabilidad</strong>, introducido formalmente por J. Nielsen (1993), de un sistema software tiene dos componentes principales: por una parte, hace referencia al <strong class="text-on-surface">aspecto funcional</strong> del sistema interactivo y a las acciones u operaciones que éste realiza; y por otra, a <strong class="text-on-surface">cómo los usuarios pueden usar dicha funcionalidad</strong>.
+            </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Los factores principales que deben considerarse al hablar de usabilidad son la facilidad de aprendizaje (<em class="text-on-surface-variant">learnability</em>), la efectividad de uso y la satisfacción con las que las personas son capaces de realizar sus tareas gracias al uso del producto interactivo con el que están trabajando, factores que descansan en las bases directas del <strong class="text-on-surface">Diseño Centrado en el Usuario (DCU)</strong>.
+            </p>
+</div>
+<!-- Formula / Proportionality Concept Box -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Ley de Proporcionalidad de Nielsen</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline text-[11px] font-code-inline">HCI-RATIO-01</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “El grado de usabilidad de un sistema interactivo es un aspecto relacionado con la interfaz de usuario que es <strong class="text-primary font-semibold">inversamente proporcional al tiempo que malgastan los usuarios</strong> de dicho sistema intentando averiguar el alcance de qué hace o dónde está una determinada funcionalidad.”
+            </p>
+<div class="pt-space-xs flex items-center gap-space-sm text-outline-variant text-[13px] font-code-inline text-on-surface-variant">
+<span>Usabilidad ∝ 1 / (Tiempo en descifrar la interfaz)</span>
+</div>
+</div>
+<!-- Nielsen Citation Box -->
+<div class="bg-primary-fixed/30 p-space-md rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-primary shrink-0">format_quote</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Cita Bibliográfica Primaria</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-0.5">
+                Nielsen, J. (1993). <span class="font-semibold text-on-surface">Usability Engineering</span>. Academic Press Professional, Boston, MA.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right Column: The 4 Fundamental Pillars -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-2xl flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Los 4 Pilares del Planteamiento</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Esta concepción descansa sobre cuatro premisas esenciales que rigen cualquier artefacto digital usable:
+            </p>
+<div class="flex flex-col gap-space-sm">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm shadow-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-inline text-label-sm flex items-center justify-center shrink-0">1</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Una aproximación al usuario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Usabilidad significa centrarse en los usuarios reales o potenciales. Conocerlos, entenderlos y colaborar con ellos desde el inicio.
+                  </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm shadow-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-inline text-label-sm flex items-center justify-center shrink-0">2</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Conocimiento del contexto de uso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Entender objetivos, tareas y flujos que el software automatiza para maximizar la productividad con el menor número de pasos.
+                  </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm shadow-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-code-inline text-label-sm flex items-center justify-center shrink-0">3</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[15px]">Adaptación a modelos mentales</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Satisfacer necesidades operativas apoyando cómo las personas conciben el trabajo mentalmente, evitando fricción conceptual.
+                  </p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-start gap-space-sm shadow-sm">
+<span class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container font-code-inline text-label-sm flex items-center justify-center shrink-0">4</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[15px]">El veredicto final es del usuario</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Son los usuarios finales, y bajo ningún concepto los diseñadores o desarrolladores, los que determinan cuándo un producto es fácil de usar.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7 Interactive Pillars / Subtopic Modules Section -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Corpus Temático Detallado</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Los 6 Ámbitos de Estudio de la Usabilidad</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Profundiza en cada uno de los aspectos clave desarrollados en el temario de la Universitat de Lleida.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline"><span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+          6 Unidades Didácticas Disponibles</div>
+</div>
+<!-- 7 Rounded Interactive Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Definición -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">01 / ISO</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Fundamentos Semánticos</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-0.5">
+                Definición
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Concepto formal de usabilidad según la norma ISO 9241-11 y la visión de la ingeniería de software: eficacia, eficiencia y satisfacción contextualizada.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-01-definicion.html'" type="button">
+<span>Explorar Definición</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Importancia -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[26px]">vital_signs</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">02 / Ecosistema</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Impacto Operativo</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors mt-0.5">
+                Importancia
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Por qué la usabilidad es decisiva en el éxito de aplicaciones digitales, la retención recurrente, la mitigación del abandono y la productividad humana.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-02-importancia.html'" type="button">
+<span>Ver Importancia</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Beneficios -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed-dim flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">trending_up</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">03 / Negocio &amp; ROI</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Retorno Económico</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-0.5">
+                Beneficios
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Retorno de inversión (ROI), reducción sustancial en costes de soporte técnico, menor margen de fallos operacionales y acortamiento en curvas de capacitación.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-03-beneficios.html'" type="button">
+<span>Consultar Beneficios</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Atributos -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">04 / Métricas</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Modelo de Nielsen</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-0.5">
+                Atributos
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Los 5 vectores fundamentales: <em class="text-on-surface font-medium">Learnability</em>, <em class="text-on-surface font-medium">Efficiency</em>, <em class="text-on-surface font-medium">Memorability</em>, prevención/recuperación de <em class="text-on-surface font-medium">Errors</em> y <em class="text-on-surface font-medium">Satisfaction</em>.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-04-atributos.html'" type="button">
+<span>Ver Atributos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Atributo de la calidad del software -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary group-hover:bg-on-surface group-hover:text-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">05 / ISO 25010</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Ingeniería del Software</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mt-0.5">
+                Calidad de Software
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Integración de la usabilidad dentro del marco de calidad del producto software estándar (ISO/IEC 25010 / SQuaRE) junto a robustez y seguridad.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-05-calidad-software.html'" type="button">
+<span>Explorar Calidad Software</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 6: La usabilidad en la Web -->
+<article class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[26px]">language</span>
+</div>
+<span class="font-code-inline text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container">06 / Web Media</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Hipertexto &amp; Patrones</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors mt-0.5">
+                La Usabilidad Web
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Navegabilidad, tiempo de respuesta percibido, arquitectura de información, pautas de lectura en patrón F y principios de diseño web universal.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<button class="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-lowest text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-colors font-label-md text-label-md font-medium shadow-xs" onclick="location.href='usabilidad-06-usabilidad-web.html'" type="button">
+<span>Ver Usabilidad Web</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 7: ¿En qué momento se ha de considerar? (Featured Card) -->
+</div>
+</div>
+</section>
+<!-- Navigation Footer Action Bar -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-sm lg:px-margin">
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<!-- Previous Section Link -->
+<a class="flex items-center gap-space-md group p-space-sm rounded-xl hover:bg-surface-container transition-colors w-full md:w-auto" data-path="modulo-1-introduccion" href="pilares.html">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Pilar Previo</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Volver a Pilares de IPO</span>
+</div>
+</a>
+<!-- Central Progress Indicator (SVG ring) -->
+<div class="hidden lg:flex items-center gap-space-sm bg-surface-container-lowest px-4 py-2 rounded-full shadow-xs">
+<svg class="w-6 h-6 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="33, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Módulo 1: Fundamentos (Pilar 1 de 3)</span>
+</div>
+<!-- Next Section Link -->
+<a class="flex items-center justify-between md:justify-end gap-space-md group p-space-sm rounded-xl hover:bg-surface-container transition-colors w-full md:w-auto" data-path="user-experience" href="ux.html">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-label-sm text-label-sm text-outline">Siguiente Pilar</span>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">User Experience (UX) →</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container-highest py-space-xl text-on-surface-variant"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-xl"><div class="md:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Curso IPO</span><span class="px-2 py-0.5 text-[11px] font-label-sm rounded bg-surface-container text-on-surface-variant">v4.2 Open Course</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">Plataforma didáctica universitaria dedicada a la Interacción Persona-Ordenador, el Diseño Centrado en las Personas y la Accesibilidad Universal. Basada en el corpus académico y modelo de proceso MPIu+a.</p><p class="font-label-sm text-label-sm text-outline mt-space-xs">Autoría original y dirección académica: <strong class="text-on-surface font-medium">Dr. Toni Granollers i Saltiveri</strong> (GRIHO, Universitat de Lleida - UdL).</p></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface mb-space-xs">Marco Académico</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="mpiu-a" href="mpiua.html">Metodología MPIu+a</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="recursos" href="recursos.html">Recursos: bibliografía y normas</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="decisiones.html">Decisiones de diseño</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface mb-space-xs">Garantías y Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" data-path="declaracion-accesibilidad" href="accesibilidad.html"><span class="material-symbols-outlined text-[16px]">accessibility_new</span> Accesibilidad WCAG 2.2 AA</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="mapa-del-sitio" href="index.html">Mapa del Sitio Pedagógico</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">Licencia CC BY-NC 4.0 Internacional</a></div></div><div class="pt-space-md border-t border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-outline"><p>© 2025 Curso IPO • Universitat de Lleida. Contenidos bajo Licencia Creative Commons Atribución-NoComercial 4.0 Internacional.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Conforme WCAG 2.2 Nivel AA</span></div></div></div></footer><script>(function(){const stored=localStorage.getItem("ipo_user_progress");const el=document.getElementById("global-progress-value");if(el&&stored){el.textContent=stored+"%";}const themeToggle=document.getElementById("theme-toggle-btn");if(themeToggle){themeToggle.addEventListener("click",function(){document.documentElement.classList.toggle("dark");const isDark=document.documentElement.classList.contains("dark");localStorage.setItem("ipo_theme",isDark?"dark":"light");});if(localStorage.getItem("ipo_theme")==="dark"){document.documentElement.classList.add("dark");}}})();</script>
+<script src="persist.js" defer></script></body></html>

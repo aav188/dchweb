@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Curso IPO - Accesibilidad Digital</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#414753","surface":"#faf8fe","primary-container":"#0071e3","tertiary-fixed":"#d7e3ff","background":"#faf8fe","on-background":"#1a1b1f","error-container":"#ffdad6","error":"#ba1a1a","on-tertiary-fixed-variant":"#00458e","on-error-container":"#93000a","primary-fixed-dim":"#abc7ff","surface-bright":"#faf8fe","inverse-primary":"#abc7ff","on-secondary-fixed":"#1b1b1d","surface-dim":"#dad9df","secondary-fixed":"#e4e2e4","inverse-on-surface":"#f1f0f5","on-primary":"#ffffff","secondary-container":"#e2dfe1","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#474649","on-tertiary-container":"#fcfaff","secondary-fixed-dim":"#c8c6c8","tertiary-fixed-dim":"#abc7ff","surface-tint":"#005cbb","on-surface":"#1a1b1f","outline":"#717785","tertiary":"#0059b4","inverse-surface":"#2f3034","on-secondary":"#ffffff","on-secondary-container":"#636264","on-tertiary-fixed":"#001b3f","on-primary-container":"#fcfbff","surface-variant":"#e3e2e7","primary":"#0059b5","on-primary-fixed":"#001b3f","outline-variant":"#c1c6d6","on-primary-fixed-variant":"#00458f","surface-container-high":"#e9e7ed","surface-container":"#eeedf3","secondary":"#5f5e60","on-tertiary":"#ffffff","on-error":"#ffffff","tertiary-container":"#0071e2","primary-fixed":"#d7e2ff","surface-container-highest":"#e3e2e7","surface-container-low":"#f4f3f8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-sm":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-sm":"1rem","margin":"3rem","margin-md":"2rem","gutter":"1.5rem"},"fontFamily":{"body-md":["Inter"],"label-sm":["Inter"],"display-hero-mobile":["Inter"],"display-hero":["Inter"],"headline-xl-mobile":["Inter"],"code-inline":["JetBrains Mono"],"headline-xl":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"]},"fontSize":{"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"600"}],"code-inline":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["19px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script><link href="curso.css" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 max-w-7xl mx-auto px-gutter flex flex-col justify-between pt-3 pb-2"><div class="flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><svg class="ipo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" style="fill:#0059b5"/><rect x="15.5" y="9" width="13" height="10" rx="2" style="fill:none;stroke:#fff;stroke-width:2"/><path d="M20 23h3" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round"/><circle cx="11" cy="13.5" r="3.2" style="fill:#fff"/><path d="M5.5 27.5c0-3.6 2.5-6.2 5.5-6.2s5.5 2.6 5.5 6.2z" style="fill:#fff"/></svg><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="mpiua.html">MPIu+a</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span></button><div class="ipo-acc" id="ipo-account"></div></div></div></div><div class="flex items-center justify-between gap-space-md pt-1"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="inicio" href="index.html">Inicio</a><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer">Módulo 1: Fundamentos</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">Accesibilidad 04: Motivos de Diseño Accesible</span></div><nav class="flex items-center gap-2 overflow-x-auto py-0.5" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="whitespace-nowrap px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-1.5" data-path="accesibilidad-interfaces" href="accesibilidad-01-interfaces.html"><span class="font-code-inline text-[11px] opacity-75">01</span> Accesibilidad de las Interfaces</a><a class="whitespace-nowrap px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-1.5" data-path="necesidad-general" href="accesibilidad-02-necesidad-general.html"><span class="font-code-inline text-[11px] opacity-75">02</span> Una Necesidad General</a><a class="whitespace-nowrap px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface transition-all flex items-center gap-1.5" data-path="accesibilidad-internet" href="accesibilidad-03-internet.html"><span class="font-code-inline text-[11px] opacity-75">03</span> Accesibilidad en Internet</a><a class="whitespace-nowrap px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary-container font-semibold shadow-sm flex items-center gap-1.5 transition-all" data-path="motivos-diseno-accesible" href="accesibilidad-04-motivos.html"><span class="font-code-inline text-[11px] bg-on-primary-container/20 text-on-primary-container px-1 py-0.2 rounded font-bold">04</span> Motivos de Diseño Accesible</a></nav></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- PERSISTENCIA SUPERIOR: 4 Pestañas / Bloques de Accesibilidad -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-7xl mx-auto px-gutter py-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- 01 Inactivo -->
+<a class="group flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-all text-left" href="accesibilidad-01-interfaces.html">
+<div class="flex items-center justify-between mb-1">
+<span class="font-code-inline text-[11px] text-primary font-semibold bg-primary-fixed/40 px-1.5 py-0.5 rounded">01</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">01 Accesibilidad de Interfaces</div>
+<div class="font-body-sm text-label-sm text-on-surface-variant truncate">Barreras e ISO 16071</div>
+</div>
+</a>
+<!-- 02 Inactivo -->
+<a class="group flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-all text-left" href="accesibilidad-02-necesidad-general.html">
+<div class="flex items-center justify-between mb-1">
+<span class="font-code-inline text-[11px] text-primary font-semibold bg-primary-fixed/40 px-1.5 py-0.5 rounded">02</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">02 Una Necesidad General</div>
+<div class="font-body-sm text-label-sm text-on-surface-variant truncate">Diversidad y rampa urbana</div>
+</div>
+</a>
+<!-- 03 Inactivo -->
+<a class="group flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-all text-left" href="accesibilidad-03-internet.html">
+<div class="flex items-center justify-between mb-1">
+<span class="font-code-inline text-[11px] text-primary font-semibold bg-primary-fixed/40 px-1.5 py-0.5 rounded">03</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-sm font-semibold text-on-surface group-hover:text-primary transition-colors">03 Accesibilidad en Internet</div>
+<div class="font-body-sm text-label-sm text-on-surface-variant truncate">W3C, WAI y pautas POUR</div>
+</div>
+</a>
+<!-- 04 ACTIVO -->
+<div class="flex flex-col justify-between p-space-sm rounded-xl bg-primary-container text-on-primary shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-1">
+<span class="font-code-inline text-[11px] text-on-primary font-bold bg-white/20 px-2 py-0.5 rounded">04</span>
+<span class="font-label-sm text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-white text-primary rounded-full shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> ACTIVO
+            </span>
+</div>
+<div>
+<div class="font-headline-sm text-body-sm font-bold text-on-primary">04 Motivos de Diseño Accesible</div>
+<div class="font-body-sm text-label-sm text-on-primary/80 truncate">Ética, leyes y ROI</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Editorial / Introducción Teórica -->
+<section class="w-full max-w-7xl mx-auto px-gutter pt-space-xl pb-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Módulo 1 • Fundamentos de IPO e Ingeniería Web</span>
+</div>
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-on-surface tracking-tight font-bold">Accesibilidad 04: Motivos de Diseño Accesible</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          Superando el paradigma del coste añadido: beneficios éticos, legales, técnicos y comerciales del diseño universal en la ingeniería de la usabilidad y accesibilidad (MPIu+a).
+        </p><div class="my-4 flex"><a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-4 py-2 rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="accesibilidad-04-practica.html" style="background:#0071e3;color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a></div>
+</div>
+<!-- Cita Tim Berners-Lee Card -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[28px]">format_quote</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Axioma Fundamental W3C</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-snug">
+          “El poder de la Web está en su universalidad. El acceso por parte de todos, con independencia de su discapacidad, es un aspecto esencial.”
+        </p>
+<div class="flex items-center gap-3 pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-label-md">
+            TBL
+          </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold">Sir Tim Berners-Lee</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Director W3C e inventor de la World Wide Web</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diagrama de Valor Rápido -->
+<section class="w-full max-w-7xl mx-auto px-gutter pb-space-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">01 / DERECHO</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">1.3B</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Personas en el mundo con alguna discapacidad funcional según la OMS.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">02 / NORMATIVA</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">EN 301 549</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estándar preceptivo para contratación y licitaciones públicas en Europa.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">03 / CONVERSIÓN</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">+18.4%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aumento de retención al habilitar navegación fluida por teclado y semántica.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">04 / SOPORTE</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">-32%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reducción de tickets por formularios crípticos y fallos en lectores de pantalla.</p>
+</div>
+</div>
+</section>
+<!-- LOS 5 PILARES ESTRATÉGICOS -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-code-inline text-label-sm text-primary font-bold uppercase tracking-wider">Estructura Didáctica IPO</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Los 5 Pilares Estratégicos del Diseño Accesible</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        La ingeniería de la accesibilidad digital no es una concesión benéfica ni una penalización técnica: es un motor catalizador de resiliencia en sistemas interactivos modernos.
+      </p>
+</div>
+<!-- Bento Grid de Pilares -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Pilar 1: Beneficio Social (Col 7) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">diversity_3</span>
+</span>
+<span class="font-code-inline text-label-sm text-secondary font-medium">Pilar 01 • Autonomía</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">1. Beneficio Social y Autonomía Digital</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            El entorno digital permite equiparar oportunidades laborales, formativas y administrativas. Las interfaces accesibles garantizan que tareas cotidianas como la compra semanal, la banca electrónica o la lectura informativa no presenten barreras arquitectónicas artificiales.
+          </p>
+</div>
+<!-- Casos Canónicos -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">public</span>
+              Liberia Community
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Iniciativas para la democratización del acceso en redes comunitarias y alfabetización tecnológica en regiones desfavorecidas.
+            </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">tv</span>
+              Comunicador Táctil (UdL / GRIHO)
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Proyecto de software asistido divulgado en TV3 Telenotícies: interfaz adaptada que permite la comunicación de personas con severas dificultades del habla.
+            </p>
+</div>
+</div>
+</div>
+<!-- Pilar 2: Marco Legal (Col 5) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</span>
+<span class="font-code-inline text-label-sm text-secondary font-medium">Pilar 02 • Legalidad</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">2. Aspecto Regulado por la Ley</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            La accesibilidad ha trascendido la recomendación voluntaria para consolidarse como un imperativo jurídico vinculante con severas sanciones de incumplimiento.
+          </p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">policy</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Directiva UE 2016/2102</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Accesibilidad de sitios web y apps del sector público europeo.</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">balance</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Real Decreto 1112/2018</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transposición española de obligado cumplimiento institucional.</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">storefront</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">European Accessibility Act (2019/882)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Extensión obligatoria para comercio electrónico, banca y terminales privados (junio 2025).</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pilar 3: Exigencia en Contratación Pública (Col 5) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">contract</span>
+</span>
+<span class="font-code-inline text-label-sm text-secondary font-medium">Pilar 03 • Licitaciones</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">3. Contratación y Compra Pública</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Ninguna compañía tecnológica puede adjudicarse pliegos públicos en la Unión Europea sin certificar formalmente la conformidad con la norma armonizada <strong>EN 301 549</strong>.
+          </p>
+</div>
+<div class="p-space-md rounded-xl bg-primary/5 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            Estándar EN 301 549 V3.2.1
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Alinea los requisitos de las compras TIC del gobierno con WCAG 2.1 / 2.2 Nivel AA. Su incumplimiento descalifica ofertas antes de la fase de valoración técnica.
+          </p>
+</div>
+</div>
+<!-- Pilar 4: Interoperabilidad y Neurotecnología (Col 7) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</span>
+<span class="font-code-inline text-label-sm text-secondary font-medium">Pilar 04 • Tecnología</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">4. Interoperabilidad y Robustez Tecnológica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Diseñar interfaces accesibles fuerza el empleo de código semántico y APIs estándares. La semántica estricta beneficia simultáneamente a navegadores no estándar, lectores de pantalla (NVDA, JAWS), punteros de cabeza, teclados de una tecla y sistemas emergentes.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Lectores y Productos de Apoyo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jerarquía de encabezados nativa, etiquetas ARIA descriptivas y foco visual coherente.</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Neurointerfaces BCI [MIL03]</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Investigaciones de J. Millán: manipulación mediante señales electroencefalográficas gracias a estados interactivos discretos.</span>
+</div>
+</div>
+</div>
+<!-- Pilar 5: Mercados Ignorados y Datos Demográficos (Col 12 Completa) -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold text-label-sm">05</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">5. Expansión Comercial y Mercados Ignorados</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Demostración cuantitativa: el mercado con necesidades de accesibilidad representa una cuota poblacional masiva frecuentemente excluida de las decisiones de negocio.
+            </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-code-inline text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">query_stats</span>
+<span>Fuentes censales empíricas</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-space-xs">
+<!-- Estudio US Census -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div>
+<span class="font-code-inline text-label-sm text-primary font-semibold">[CBU97] U.S. Census Bureau</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Americans with Disabilities</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                El <strong class="text-on-surface">19.7% de los norteamericanos</strong> padece algún tipo de limitación funcional y el <strong class="text-on-surface">12.3%</strong> sufre discapacidades severas.
+              </p>
+</div>
+<div class="w-full bg-surface-container-highest h-3 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 19.7%;"></div>
+<div class="bg-primary-container h-full" style="width: 12.3%;"></div>
+</div>
+</div>
+<!-- Estudio INE España -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div>
+<span class="font-code-inline text-label-sm text-primary font-semibold">[INE99] INE España</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Encuesta EDDES</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                El censo oficial estatal cifró en más de un <strong class="text-on-surface">9.0% de la población residente</strong> con discapacidades permanentes, superando los 3.5 millones de personas.
+              </p>
+</div>
+<div class="w-full bg-surface-container-highest h-3 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 9%;"></div>
+</div>
+</div>
+<!-- Población Envejecida y Situacional -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div>
+<span class="font-code-inline text-label-sm text-primary font-semibold">Tendencia Demográfica</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Silver Economy &amp; Contexto</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                El envejecimiento poblacional progresivo convierte la pérdida sensorial y motora leve en una condición universal para más del <strong class="text-on-surface">25% de la masa de clientes activos</strong>.
+              </p>
+</div>
+<div class="flex items-center gap-2 text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[18px] text-tertiary">trending_up</span>
+              Crecimiento sostenido hasta 2050
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALCULADORA INTERACTIVA DE ROI DE ACCESIBILIDAD -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg md:p-space-xl shadow-md">
+<div class="flex flex-col gap-space-xs max-w-3xl mb-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm self-start">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+          Simulador Financiero y de Adquisición
+        </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">
+          Calculadora de Mercado Inclusivo y Retorno de Inversión (ROI)
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Estima el volumen potencial de usuarios excluidos y el impacto económico directo derivado de subsanar barreras WCAG en tu plataforma.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Controles de Simulación -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Input Tráfico -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="monthly-visitors">Tráfico Mensual de Usuarios Únicos</label>
+<span class="font-code-inline text-label-md text-primary font-bold" id="label-visitors">100.000</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="monthly-visitors" max="1000000" min="10000" step="10000" type="range" value="100000"/>
+<div class="flex justify-between text-[11px] font-label-sm text-outline">
+<span>10K</span>
+<span>500K</span>
+<span>1M</span>
+</div>
+</div>
+<!-- Input Ticket Medio -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="avg-ticket">Valor Promedio por Usuario / Ticket (€)</label>
+<span class="font-code-inline text-label-md text-primary font-bold" id="label-ticket">45 €</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="avg-ticket" max="250" min="10" step="5" type="range" value="45"/>
+<div class="flex justify-between text-[11px] font-label-sm text-outline">
+<span>10 €</span>
+<span>125 €</span>
+<span>250 €</span>
+</div>
+</div>
+<!-- Tasa de Conversión Base -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="base-conversion">Tasa de Conversión Actual (%)</label>
+<span class="font-code-inline text-label-md text-primary font-bold" id="label-conversion">2.5 %</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="base-conversion" max="8.0" min="0.5" step="0.1" type="range" value="2.5"/>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">info</span>
+<span>Aplica el coeficiente demográfico estandarizado [CBU97]/[INE99] (15% estimado con barreras activas de navegación).</span>
+</div>
+</div>
+<!-- Panel de Resultados Métricos -->
+<div class="lg:col-span-6 bg-surface-container rounded-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Proyección de Impacto Anual</span>
+<span class="font-code-inline text-label-sm text-primary font-bold bg-primary-fixed px-2 py-0.5 rounded">Modelo Predictivo</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Usuarios Excluidos Potenciales</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1" id="res-users">15.000 /mes</span>
+<span class="font-label-sm text-[11px] text-outline mt-1">15% con fricción motriz o visual</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recuperación de Facturación</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary mt-1" id="res-revenue">+253.125 €</span>
+<span class="font-label-sm text-[11px] text-outline mt-1">Anual tras remediación semántica</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Ahorro en Soporte al Cliente</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reducción estimada de llamadas de asistencia asistida</span>
+</div>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface" id="res-support">-14.400 €</span>
+</div>
+<div class="flex items-center justify-between text-label-sm text-outline pt-1">
+<span>Algoritmo calibrado según heurísticas MPIu+a</span>
+<button class="hover:text-primary font-semibold transition-colors flex items-center gap-1" id="reset-calc">
+<span class="material-symbols-outlined text-[16px]">refresh</span> Restaurar valores
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN DE REFERENCIAS BIBLIOGRÁFICAS -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-md">
+<div class="bg-surface-container-low rounded-2xl p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Referencias Bibliográficas y Fuentes Canónicas</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-code-inline text-label-sm font-bold text-primary">[CBU97]</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">U.S. Census Bureau (1997)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            “Americans with Disabilities: 1997”. Household Economic Studies, Current Population Reports. Publicación estadística sobre prevalencia de discapacidades severas.
+          </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">[INE99]</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Instituto Nacional de Estadística (1999)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            “Encuesta sobre discapacidades, deficiencias y estado de la salud 1999 (EDDES)”. Madrid: INE. Análisis cuantitativo representativo de la sociedad española.
+          </p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-code-inline text-label-sm text-primary font-bold">[MIL03]</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Millán, J. del R. et al. (2003)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            “Non-invasive brain-actuated control of a mobile robot by human EEG”. IEEE Transactions on Biomedical Engineering. Fundamentos para interacciones no basadas en periféricos motores.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- NAVEGACIÓN INFERIOR DE MÓDULO -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md">
+<a class="w-full sm:w-auto px-space-md py-2.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all flex items-center justify-center gap-2 shadow-sm font-label-md text-label-md font-medium" href="accesibilidad-03-internet.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>03 Accesibilidad en Internet</span>
+</a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<a class="w-full sm:w-auto px-space-lg py-2.5 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg font-label-md text-label-md font-semibold" href="modulo-2.html">
+<span>Siguiente: Módulo 2 — El Factor Humano</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Script interactivo vanilla para la Calculadora de ROI -->
+<script>
+    (function() {
+      const visitorsInput = document.getElementById('monthly-visitors');
+      const ticketInput = document.getElementById('avg-ticket');
+      const conversionInput = document.getElementById('base-conversion');
+
+      const labelVisitors = document.getElementById('label-visitors');
+      const labelTicket = document.getElementById('label-ticket');
+      const labelConversion = document.getElementById('label-conversion');
+
+      const resUsers = document.getElementById('res-users');
+      const resRevenue = document.getElementById('res-revenue');
+      const resSupport = document.getElementById('res-support');
+      const resetBtn = document.getElementById('reset-calc');
+
+      function recalculate() {
+        const visitors = parseInt(visitorsInput.value, 10);
+        const ticket = parseFloat(ticketInput.value);
+        const conversion = parseFloat(conversionInput.value) / 100;
+
+        labelVisitors.textContent = visitors.toLocaleString('es-ES');
+        labelTicket.textContent = ticket + ' €';
+        labelConversion.textContent = (conversion * 100).toFixed(1) + ' %';
+
+        // Usuarios excluidos estimados (15% según consenso CBU/INE)
+        const excludedUsers = Math.round(visitors * 0.15);
+        resUsers.textContent = excludedUsers.toLocaleString('es-ES') + ' /mes';
+
+        // Recuperación calculada: 30% de los excluidos ahora convierten gracias a accesibilidad
+        const recoveredConversionsMonth = excludedUsers * (conversion * 1.25);
+        const annualRevenueGain = Math.round(recoveredConversionsMonth * ticket * 12);
+        resRevenue.textContent = '+' + annualRevenueGain.toLocaleString('es-ES') + ' €';
+
+        // Reducción soporte: 2 tickets menos por cada 1000 visitantes mensuales a 8€ de coste por llamada
+        const supportSavings = Math.round((visitors / 1000) * 12 * 12);
+        resSupport.textContent = '-' + supportSavings.toLocaleString('es-ES') + ' €';
+      }
+
+      visitorsInput.addEventListener('input', recalculate);
+      ticketInput.addEventListener('input', recalculate);
+      conversionInput.addEventListener('input', recalculate);
+
+      resetBtn.addEventListener('click', function() {
+        visitorsInput.value = 100000;
+        ticketInput.value = 45;
+        conversionInput.value = 2.5;
+        recalculate();
+      });
+
+      // Inicialización inmediata
+      recalculate();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter"><div class="md:col-span-2 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold">IPO</div><span class="font-headline-sm text-headline-sm text-on-surface">Plataforma Educativa de Interacción Persona-Ordenador</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">Espacio académico oficial para la formación, experimentación e investigación en diseño centrado en las personas, heurísticas de usabilidad y evaluación de sistemas accesibles.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Universitat de Lleida (UdL)</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">Cátedra Dr. Toni Granollers</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface">Ecosistema de Investigación</span><ul class="flex flex-col gap-1 font-body-sm text-body-sm"><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">GRIHO • Grup de Recerca en IPO</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">AIPO • Asoc. Interacción Persona-Ordenador</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">ACM SIGCHI Special Interest Group</span></li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span><span class="hover:text-primary transition-colors cursor-pointer">Máster MPIu+a</span></li></ul></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface">Compromiso Técnico</span><div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5"><div class="flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-label-sm text-label-sm font-semibold">WCAG 2.2 Nivel AA</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Diseñado bajo directrices internacionales de accesibilidad perceptiva, operable, comprensible y robusta.</p></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs flex-wrap"><span class="material-symbols-outlined text-[16px] text-secondary">info</span><span>Licencia Reconocimiento-NoComercial 4.0 Internacional (CC BY-NC 4.0).</span></div><div class="flex items-center gap-space-md"><span class="hover:text-on-surface cursor-pointer">Guía de Estilo IPO</span><span class="hover:text-on-surface cursor-pointer">Declaración de Accesibilidad</span><span class="hover:text-on-surface cursor-pointer">Contacto Académico</span></div></div></div></footer>
+<script src="persist.js" defer></script></body></html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Curso IPO — Módulo 3: Diseño Centrado en el Usuario (DCU)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#faf8fe",
+            "surface": "#faf8fe",
+            "background": "#faf8fe",
+            "surface-tint": "#005cbb",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "secondary": "#5f5e60",
+            "outline": "#717785",
+            "primary-fixed-dim": "#abc7ff",
+            "on-surface": "#1a1b1f",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#001b3f",
+            "outline-variant": "#c1c6d6",
+            "error": "#ba1a1a",
+            "primary": "#0059b5",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#001b3f",
+            "on-primary-container": "#fcfbff",
+            "inverse-primary": "#abc7ff",
+            "secondary-fixed-dim": "#c8c6c8",
+            "on-tertiary-fixed-variant": "#00458e",
+            "surface-container-high": "#e9e7ed",
+            "surface-variant": "#e3e2e7",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#fcfaff",
+            "secondary-container": "#e2dfe1",
+            "tertiary": "#0059b4",
+            "surface-container": "#eeedf3",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#0071e2",
+            "primary-container": "#0071e3",
+            "error-container": "#ffdad6",
+            "on-background": "#1a1b1f",
+            "primary-fixed": "#d7e2ff",
+            "inverse-on-surface": "#f1f0f5",
+            "surface-container-highest": "#e3e2e7",
+            "on-surface-variant": "#414753",
+            "surface-container-low": "#f4f3f8",
+            "surface-dim": "#dad9df",
+            "tertiary-fixed": "#d7e3ff",
+            "inverse-surface": "#2f3034",
+            "tertiary-fixed-dim": "#abc7ff",
+            "on-secondary-fixed-variant": "#474649",
+            "secondary-fixed": "#e4e2e4",
+            "on-primary-fixed-variant": "#00458f",
+            "on-secondary-container": "#636264",
+            "on-secondary-fixed": "#1b1b1d"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            margin: "3rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "space-sm": "0.5rem",
+            "margin-md": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            gutter: "1.5rem",
+            "margin-sm": "1.25rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "display-hero": ["Inter"],
+            "code-inline": ["JetBrains Mono"],
+            "label-md": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-xl": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-md": ["Inter"]
+          },
+          fontSize: {
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["19px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "code-inline": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }],
+            "label-md": ["14px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "headline-sm": ["17px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<link href="curso.css" rel="stylesheet"/></head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- HEADER FIJO PERSISTENTE -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><svg class="ipo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" style="fill:#0059b5"/><rect x="15.5" y="9" width="13" height="10" rx="2" style="fill:none;stroke:#fff;stroke-width:2"/><path d="M20 23h3" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round"/><circle cx="11" cy="13.5" r="3.2" style="fill:#fff"/><path d="M5.5 27.5c0-3.6 2.5-6.2 5.5-6.2s5.5 2.6 5.5 6.2z" style="fill:#fff"/></svg><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="mpiua.html">MPIu+a</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span></button><div class="ipo-acc" id="ipo-account"></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3.html">Módulo 3: DCU</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3-02-teoria.html">02 Teoría del DCU</a><span class="text-outline-variant">/</span><span class="text-primary font-semibold">3.2.2 Diseño contextual</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1 scrollbar-none"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="pilares.html">M1 Fundamentos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="modulo-2.html">M2 Factor humano</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-sm text-label-sm" data-path="modulo-3-dcu" href="modulo-3.html">M3 DCU</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a></nav></div></header>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="w-full bg-surface min-h-[calc(100vh-280px)] pt-36"><div class="flex flex-col w-full"><div class="" style="max-width:1280px;margin:0 auto;padding:32px clamp(20px,4vw,48px) 0;box-sizing:border-box;width:100%;padding-bottom:24px"><section class="w-full mb-space-xl"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-sm"><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-1-normativa.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.1</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">policy</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Normativa y principios DCU</span><span class="font-body-sm text-body-sm text-on-surface-variant">ISO 13407 / ISO 9241-210</span></div></a><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">3.2.2</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">groups</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Diseño contextual y participación</span><span class="font-body-sm text-body-sm text-on-primary-container/85">Contextual Design y diseño participativo</span></div></div><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-3-enfoques.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.3</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">compare_arrows</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Enfoques de diseño</span><span class="font-body-sm text-body-sm text-on-surface-variant">DCUsuario vs DCUso vs DCTec</span></div></a></div></section><header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 3.2.2</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Human-Computer Interaction · Metodología de Campo</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight" style="font-size:40px;line-height:48px;letter-spacing:-0.02em;font-weight:600">3.2.2 — Diseño Contextual y Participación del Usuario</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl" style="font-size:19px;line-height:28px;letter-spacing:-0.005em">
+          Método de DCU fundamentado en investigar <em class="text-on-surface font-semibold not-italic">in situ</em> el contexto real donde tiene lugar la acción, capturando la empatía del cliente y transformando las prácticas laborales mediante modelos sistémicos.
+        </p>
+</div>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-2-practica.html"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Beyer &amp; Holtzblatt [BEY98]</span>
+</div>
+</div>
+</div>
+</header><div class="flex flex-wrap items-center gap-space-xs" style="margin-top:0">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container-low text-on-surface text-label-sm font-label-sm shadow-xs">
+<span class="material-symbols-outlined text-[15px] text-primary">menu_book</span>
+<span>Metodología: Contextual Design (Beyer &amp; Holtzblatt [BEY98])</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container-low text-on-surface text-label-sm font-label-sm shadow-xs">
+<span class="material-symbols-outlined text-[15px] text-primary">groups</span>
+<span>Enfoque: Diseño Participativo (Gaffney [GAF99])</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface-container text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span>GRIHO UdL • Cátedra Dr. Toni Granollers</span>
+</div>
+</div></div>
+<!-- SECCIÓN CABECERA Y SUB-NAVEGACIÓN TEMÁTICA -->
+
+<!-- CUERPO PRINCIPAL DE CONTENIDOS -->
+<div class="max-w-7xl mx-auto py-space-xl flex flex-col gap-space-xl" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<!-- BLOQUE 1: FUNDAMENTACIÓN TEÓRICA & EL CONTEXTO DE LA ACCIÓN -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Columna Izquierda: Principio Clave -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">location_searching</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Situarse en el contexto de la acción
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          El diseño contextual parte del principio indiscutible de que el único modo de comprender la realidad operativa es situarse directamente en el sitio donde ocurre la actividad. Esto garantiza el acceso a <strong class="text-on-surface font-semibold">experiencias actuales en tiempo real y datos concretos de primera mano</strong>, neutralizando los sesgos producidos por informes abstractos, recuerdos retrospectivos o interpretaciones de intermediarios ajenos al puesto.
+        </p>
+<!-- Premisa en highlight -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Premisa ontológica del software</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+            «Cualquier sistema incluye una forma innata de trabajar, y así las funcionalidades y la estructura de un sistema fuerzan a los usuarios a aceptar ciertas estrategias, lenguajes y flujos de trabajo particulares.»
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Empatía del Cliente</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Entrevistas in situ en el puesto real para desvelar hábitos y motivaciones implícitas antes de cualquier decisión de código.
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Afinidad Sistémica</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Garantizar que las nuevas funciones digitales sintonicen de forma armónica con las dinámicas humanas ya consolidadas.
+            </p>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Cita Académica y Diagrama de Impacto -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Cita canónica Beyer & Holtzblatt -->
+<div class="bg-primary text-on-primary p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]">format_quote</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">Fundamento Teórico [BEY98]</span>
+<blockquote class="font-body-lg text-body-lg text-on-primary leading-relaxed font-normal">
+              «El diseño contextual proporciona actividades focalizadas en los clientes y en su trabajo para no dejar las decisiones del sistema únicamente en manos de las opiniones, anécdotas e intuiciones de los miembros del equipo de desarrollo.»
+            </blockquote>
+</div>
+<div class="relative z-10 flex items-center justify-between pt-space-sm border-t border-primary-container">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-primary">Hugh Beyer &amp; Karen Holtzblatt</span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Contextual Design: Defining Customer-Centered Systems</span>
+</div>
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">verified</span>
+</div>
+</div>
+<!-- Tarjeta de valor comparativo: Intuición vs DCU -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Contraste Metodológico</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">close</span>
+              Intuición y anécdotas de programadores
+            </span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm">Riesgo Alto</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1">
+<span class="text-on-surface flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+              Indagación contextual en el puesto de trabajo
+            </span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Evidencia DCU</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BLOQUE 2: EL PROCESO INTEGRADO DE 6 PARTES DE BEYER & HOLTZBLATT -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Marco Metodológico Canónico</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">
+            El Proceso Integrado de 6 Partes
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Beyer y Holtzblatt articulan un itinerario cerrado donde cada etapa refina los hallazgos empíricos previos hasta convertirlos en especificaciones de arquitectura y maquetas tangibles.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Flujo secuencial:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-inline text-code-inline text-on-surface">1 → 6 Fases</span>
+</div>
+</div>
+<!-- Cuadrícula editorial de 6 tarjetas -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Fase 1: Indagación Contextual -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                01
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">troubleshoot</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Indagación Contextual
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Contextual Inquiry</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Revela los detalles tácitos y las motivaciones implícitas en el trabajo real de las personas. Hace del cliente y sus tareas necesidades auténticas y transparentes para el equipo de diseño, gestando una base de conocimiento compartido.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Objetivo: In-situ data</span>
+<span class="text-primary font-semibold">Técnica: Maestro-Aprendiz</span>
+</div>
+</div>
+<!-- Fase 2: Modelado del Trabajo -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                02
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Modelado del Trabajo
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Work Modeling</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Proporciona un lenguaje formal para articular la actividad diaria mediante 5 representaciones canónicas: flujos de coordinación, influencias culturales, secuencias de tareas, entorno físico y estructura de artefactos auxiliares.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>5 Modelos Analíticos</span>
+<span class="text-primary font-semibold">Ver Taller didáctico ↓</span>
+</div>
+</div>
+<!-- Fase 3: Consolidación -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                03
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">hub</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Consolidación
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Consolidation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Sintetiza la información dispersa de múltiples entrevistas construyendo un mapa poblacional y facilitando el afloramiento veloz de grandes volúmenes cualitativos mediante diagramas de afinidad (<em class="italic font-medium">Affinity Diagrams</em>).
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Patrones universales</span>
+<span class="text-primary font-semibold">Affinity Diagramming</span>
+</div>
+</div>
+<!-- Fase 4: Rediseño del Trabajo -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                04
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">design_services</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Rediseño del Trabajo
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Work Redesign</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Orienta al equipo de desarrollo hacia la optimización sensata de los procesos, previniendo que el proyecto quede hipnotizado por modas tecnológicas. Alinea servicios, sinergias y alianzas con la práctica pragmática del usuario.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Foco en valor real</span>
+<span class="text-primary font-semibold">Anti-Tech Bias</span>
+</div>
+</div>
+<!-- Fase 5: UED -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                05
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">schema</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Diseño del Entorno de Usuario
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">User Environment Design (UED)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Mantiene la cohesión de la solución estructurando áreas de enfoque funcional, vínculos e interdependencias desde el modelo mental humano, sin despilfarrar esfuerzos prematuros en detalles cosméticos de UI o código de interfaz.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Arquitectura funcional</span>
+<span class="text-primary font-semibold">Vista Global del Sistema</span>
+</div>
+</div>
+<!-- Fase 6: Maquetas y Tests con Clientes -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow group relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-headline-sm">
+                06
+              </span>
+<span class="material-symbols-outlined text-primary text-[24px]">interactive_space</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Maquetas y Tests con Clientes
+              </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Mockup and Test with Customers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Evaluación temprana con prototipos iterativos de papel en el propio puesto laboral. Se establece una auténtica relación de «socios tecnológicos», neutralizando fricciones conceptuales antes de codificar la primera línea de software.
+            </p>
+</div>
+<div class="pt-space-md mt-space-sm border-t border-surface-container-high flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Validación previa a código</span>
+<span class="text-primary font-semibold">Socios Tecnológicos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BLOQUE 3: SIMULADOR DIDÁCTICO DE LOS 5 MODELOS DE TRABAJO (WORK MODELING) -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b border-surface-container-high pb-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+              LABORATORIO INTERACTIVO
+            </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Fase 02 Work Modeling</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+            Taller Didáctico: Los 5 Modelos de Trabajo
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+            Explora interactivamente cómo cada una de las 5 representaciones de Beyer &amp; Holtzblatt disecciona una dimensión específica de la actividad laboral humana.
+          </p>
+</div>
+<!-- Indicador de entrega canónica -->
+<div class="hidden xl:flex items-center gap-3 bg-surface-container-low px-4 py-2.5 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">folder_special</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Entregable Metodológico</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Corpus de Modelado Contextual</span>
+</div>
+</div>
+</div>
+<!-- Selector de Pestañas / Modelos -->
+<div class="flex flex-wrap items-center gap-2" id="model-tabs">
+<button class="model-tab active px-4 py-2.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 bg-primary text-on-primary font-semibold shadow-xs" id="btn-flujo" onclick="switchModel('flujo')">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+<span>Modelo de Flujo</span>
+</button>
+<button class="model-tab px-4 py-2.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-cultural" onclick="switchModel('cultural')">
+<span class="material-symbols-outlined text-[18px]">diversity_3</span>
+<span>Modelo Cultural</span>
+</button>
+<button class="model-tab px-4 py-2.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-secuencias" onclick="switchModel('secuencias')">
+<span class="material-symbols-outlined text-[18px]">format_list_numbered</span>
+<span>Modelo de Secuencias</span>
+</button>
+<button class="model-tab px-4 py-2.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-fisico" onclick="switchModel('fisico')">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+<span>Modelo Físico</span>
+</button>
+<button class="model-tab px-4 py-2.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" id="btn-artefactos" onclick="switchModel('artefactos')">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Modelo de Artefactos</span>
+</button>
+</div>
+<!-- Visor Dinámico de Contenido del Modelo -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch bg-surface-container-low p-space-lg rounded-xl" id="model-content">
+<!-- Panel Izquierdo: Descripción analítica -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline" id="model-badge">
+                Flow Model [BEY98]
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="model-category">
+                Dimensión: Coordinación Organizacional
+              </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold" id="model-title">
+              Modelo de Flujo: División y Comunicación del Trabajo
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="model-description">
+              Define formalmente cómo se descompone la carga laboral entre personas, departamentos o perfiles, y a través de qué vías se coordinan. Proporciona una perspectiva holística de la organización, explicitando los cuellos de botella de información y las transferencias de responsabilidades.
+            </p>
+<!-- Pregunta Clave -->
+<div class="p-space-sm bg-surface-container-lowest rounded-lg flex items-start gap-space-sm mt-2">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">help_outline</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Pregunta analítica fundamental:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="model-question">
+                  ¿Quién habla con quién, qué artefacto transfieren y dónde se interrumpe la comunicación?
+                </span>
+</div>
+</div>
+</div>
+<!-- Caso de Estudio Aplicado -->
+<div class="pt-space-md border-t border-surface-container-high flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+              Caso real de estudio (Entorno Sanitario / Hospitalario):
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface" id="model-case">
+              Circuito de admisión médica: la enfermera de triaje genera la ficha inicial en papel, la traslada físicamente al mostrador de facultativos y avisa verbalmente al médico de guardia cuando el dolor del paciente supera el umbral crítico.
+            </p>
+</div>
+</div>
+<!-- Panel Derecho: Esquema Gráfico Didáctico -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Esquema Notacional Simplificado</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant" id="model-tag">Diagrama de Flujo</span>
+</div>
+<!-- Gráfico SVG didáctico dinámico -->
+<div class="py-space-md flex items-center justify-center min-h-[220px]" id="model-diagram">
+<!-- Diagrama SVG Modelo de Flujo -->
+<svg class="w-full max-w-sm h-48" fill="none" viewbox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+<rect class="fill-surface-container" height="50" rx="8" width="80" x="10" y="20"></rect>
+<text class="fill-on-surface font-label-sm text-label-sm font-semibold" text-anchor="middle" x="50" y="45">Triaje</text>
+<text class="fill-on-surface-variant text-[10px]" text-anchor="middle" x="50" y="58">Enfermería</text>
+<rect class="fill-primary" height="50" rx="8" width="80" x="250" y="20"></rect>
+<text class="fill-on-primary font-label-sm text-label-sm font-semibold" text-anchor="middle" x="290" y="45">Urgencias</text>
+<text class="fill-primary-fixed text-[10px]" text-anchor="middle" x="290" y="58">Médico Asignado</text>
+<path class="text-primary" d="M95 40 H245" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2"></path>
+<polygon class="fill-primary" points="245,36 253,40 245,44"></polygon>
+<text class="fill-on-surface-variant font-code-inline text-[10px]" text-anchor="middle" x="170" y="32">Ficha / Prioridad</text>
+<rect class="fill-surface-variant" height="40" rx="6" width="90" x="125" y="100"></rect>
+<text class="fill-on-surface font-label-sm text-label-sm" text-anchor="middle" x="170" y="124">Coordinador</text>
+<path class="text-outline-variant" d="M50 75 V120 H120" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-outline-variant" d="M290 75 V120 H220" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Notación Canónica:</span>
+<span class="text-primary font-semibold" id="model-deliverable">Nodos de rol, artefactos, canales y rupturas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BLOQUE 4: LECTURAS CANÓNICAS Y REFERENCIAS ACADÉMICAS -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Lectura Canónica IDF -->
+<div class="md:col-span-2 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span>Lectura Recomendada Oficial</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            The Encyclopedia of Human-Computer Interaction (2nd Ed.)
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Holtzblatt, Karen &amp; Beyer, Hugh R. (2013): <strong class="text-on-surface">«Contextual Design»</strong>. Aarhus, Denmark: The Interaction Design Foundation (IDF). Capítulo maestro imprescindible donde los autores revisitan su propuesta metodológica quince años después de su publicación original.
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container-high">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">public</span>
+<span>Disponible online con acceso abierto</span>
+</div>
+<a class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-xs" href="https://www.interaction-design.org/encyclopedia/contextual_design.html" rel="noopener noreferrer" target="_blank">
+<span>Consultar Enciclopedia IDF</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Referencia Michael Gaffney & Co-creación -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">co_present</span>
+<span>Diseño Participativo</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Michael Gaffney [GAF99]
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Profundización en técnicas de co-creación y participación activa donde los usuarios finales dejan de ser meros sujetos pasivos observados y actúan como coinventores del software interactivo.
+          </p>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low flex items-center gap-2 text-label-sm font-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">school</span>
+<span>Cátedra Toni Granollers (UdL)</span>
+</div>
+</div>
+</div>
+<!-- BLOQUE 5: NAVEGACIÓN TEMÁTICA INFERIOR -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-sm md:px-margin-md lg:px-margin pb-space-xl"><footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" href="modulo-3-02-teoria.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a 02 Teoría del DCU</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Tema 3.2.2 de 3</span></div><span class="hidden sm:inline text-outline-variant">•</span><a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-2-practica.html"><span class="material-symbols-outlined text-[18px]">sports_esports</span><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-3-enfoques.html">
+<span>Siguiente: 3.2.3 Enfoques: DCUsuario vs DCUso</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer></div>
+</div>
+<!-- SCRIPT DE MICRO-INTERACCIÓN DIDÁCTICA -->
+<script>
+    const modelsData = {
+      flujo: {
+        badge: "Flow Model [BEY98]",
+        category: "Dimensión: Coordinación y Redes Humanas",
+        title: "Modelo de Flujo: División y Comunicación del Trabajo",
+        description: "Define formalmente cómo se descompone la carga laboral entre personas, departamentos o perfiles, y a través de qué vías se coordinan. Proporciona una perspectiva holística de la organización, explicitando los cuellos de botella de información y las transferencias de responsabilidades.",
+        question: "¿Quién habla con quién, qué artefacto transfieren y dónde se interrumpe la comunicación?",
+        caseStudy: "Circuito de admisión médica: la enfermera de triaje genera la ficha inicial en papel, la traslada físicamente al mostrador de facultativos y avisa verbalmente al médico de guardia cuando el dolor del paciente supera el umbral crítico.",
+        tag: "Diagrama de Flujo y Redes",
+        deliverable: "Nodos de rol, artefactos, canales y rupturas (breakdowns)",
+        svg: `<svg class="w-full max-w-sm h-48" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="20" width="80" height="50" rx="8" class="fill-surface-container" />
+                <text x="50" y="45" text-anchor="middle" class="fill-on-surface font-label-sm text-label-sm font-semibold">Triaje</text>
+                <text x="50" y="58" text-anchor="middle" class="fill-on-surface-variant text-[10px]">Enfermería</text>
+
+                <rect x="250" y="20" width="80" height="50" rx="8" class="fill-primary" />
+                <text x="290" y="45" text-anchor="middle" class="fill-on-primary font-label-sm text-label-sm font-semibold">Urgencias</text>
+                <text x="290" y="58" text-anchor="middle" class="fill-primary-fixed text-[10px]">Médico Asignado</text>
+
+                <path d="M95 40 H245" stroke="currentColor" class="text-primary" stroke-width="2" stroke-dasharray="4 4"/>
+                <polygon points="245,36 253,40 245,44" class="fill-primary"/>
+                <text x="170" y="32" text-anchor="middle" class="fill-on-surface-variant font-code-inline text-[10px]">Ficha / Prioridad</text>
+
+                <rect x="125" y="100" width="90" height="40" rx="6" class="fill-surface-variant" />
+                <text x="170" y="124" text-anchor="middle" class="fill-on-surface font-label-sm text-label-sm">Coordinador</text>
+
+                <path d="M50 75 V120 H120" stroke="currentColor" class="text-outline-variant" stroke-width="1.5"/>
+                <path d="M290 75 V120 H220" stroke="currentColor" class="text-outline-variant" stroke-width="1.5"/>
+              </svg>`
+      },
+      cultural: {
+        badge: "Cultural Model [BEY98]",
+        category: "Dimensión: Presiones, Jerarquías y Cultura",
+        title: "Modelo Cultural: Políticas de Actuación y Restricciones",
+        description: "Identifica procesos tácitos, influencias organizacionales, jerarquías de prestigio y expectativas no escritas. La presión de la cultura impone restricciones críticas y condiciona las decisiones de las personas por encima de las instrucciones operativas.",
+        question: "¿Qué presiones psicológicas, normativas o de estatus condicionan la toma de decisiones?",
+        caseStudy: "En un quirófano, un enfermero residente percibe una contaminación esterilizada en el instrumental, pero duda en comunicarlo inmediatamente debido a la rigidez jerárquica histórica del cirujano jefe.",
+        tag: "Diagrama de Esferas de Influencia",
+        deliverable: "Blob chart de presiones, expectativas y censuras implícitas",
+        svg: `<svg class="w-full max-w-sm h-48" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="170" cy="80" r="70" class="fill-surface-container opacity-40" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <circle cx="170" cy="80" r="45" class="fill-surface-variant opacity-70" />
+                <circle cx="170" cy="80" r="22" class="fill-primary" />
+                <text x="170" y="84" text-anchor="middle" class="fill-on-primary font-label-sm text-[11px] font-bold">Usuario</text>
+                <text x="170" y="50" text-anchor="middle" class="fill-on-surface font-label-sm text-[10px] font-semibold">Presión Departamental</text>
+                <text x="170" y="24" text-anchor="middle" class="fill-on-surface-variant font-label-sm text-[9px] uppercase tracking-wider">Cultura Corporativa / Políticas</text>
+                <path d="M70 40 L150 70" stroke="currentColor" class="text-error" stroke-width="2"/>
+                <text x="80" y="32" class="fill-error font-code-inline text-[9px]">Expectativa de rapidez</text>
+              </svg>`
+      },
+      secuencias: {
+        badge: "Sequence Model [BEY98]",
+        category: "Dimensión: Pasos Temporales y Rutinas",
+        title: "Modelo de Secuencias: Pasos y Estrategias Detalladas",
+        description: "Muestra de modo cronológico e incremental las acciones exactas realizadas por el usuario para completar cada meta. Registra las intenciones, los puntos de bloqueo, los rodeos informales y las soluciones de emergencia adoptadas cuando el software habitual falla.",
+        question: "¿Qué pasos exactos se ejecutan cronológicamente y qué interrumpe cada secuencia?",
+        caseStudy: "Validación de becas universitarias: (1) Apertura de correo, (2) Copiado manual del DNI, (3) Consulta en base de datos externa, (4) Impresión a PDF si el servidor arroja error de validación.",
+        tag: "Secuencia Paso a Paso",
+        deliverable: "Tabla de metas, pasos primarios, rodeos y contingencias",
+        svg: `<svg class="w-full max-w-sm h-48" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="30" width="80" height="35" rx="6" class="fill-surface-container" />
+                <text x="60" y="52" text-anchor="middle" class="fill-on-surface font-label-sm text-[11px]">1. Abrir Registro</text>
+
+                <path d="M102 47 H128" stroke="currentColor" class="text-primary" stroke-width="2"/>
+                <polygon points="128,44 134,47 128,50" class="fill-primary"/>
+
+                <rect x="136" y="30" width="80" height="35" rx="6" class="fill-primary" />
+                <text x="176" y="52" text-anchor="middle" class="fill-on-primary font-label-sm text-[11px] font-semibold">2. Validar DNI</text>
+
+                <path d="M218 47 H244" stroke="currentColor" class="text-primary" stroke-width="2"/>
+                <polygon points="244,44 250,47 244,50" class="fill-primary"/>
+
+                <rect x="252" y="30" width="75" height="35" rx="6" class="fill-surface-container" />
+                <text x="289" y="52" text-anchor="middle" class="fill-on-surface font-label-sm text-[11px]">3. Emitir Fallo</text>
+
+                <path d="M176 70 V105 H100" stroke="currentColor" class="text-error" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <rect x="20" y="90" width="90" height="32" rx="6" class="fill-error-container" />
+                <text x="65" y="110" text-anchor="middle" class="fill-on-error-container font-label-sm text-[10px]">Rodeo: Fallo Red</text>
+              </svg>`
+      },
+      fisico: {
+        badge: "Physical Model [BEY98]",
+        category: "Dimensión: Entorno Espacial y Movilidad",
+        title: "Modelo Físico: Distribución Espacial y Movilidad",
+        description: "Representa el entorno tangible en el que se ejecuta el trabajo: layout arquitectónico de la oficina, distancia a las impresoras compartidas, visibilidad de pantallas ajenas, niveles de iluminación, acústica y ergonomía postural.",
+        question: "¿Cómo condiciona la configuración espacial, mobiliario y distancia física a la interacción?",
+        caseStudy: "Puesto de enfermería: para consultar la prescripción digital el profesional debe caminar 12 metros fuera del box, lo que propicia apuntar dosis provisionales en guantes de látex.",
+        tag: "Plano de Planta y Circulaciones",
+        deliverable: "Plano a escala con zonas de actividad, trayectorias y bloqueos",
+        svg: `<svg class="w-full max-w-sm h-48" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="300" height="120" rx="4" class="fill-surface-container-high" stroke="currentColor" stroke-width="2"/>
+                <rect x="35" y="35" width="70" height="45" rx="4" class="fill-surface-container-lowest" />
+                <text x="70" y="60" text-anchor="middle" class="fill-on-surface font-label-sm text-[10px] font-semibold">Mesa Trabajo</text>
+
+                <rect x="230" y="80" width="70" height="45" rx="4" class="fill-surface-container-lowest" />
+                <text x="265" y="105" text-anchor="middle" class="fill-on-surface font-label-sm text-[10px] font-semibold">Impresora Red</text>
+
+                <path d="M105 60 C 160 60, 180 100, 225 100" stroke="currentColor" class="text-primary" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="165" cy="78" r="4" class="fill-primary" />
+                <text x="165" y="96" text-anchor="middle" class="fill-on-surface-variant font-code-inline text-[9px]">Pauta de paso: 12m</text>
+              </svg>`
+      },
+      artefactos: {
+        badge: "Artifact Model [BEY98]",
+        category: "Dimensión: Documentos, Útiles y Soportes",
+        title: "Modelo de Artefactos: Creación y Uso de Objetos",
+        description: "Analiza exhaustivamente cada objeto físico o digital manipulado durante la tarea (post-its pegados al monitor, talonarios, carpetas de anillas, hojas de cálculo paralelas). Revela cómo las personas adaptan creativamente herramientas cuando el sistema oficial no satisface sus necesidades.",
+        question: "¿Qué notas, soportes improvisados o documentos estructuran la actividad real?",
+        caseStudy: "Monitores rodeados de notas autoadhesivas con códigos de diagnóstico frecuentes y atajos de teclado porque la interfaz oficial exige 6 clics para recuperar el listado.",
+        tag: "Disección de Artefactos Tangibles",
+        deliverable: "Inventario de artefactos, adaptaciones manuscritas e implicaciones",
+        svg: `<svg class="w-full max-w-sm h-48" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="60" y="25" width="220" height="110" rx="6" class="fill-surface-container-lowest" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="75" y="38" width="190" height="20" rx="3" class="fill-surface-container" />
+                <text x="85" y="52" class="fill-on-surface font-code-inline text-[10px]">Expediente Sanitario #8491</text>
+
+                <rect x="180" y="70" width="85" height="55" rx="2" class="fill-secondary-container" />
+                <text x="222" y="90" text-anchor="middle" class="fill-on-secondary-container font-label-sm text-[10px] font-bold">Post-It Amarillo</text>
+                <text x="222" y="105" text-anchor="middle" class="fill-on-secondary-container text-[8px]">«Revisar alergia a Penicilina!»</text>
+
+                <circle cx="95" cy="95" r="14" class="fill-primary-fixed" />
+                <text x="95" y="99" text-anchor="middle" class="fill-primary text-[10px] font-bold">Sello</text>
+              </svg>`
+      }
+    };
+
+    function switchModel(key) {
+      const data = modelsData[key];
+      if (!data) return;
+
+      // Actualizar botones de pestaña
+      document.querySelectorAll('.model-tab').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-xs');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      const activeBtn = document.getElementById(`btn-${key}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'shadow-xs');
+      }
+
+      // Actualizar campos de texto
+      document.getElementById('model-badge').innerText = data.badge;
+      document.getElementById('model-category').innerText = data.category;
+      document.getElementById('model-title').innerText = data.title;
+      document.getElementById('model-description').innerText = data.description;
+      document.getElementById('model-question').innerText = data.question;
+      document.getElementById('model-case').innerText = data.caseStudy;
+      document.getElementById('model-tag').innerText = data.tag;
+      document.getElementById('model-deliverable').innerText = data.deliverable;
+      document.getElementById('model-diagram').innerHTML = data.svg;
+    }
+  </script>
+</div></main>
+<!-- FOOTER OFICIAL PERSISTENTE -->
+<footer class="w-full bg-surface-container-low mt-space-xl border-t border-surface-dim/60">
+<div class="max-w-7xl mx-auto px-gutter py-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-xl pb-space-lg">
+<div class="md:col-span-2 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-bold text-sm">IPO</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Interacción Persona-Ordenador (IPO)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg leading-relaxed">
+            Portal docente e interactivo de la asignatura de Interacción Persona-Ordenador. Desarrollado y coordinado por el <strong class="text-on-surface font-semibold">Dr. Toni Granollers</strong> en la <strong class="text-on-surface font-semibold">Universitat de Lleida (UdL)</strong> dentro del grupo de investigación <strong class="text-on-surface font-semibold">GRIHO</strong> (Grup de Recerca en Interacció Persona-Ordinador).
+          </p>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">GRIHO UdL</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">AIPO</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">ACM SIGCHI</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">MPIu+a</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recursos Académicos</span>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-on-surface transition-colors" data-path="curso-ipo" href="index.html">Programa del Curso</a></li>
+<li></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="mpiu-a" href="modulo-3-03-modelo-mpiua.html">Modelo de Proceso MPIu+a</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="recursos" href="recursos.html">Recursos: bibliografía y normas</a><a class="hover:text-on-surface transition-colors" href="decisiones.html">Decisiones de diseño</a></li>
+<li><a class="hover:text-on-surface transition-colors" data-path="blog" href="#">Artículos y Ensayos</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Conformidad y Licencia</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="text-on-surface font-medium">WCAG 2.2 Nivel AA</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Diseñado bajo pautas de accesibilidad para contenido web y usabilidad universal.</p>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">copyright</span>
+<span class="text-on-surface font-medium">CC BY-NC 4.0 Internacional</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Reconocimiento - NoComercial 4.0 Internacional de Creative Commons.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant border-t border-surface-dim/40">
+<p>© 2025 Universitat de Lleida (UdL) • GRIHO • Cátedra Dr. Toni Granollers. Todos los derechos reservados.</p>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant">Asociación Interacción Persona-Ordenador (AIPO)</span>
+<span class="text-on-surface-variant">ACM SIGCHI Chapter</span>
+</div>
+</div>
+</div>
+</footer>
+<script defer="" src="persist.js"></script></body></html>

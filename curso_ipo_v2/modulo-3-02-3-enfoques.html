@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curso IPO — 3.2.3 Diferencias entre Enfoques de Diseño</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: { "primary-hover": "#0059b5", "error-container": "#ffdad6",
+            "surface-bright": "#faf8fe",
+            "surface": "#faf8fe",
+            "background": "#faf8fe",
+            "surface-tint": "#005cbb",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "secondary": "#5f5e60",
+            "outline": "#717785",
+            "primary-fixed-dim": "#abc7ff",
+            "on-surface": "#1a1b1f",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#001b3f",
+            "outline-variant": "#c1c6d6",
+            "error": "#ba1a1a",
+            "primary": "#0059b5",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#001b3f",
+            "on-primary-container": "#fcfbff",
+            "inverse-primary": "#abc7ff",
+            "secondary-fixed-dim": "#c8c6c8",
+            "on-tertiary-fixed-variant": "#00458e",
+            "surface-container-high": "#e9e7ed",
+            "surface-variant": "#e3e2e7",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#fcfaff",
+            "secondary-container": "#e2dfe1",
+            "tertiary": "#0059b4",
+            "surface-container": "#eeedf3",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#0071e2",
+            "primary-container": "#0071e3",
+            "error-container": "#ffdad6",
+            "on-background": "#1a1b1f",
+            "primary-fixed": "#d7e2ff",
+            "inverse-on-surface": "#f1f0f5",
+            "surface-container-highest": "#e3e2e7",
+            "on-surface-variant": "#414753",
+            "surface-container-low": "#f4f3f8",
+            "surface-dim": "#dad9df",
+            "tertiary-fixed": "#d7e3ff",
+            "inverse-surface": "#2f3034",
+            "tertiary-fixed-dim": "#abc7ff",
+            "on-secondary-fixed-variant": "#474649",
+            "secondary-fixed": "#e4e2e4",
+            "on-primary-fixed-variant": "#00458f",
+            "on-secondary-container": "#636264",
+            "on-secondary-fixed": "#1b1b1d"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            margin: "3rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "space-sm": "0.5rem",
+            "margin-md": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            gutter: "1.5rem",
+            "margin-sm": "1.25rem"
+          },
+          fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'],
+            "headline-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "display-hero": ["Inter"],
+            "code-inline": ["JetBrains Mono"],
+            "label-md": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-xl": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-md": ["Inter"]
+          },
+          fontSize: {
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["19px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "code-inline": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }],
+            "label-md": ["14px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "headline-sm": ["17px", { lineHeight: "22px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    ::-webkit-scrollbar { display: none; }
+    body { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<link href="curso.css" rel="stylesheet"/></head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- Cabecera Institucional Fija -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-36 max-w-[1280px] mx-auto px-margin-sm md:px-margin-md lg:px-margin flex flex-col justify-between"><div class="h-16 flex items-center justify-between gap-gutter"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><svg class="ipo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" style="fill:#0059b5"/><rect x="15.5" y="9" width="13" height="10" rx="2" style="fill:none;stroke:#fff;stroke-width:2"/><path d="M20 23h3" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round"/><circle cx="11" cy="13.5" r="3.2" style="fill:#fff"/><path d="M5.5 27.5c0-3.6 2.5-6.2 5.5-6.2s5.5 2.6 5.5 6.2z" style="fill:#fff"/></svg><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="mpiua.html">MPIu+a</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span></button><div class="ipo-acc" id="ipo-account"></div></div></div></div><div class="h-8 flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="index.html">Inicio</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="index.html">Curso IPO</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3.html">Módulo 3: DCU</a><span class="text-outline-variant">/</span><a class="hover:text-primary transition-colors" href="modulo-3-02-teoria.html">02 Teoría del DCU</a><span class="text-outline-variant">/</span><span class="text-primary font-semibold">3.2.3 Enfoques de diseño</span></div><nav class="h-12 flex items-center gap-space-sm overflow-x-auto pb-1 scrollbar-none"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-1-fundamentos" href="pilares.html">M1 Fundamentos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-2-factor-humano" href="modulo-2.html">M2 Factor humano</a><a aria-current="page" class="px-space-md py-space-xs rounded-full font-label-sm whitespace-nowrap transition-all bg-primary-container text-on-primary-container shadow-sm text-label-sm" data-path="modulo-3-dcu" href="modulo-3.html">M3 DCU</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-4-requisitos" href="#">M4 Requisitos</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-5-prototipado" href="#">M5 Prototipado</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface whitespace-nowrap transition-all" data-path="modulo-6-evaluacion" href="#">M6 Evaluación</a></nav></div></header>
+<!-- Contenido Principal -->
+<main class="w-full bg-surface min-h-[calc(100vh-280px)] pt-36">
+<div class="" style="max-width:1280px;margin:0 auto;padding:32px clamp(20px,4vw,48px) 0;box-sizing:border-box;width:100%;padding-bottom:24px"><section class="w-full mb-space-xl"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-sm"><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-1-normativa.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.1</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">policy</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Normativa y principios DCU</span><span class="font-body-sm text-body-sm text-on-surface-variant">ISO 13407 / ISO 9241-210</span></div></a><a class="group bg-surface-container-lowest hover:bg-surface-container transition-all p-space-md rounded-xl flex flex-col justify-between shadow-sm" data-path="" href="modulo-3-02-2-contextual.html"><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline text-on-surface-variant group-hover:text-primary">3.2.2</span><span class="material-symbols-outlined text-outline-variant group-hover:text-primary text-[18px]">groups</span></div><div><span class="block font-headline-sm text-headline-sm text-on-surface">Diseño contextual y participación</span><span class="font-body-sm text-body-sm text-on-surface-variant">Contextual Design y diseño participativo</span></div></a><div class="relative bg-primary-container text-on-primary-container p-space-md rounded-xl flex flex-col justify-between shadow-md"><div class="absolute -top-1.5 right-3 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</div><div class="flex items-center justify-between mb-space-xs"><span class="font-code-inline text-code-inline font-bold text-on-primary-container">3.2.3</span><span class="material-symbols-outlined text-on-primary-container text-[18px]" style="font-variation-settings: 'FILL' 1;">compare_arrows</span></div><div><span class="block font-headline-sm text-headline-sm text-on-primary-container">Enfoques de diseño</span><span class="font-body-sm text-body-sm text-on-primary-container/85">DCUsuario vs DCUso vs DCTec</span></div></div></div></section><header class="mb-space-xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-code-inline text-code-inline uppercase tracking-wider">Unidad Didáctica 3.2.3</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Paradigmas de Diseño de Sistemas Interactivos</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight" style="font-size:40px;line-height:48px;letter-spacing:-0.02em;font-weight:600">3.2.3 — Diferencias entre Enfoques de Diseño: DCUsuario vs DCUso vs DCTec</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-3xl" style="font-size:19px;line-height:28px;letter-spacing:-0.005em">
+          Comprender las divergencias conceptuales y operativas entre situar el foco en la persona (Diseño Centrado en el Usuario), en el cumplimiento de tareas mediante modelos abstractos (Diseño Centrado en el Uso de Constantine &amp; Lockwood) o en la arquitectura tecnológica del sistema (Diseño Dirigido por la Tecnología).
+        </p>
+</div>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-space-sm rounded-xl shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-3-practica.html"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Practicar con Test y Actividades</span></a><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Base Académica IPO</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Constantine &amp; Lockwood [CON99]</span>
+</div>
+</div>
+</div>
+</header><div class="flex flex-wrap items-center gap-2 pt-1 text-xs" style="margin-top:0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-surface-dim text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">person_search</span>
+<span>DCUsuario: Enfoque Empírico &amp; Prototipado Iterativo</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-surface-dim text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schema</span>
+<span>DCUso: Constantine &amp; Lockwood [CON99, CON03]</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-surface-dim text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">terminal</span>
+<span>DCTec: Ingeniería de Software Clásica</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-surface-dim text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-outline">verified</span>
+<span>GRIHO UdL • Cátedra Dr. Toni Granollers</span>
+</div>
+</div></div><div class="max-w-7xl mx-auto flex flex-col gap-8" style="max-width:1280px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)">
+<!-- Barra de Navegación de Unidades del Bloque 3.2 -->
+<!-- Título y Encabezado de la Lección -->
+
+<!-- PRIMER GRAN BLOQUE: DCUsuario ≠ DCUso (Constantine & Lockwood) -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-surface-dim pb-3">
+<div>
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span>Dicotomía Metodológica 01</span>
+</div>
+<h2 class="text-2xl font-bold text-on-surface tracking-tight mt-1">
+              No confundir DCU con Diseño Centrado en el Uso
+            </h2>
+</div>
+<span class="text-xs text-on-surface-variant font-mono">
+            Origen: Software Engineering vs Human-Computer Interaction
+          </span>
+</div>
+<!-- Introducción y Explicación Teórica -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-4">
+<h3 class="text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center font-bold text-sm">
+                  1
+                </span>
+<span>Génesis del Diseño Centrado en el Uso (Usage-Centered Design)</span>
+</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                Hace unos años, los ingenieros de desarrollo software <strong class="text-on-surface font-semibold">Larry L. Constantine y Lucy A. D. Lockwood</strong> propusieron el <strong class="text-primary font-semibold">Diseño Centrado en el Uso [CON99]</strong> como una aproximación sistemática y formalmente dirigida por modelos (<em class="italic">model-driven</em>) para el diseño visual y de interacción de interfaces en aplicaciones software y entornos web.
+              </p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                Como su denominación sugiere, el diseño centrado en el uso difiere profundamente del diseño centrado en el usuario (DCU) canónico: el foco de atención prioritario <strong class="text-on-surface font-semibold">ya no es directamente el usuario de carne y hueso</strong>, sino el <strong class="text-primary font-semibold">uso que éste hace del sistema</strong>, es decir, la estructura lógica de las tareas que desea llevar a cabo [CON03].
+              </p>
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-dim flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">psychology</span>
+<p class="text-xs text-on-surface leading-relaxed">
+<strong class="font-semibold text-on-surface">Trascendencia más allá de la semántica:</strong> Aunque a primera vista pueda parecer un simple matiz lingüístico, esta distinción modifica radicalmente las prácticas en el ciclo de vida del desarrollo software y su articulación metodológica con la ingeniería informática tradicional.
+                </p>
+</div>
+</div>
+<!-- Premisa Ontológica: Renuncia al Bucle Iterativo Informal -->
+<div class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-3">
+<div class="flex items-center gap-2 text-xs font-bold text-error uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Ruptura de Paradigma</span>
+</div>
+<h3 class="text-base font-bold text-on-surface">
+                La renuncia al prototipado de ensayo-error en favor de modelos rigurosos
+              </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                El aspecto diferencial más determinante del diseño centrado en el uso radica en que <strong class="text-on-surface font-semibold">renuncia expresamente al tradicional modelo iterativo de sucesivas pruebas con usuarios del DCU</strong>, sustituyéndolo por un proceso en el cual las soluciones de interfaz se derivan matemáticamente de la definición de <strong class="text-primary font-semibold">modelos abstractos robustos y precisos</strong> (modelos de roles de usuario, modelos de tareas y modelos de contenido).
+              </p>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                Su meta es concebir un diseño inicial con una arquitectura tan rigurosa que únicamente precise de una fase muy limitada y puntual de test de usabilidad para ajustes cosméticos mínimos.
+              </p>
+</div>
+</div>
+<!-- Columna Derecha: Tarjeta de Contraste Epistemológico -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="p-6 rounded-2xl bg-primary-fixed/30 border border-primary-fixed text-on-surface space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-primary">account_tree</span>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Genealogía Disciplinar</span>
+</div>
+<h4 class="text-base font-bold text-on-surface leading-snug">
+                ¿De dónde surge cada aproximación?
+              </h4>
+<div class="space-y-3 text-xs leading-relaxed">
+<div class="p-3 bg-white rounded-xl border border-surface-dim space-y-1">
+<span class="font-bold text-primary block">Diseño Centrado en el Usuario (DCU):</span>
+<p class="text-on-surface-variant">
+                    Nació como una disciplina <strong class="text-on-surface">independiente y complementaria</strong> a la Ingeniería del Software, alimentada por la psicología cognitiva, la ergonomía y la investigación de campo etnográfica.
+                  </p>
+</div>
+<div class="p-3 bg-white rounded-xl border border-surface-dim space-y-1">
+<span class="font-bold text-tertiary block">Diseño Centrado en el Uso (DCUso):</span>
+<p class="text-on-surface-variant">
+                    Emerge de las entrañas de la propia <strong class="text-on-surface">Ingeniería del Software</strong>, empleando y ampliando formalismos canónicos como los diagramas de casos de uso y modelos de actores [CON01].
+                  </p>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-2">
+<span class="text-xs font-bold text-outline uppercase tracking-wider block">Cita Canónica [CON03]</span>
+<p class="text-xs text-on-surface italic leading-relaxed">
+                «El diseño centrado en el uso busca la eficacia en la ejecución del sistema interactivo basándose en el análisis de lo que los usuarios necesitan hacer, abstrayendo sus caprichos o preferencias anecdóticas individuales.»
+              </p>
+<span class="text-[11px] font-semibold text-primary block">— Larry Constantine &amp; Lucy Lockwood</span>
+</div>
+</div>
+</div>
+<!-- Matriz Comparativa Canónica DCUsuario vs DCUso -->
+<div class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Tabla Comparativa Canónica (Constantine &amp; Lockwood, 2003)</span>
+<h3 class="text-lg font-bold text-on-surface tracking-tight mt-0.5">
+                Diferencias Estructurales: DCUsuario frente a DCUso
+              </h3>
+</div>
+<span class="text-xs px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-medium">
+              7 Dimensiones Epistemológicas
+            </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[680px]">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-dim text-on-surface">
+<th class="py-3 px-4 font-bold w-1/5" scope="col">Dimensión</th>
+<th class="py-3 px-4 font-bold text-primary w-2/5" scope="col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span>Diseño Centrado en el USUARIO (DCU)</span>
+</div>
+</th>
+<th class="py-3 px-4 font-bold text-tertiary w-2/5" scope="col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+<span>Diseño Centrado en el USO (DCUso)</span>
+</div>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface-variant">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Enfoque principal</td>
+<td class="py-3 px-4 text-on-surface font-medium">
+<strong class="text-primary font-semibold">Los usuarios</strong> (su experiencia vivida, emociones, capacidades psicofísicas y satisfacción subjetiva).
+                  </td>
+<td class="py-3 px-4 text-on-surface font-medium">
+<strong class="text-tertiary font-semibold">El uso</strong> (optimización y eficacia de las herramientas para el cabal cumplimiento de las tareas).
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Dirigido por</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">arrow_right</span>
+                      Input directo del usuario
+                    </span> (entrevistas contextuales, shadowing, verbalizaciones en vivo).
+                  </td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[14px]">arrow_right</span>
+                      Modelos analíticos
+                    </span> (modelos formales de roles, tareas esenciales y contenidos estructurados).
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Implicación del usuario</td>
+<td class="py-3 px-4">
+<strong class="text-on-surface font-semibold">Alta y constante:</strong> Investigación de campo etnográfica, sesiones de diseño participativo [GAF99], co-diseño y tests en todas las fases.
+                  </td>
+<td class="py-3 px-4">
+<strong class="text-on-surface font-semibold">Selectiva y puntual:</strong> Modelado exploratorio inicial, validación estricta de diagramas y evaluación mediante inspección experta estructurada.
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Descripciones</td>
+<td class="py-3 px-4">
+                    Usuarios y sus rasgos psicográficos, arquetipos (Personas), modelos mentales y limitaciones sensoriales/cognitivas.
+                  </td>
+<td class="py-3 px-4">
+                    Modelos formalizados de relaciones funcionales entre usuarios, casos de uso abstractos y el sistema interactivo.
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Estrategia de diseño</td>
+<td class="py-3 px-4">
+<strong class="text-primary font-semibold">Prototipado iterativo:</strong> Prototipos rápidos en papel, maquetas de media fidelidad y refinamiento empírico continuo.
+                  </td>
+<td class="py-3 px-4">
+<strong class="text-tertiary font-semibold">Modelado arquitectónico:</strong> Deducción de la interfaz a partir de modelos conceptuales rigurosos antes del código.
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Proceso</td>
+<td class="py-3 px-4">
+                    Variado, flexible y a menudo informal, con un nivel de especificación pragmático adaptado a cada proyecto.
+                  </td>
+<td class="py-3 px-4">
+                    Sistemático, deductivo, formal y completamente especificado en todas sus transiciones.
+                  </td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-on-surface bg-surface-container-low/40">Genealogía / Proviene de</td>
+<td class="py-3 px-4">
+                    Evolución histórica empírica mediante <strong class="text-on-surface font-semibold">métodos de prueba y error</strong> en Interacción Persona-Ordenador (HCI).
+                  </td>
+<td class="py-3 px-4">
+                    Una derivación formal nacida de la <strong class="text-on-surface font-semibold">Ingeniería del Software</strong> avanzada orientada a objetos.
+                  </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SEGUNDO GRAN BLOQUE: DCU ≠ DCTec (Diseño Centrado en la Tecnología) -->
+<section class="flex flex-col gap-6 pt-4">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-surface-dim pb-3">
+<div>
+<div class="flex items-center gap-2 text-xs font-bold text-error uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+<span>Dicotomía Metodológica 02</span>
+</div>
+<h2 class="text-2xl font-bold text-on-surface tracking-tight mt-1">
+              DCU vs Diseño Dirigido por la Tecnología (DCTec)
+            </h2>
+</div>
+<span class="text-xs text-on-surface-variant font-mono">
+            Calidad en el Uso frente a Rendimiento del Sistema
+          </span>
+</div>
+<!-- Introducción de Cambio de Mentalidad -->
+<div class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-4">
+<h3 class="text-lg font-bold text-on-surface">
+            El cambio de mentalidad: de la ingeniería orientada a la máquina al diseño para la persona
+          </h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Desarrollar sistemas interactivos siguiendo una aproximación genuinamente <strong class="text-primary font-semibold">DCU no es trivial</strong>, especialmente cuando el desarrollo de software tradicional ha estado guiado históricamente por los principios clásicos de la Ingeniería de Software, cuyos enfoques están fuertemente dirigidos por la tecnología y la arquitectura interna de las máquinas.
+          </p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Tal y como subraya la cátedra de la Universitat de Lleida, <strong class="text-on-surface font-semibold">este cambio cultural no se materializa de la noche a la mañana</strong>. Sin embargo, resulta indispensable contraponer las propiedades clave de ambas aproximaciones para decidir con rigor cuál adoptar en cada fase de un desarrollo profesional interactivo:
+          </p>
+</div>
+<!-- Cuadrícula Comparativa Visual en Dos Grandes Tarjetas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Tarjeta Izquierda: DCU (Azul Primario) -->
+<div class="p-6 rounded-2xl bg-white border-2 border-primary/40 shadow-xs flex flex-col justify-between gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-28 h-28 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-wide">
+                  ENFOQUE RECOMENDADO
+                </span>
+<span class="material-symbols-outlined text-[28px] text-primary">diversity_1</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">
+                  Diseño de Sistemas Centrados en los Usuarios (DCU)
+                </h3>
+<p class="text-xs text-on-surface-variant mt-1">
+                  Prioridad ontológica: el operador humano y la consecución fluida de sus propósitos en contexto real.
+                </p>
+</div>
+<!-- Lista de Características DCU -->
+<ul class="space-y-3 text-xs sm:text-sm text-on-surface">
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Dirigido por el usuario:</strong> Las necesidades humanas comandan el alcance y la interacción.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Enfocado por la solución:</strong> Resuelve el problema humano en su ecosistema holístico.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Equipos multidisciplinares:</strong> Integración sinérgica de usuarios, programadores, clientes, ergónomos y expertos en usabilidad.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Atributos de usabilidad:</strong> Guiado por la efectividad, eficiencia operativa y satisfacción del usuario (ISO 9241-11).</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Calidad en el uso:</strong> La calidad se mide por el éxito pragmático y la ausencia de fricciones durante la interacción real.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Validaciones previas a codificar:</strong> Prototipos evaluados empíricamente antes de comprometer la arquitectura de código.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span><strong class="font-semibold text-primary">Comprensión del contexto de uso:</strong> Soluciones articuladas a partir del trinomio canónico: <em class="italic">usuarios, tareas y entorno</em>.</span>
+</li>
+</ul>
+</div>
+<div class="p-3 bg-primary-fixed/20 rounded-xl border border-primary-fixed/50 text-[11px] text-on-surface">
+<strong class="font-semibold text-primary">Resultado práctico:</strong> Productos de adopción intuitiva, alta retención, reducción dramática del coste de soporte y satisfacción plena del usuario final.
+            </div>
+</div>
+<!-- Tarjeta Derecha: DCTec (Gris Neutro / Enfoque Técnico Clásico) -->
+<div class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs flex flex-col justify-between gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-28 h-28 bg-surface-container-high/40 rounded-bl-full pointer-events-none"></div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold tracking-wide">
+                  ENFOQUE TRADICIONAL
+                </span>
+<span class="material-symbols-outlined text-[28px] text-outline">devices</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-on-surface">
+                  Diseño de Sistemas Dirigido por la Tecnología (DCTec)
+                </h3>
+<p class="text-xs text-on-surface-variant mt-1">
+                  Prioridad ontológica: los requerimientos funcionales del software, las bases de datos y el rendimiento de hardware.
+                </p>
+</div>
+<!-- Lista de Características DCTec -->
+<ul class="space-y-3 text-xs sm:text-sm text-on-surface-variant">
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Dirigido por la tecnología y programadores:</strong> El diseño técnico impone los flujos de interacción.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Enfocado por componentes tecnológicos:</strong> Estructurado según capas de bases de datos, APIs y frameworks.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Contribución individualista:</strong> Equipos compuestos exclusivamente por perfiles técnicos de ingeniería.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Enfoque principal:</strong> La arquitectura interna, modularidad del código y rendimiento de procesamiento.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Calidad del sistema:</strong> La calidad se mide por ausencia de bugs de ejecución y velocidad de compilación.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Implementación previa a la validación:</strong> El usuario sólo ve el producto en fase de entrega o testing funcional final.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+<span><strong class="font-semibold text-on-surface">Soluciones dirigidas por requisitos funcionales:</strong> Listas estáticas de características técnicas contractuales.</span>
+</li>
+</ul>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl border border-surface-dim text-[11px] text-on-surface-variant">
+<strong class="font-semibold text-error">Riesgo crítico:</strong> Sistemas técnicamente intachables que los usuarios rechazan por ser incomprensibles, frustrantes o ajenos a su flujo real de trabajo.
+            </div>
+</div>
+</div>
+</section>
+<!-- SIMULADOR INTERACTIVO / LABORATORIO DIDÁCTICO -->
+<section class="p-6 sm:p-7 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-surface-dim pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<h3 class="text-lg font-bold text-on-surface tracking-tight">
+              Simulador Comparativo: El Impacto de Elegir Paradigma en un Proyecto Real
+            </h3>
+</div>
+<span class="text-xs px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-semibold">
+            Laboratorio Conceptual
+          </span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Haz clic en cada uno de los tres paradigmas para inspeccionar cómo reacciona el equipo de desarrollo ante un requisito crítico en una aplicación de gestión hospitalaria:
+        </p>
+<!-- Selector de Paradigmas -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<button class="p-4 rounded-xl border-2 border-primary bg-primary-fixed/20 text-left transition-all flex flex-col gap-1 focus:outline-none" id="btn-paradigma-dcu" onclick="selectParadigm('dcu')">
+<span class="text-xs font-bold text-primary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              PARADIGMA 1
+            </span>
+<span class="text-sm font-bold text-on-surface">Diseño Centrado en el Usuario (DCU)</span>
+<span class="text-[11px] text-on-surface-variant">Empirismo, observación y empatía directa</span>
+</button>
+<button class="p-4 rounded-xl border border-surface-dim bg-white hover:bg-surface-container-low text-left transition-all flex flex-col gap-1 focus:outline-none" id="btn-paradigma-dcuso" onclick="selectParadigm('dcuso')">
+<span class="text-xs font-bold text-tertiary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              PARADIGMA 2
+            </span>
+<span class="text-sm font-bold text-on-surface">Diseño Centrado en el Uso (DCUso)</span>
+<span class="text-[11px] text-on-surface-variant">Modelado formal y casos de uso abstractos</span>
+</button>
+<button class="p-4 rounded-xl border border-surface-dim bg-white hover:bg-surface-container-low text-left transition-all flex flex-col gap-1 focus:outline-none" id="btn-paradigma-dctec" onclick="selectParadigm('dctec')">
+<span class="text-xs font-bold text-outline flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              PARADIGMA 3
+            </span>
+<span class="text-sm font-bold text-on-surface">Dirigido por Tecnología (DCTec)</span>
+<span class="text-[11px] text-on-surface-variant">Arquitectura funcional y bases de datos</span>
+</button>
+</div>
+<!-- Panel Dinámico de Resultados -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-surface-dim space-y-4" id="paradigm-display">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary text-white" id="paradigm-badge">
+              Caso de Estudio: Prescripción de Medicación en Urgencias
+            </span>
+<span class="text-xs font-mono font-semibold text-primary" id="paradigm-target">
+              Foco: La enfermera y el médico en planta
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+<div class="p-3 bg-white rounded-lg border border-surface-dim space-y-1">
+<span class="font-bold text-on-surface block text-xs uppercase text-outline">Cómo recopilan información:</span>
+<p class="text-on-surface-variant leading-relaxed" id="paradigm-gathering">
+                Investigación contextual en el servicio de urgencias observando interrupciones, estrés sonoro y uso de guantes de látex.
+              </p>
+</div>
+<div class="p-3 bg-white rounded-lg border border-surface-dim space-y-1">
+<span class="font-bold text-on-surface block text-xs uppercase text-outline">Cómo conciben la interfaz:</span>
+<p class="text-on-surface-variant leading-relaxed" id="paradigm-designing">
+                Prototipos rápidos en tablet probados con sanitarios reales entre guardias para minimizar el número de toques y evitar confusiones visuales.
+              </p>
+</div>
+<div class="p-3 bg-white rounded-lg border border-surface-dim space-y-1">
+<span class="font-bold text-on-surface block text-xs uppercase text-outline">Métrica de éxito:</span>
+<p class="text-on-surface font-semibold leading-relaxed" id="paradigm-metric">
+                Cero errores en dosis críticas, tiempo medio de prescripción reducido a 18 segundos y satisfacción subjetiva excelente (SUS &gt; 85).
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Referencias Bibliográficas Canónicas -->
+<section class="p-6 rounded-2xl bg-white border border-surface-dim shadow-xs space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+<h3 class="text-base font-bold text-on-surface">Bibliografía Canónica y Publicaciones de Referencia</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-dim space-y-1">
+<span class="font-mono text-primary font-bold">[CON99] Constantine &amp; Lockwood (1999)</span>
+<p class="font-bold text-on-surface">Software for Use: A Practical Guide to the Models and Methods of Usage-Centered Design.</p>
+<p class="text-on-surface-variant text-[11px]">Addison-Wesley. Texto seminal que establece los fundamentos del diseño centrado en el uso frente al DCU tradicional.</p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-dim space-y-1">
+<span class="font-mono text-primary font-bold">[CON03] Constantine, Larry L. (2003)</span>
+<p class="font-bold text-on-surface">Process agility and software usability: Toward lightweight usage-centered design.</p>
+<p class="text-on-surface-variant text-[11px]">Information and Software Technology. Matriz formal de comparación ontológica entre DCUsuario y DCUso.</p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-dim space-y-1">
+<span class="font-mono text-primary font-bold">Granollers, Toni (2004–2025)</span>
+<p class="font-bold text-on-surface">MPIu+a: Modelo de Proceso de la Ingeniería de la Usabilidad y de la Accesibilidad.</p>
+<p class="text-on-surface-variant text-[11px]">Universitat de Lleida, GRIHO. Integración sinérgica del DCU dentro de la Ingeniería del Software convencional.</p>
+</div>
+</div>
+</section>
+<!-- Barra de Navegación Pedagógica Inferior -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-sm md:px-margin-md lg:px-margin pb-space-xl"><footer class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-all" href="modulo-3-02-teoria.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a 02 Teoría del DCU</span>
+</a>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>Tema 3.2.3 de 3</span></div><span class="hidden sm:inline text-outline-variant">•</span><a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md px-space-md py-2 rounded-lg shadow-[0_2px_8px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-02-3-practica.html"><span class="material-symbols-outlined text-[18px]">sports_esports</span><span>Ir a Test y Flashcards</span></a></div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md shadow-[0_2px_12px_rgba(0,113,227,0.25)] transition-all" href="modulo-3-03-modelo-mpiua.html">
+<span>Siguiente: 03 Modelo MPIu+a</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</footer></div>
+</div>
+</main>
+<!-- Pie de Página Institucional -->
+<footer class="w-full bg-white border-t border-surface-dim mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs text-on-surface-variant">
+<div class="md:col-span-2 space-y-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-primary text-white flex items-center justify-center font-bold text-xs">IPO</div>
+<span class="font-bold text-sm text-on-surface">Interacción Persona-Ordenador (IPO)</span>
+</div>
+<p class="leading-relaxed text-on-surface-variant pr-4">
+            Portal docente e interactivo de la asignatura de Interacción Persona-Ordenador. Desarrollado y coordinado por el <strong class="text-on-surface font-semibold">Dr. Toni Granollers</strong> en la <strong class="text-on-surface font-semibold">Universitat de Lleida (UdL)</strong> dentro del grupo de investigación <strong class="text-on-surface font-semibold">GRIHO</strong> (Grup de Recerca en Interacció Persona-Ordinador).
+          </p>
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-mono">GRIHO UdL</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-mono">AIPO</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-mono">ACM SIGCHI</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-mono">MPIu+a</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<span class="font-bold text-on-surface block text-sm">Recursos Académicos</span>
+<ul class="space-y-1">
+<li><a class="hover:text-primary transition-colors" href="index.html">Programa del Curso</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Heurísticas y Leyes de HCI</a></li>
+<li><a class="hover:text-primary transition-colors" href="modulo-3-03-modelo-mpiua.html">Modelo de Proceso MPIu+a</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Laboratorio y Plantillas</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Artículos y Ensayos</a></li>
+</ul>
+</div>
+<div class="space-y-1.5">
+<span class="font-bold text-on-surface block text-sm">Conformidad y Licencia</span>
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>WCAG 2.2 Nivel AA</span>
+</div>
+<p class="text-[11px] text-outline">Diseñado bajo pautas de accesibilidad para contenido web y usabilidad universal.</p>
+<div class="flex items-center gap-1.5 text-on-surface font-medium pt-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">copyright</span>
+<span>CC BY-NC 4.0 Internacional</span>
+</div>
+<p class="text-[11px] text-outline">Reconocimiento - NoComercial 4.0 Internacional de Creative Commons.</p>
+</div>
+</div>
+<div class="border-t border-surface-container-high pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-outline">
+<p>© 2025 Universitat de Lleida (UdL) • GRIHO • Cátedra Dr. Toni Granollers. Todos los derechos reservados.</p>
+<div class="flex items-center gap-4">
+<span>Asociación Interacción Persona-Ordenador (AIPO)</span>
+<span>ACM SIGCHI Chapter</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Script Interactivo del Simulador -->
+<script>
+    function selectParadigm(type) {
+      const btnDcu = document.getElementById('btn-paradigma-dcu');
+      const btnDcuso = document.getElementById('btn-paradigma-dcuso');
+      const btnDctec = document.getElementById('btn-paradigma-dctec');
+
+      const badge = document.getElementById('paradigm-badge');
+      const target = document.getElementById('paradigm-target');
+      const gathering = document.getElementById('paradigm-gathering');
+      const designing = document.getElementById('paradigm-designing');
+      const metric = document.getElementById('paradigm-metric');
+
+      // Reset styles
+      [btnDcu, btnDcuso, btnDctec].forEach(btn => {
+        btn.className = "p-4 rounded-xl border border-surface-dim bg-white hover:bg-surface-container-low text-left transition-all flex flex-col gap-1 focus:outline-none";
+      });
+
+      if (type === 'dcu') {
+        btnDcu.className = "p-4 rounded-xl border-2 border-primary bg-primary-fixed/20 text-left transition-all flex flex-col gap-1 focus:outline-none";
+        badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary text-white";
+        badge.textContent = "Caso de Estudio: Prescripción de Medicación en Urgencias";
+        target.className = "text-xs font-mono font-semibold text-primary";
+        target.textContent = "Foco: La enfermera y el médico en planta";
+        gathering.textContent = "Investigación contextual en el servicio de urgencias observando interrupciones, estrés sonoro y uso de guantes de látex.";
+        designing.textContent = "Prototipos rápidos en tablet probados con sanitarios reales entre guardias para minimizar el número de toques y evitar confusiones visuales.";
+        metric.textContent = "Cero errores en dosis críticas, tiempo medio de prescripción reducido a 18 segundos y satisfacción subjetiva excelente (SUS > 85).";
+      } else if (type === 'dcuso') {
+        btnDcuso.className = "p-4 rounded-xl border-2 border-tertiary bg-tertiary/10 text-left transition-all flex flex-col gap-1 focus:outline-none";
+        badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-tertiary text-white";
+        badge.textContent = "Caso de Estudio: Formalización de Casos de Uso Clínicos";
+        target.className = "text-xs font-mono font-semibold text-tertiary";
+        target.textContent = "Foco: El modelo abstracto de la tarea 'Prescribir'";
+        gathering.textContent = "Ingeniería de requisitos basada en especificaciones de tareas esenciales y contratos de interoperabilidad HL7/FHIR.";
+        designing.textContent = "Derivación arquitectónica de la interfaz a partir de modelos de contenido y diagramas de estados sin iteraciones previas con sanitarios.";
+        metric.textContent = "Completitud formal del 100% de la tarea según el modelo de Constantine & Lockwood y prueba de inspección heurística conforme.";
+      } else if (type === 'dctec') {
+        btnDctec.className = "p-4 rounded-xl border-2 border-outline bg-surface-container-high text-left transition-all flex flex-col gap-1 focus:outline-none";
+        badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-outline text-white";
+        badge.textContent = "Caso de Estudio: Persistencia y Transacciones SQL";
+        target.className = "text-xs font-mono font-semibold text-outline";
+        target.textContent = "Foco: El servidor y la base de datos relacional";
+        gathering.textContent = "Extracción del esquema relacional de tablas de pacientes, fármacos y registro de transacciones ACID.";
+        designing.textContent = "Formulario generado directamente a partir de las columnas de la base de datos (CRUD), sin contemplar el contexto hospitalario de uso.";
+        metric.textContent = "Rendimiento óptimo de inserción en milisegundos y cero fallos en base de datos, aunque el sanitario tarde 4 minutos y cometa fallos de lectura.";
+      }
+    }
+  </script>
+<script defer="" src="persist.js"></script></body></html>

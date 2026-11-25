@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="h-full bg-[#faf8fe]" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curso IPO — Usabilidad 01: Definición (con Test, Flashcards y Huecos)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: { DEFAULT: '#0071e3', hover: '#0059b5', light: '#e8f2ff', border: '#abc7ff' },
+        surface: { DEFAULT: '#faf8fe', low: '#f4f3f8', mid: '#eeedf3', high: '#e9e7ed', card: '#ffffff' },
+        outline: { DEFAULT: '#717785', variant: '#c7c5d0' },
+        'on-surface': { DEFAULT: '#1a1b1f', variant: '#414753' }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+:root{--bg:#faf8fe;--card:#fff;--low:#f4f3f8;--mid:#eeedf3;--high:#e9e7ed;--line:#c1c6d6;--txt:#1a1b1f;--muted:#414753;--primary:#0059b5;--pc:#0071e3;--pfix:#d7e2ff;--ok:#1b7f3b;--okbg:#e3f4e8;--err:#ba1a1a;--errbg:#ffdad6;--r:16px}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab{border:0;background:var(--low);color:var(--muted);padding:8px 18px;border-radius:999px;font:600 14px Inter,sans-serif;cursor:pointer;transition:all .2s}
+.tab:hover{background:var(--mid);color:var(--txt)}
+.tab.on{background:var(--pc);color:#fff;box-shadow:0 2px 8px rgba(0,113,227,.22)}
+.card{background:var(--card);border-radius:var(--r);padding:24px;border:1px solid rgba(193,198,214,.35);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.meta{display:flex;justify-content:space-between;align-items:center;font:600 13px 'JetBrains Mono',monospace;color:var(--muted);margin-bottom:12px}
+.bar{height:6px;background:var(--mid);border-radius:99px;overflow:hidden;margin-bottom:20px}
+.bar>i{display:block;height:100%;background:var(--pc);transition:width .3s}
+.q{font-size:18px;font-weight:600;line-height:1.4;margin:0 0 18px;color:var(--txt)}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;border:1.5px solid transparent;background:var(--low);padding:13px 16px;border-radius:12px;font:400 15px/1.4 Inter,sans-serif;color:var(--txt);cursor:pointer;transition:all .15s}
+.opt:hover:not(:disabled){background:var(--mid);border-color:var(--line)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;font:700 12px 'JetBrains Mono',monospace;color:var(--muted);border:1px solid var(--line)}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:#0f5125;font-weight:500}
+.opt.ok .k{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{background:var(--errbg);border-color:var(--err);color:#781212}
+.opt.bad .k{background:var(--err);color:#fff;border-color:var(--err)}
+.opt:disabled{cursor:default}
+.fb{margin-top:16px;padding:14px 16px;border-radius:12px;background:var(--low);font-size:14px;line-height:1.5}
+.fb b{display:block;margin-bottom:3px}
+.fb.ok{background:var(--okbg);color:#0f5125}.fb.ok b{color:var(--ok)}
+.fb.bad{background:var(--errbg);color:#781212}.fb.bad b{color:var(--err)}
+.row{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;flex-wrap:wrap;align-items:center}
+.btn{border:0;border-radius:10px;padding:10px 20px;font:600 14px Inter,sans-serif;cursor:pointer;background:var(--low);color:var(--txt);transition:all .15s}
+.btn:hover{background:var(--mid)}
+.btn.p{background:var(--pc);color:#fff;box-shadow:0 2px 10px rgba(0,113,227,.25)}
+.btn.p:hover{background:var(--primary)}
+.score{text-align:center;padding:16px 0}
+.big{font-size:56px;font-weight:800;letter-spacing:-.03em;color:var(--pc);line-height:1}
+.review{margin-top:24px;display:grid;gap:12px;text-align:left}
+.review div{background:var(--low);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.45;border-left:4px solid var(--err)}
+.review em{font-style:normal;color:var(--ok);font-weight:700}
+/* flashcards */
+.fc{perspective:1200px;height:290px;cursor:pointer;margin-bottom:8px}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,.05);border:1px solid rgba(193,198,214,.35)}
+.front{background:var(--card)}
+.front h2{font-size:24px;letter-spacing:-.015em;margin:0;font-weight:700;color:var(--txt)}
+.back{background:var(--pc);color:#fff;transform:rotateY(180deg);font-size:16px;line-height:1.55;font-weight:500;padding:32px}
+.hint{font:600 12px 'JetBrains Mono',monospace;color:var(--muted);margin-top:16px}
+.back .hint{color:rgba(255,255,255,.8)}
+/* gaps */
+.bank{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 20px}
+.chip{background:var(--mid);border-radius:99px;padding:5px 14px;font-size:13px;font-weight:600;font-family:'JetBrains Mono',monospace;border:1px solid rgba(193,198,214,.5);cursor:default}
+.chip.used{opacity:.35;text-decoration:line-through;background:var(--low)}
+.gp{background:var(--card);border-radius:var(--r);padding:20px 24px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid rgba(193,198,214,.35);margin-bottom:14px}
+.gp h3{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--pc);display:flex;align-items:center;gap:6px}
+.gp p{margin:0;font-size:15px;line-height:2.2;color:var(--txt)}
+.gap{border:0;border-bottom:2px solid var(--line);background:var(--low);border-radius:6px 6px 0 0;padding:2px 8px;font:600 14px 'JetBrains Mono',monospace;color:var(--txt);text-align:center;outline:none;transition:border-color .2s}
+.gap:focus{border-color:var(--pc);background:var(--pfix)}
+.gap.ok{border-color:var(--ok);background:var(--okbg);color:#0f5125}
+.gap.bad{border-color:var(--err);background:var(--errbg);color:#781212}
+.gapscore{font-weight:700;color:var(--pc);margin-right:auto;align-self:center;font-size:15px}
+.kbd{font:500 12px 'JetBrains Mono',monospace;color:var(--muted);text-align:center;margin-top:16px}
+</style>
+<link href="curso.css" rel="stylesheet"/></head>
+<body class="min-h-full flex flex-col bg-[#faf8fe] text-[#1a1b1f] antialiased">
+<!-- ================= CABECERA PERSISTENTE ================= -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#dad9df] shadow-[0_1px_6px_rgba(0,0,0,0.03)]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Row: Brand & Navigation -->
+<div class="h-16 flex items-center justify-between gap-4"><style>.ipo-top{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:56px;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;color:#1a1b1f;line-height:1.2}
+.ipo-top *{box-sizing:border-box}.ipo-top a{text-decoration:none;color:inherit}
+.ipo-brand{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-logo{width:36px;height:36px;border-radius:8px;background:#0071e3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;letter-spacing:-.005em}
+.ipo-bt{display:flex;flex-direction:column;line-height:1.2}.ipo-bt b{font-size:17px;font-weight:600;letter-spacing:-.005em;color:#1a1b1f}.ipo-bt small{font-size:12px;font-weight:600;color:#414753;letter-spacing:.02em}
+.ipo-nav{display:none;align-items:center;gap:24px}@media(min-width:1280px){.ipo-nav{display:flex}}
+.ipo-nav a{font-size:14px;font-weight:500;color:#414753;transition:color .15s;white-space:nowrap}.ipo-nav a:hover{color:#1a1b1f}.ipo-nav a.on{color:#0071e3}
+.ipo-right{display:flex;align-items:center;gap:16px;flex:none}
+.ipo-btn{display:flex;align-items:center;gap:8px;background:#f4f3f8;border:0;border-radius:8px;padding:4px 16px;height:32px;color:#414753;font:400 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ipo-btn kbd{background:#fff;padding:2px 4px;border-radius:4px;font:400 13px 'JetBrains Mono',monospace;color:#717785}
+.ipo-ic{width:32px;height:32px;border-radius:8px;background:#f4f3f8;display:flex;align-items:center;justify-content:center;border:0;color:#414753;cursor:pointer;padding:0}
+.ipo-prog{display:flex;align-items:center;gap:8px;background:#f4f3f8;border-radius:9999px;padding:4px 16px;height:32px;font-size:12px;font-weight:600;color:#414753;white-space:nowrap}.ipo-prog b{color:#0059b5;font-weight:700}
+.ipo-av{width:32px;height:32px;border-radius:9999px;background:#0059b5;display:flex;align-items:center;justify-content:center;color:#fff}
+.ipo-top svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ipo-dd{position:relative;align-self:stretch;display:flex;align-items:center}
+.ipo-ddb{display:flex;align-items:center;gap:4px}.ipo-ddb svg{width:16px;height:16px;transition:transform .2s}
+.ipo-dd:hover .ipo-ddb svg,.ipo-dd:focus-within .ipo-ddb svg{transform:rotate(180deg)}
+.ipo-menu{display:none;position:absolute;left:0;top:calc(100% - 6px);width:372px;background:#fff;border:1px solid #e3e2e7;border-radius:16px;box-shadow:0 12px 32px -4px rgba(0,0,0,.14);padding:8px;z-index:100}
+.ipo-dd:hover .ipo-menu,.ipo-dd:focus-within .ipo-menu{display:block}
+.ipo-mh{display:flex;align-items:center;justify-content:space-between;padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px solid #e9e7ed}
+.ipo-mh span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#717785}.ipo-mh em{font-style:normal;font-size:10px;font-weight:700;color:#0059b5;background:#d7e2ff;padding:2px 6px;border-radius:9999px}
+.ipo-ml{max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:2px}
+.ipo-mi{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;border-radius:12px;font-size:14px;color:#1a1b1f !important}
+.ipo-mi:hover{background:#e9e7ed}.ipo-mi>span:first-child{display:flex;align-items:center;gap:8px;font-weight:500;min-width:0}
+.ipo-n{min-width:20px;height:20px;padding:0 5px;border-radius:9999px;background:#0071e3;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.ipo-s{white-space:nowrap;font-size:10px;font-weight:600;color:#0071e3;background:rgba(0,113,227,.1);padding:2px 6px;border-radius:6px;flex:none}
+.ipo-mi.off .ipo-n{background:#c1c6d6}.ipo-mi.off{color:#717785 !important}.ipo-mi.off .ipo-s{color:#717785;background:#eeedf3}
+@media(max-width:767px){.ipo-btn span,.ipo-btn kbd,.ipo-prog{display:none}.ipo-bt small{display:none}}</style><div class="ipo-top"><a class="ipo-brand" href="index.html"><svg class="ipo-mark" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" style="fill:#0059b5"/><rect x="15.5" y="9" width="13" height="10" rx="2" style="fill:none;stroke:#fff;stroke-width:2"/><path d="M20 23h3" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round"/><circle cx="11" cy="13.5" r="3.2" style="fill:#fff"/><path d="M5.5 27.5c0-3.6 2.5-6.2 5.5-6.2s5.5 2.6 5.5 6.2z" style="fill:#fff"/></svg><span class="ipo-bt"><b>Curso IPO</b><small>UdL · Dr. Toni Granollers</small></span></a><nav class="ipo-nav"><a class="" href="index.html">Inicio</a><div class="ipo-dd"><a aria-haspopup="true" class="ipo-ddb on" href="pilares.html">Curso IPO<svg viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a><div aria-label="Módulos de IPO" class="ipo-menu" role="menu"><div class="ipo-mh"><span>Plan Curricular</span><em>8 Unidades</em></div><div class="ipo-ml"><a class="ipo-mi" href="pilares.html" role="menuitem"><span><span class="ipo-n">01</span>M1: Fundamentos</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-2.html" role="menuitem"><span><span class="ipo-n">02</span>M2: Factor Humano</span><span class="ipo-s">Acceder</span></a><a class="ipo-mi" href="modulo-3.html" role="menuitem"><span><span class="ipo-n">03</span>M3: DCU (Centrado en Usuario)</span><span class="ipo-s">Acceder</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">04</span>M4: Análisis de Requisitos</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">05</span>M5: Prototipado</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">06</span>M6: Evaluación</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.1</span>M7.1: Estilos de Interacción</span><span class="ipo-s">Próximamente</span></a><a aria-disabled="true" class="ipo-mi off" href="#" role="menuitem"><span><span class="ipo-n">07.2</span>M7.2: Diseño UI</span><span class="ipo-s">Próximamente</span></a></div></div></div><a href="mpiua.html">MPIu+a</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a></nav><div class="ipo-right"><button class="ipo-btn" id="cmd-search-btn" type="button"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><span>Buscar</span></button><div class="ipo-acc" id="ipo-account"></div></div></div></div>
+<!-- Breadcrumbs -->
+<div class="py-2 border-t border-[#eeedf3] text-xs text-[#414753] flex items-center gap-1.5 overflow-x-auto whitespace-nowrap">
+<a class="hover:text-[#0071e3] transition-colors" href="index.html">Inicio</a>
+<span class="text-[#c7c5d0]">/</span>
+<a class="hover:text-[#0071e3] transition-colors" href="index.html">Curso IPO</a>
+<span class="text-[#c7c5d0]">/</span>
+<span>Módulo 1: Fundamentos</span>
+<span class="text-[#c7c5d0]">/</span>
+<a class="hover:text-[#0071e3] transition-colors" href="usabilidad.html">Usabilidad</a>
+<span class="text-[#c7c5d0]">/</span>
+<span class="text-[#0071e3] font-semibold">01 Definición</span>
+</div>
+<!-- Secondary Nav: 6 Lessons -->
+<div class="py-2 border-t border-[#eeedf3] flex items-center gap-2 overflow-x-auto">
+<a class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm flex items-center gap-1.5 shrink-0" href="usabilidad-01-definicion.html">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+<span>01 Definición</span>
+</a>
+<a class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#414753] hover:text-[#1a1b1f] hover:bg-[#eeedf3] transition shrink-0" href="usabilidad-02-importancia.html">
+        02 Importancia
+      </a>
+<a class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#414753] hover:text-[#1a1b1f] hover:bg-[#eeedf3] transition shrink-0" href="usabilidad-03-beneficios.html">
+        03 Beneficios
+      </a>
+<a class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#414753] hover:text-[#1a1b1f] hover:bg-[#eeedf3] transition shrink-0" href="usabilidad-04-atributos.html">
+        04 Atributos
+      </a>
+<a class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#414753] hover:text-[#1a1b1f] hover:bg-[#eeedf3] transition shrink-0" href="usabilidad-05-calidad-software.html">
+        05 Calidad Software
+      </a>
+<a class="px-3 py-1.5 rounded-full text-xs font-medium bg-[#f4f3f8] text-[#414753] hover:text-[#1a1b1f] hover:bg-[#eeedf3] transition shrink-0" href="usabilidad-06-usabilidad-web.html">
+        06 Usabilidad Web
+      </a>
+</div>
+</div>
+</header>
+<!-- ================= CONTENEDOR PRINCIPAL ================= -->
+<main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 space-y-12">
+<!-- CABECERA EDITORIAL DE LA LECCIÓN -->
+<!-- ================= SECCIÓN 1: FUNDAMENTOS Y METÁFORA DE NORMAN ================= -->
+<!-- ================= SECCIÓN 2: ESTÁNDARES OFICIALES ISO ================= -->
+<!-- ================= SECCIÓN 3: AUTORES Y PERSPECTIVAS ================= -->
+<!-- ================= SECCIÓN 4: MATRIZ SINÓPTICA ================= -->
+<!-- ================= SECCIÓN 5: LABORATORIO DE AUTOEVALUACIÓN Y GAMIFICACIÓN ================= -->
+<section class="scroll-mt-32" id="laboratorio-gamificacion">
+<div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0071e3]/30 shadow-md"><!-- Encabezado de la suite de Gamificación exactamente estilo Usabilidad 03 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#dad9df] mb-6">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-2xl bg-[#0071e3] text-white flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-[#d7e2ff] text-[#0059b5] font-mono text-[11px] font-bold uppercase tracking-wider">
+                JUEGO 1 · TODO EN UNO
+              </span>
+<span class="text-[#c7c5d0]">•</span>
+<span class="text-xs font-bold text-[#0071e3]">Módulo 1 · 01 Definición</span>
+</div>
+<h1 class="text-xl sm:text-2xl font-extrabold text-[#1a1b1f] mt-0.5">
+              Test, flashcards y huecos
+            </h1>
+<p class="text-xs sm:text-sm text-[#414753] mt-0.5">Todo junto: test interactivo, flashcards con giro 3D y textos con huecos para rellenar sobre conceptos, normas ISO 9241, efectividad, eficiencia y satisfacción.</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 font-mono text-xs bg-[#f4f3f8] px-4 py-2.5 rounded-xl border border-[#dad9df] self-start md:self-auto shrink-0">
+<div class="flex items-center gap-1.5 font-bold text-[#1a1b1f]">
+<span class="material-symbols-outlined text-[#0071e3] text-[18px]">verified</span>
+<span>24 preguntas · 16 tarjetas · 9 textos</span>
+</div>
+<span class="text-[11px] text-[#717785]">Contenido temático completo</span>
+</div>
+</div>
+<!-- Barra de pestañas interactiva idéntica a Usabilidad 03 -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-2 border-b border-[#eeedf3]">
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-[#0071e3] text-white shadow-sm transition hover:bg-[#0059b5]" type="button">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>Test interactivo</span>
+<span class="w-5 h-5 rounded-full bg-white text-[#0071e3] flex items-center justify-center text-[10px] font-mono font-bold">24</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-[#f4f3f8] text-[#414753] border border-[#dad9df] hover:bg-[#eeedf3] hover:text-[#1a1b1f] transition" type="button">
+<span class="material-symbols-outlined text-[16px]">style</span>
+<span>Flashcards 3D</span>
+<span class="px-1.5 py-0.2 rounded-full bg-[#e9e7ed] text-[#414753] text-[10px] font-mono font-bold">16</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-[#f4f3f8] text-[#414753] border border-[#dad9df] hover:bg-[#eeedf3] hover:text-[#1a1b1f] transition" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Rellenar huecos</span>
+<span class="px-1.5 py-0.2 rounded-full bg-[#e9e7ed] text-[#414753] text-[10px] font-mono font-bold">9</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 text-xs font-mono text-[#717785]">
+<span class="material-symbols-outlined text-[16px]">keyboard</span>
+<span>Atajos de teclado habilitados</span>
+</div>
+</div>
+<!-- CONTENEDOR MONTE DEL INTERACTIVO -->
+<div class="w-full max-w-[820px] mx-auto py-2">
+<div id="app"><div class="tabs"><button class="tab on">Test</button><button class="tab">Flashcards</button><button class="tab">Rellenar huecos</button></div><div><div class="card"><div class="meta"><span>Pregunta 1 / 10</span><span>Aciertos: 0</span></div><div class="bar"><i style="width:0%"></i></div><p class="q">¿Cómo se resume coloquialmente la usabilidad?</p><div class="opts"><button class="opt"><span class="k">1</span><span>Rápido y barato de desarrollar</span></button><button class="opt"><span class="k">2</span><span>Bonito y moderno</span></button><button class="opt"><span class="k">3</span><span>Fácil de usar y fácil de aprender</span></button><button class="opt"><span class="k">4</span><span>Compatible con cualquier dispositivo</span></button></div><div></div><div class="row"></div></div><div class="kbd">Atajos: 1–4 para responder · Enter para seguir</div></div></div>
+</div></div>
+</section>
+<!-- ================= SECCIÓN 6: REFERENCIAS BIBLIOGRÁFICAS ================= -->
+<!-- ACCIONES INFERIORES DE NAVEGACIÓN -->
+<footer class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white text-[#1a1b1f] hover:bg-[#f4f3f8] text-xs font-semibold border border-[#dad9df] shadow-sm transition" href="usabilidad.html"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Volver al Índice de Usabilidad</span></a>
+<span class="text-xs font-mono text-[#717785]">Capítulo 01 de 06</span>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#0071e3] text-white hover:bg-[#0059b5] text-xs font-bold shadow-[0_2px_10px_rgba(0,113,227,0.25)] transition" href="usabilidad-02-importancia.html">
+<span>Siguiente: 02 Importancia de la Usabilidad</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</footer>
+</main>
+<!-- ================= PIE DE PÁGINA INSTITUCIONAL ================= -->
+<footer class="w-full bg-white border-t border-[#dad9df] mt-12">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div>
+<div class="font-bold text-sm text-[#1a1b1f]">Plataforma Educativa de Interacción Persona-Ordenador</div>
+<div class="text-xs text-[#414753] mt-0.5">Universitat de Lleida (UdL) · Cátedra de Usabilidad y Accesibilidad</div>
+<div class="text-xs text-[#414753]">Dirección docente e investigadora: Dr. Toni Granollers</div>
+</div>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-[#414753]">
+<span class="px-2.5 py-1 rounded bg-[#f4f3f8] border border-[#dad9df]">UdL</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f3f8] border border-[#dad9df]">GRIHO</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f3f8] border border-[#dad9df]">AIPO</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f3f8] border border-[#dad9df]">ACM SIGCHI</span>
+</div>
+</div>
+<div class="pt-4 border-t border-[#eeedf3] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#717785]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#0071e3]">verified_user</span>
+<span>Conformidad de Accesibilidad WCAG 2.2 Nivel AA</span>
+</div>
+<div>
+        Material docente bajo Licencia Creative Commons CC BY-NC 4.0 Internacional
+      </div>
+</div>
+</div>
+</footer>
+<!-- ================= SCRIPTS DEL INTERACTIVO DE GAMIFICACIÓN ================= -->
+<script>
+window.GAME_CFG = { "modes": ["quiz", "cards", "gaps"], "quizCount": 10 };
+</script>
+<script>
+const QUESTIONS = [
+  { q: "¿Cómo se resume coloquialmente la usabilidad?",
+    options: ["Fácil de usar y fácil de aprender", "Bonito y moderno", "Rápido y barato de desarrollar", "Compatible con cualquier dispositivo"],
+    a: 0, exp: "La síntesis coloquial es «fácil de usar y fácil de aprender», aunque resulta incompleta para la ingeniería de software." },
+  { q: "¿Quién escribió «The Design of Everyday Things» (1990)?",
+    options: ["Jakob Nielsen", "Donald A. Norman", "Nigel Bevan", "Whitney Quesenbery"],
+    a: 1, exp: "Donald A. Norman [NOR90] mostró que la usabilidad afecta a cualquier objeto cotidiano, no solo a las pantallas." },
+  { q: "Según Norman, si un objeto necesita manual de instrucciones o induce al error recurrente, ¿de quién es el fallo?",
+    options: ["Del usuario", "Del fabricante de los materiales", "Del diseñador", "De nadie: es inevitable"],
+    a: 2, exp: "El fallo nunca recae en el usuario: es un defecto del diseñador." },
+  { q: "¿Qué ilustra la «cafetera para masoquistas»?",
+    options: ["Que un objeto caro siempre es más usable", "Que un objeto puede ser 100% funcional y aun así inservible al usarlo", "Que la estética no importa", "Que los manuales evitan los errores"],
+    a: 1, exp: "Funciona internamente (calienta y filtra), pero al verter quema la mano: la viabilidad técnica no garantiza la usabilidad." },
+  { q: "¿Por qué la interpretación coloquial de usabilidad es insuficiente?",
+    options: ["Porque solo vale para webs", "Porque ignora la arquitectura cognitiva, la eficiencia, el entorno y la mitigación de errores", "Porque es demasiado técnica", "Porque la definió un ingeniero"],
+    a: 1, exp: "Confundir usabilidad con simplicidad superficial deja fuera la carga cognitiva, el rendimiento, el contexto y los errores." },
+  { q: "¿Cuáles son los tres pilares de la ISO 9241-11?",
+    options: ["Comprensión, Aprendizaje, Operabilidad", "Efectividad, Eficiencia, Satisfacción", "Encontrar, Entender, Actuar", "Memorabilidad, Errores, Satisfacción"],
+    a: 1, exp: "ISO 9241-11: usar un producto con Efectividad, Eficiencia y Satisfacción en un contexto de uso especificado." },
+  { q: "¿En qué año se publicó la ISO 9241-11 que cita la página?",
+    options: ["1990", "1993", "1998", "2001"],
+    a: 2, exp: "ISO 9241-11:1998 [ISO98], «Guidance on Usability»." },
+  { q: "Según la ISO 9241-11, la Efectividad es…",
+    options: ["La precisión y plenitud con la que los usuarios logran metas concretas", "Los recursos empleados en relación con la exactitud alcanzada", "El confort y la actitud positiva hacia el producto", "La velocidad de carga del sistema"],
+    a: 0, exp: "Efectividad = precisión y plenitud al lograr metas. Se mide con tasa de errores, facilidad de aprendizaje y memorabilidad." },
+  { q: "Según la ISO 9241-11, la Eficiencia es…",
+    options: ["La ausencia de errores", "Los recursos empleados en relación directa con la exactitud alcanzada", "El atractivo visual", "La cantidad de funciones del sistema"],
+    a: 1, exp: "Eficiencia = recursos frente a exactitud: tiempo de ejecución, carga cognitiva y esfuerzo (clics)." },
+  { q: "Tiempo de ejecución, carga cognitiva y esfuerzo en clics son indicadores de…",
+    options: ["Efectividad", "Satisfacción", "Eficiencia", "Atractivo"],
+    a: 2, exp: "Son los indicadores del pilar Eficiencia." },
+  { q: "Factor subjetivo, percepción de valor y confianza emotiva son indicadores de…",
+    options: ["Satisfacción", "Eficiencia", "Efectividad", "Operabilidad"],
+    a: 0, exp: "Satisfacción: confort, ausencia de incomodidad y actitud positiva hacia el artefacto." },
+  { q: "¿Cómo definió la ISO/IEC 9126 la usabilidad en su versión de 1991?",
+    options: ["Como un conjunto de atributos que influyen en el esfuerzo necesario para el uso", "Como el desarrollo sistemático de sistemas fáciles de usar", "Como las 5 Es", "Como la capacidad de encontrar, entender y actuar"],
+    a: 0, exp: "En 1991 era «un conjunto de atributos que influyen en el esfuerzo necesario para el uso»." },
+  { q: "Según la ISO/IEC 9126 (2001), la usabilidad es la capacidad de un software para ser…",
+    options: ["Rápido, seguro y barato", "Atractivo, entendido, aprendido y usado", "Efectivo, eficiente y satisfactorio", "Portable, mantenible y fiable"],
+    a: 1, exp: "…atractivo, entendido, aprendido y usado por el usuario bajo unas condiciones específicas." },
+  { q: "¿Qué implica la expresión «…bajo unas condiciones específicas» de la ISO/IEC 9126?",
+    options: ["Que el software solo funciona en ciertos ordenadores", "Que ningún software tiene usabilidad intrínseca: depende del usuario y su contexto", "Que hay que pasar una certificación", "Que la usabilidad solo se mide en laboratorio"],
+    a: 1, exp: "Es el principio de no-intrínseca usabilidad: aparece solo al interactuar un perfil de usuario en su contexto." },
+  { q: "¿Cuál de estos NO es un atributo de la ISO/IEC 9126?",
+    options: ["Comprensión (Understandability)", "Aprendizaje (Learnability)", "Memorabilidad (Memorability)", "Atractivo (Attractiveness)"],
+    a: 2, exp: "Los de la 9126 son Comprensión, Aprendizaje, Operabilidad y Atractivo. La Memorabilidad es de Nielsen." },
+  { q: "¿Cuántos atributos propone Jakob Nielsen (1993)?",
+    options: ["Tres", "Cuatro", "Cinco", "Seis"],
+    a: 2, exp: "Aprendizaje, Eficiencia, Memorabilidad, Errores y Satisfacción." },
+  { q: "¿Cuál de estos NO es un atributo de Nielsen?",
+    options: ["Learnability", "Memorability", "Engaging", "Errors"],
+    a: 2, exp: "«Engaging» es una de las 5 Es de Quesenbery, no de Nielsen." },
+  { q: "¿Qué autora define la usabilidad como «el desarrollo sistemático de sistemas fáciles de usar y fáciles de aprender»?",
+    options: ["Janice Redish", "Jenny Preece", "Whitney Quesenbery", "Donald Norman"],
+    a: 1, exp: "Jenny Preece (1994) [PRE94]: la usabilidad forma parte de la metodología desde el inicio, no es un remiendo posterior." },
+  { q: "¿A quién se asocia la ISO 9241-11 y la idea de usabilidad como cualidad en el contexto real de ejecución?",
+    options: ["Nigel Bevan", "Jakob Nielsen", "Jenny Preece", "Janice Redish"],
+    a: 0, exp: "Nigel Bevan, del National Physical Laboratory, impulsó la medición basada en el rendimiento de tareas." },
+  { q: "Para Janice Redish (1995), un sistema usable permite a los usuarios…",
+    options: ["Encontrar, entender, actuar e invertir un tiempo y esfuerzo razonables", "Aprender, memorizar y no equivocarse", "Ser efectivos, eficientes y estar satisfechos", "Comprender, operar y disfrutar"],
+    a: 0, exp: "Su lema es que el sistema «funcione para sus usuarios» (works for its users)." },
+  { q: "¿Qué son las «5 Es» de Whitney Quesenbery (2001)?",
+    options: ["Effective, Efficient, Engaging, Error-Tolerant, Easy-to-Learn", "Easy, Elegant, Efficient, Ethical, Enjoyable", "Effective, Ergonomic, Engaging, Exact, Easy", "Efficiency, Errors, Effort, Emotion, Experience"],
+    a: 0, exp: "Amplía y humaniza la ISO 9241 con cinco dimensiones que el usuario vive de forma directa." },
+  { q: "En la matriz sinóptica, ¿qué dimensión central se asigna a Quesenbery?",
+    options: ["Ergonómica", "Pragmática", "Holística", "Multidimensional"],
+    a: 2, exp: "Holística: una extensión cualitativa centrada en el enganche emocional." },
+  { q: "En la matriz sinóptica, ¿qué dimensión central se asigna a Nielsen?",
+    options: ["Multidimensional", "Ingeniería Sw", "Holística", "Pragmática"],
+    a: 0, exp: "Multidimensional: el marco pionero para las pruebas empíricas de laboratorio." },
+  { q: "En la matriz sinóptica, ¿qué enfoque se asigna a la ISO/IEC 9126?",
+    options: ["Ergonómica", "Ingeniería Sw", "Pragmática", "Holística"],
+    a: 1, exp: "Ingeniería de software: la usabilidad como atributo de calidad en el ciclo de desarrollo." }
+];
+
+const FLASHCARDS = [
+  { f: "Usabilidad (definición coloquial)", b: "Propiedad de un sistema que lo hace «fácil de usar y fácil de aprender». Es certera, pero incompleta para la ingeniería de software." },
+  { f: "Donald A. Norman (1990)", b: "«The Design of Everyday Things». La usabilidad afecta a cualquier artefacto. Si un objeto induce al error, el fallo es del diseñador." },
+  { f: "Cafetera para masoquistas", b: "Funciona por dentro, pero el asa y el pitorro están en el mismo lado y quema al verter. La viabilidad técnica no garantiza la usabilidad." },
+  { f: "ISO 9241-11 (1998)", b: "La medida en que un producto puede ser usado por determinados usuarios para conseguir objetivos específicos con efectividad, eficiencia y satisfacción en un contexto de uso especificado." },
+  { f: "Efectividad", b: "Precisión y plenitud con la que se logran las metas. Indicadores: tasa de errores, facilidad de aprendizaje y memorabilidad." },
+  { f: "Eficiencia", b: "Recursos empleados en relación con la exactitud alcanzada. Indicadores: tiempo de ejecución, carga cognitiva y clics." },
+  { f: "Satisfacción", b: "Confort, ausencia de incomodidad y actitud positiva hacia el artefacto. Es el factor subjetivo." },
+  { f: "ISO/IEC 9126 (1991)", b: "Usabilidad como «un conjunto de atributos que influyen en el esfuerzo necesario para el uso»." },
+  { f: "ISO/IEC 9126 (2001)", b: "Capacidad de un software para ser atractivo, entendido, aprendido y usado por el usuario bajo unas condiciones específicas." },
+  { f: "Principio de no-intrínseca usabilidad", b: "Ningún software es usable por sí mismo: la usabilidad solo aparece al interactuar un perfil de usuario concreto en su contexto." },
+  { f: "Atributos de la ISO/IEC 9126", b: "Comprensión, Aprendizaje, Operabilidad y Atractivo." },
+  { f: "Jakob Nielsen (1993): 5 atributos", b: "Aprendizaje (learnability), Eficiencia, Memorabilidad, Errores (tasa baja) y Satisfacción subjetiva." },
+  { f: "Jenny Preece (1994)", b: "«El desarrollo sistemático de sistemas fáciles de usar y fáciles de aprender». La usabilidad va desde el inicio del diseño." },
+  { f: "Nigel Bevan", b: "Impulsor de la ISO 9241-11. Pasó de ver la usabilidad como propiedad estática a verla como cualidad en el contexto real de uso." },
+  { f: "Janice (Ginny) Redish (1995)", b: "«Works for its users»: que los usuarios puedan encontrar, entender y actuar con un tiempo y esfuerzo razonables." },
+  { f: "Whitney Quesenbery (2001): 5 Es", b: "Effective, Efficient, Engaging, Error-Tolerant, Easy-to-Learn." }
+];
+
+const GAPS = [
+  { title: "Definición coloquial", text: "Coloquialmente, la usabilidad se resume como la propiedad de un sistema para ser fácil de [usar] y fácil de [aprender]. Donald A. Norman ([1990]) explicó en «The Design of Everyday Things» que esta característica gobierna cualquier [artefacto|objeto] de la vida humana." },
+  { title: "Norman y el diseñador", text: "Si un objeto cotidiano requiere un [manual] de instrucciones o sus controles inducen al [error], el fallo no recae jamás en el usuario: es un defecto del [diseñador]." },
+  { title: "La cafetera", text: "Un objeto puede ser 100% [funcional] por dentro y aun así inservible al usarlo. Principio básico de HCI: la viabilidad [técnica] de un sistema no garantiza jamás su [usabilidad] práctica." },
+  { title: "ISO 9241-11", text: "La medida en la que un producto se puede usar por determinados usuarios para conseguir objetivos específicos con [efectividad], [eficiencia] y [satisfacción] en un [contexto] de uso especificado." },
+  { title: "Los tres pilares", text: "La efectividad es la [precisión] y plenitud con la que los usuarios logran metas concretas. La eficiencia mide los [recursos] empleados en relación con la exactitud alcanzada. La satisfacción es el [confort] y la ausencia de incomodidad." },
+  { title: "ISO/IEC 9126", text: "La capacidad que tiene un producto software para ser [atractivo], [entendido], [aprendido] y usado por el usuario cuando es utilizado bajo unas condiciones [específicas]. Ningún software posee usabilidad [intrínseca]." },
+  { title: "Nielsen", text: "Jakob Nielsen ([1993]) concibe la usabilidad como una estructura de [cinco|5] atributos: capacidad de aprendizaje, eficiencia de uso, facilidad de [memorizar], tasa baja de [errores] y satisfacción subjetiva." },
+  { title: "Preece y Bevan", text: "Jenny Preece define la usabilidad como el desarrollo [sistemático] de sistemas fáciles de usar y fáciles de aprender. Nigel Bevan, arquitecto de la norma ISO [9241-11], la considera una cualidad en el [contexto] real de ejecución." },
+  { title: "Redish y Quesenbery", text: "Para Redish, los usuarios deben poder [encontrar] lo que necesitan, [entender] la información y [actuar] de forma apropiada. Quesenbery propone las 5 Es: Effective, Efficient, [Engaging], Error-Tolerant y Easy-to-[Learn]." }
+];
+</script>
+<script>
+(function(){
+const CFG = window.GAME_CFG;
+const $ = (s, el=document) => el.querySelector(s);
+const h = (tag, attrs={}, ...kids) => { 
+  const e=document.createElement(tag); 
+  for(const k in attrs){ 
+    if(k==='class') e.className=attrs[k]; 
+    else if(k.startsWith('on')) e.addEventListener(k.slice(2),attrs[k]); 
+    else e.setAttribute(k,attrs[k]); 
+  } 
+  kids.flat().forEach(c=>e.append(c?.nodeType?c:document.createTextNode(c??''))); 
+  return e; 
+};
+const shuffle = a => { a=[...a]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+let keyHandler = null;
+document.addEventListener('keydown', e => { if(keyHandler && !(e.target.tagName==='INPUT')) keyHandler(e); });
+const root = $('#app');
+const LABELS = { quiz: CFG.quizLabel || 'Test', cards: 'Flashcards', gaps: 'Rellenar huecos' };
+let current = CFG.modes[0];
+
+function render(){
+  root.innerHTML = '';
+  if(CFG.modes.length > 1){
+    root.append(h('div',{class:'tabs'}, CFG.modes.map(m => h('button',{class:'tab'+(m===current?' on':''), onclick:()=>{current=m;render();}}, LABELS[m]))));
+  }
+  const view = h('div');
+  root.append(view);
+  ({quiz:Quiz, cards:Cards, gaps:Gaps})[current](view);
+}
+
+/* ---------- TEST / PREGUNTAS ---------- */
+function Quiz(view){
+  const n = Math.min(CFG.quizCount || QUESTIONS.length, QUESTIONS.length);
+  const deck = shuffle(QUESTIONS).slice(0,n).map(q => {
+    const order = shuffle(q.options.map((_,i)=>i));
+    return { ...q, opts: order.map(i=>q.options[i]), correct: order.indexOf(q.a) };
+  });
+  let i = 0, hits = 0, answered = false; const wrong = [];
+  function step(){
+    view.innerHTML=''; answered=false;
+    if(i>=deck.length) return end();
+    const q = deck[i];
+    const card = h('div',{class:'card'},
+      h('div',{class:'meta'}, h('span',{},`Pregunta ${i+1} / ${deck.length}`), h('span',{},`Aciertos: ${hits}`)),
+      h('div',{class:'bar'}, h('i',{style:`width:${(i/deck.length)*100}%`})),
+      h('p',{class:'q'}, q.q),
+    );
+    const opts = h('div',{class:'opts'});
+    q.opts.forEach((o,k)=> opts.append(h('button',{class:'opt', onclick:()=>pick(k)}, h('span',{class:'k'}, String(k+1)), h('span',{},o))));
+    const fbBox = h('div'); const row = h('div',{class:'row'});
+    card.append(opts, fbBox, row); view.append(card, h('div',{class:'kbd'},'Atajos: 1–4 para responder · Enter para seguir'));
+    function pick(k){
+      if(answered) return; answered=true;
+      const btns=[...opts.children]; btns.forEach(b=>b.disabled=true);
+      btns[q.correct].classList.add('ok');
+      const good = k===q.correct;
+      if(good) hits++; else { btns[k].classList.add('bad'); wrong.push(q); }
+      fbBox.append(h('div',{class:'fb '+(good?'ok':'bad')}, h('b',{}, good?'¡Correcto!':'No es esa.'), q.exp));
+      const next = h('button',{class:'btn p', onclick:()=>{i++;step();}}, i+1<deck.length?'Siguiente':'Ver resultado');
+      row.append(next); next.focus();
+    }
+    keyHandler = e => { const k=parseInt(e.key,10); if(!answered && k>=1 && k<=q.opts.length) pick(k-1); else if(answered && e.key==='Enter'){ e.preventDefault(); i++; step(); } };
+  }
+  function end(){
+    keyHandler = e => { if(e.key==='Enter') Quiz(view); };
+    const nota = (hits/deck.length*10).toFixed(1).replace('.0','');
+    const msg = hits===deck.length ? '¡Perfecto! Te lo sabes todo.' : hits/deck.length>=.7 ? '¡Muy bien! Repasa los fallos.' : hits/deck.length>=.5 ? 'Aprobado, pero hay que repasar.' : 'Toca repasar el tema.';
+    const card = h('div',{class:'card'},
+      h('div',{class:'score'}, h('div',{class:'big'}, `${nota}`), h('div',{class:'sub',style:'margin:8px 0 0'}, `Nota sobre 10 · ${hits} de ${deck.length} aciertos`), h('p',{style:'font-weight:600;margin:10px 0 0'}, msg)),
+    );
+    if(wrong.length) card.append(h('div',{class:'review'}, h('b',{style:'font-size:14px;color:#ba1a1a'},'Preguntas falladas:'), wrong.map(q=>h('div',{}, q.q, h('br'), 'Respuesta: ', h('em',{}, q.options[q.a])))));
+    card.append(h('div',{class:'row'}, h('button',{class:'btn p', onclick:()=>Quiz(view)}, 'Volver a jugar')));
+    view.innerHTML=''; view.append(card);
+  }
+  step();
+}
+
+/* ---------- FLASHCARDS ---------- */
+function Cards(view){
+  let deck = FLASHCARDS.map((c,idx)=>({...c,idx})), i=0;
+  const known = new Set();
+  function show(){
+    view.innerHTML='';
+    if(!deck.length){
+      keyHandler=null;
+      view.append(h('div',{class:'card score'}, h('div',{class:'big'},'✓'), h('p',{style:'font-weight:600'},`Has marcado las ${FLASHCARDS.length} tarjetas como sabidas.`), h('div',{class:'row',style:'justify-content:center'}, h('button',{class:'btn p',onclick:()=>Cards(view)},'Empezar de nuevo'))));
+      return;
+    }
+    i = (i+deck.length)%deck.length;
+    const c = deck[i];
+    const fc = h('div',{class:'fc', onclick:()=>fc.classList.toggle('flip')},
+      h('div',{class:'fc-in'},
+        h('div',{class:'face front'}, h('span',{class:'eyebrow',style:'font-size:12px;font-weight:700;color:#0071e3;text-transform:uppercase;letter-spacing:.04em'},'Concepto clave'), h('h2',{style:'margin-top:8px'}, c.f), h('div',{class:'hint'},'Pulsa para girar')),
+        h('div',{class:'face back'}, h('div',{}, c.b), h('div',{class:'hint'},'Pulsa para volver'))));
+    view.append(
+      h('div',{class:'meta'}, h('span',{},`Tarjeta ${i+1} / ${deck.length}`), h('span',{},`Sabidas: ${known.size} / ${FLASHCARDS.length}`)),
+      fc,
+      h('div',{class:'row',style:'justify-content:space-between'},
+        h('button',{class:'btn',onclick:()=>{i--;show();}},'← Anterior'),
+        h('div',{style:'display:flex;gap:10px'},
+          h('button',{class:'btn',onclick:()=>{deck=shuffle(deck);i=0;show();}},'Barajar'),
+          h('button',{class:'btn p',onclick:markKnown},'Me la sé ✓')),
+        h('button',{class:'btn',onclick:()=>{i++;show();}},'Siguiente →')),
+      h('div',{class:'kbd'},'Atajos: Espacio para girar · ← → para moverte · S si te la sabes'));
+    function markKnown(){ known.add(c.idx); deck.splice(i,1); show(); }
+    keyHandler = e => {
+      if(e.key===' '){ e.preventDefault(); fc.classList.toggle('flip'); }
+      else if(e.key==='ArrowRight'){ i++; show(); }
+      else if(e.key==='ArrowLeft'){ i--; show(); }
+      else if(e.key.toLowerCase()==='s'){ markKnown(); }
+    };
+  }
+  show();
+}
+
+/* ---------- RELLENAR HUECOS ---------- */
+function Gaps(view){
+  keyHandler = null;
+  view.innerHTML='';
+  const inputs = [];
+  const words = [];
+  const paras = GAPS.map(g => {
+    const p = h('p');
+    g.text.split(/\[([^\]]+)\]/).forEach((part,k)=>{
+      if(k%2===0){ p.append(part); return; }
+      const answers = part.split('|');
+      words.push(answers[0]);
+      const inp = h('input',{class:'gap', type:'text', autocomplete:'off', spellcheck:'false', 'aria-label':'Hueco'});
+      inp.style.width = Math.max(4, answers[0].length+2)+'ch';
+      inp.dataset.answers = JSON.stringify(answers);
+      inp.addEventListener('input',()=>inp.classList.remove('ok','bad'));
+      inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); const nx=inputs[inputs.indexOf(inp)+1]; nx?nx.focus():check(); }});
+      inputs.push(inp); p.append(inp);
+    });
+    return h('div',{class:'gp'}, h('h3',{}, h('span',{class:'material-symbols-outlined',style:'font-size:18px'},'edit_note'), g.title), p);
+  });
+  const chips = shuffle(words).map(w => h('span',{class:'chip'}, w));
+  const scoreEl = h('span',{class:'gapscore'});
+  view.append(
+    h('div',{class:'card',style:'margin-bottom:14px'},
+      h('b',{style:'font-size:14px;color:#1a1b1f'},'Banco de palabras'),
+      h('p',{class:'sub',style:'margin:4px 0 0;font-size:13px;color:#414753'},'Escribe la palabra que falta en cada hueco. Da igual si pones tildes o mayúsculas. Pulsa Enter para pasar al siguiente.'),
+      h('div',{class:'bank'}, chips)),
+    ...paras,
+    h('div',{class:'row'}, scoreEl,
+      h('button',{class:'btn',onclick:()=>Gaps(view)},'Reiniciar'),
+      h('button',{class:'btn',onclick:reveal},'Ver soluciones'),
+      h('button',{class:'btn p',onclick:check},'Comprobar')));
+  function isRight(inp){ const v=norm(inp.value); return v && JSON.parse(inp.dataset.answers).some(a=>norm(a)===v); }
+  function check(){
+    let ok=0;
+    inputs.forEach(inp=>{ const r=isRight(inp); inp.classList.toggle('ok',r); inp.classList.toggle('bad',!r); if(r) ok++; });
+    updateChips();
+    scoreEl.textContent = `${ok} / ${inputs.length} correctos` + (ok===inputs.length?' 🎉':'');
+  }
+  function reveal(){
+    inputs.forEach(inp=>{ if(!isRight(inp)){ inp.value=JSON.parse(inp.dataset.answers)[0]; inp.classList.remove('ok'); inp.classList.add('bad'); } else inp.classList.add('ok'); });
+    updateChips(); scoreEl.textContent='Soluciones mostradas (en rojo las que no tenías).';
+  }
+  function updateChips(){
+    const used = inputs.filter(isRight).map(inp=>norm(JSON.parse(inp.dataset.answers)[0]));
+    chips.forEach(c=>{ const k=used.indexOf(norm(c.textContent)); c.classList.toggle('used',k>=0); if(k>=0) used.splice(k,1); });
+  }
+}
+
+// Inicialización de la aplicación
+render();
+})();
+</script>
+<script src="persist.js" defer></script></body></html>
